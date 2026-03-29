@@ -3974,9 +3974,10 @@
     <section class="section-shell">
       <div class="overview-card">
         <div>
-          <p class="section-kicker">先听总故事</p>
+          <p class="section-kicker">先听这页的人话版</p>
           <h2>Cron Jobs</h2>
           <p>这一页像一本关于“Cron Jobs”的小绘本，它先告诉我们这位机器人朋友会做什么，再一步一步解释什么时候该这样做。 你可以先把它想成：Cron jobs (门口的小门卫 scheduler)。</p>
+          <p>如果把这页当成“给普通人看的版本”，你最应该带走的是：它到底在教你一件什么事、什么时候要这样做、以及哪里最容易踩坑。</p>
         </div>
         <div class="overview-meta">
           <span>原始路径：/automation/cron-jobs</span>
@@ -3990,7 +3991,25 @@
           <div class="section-heading">
             <p class="section-kicker">第 1 站</p>
             <h2>Start Here</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Start Here”。</p>
+            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>你理解的是能力边界，不只是功能名字。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Cron jobs (门口的小门卫 scheduler) &gt; **Cron vs Heartbeat?** See Cron vs Heartbeat for guidance on when to use each. Cron is t…”。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -4046,7 +4065,25 @@
           <div class="section-heading">
             <p class="section-kicker">第 2 站</p>
             <h2>TL;DR</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“TL;DR”。</p>
+            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -4066,7 +4103,25 @@
           <div class="section-heading">
             <p class="section-kicker">第 3 站</p>
             <h2>Quick start (actionable)</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Quick start (actionable)”。</p>
+            <p>这一节主要在解释“Quick start (actionable)”到底是干什么的，以及你什么时候会遇到它。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节主要在解释“Quick start (actionable)”到底是干什么的，以及你什么时候会遇到它。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Create a one-shot reminder, verify it exists, and run it immediately: Schedule a recurring isolated job with delivery:”。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -4137,7 +4192,25 @@ openclaw cron runs --id &lt;job-id&gt;</code></pre>
           <div class="section-heading">
             <p class="section-kicker">第 4 站</p>
             <h2>工具小帮手-call equivalents (门口的小门卫 cron 工具小帮手)</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“工具小帮手-call equivalents (门口的小门卫 cron 工具小帮手)”。</p>
+            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>你理解的是能力边界，不只是功能名字。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“For the canonical JSON shapes and examples, see JSON schema for 工具小帮手 calls.”。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -4157,7 +4230,25 @@ openclaw cron runs --id &lt;job-id&gt;</code></pre>
           <div class="section-heading">
             <p class="section-kicker">第 5 站</p>
             <h2>Where cron jobs are stored</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Where cron jobs are stored”。</p>
+            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Cron jobs are persisted on the 门口的小门卫 host at ~/.openclaw/cron/jobs.json by default. The 门口的小门卫 loads the file into mem…”。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -4177,7 +4268,25 @@ openclaw cron runs --id &lt;job-id&gt;</code></pre>
           <div class="section-heading">
             <p class="section-kicker">第 6 站</p>
             <h2>Beginner-friendly overview</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Beginner-friendly overview”。</p>
+            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Think of a cron job as: **when** to run + **what** to do. 1. **Choose a schedule** 2. **Choose where it runs** Default…”。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -4287,7 +4396,25 @@ openclaw cron runs --id &lt;job-id&gt;</code></pre>
           <div class="section-heading">
             <p class="section-kicker">第 7 站</p>
             <h2>Jobs</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Jobs”。</p>
+            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“A cron job is a stored record with: missing or unknown, the 门口的小门卫 falls back to the default 机器人朋友. Jobs are identified…”。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -4334,7 +4461,25 @@ openclaw cron runs --id &lt;job-id&gt;</code></pre>
           <div class="section-heading">
             <p class="section-kicker">第 8 站</p>
             <h2>Schedules</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Schedules”。</p>
+            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>你理解的是能力边界，不只是功能名字。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Cron supports three schedule kinds: Cron expressions use croner. If a timezone is omitted, the 门口的小门卫 host’s local time…”。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -4399,7 +4544,25 @@ openclaw cron runs --id &lt;job-id&gt;</code></pre>
           <div class="section-heading">
             <p class="section-kicker">第 9 站</p>
             <h2>Main session jobs (system events)</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Main session jobs (system events)”。</p>
+            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Main jobs enqueue a system event and optionally wake the heartbeat runner. They must use payload.kind = &quot;systemEvent&quot;.…”。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -4437,7 +4600,25 @@ openclaw cron runs --id &lt;job-id&gt;</code></pre>
           <div class="section-heading">
             <p class="section-kicker">第 10 站</p>
             <h2>Isolated jobs (dedicated cron sessions)</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Isolated jobs (dedicated cron sessions)”。</p>
+            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Isolated jobs run a dedicated 机器人朋友 turn in session cron:&lt;jobId&gt; or a custom session. Key behaviors: Use isolated jobs…”。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -4484,7 +4665,25 @@ openclaw cron runs --id &lt;job-id&gt;</code></pre>
           <div class="section-heading">
             <p class="section-kicker">第 11 站</p>
             <h2>Payload shapes (what runs)</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Payload shapes (what runs)”。</p>
+            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Two payload kinds are supported: Common 机器人朋友Turn fields: Delivery 设置说明书: Announce delivery suppresses messaging 工具小帮手…”。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -4567,7 +4766,25 @@ openclaw cron runs --id &lt;job-id&gt;</code></pre>
           <div class="section-heading">
             <p class="section-kicker">第 12 站</p>
             <h2>Announce delivery flow</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Announce delivery flow”。</p>
+            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>你理解的是能力边界，不只是功能名字。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“When delivery.mode = &quot;announce&quot;, cron delivers directly via the outbound 消息通道 adapters. The main 机器人朋友 is not spun up t…”。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -4632,7 +4849,25 @@ openclaw cron runs --id &lt;job-id&gt;</code></pre>
           <div class="section-heading">
             <p class="section-kicker">第 13 站</p>
             <h2>小铃铛通知 delivery flow</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“小铃铛通知 delivery flow”。</p>
+            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“When delivery.mode = &quot;小铃铛通知&quot;, cron posts the finished event payload to delivery.to when the finished event includes a s…”。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -4670,7 +4905,25 @@ openclaw cron runs --id &lt;job-id&gt;</code></pre>
           <div class="section-heading">
             <p class="section-kicker">第 14 站</p>
             <h2>聪明脑袋模型 and thinking overrides</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“聪明脑袋模型 and thinking overrides”。</p>
+            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Isolated jobs (机器人朋友Turn) can override the 聪明脑袋模型 and thinking level: Note: You can set 聪明脑袋模型 on main-session jobs too…”。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -4726,7 +4979,25 @@ openclaw cron runs --id &lt;job-id&gt;</code></pre>
           <div class="section-heading">
             <p class="section-kicker">第 15 站</p>
             <h2>Lightweight bootstrap context</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Lightweight bootstrap context”。</p>
+            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>你理解的是能力边界，不只是功能名字。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Isolated jobs (机器人朋友Turn) can set lightContext: true to run with lightweight bootstrap context.”。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -4755,7 +5026,25 @@ openclaw cron runs --id &lt;job-id&gt;</code></pre>
           <div class="section-heading">
             <p class="section-kicker">第 16 站</p>
             <h2>Delivery (消息通道 + target)</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Delivery (消息通道 + target)”。</p>
+            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>你理解的是能力边界，不只是功能名字。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Isolated jobs can deliver output to a 消息通道 via the top-level delivery 设置说明书: announce delivery is only valid for isolat…”。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -4829,7 +5118,25 @@ openclaw cron runs --id &lt;job-id&gt;</code></pre>
           <div class="section-heading">
             <p class="section-kicker">第 17 站</p>
             <h2>Telegram delivery targets (topics / forum threads)</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Telegram delivery targets (topics / forum threads)”。</p>
+            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>你理解的是能力边界，不只是功能名字。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Telegram supports forum topics via 小纸条消息_thread_id. For cron delivery, you can encode the topic/thread into the to fiel…”。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -4876,7 +5183,25 @@ openclaw cron runs --id &lt;job-id&gt;</code></pre>
           <div class="section-heading">
             <p class="section-kicker">第 18 站</p>
             <h2>JSON schema for 工具小帮手 calls</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“JSON schema for 工具小帮手 calls”。</p>
+            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>你理解的是能力边界，不只是功能名字。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Use these shapes when calling 门口的小门卫 cron.* 工具小帮手s directly (机器人朋友 工具小帮手 calls or RPC). CLI flags accept human duration…”。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -4896,7 +5221,25 @@ openclaw cron runs --id &lt;job-id&gt;</code></pre>
           <div class="section-heading">
             <p class="section-kicker">第 19 站</p>
             <h2>cron.add params</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“cron.add params”。</p>
+            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“One-shot, main session job (system event): Recurring, isolated job with delivery: Recurring job bound to current sessio…”。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -5057,7 +5400,25 @@ openclaw cron runs --id &lt;job-id&gt;</code></pre>
           <div class="section-heading">
             <p class="section-kicker">第 20 站</p>
             <h2>cron.update params</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“cron.update params”。</p>
+            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>你理解的是能力边界，不只是功能名字。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Notes:”。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -5104,7 +5465,25 @@ openclaw cron runs --id &lt;job-id&gt;</code></pre>
           <div class="section-heading">
             <p class="section-kicker">第 21 站</p>
             <h2>cron.run and cron.remove params</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“cron.run and cron.remove params”。</p>
+            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>你理解的是能力边界，不只是功能名字。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -5139,7 +5518,25 @@ openclaw cron runs --id &lt;job-id&gt;</code></pre>
           <div class="section-heading">
             <p class="section-kicker">第 22 站</p>
             <h2>Storage &amp; history</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Storage &amp; history”。</p>
+            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -5159,7 +5556,25 @@ openclaw cron runs --id &lt;job-id&gt;</code></pre>
           <div class="section-heading">
             <p class="section-kicker">第 23 站</p>
             <h2>Retry policy</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Retry policy”。</p>
+            <p>这一节主要在解释“Retry policy”到底是干什么的，以及你什么时候会遇到它。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节主要在解释“Retry policy”到底是干什么的，以及你什么时候会遇到它。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“When a job fails, OpenClaw classifies errors as **transient** (retryable) or **permanent** (disable immediately).”。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -5179,7 +5594,25 @@ openclaw cron runs --id &lt;job-id&gt;</code></pre>
           <div class="section-heading">
             <p class="section-kicker">第 24 站</p>
             <h2>Transient errors (retried)</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Transient errors (retried)”。</p>
+            <p>这一节主要在解释“Transient errors (retried)”到底是干什么的，以及你什么时候会遇到它。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节主要在解释“Transient errors (retried)”到底是干什么的，以及你什么时候会遇到它。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -5199,7 +5632,25 @@ openclaw cron runs --id &lt;job-id&gt;</code></pre>
           <div class="section-heading">
             <p class="section-kicker">第 25 站</p>
             <h2>Permanent errors (no retry)</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Permanent errors (no retry)”。</p>
+            <p>这一节主要在解释“Permanent errors (no retry)”到底是干什么的，以及你什么时候会遇到它。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节主要在解释“Permanent errors (no retry)”到底是干什么的，以及你什么时候会遇到它。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -5219,7 +5670,25 @@ openclaw cron runs --id &lt;job-id&gt;</code></pre>
           <div class="section-heading">
             <p class="section-kicker">第 26 站</p>
             <h2>Default behavior (no 设置说明书)</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Default behavior (no 设置说明书)”。</p>
+            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“**One-shot jobs (schedule.kind: &quot;at&quot;):** **Recurring jobs (cron / every):** 设置说明书ure cron.retry to override these defau…”。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -5275,7 +5744,25 @@ openclaw cron runs --id &lt;job-id&gt;</code></pre>
           <div class="section-heading">
             <p class="section-kicker">第 27 站</p>
             <h2>设置说明书uration</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“设置说明书uration”。</p>
+            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Run-log pruning behavior: 小铃铛通知 behavior: Disable cron entirely:”。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -5371,7 +5858,25 @@ openclaw cron runs --id &lt;job-id&gt;</code></pre>
           <div class="section-heading">
             <p class="section-kicker">第 28 站</p>
             <h2>Maintenance</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Maintenance”。</p>
+            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>你理解的是能力边界，不只是功能名字。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Cron has two built-in maintenance paths: isolated run-session retention and run-log pruning.”。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -5391,7 +5896,25 @@ openclaw cron runs --id &lt;job-id&gt;</code></pre>
           <div class="section-heading">
             <p class="section-kicker">第 29 站</p>
             <h2>Defaults</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Defaults”。</p>
+            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>你理解的是能力边界，不只是功能名字。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -5411,7 +5934,25 @@ openclaw cron runs --id &lt;job-id&gt;</code></pre>
           <div class="section-heading">
             <p class="section-kicker">第 30 站</p>
             <h2>How it works</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“How it works”。</p>
+            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>你理解的是能力边界，不只是功能名字。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -5431,7 +5972,25 @@ openclaw cron runs --id &lt;job-id&gt;</code></pre>
           <div class="section-heading">
             <p class="section-kicker">第 31 站</p>
             <h2>Performance caveat for high volume schedulers</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Performance caveat for high volume schedulers”。</p>
+            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“High-frequency cron setups can generate large run-session and run-log footprints. Maintenance is built in, but loose li…”。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -5487,7 +6046,25 @@ openclaw cron runs --id &lt;job-id&gt;</code></pre>
           <div class="section-heading">
             <p class="section-kicker">第 32 站</p>
             <h2>Customize examples</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Customize examples”。</p>
+            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Keep run sessions for a week and allow bigger run logs: Disable isolated run-session pruning but keep run-log pruning:…”。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -5585,7 +6162,25 @@ openclaw cron runs --id &lt;job-id&gt;</code></pre>
           <div class="section-heading">
             <p class="section-kicker">第 33 站</p>
             <h2>CLI quickstart</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“CLI quickstart”。</p>
+            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“One-shot reminder (UTC ISO, auto-delete after success): One-shot reminder (main session, wake immediately): Recurring i…”。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -5910,7 +6505,25 @@ openclaw cron run &lt;jobId&gt; --due</code></pre>
           <div class="section-heading">
             <p class="section-kicker">第 34 站</p>
             <h2>门口的小门卫 对话接口 surface</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“门口的小门卫 对话接口 surface”。</p>
+            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>你理解的是能力边界，不只是功能名字。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“For immediate system events without a job, use openclaw system event.”。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -5939,7 +6552,25 @@ openclaw cron run &lt;jobId&gt; --due</code></pre>
           <div class="section-heading">
             <p class="section-kicker">第 35 站</p>
             <h2>&quot;Nothing runs&quot;</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&quot;Nothing runs&quot;”。</p>
+            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -5959,7 +6590,25 @@ openclaw cron run &lt;jobId&gt; --due</code></pre>
           <div class="section-heading">
             <p class="section-kicker">第 36 站</p>
             <h2>A recurring job keeps delaying after failures</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“A recurring job keeps delaying after failures”。</p>
+            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“30s, 1m, 5m, 15m, then 60m between retries.”。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -5988,7 +6637,25 @@ openclaw cron run &lt;jobId&gt; --due</code></pre>
           <div class="section-heading">
             <p class="section-kicker">第 37 站</p>
             <h2>Telegram delivers to the wrong place</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Telegram delivers to the wrong place”。</p>
+            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>你理解的是能力边界，不只是功能名字。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“cron delivery accepts them and still parses topic IDs correctly.”。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -6017,7 +6684,25 @@ openclaw cron run &lt;jobId&gt; --due</code></pre>
           <div class="section-heading">
             <p class="section-kicker">第 38 站</p>
             <h2>Sub机器人朋友 announce delivery retries</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Sub机器人朋友 announce delivery retries”。</p>
+            <p>这一节主要在解释“Sub机器人朋友 announce delivery retries”到底是干什么的，以及你什么时候会遇到它。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节主要在解释“Sub机器人朋友 announce delivery retries”到底是干什么的，以及你什么时候会遇到它。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
+            </div>
           </div>
           <div class="story-grid">
             

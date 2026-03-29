@@ -1,0 +1,134 @@
+<section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>OpenClaw 的工具，到底是什么？</h2>
+      <p>把 OpenClaw 想成一个很聪明、但没有手脚的小助手。它能不能真的帮你干活，不取决于它会不会聊天，而取决于它有没有“工具”。工具就是它的手、脚、眼睛、耳朵。没有工具，它最多只能说“我知道”；有了工具，它才能真的去读文件、改代码、开浏览器、搜索网页、发消息、定时做事。</p>
+      <p>所以这页不是在列一堆抽象名词，而是在告诉你：OpenClaw 到底靠什么从“会回答问题”变成“真的能做事情”。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合第一次读 OpenClaw 的人</span>
+      <span>这页建议先读完再点具体工具页</span>
+      <a href="https://docs.openclaw.ai/tools" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一站</p>
+    <h2>工具、技能、插件，三个人各管什么</h2>
+    <p>很多人第一次看 OpenClaw 会把这三个词混在一起。最简单的记法是：工具负责“能做什么”，技能负责“什么时候怎么做”，插件负责“把一整套新能力装进去”。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">工具 Tools</div>
+      <p>工具是最底层的动作。比如 `read` 是去看文件，`exec` 是去执行命令，`browser` 是去操作浏览器。它们像机器人身上的小手小脚。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">技能 Skills</div>
+      <p>技能不是新动作，而是写给机器人的“做事说明书”。它会告诉它：碰到什么问题先查什么、再用什么工具、有什么边界不能越。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">插件 Plugins</div>
+      <p>插件是整包能力。它可以顺手带来新的通道、模型、工具、技能，甚至语音和图像能力。你可以把它理解成“给机器人加一个新职业”。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">一句话记住</div>
+      <p>工具是“动作”，技能是“攻略”，插件是“扩展包”。你只要分清这三层，看后面的 OpenClaw 文档就不会总觉得术语在打架。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二站</p>
+    <h2>内置工具到底能帮你做什么</h2>
+    <p>官方文档列工具时看起来像一张功能表，但如果换成更好理解的方式，其实就是这几类：读写文件、指挥电脑、看网页、上网找资料、跨会话记事、发消息、自动执行。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">📂</span>
+      <h2>文件工具</h2>
+      <p>`read`、`write`、`edit`、`apply_patch` 这一组，负责“看、写、改”。如果你让 OpenClaw 改代码，这一组就是它真正动手的地方。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">💻</span>
+      <h2>执行工具</h2>
+      <p>`exec`、`process`、`code_execution` 这一组，负责让电脑真的跑起来。它们不是聊天，是把命令和代码丢给环境去执行。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🌐</span>
+      <h2>浏览和搜索</h2>
+      <p>`browser`、`web_search`、`web_fetch` 让它能看页面、搜资料、抓网页内容。换句话说，它不只是“记得一点知识”，而是可以真的去查。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">📱</span>
+      <h2>消息和调度</h2>
+      <p>`message`、`cron`、`gateway` 让它能发消息、定时做事、连到实际运行环境。这一组把 OpenClaw 从“单次问答”推向“长期帮你做事”。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第三站</p>
+    <h2>为什么官方会把工具分组</h2>
+    <p>这不是为了写得酷，而是为了让你能快速判断“这件事该交给哪一类能力”。像你整理房间时会把积木、绘本、衣服分开放，OpenClaw 也是把能力分成几个箱子。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">runtime</div>
+      <p>和“执行”有关。你要让电脑跑命令、开后台进程，就会想到这里。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">fs</div>
+      <p>和“文件”有关。你要读配置、改源码、写结果文件，就会想到这里。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">web / ui</div>
+      <p>和“看网页、点网页、搜网页”有关。你要抓网页信息或自动化浏览，就会想到这里。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">automation / messaging</div>
+      <p>和“长期帮你做事”有关。比如定时提醒、持续发消息、定期巡检，这些通常都不是一次性动作。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第四站</p>
+    <h2>这页最重要的不是“工具很多”，而是“工具有边界”</h2>
+    <p>OpenClaw 真正好用，不是因为它什么都能做，而是因为你可以决定它什么能做、什么不能做。官方文档后面提到的 allow / deny、profile、sandbox，本质都在解决同一个问题：聪明不等于乱来。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">allow / deny</div>
+      <p>像给机器人一张“可以做”和“不能做”的清单。比如你允许它读文件和开浏览器，但不允许它执行命令。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">profile</div>
+      <p>像不同工作模式。写代码时开一套，发消息时开一套，最保守时只给最基本的工具。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">真正的价值</div>
+      <p>这意味着 OpenClaw 不是一个“放出去随便跑”的黑盒，而是一个你可以一点点驯化、一步步加能力的系统。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">如果你只记一件事</div>
+      <p>工具页不是“能力炫耀清单”，而是 OpenClaw 的能力边界图。你越早看懂这张图，后面越知道为什么某些事情它能做，某些事情它必须先问你。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">最后总结</p>
+    <h2>把这页翻成一句最容易记住的话</h2>
+    <p>OpenClaw 之所以不像普通聊天机器人，是因为它不是只会“说”，而是会“做”；它之所以不会轻易失控，是因为这些“做”的动作都被你放进了工具、规则和边界里。</p>
+  </div>
+  <div class="ad-placeholder">
+    <p>如果你接下来只想继续读一页，我建议先看具体的 <code>/tools/exec</code>、<code>/tools/browser</code> 或 <code>/tools/skills</code>，你会更快把这张能力地图和真实使用场景连起来。</p>
+  </div>
+</section>

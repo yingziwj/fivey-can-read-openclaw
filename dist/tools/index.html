@@ -3970,333 +3970,141 @@
   
       </div>
 
-      
-    <section class="section-shell">
-      <div class="overview-card">
-        <div>
-          <p class="section-kicker">先听总故事</p>
-          <h2>Tools and Plugins</h2>
-          <p>这一页像一本关于“工具小帮手s and 新本领插件s”的小绘本，它先告诉我们这位机器人朋友会做什么，再一步一步解释什么时候该这样做。 你可以先把它想成：工具小帮手s and 新本领插件s。</p>
-        </div>
-        <div class="overview-meta">
-          <span>原始路径：/tools/index</span>
-          <span>章节数量：8</span>
-          <a href="https://docs.openclaw.ai/tools/index" target="_blank" rel="noreferrer">查看原文</a>
-        </div>
-      </div>
-    </section>
-    
-        <section class="section-shell" id="section-1">
-          <div class="section-heading">
-            <p class="section-kicker">第 1 站</p>
-            <h2>Start Here</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Start Here”。</p>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“工具小帮手s and 新本领插件s”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p># Tools and Plugins</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Everything the 机器人朋友 does beyond generating text happens through **工具小帮手s**. 工具小帮手s are how the 机器人朋友 reads files, runs…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Everything the agent does beyond generating text happens through **tools**. Tools are how the agent reads files, runs commands, browses the web, sends messages, and interacts with devices.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-2">
-          <div class="section-heading">
-            <p class="section-kicker">第 2 站</p>
-            <h2>工具小帮手s, skills, and 新本领插件s</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“工具小帮手s, skills, and 新本领插件s”。</p>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“OpenClaw has three layers that work together:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>OpenClaw has three layers that work together:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Steps&gt; &lt;Step title=&quot;工具小帮手s are what the 机器人朋友 calls&quot;&gt; A 工具小帮手 is a typed function the 机器人朋友 can invoke (e.g. exec, bro…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>&lt;Steps&gt; &lt;Step title=&quot;Tools are what the agent calls&quot;&gt; A tool is a typed function the agent can invoke (e.g. <code>exec</code>, <code>browser</code>, <code>web_search</code>, <code>message</code>). OpenClaw ships a set of **built-in tools** and plugins can register additional ones.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“The 机器人朋友 sees 工具小帮手s as structured function definitions sent to the 聪明脑袋模型 对话接口. &lt;/Step&gt;”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>The agent sees tools as structured function definitions sent to the model API. &lt;/Step&gt;</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Step title=&quot;Skills teach the 机器人朋友 when and how&quot;&gt; A skill is a markdown file (SKILL.md) injected into the system promp…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>&lt;Step title=&quot;Skills teach the agent when and how&quot;&gt; A skill is a markdown file (<code>SKILL.md</code>) injected into the system prompt. Skills give the agent context, constraints, and step-by-step guidance for using tools effectively. Skills live in your workspace, in shared folders, or ship inside plugins.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Skills reference Creating skills &lt;/Step&gt;”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p><a href="/tools/skills" target="_blank" rel="noreferrer">Skills reference</a> | <a href="/tools/creating-skills" target="_blank" rel="noreferrer">Creating skills</a> &lt;/Step&gt;</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Step title=&quot;新本领插件s package everything together&quot;&gt; A 新本领插件 is a package that can register any combination of capabilitie…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>&lt;Step title=&quot;Plugins package everything together&quot;&gt; A plugin is a package that can register any combination of capabilities: channels, model providers, tools, skills, speech, image generation, and more. Some plugins are **core** (shipped with OpenClaw), others are **external** (published on npm by the community).</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Install and 设置说明书ure 新本领插件s Build your own &lt;/Step&gt; &lt;/Steps&gt;”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p><a href="/tools/plugin" target="_blank" rel="noreferrer">Install and configure plugins</a> | <a href="/plugins/building-plugins" target="_blank" rel="noreferrer">Build your own</a> &lt;/Step&gt; &lt;/Steps&gt;</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-3">
-          <div class="section-heading">
-            <p class="section-kicker">第 3 站</p>
-            <h2>Built-in 工具小帮手s</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Built-in 工具小帮手s”。</p>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“These 工具小帮手s ship with OpenClaw and are available without installing any 新本领插件s:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>These tools ship with OpenClaw and are available without installing any plugins:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“工具小帮手 What it does Page --------------------------------------- -------------------------------------------------------…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>| Tool | What it does | Page | | --------------------------------------- | -------------------------------------------------------- | --------------------------------------- | | <code>exec</code> / <code>process</code> | Run shell commands, manage background processes | <a href="/tools/exec" target="_blank" rel="noreferrer">Exec</a> | | <code>code_execution</code> | Run sandboxed remote Python analysis | <a href="/tools/code-execution" target="_blank" rel="noreferrer">Code Execution</a> | | <code>browser</code> | Control a Chromium browser (navigate, click, screenshot) | <a href="/tools/browser" target="_blank" rel="noreferrer">Browser</a> | | <code>web_search</code> / <code>x_search</code> / <code>web_fetch</code> | Search the web, search X posts, fetch page content | <a href="/tools/web" target="_blank" rel="noreferrer">Web</a> | | <code>read</code> / <code>write</code> / <code>edit</code> | File I/O in the workspace | | | <code>apply_patch</code> | Multi-hunk file patches | <a href="/tools/apply-patch" target="_blank" rel="noreferrer">Apply Patch</a> | | <code>message</code> | Send messages across all channels | <a href="/tools/agent-send" target="_blank" rel="noreferrer">Agent Send</a> | | <code>canvas</code> | Drive node Canvas (present, eval, snapshot) | | | <code>nodes</code> | Discover and target paired devices | | | <code>cron</code> / <code>gateway</code> | Manage scheduled jobs, restart gateway | | | <code>image</code> / <code>image_generate</code> | Analyze or generate images | | | <code>sessions_*</code> / <code>agents_list</code> | Session management, sub-agents | <a href="/tools/subagents" target="_blank" rel="noreferrer">Sub-agents</a> |</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“For image work, use image for analysis and image_generate for generation or editing. If you target openai/*, google/*,…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>For image work, use <code>image</code> for analysis and <code>image_generate</code> for generation or editing. If you target <code>openai/*</code>, <code>google/*</code>, <code>fal/*</code>, or another non-default image provider, configure that provider&#39;s auth/API key first.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-4">
-          <div class="section-heading">
-            <p class="section-kicker">第 4 站</p>
-            <h2>新本领插件-provided 工具小帮手s</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“新本领插件-provided 工具小帮手s”。</p>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“新本领插件s can register additional 工具小帮手s. Some examples:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Plugins can register additional tools. Some examples:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Plugin-provided tools”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Lobster — typed workflow runtime with res…、LLM Task — JSON-only LLM step for structu…、Diffs — diff viewer and renderer、OpenProse — markdown-first workflow orche…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><a href="/tools/lobster" target="_blank" rel="noreferrer">Lobster</a> — typed workflow runtime with resumable approvals</li><li><a href="/tools/llm-task" target="_blank" rel="noreferrer">LLM Task</a> — JSON-only LLM step for structured output</li><li><a href="/tools/diffs" target="_blank" rel="noreferrer">Diffs</a> — diff viewer and renderer</li><li><a href="/prose" target="_blank" rel="noreferrer">OpenProse</a> — markdown-first workflow orchestration</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-5">
-          <div class="section-heading">
-            <p class="section-kicker">第 5 站</p>
-            <h2>Allow and deny lists</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Allow and deny lists”。</p>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Control which 工具小帮手s the 机器人朋友 can call via 工具小帮手s.allow / 工具小帮手s.deny in 设置说明书. Deny always wins over allow.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Control which tools the agent can call via <code>tools.allow</code> / <code>tools.deny</code> in config. Deny always wins over allow.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“tools”贴标签，意思是把它设置成“{”。</li><li>这里在给“allow”贴标签，意思是把它设置成“[group:fs browser web_search]”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json5">{
-  tools: {
-    allow: [&quot;group:fs&quot;, &quot;browser&quot;, &quot;web_search&quot;],
-    deny: [&quot;exec&quot;],
-  },
-}</code></pre>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-6">
-          <div class="section-heading">
-            <p class="section-kicker">第 6 站</p>
-            <h2>工具小帮手 profiles</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“工具小帮手 profiles”。</p>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“工具小帮手s.profile sets a base allowlist before allow/deny is applied. Per-机器人朋友 override: 机器人朋友s.list[].工具小帮手s.profile.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p><code>tools.profile</code> sets a base allowlist before <code>allow</code>/<code>deny</code> is applied. Per-agent override: <code>agents.list[].tools.profile</code>.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Profile What it includes ----------- ------------------------------------------- full All 工具小帮手s (default) coding File…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>| Profile | What it includes | | ----------- | ------------------------------------------- | | <code>full</code> | All tools (default) | | <code>coding</code> | File I/O, runtime, sessions, memory, image | | <code>messaging</code> | Messaging, session list/history/send/status | | <code>minimal</code> | <code>session_status</code> only |</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-7">
-          <div class="section-heading">
-            <p class="section-kicker">第 7 站</p>
-            <h2>工具小帮手 大家一起的房间s</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“工具小帮手 大家一起的房间s”。</p>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Use 大家一起的房间:* shorthands in allow/deny lists:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Use <code>group:*</code> shorthands in allow/deny lists:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“大家一起的房间 工具小帮手s ------------------ -------------------------------------------------------------------------------------…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>| Group | Tools | | ------------------ | --------------------------------------------------------------------------------------------------------------- | | <code>group:runtime</code> | exec, bash, process, code\_execution | | <code>group:fs</code> | read, write, edit, apply\_patch | | <code>group:sessions</code> | sessions\_list, sessions\_history, sessions\_send, sessions\_spawn, sessions\_yield, subagents, session\_status | | <code>group:memory</code> | memory\_search, memory\_get | | <code>group:web</code> | web\_search, x\_search, web\_fetch | | <code>group:ui</code> | browser, canvas | | <code>group:automation</code> | cron, gateway | | <code>group:messaging</code> | message | | <code>group:nodes</code> | nodes | | <code>group:openclaw</code> | All built-in OpenClaw tools (excludes plugin tools) |</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-8">
-          <div class="section-heading">
-            <p class="section-kicker">第 8 站</p>
-            <h2>Provider-specific restrictions</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Provider-specific restrictions”。</p>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Use 工具小帮手s.byProvider to restrict 工具小帮手s for specific providers without changing global defaults:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Use <code>tools.byProvider</code> to restrict tools for specific providers without changing global defaults:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“tools”贴标签，意思是把它设置成“{”。</li><li>这里在给“profile”贴标签，意思是把它设置成“coding”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json5">{
-  tools: {
-    profile: &quot;coding&quot;,
-    byProvider: {
-      &quot;google-antigravity&quot;: { profile: &quot;minimal&quot; },
-    },
-  },
-}</code></pre>
-      </div>
-    
-          </div>
-        </section>
-      
-    <section class="section-shell">
-      <div class="ad-placeholder">
-        <p>这里预留给未来的 Google AdSense 模块。</p>
-        <code>&lt;!-- ADSENSE_SNIPPET --&gt;</code>
-      </div>
-    </section>
-  
+      <section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>OpenClaw 的工具，到底是什么？</h2>
+      <p>把 OpenClaw 想成一个很聪明、但没有手脚的小助手。它能不能真的帮你干活，不取决于它会不会聊天，而取决于它有没有“工具”。工具就是它的手、脚、眼睛、耳朵。没有工具，它最多只能说“我知道”；有了工具，它才能真的去读文件、改代码、开浏览器、搜索网页、发消息、定时做事。</p>
+      <p>所以这页不是在列一堆抽象名词，而是在告诉你：OpenClaw 到底靠什么从“会回答问题”变成“真的能做事情”。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合第一次读 OpenClaw 的人</span>
+      <span>这页建议先读完再点具体工具页</span>
+      <a href="https://docs.openclaw.ai/tools" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一站</p>
+    <h2>工具、技能、插件，三个人各管什么</h2>
+    <p>很多人第一次看 OpenClaw 会把这三个词混在一起。最简单的记法是：工具负责“能做什么”，技能负责“什么时候怎么做”，插件负责“把一整套新能力装进去”。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">工具 Tools</div>
+      <p>工具是最底层的动作。比如 `read` 是去看文件，`exec` 是去执行命令，`browser` 是去操作浏览器。它们像机器人身上的小手小脚。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">技能 Skills</div>
+      <p>技能不是新动作，而是写给机器人的“做事说明书”。它会告诉它：碰到什么问题先查什么、再用什么工具、有什么边界不能越。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">插件 Plugins</div>
+      <p>插件是整包能力。它可以顺手带来新的通道、模型、工具、技能，甚至语音和图像能力。你可以把它理解成“给机器人加一个新职业”。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">一句话记住</div>
+      <p>工具是“动作”，技能是“攻略”，插件是“扩展包”。你只要分清这三层，看后面的 OpenClaw 文档就不会总觉得术语在打架。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二站</p>
+    <h2>内置工具到底能帮你做什么</h2>
+    <p>官方文档列工具时看起来像一张功能表，但如果换成更好理解的方式，其实就是这几类：读写文件、指挥电脑、看网页、上网找资料、跨会话记事、发消息、自动执行。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">📂</span>
+      <h2>文件工具</h2>
+      <p>`read`、`write`、`edit`、`apply_patch` 这一组，负责“看、写、改”。如果你让 OpenClaw 改代码，这一组就是它真正动手的地方。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">💻</span>
+      <h2>执行工具</h2>
+      <p>`exec`、`process`、`code_execution` 这一组，负责让电脑真的跑起来。它们不是聊天，是把命令和代码丢给环境去执行。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🌐</span>
+      <h2>浏览和搜索</h2>
+      <p>`browser`、`web_search`、`web_fetch` 让它能看页面、搜资料、抓网页内容。换句话说，它不只是“记得一点知识”，而是可以真的去查。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">📱</span>
+      <h2>消息和调度</h2>
+      <p>`message`、`cron`、`gateway` 让它能发消息、定时做事、连到实际运行环境。这一组把 OpenClaw 从“单次问答”推向“长期帮你做事”。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第三站</p>
+    <h2>为什么官方会把工具分组</h2>
+    <p>这不是为了写得酷，而是为了让你能快速判断“这件事该交给哪一类能力”。像你整理房间时会把积木、绘本、衣服分开放，OpenClaw 也是把能力分成几个箱子。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">runtime</div>
+      <p>和“执行”有关。你要让电脑跑命令、开后台进程，就会想到这里。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">fs</div>
+      <p>和“文件”有关。你要读配置、改源码、写结果文件，就会想到这里。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">web / ui</div>
+      <p>和“看网页、点网页、搜网页”有关。你要抓网页信息或自动化浏览，就会想到这里。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">automation / messaging</div>
+      <p>和“长期帮你做事”有关。比如定时提醒、持续发消息、定期巡检，这些通常都不是一次性动作。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第四站</p>
+    <h2>这页最重要的不是“工具很多”，而是“工具有边界”</h2>
+    <p>OpenClaw 真正好用，不是因为它什么都能做，而是因为你可以决定它什么能做、什么不能做。官方文档后面提到的 allow / deny、profile、sandbox，本质都在解决同一个问题：聪明不等于乱来。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">allow / deny</div>
+      <p>像给机器人一张“可以做”和“不能做”的清单。比如你允许它读文件和开浏览器，但不允许它执行命令。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">profile</div>
+      <p>像不同工作模式。写代码时开一套，发消息时开一套，最保守时只给最基本的工具。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">真正的价值</div>
+      <p>这意味着 OpenClaw 不是一个“放出去随便跑”的黑盒，而是一个你可以一点点驯化、一步步加能力的系统。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">如果你只记一件事</div>
+      <p>工具页不是“能力炫耀清单”，而是 OpenClaw 的能力边界图。你越早看懂这张图，后面越知道为什么某些事情它能做，某些事情它必须先问你。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">最后总结</p>
+    <h2>把这页翻成一句最容易记住的话</h2>
+    <p>OpenClaw 之所以不像普通聊天机器人，是因为它不是只会“说”，而是会“做”；它之所以不会轻易失控，是因为这些“做”的动作都被你放进了工具、规则和边界里。</p>
+  </div>
+  <div class="ad-placeholder">
+    <p>如果你接下来只想继续读一页，我建议先看具体的 <code>/tools/exec</code>、<code>/tools/browser</code> 或 <code>/tools/skills</code>，你会更快把这张能力地图和真实使用场景连起来。</p>
+  </div>
+</section>
+
 
       <footer class="page-footer">
         <div>

@@ -3974,9 +3974,10 @@
     <section class="section-shell">
       <div class="overview-card">
         <div>
-          <p class="section-kicker">先听总故事</p>
+          <p class="section-kicker">先听这页的人话版</p>
           <h2>Memory configuration reference</h2>
           <p>这一页像一本关于“Memory 设置说明书uration reference”的小绘本，它先告诉我们这位机器人朋友会做什么，再一步一步解释什么时候该这样做。 你可以先把它想成：Memory 设置说明书uration reference。</p>
+          <p>如果把这页当成“给普通人看的版本”，你最应该带走的是：它到底在教你一件什么事、什么时候要这样做、以及哪里最容易踩坑。</p>
         </div>
         <div class="overview-meta">
           <span>原始路径：/reference/memory-config</span>
@@ -3990,7 +3991,25 @@
           <div class="section-heading">
             <p class="section-kicker">第 1 站</p>
             <h2>Start Here</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Start Here”。</p>
+            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>你理解的是能力边界，不只是功能名字。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Memory 设置说明书uration reference This page covers the full 设置说明书uration surface for OpenClaw memory search. For the concep…”。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -4019,7 +4038,25 @@
           <div class="section-heading">
             <p class="section-kicker">第 2 站</p>
             <h2>Memory search defaults</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Memory search defaults”。</p>
+            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“memorySearch). registered by the active memory 新本领插件. local, openai, gemini, voyage, mistral, and ollama. OpenClaw auto…”。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -4093,7 +4130,25 @@
           <div class="section-heading">
             <p class="section-kicker">第 3 站</p>
             <h2>QMD backend (experimental)</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“QMD backend (experimental)”。</p>
+            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>你理解的是能力边界，不只是功能名字。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Set memory.backend = &quot;qmd&quot; to swap the built-in SQLite indexer for QMD: a local-first search sidecar that combines BM25…”。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -4113,7 +4168,25 @@
           <div class="section-heading">
             <p class="section-kicker">第 4 站</p>
             <h2>Prerequisites</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Prerequisites”。</p>
+            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“a release) and make sure the qmd binary is on the 门口的小门卫&#39;s PATH. macOS). 聪明脑袋模型s from HuggingFace on first use (no sepa…”。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -4178,7 +4251,25 @@
           <div class="section-heading">
             <p class="section-kicker">第 5 站</p>
             <h2>How the sidecar runs</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“How the sidecar runs”。</p>
+            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“~/.openclaw/机器人朋友s/&lt;机器人朋友Id&gt;/qmd/ (设置说明书 + cache + sqlite DB). (plus default workspace memory files), then qmd update +…”。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -4315,7 +4406,25 @@
           <div class="section-heading">
             <p class="section-kicker">第 6 站</p>
             <h2>设置说明书 surface (`memory.qmd.*`)</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“设置说明书 surface (memory.qmd.*)”。</p>
+            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“memory_search (search, vsearch, query). stable name). exportDir). (interval, debounceMs, onBoot, waitForBootSync, embed…”。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -4452,7 +4561,25 @@
           <div class="section-heading">
             <p class="section-kicker">第 7 站</p>
             <h2>QMD example</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“QMD example”。</p>
+            <p>这一节主要在解释“QMD example”到底是干什么的，以及你什么时候会遇到它。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节主要在解释“QMD example”到底是干什么的，以及你什么时候会遇到它。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -4496,7 +4623,25 @@
           <div class="section-heading">
             <p class="section-kicker">第 8 站</p>
             <h2>Citations and fallback</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Citations and fallback”。</p>
+            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>你理解的是能力边界，不只是功能名字。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“engine served the results. If the QMD subprocess exits or JSON output can&#39;t be parsed, the search manager logs a warnin…”。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -4525,7 +4670,25 @@
           <div class="section-heading">
             <p class="section-kicker">第 9 站</p>
             <h2>Additional memory paths</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Additional memory paths”。</p>
+            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“If you want to index Markdown files outside the default workspace layout, add explicit paths: Notes:”。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -4581,7 +4744,25 @@
           <div class="section-heading">
             <p class="section-kicker">第 10 站</p>
             <h2>Multimodal memory files (Gemini image + audio)</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Multimodal memory files (Gemini image + audio)”。</p>
+            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“OpenClaw can index image and audio files from memorySearch.extraPaths when using Gemini embedding 2: Notes:”。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -4647,7 +4828,25 @@
           <div class="section-heading">
             <p class="section-kicker">第 11 站</p>
             <h2>Gemini embeddings (native)</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Gemini embeddings (native)”。</p>
+            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Set the provider to gemini to use the Gemini embeddings 对话接口 directly: Notes:”。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -4707,7 +4906,25 @@
           <div class="section-heading">
             <p class="section-kicker">第 12 站</p>
             <h2>Gemini Embedding 2 (preview)</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Gemini Embedding 2 (preview)”。</p>
+            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&gt; **Re-index required:** Switching from gemini-embedding-001 (768 dimensions) &gt; to gemini-embedding-2-preview (3072 dim…”。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -4750,7 +4967,25 @@
           <div class="section-heading">
             <p class="section-kicker">第 13 站</p>
             <h2>Custom OpenAI-compatible endpoint</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Custom OpenAI-compatible endpoint”。</p>
+            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>你理解的是能力边界，不只是功能名字。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“If you want to use a custom OpenAI-compatible endpoint (OpenRouter, vLLM, or a proxy), you can use the remote 设置说明书urat…”。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -4803,7 +5038,25 @@
           <div class="section-heading">
             <p class="section-kicker">第 14 站</p>
             <h2>Fallbacks</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Fallbacks”。</p>
+            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -4823,7 +5076,25 @@
           <div class="section-heading">
             <p class="section-kicker">第 15 站</p>
             <h2>Batch indexing</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Batch indexing”。</p>
+            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Why OpenAI batch is fast and cheap: 设置说明书 example:”。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -4894,7 +5165,25 @@
           <div class="section-heading">
             <p class="section-kicker">第 16 站</p>
             <h2>How the memory 工具小帮手s work</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“How the memory 工具小帮手s work”。</p>
+            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -4914,7 +5203,25 @@
           <div class="section-heading">
             <p class="section-kicker">第 17 站</p>
             <h2>What gets indexed (and when)</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“What gets indexed (and when)”。</p>
+            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -4934,7 +5241,25 @@
           <div class="section-heading">
             <p class="section-kicker">第 18 站</p>
             <h2>Hybrid search (BM25 + vector)</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Hybrid search (BM25 + vector)”。</p>
+            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“When enabled, OpenClaw combines: If full-text search is unavailable on your platform, OpenClaw falls back to vector-onl…”。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -4972,7 +5297,25 @@
           <div class="section-heading">
             <p class="section-kicker">第 19 站</p>
             <h2>Why hybrid</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Why hybrid”。</p>
+            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>你理解的是能力边界，不只是功能名字。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Vector search is great at &quot;this means the same thing&quot;: But it can be weak at exact, high-signal tokens: BM25 (full-text…”。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -5028,7 +5371,25 @@
           <div class="section-heading">
             <p class="section-kicker">第 20 站</p>
             <h2>How we merge results (the current design)</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“How we merge results (the current design)”。</p>
+            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>你理解的是能力边界，不只是功能名字。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Implementation sketch: 1. Retrieve a candidate pool from both sides: 2. Convert BM25 rank into a 0..1-ish score: 3. Uni…”。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -5129,7 +5490,25 @@
           <div class="section-heading">
             <p class="section-kicker">第 21 站</p>
             <h2>Post-processing pipeline</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Post-processing pipeline”。</p>
+            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“After merging vector and keyword scores, two optional post-processing stages refine the result list before it reaches t…”。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -5170,7 +5549,25 @@
           <div class="section-heading">
             <p class="section-kicker">第 22 站</p>
             <h2>MMR re-ranking (diversity)</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“MMR re-ranking (diversity)”。</p>
+            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“When hybrid search returns results, multiple chunks may contain similar or overlapping content. For example, searching…”。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -5332,7 +5729,25 @@ memory/network.md     -&gt; &quot;Router: Omada ER605, AdGuard: 192.168.10.2, VL
           <div class="section-heading">
             <p class="section-kicker">第 23 站</p>
             <h2>Temporal decay (recency boost)</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Temporal decay (recency boost)”。</p>
+            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“机器人朋友s with daily notes accumulate hundreds of dated files over time. Without decay, a well-worded note from six months…”。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -5523,7 +5938,25 @@ memory/2026-02-03.md  -&gt; &quot;Rod started new team, standup moved to 14:15&q
           <div class="section-heading">
             <p class="section-kicker">第 24 站</p>
             <h2>Hybrid search 设置说明书uration</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Hybrid search 设置说明书uration”。</p>
+            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Both features are 设置说明书ured under memorySearch.query.hybrid: You can enable either feature independently:”。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -5596,7 +6029,25 @@ memory/2026-02-03.md  -&gt; &quot;Rod started new team, standup moved to 14:15&q
           <div class="section-heading">
             <p class="section-kicker">第 25 站</p>
             <h2>Embedding cache</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Embedding cache”。</p>
+            <p>这一节主要在解释“Embedding cache”到底是干什么的，以及你什么时候会遇到它。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节主要在解释“Embedding cache”到底是干什么的，以及你什么时候会遇到它。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“OpenClaw can cache **chunk embeddings** in SQLite so reindexing and frequent updates (especially session transcripts) d…”。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -5646,7 +6097,25 @@ memory/2026-02-03.md  -&gt; &quot;Rod started new team, standup moved to 14:15&q
           <div class="section-heading">
             <p class="section-kicker">第 26 站</p>
             <h2>Session memory search (experimental)</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Session memory search (experimental)”。</p>
+            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“You can optionally index **session transcripts** and surface them via memory_search. This is gated behind an experiment…”。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -5735,7 +6204,25 @@ memory/2026-02-03.md  -&gt; &quot;Rod started new team, standup moved to 14:15&q
           <div class="section-heading">
             <p class="section-kicker">第 27 站</p>
             <h2>SQLite vector acceleration (sqlite-vec)</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“SQLite vector acceleration (sqlite-vec)”。</p>
+            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“When the sqlite-vec extension is available, OpenClaw stores embeddings in a SQLite virtual table (vec0) and performs ve…”。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -5832,7 +6319,25 @@ memory/2026-02-03.md  -&gt; &quot;Rod started new team, standup moved to 14:15&q
           <div class="section-heading">
             <p class="section-kicker">第 28 站</p>
             <h2>Local embedding auto-download</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Local embedding auto-download”。</p>
+            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -5852,7 +6357,25 @@ memory/2026-02-03.md  -&gt; &quot;Rod started new team, standup moved to 14:15&q
           <div class="section-heading">
             <p class="section-kicker">第 29 站</p>
             <h2>Custom OpenAI-compatible endpoint example</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Custom OpenAI-compatible endpoint example”。</p>
+            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Notes:”。</p>
+            </div>
           </div>
           <div class="story-grid">
             

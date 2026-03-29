@@ -3974,9 +3974,10 @@
     <section class="section-shell">
       <div class="overview-card">
         <div>
-          <p class="section-kicker">先听总故事</p>
+          <p class="section-kicker">先听这页的人话版</p>
           <h2>Delegate Architecture</h2>
           <p>这一页像一本关于“Delegate Architecture”的小绘本，它先告诉我们这位机器人朋友会做什么，再一步一步解释什么时候该这样做。 你可以先把它想成：Delegate Architecture。</p>
+          <p>如果把这页当成“给普通人看的版本”，你最应该带走的是：它到底在教你一件什么事、什么时候要这样做、以及哪里最容易踩坑。</p>
         </div>
         <div class="overview-meta">
           <span>原始路径：/concepts/delegate-architecture</span>
@@ -3990,7 +3991,25 @@
           <div class="section-heading">
             <p class="section-kicker">第 1 站</p>
             <h2>Start Here</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Start Here”。</p>
+            <p>这一节主要在解释“Start Here”到底是干什么的，以及你什么时候会遇到它。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节主要在解释“Start Here”到底是干什么的，以及你什么时候会遇到它。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Delegate Architecture Goal: run OpenClaw as a **named delegate** — an 机器人朋友 with its own identity that acts &quot;on behalf…”。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -4028,7 +4047,25 @@
           <div class="section-heading">
             <p class="section-kicker">第 2 站</p>
             <h2>What is a delegate?</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“What is a delegate?”。</p>
+            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>你理解的是能力边界，不只是功能名字。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“A **delegate** is an OpenClaw 机器人朋友 that: The delegate 聪明脑袋模型 maps directly to how executive assistants work: they have…”。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -4066,7 +4103,25 @@
           <div class="section-heading">
             <p class="section-kicker">第 3 站</p>
             <h2>Why delegates?</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Why delegates?”。</p>
+            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“OpenClaw&#39;s default mode is a **personal assistant** — one human, one 机器人朋友. Delegates extend this to organizations: Per…”。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -4113,7 +4168,25 @@
           <div class="section-heading">
             <p class="section-kicker">第 4 站</p>
             <h2>Capability tiers</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Capability tiers”。</p>
+            <p>这一节主要在解释“Capability tiers”到底是干什么的，以及你什么时候会遇到它。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节主要在解释“Capability tiers”到底是干什么的，以及你什么时候会遇到它。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Start with the lowest tier that meets your needs. Escalate only when the use case demands it.”。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -4133,7 +4206,25 @@
           <div class="section-heading">
             <p class="section-kicker">第 5 站</p>
             <h2>Tier 1: Read-Only + Draft</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Tier 1: Read-Only + Draft”。</p>
+            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>你理解的是能力边界，不只是功能名字。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“The delegate can **read** organizational data and **draft** 小纸条消息s for human review. Nothing is sent without approval.…”。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -4171,7 +4262,25 @@
           <div class="section-heading">
             <p class="section-kicker">第 6 站</p>
             <h2>Tier 2: Send on Behalf</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Tier 2: Send on Behalf”。</p>
+            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>你理解的是能力边界，不只是功能名字。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“The delegate can **send** 小纸条消息s and **create** calendar events under its own identity. Recipients see &quot;Delegate Name o…”。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -4209,7 +4318,25 @@
           <div class="section-heading">
             <p class="section-kicker">第 7 站</p>
             <h2>Tier 3: Proactive</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Tier 3: Proactive”。</p>
+            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“The delegate operates **autonomously** on a schedule, executing standing orders without per-action human approval. Huma…”。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -4256,7 +4383,25 @@
           <div class="section-heading">
             <p class="section-kicker">第 8 站</p>
             <h2>Prerequisites: isolation and hardening</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Prerequisites: isolation and hardening”。</p>
+            <p>这一节主要在解释“Prerequisites: isolation and hardening”到底是干什么的，以及你什么时候会遇到它。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节主要在解释“Prerequisites: isolation and hardening”到底是干什么的，以及你什么时候会遇到它。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&gt; **Do this first.** Before you grant any credentials or identity provider access, lock down the delegate&#39;s boundaries.…”。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -4276,7 +4421,25 @@
           <div class="section-heading">
             <p class="section-kicker">第 9 站</p>
             <h2>Hard blocks (non-negotiable)</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Hard blocks (non-negotiable)”。</p>
+            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>你理解的是能力边界，不只是功能名字。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Define these in the delegate&#39;s SOUL.md and 机器人朋友S.md before connecting any external accounts: These rules load every se…”。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -4314,7 +4477,25 @@
           <div class="section-heading">
             <p class="section-kicker">第 10 站</p>
             <h2>工具小帮手 restrictions</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“工具小帮手 restrictions”。</p>
+            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Use per-机器人朋友 工具小帮手 policy (v2026.1.6+) to enforce boundaries at the 门口的小门卫 level. This operates independently of the 机…”。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -4353,7 +4534,25 @@
           <div class="section-heading">
             <p class="section-kicker">第 11 站</p>
             <h2>Sandbox isolation</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Sandbox isolation”。</p>
+            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“For high-安全守门员 deployments, sandbox the delegate 机器人朋友 so it cannot access the host filesystem or network beyond its al…”。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -4401,7 +4600,25 @@
           <div class="section-heading">
             <p class="section-kicker">第 12 站</p>
             <h2>Audit trail</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Audit trail”。</p>
+            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“设置说明书ure logging before the delegate handles any real data: All delegate actions flow through OpenClaw&#39;s session store.…”。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -4439,7 +4656,25 @@
           <div class="section-heading">
             <p class="section-kicker">第 13 站</p>
             <h2>Setting up a delegate</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Setting up a delegate”。</p>
+            <p>这一节主要在解释“Setting up a delegate”到底是干什么的，以及你什么时候会遇到它。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节主要在解释“Setting up a delegate”到底是干什么的，以及你什么时候会遇到它。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“With hardening in place, proceed to grant the delegate its identity and permissions.”。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -4459,7 +4694,25 @@
           <div class="section-heading">
             <p class="section-kicker">第 14 站</p>
             <h2>1. Create the delegate 机器人朋友</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“1. Create the delegate 机器人朋友”。</p>
+            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Use the multi-机器人朋友 wizard to create an isolated 机器人朋友 for the delegate: This creates: 设置说明书ure the delegate&#39;s personal…”。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -4527,7 +4780,25 @@
           <div class="section-heading">
             <p class="section-kicker">第 15 站</p>
             <h2>2. 设置说明书ure identity provider delegation</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“2. 设置说明书ure identity provider delegation”。</p>
+            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“The delegate needs its own account in your identity provider with explicit delegation permissions. **Apply the principl…”。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -4547,7 +4818,25 @@
           <div class="section-heading">
             <p class="section-kicker">第 16 站</p>
             <h2>Microsoft 365</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Microsoft 365”。</p>
+            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Create a dedicated user account for the delegate (e.g., delegate@[organization].org). **Send on Behalf** (Tier 2): **Re…”。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -4632,7 +4921,25 @@ Set-Mailbox -Identity &quot;principal@[organization].org&quot; `
           <div class="section-heading">
             <p class="section-kicker">第 17 站</p>
             <h2>Google Workspace</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Google Workspace”。</p>
+            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Create a service account and enable domain-wide delegation in the Admin Console. Delegate only the scopes you need: The…”。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -4693,7 +5000,25 @@ https://www.googleapis.com/auth/calendar           # Tier 2</code></pre>
           <div class="section-heading">
             <p class="section-kicker">第 18 站</p>
             <h2>3. Bind the delegate to 消息通道s</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“3. Bind the delegate to 消息通道s”。</p>
+            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>你理解的是能力边界，不只是功能名字。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Route inbound 小纸条消息s to the delegate 机器人朋友 using Multi-机器人朋友 Routing bindings:”。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -4752,7 +5077,25 @@ https://www.googleapis.com/auth/calendar           # Tier 2</code></pre>
           <div class="section-heading">
             <p class="section-kicker">第 19 站</p>
             <h2>4. Add credentials to the delegate 机器人朋友</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“4. Add credentials to the delegate 机器人朋友”。</p>
+            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>你理解的是能力边界，不只是功能名字。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Copy or create auth profiles for the delegate&#39;s 机器人朋友Dir: Never share the main 机器人朋友&#39;s 机器人朋友Dir with the delegate. See…”。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -4794,7 +5137,25 @@ https://www.googleapis.com/auth/calendar           # Tier 2</code></pre>
           <div class="section-heading">
             <p class="section-kicker">第 20 站</p>
             <h2>Example: organizational assistant</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Example: organizational assistant”。</p>
+            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>你理解的是能力边界，不只是功能名字。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“A complete delegate 设置说明书uration for an organizational assistant that handles email, calendar, and social media: The de…”。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -4861,7 +5222,25 @@ https://www.googleapis.com/auth/calendar           # Tier 2</code></pre>
           <div class="section-heading">
             <p class="section-kicker">第 21 站</p>
             <h2>Scaling pattern</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Scaling pattern”。</p>
+            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>你理解的是能力边界，不只是功能名字。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“The delegate 聪明脑袋模型 works for any small organization: 1. **Create one delegate 机器人朋友** per organization. 2. **Harden fi…”。</p>
+            </div>
           </div>
           <div class="story-grid">
             

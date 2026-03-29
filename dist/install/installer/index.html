@@ -3974,9 +3974,10 @@
     <section class="section-shell">
       <div class="overview-card">
         <div>
-          <p class="section-kicker">先听总故事</p>
+          <p class="section-kicker">先听这页的人话版</p>
           <h2>Installer Internals</h2>
           <p>这一页像一本关于“Installer Internals”的小绘本，它先告诉我们这位机器人朋友会做什么，再一步一步解释什么时候该这样做。 你可以先把它想成：Installer internals。</p>
+          <p>如果把这页当成“给普通人看的版本”，你最应该带走的是：它到底在教你一件什么事、什么时候要这样做、以及哪里最容易踩坑。</p>
         </div>
         <div class="overview-meta">
           <span>原始路径：/install/installer</span>
@@ -3990,7 +3991,25 @@
           <div class="section-heading">
             <p class="section-kicker">第 1 站</p>
             <h2>Start Here</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Start Here”。</p>
+            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Installer internals OpenClaw ships three installer scripts, served from openclaw.ai. Script Platform What it does -----…”。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -4028,7 +4047,25 @@
           <div class="section-heading">
             <p class="section-kicker">第 2 站</p>
             <h2>Quick 魔法口令s</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Quick 魔法口令s”。</p>
+            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Tabs&gt; &lt;Tab title=&quot;install.sh&quot;&gt; &lt;/Tab&gt; &lt;Tab title=&quot;install-cli.sh&quot;&gt; &lt;/Tab&gt; &lt;Tab title=&quot;install.ps1&quot;&gt; &lt;/Tab&gt; &lt;/Tabs&gt; &lt;No…”。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -4111,7 +4148,25 @@
           <div class="section-heading">
             <p class="section-kicker">第 3 站</p>
             <h2>install.sh</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“install.sh”。</p>
+            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Tip&gt; Recommended for most interactive installs on macOS/Linux/WSL. &lt;/Tip&gt;”。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -4131,7 +4186,25 @@
           <div class="section-heading">
             <p class="section-kicker">第 4 站</p>
             <h2>Flow (install.sh)</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Flow (install.sh)”。</p>
+            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Steps&gt; &lt;Step title=&quot;Detect OS&quot;&gt; Supports macOS and Linux (including WSL). If macOS is detected, installs Homebrew if m…”。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -4223,7 +4296,25 @@
           <div class="section-heading">
             <p class="section-kicker">第 5 站</p>
             <h2>Source checkout detection</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Source checkout detection”。</p>
+            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“If run inside an OpenClaw checkout (package.json + pnpm-workspace.yaml), the script offers: If no TTY is available and…”。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -4270,7 +4361,25 @@
           <div class="section-heading">
             <p class="section-kicker">第 6 站</p>
             <h2>Examples (install.sh)</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Examples (install.sh)”。</p>
+            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Tabs&gt; &lt;Tab title=&quot;Default&quot;&gt; &lt;/Tab&gt; &lt;Tab title=&quot;Skip onboarding&quot;&gt; &lt;/Tab&gt; &lt;Tab title=&quot;Git install&quot;&gt; &lt;/Tab&gt; &lt;Tab title=&quot;G…”。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -4353,7 +4462,25 @@
           <div class="section-heading">
             <p class="section-kicker">第 7 站</p>
             <h2>install-cli.sh</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“install-cli.sh”。</p>
+            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Info&gt; Designed for environments where you want everything under a local prefix (default ~/.openclaw) and no system Nod…”。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -4373,7 +4500,25 @@
           <div class="section-heading">
             <p class="section-kicker">第 8 站</p>
             <h2>Flow (install-cli.sh)</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Flow (install-cli.sh)”。</p>
+            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Steps&gt; &lt;Step title=&quot;Install local Node runtime&quot;&gt; Downloads a pinned supported Node LTS tarball (the version is embedde…”。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -4411,7 +4556,25 @@
           <div class="section-heading">
             <p class="section-kicker">第 9 站</p>
             <h2>Examples (install-cli.sh)</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Examples (install-cli.sh)”。</p>
+            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Tabs&gt; &lt;Tab title=&quot;Default&quot;&gt; &lt;/Tab&gt; &lt;Tab title=&quot;Custom prefix + version&quot;&gt; &lt;/Tab&gt; &lt;Tab title=&quot;自动小闹钟 JSON output&quot;&gt; &lt;/Tab&gt;…”。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -4485,7 +4648,25 @@
           <div class="section-heading">
             <p class="section-kicker">第 10 站</p>
             <h2>Flow (install.ps1)</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Flow (install.ps1)”。</p>
+            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Steps&gt; &lt;Step title=&quot;Ensure PowerShell + Windows environment&quot;&gt; Requires PowerShell 5+. &lt;/Step&gt; &lt;Step title=&quot;Ensure Node…”。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -4550,7 +4731,25 @@
           <div class="section-heading">
             <p class="section-kicker">第 11 站</p>
             <h2>Examples (install.ps1)</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Examples (install.ps1)”。</p>
+            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Tabs&gt; &lt;Tab title=&quot;Default&quot;&gt; &lt;/Tab&gt; &lt;Tab title=&quot;Git install&quot;&gt; &lt;/Tab&gt; &lt;Tab title=&quot;GitHub main via npm&quot;&gt; &lt;/Tab&gt; &lt;Tab titl…”。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -4651,7 +4850,25 @@
           <div class="section-heading">
             <p class="section-kicker">第 12 站</p>
             <h2>CI and 自动小闹钟</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“CI and 自动小闹钟”。</p>
+            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Use non-interactive flags/env vars for predictable runs. &lt;Tabs&gt; &lt;Tab title=&quot;install.sh (non-interactive npm)&quot;&gt; &lt;/Tab&gt; &lt;…”。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -4716,7 +4933,25 @@
           <div class="section-heading">
             <p class="section-kicker">第 13 站</p>
             <h2>Troubleshooting</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Troubleshooting”。</p>
+            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Accordion大家一起的房间&gt; &lt;Accordion title=&quot;Why is Git required?&quot;&gt; Git is required for git install method. For npm installs, G…”。</p>
+            </div>
           </div>
           <div class="story-grid">
             

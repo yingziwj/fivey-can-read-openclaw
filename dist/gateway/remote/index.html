@@ -3974,9 +3974,10 @@
     <section class="section-shell">
       <div class="overview-card">
         <div>
-          <p class="section-kicker">先听总故事</p>
+          <p class="section-kicker">先听这页的人话版</p>
           <h2>Remote Access</h2>
           <p>这一页像一本关于“Remote Access”的小绘本，它先告诉我们这位机器人朋友会做什么，再一步一步解释什么时候该这样做。 你可以先把它想成：Remote access (SSH, tunnels, and tailnets)。</p>
+          <p>如果把这页当成“给普通人看的版本”，你最应该带走的是：它到底在教你一件什么事、什么时候要这样做、以及哪里最容易踩坑。</p>
         </div>
         <div class="overview-meta">
           <span>原始路径：/gateway/remote</span>
@@ -3990,7 +3991,25 @@
           <div class="section-heading">
             <p class="section-kicker">第 1 站</p>
             <h2>Start Here</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Start Here”。</p>
+            <p>这一节主要在解释“Start Here”到底是干什么的，以及你什么时候会遇到它。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节主要在解释“Start Here”到底是干什么的，以及你什么时候会遇到它。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Remote access (SSH, tunnels, and tailnets) This repo supports “remote over SSH” by keeping a single 门口的小门卫 (the master)…”。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -4028,7 +4047,25 @@
           <div class="section-heading">
             <p class="section-kicker">第 2 站</p>
             <h2>The core idea</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“The core idea”。</p>
+            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -4048,7 +4085,25 @@
           <div class="section-heading">
             <p class="section-kicker">第 3 站</p>
             <h2>Common VPN/tailnet setups (where the 机器人朋友 lives)</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Common VPN/tailnet setups (where the 机器人朋友 lives)”。</p>
+            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Think of the **门口的小门卫 host** as “where the 机器人朋友 lives.” It owns sessions, auth profiles, 消息通道s, and state. Your laptop…”。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -4068,7 +4123,25 @@
           <div class="section-heading">
             <p class="section-kicker">第 4 站</p>
             <h2>1) Always-on 门口的小门卫 in your tailnet (VPS or home 大房子服务器)</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“1) Always-on 门口的小门卫 in your tailnet (VPS or home 大房子服务器)”。</p>
+            <p>这一节主要在解释“1) Always-on 门口的小门卫 in your tailnet (VPS or home 大房子服务器)”到底是干什么的，以及你什么时候会遇到它。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节主要在解释“1) Always-on 门口的小门卫 in your tailnet (VPS or home 大房子服务器)”到底是干什么的，以及你什么时候会遇到它。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Run the 门口的小门卫 on a persistent host and reach it via **Tailscale** or SSH. This is ideal when your laptop sleeps often…”。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -4106,7 +4179,25 @@
           <div class="section-heading">
             <p class="section-kicker">第 5 站</p>
             <h2>2) Home desktop runs the 门口的小门卫, laptop is remote control</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“2) Home desktop runs the 门口的小门卫, laptop is remote control”。</p>
+            <p>这一节主要在解释“2) Home desktop runs the 门口的小门卫, laptop is remote control”到底是干什么的，以及你什么时候会遇到它。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节主要在解释“2) Home desktop runs the 门口的小门卫, laptop is remote control”到底是干什么的，以及你什么时候会遇到它。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“The laptop does **not** run the 机器人朋友. It connects remotely: Runbook: macOS remote access.”。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -4144,7 +4235,25 @@
           <div class="section-heading">
             <p class="section-kicker">第 6 站</p>
             <h2>3) Laptop runs the 门口的小门卫, remote access from other machines</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“3) Laptop runs the 门口的小门卫, remote access from other machines”。</p>
+            <p>这一节主要在解释“3) Laptop runs the 门口的小门卫, remote access from other machines”到底是干什么的，以及你什么时候会遇到它。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节主要在解释“3) Laptop runs the 门口的小门卫, remote access from other machines”到底是干什么的，以及你什么时候会遇到它。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Keep the 门口的小门卫 local but expose it safely: Guide: Tailscale and Web overview.”。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -4182,7 +4291,25 @@
           <div class="section-heading">
             <p class="section-kicker">第 7 站</p>
             <h2>魔法口令 flow (what runs where)</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“魔法口令 flow (what runs where)”。</p>
+            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>你理解的是能力边界，不只是功能名字。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“One 门口的小门卫 service owns state + 消息通道s. Nodes are peripherals. Flow example (Telegram → node): Notes:”。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -4238,7 +4365,25 @@
           <div class="section-heading">
             <p class="section-kicker">第 8 站</p>
             <h2>SSH tunnel (CLI + 工具小帮手s)</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“SSH tunnel (CLI + 工具小帮手s)”。</p>
+            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Create a local tunnel to the remote 门口的小门卫 WS: With the tunnel up: Note: replace 18789 with your 设置说明书ured 门口的小门卫.port…”。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -4297,7 +4442,25 @@
           <div class="section-heading">
             <p class="section-kicker">第 9 站</p>
             <h2>CLI remote defaults</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“CLI remote defaults”。</p>
+            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“You can persist a remote target so CLI 魔法口令s use it by default: When the 门口的小门卫 is loopback-only, keep the URL at ws://…”。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -4346,7 +4509,25 @@
           <div class="section-heading">
             <p class="section-kicker">第 10 站</p>
             <h2>Credential precedence</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Credential precedence”。</p>
+            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“门口的小门卫 credential resolution follows one shared contract across call/probe/status paths and Discord exec-approval monit…”。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -4375,7 +4556,25 @@
           <div class="section-heading">
             <p class="section-kicker">第 11 站</p>
             <h2>Chat UI over SSH</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Chat UI over SSH”。</p>
+            <p>这一节主要在解释“Chat UI over SSH”到底是干什么的，以及你什么时候会遇到它。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节主要在解释“Chat UI over SSH”到底是干什么的，以及你什么时候会遇到它。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“WebChat no longer uses a separate HTTP port. The SwiftUI chat UI connects directly to the 门口的小门卫 WebSocket.”。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -4404,7 +4603,25 @@
           <div class="section-heading">
             <p class="section-kicker">第 12 站</p>
             <h2>macOS app &quot;Remote over SSH&quot;</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“macOS app &quot;Remote over SSH&quot;”。</p>
+            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“The macOS menu bar app can drive the same setup end-to-end (remote status checks, WebChat, and Voice Wake forwarding).…”。</p>
+            </div>
           </div>
           <div class="story-grid">
             
@@ -4433,7 +4650,25 @@
           <div class="section-heading">
             <p class="section-kicker">第 13 站</p>
             <h2>安全守门员 rules (remote/VPN)</h2>
-            <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“安全守门员 rules (remote/VPN)”。</p>
+            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Short version: **keep the 门口的小门卫 loopback-only** unless you’re sure you need a bind. set OPENCLAW_ALLOW_INSECURE_PRIVAT…”。</p>
+            </div>
           </div>
           <div class="story-grid">
             

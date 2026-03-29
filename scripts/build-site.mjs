@@ -13,6 +13,7 @@ import {
   excerpt,
   formatDate,
   readJson,
+  stripMarkdown,
   softenTerms,
   storyForCode,
   storyForList,
@@ -102,6 +103,10 @@ async function copyDir(source, target) {
 }
 
 await copyDir(path.resolve("assets/icons"), path.join(DIST_DIR, "assets/icons"));
+
+const handcraftedPageMap = new Map([
+  ["/tools/index", path.resolve("content/handcrafted/tools.index.zh.html")]
+]);
 
 function asset(fileName) {
   return `/assets/${fileName}`;
@@ -206,6 +211,46 @@ function renderStoryBlock(block, sectionTitle) {
   }
 
   return "";
+}
+
+function sectionGuide(section) {
+  const plain = stripMarkdown(
+    section.blocks
+      .map((block) => {
+        if (block.type === "paragraph") return block.text;
+        if (block.type === "list") return block.items.join("；");
+        if (block.type === "code") return "";
+        return "";
+      })
+      .join(" ")
+  );
+
+  const lower = plain.toLowerCase();
+  let what = `这一节主要在解释“${softenTerms(section.title)}”到底是干什么的，以及你什么时候会遇到它。`;
+  let why = "如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。";
+  let use = "真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。";
+
+  if (/allow|deny|policy|required|must|default/.test(lower)) {
+    what = `这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。`;
+    why = "这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。";
+    use = "你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。";
+  } else if (/install|setup|configure|onboard|enable/.test(lower + section.title.toLowerCase())) {
+    what = `这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。`;
+    why = "很多文档看起来长，其实是在防你漏掉前置条件。";
+    use = "真正照做时，先找前置条件，再找必填项，最后看验证方法。";
+  } else if (/tool|browser|search|exec|file|message|cron|plugin|skill/.test(lower + section.title.toLowerCase())) {
+    what = `这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。`;
+    why = "你理解的是能力边界，不只是功能名字。";
+    use = "如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。";
+  }
+
+  return { what, why, use };
+}
+
+async function renderHandcraftedContent(page) {
+  const filePath = handcraftedPageMap.get(page.pathname);
+  if (!filePath) return null;
+  return fs.readFile(filePath, "utf8");
 }
 
 function renderSidebar(navigation, currentPathname) {
@@ -525,7 +570,7 @@ function renderIconPage() {
   });
 }
 
-function renderDocPage(page) {
+async function renderDocPage(page) {
   const breadcrumbs = [
     { label: "Home", pathname: "/" },
     { label: page.sectionLabel, pathname: page.pathname }
@@ -533,6 +578,7 @@ function renderDocPage(page) {
 
   const sectionsHtml = page.sections
     .map((section, index) => {
+      const guide = sectionGuide(section);
       const sectionBlocks = section.blocks
         .map((block) => renderStoryBlock(block, section.title))
         .join("");
@@ -542,7 +588,25 @@ function renderDocPage(page) {
           <div class="section-heading">
             <p class="section-kicker">第 ${index + 1} 站</p>
             <h2>${escapeHtml(softenTerms(section.title))}</h2>
-            <p>${escapeHtml(storyForParagraph(section.title))}</p>
+            <p>${escapeHtml(guide.what)}</p>
+          </div>
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-card-label">这段在解决什么</div>
+              <p>${escapeHtml(guide.what)}</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">为什么值得看</div>
+              <p>${escapeHtml(guide.why)}</p>
+            </div>
+            <div class="story-card">
+              <div class="story-card-label">真要动手时</div>
+              <p>${escapeHtml(guide.use)}</p>
+            </div>
+            <div class="source-card">
+              <div class="story-card-label">先别急着背术语</div>
+              <p>${escapeHtml(storyForParagraph(stripMarkdown(section.blocks.map((block) => block.type === "paragraph" ? block.text : "").join(" "))))}</p>
+            </div>
           </div>
           <div class="story-grid">
             ${sectionBlocks}
@@ -552,13 +616,14 @@ function renderDocPage(page) {
     })
     .join("");
 
-  const content = `
+  const genericContent = `
     <section class="section-shell">
       <div class="overview-card">
         <div>
-          <p class="section-kicker">先听总故事</p>
+          <p class="section-kicker">先听这页的人话版</p>
           <h2>${escapeHtml(page.title)}</h2>
           <p>${escapeHtml(storyLead(page.title, page.description || ""))}</p>
+          <p>${escapeHtml(`如果把这页当成“给普通人看的版本”，你最应该带走的是：它到底在教你一件什么事、什么时候要这样做、以及哪里最容易踩坑。`)}</p>
         </div>
         <div class="overview-meta">
           <span>原始路径：${escapeHtml(page.pathname)}</span>
@@ -575,6 +640,7 @@ function renderDocPage(page) {
       </div>
     </section>
   `;
+  const handcraftedContent = await renderHandcraftedContent(page);
 
   return renderPageLayout({
     title: page.title,
@@ -583,7 +649,7 @@ function renderDocPage(page) {
     heroEyebrow: `${page.sectionLabel} 故事分馆`,
     heroTitle: `${page.title}，像讲故事一样读`,
     heroText: storyLead(page.title, page.description || ""),
-    content,
+    content: handcraftedContent || genericContent,
     navigation: siteData.navigation,
     breadcrumbs
   });
@@ -1140,12 +1206,12 @@ await fs.writeFile(path.join(DIST_DIR, "theme-icons", "index.html"), renderIconP
 for (const page of siteData.pages) {
   const outputPath = pageOutputPath(page.pathname);
   await ensureDir(path.dirname(outputPath));
-  await fs.writeFile(outputPath, renderDocPage(page), "utf8");
+  await fs.writeFile(outputPath, await renderDocPage(page), "utf8");
 
   if (page.pathname !== "/index" && page.pathname.endsWith("/index")) {
     const aliasOutputPath = path.join(DIST_DIR, page.pathname.slice(1, -"/index".length), "index.html");
     await ensureDir(path.dirname(aliasOutputPath));
-    await fs.writeFile(aliasOutputPath, renderDocPage(page), "utf8");
+    await fs.writeFile(aliasOutputPath, await renderDocPage(page), "utf8");
   }
 }
 
