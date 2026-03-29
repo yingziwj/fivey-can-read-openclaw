@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8a7ff"/>
+      <stop offset="45%" stop-color="#f5576c"/>
+      <stop offset="100%" stop-color="#ffd166"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.96"/>
+      <stop offset="100%" stop-color="#fff4fa" stop-opacity="0.94"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" rx="48" fill="url(#bg)"/>
+  <circle cx="1060" cy="90" r="120" fill="#ffffff" opacity="0.12"/>
+  <circle cx="120" cy="520" r="140" fill="#7bdff2" opacity="0.18"/>
+  <rect x="72" y="72" width="1056" height="486" rx="40" fill="url(#card)"/>
+  <image href="https://fivey-can-read-openclaw.pages.dev/favicon.svg" x="120" y="140" width="180" height="180"/>
+  <text x="340" y="220" font-family="'Trebuchet MS', 'Segoe UI', sans-serif" font-size="34" fill="#b04b8f">OpenClaw 绘本版文档站</text>
+  <text x="340" y="312" font-family="'Trebuchet MS', 'Segoe UI', sans-serif" font-size="74" font-weight="700" fill="#3a3551">Fivey Can Read</text>
+  <text x="340" y="390" font-family="'Trebuchet MS', 'Segoe UI', sans-serif" font-size="74" font-weight="700" fill="#3a3551">OpenClaw</text>
+  <text x="120" y="486" font-family="'Trebuchet MS', 'Segoe UI', sans-serif" font-size="28" fill="#60597a">给 5 岁小朋友也能慢慢听懂的 OpenClaw 官方文档解读</text>
+  <text x="120" y="528" font-family="'Trebuchet MS', 'Segoe UI', sans-serif" font-size="28" fill="#60597a">默认主题：气球故事书</text>
+</svg>

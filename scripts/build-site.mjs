@@ -52,6 +52,14 @@ await ensureDir(path.join(DIST_DIR, "assets"));
 const defaultIconSource = path.resolve("assets/icons/concept-balloon-book.svg");
 const iconOutput = path.join(DIST_DIR, "favicon.svg");
 await fs.copyFile(defaultIconSource, iconOutput);
+const selectedTheme = {
+  file: "concept-balloon-book.svg",
+  name: "Balloon Book",
+  chineseName: "气球故事书",
+  summary: "最贴近当前海报气质，温柔、可爱、像在读绘本。",
+  fit: "适合把站点重点放在“儿童友好解读”和“陪伴式学习”。",
+  reason: "它和最初示例海报的糖果色、圆角卡片和绘本感最一致，所以我把它正式定为默认主题。"
+};
 
 const iconConcepts = [
   {
@@ -254,7 +262,7 @@ function renderPageLayout({ title, description, pathname, heroEyebrow, heroTitle
   <meta property="og:title" content="${escapeHtml(pageTitle)}">
   <meta property="og:description" content="${escapeHtml(description)}">
   <meta property="og:url" content="${escapeHtml(canonical)}">
-  <meta property="og:image" content="${escapeHtml(`${SITE_URL}/favicon.svg`)}">
+  <meta property="og:image" content="${escapeHtml(`${SITE_URL}/og-image.svg`)}">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="${escapeHtml(pageTitle)}">
   <meta name="twitter:description" content="${escapeHtml(description)}">
@@ -282,10 +290,10 @@ function renderPageLayout({ title, description, pathname, heroEyebrow, heroTitle
   <div class="page-shell">
     <aside class="sidebar">
       <a class="brand" href="/">
-        <span class="brand-mark">🎈</span>
+        <span class="brand-mark"><img src="/favicon.svg" alt="${escapeHtml(selectedTheme.chineseName)}"></span>
         <span>
           <strong>Fivey Can Read</strong>
-          <small>OpenClaw 绘本版文档站</small>
+          <small>OpenClaw 绘本版文档站 · ${escapeHtml(selectedTheme.chineseName)}主题</small>
         </span>
       </a>
       ${renderSidebar(navigation, pathname)}
@@ -304,6 +312,7 @@ function renderPageLayout({ title, description, pathname, heroEyebrow, heroTitle
         <h1>${escapeHtml(heroTitle)}</h1>
         <p class="hero-copy">${escapeHtml(heroText)}</p>
         <div class="hero-pills">
+          <span>${escapeHtml(selectedTheme.chineseName)}主题</span>
           <span>逐节讲解</span>
           <span>代码也讲故事</span>
           <span>SEO 友好</span>
@@ -336,8 +345,8 @@ function renderPageLayout({ title, description, pathname, heroEyebrow, heroTitle
 }
 
 function renderHomePage() {
-  const heroText = `我们把 OpenClaw 官方文档变成了适合 5 岁小朋友和第一次接触的人阅读的故事版。每一页都会按原文菜单顺序讲，命令和代码也会拆成一步一步的小故事。`;
-const sectionCards = siteData.navigation
+  const heroText = `我们把 OpenClaw 官方文档变成了适合 5 岁小朋友和第一次接触的人阅读的故事版。每一页都会按原文菜单顺序讲，命令和代码也会拆成一步一步的小故事。现在默认主题已经定为“${selectedTheme.chineseName}”，整站会统一沿着这套绘本气质继续长。`;
+  const sectionCards = siteData.navigation
     .map(
       (section, index) => `
         <a class="home-card" href="${section.pages[0] ? publicPathname(section.pages[0].pathname) : "/"}">
@@ -367,6 +376,23 @@ const sectionCards = siteData.navigation
     </section>
 
     <section class="section-shell">
+      <div class="overview-card brand-overview">
+        <div class="brand-overview-art">
+          <img src="/favicon.svg" alt="${escapeHtml(selectedTheme.chineseName)}">
+        </div>
+        <div>
+          <p class="section-kicker">默认主题已定</p>
+          <h2>${escapeHtml(selectedTheme.chineseName)}</h2>
+          <p>${escapeHtml(selectedTheme.reason)}</p>
+          <div class="overview-meta">
+            <span>${escapeHtml(selectedTheme.summary)}</span>
+            <a href="/theme-icons/">查看另外两个方案</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-shell">
       <div class="section-heading">
         <p class="section-kicker">按原站顺序阅读</p>
         <h2>从这些大门进去</h2>
@@ -384,7 +410,7 @@ const sectionCards = siteData.navigation
           .map(
             (icon) => `
               <a class="home-card" href="/theme-icons/">
-                <span class="home-card-index">🎨</span>
+                <span class="home-card-index">${icon.file === selectedTheme.file ? "✓" : "🎨"}</span>
                 <h2>${escapeHtml(icon.chineseName)}</h2>
                 <p>${escapeHtml(icon.summary)}</p>
               </a>
@@ -414,7 +440,7 @@ const sectionCards = siteData.navigation
         </div>
         <div class="story-card">
           <div class="story-card-label">第四步</div>
-          <p>等你选好图标后，我再把默认 favicon 固定下来，并顺手把 Google AdSense 占位改成正式接入口。</p>
+          <p>默认图标我已经定成 <code>${escapeHtml(selectedTheme.chineseName)}</code> 主题；后面如果要接 Google AdSense，我再把广告占位改成正式接入口。</p>
         </div>
       </div>
     </section>
@@ -456,7 +482,7 @@ function renderIconPage() {
           </div>
           <div class="icon-copy">
             <p class="section-kicker">方案 ${index + 1}</p>
-            <h2>${escapeHtml(icon.chineseName)}</h2>
+            <h2>${escapeHtml(icon.chineseName)}${icon.file === selectedTheme.file ? " · 当前默认" : ""}</h2>
             <p>${escapeHtml(icon.summary)}</p>
             <p>${escapeHtml(icon.fit)}</p>
             <code>/assets/icons/${escapeHtml(icon.file)}</code>
@@ -472,7 +498,7 @@ function renderIconPage() {
         <div>
           <p class="section-kicker">主题图标候选</p>
           <h2>这 3 个门牌都能直接拿来做站点主题</h2>
-          <p>我已经把它们都放进仓库，并且默认先用“气球故事书”作为 favicon。你后面只要告诉我选哪一个，我就可以把站点默认图标、社交分享图和品牌色再统一一轮。</p>
+          <p>我已经把它们都放进仓库，并且现在正式把“${selectedTheme.chineseName}”定成默认主题。后面如果要换，也只需要切一次默认文件名和品牌文案。</p>
         </div>
       </div>
     </section>
@@ -641,6 +667,11 @@ code, pre {
   background: linear-gradient(135deg, #ff9a9e, #fad0c4 45%, #fbc2eb);
 }
 
+.brand-mark img {
+  width: 40px;
+  height: 40px;
+}
+
 .brand strong {
   display: block;
   font-size: 1rem;
@@ -783,6 +814,26 @@ code, pre {
   border-radius: 30px;
   padding: 26px;
   box-shadow: var(--shadow);
+}
+
+.brand-overview {
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr);
+  gap: 20px;
+  align-items: center;
+}
+
+.brand-overview-art {
+  display: grid;
+  place-items: center;
+  min-height: 180px;
+  border-radius: 26px;
+  background: linear-gradient(135deg, rgba(255, 233, 188, 0.72), rgba(248, 238, 255, 0.86));
+}
+
+.brand-overview-art img {
+  width: 140px;
+  height: auto;
 }
 
 .spotlight-card {
@@ -1007,7 +1058,8 @@ code, pre {
 
   .spotlight-card,
   .story-grid,
-  .icon-card {
+  .icon-card,
+  .brand-overview {
     grid-template-columns: 1fr;
   }
 }
@@ -1050,8 +1102,35 @@ if (toggle && mobileNav) {
 }
 `;
 
+const ogImage = `<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8a7ff"/>
+      <stop offset="45%" stop-color="#f5576c"/>
+      <stop offset="100%" stop-color="#ffd166"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.96"/>
+      <stop offset="100%" stop-color="#fff4fa" stop-opacity="0.94"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" rx="48" fill="url(#bg)"/>
+  <circle cx="1060" cy="90" r="120" fill="#ffffff" opacity="0.12"/>
+  <circle cx="120" cy="520" r="140" fill="#7bdff2" opacity="0.18"/>
+  <rect x="72" y="72" width="1056" height="486" rx="40" fill="url(#card)"/>
+  <image href="${SITE_URL}/favicon.svg" x="120" y="140" width="180" height="180"/>
+  <text x="340" y="220" font-family="'Trebuchet MS', 'Segoe UI', sans-serif" font-size="34" fill="#b04b8f">OpenClaw 绘本版文档站</text>
+  <text x="340" y="312" font-family="'Trebuchet MS', 'Segoe UI', sans-serif" font-size="74" font-weight="700" fill="#3a3551">Fivey Can Read</text>
+  <text x="340" y="390" font-family="'Trebuchet MS', 'Segoe UI', sans-serif" font-size="74" font-weight="700" fill="#3a3551">OpenClaw</text>
+  <text x="120" y="486" font-family="'Trebuchet MS', 'Segoe UI', sans-serif" font-size="28" fill="#60597a">给 5 岁小朋友也能慢慢听懂的 OpenClaw 官方文档解读</text>
+  <text x="120" y="528" font-family="'Trebuchet MS', 'Segoe UI', sans-serif" font-size="28" fill="#60597a">默认主题：${selectedTheme.chineseName}</text>
+</svg>
+`;
+
 await fs.writeFile(path.join(DIST_DIR, "assets", "site.css"), css.trimStart(), "utf8");
 await fs.writeFile(path.join(DIST_DIR, "assets", "site.js"), js.trimStart(), "utf8");
+await fs.writeFile(path.join(DIST_DIR, "og-image.svg"), ogImage, "utf8");
 await fs.writeFile(path.join(DIST_DIR, "index.html"), renderHomePage(), "utf8");
 await ensureDir(path.join(DIST_DIR, "theme-icons"));
 await fs.writeFile(path.join(DIST_DIR, "theme-icons", "index.html"), renderIconPage(), "utf8");

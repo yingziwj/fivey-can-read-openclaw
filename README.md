@@ -6,6 +6,7 @@
 - `npm run sync` 会抓取 `https://docs.openclaw.ai/llms-full.txt`，解析出导航顺序、章节和原文内容。
 - `npm run build` 会把这些数据渲染为故事化静态页面，输出到 `dist/`。
 - 如果构建时本地还没有同步数据，`npm run build` 也会自动兜底抓取一次，方便 Cloudflare Pages 直接构建。
+- 默认品牌主题已经定为 `concept-balloon-book.svg`，并会同步生成 `og-image.svg` 作为社交分享图。
 
 ## 本地流程
 
