@@ -18,6 +18,8 @@ import {
   storyForList,
   storyForParagraph,
   storyLead,
+  translateMenuTitle,
+  translateSectionLabel,
   writeJson
 } from "./site-lib.mjs";
 
@@ -216,8 +218,8 @@ function renderSidebar(navigation, currentPathname) {
               const active = page.pathname === currentPathname ? "is-active" : "";
               return `
                 <a class="sidebar-link ${active}" href="${publicPathname(page.pathname)}">
-                  <span>${escapeHtml(page.title)}</span>
-                  <small>${escapeHtml(excerpt(page.description || page.title, 52))}</small>
+                  <span>${escapeHtml(page.translatedTitle || translateMenuTitle(page.title, page.sectionKey))}</span>
+                  <small>${escapeHtml(page.title)}</small>
                 </a>
               `;
             })
@@ -225,7 +227,7 @@ function renderSidebar(navigation, currentPathname) {
 
           return `
             <section class="sidebar-group">
-              <h3>${escapeHtml(section.label)}</h3>
+              <h3>${escapeHtml(section.translatedLabel || translateSectionLabel(section.key, section.label))}</h3>
               <div class="sidebar-links">${links}</div>
             </section>
           `;
@@ -351,7 +353,7 @@ function renderHomePage() {
       (section, index) => `
         <a class="home-card" href="${section.pages[0] ? publicPathname(section.pages[0].pathname) : "/"}">
           <span class="home-card-index">${String(index + 1).padStart(2, "0")}</span>
-          <h2>${escapeHtml(section.label)}</h2>
+          <h2>${escapeHtml(section.translatedLabel || translateSectionLabel(section.key, section.label))}</h2>
           <p>${escapeHtml(`这一组一共有 ${section.pages.length} 页，我们会按原站顺序慢慢讲。`)}</p>
         </a>
       `

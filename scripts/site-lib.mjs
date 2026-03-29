@@ -27,6 +27,191 @@ export function labelFromSegment(segment) {
     .replace(/\b\w/g, (match) => match.toUpperCase());
 }
 
+const SECTION_TRANSLATIONS = {
+  channels: "消息通道",
+  concepts: "核心概念",
+  index: "首页",
+  install: "安装部署",
+  plugins: "插件扩展",
+  start: "快速开始",
+  tools: "工具大全",
+  vps: "服务器部署",
+  automation: "自动任务",
+  platforms: "平台接入",
+  prose: "内容写作",
+  providers: "模型提供商",
+  auth: "认证",
+  "auth-credential-semantics": "认证凭证",
+  ci: "持续集成",
+  cli: "命令行",
+  gateway: "网关",
+  help: "帮助说明",
+  logging: "日志",
+  network: "网络",
+  nodes: "节点",
+  reference: "参考资料",
+  security: "安全",
+  web: "Web 界面",
+  debug: "调试",
+  diagnostics: "诊断",
+  "date-time": "日期时间",
+  pi: "树莓派",
+  "pi-dev": "树莓派开发"
+};
+
+const EXACT_MENU_TRANSLATIONS = {
+  "OpenClaw": "OpenClaw 首页",
+  "Tools and Plugins": "工具和插件",
+  "Chat Channels": "聊天通道",
+  "Gateway Architecture": "网关架构",
+  "Agent Runtime": "代理运行时",
+  "Agent Loop": "代理循环",
+  "Agent Workspace": "代理工作区",
+  "Linux Server": "Linux 服务器",
+  "Building Plugins": "构建插件",
+  "OpenProse": "OpenProse 写作",
+  "Android App": "Android 应用",
+  "Auth Monitoring": "认证监控",
+  "Agent Bootstrapping": "代理启动引导",
+  "iMessage": "iMessage 通道",
+  "Google Chat": "Google Chat 通道",
+  "Microsoft Teams": "Microsoft Teams 通道",
+  "Nextcloud Talk": "Nextcloud Talk 通道",
+  "Broadcast Groups": "广播群组",
+  "Group Messages": "群组消息",
+  "Channel Routing": "通道路由",
+  "Channel Troubleshooting": "通道故障排查",
+  "Channel Location Parsing": "通道位置解析",
+  "Browser Troubleshooting": "浏览器故障排查",
+  "Code Execution": "代码执行",
+  "Brave Search": "Brave 搜索",
+  "DuckDuckGo Search": "DuckDuckGo 搜索",
+  "Gemini Search": "Gemini 搜索",
+  "Grok Search": "Grok 搜索",
+  "Kimi Search": "Kimi 搜索",
+  "Perplexity Search": "Perplexity 搜索",
+  "apply_patch Tool": "apply_patch 工具"
+};
+
+const MENU_REPLACEMENTS = [
+  ["Tools and Plugins", "工具和插件"],
+  ["Getting Started", "快速开始"],
+  ["Troubleshooting", "故障排查"],
+  ["Configuration", "配置"],
+  ["Architecture", "架构"],
+  ["Overview", "概览"],
+  ["Building", "构建"],
+  ["Community", "社区"],
+  ["Bundles", "捆绑包"],
+  ["Bundle", "捆绑包"],
+  ["Entry Points", "入口点"],
+  ["Migration", "迁移"],
+  ["Experimental", "实验版"],
+  ["Release", "发布"],
+  ["Reference", "参考"],
+  ["Templates", "模板"],
+  ["Template", "模板"],
+  ["Testing", "测试"],
+  ["Wizard", "向导"],
+  ["Dashboard", "控制台"],
+  ["Control UI", "控制界面"],
+  ["Webchat", "网页聊天"],
+  ["Browser", "浏览器"],
+  ["Search", "搜索"],
+  ["Provider", "提供商"],
+  ["Providers", "提供商"],
+  ["Channels", "通道"],
+  ["Channel", "通道"],
+  ["Tools", "工具"],
+  ["Tool", "工具"],
+  ["Plugins", "插件"],
+  ["Plugin", "插件"],
+  ["Skills", "技能"],
+  ["Skill", "技能"],
+  ["Memory", "记忆"],
+  ["Messages", "消息"],
+  ["Message", "消息"],
+  ["Context", "上下文"],
+  ["Models", "模型"],
+  ["Model", "模型"],
+  ["Groups", "群组"],
+  ["Group", "群组"],
+  ["Pairing", "配对"],
+  ["Location Parsing", "位置解析"],
+  ["Auth", "认证"],
+  ["Security", "安全"],
+  ["Formal Verification", "形式化验证"],
+  ["Threat Model", "威胁模型"],
+  ["Sandbox", "沙箱"],
+  ["Approvals", "授权审批"],
+  ["Compaction", "压缩整理"],
+  ["Markdown Formatting", "Markdown 格式"],
+  ["Prompt Caching", "提示缓存"],
+  ["Session Management", "会话管理"],
+  ["Token Use", "Token 使用"],
+  ["Device Models", "设备型号"],
+  ["Memory Config", "记忆配置"],
+  ["Runtime", "运行时"],
+  ["Loop", "循环"],
+  ["Workspace", "工作区"],
+  ["Server", "服务器"],
+  ["Install", "安装"],
+  ["Setup", "设置"],
+  ["Onboarding", "引导"],
+  ["Bootstrapping", "启动引导"],
+  ["Docs Directory", "文档目录"]
+];
+
+function replaceEnglishPunctuation(value = "") {
+  return value.replace(/\s*\(([^)]+)\)/g, "（$1）");
+}
+
+function tidyMenuTranslation(value = "") {
+  return replaceEnglishPunctuation(value)
+    .replace(/([\u4e00-\u9fff])\s+([\u4e00-\u9fff])/g, "$1$2")
+    .replace(/\s{2,}/g, " ")
+    .trim();
+}
+
+export function translateSectionLabel(sectionKey, fallbackLabel = "") {
+  return SECTION_TRANSLATIONS[sectionKey] || fallbackLabel || labelFromSegment(sectionKey);
+}
+
+export function translateMenuTitle(title = "", sectionKey = "") {
+  if (!title) return "";
+  if (EXACT_MENU_TRANSLATIONS[title]) {
+    return tidyMenuTranslation(EXACT_MENU_TRANSLATIONS[title]);
+  }
+
+  let translated = title;
+  for (const [source, target] of MENU_REPLACEMENTS) {
+    translated = translated.replaceAll(source, target);
+  }
+
+  if (translated === title) {
+    const simpleBrand = /^[A-Za-z0-9.+\- ]+$/.test(title) && !title.includes("(");
+    if (simpleBrand && sectionKey === "channels") {
+      translated = `${title} 通道`;
+    } else if (simpleBrand && sectionKey === "install") {
+      translated = `${title} 安装`;
+    } else if (simpleBrand && sectionKey === "plugins") {
+      translated = `${title} 插件`;
+    } else if (simpleBrand && sectionKey === "start") {
+      translated = `${title} 入门`;
+    } else if (simpleBrand && sectionKey === "cli") {
+      translated = `${title} 命令`;
+    } else if (simpleBrand && sectionKey === "providers") {
+      translated = `${title} 提供商`;
+    } else if (simpleBrand && sectionKey === "platforms") {
+      translated = `${title} 平台`;
+    } else if (simpleBrand && sectionKey === "tools") {
+      translated = `${title} 工具`;
+    }
+  }
+
+  return tidyMenuTranslation(translated);
+}
+
 export function escapeHtml(value = "") {
   return value
     .replace(/&/g, "&amp;")
@@ -339,14 +524,17 @@ export function buildNavigation(pages) {
       sectionMap.set(page.sectionKey, {
         key: page.sectionKey,
         label: page.sectionLabel,
+        translatedLabel: translateSectionLabel(page.sectionKey, page.sectionLabel),
         pages: []
       });
     }
 
     sectionMap.get(page.sectionKey).pages.push({
+      sectionKey: page.sectionKey,
       slug: page.slug,
       pathname: page.pathname,
       title: page.title,
+      translatedTitle: translateMenuTitle(page.title, page.sectionKey),
       description: page.description
     });
   }
