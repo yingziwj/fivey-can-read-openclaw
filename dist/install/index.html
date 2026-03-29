@@ -3971,686 +3971,311 @@
       </div>
 
       
-    <section class="section-shell">
-      <div class="overview-card">
-        <div>
-          <p class="section-kicker">先听这页的人话版</p>
-          <h2>Install</h2>
-          <p>这一页像一本关于“Install”的小绘本，它先告诉我们这位机器人朋友会做什么，再一步一步解释什么时候该这样做。 你可以先把它想成：Install。</p>
-          <p>如果把这页当成“给普通人看的版本”，你最应该带走的是：它到底在教你一件什么事、什么时候要这样做、以及哪里最容易踩坑。</p>
+      <section class="section-shell">
+        <div class="overview-card">
+          <div>
+            <p class="section-kicker">DeepSeek 中文解读版</p>
+            <h2>OpenClaw安装指南：从零到一，快速上手</h2>
+            <p>这页文档告诉你如何把OpenClaw装到你的电脑上。无论你是想快速体验，还是需要定制化安装，这里都有对应的方案。重点不是记住每个命令，而是理解不同安装方式背后的逻辑，这样你才能选对适合自己的那条路。</p>
+          </div>
+          <div class="overview-meta">
+            <span>原始路径：/install/index</span>
+            <span>模型输出章节：11</span>
+            <a href="https://docs.openclaw.ai/install/index" target="_blank" rel="noreferrer">查看官方原文</a>
+          </div>
         </div>
-        <div class="overview-meta">
-          <span>原始路径：/install/index</span>
-          <span>章节数量：11</span>
-          <a href="https://docs.openclaw.ai/install/index" target="_blank" rel="noreferrer">查看原文</a>
+      </section>
+      
+          <section class="section-shell" id="section-1">
+            <div class="section-heading">
+              <p class="section-kicker">第 1 站</p>
+              <h2>安装从这里开始</h2>
+              <p>这是安装页面的入口，告诉你接下来要做什么。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">为什么看这节</div>
+                <p>帮你快速定位，明确这一页的核心任务就是完成安装。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">这一节真正要带走的点</div>
+                <ul><li>页面标题是&#39;Install&#39;，目标很明确：让你把OpenClaw跑起来。</li><li>别被一堆选项吓到，先看&#39;推荐方式&#39;，那是最省心的路径。</li><li>整个页面结构清晰，从推荐安装到高级选项，层层递进。</li></ul>
+              </div>
+              
+              <div class="story-card">
+                <div class="story-card-label">最后记一句</div>
+                <p>先找到最适合你的安装路径，再动手。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-2">
+            <div class="section-heading">
+              <p class="section-kicker">第 2 站</p>
+              <h2>推荐方式：一键安装脚本</h2>
+              <p>官方最推荐的安装方法，一个命令搞定所有事情。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">为什么看这节</div>
+                <p>这是最省心、出错概率最低的方式，尤其适合第一次接触的用户。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">这一节真正要带走的点</div>
+                <ul><li>脚本会自动检测你的操作系统（macOS、Linux或Windows）。</li><li>如果系统里没有Node.js，它会帮你先装好Node。</li><li>接着安装OpenClaw本体，最后自动启动&#39;新手引导&#39;（onboarding）。</li><li>如果你不想立刻运行新手引导，可以加上`--no-onboard`参数。</li><li>Windows用户需要用PowerShell执行对应的脚本命令。</li><li>这个脚本也支持CI/CD等自动化场景，有更多参数可选。</li></ul>
+              </div>
+              
+            <div class="source-card">
+              <div class="story-card-label">命令 / 代码怎么理解</div>
+              <ul><li>`curl -fsSL ... | bash`：这条命令从官网下载安装脚本并立即执行。`-fsSL`参数让curl安静、安全地工作。</li><li>`iwr -useb ... | iex`：这是PowerShell的等价命令，功能相同。</li><li>`--no-onboard`：加这个参数，安装后不会自动弹出引导界面，适合脚本化部署。</li><li>`-NoOnboard`：PowerShell脚本中对应的参数。</li></ul>
+            </div>
+          
+              <div class="story-card">
+                <div class="story-card-label">最后记一句</div>
+                <p>想最快体验OpenClaw？直接复制推荐命令到终端运行就行。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-3">
+            <div class="section-heading">
+              <p class="section-kicker">第 3 站</p>
+              <h2>系统要求</h2>
+              <p>列出运行OpenClaw所需的最低软硬件环境。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">为什么看这节</div>
+                <p>确保你的电脑满足条件，避免安装中途出错。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">这一节真正要带走的点</div>
+                <ul><li>需要Node.js，推荐版本是Node 24，Node 22.14以上也行。</li><li>支持macOS、Linux和Windows（包括原生Windows和WSL2）。</li><li>官方提到WSL2环境更稳定，Windows用户可优先考虑。</li><li>只有当你选择&#39;从源码构建&#39;时，才需要提前安装`pnpm`。</li></ul>
+              </div>
+              
+              <div class="story-card">
+                <div class="story-card-label">最后记一句</div>
+                <p>检查一下你的Node版本和操作系统，确保在支持范围内。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-4">
+            <div class="section-heading">
+              <p class="section-kicker">第 4 站</p>
+              <h2>使用npm或pnpm安装</h2>
+              <p>如果你已经自己管理Node.js环境，可以用熟悉的包管理器来安装。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">为什么看这节</div>
+                <p>给习惯用npm/pnpm的用户一个更直接的安装入口。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">这一节真正要带走的点</div>
+                <ul><li>这种方式适合那些已经配置好Node环境的开发者。</li><li>命令会全局安装`openclaw`、`openclaw onboard`两个包。</li><li>`--install-daemon`参数会同时安装并启动必要的后台服务（Gateway）。</li><li>如果使用pnpm，安装后需要额外运行`pnpm approve-builds -g`来批准构建脚本。</li><li>如果遇到`sharp`包构建失败（通常因为全局libvips冲突），可以设置环境变量`SHARP_IGNORE_GLOBAL_LIBVIPS=1`来绕过。</li></ul>
+              </div>
+              
+            <div class="source-card">
+              <div class="story-card-label">命令 / 代码怎么理解</div>
+              <ul><li>`npm install -g openclaw@latest openclaw onboard --install-daemon`：`-g`表示全局安装，`@latest`确保是最新版，`--install-daemon`是关键，它配置后台服务。</li><li>`pnpm add -g ...`：pnpm的全局安装命令，逻辑与npm相同。</li><li>`SHARP_IGNORE_GLOBAL_LIBVIPS=1`：这是一个环境变量，告诉`sharp`库忽略系统里已存在的libvips，用自己的版本。</li><li>`pnpm approve-builds -g`：pnpm的安全特性，需要手动批准带有构建脚本的全局包安装。</li></ul>
+            </div>
+          
+              <div class="story-card">
+                <div class="story-card-label">最后记一句</div>
+                <p>用你熟悉的包管理器安装时，注意`--install-daemon`参数和可能的构建批准步骤。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-5">
+            <div class="section-heading">
+              <p class="section-kicker">第 5 站</p>
+              <h2>从源码构建</h2>
+              <p>克隆代码库，在本地编译并安装OpenClaw。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">为什么看这节</div>
+                <p>适合项目贡献者，或者想运行最新开发版、深度定制的用户。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">这一节真正要带走的点</div>
+                <ul><li>你需要先克隆OpenClaw的GitHub仓库到本地。</li><li>进入项目目录，用pnpm安装依赖并构建项目。</li><li>使用`pnpm link --global`将构建好的CLI链接到全局环境。</li><li>最后运行`openclaw onboard --install-daemon`完成初始配置。</li><li>你也可以不进行全局链接，直接在项目目录里用`pnpm openclaw ...`来运行命令。</li></ul>
+              </div>
+              
+            <div class="source-card">
+              <div class="story-card-label">命令 / 代码怎么理解</div>
+              <ul><li>`git clone ...`：获取最新的源代码。</li><li>`pnpm install &amp;&amp; pnpm ui:build &amp;&amp; pnpm build`：安装依赖，构建用户界面，然后构建整个项目。</li><li>`pnpm link --global`：将当前项目链接到全局Node模块目录，让你能在任何地方运行`openclaw`命令。</li><li>`pnpm openclaw ...`：在项目目录内，通过pnpm直接调用本地构建的CLI，适合开发测试。</li></ul>
+            </div>
+          
+              <div class="story-card">
+                <div class="story-card-label">最后记一句</div>
+                <p>从源码安装步骤较多，主要是为了开发或体验最前沿的功能。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-6">
+            <div class="section-heading">
+              <p class="section-kicker">第 6 站</p>
+              <h2>从GitHub主线安装</h2>
+              <p>一个命令直接从GitHub仓库的主分支安装最新开发版。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">为什么看这节</div>
+                <p>比从源码构建更简单，又能获取到尚未发布到npm的最新代码。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">这一节真正要带走的点</div>
+                <ul><li>这条命令会安装GitHub上`main`分支的最新代码。</li><li>本质上还是通过npm安装，但源指向了GitHub仓库。</li><li>适合想尝鲜最新功能，又不想手动克隆构建的用户。</li></ul>
+              </div>
+              
+            <div class="source-card">
+              <div class="story-card-label">命令 / 代码怎么理解</div>
+              <ul><li>`npm install -g github:openclaw/openclaw#main`：`github:`前缀告诉npm从GitHub安装，`#main`指定分支。</li></ul>
+            </div>
+          
+              <div class="story-card">
+                <div class="story-card-label">最后记一句</div>
+                <p>想用最新开发版？这一行命令就够了。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-7">
+            <div class="section-heading">
+              <p class="section-kicker">第 7 站</p>
+              <h2>容器与包管理器</h2>
+              <p>介绍了通过Docker、Podman、Nix等工具安装OpenClaw的途径。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">为什么看这节</div>
+                <p>满足不同技术栈和部署环境的需求，比如容器化、声明式配置或自动化运维。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">这一节真正要带走的点</div>
+                <ul><li>Docker和Podman提供容器化部署，适合隔离环境或无头（headless）运行。</li><li>Nix通过声明式配置（flake）安装，确保环境可重现。</li><li>Ansible用于自动化批量部署到多台服务器。</li><li>Bun运行时支持仅安装CLI部分。</li></ul>
+              </div>
+              
+              <div class="story-card">
+                <div class="story-card-label">最后记一句</div>
+                <p>如果你有特定的基础设施偏好（如全容器化），这里有专门的入口。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-8">
+            <div class="section-heading">
+              <p class="section-kicker">第 8 站</p>
+              <h2>验证安装</h2>
+              <p>安装完成后，用几个简单命令检查一切是否就绪。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">为什么看这节</div>
+                <p>快速确认安装成功，并排查潜在配置问题。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">这一节真正要带走的点</div>
+                <ul><li>`openclaw --version`：确认CLI命令可用，并查看版本号。</li><li>`openclaw doctor`：运行诊断，检查系统配置是否有问题（比如路径、权限）。</li><li>`openclaw gateway status`：验证核心的后台服务（Gateway）是否正常运行。</li></ul>
+              </div>
+              
+            <div class="source-card">
+              <div class="story-card-label">命令 / 代码怎么理解</div>
+              <ul><li>`openclaw --version`：最基本的健康检查。</li><li>`openclaw doctor`：类似于系统诊断工具，会给出修复建议。</li><li>`openclaw gateway status`：检查OpenClaw核心网关服务的状态，这是它正常工作的基础。</li></ul>
+            </div>
+          
+              <div class="story-card">
+                <div class="story-card-label">最后记一句</div>
+                <p>装完别急着走，运行这三个命令验验货。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-9">
+            <div class="section-heading">
+              <p class="section-kicker">第 9 站</p>
+              <h2>托管与部署</h2>
+              <p>将OpenClaw部署到云服务器或VPS上的指南索引。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">为什么看这节</div>
+                <p>帮你把本地的OpenClaw搬到服务器上，供团队或公开访问。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">这一节真正要带走的点</div>
+                <ul><li>文档列出了从通用VPS到各大云平台（GCP、Azure）的部署指南。</li><li>也包括Fly.io、Railway等现代应用托管平台。</li><li>有专门的页面讲解在Kubernetes集群中的部署。</li></ul>
+              </div>
+              
+              <div class="story-card">
+                <div class="story-card-label">最后记一句</div>
+                <p>准备上线？根据你的云服务商选择对应的部署文档。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-10">
+            <div class="section-heading">
+              <p class="section-kicker">第 10 站</p>
+              <h2>更新、迁移或卸载</h2>
+              <p>安装后的维护操作：升级版本、换机器、或者彻底移除。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">为什么看这节</div>
+                <p>软件生命周期管理，告诉你如何平滑升级、搬家或清理。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">这一节真正要带走的点</div>
+                <ul><li>&#39;更新&#39;指南教你如何升级到新版本。</li><li>&#39;迁移&#39;帮助你把OpenClaw从旧机器搬到新机器。</li><li>&#39;卸载&#39;说明如何彻底删除OpenClaw及其相关组件。</li></ul>
+              </div>
+              
+              <div class="story-card">
+                <div class="story-card-label">最后记一句</div>
+                <p>知道怎么装，也得知道怎么升、怎么搬、怎么卸。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-11">
+            <div class="section-heading">
+              <p class="section-kicker">第 11 站</p>
+              <h2>故障排查：找不到`openclaw`命令</h2>
+              <p>如果安装看似成功，但在终端里输入`openclaw`却提示命令未找到，该怎么办。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">为什么看这节</div>
+                <p>这是安装后最常见的问题之一，通常与Node环境或系统路径有关。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">这一节真正要带走的点</div>
+                <ul><li>首先检查Node.js是否正确安装（`node -v`）。</li><li>查看npm全局包的安装路径（`npm prefix -g`）。</li><li>检查系统的`PATH`环境变量是否包含了上述全局包的`bin`目录。</li><li>如果没包含，你需要手动把这个路径加到shell的启动文件（如`~/.zshrc`）里。</li><li>修改后需要新开一个终端窗口才能生效。</li></ul>
+              </div>
+              
+            <div class="source-card">
+              <div class="story-card-label">命令 / 代码怎么理解</div>
+              <ul><li>`node -v`：检查Node.js是否存在及其版本。</li><li>`npm prefix -g`：输出npm全局安装目录的路径。</li><li>`echo &quot;$PATH&quot;`：打印当前系统的PATH变量，检查目标`bin`目录是否在其中。</li><li>`export PATH=&quot;$(npm prefix -g)/bin:$PATH&quot;`：将npm全局bin目录添加到PATH的最前面。`$(...)`是命令替换，会先执行`npm prefix -g`得到路径。</li></ul>
+            </div>
+          
+              <div class="story-card">
+                <div class="story-card-label">最后记一句</div>
+                <p>命令找不到？九成是PATH没配对，按步骤检查一下。</p>
+              </div>
+            </div>
+          </section>
+        
+      <section class="section-shell">
+        <div class="ad-placeholder">
+          <p>这里预留给未来的 Google AdSense 模块。</p>
+          <code>&lt;!-- ADSENSE_SNIPPET --&gt;</code>
         </div>
-      </div>
-    </section>
+      </section>
     
-        <section class="section-shell" id="section-1">
-          <div class="section-heading">
-            <p class="section-kicker">第 1 站</p>
-            <h2>Start Here</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Install”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Install”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p># Install</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-2">
-          <div class="section-heading">
-            <p class="section-kicker">第 2 站</p>
-            <h2>Recommended: installer script</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“The fastest way to install. It detects your OS, installs Node if needed, installs OpenClaw, and launches onboarding. &lt;T…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“The fastest way to install. It detects your OS, installs Node if needed, installs OpenClaw, and launches onboarding.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>The fastest way to install. It detects your OS, installs Node if needed, installs OpenClaw, and launches onboarding.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Tabs&gt; &lt;Tab title=&quot;macOS / Linux / WSL2&quot;&gt; &lt;/Tab&gt;”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>&lt;Tabs&gt; &lt;Tab title=&quot;macOS / Linux / WSL2&quot;&gt; ``<code>bash theme={&quot;theme&quot;:{&quot;light&quot;:&quot;min-light&quot;,&quot;dark&quot;:&quot;min-dark&quot;}} curl -fsSL https://openclaw.ai/install.sh | bash </code>`` &lt;/Tab&gt;</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Tab title=&quot;Windows (PowerShell)&quot;&gt; &lt;/Tab&gt; &lt;/Tabs&gt;”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>&lt;Tab title=&quot;Windows (PowerShell)&quot;&gt; ``<code>powershell theme={&quot;theme&quot;:{&quot;light&quot;:&quot;min-light&quot;,&quot;dark&quot;:&quot;min-dark&quot;}} iwr -useb https://openclaw.ai/install.ps1 | iex </code>`` &lt;/Tab&gt; &lt;/Tabs&gt;</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“To install without running onboarding:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>To install without running onboarding:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Tabs&gt; &lt;Tab title=&quot;macOS / Linux / WSL2&quot;&gt; &lt;/Tab&gt;”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>&lt;Tabs&gt; &lt;Tab title=&quot;macOS / Linux / WSL2&quot;&gt; ``<code>bash theme={&quot;theme&quot;:{&quot;light&quot;:&quot;min-light&quot;,&quot;dark&quot;:&quot;min-dark&quot;}} curl -fsSL https://openclaw.ai/install.sh | bash -s -- --no-onboard </code>`` &lt;/Tab&gt;</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Tab title=&quot;Windows (PowerShell)&quot;&gt; &lt;/Tab&gt; &lt;/Tabs&gt;”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>&lt;Tab title=&quot;Windows (PowerShell)&quot;&gt; ``<code>powershell theme={&quot;theme&quot;:{&quot;light&quot;:&quot;min-light&quot;,&quot;dark&quot;:&quot;min-dark&quot;}} &amp; ([scriptblock]::Create((iwr -useb https://openclaw.ai/install.ps1))) -NoOnboard </code>`` &lt;/Tab&gt; &lt;/Tabs&gt;</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“For all flags and CI/自动小闹钟 options, see Installer internals.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>For all flags and CI/automation options, see <a href="/install/installer" target="_blank" rel="noreferrer">Installer internals</a>.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-3">
-          <div class="section-heading">
-            <p class="section-kicker">第 3 站</p>
-            <h2>System requirements</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“System requirements”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：**Node 24** (recommended) or Node 22.14+…、**macOS, Linux, or Windows** — both nativ…、pnpm is only needed if you build from sou…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>**Node 24** (recommended) or Node 22.14+ — the installer script handles this automatically</li><li>**macOS, Linux, or Windows** — both native Windows and WSL2 are supported; WSL2 is more stable. See <a href="/platforms/windows" target="_blank" rel="noreferrer">Windows</a>.</li><li><code>pnpm</code> is only needed if you build from source</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-4">
-          <div class="section-heading">
-            <p class="section-kicker">第 4 站</p>
-            <h2>npm or pnpm</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“If you already manage Node yourself: &lt;Tabs&gt; &lt;Tab title=&quot;npm&quot;&gt; &lt;/Tab&gt; &lt;Tab title=&quot;pnpm&quot;&gt; &lt;Note&gt; pnpm requires explicit a…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“If you already manage Node yourself:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>If you already manage Node yourself:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Tabs&gt; &lt;Tab title=&quot;npm&quot;&gt; &lt;/Tab&gt;”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>&lt;Tabs&gt; &lt;Tab title=&quot;npm&quot;&gt; ``<code>bash theme={&quot;theme&quot;:{&quot;light&quot;:&quot;min-light&quot;,&quot;dark&quot;:&quot;min-dark&quot;}} npm install -g openclaw@latest openclaw onboard --install-daemon </code>`` &lt;/Tab&gt;</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Tab title=&quot;pnpm&quot;&gt;”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>&lt;Tab title=&quot;pnpm&quot;&gt; ``<code>bash theme={&quot;theme&quot;:{&quot;light&quot;:&quot;min-light&quot;,&quot;dark&quot;:&quot;min-dark&quot;}} pnpm add -g openclaw@latest pnpm approve-builds -g openclaw onboard --install-daemon </code>``</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Note&gt; pnpm requires explicit approval for packages with build scripts. Run pnpm approve-builds -g after the first inst…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>&lt;Note&gt; pnpm requires explicit approval for packages with build scripts. Run <code>pnpm approve-builds -g</code> after the first install. &lt;/Note&gt; &lt;/Tab&gt; &lt;/Tabs&gt;</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Accordion title=&quot;Troubleshooting: sharp build errors (npm)&quot;&gt; If sharp fails due to a globally installed libvips:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>&lt;Accordion title=&quot;Troubleshooting: sharp build errors (npm)&quot;&gt; If <code>sharp</code> fails due to a globally installed libvips:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;/Accordion&gt;”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>``<code>bash theme={&quot;theme&quot;:{&quot;light&quot;:&quot;min-light&quot;,&quot;dark&quot;:&quot;min-dark&quot;}} SHARP_IGNORE_GLOBAL_LIBVIPS=1 npm install -g openclaw@latest </code>`` &lt;/Accordion&gt;</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-5">
-          <div class="section-heading">
-            <p class="section-kicker">第 5 站</p>
-            <h2>From source</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“For contributors or anyone who wants to run from a local checkout: Or skip the link and use pnpm openclaw ... from insi…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“For contributors or anyone who wants to run from a local checkout:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>For contributors or anyone who wants to run from a local checkout:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一串终端魔法口令，像按步骤按下几个按钮，让电脑开始干活。</p>
-        <ul class="code-steps">
-          <li>这里在给“git clone https”贴标签，意思是把它设置成“//github.com/openclaw/openclaw.git”。</li><li>这一行“cd openclaw”是当前步骤要交给电脑的一小块提示。</li><li>这里在给“pnpm install &amp;&amp; pnpm ui”贴标签，意思是把它设置成“build &amp;&amp; pnpm build”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">git clone https://github.com/openclaw/openclaw.git
-cd openclaw
-pnpm install &amp;&amp; pnpm ui:build &amp;&amp; pnpm build
-pnpm link --global
-openclaw onboard --install-daemon</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Or skip the link and use pnpm openclaw ... from inside the repo. See Setup for full development workflows.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Or skip the link and use <code>pnpm openclaw ...</code> from inside the repo. See <a href="/start/setup" target="_blank" rel="noreferrer">Setup</a> for full development workflows.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-6">
-          <div class="section-heading">
-            <p class="section-kicker">第 6 站</p>
-            <h2>Install from GitHub main</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一串终端魔法口令，像按步骤按下几个按钮，让电脑开始干活。</p>
-        <ul class="code-steps">
-          <li>这里在给“npm install -g github”贴标签，意思是把它设置成“openclaw/openclaw#main”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">npm install -g github:openclaw/openclaw#main</code></pre>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-7">
-          <div class="section-heading">
-            <p class="section-kicker">第 7 站</p>
-            <h2>Containers and package managers</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Card大家一起的房间&gt; &lt;Card title=&quot;Docker&quot; href=&quot;/install/docker&quot; icon=&quot;container&quot;&gt; Containerized or headless deployments. &lt;/Ca…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Card大家一起的房间&gt; &lt;Card title=&quot;Docker&quot; href=&quot;/install/docker&quot; icon=&quot;container&quot;&gt; Containerized or headless deployments. &lt;/Ca…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>&lt;CardGroup&gt; &lt;Card title=&quot;Docker&quot; href=&quot;/install/docker&quot; icon=&quot;container&quot;&gt; Containerized or headless deployments. &lt;/Card&gt;</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Card title=&quot;Podman&quot; href=&quot;/install/podman&quot; icon=&quot;container&quot;&gt; Rootless container alternative to Docker. &lt;/Card&gt;”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>&lt;Card title=&quot;Podman&quot; href=&quot;/install/podman&quot; icon=&quot;container&quot;&gt; Rootless container alternative to Docker. &lt;/Card&gt;</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Card title=&quot;Nix&quot; href=&quot;/install/nix&quot; icon=&quot;snowflake&quot;&gt; Declarative install via Nix flake. &lt;/Card&gt;”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>&lt;Card title=&quot;Nix&quot; href=&quot;/install/nix&quot; icon=&quot;snowflake&quot;&gt; Declarative install via Nix flake. &lt;/Card&gt;</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Card title=&quot;Ansible&quot; href=&quot;/install/ansible&quot; icon=&quot;大房子服务器&quot;&gt; Automated fleet provisioning. &lt;/Card&gt;”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>&lt;Card title=&quot;Ansible&quot; href=&quot;/install/ansible&quot; icon=&quot;server&quot;&gt; Automated fleet provisioning. &lt;/Card&gt;</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Card title=&quot;Bun&quot; href=&quot;/install/bun&quot; icon=&quot;zap&quot;&gt; CLI-only usage via the Bun runtime. &lt;/Card&gt; &lt;/Card大家一起的房间&gt;”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>&lt;Card title=&quot;Bun&quot; href=&quot;/install/bun&quot; icon=&quot;zap&quot;&gt; CLI-only usage via the Bun runtime. &lt;/Card&gt; &lt;/CardGroup&gt;</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-8">
-          <div class="section-heading">
-            <p class="section-kicker">第 8 站</p>
-            <h2>Verify the install</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一句直接对 OpenClaw 说的话，就像对小助手下达任务。</p>
-        <ul class="code-steps">
-          <li>这一句是在直接叫 OpenClaw 做事：“openclaw --version      # confirm the CLI is available”。你可以把它想成对机器人说的完整命令。</li><li>这一句是在直接叫 OpenClaw 做事：“openclaw doctor         # check for config issues”。你可以把它想成对机器人说的完整命令。</li><li>这一句是在直接叫 OpenClaw 做事：“openclaw gateway status # verify the Gateway is running”。你可以把它想成对机器人说的完整命令。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">openclaw --version      # confirm the CLI is available
-openclaw doctor         # check for config issues
-openclaw gateway status # verify the Gateway is running</code></pre>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-9">
-          <div class="section-heading">
-            <p class="section-kicker">第 9 站</p>
-            <h2>Hosting and deployment</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Deploy OpenClaw on a cloud 大房子服务器 or VPS: &lt;Card大家一起的房间&gt; &lt;Card title=&quot;VPS&quot; href=&quot;/vps&quot;&gt;Any Linux VPS&lt;/Card&gt; &lt;Card title=…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Deploy OpenClaw on a cloud 大房子服务器 or VPS:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Deploy OpenClaw on a cloud server or VPS:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Card大家一起的房间&gt; &lt;Card title=&quot;VPS&quot; href=&quot;/vps&quot;&gt;Any Linux VPS&lt;/Card&gt; &lt;Card title=&quot;Docker VM&quot; href=&quot;/install/docker-vm-runti…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>&lt;CardGroup&gt; &lt;Card title=&quot;VPS&quot; href=&quot;/vps&quot;&gt;Any Linux VPS&lt;/Card&gt; &lt;Card title=&quot;Docker VM&quot; href=&quot;/install/docker-vm-runtime&quot;&gt;Shared Docker steps&lt;/Card&gt; &lt;Card title=&quot;Kubernetes&quot; href=&quot;/install/kubernetes&quot;&gt;K8s&lt;/Card&gt; &lt;Card title=&quot;Fly.io&quot; href=&quot;/install/fly&quot;&gt;Fly.io&lt;/Card&gt; &lt;Card title=&quot;Hetzner&quot; href=&quot;/install/hetzner&quot;&gt;Hetzner&lt;/Card&gt; &lt;Card title=&quot;GCP&quot; href=&quot;/install/gcp&quot;&gt;Google Cloud&lt;/Card&gt; &lt;Card title=&quot;Azure&quot; href=&quot;/install/azure&quot;&gt;Azure&lt;/Card&gt; &lt;Card title=&quot;Railway&quot; href=&quot;/install/railway&quot;&gt;Railway&lt;/Card&gt; &lt;Card title=&quot;Render&quot; href=&quot;/install/render&quot;&gt;Render&lt;/Card&gt; &lt;Card title=&quot;Northflank&quot; href=&quot;/install/northflank&quot;&gt;Northflank&lt;/Card&gt; &lt;/CardGroup&gt;</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-10">
-          <div class="section-heading">
-            <p class="section-kicker">第 10 站</p>
-            <h2>Update, migrate, or uninstall</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Card大家一起的房间&gt; &lt;Card title=&quot;Updating&quot; href=&quot;/install/updating&quot; icon=&quot;refresh-cw&quot;&gt; Keep OpenClaw up to date. &lt;/Card&gt; &lt;Car…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Card大家一起的房间&gt; &lt;Card title=&quot;Updating&quot; href=&quot;/install/updating&quot; icon=&quot;refresh-cw&quot;&gt; Keep OpenClaw up to date. &lt;/Card&gt;”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>&lt;CardGroup&gt; &lt;Card title=&quot;Updating&quot; href=&quot;/install/updating&quot; icon=&quot;refresh-cw&quot;&gt; Keep OpenClaw up to date. &lt;/Card&gt;</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Card title=&quot;Migrating&quot; href=&quot;/install/migrating&quot; icon=&quot;arrow-right&quot;&gt; Move to a new machine. &lt;/Card&gt;”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>&lt;Card title=&quot;Migrating&quot; href=&quot;/install/migrating&quot; icon=&quot;arrow-right&quot;&gt; Move to a new machine. &lt;/Card&gt;</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Card title=&quot;Uninstall&quot; href=&quot;/install/uninstall&quot; icon=&quot;trash-2&quot;&gt; Remove OpenClaw completely. &lt;/Card&gt; &lt;/Card大家一起的房间&gt;”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>&lt;Card title=&quot;Uninstall&quot; href=&quot;/install/uninstall&quot; icon=&quot;trash-2&quot;&gt; Remove OpenClaw completely. &lt;/Card&gt; &lt;/CardGroup&gt;</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-11">
-          <div class="section-heading">
-            <p class="section-kicker">第 11 站</p>
-            <h2>Troubleshooting: `openclaw` not found</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“If the install succeeded but openclaw is not found in your terminal: If $(npm prefix -g)/bin is not in your $PATH, add…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“If the install succeeded but openclaw is not found in your terminal:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>If the install succeeded but <code>openclaw</code> is not found in your terminal:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一串终端魔法口令，像按步骤按下几个按钮，让电脑开始干活。</p>
-        <ul class="code-steps">
-          <li>这一行“node -v           # Node installed?”是当前步骤要交给电脑的一小块提示。</li><li>这一句是在终端里按下开始按钮：“npm prefix -g     # Where are global packages?”。它会让电脑去请求、安装或构建东西。</li><li>这一行“echo &quot;$PATH&quot;      # Is the global bin dir in PATH?”是当前步骤要交给电脑的一小块提示。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">node -v           # Node installed?
-npm prefix -g     # Where are global packages?
-echo &quot;$PATH&quot;      # Is the global bin dir in PATH?</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“If $(npm prefix -g)/bin is not in your $PATH, add it to your shell startup file (~/.zshrc or ~/.bashrc):”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>If <code>$(npm prefix -g)/bin</code> is not in your <code>$PATH</code>, add it to your shell startup file (<code>~/.zshrc</code> or <code>~/.bashrc</code>):</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一串终端魔法口令，像按步骤按下几个按钮，让电脑开始干活。</p>
-        <ul class="code-steps">
-          <li>这里在给“export PATH=$(npm prefix -g)/bin”贴标签，意思是把它设置成“$PATH”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">export PATH=&quot;$(npm prefix -g)/bin:$PATH&quot;</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Then open a new terminal. See Node setup for more details.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Then open a new terminal. See <a href="/install/node" target="_blank" rel="noreferrer">Node setup</a> for more details.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-    <section class="section-shell">
-      <div class="ad-placeholder">
-        <p>这里预留给未来的 Google AdSense 模块。</p>
-        <code>&lt;!-- ADSENSE_SNIPPET --&gt;</code>
-      </div>
-    </section>
-  
 
       <footer class="page-footer">
         <div>

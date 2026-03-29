@@ -105,7 +105,8 @@ async function copyDir(source, target) {
 await copyDir(path.resolve("assets/icons"), path.join(DIST_DIR, "assets/icons"));
 
 const handcraftedPageMap = new Map([
-  ["/tools/index", path.resolve("content/handcrafted/tools.index.zh.html")]
+  ["/tools/index", path.resolve("content/handcrafted/tools.index.zh.html")],
+  ["/channels/telegram", path.resolve("content/handcrafted/channels.telegram.zh.html")]
 ]);
 
 function asset(fileName) {
@@ -715,8 +716,8 @@ async function renderDocPage(page) {
       </div>
     </section>
   `;
-  const aiContent = await renderAiPageContent(page);
-  const handcraftedContent = aiContent ? null : await renderHandcraftedContent(page);
+  const handcraftedContent = await renderHandcraftedContent(page);
+  const aiContent = handcraftedContent ? null : await renderAiPageContent(page);
 
   return renderPageLayout({
     title: page.title,
@@ -725,7 +726,7 @@ async function renderDocPage(page) {
     heroEyebrow: `${page.sectionLabel} 故事分馆`,
     heroTitle: `${page.title}，像讲故事一样读`,
     heroText: storyLead(page.title, page.description || ""),
-    content: aiContent || handcraftedContent || genericContent,
+    content: handcraftedContent || aiContent || genericContent,
     navigation: siteData.navigation,
     breadcrumbs
   });

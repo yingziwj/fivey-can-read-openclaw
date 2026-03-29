@@ -3971,1140 +3971,283 @@
       </div>
 
       
-    <section class="section-shell">
-      <div class="overview-card">
-        <div>
-          <p class="section-kicker">先听这页的人话版</p>
-          <h2>Docker</h2>
-          <p>这一页像一本关于“Docker”的小绘本，它先告诉我们这位机器人朋友会做什么，再一步一步解释什么时候该这样做。 你可以先把它想成：Docker (optional)。</p>
-          <p>如果把这页当成“给普通人看的版本”，你最应该带走的是：它到底在教你一件什么事、什么时候要这样做、以及哪里最容易踩坑。</p>
+      <section class="section-shell">
+        <div class="overview-card">
+          <div>
+            <p class="section-kicker">DeepSeek 中文解读版</p>
+            <h2>OpenClaw Docker部署指南：容器化网关的实用选择</h2>
+            <p>Docker在OpenClaw中是可选项，不是必选项。它适合需要隔离环境或特定部署场景的用户。本文档帮你判断是否该用Docker，并详细讲解从镜像构建到健康检查的完整流程。</p>
+          </div>
+          <div class="overview-meta">
+            <span>原始路径：/install/docker</span>
+            <span>模型输出章节：10</span>
+            <a href="https://docs.openclaw.ai/install/docker" target="_blank" rel="noreferrer">查看官方原文</a>
+          </div>
         </div>
-        <div class="overview-meta">
-          <span>原始路径：/install/docker</span>
-          <span>章节数量：14</span>
-          <a href="https://docs.openclaw.ai/install/docker" target="_blank" rel="noreferrer">查看原文</a>
+      </section>
+      
+          <section class="section-shell" id="section-1">
+            <div class="section-heading">
+              <p class="section-kicker">第 1 站</p>
+              <h2>决策起点：你真的需要Docker吗？</h2>
+              <p>这节帮你判断Docker部署是否适合你的使用场景。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">为什么看这节</div>
+                <p>避免在不必要的情况下增加复杂度，节省时间和资源。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">这一节真正要带走的点</div>
+                <ul><li>Docker是可选项，主要用于创建隔离的网关环境或验证容器化流程。</li><li>如果你在本地开发且追求最快迭代速度，建议使用标准安装方式。</li><li>注意：代理沙箱功能也使用Docker，但这不要求整个网关都运行在容器中。</li></ul>
+              </div>
+              
+              <div class="story-card">
+                <div class="story-card-label">最后记一句</div>
+                <p>先明确需求，再决定是否走Docker路线。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-2">
+            <div class="section-heading">
+              <p class="section-kicker">第 2 站</p>
+              <h2>部署前的硬性要求</h2>
+              <p>列出运行Docker版OpenClaw必须满足的条件。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">为什么看这节</div>
+                <p>确保环境准备充分，避免中途失败。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">这一节真正要带走的点</div>
+                <ul><li>必须安装Docker Desktop（或Docker Engine）和Docker Compose v2。</li><li>构建镜像时主机至少需要2GB内存，否则`pnpm install`可能因内存不足而失败。</li><li>确保有足够磁盘空间存放镜像和日志文件。</li><li>如果在VPS或公有主机上运行，务必先完成网络安全加固。</li></ul>
+              </div>
+              
+              <div class="story-card">
+                <div class="story-card-label">最后记一句</div>
+                <p>检查你的系统资源是否达标，这是成功部署的第一步。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-3">
+            <div class="section-heading">
+              <p class="section-kicker">第 3 站</p>
+              <h2>核心流程：构建并启动容器化网关</h2>
+              <p>通过脚本或手动方式，完成网关镜像的构建和初始化。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">为什么看这节</div>
+                <p>这是将OpenClaw运行在Docker容器中的核心步骤。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">这一节真正要带走的点</div>
+                <ul><li>推荐使用`./scripts/docker/setup.sh`脚本一键完成构建和初始化。</li><li>脚本会自动引导你配置API密钥、生成网关令牌并启动服务。</li><li>你也可以选择使用预构建的公共镜像，通过设置`OPENCLAW_IMAGE`环境变量实现。</li><li>初始化过程中的配置写入是通过`openclaw-gateway`直接完成的，`openclaw-cli`用于容器启动后的操作。</li></ul>
+              </div>
+              
+            <div class="source-card">
+              <div class="story-card-label">命令 / 代码怎么理解</div>
+              <ul><li>`./scripts/docker/setup.sh`：执行此脚本开始自动化构建和部署流程。</li><li>`export OPENCLAW_IMAGE=&quot;ghcr.io/openclaw/openclaw:latest&quot;`：设置此变量以使用预构建的远程镜像，跳过本地构建。</li><li>脚本会自动处理`onboarding`流程，包括密钥输入和令牌生成。</li></ul>
+            </div>
+          
+              <div class="story-card">
+                <div class="story-card-label">最后记一句</div>
+                <p>使用官方脚本能极大简化部署，手动流程则提供更多控制权。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-4">
+            <div class="section-heading">
+              <p class="section-kicker">第 4 站</p>
+              <h2>手动部署流程详解</h2>
+              <p>如果你希望完全掌控每一步，可以按照这里的命令序列手动执行。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">为什么看这节</div>
+                <p>理解底层命令有助于故障排查和自定义部署。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">这一节真正要带走的点</div>
+                <ul><li>首先使用`docker build`命令构建本地镜像。</li><li>然后通过一系列`docker compose run`命令，以特定入口点运行网关容器来完成初始配置。</li><li>这些配置包括设置网关模式、绑定地址和控制UI允许的源。</li><li>最后使用`docker compose up -d`在后台启动网关服务。</li></ul>
+              </div>
+              
+            <div class="source-card">
+              <div class="story-card-label">命令 / 代码怎么理解</div>
+              <ul><li>`docker build -t openclaw:local -f Dockerfile .`：基于当前目录的Dockerfile构建一个名为`openclaw:local`的本地镜像。</li><li>`docker compose run --rm --no-deps --entrypoint node openclaw-gateway dist/index.js onboard ...`：这条命令启动一个临时容器，执行`onboard`子命令来完成初始设置。`--rm`表示运行后删除容器，`--no-deps`不启动关联服务，`--entrypoint`指定了执行入口。</li><li>`docker compose up -d openclaw-gateway`：在后台（`-d`）启动`openclaw-gateway`服务。</li><li>注意：在网关容器启动前，配置操作需通过`openclaw-gateway`的入口点进行；`openclaw-cli`用于容器运行后的管理。</li></ul>
+            </div>
+          
+              <div class="story-card">
+                <div class="story-card-label">最后记一句</div>
+                <p>手动流程步骤清晰，是理解Docker Compose与OpenClaw交互的好方法。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-5">
+            <div class="section-heading">
+              <p class="section-kicker">第 5 站</p>
+              <h2>关键环境变量解析</h2>
+              <p>介绍部署脚本支持的可选环境变量，用于定制化构建和运行。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">为什么看这节</div>
+                <p>通过设置这些变量，你可以灵活调整镜像来源、安装额外包或配置持久化等。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">这一节真正要带走的点</div>
+                <ul><li>`OPENCLAW_IMAGE`：指定远程镜像地址，替代本地构建。</li><li>`OPENCLAW_EXTRA_MOUNTS`：添加额外的宿主机目录挂载到容器内。</li><li>`OPENCLAW_HOME_VOLUME`：将容器内的`/home/node`目录持久化到Docker命名卷中。</li><li>`OPENCLAW_SANDBOX`：设置为`1`、`true`等值来启用代理沙箱功能。</li></ul>
+              </div>
+              
+              <div class="story-card">
+                <div class="story-card-label">最后记一句</div>
+                <p>善用环境变量，让部署脚本适应你的特定环境需求。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-6">
+            <div class="section-heading">
+              <p class="section-kicker">第 6 站</p>
+              <h2>健康检查：确保服务稳定运行</h2>
+              <p>介绍如何检查Docker容器的存活状态和就绪状态。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">为什么看这节</div>
+                <p>监控服务健康是运维的基础，便于及时发现和解决问题。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">这一节真正要带走的点</div>
+                <ul><li>通过HTTP端点`/healthz`和`/readyz`可以无认证地检查容器状态。</li><li>Docker镜像内置了`HEALTHCHECK`指令，会定期探测`/healthz`。</li><li>如果健康检查持续失败，Docker会将容器标记为`unhealthy`。</li><li>还可以通过CLI执行需要令牌认证的深度健康检查，获取更详细的状态快照。</li></ul>
+              </div>
+              
+            <div class="source-card">
+              <div class="story-card-label">命令 / 代码怎么理解</div>
+              <ul><li>`curl -fsS http://127.0.0.1:18789/healthz`：检查容器是否存活（liveness）。`-f`表示失败时静默，`-S`显示错误信息。</li><li>`curl -fsS http://127.0.0.1:18789/readyz`：检查容器是否准备好接收流量（readiness）。</li><li>`docker compose exec openclaw-gateway node dist/index.js health --token &quot;$OPENCLAW_GATEWAY_TOKEN&quot;`：在运行的网关容器内执行深度健康检查命令，需要提供网关令牌。</li></ul>
+            </div>
+          
+              <div class="story-card">
+                <div class="story-card-label">最后记一句</div>
+                <p>掌握健康检查方法，是维护服务高可用的关键技能。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-7">
+            <div class="section-heading">
+              <p class="section-kicker">第 7 站</p>
+              <h2>网络绑定模式：LAN与环回地址</h2>
+              <p>解释网关在容器内如何绑定网络接口，影响外部访问方式。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">为什么看这节</div>
+                <p>理解绑定模式能帮你正确配置网络，确保CLI和浏览器能访问到网关。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">这一节真正要带走的点</div>
+                <ul><li>默认模式`lan`允许宿主机上的浏览器和CLI通过发布的端口访问网关。</li><li>`loopback`模式则限制只有容器网络命名空间内的进程才能访问网关。</li><li>配置时使用`gateway.bind`下的模式值（如`lan`、`loopback`），而不是直接指定IP地址如`0.0.0.0`。</li></ul>
+              </div>
+              
+              <div class="story-card">
+                <div class="story-card-label">最后记一句</div>
+                <p>根据你的访问需求（仅容器内或宿主机也可访问），选择合适的绑定模式。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-8">
+            <div class="section-heading">
+              <p class="section-kicker">第 8 站</p>
+              <h2>数据持久化与存储管理</h2>
+              <p>说明Docker部署中哪些数据是持久化的，以及需要注意的磁盘增长点。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">为什么看这节</div>
+                <p>避免容器重建时丢失重要配置和会话数据，并管理磁盘空间。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">这一节真正要带走的点</div>
+                <ul><li>Docker Compose通过绑定挂载，使配置目录和工作空间目录在容器替换后得以保留。</li><li>需要关注可能快速消耗磁盘的空间：`media/`目录、会话JSONL文件、定时任务运行记录和滚动日志文件。</li><li>关于虚拟机部署的完整持久化细节，请参考相关文档。</li></ul>
+              </div>
+              
+              <div class="story-card">
+                <div class="story-card-label">最后记一句</div>
+                <p>理解数据存储位置，做好持久化配置和磁盘监控。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-9">
+            <div class="section-heading">
+              <p class="section-kicker">第 9 站</p>
+              <h2>代理沙箱：为执行环境加上隔离墙</h2>
+              <p>介绍如何启用沙箱功能，将代理的工具执行隔离在独立的Docker容器中。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">为什么看这节</div>
+                <p>为运行不受信任或多租户的代理会话提供强隔离，提升安全性，而无需容器化整个网关。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">这一节真正要带走的点</div>
+                <ul><li>沙箱可以按代理、会话或共享范围进行隔离，每个范围有自己的工作空间。</li><li>你可以配置工具策略、网络隔离、资源限制，甚至运行浏览器容器。</li><li>通过设置`agents.defaults.sandbox.mode`等配置项来快速启用。</li><li>需要运行`scripts/sandbox-setup.sh`来构建默认的沙箱镜像。</li></ul>
+              </div>
+              
+            <div class="source-card">
+              <div class="story-card-label">命令 / 代码怎么理解</div>
+              <ul><li>在配置中设置`agents.defaults.sandbox.mode`为`&quot;non-main&quot;`或`&quot;all&quot;`来启用沙箱。`off`表示关闭。</li><li>`scope`字段可以设置为`&quot;agent&quot;`（按代理隔离）、`&quot;session&quot;`（按会话隔离）或`&quot;shared&quot;`（共享）。</li><li>`scripts/sandbox-setup.sh`：执行此脚本来构建沙箱功能所需的基础Docker镜像。</li></ul>
+            </div>
+          
+              <div class="story-card">
+                <div class="story-card-label">最后记一句</div>
+                <p>沙箱功能在灵活性和安全性之间取得了平衡，是运行不可信代码的理想选择。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-10">
+            <div class="section-heading">
+              <p class="section-kicker">第 10 站</p>
+              <h2>常见问题排查指南</h2>
+              <p>汇总了Docker部署和沙箱使用中可能遇到的典型问题及解决方法。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">为什么看这节</div>
+                <p>当部署或运行出现异常时，这里提供快速定位和解决的思路。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">这一节真正要带走的点</div>
+                <ul><li>如果沙箱容器无法启动，检查是否已构建沙箱镜像或正确配置了自定义镜像。</li><li>遇到沙箱内的权限错误，尝试调整`docker.user`的UID:GID以匹配挂载目录的所有权。</li><li>自定义工具在沙箱中找不到，可能是因为shell环境重置了PATH，需通过`docker.env.PATH`或Dockerfile配置。</li><li>镜像构建时因内存不足退出（代码137），请确保主机至少有2GB可用内存。</li><li>控制UI提示未授权或需要配对，尝试获取新的仪表盘链接并批准设备。</li></ul>
+              </div>
+              
+            <div class="source-card">
+              <div class="story-card-label">命令 / 代码怎么理解</div>
+              <ul><li>`docker compose run --rm openclaw-cli dashboard --no-open`：生成仪表盘访问链接但不自动打开浏览器。</li><li>`docker compose run --rm openclaw-cli devices list`：列出待批准的设备请求。</li><li>`docker compose run --rm openclaw-cli devices approve &lt;requestId&gt;`：批准指定ID的设备请求。</li></ul>
+            </div>
+          
+              <div class="story-card">
+                <div class="story-card-label">最后记一句</div>
+                <p>遇到问题先对照此清单，大多数常见错误都能找到解决方向。</p>
+              </div>
+            </div>
+          </section>
+        
+      <section class="section-shell">
+        <div class="ad-placeholder">
+          <p>这里预留给未来的 Google AdSense 模块。</p>
+          <code>&lt;!-- ADSENSE_SNIPPET --&gt;</code>
         </div>
-      </div>
-    </section>
+      </section>
     
-        <section class="section-shell" id="section-1">
-          <div class="section-heading">
-            <p class="section-kicker">第 1 站</p>
-            <h2>Start Here</h2>
-            <p>这一节主要在解释“Start Here”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“Start Here”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Docker (optional) Docker is **optional**. Use it only if you want a containerized 门口的小门卫 or to validate the Docker flow.”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Docker (optional)”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p># Docker (optional)</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Docker is **optional**. Use it only if you want a containerized 门口的小门卫 or to validate the Docker flow.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Docker is **optional**. Use it only if you want a containerized gateway or to validate the Docker flow.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-2">
-          <div class="section-heading">
-            <p class="section-kicker">第 2 站</p>
-            <h2>Is Docker right for me?</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Is Docker right for me?”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：**Yes**: you want an isolated, throwaway…、**No**: you are running on your own machi…、**Sandboxing note**: 机器人朋友 sandboxing use…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>**Yes**: you want an isolated, throwaway gateway environment or to run OpenClaw on a host without local installs.</li><li>**No**: you are running on your own machine and just want the fastest dev loop. Use the normal install flow instead.</li><li>**Sandboxing note**: agent sandboxing uses Docker too, but it does **not** require the full gateway to run in Docker. See <a href="/gateway/sandboxing" target="_blank" rel="noreferrer">Sandboxing</a>.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-3">
-          <div class="section-heading">
-            <p class="section-kicker">第 3 站</p>
-            <h2>Prerequisites</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“安全守门员 hardening for network exposure, especially Docker DOCKER-USER firewall policy.”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“安全守门员 hardening for network exposure, especially Docker DOCKER-USER firewall policy.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p><a href="/gateway/security" target="_blank" rel="noreferrer">Security hardening for network exposure</a>, especially Docker <code>DOCKER-USER</code> firewall policy.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Prerequisites”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Docker Desktop (or Docker Engine) + Docke…、At least 2 GB RAM for image build (pnpm i…、Enough disk for images and logs、If running on a VPS/public host, review。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Docker Desktop (or Docker Engine) + Docker Compose v2</li><li>At least 2 GB RAM for image build (<code>pnpm install</code> may be OOM-killed on 1 GB hosts with exit 137)</li><li>Enough disk for images and logs</li><li>If running on a VPS/public host, review</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-4">
-          <div class="section-heading">
-            <p class="section-kicker">第 4 站</p>
-            <h2>Containerized 门口的小门卫</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Steps&gt; &lt;Step title=&quot;Build the image&quot;&gt; From the repo root, run the setup script: This builds the 门口的小门卫 image locally.…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Steps&gt; &lt;Step title=&quot;Build the image&quot;&gt; From the repo root, run the setup script:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>&lt;Steps&gt; &lt;Step title=&quot;Build the image&quot;&gt; From the repo root, run the setup script:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>``<code>bash theme={&quot;theme&quot;:{&quot;light&quot;:&quot;min-light&quot;,&quot;dark&quot;:&quot;min-dark&quot;}} ./scripts/docker/setup.sh </code>``</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“This builds the 门口的小门卫 image locally. To use a pre-built image instead:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>This builds the gateway image locally. To use a pre-built image instead:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>``<code>bash theme={&quot;theme&quot;:{&quot;light&quot;:&quot;min-light&quot;,&quot;dark&quot;:&quot;min-dark&quot;}} export OPENCLAW_IMAGE=&quot;ghcr.io/openclaw/openclaw:latest&quot; ./scripts/docker/setup.sh </code>``</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Pre-built images are published at the GitHub Container Registry. Common tags: main, latest, &lt;version&gt; (e.g. 2026.2.26).…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Pre-built images are published at the <a href="https://github.com/openclaw/openclaw/pkgs/container/openclaw" target="_blank" rel="noreferrer">GitHub Container Registry</a>. Common tags: <code>main</code>, <code>latest</code>, <code>&lt;version&gt;</code> (e.g. <code>2026.2.26</code>). &lt;/Step&gt;</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Step title=&quot;Complete onboarding&quot;&gt; The setup script runs onboarding automatically. It will:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>&lt;Step title=&quot;Complete onboarding&quot;&gt; The setup script runs onboarding automatically. It will:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Containerized Gateway”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：prompt for provider 对话接口 keys、generate a 门口的小门卫 token and write it to .…、start the 门口的小门卫 via Docker Compose。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>prompt for provider API keys</li><li>generate a gateway token and write it to <code>.env</code></li><li>start the gateway via Docker Compose</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“During setup, pre-start onboarding and 设置说明书 writes run through openclaw-门口的小门卫 directly. openclaw-cli is for 魔法口令s you…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>During setup, pre-start onboarding and config writes run through <code>openclaw-gateway</code> directly. <code>openclaw-cli</code> is for commands you run after the gateway container already exists. &lt;/Step&gt;</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Step title=&quot;Open the Control UI&quot;&gt; Open http://127.0.0.1:18789/ in your browser and paste the token into Settings.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>&lt;Step title=&quot;Open the Control UI&quot;&gt; Open <code>http://127.0.0.1:18789/</code> in your browser and paste the token into Settings.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Need the URL again?”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Need the URL again?</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;/Step&gt;”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>``<code>bash theme={&quot;theme&quot;:{&quot;light&quot;:&quot;min-light&quot;,&quot;dark&quot;:&quot;min-dark&quot;}} docker compose run --rm openclaw-cli dashboard --no-open </code>`` &lt;/Step&gt;</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Step title=&quot;设置说明书ure 消息通道s (optional)&quot;&gt; Use the CLI container to add messaging 消息通道s:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>&lt;Step title=&quot;Configure channels (optional)&quot;&gt; Use the CLI container to add messaging channels:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“```bash theme={&quot;theme&quot;:{&quot;light&quot;:&quot;min-light&quot;,&quot;dark&quot;:&quot;min-dark&quot;}} # WhatsApp (QR) docker compose run --rm openclaw-cli 消息…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>```bash theme={&quot;theme&quot;:{&quot;light&quot;:&quot;min-light&quot;,&quot;dark&quot;:&quot;min-dark&quot;}} # WhatsApp (QR) docker compose run --rm openclaw-cli channels login</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Telegram docker compose run --rm openclaw-cli 消息通道s add --消息通道 telegram --token &quot;&lt;token&gt;&quot;”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p># Telegram docker compose run --rm openclaw-cli channels add --channel telegram --token &quot;&lt;token&gt;&quot;</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Discord docker compose run --rm openclaw-cli 消息通道s add --消息通道 discord --token &quot;&lt;token&gt;&quot; ```”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p># Discord docker compose run --rm openclaw-cli channels add --channel discord --token &quot;&lt;token&gt;&quot; ```</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Docs: WhatsApp, Telegram, Discord &lt;/Step&gt; &lt;/Steps&gt;”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Docs: <a href="/channels/whatsapp" target="_blank" rel="noreferrer">WhatsApp</a>, <a href="/channels/telegram" target="_blank" rel="noreferrer">Telegram</a>, <a href="/channels/discord" target="_blank" rel="noreferrer">Discord</a> &lt;/Step&gt; &lt;/Steps&gt;</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-5">
-          <div class="section-heading">
-            <p class="section-kicker">第 5 站</p>
-            <h2>Manual flow</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“If you prefer to run each step yourself instead of using the setup script: &lt;Note&gt; Run docker compose from the repo root…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“If you prefer to run each step yourself instead of using the setup script:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>If you prefer to run each step yourself instead of using the setup script:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一串终端魔法口令，像按步骤按下几个按钮，让电脑开始干活。</p>
-        <ul class="code-steps">
-          <li>这里在给“docker build -t openclaw”贴标签，意思是把它设置成“local -f Dockerfile .”。</li><li>这一行“docker compose run --rm --no-deps --entrypoint node openclaw-gateway \”是当前步骤要交给电脑的一小块提示。</li><li>这一行“dist/index.js onboard --mode local --no-install-daemon”是当前步骤要交给电脑的一小块提示。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">docker build -t openclaw:local -f Dockerfile .
-docker compose run --rm --no-deps --entrypoint node openclaw-gateway \
-  dist/index.js onboard --mode local --no-install-daemon
-docker compose run --rm --no-deps --entrypoint node openclaw-gateway \
-  dist/index.js config set gateway.mode local
-docker compose run --rm --no-deps --entrypoint node openclaw-gateway \
-  dist/index.js config set gateway.bind lan
-docker compose run --rm --no-deps --entrypoint node openclaw-gateway \
-  dist/index.js config set gateway.controlUi.allowedOrigins \
-  &#39;[&quot;http://localhost:18789&quot;,&quot;http://127.0.0.1:18789&quot;]&#39; --strict-json
-docker compose up -d openclaw-gateway</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Note&gt; Run docker compose from the repo root. If you enabled OPENCLAW_EXTRA_MOUNTS or OPENCLAW_HOME_VOLUME, the setup s…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>&lt;Note&gt; Run <code>docker compose</code> from the repo root. If you enabled <code>OPENCLAW_EXTRA_MOUNTS</code> or <code>OPENCLAW_HOME_VOLUME</code>, the setup script writes <code>docker-compose.extra.yml</code>; include it with <code>-f docker-compose.yml -f docker-compose.extra.yml</code>. &lt;/Note&gt;</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Note&gt; Because openclaw-cli shares openclaw-门口的小门卫&#39;s network namespace, it is a post-start 工具小帮手. Before docker compose…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>&lt;Note&gt; Because <code>openclaw-cli</code> shares <code>openclaw-gateway</code>&#39;s network namespace, it is a post-start tool. Before <code>docker compose up -d openclaw-gateway</code>, run onboarding and setup-time config writes through <code>openclaw-gateway</code> with <code>--no-deps --entrypoint node</code>. &lt;/Note&gt;</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-6">
-          <div class="section-heading">
-            <p class="section-kicker">第 6 站</p>
-            <h2>Environment variables</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“The setup script accepts these optional environment variables: Variable Purpose ------------------------------ --------…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“The setup script accepts these optional environment variables:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>The setup script accepts these optional environment variables:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Variable Purpose ------------------------------ ---------------------------------------------------------------- OPENCL…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>| Variable | Purpose | | ------------------------------ | ---------------------------------------------------------------- | | <code>OPENCLAW_IMAGE</code> | Use a remote image instead of building locally | | <code>OPENCLAW_DOCKER_APT_PACKAGES</code> | Install extra apt packages during build (space-separated) | | <code>OPENCLAW_EXTENSIONS</code> | Pre-install extension deps at build time (space-separated names) | | <code>OPENCLAW_EXTRA_MOUNTS</code> | Extra host bind mounts (comma-separated <code>source:target[:opts]</code>) | | <code>OPENCLAW_HOME_VOLUME</code> | Persist <code>/home/node</code> in a named Docker volume | | <code>OPENCLAW_SANDBOX</code> | Opt in to sandbox bootstrap (<code>1</code>, <code>true</code>, <code>yes</code>, <code>on</code>) | | <code>OPENCLAW_DOCKER_SOCKET</code> | Override Docker socket path |</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-7">
-          <div class="section-heading">
-            <p class="section-kicker">第 7 站</p>
-            <h2>Health checks</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Container probe endpoints (no auth required): The Docker image includes a built-in HEALTHCHECK that pings /healthz. If…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Container probe endpoints (no auth required):”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Container probe endpoints (no auth required):</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一串终端魔法口令，像按步骤按下几个按钮，让电脑开始干活。</p>
-        <ul class="code-steps">
-          <li>这里在给“curl -fsS http”贴标签，意思是把它设置成“//127.0.0.1:18789/healthz   # liveness”。</li><li>这里在给“curl -fsS http”贴标签，意思是把它设置成“//127.0.0.1:18789/readyz     # readiness”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">curl -fsS http://127.0.0.1:18789/healthz   # liveness
-curl -fsS http://127.0.0.1:18789/readyz     # readiness</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“The Docker image includes a built-in HEALTHCHECK that pings /healthz. If checks keep failing, Docker marks the containe…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>The Docker image includes a built-in <code>HEALTHCHECK</code> that pings <code>/healthz</code>. If checks keep failing, Docker marks the container as <code>unhealthy</code> and orchestration systems can restart or replace it.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Authenticated deep health snapshot:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Authenticated deep health snapshot:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一串终端魔法口令，像按步骤按下几个按钮，让电脑开始干活。</p>
-        <ul class="code-steps">
-          <li>这一行“docker compose exec openclaw-gateway node dist/index.js health --token &quot;$OPENCLAW_GATEWAY_TOKEN&quot;”是当前步骤要交给电脑的一小块提示。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">docker compose exec openclaw-gateway node dist/index.js health --token &quot;$OPENCLAW_GATEWAY_TOKEN&quot;</code></pre>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-8">
-          <div class="section-heading">
-            <p class="section-kicker">第 8 站</p>
-            <h2>LAN vs loopback</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“scripts/docker/setup.sh defaults OPENCLAW_门口的小门卫_BIND=lan so host access to http://127.0.0.1:18789 works with Docker po…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“scripts/docker/setup.sh defaults OPENCLAW_门口的小门卫_BIND=lan so host access to http://127.0.0.1:18789 works with Docker po…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p><code>scripts/docker/setup.sh</code> defaults <code>OPENCLAW_GATEWAY_BIND=lan</code> so host access to <code>http://127.0.0.1:18789</code> works with Docker port publishing.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“the 门口的小门卫 directly.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>the gateway directly.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“LAN vs loopback”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：lan (default): host browser and host CLI…、loopback: only processes inside the conta…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>lan</code> (default): host browser and host CLI can reach the published gateway port.</li><li><code>loopback</code>: only processes inside the container network namespace can reach</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Note&gt; Use bind mode values in 门口的小门卫.bind (lan / loopback / custom / tailnet / auto), not host aliases like 0.0.0.0 or…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>&lt;Note&gt; Use bind mode values in <code>gateway.bind</code> (<code>lan</code> / <code>loopback</code> / <code>custom</code> / <code>tailnet</code> / <code>auto</code>), not host aliases like <code>0.0.0.0</code> or <code>127.0.0.1</code>. &lt;/Note&gt;</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-9">
-          <div class="section-heading">
-            <p class="section-kicker">第 9 站</p>
-            <h2>Storage and persistence</h2>
-            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>你理解的是能力边界，不只是功能名字。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Docker Compose bind-mounts OPENCLAW_设置说明书_DIR to /home/node/.openclaw and OPENCLAW_WORKSPACE_DIR to /home/node/.opencla…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Docker Compose bind-mounts OPENCLAW_设置说明书_DIR to /home/node/.openclaw and OPENCLAW_WORKSPACE_DIR to /home/node/.opencla…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Docker Compose bind-mounts <code>OPENCLAW_CONFIG_DIR</code> to <code>/home/node/.openclaw</code> and <code>OPENCLAW_WORKSPACE_DIR</code> to <code>/home/node/.openclaw/workspace</code>, so those paths survive container replacement.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“For full persistence details on VM deployments, see Docker VM Runtime - What persists where.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>For full persistence details on VM deployments, see <a href="/install/docker-vm-runtime#what-persists-where" target="_blank" rel="noreferrer">Docker VM Runtime - What persists where</a>.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“**Disk growth hotspots:** watch media/, session JSONL files, cron/runs/*.jsonl, and rolling file logs under /tmp/opencl…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>**Disk growth hotspots:** watch <code>media/</code>, session JSONL files, <code>cron/runs/*.jsonl</code>, and rolling file logs under <code>/tmp/openclaw/</code>.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-10">
-          <div class="section-heading">
-            <p class="section-kicker">第 10 站</p>
-            <h2>Shell helpers (optional)</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“For easier day-to-day Docker management, install ClawDock: Then use clawdock-start, clawdock-stop, clawdock-dashboard,…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“For easier day-to-day Docker management, install ClawDock:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>For easier day-to-day Docker management, install <code>ClawDock</code>:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一串终端魔法口令，像按步骤按下几个按钮，让电脑开始干活。</p>
-        <ul class="code-steps">
-          <li>这里在给“mkdir -p ~/.clawdock &amp;&amp; curl -sL https”贴标签，意思是把它设置成“//raw.githubusercontent.com/openclaw/openclaw/main/scripts/shell-helpers/clawdock-helpers.sh -o ~/.clawdock/clawdock-helpers.sh”。</li><li>这一行“echo &#39;source ~/.clawdock/clawdock-helpers.sh&#39; &gt;&gt; ~/.zshrc &amp;&amp; source ~/.zshrc”是当前步骤要交给电脑的一小块提示。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">mkdir -p ~/.clawdock &amp;&amp; curl -sL https://raw.githubusercontent.com/openclaw/openclaw/main/scripts/shell-helpers/clawdock-helpers.sh -o ~/.clawdock/clawdock-helpers.sh
-echo &#39;source ~/.clawdock/clawdock-helpers.sh&#39; &gt;&gt; ~/.zshrc &amp;&amp; source ~/.zshrc</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Then use clawdock-start, clawdock-stop, clawdock-dashboard, etc. Run clawdock-help for all 魔法口令s. See the ClawDock Help…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Then use <code>clawdock-start</code>, <code>clawdock-stop</code>, <code>clawdock-dashboard</code>, etc. Run <code>clawdock-help</code> for all commands. See the <a href="https://github.com/openclaw/openclaw/blob/main/scripts/shell-helpers/README.md" target="_blank" rel="noreferrer"><code>ClawDock</code> Helper README</a>.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Accordion大家一起的房间&gt; &lt;Accordion title=&quot;Enable 机器人朋友 sandbox for Docker 门口的小门卫&quot;&gt;”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>&lt;AccordionGroup&gt; &lt;Accordion title=&quot;Enable agent sandbox for Docker gateway&quot;&gt; ``<code>bash theme={&quot;theme&quot;:{&quot;light&quot;:&quot;min-light&quot;,&quot;dark&quot;:&quot;min-dark&quot;}} export OPENCLAW_SANDBOX=1 ./scripts/docker/setup.sh </code>``</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Custom socket path (e.g. rootless Docker):”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Custom socket path (e.g. rootless Docker):</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>``<code>bash theme={&quot;theme&quot;:{&quot;light&quot;:&quot;min-light&quot;,&quot;dark&quot;:&quot;min-dark&quot;}} export OPENCLAW_SANDBOX=1 export OPENCLAW_DOCKER_SOCKET=/run/user/1000/docker.sock ./scripts/docker/setup.sh </code>``</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“The script mounts docker.sock only after sandbox prerequisites pass. If sandbox setup cannot complete, the script reset…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>The script mounts <code>docker.sock</code> only after sandbox prerequisites pass. If sandbox setup cannot complete, the script resets <code>agents.defaults.sandbox.mode</code> to <code>off</code>. &lt;/Accordion&gt;</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Accordion title=&quot;自动小闹钟 / CI (non-interactive)&quot;&gt; Disable Compose pseudo-TTY allocation with -T:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>&lt;Accordion title=&quot;Automation / CI (non-interactive)&quot;&gt; Disable Compose pseudo-TTY allocation with <code>-T</code>:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;/Accordion&gt;”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>``<code>bash theme={&quot;theme&quot;:{&quot;light&quot;:&quot;min-light&quot;,&quot;dark&quot;:&quot;min-dark&quot;}} docker compose run -T --rm openclaw-cli gateway probe docker compose run -T --rm openclaw-cli devices list --json </code>`` &lt;/Accordion&gt;</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Accordion title=&quot;Shared-network 安全守门员 note&quot;&gt; openclaw-cli uses network_mode: &quot;service:openclaw-门口的小门卫&quot; so CLI 魔法口令s ca…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>&lt;Accordion title=&quot;Shared-network security note&quot;&gt; <code>openclaw-cli</code> uses <code>network_mode: &quot;service:openclaw-gateway&quot;</code> so CLI commands can reach the gateway over <code>127.0.0.1</code>. Treat this as a shared trust boundary. The compose config drops <code>NET_RAW</code>/<code>NET_ADMIN</code> and enables <code>no-new-privileges</code> on <code>openclaw-cli</code>. &lt;/Accordion&gt;</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Accordion title=&quot;Permissions and EACCES&quot;&gt; The image runs as node (uid 1000). If you see permission errors on /home/nod…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>&lt;Accordion title=&quot;Permissions and EACCES&quot;&gt; The image runs as <code>node</code> (uid 1000). If you see permission errors on <code>/home/node/.openclaw</code>, make sure your host bind mounts are owned by uid 1000:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;/Accordion&gt;”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>``<code>bash theme={&quot;theme&quot;:{&quot;light&quot;:&quot;min-light&quot;,&quot;dark&quot;:&quot;min-dark&quot;}} sudo chown -R 1000:1000 /path/to/openclaw-config /path/to/openclaw-workspace </code>`` &lt;/Accordion&gt;</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Accordion title=&quot;Faster rebuilds&quot;&gt; Order your Dockerfile so dependency layers are cached. This avoids re-running pnpm…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>&lt;Accordion title=&quot;Faster rebuilds&quot;&gt; Order your Dockerfile so dependency layers are cached. This avoids re-running <code>pnpm install</code> unless lockfiles change:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;/Accordion&gt;”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>``<code>dockerfile theme={&quot;theme&quot;:{&quot;light&quot;:&quot;min-light&quot;,&quot;dark&quot;:&quot;min-dark&quot;}} FROM node:24-bookworm RUN curl -fsSL https://bun.sh/install | bash ENV PATH=&quot;/root/.bun/bin:${PATH}&quot; RUN corepack enable WORKDIR /app COPY package.json pnpm-lock.yaml pnpm-workspace.yaml .npmrc ./ COPY ui/package.json ./ui/package.json COPY scripts ./scripts RUN pnpm install --frozen-lockfile COPY . . RUN pnpm build RUN pnpm ui:install RUN pnpm ui:build ENV NODE_ENV=production CMD [&quot;node&quot;,&quot;dist/index.js&quot;] </code>`` &lt;/Accordion&gt;</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Accordion title=&quot;Power-user container options&quot;&gt; The default image is 安全守门员-first and runs as non-root node. For a more…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>&lt;Accordion title=&quot;Power-user container options&quot;&gt; The default image is security-first and runs as non-root <code>node</code>. For a more full-featured container:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“1. **Persist /home/node**: export OPENCLAW_HOME_VOLUME=&quot;openclaw_home&quot; 2. **Bake system deps**: export OPENCLAW_DOCKER_…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>1. **Persist <code>/home/node</code>**: <code>export OPENCLAW_HOME_VOLUME=&quot;openclaw_home&quot;</code> 2. **Bake system deps**: <code>export OPENCLAW_DOCKER_APT_PACKAGES=&quot;git curl jq&quot;</code> 3. **Install Playwright browsers**: ``<code>bash theme={&quot;theme&quot;:{&quot;light&quot;:&quot;min-light&quot;,&quot;dark&quot;:&quot;min-dark&quot;}} docker compose run --rm openclaw-cli \ node /app/node_modules/playwright-core/cli.js install chromium </code>`<code> 4. **Persist browser downloads**: set </code>PLAYWRIGHT_BROWSERS_PATH=/home/node/.cache/ms-playwright<code> and use </code>OPENCLAW_HOME_VOLUME<code> or </code>OPENCLAW_EXTRA_MOUNTS`. &lt;/Accordion&gt;</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Accordion title=&quot;OpenAI Codex OAuth (headless Docker)&quot;&gt; If you pick OpenAI Codex OAuth in the wizard, it opens a brows…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>&lt;Accordion title=&quot;OpenAI Codex OAuth (headless Docker)&quot;&gt; If you pick OpenAI Codex OAuth in the wizard, it opens a browser URL. In Docker or headless setups, copy the full redirect URL you land on and paste it back into the wizard to finish auth. &lt;/Accordion&gt;</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Accordion title=&quot;Base image metadata&quot;&gt; The main Docker image uses node:24-bookworm and publishes OCI base-image annota…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>&lt;Accordion title=&quot;Base image metadata&quot;&gt; The main Docker image uses <code>node:24-bookworm</code> and publishes OCI base-image annotations including <code>org.opencontainers.image.base.name</code>, <code>org.opencontainers.image.source</code>, and others. See <a href="https://github.com/opencontainers/image-spec/blob/main/annotations.md" target="_blank" rel="noreferrer">OCI image annotations</a>. &lt;/Accordion&gt; &lt;/AccordionGroup&gt;</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-11">
-          <div class="section-heading">
-            <p class="section-kicker">第 11 站</p>
-            <h2>Running on a VPS?</h2>
-            <p>这一节主要在解释“Running on a VPS?”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“Running on a VPS?”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“See Hetzner (Docker VPS) and Docker VM Runtime for shared VM deployment steps including binary baking, persistence, and…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“See Hetzner (Docker VPS) and Docker VM Runtime for shared VM deployment steps including binary baking, persistence, and…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>See <a href="/install/hetzner" target="_blank" rel="noreferrer">Hetzner (Docker VPS)</a> and <a href="/install/docker-vm-runtime" target="_blank" rel="noreferrer">Docker VM Runtime</a> for shared VM deployment steps including binary baking, persistence, and updates.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-12">
-          <div class="section-heading">
-            <p class="section-kicker">第 12 站</p>
-            <h2>机器人朋友 Sandbox</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“When 机器人朋友s.defaults.sandbox is enabled, the 门口的小门卫 runs 机器人朋友 工具小帮手 execution (shell, file read/write, etc.) inside is…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“When 机器人朋友s.defaults.sandbox is enabled, the 门口的小门卫 runs 机器人朋友 工具小帮手 execution (shell, file read/write, etc.) inside is…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>When <code>agents.defaults.sandbox</code> is enabled, the gateway runs agent tool execution (shell, file read/write, etc.) inside isolated Docker containers while the gateway itself stays on the host. This gives you a hard wall around untrusted or multi-tenant agent sessions without containerizing the entire gateway.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Sandbox scope can be per-机器人朋友 (default), per-session, or shared. Each scope gets its own workspace mounted at /workspa…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Sandbox scope can be per-agent (default), per-session, or shared. Each scope gets its own workspace mounted at <code>/workspace</code>. You can also configure allow/deny tool policies, network isolation, resource limits, and browser containers.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“For full 设置说明书uration, images, 安全守门员 notes, and multi-机器人朋友 profiles, see:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>For full configuration, images, security notes, and multi-agent profiles, see:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Agent Sandbox”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Sandboxing -- complete sandbox reference、OpenShell -- interactive shell access to…、Multi-机器人朋友 Sandbox and 工具小帮手s -- per-机器人…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><a href="/gateway/sandboxing" target="_blank" rel="noreferrer">Sandboxing</a> -- complete sandbox reference</li><li><a href="/gateway/openshell" target="_blank" rel="noreferrer">OpenShell</a> -- interactive shell access to sandbox containers</li><li><a href="/tools/multi-agent-sandbox-tools" target="_blank" rel="noreferrer">Multi-Agent Sandbox and Tools</a> -- per-agent overrides</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-13">
-          <div class="section-heading">
-            <p class="section-kicker">第 13 站</p>
-            <h2>Quick enable</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Build the default sandbox image:”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“agents”贴标签，意思是把它设置成“{”。</li><li>这里在给“defaults”贴标签，意思是把它设置成“{”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json5">{
-  agents: {
-    defaults: {
-      sandbox: {
-        mode: &quot;non-main&quot;, // off | non-main | all
-        scope: &quot;agent&quot;, // session | agent | shared
-      },
-    },
-  },
-}</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Build the default sandbox image:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Build the default sandbox image:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一串终端魔法口令，像按步骤按下几个按钮，让电脑开始干活。</p>
-        <ul class="code-steps">
-          <li>这一行“scripts/sandbox-setup.sh”是当前步骤要交给电脑的一小块提示。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">scripts/sandbox-setup.sh</code></pre>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-14">
-          <div class="section-heading">
-            <p class="section-kicker">第 14 站</p>
-            <h2>Troubleshooting</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Accordion大家一起的房间&gt; &lt;Accordion title=&quot;Image missing or sandbox container not starting&quot;&gt; Build the sandbox image with scr…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Accordion大家一起的房间&gt; &lt;Accordion title=&quot;Image missing or sandbox container not starting&quot;&gt; Build the sandbox image with scr…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>&lt;AccordionGroup&gt; &lt;Accordion title=&quot;Image missing or sandbox container not starting&quot;&gt; Build the sandbox image with <a href="https://github.com/openclaw/openclaw/blob/main/scripts/sandbox-setup.sh" target="_blank" rel="noreferrer"><code>scripts/sandbox-setup.sh</code></a> or set <code>agents.defaults.sandbox.docker.image</code> to your custom image. Containers are auto-created per session on demand. &lt;/Accordion&gt;</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Accordion title=&quot;Permission errors in sandbox&quot;&gt; Set docker.user to a UID:GID that matches your mounted workspace owner…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>&lt;Accordion title=&quot;Permission errors in sandbox&quot;&gt; Set <code>docker.user</code> to a UID:GID that matches your mounted workspace ownership, or chown the workspace folder. &lt;/Accordion&gt;</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Accordion title=&quot;Custom 工具小帮手s not found in sandbox&quot;&gt; OpenClaw runs 魔法口令s with sh -lc (login shell), which sources /et…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>&lt;Accordion title=&quot;Custom tools not found in sandbox&quot;&gt; OpenClaw runs commands with <code>sh -lc</code> (login shell), which sources <code>/etc/profile</code> and may reset PATH. Set <code>docker.env.PATH</code> to prepend your custom tool paths, or add a script under <code>/etc/profile.d/</code> in your Dockerfile. &lt;/Accordion&gt;</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Accordion title=&quot;OOM-killed during image build (exit 137)&quot;&gt; The VM needs at least 2 GB RAM. Use a larger machine class…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>&lt;Accordion title=&quot;OOM-killed during image build (exit 137)&quot;&gt; The VM needs at least 2 GB RAM. Use a larger machine class and retry. &lt;/Accordion&gt;</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Accordion title=&quot;Unauthorized or pairing required in Control UI&quot;&gt; Fetch a fresh dashboard link and approve the browser…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>&lt;Accordion title=&quot;Unauthorized or pairing required in Control UI&quot;&gt; Fetch a fresh dashboard link and approve the browser device:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>``<code>bash theme={&quot;theme&quot;:{&quot;light&quot;:&quot;min-light&quot;,&quot;dark&quot;:&quot;min-dark&quot;}} docker compose run --rm openclaw-cli dashboard --no-open docker compose run --rm openclaw-cli devices list docker compose run --rm openclaw-cli devices approve &lt;requestId&gt; </code>``</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“More detail: Dashboard, Devices. &lt;/Accordion&gt;”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>More detail: <a href="/web/dashboard" target="_blank" rel="noreferrer">Dashboard</a>, <a href="/cli/devices" target="_blank" rel="noreferrer">Devices</a>. &lt;/Accordion&gt;</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Accordion title=&quot;门口的小门卫 target shows ws://172.x.x.x or pairing errors from Docker CLI&quot;&gt; Reset 门口的小门卫 mode and bind:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>&lt;Accordion title=&quot;Gateway target shows ws://172.x.x.x or pairing errors from Docker CLI&quot;&gt; Reset gateway mode and bind:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;/Accordion&gt; &lt;/Accordion大家一起的房间&gt;”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>``<code>bash theme={&quot;theme&quot;:{&quot;light&quot;:&quot;min-light&quot;,&quot;dark&quot;:&quot;min-dark&quot;}} docker compose run --rm openclaw-cli config set gateway.mode local docker compose run --rm openclaw-cli config set gateway.bind lan docker compose run --rm openclaw-cli devices list --url ws://127.0.0.1:18789 </code>`` &lt;/Accordion&gt; &lt;/AccordionGroup&gt;</p>
-      </div>
-    
-          </div>
-        </section>
-      
-    <section class="section-shell">
-      <div class="ad-placeholder">
-        <p>这里预留给未来的 Google AdSense 模块。</p>
-        <code>&lt;!-- ADSENSE_SNIPPET --&gt;</code>
-      </div>
-    </section>
-  
 
       <footer class="page-footer">
         <div>

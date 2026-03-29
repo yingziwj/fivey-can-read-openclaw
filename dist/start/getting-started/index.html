@@ -3976,7 +3976,7 @@
           <div>
             <p class="section-kicker">DeepSeek 中文解读版</p>
             <h2>OpenClaw 快速上手：5分钟搭建你的AI助手网关</h2>
-            <p>这页文档帮你用最短时间把OpenClaw跑起来。我们会安装系统、完成初始配置，最后验证网关是否正常启动。整个过程就像组装一台智能路由器——先装好硬件，再设置网络参数，最后确认信号畅通。</p>
+            <p>这页文档是OpenClaw的入门指南，目标是在5分钟内让你完成安装、配置并开始与AI助手对话。整个过程会引导你搭建一个运行中的Gateway网关，配置好认证，并启动一个可用的聊天会话。它不是简单的步骤罗列，而是帮你理解每个环节背后的逻辑和目的。</p>
           </div>
           <div class="overview-meta">
             <span>原始路径：/start/getting-started</span>
@@ -3990,21 +3990,21 @@
             <div class="section-heading">
               <p class="section-kicker">第 1 站</p>
               <h2>从这里开始</h2>
-              <p>概述整个快速上手流程的目标和预期成果</p>
+              <p>这一节是整篇指南的概览，告诉你接下来要做什么以及最终能达到什么效果。</p>
             </div>
             <div class="story-grid">
               <div class="story-card">
                 <div class="story-card-label">为什么看这节</div>
-                <p>让你明确这5分钟投入能换来什么——一个可运行的AI网关系统，而不是零散的安装步骤</p>
+                <p>读这一节能让你对整个过程有个宏观把握，知道投入5分钟时间能换来什么成果，避免在后续步骤中迷失方向。</p>
               </div>
               <div class="source-card">
                 <div class="story-card-label">这一节真正要带走的点</div>
-                <ul><li>目标是在5分钟内完成安装、配置、验证全流程</li><li>最终你会得到一个运行中的Gateway网关</li><li>系统会配置好身份验证机制</li><li>你将能立即开始与AI助手对话</li></ul>
+                <ul><li>文档的核心目标是让你快速运行起OpenClaw系统，而不是深入每个细节。</li><li>你会依次完成安装、运行配置向导、验证服务状态这三个关键动作。</li><li>最终成果是一个配置了认证（Auth）并正在运行的Gateway（网关），这是AI助手与外部世界（如聊天应用）通信的核心枢纽。</li><li>整个流程设计为约5分钟，强调快速验证和上手体验。</li></ul>
               </div>
               
               <div class="story-card">
                 <div class="story-card-label">最后记一句</div>
-                <p>这不是单纯的安装指南，而是让你快速获得一个可工作的AI助手基础设施</p>
+                <p>把这看作一个快速试驾：先让车跑起来，再研究引擎盖下的构造。</p>
               </div>
             </div>
           </section>
@@ -4012,27 +4012,27 @@
           <section class="section-shell" id="section-2">
             <div class="section-heading">
               <p class="section-kicker">第 2 站</p>
-              <h2>准备工作</h2>
-              <p>列出开始前必须满足的环境条件和资源</p>
+              <h2>你需要准备什么</h2>
+              <p>这一节列出了开始前必须满足的软硬件前提条件。</p>
             </div>
             <div class="story-grid">
               <div class="story-card">
                 <div class="story-card-label">为什么看这节</div>
-                <p>避免因为基础环境问题卡在第一步，浪费调试时间</p>
+                <p>提前检查这些条件能避免你在安装过程中突然卡住，白白浪费时间。它帮你扫清启动前的障碍。</p>
               </div>
               <div class="source-card">
                 <div class="story-card-label">这一节真正要带走的点</div>
-                <ul><li>需要Node.js运行时环境，推荐版本24，最低支持22.14+</li><li>需要一个AI模型提供商的API密钥（如Anthropic、OpenAI、Google等）</li><li>Windows用户建议使用WSL2以获得更稳定的体验</li><li>如果还没装Node.js，文档提供了专门的安装指引链接</li></ul>
+                <ul><li>**Node.js 环境**：这是OpenClaw的运行基础。推荐使用Node 24版本，22.14+也支持。你可以把它想象成汽车的发动机，版本不对可能动力不足或无法启动。</li><li>**一个模型提供商的API密钥**：比如来自Anthropic、OpenAI或Google等。这是让你的AI助手‘思考’的燃料，没有它，系统只是个空壳。配置向导会提示你输入。</li><li>**对于Windows用户**：系统明确支持原生Windows和WSL2两种环境，但更推荐使用WSL2以获得更稳定、完整的体验。这好比在Windows上模拟一个更接近Linux的开发环境，能减少兼容性问题。</li></ul>
               </div>
               
             <div class="source-card">
               <div class="story-card-label">命令 / 代码怎么理解</div>
-              <ul><li>node --version 命令用来检查当前Node版本，确保符合要求</li></ul>
+              <ul><li>文档中提到的 `node --version` 命令用于在终端中快速检查你当前安装的Node.js版本号，这是验证环境是否合格的第一步。</li></ul>
             </div>
           
               <div class="story-card">
                 <div class="story-card-label">最后记一句</div>
-                <p>就像装修前要确认水电到位，这两项是OpenClaw运行的基础依赖</p>
+                <p>确保你的‘发动机’（Node）版本合适，并且备好了‘燃料’（API密钥），就可以准备启动了。</p>
               </div>
             </div>
           </section>
@@ -4040,27 +4040,27 @@
           <section class="section-shell" id="section-3">
             <div class="section-heading">
               <p class="section-kicker">第 3 站</p>
-              <h2>快速安装配置</h2>
-              <p>分三步完成系统部署：安装、初始化、验证</p>
+              <h2>快速安装与配置</h2>
+              <p>这一节是操作核心，通过三个步骤带你完成从安装到验证的完整流程。</p>
             </div>
             <div class="story-grid">
               <div class="story-card">
                 <div class="story-card-label">为什么看这节</div>
-                <p>这是核心操作部分，正确的执行顺序能避免后续配置错误</p>
+                <p>这是你将文字指南转化为实际运行系统的关键环节。理解每个命令的作用，而不仅仅是复制粘贴，能让你在遇到问题时知道从哪里排查。</p>
               </div>
               <div class="source-card">
                 <div class="story-card-label">这一节真正要带走的点</div>
-                <ul><li>第一步：通过官方脚本安装OpenClaw，macOS/Linux用curl命令，Windows用PowerShell</li><li>第二步：运行onboarding向导，它会引导你选择模型提供商、设置API密钥、配置网关</li><li>第三步：用status命令验证网关服务是否正常启动</li><li>整个向导过程大约2分钟，是全自动的配置流程</li></ul>
+                <ul><li>**第一步：安装OpenClaw**：根据你的操作系统（macOS/Linux 或 Windows）选择对应的安装命令。这些命令的本质是从官方服务器下载并自动执行安装脚本。对于macOS/Linux，使用的是 `curl` 命令通过bash执行远程脚本；对于Windows，使用的是PowerShell的 `iwr` (Invoke-WebRequest) 命令。</li><li>**第二步：运行配置向导**：安装后，执行 `openclaw onboard --install-daemon` 命令。这个向导（wizard）会交互式地引导你完成最关键的三件事：选择AI模型提供商（如选Claude还是GPT）、设置对应的API密钥、以及配置Gateway网关的基本参数。整个过程约2分钟，目的是让你不必手动编辑复杂的配置文件。`--install-daemon` 参数意味着它还会帮你把OpenClaw安装为系统后台服务（守护进程），以便持续运行。</li><li>**第三步：验证Gateway运行状态**：执行 `openclaw gateway status` 命令。这个命令用于检查上一步配置的Gateway网关服务是否已成功启动并在正常运行。如果看到运行中的状态，就证明核心服务已就绪。</li></ul>
               </div>
               
             <div class="source-card">
               <div class="story-card-label">命令 / 代码怎么理解</div>
-              <ul><li>curl -fsSL https://openclaw.ai/install.sh | bash 这条命令会下载并执行安装脚本，-f参数确保失败时静默退出</li><li>iwr -useb https://openclaw.ai/install.ps1 | iex 是Windows PowerShell的等效命令，iwr是Invoke-WebRequest的别名</li><li>openclaw onboard --install-daemon 启动配置向导，--install-daemon参数会同时安装后台服务</li><li>openclaw gateway status 检查网关运行状态，类似查看系统服务的健康状况</li></ul>
+              <ul><li>`curl -fsSL https://openclaw.ai/install.sh | bash`：`curl` 是下载工具，`-fsSL` 是一组参数（如静默模式、跟随重定向等），`| bash` 表示将下载的脚本内容直接交给bash解释器执行。</li><li>`iwr -useb https://openclaw.ai/install.ps1 | iex`：这是PowerShell的等效命令，`iwr` 是下载，`-useb` 是参数，`| iex` 表示下载后通过 `Invoke-Expression` 执行。</li><li>`openclaw onboard --install-daemon`：`onboard` 是触发配置向导的子命令，`--install-daemon` 是一个标志（flag），告诉程序在配置完成后安装为后台服务。</li><li>`openclaw gateway status`：`gateway` 是管理网关的子命令，`status` 是查看其运行状态的子命令。</li></ul>
             </div>
           
               <div class="story-card">
                 <div class="story-card-label">最后记一句</div>
-                <p>这三步是标准部署流程，按顺序执行就能获得一个基础可用的AI网关</p>
+                <p>跟着这三步走，你就能从一个空系统，到拥有一个配置完毕、正在后台运行的AI助手网关。</p>
               </div>
             </div>
           </section>
@@ -4068,27 +4068,27 @@
           <section class="section-shell" id="section-4">
             <div class="section-heading">
               <p class="section-kicker">第 4 站</p>
-              <h2>下一步做什么</h2>
-              <p>安装完成后可以探索的核心功能方向</p>
+              <h2>接下来可以做什么</h2>
+              <p>在基础系统运行起来后，这一节为你指明了几个关键的深化方向。</p>
             </div>
             <div class="story-grid">
               <div class="story-card">
                 <div class="story-card-label">为什么看这节</div>
-                <p>帮你规划从“能用”到“好用”的进阶路径，避免安装完不知道干什么</p>
+                <p>快速上手后，你很可能想知道‘然后呢？’。这一节就像游戏的新手任务指引，告诉你解锁了哪些新功能区域，避免你停留在起点。</p>
               </div>
               <div class="source-card">
                 <div class="story-card-label">这一节真正要带走的点</div>
-                <ul><li>连接消息通道：让AI助手接入WhatsApp、Telegram等实际聊天平台</li><li>设置配对与安全：控制哪些人可以访问你的AI助手，管理权限边界</li><li>配置网关高级选项：调整模型参数、工具集成、沙箱设置等</li><li>浏览可用工具：了解系统内置的浏览器、代码执行、网络搜索等能力</li><li>高级用户还可以通过环境变量自定义安装路径和服务账户配置</li></ul>
+                <ul><li>**连接一个通信渠道**：这是让AI助手‘活’起来的关键。你可以将它连接到WhatsApp、Telegram、Discord等日常聊天应用，这样你就能通过这些应用直接与你的AI助手对话了。</li><li>**配置配对与安全**：控制哪些人或设备可以与你的AI助手通信，防止未经授权的访问。这是将个人或内部使用的助手与公开服务区分开的重要设置。</li><li>**深入配置Gateway**：调整AI模型、启用工具（如网络搜索、代码执行）、设置沙箱环境等高级选项。这相当于给你的助手升级大脑和装备。</li><li>**浏览可用工具**：了解OpenClaw集成了哪些现成的工具（如浏览器自动化、命令行执行、插件等），这些工具能极大扩展AI助手的能力边界。</li><li>**高级话题：环境变量**：如果你需要在服务账户下运行OpenClaw，或者想自定义其数据、配置文件的存储路径，可以通过设置 `OPENCLAW_HOME`、`OPENCLAW_STATE_DIR` 等环境变量来实现。这为部署到服务器或满足特定目录结构要求提供了灵活性。</li></ul>
               </div>
               
             <div class="source-card">
               <div class="story-card-label">命令 / 代码怎么理解</div>
-              <ul><li>OPENCLAW_HOME 环境变量定义系统的主目录，影响内部路径解析</li><li>OPENCLAW_STATE_DIR 可以覆盖默认的状态存储目录</li><li>OPENCLAW_CONFIG_PATH 允许指定自定义的配置文件位置</li></ul>
+              <ul><li>环境变量部分提到的 `OPENCLAW_HOME`、`OPENCLAW_STATE_DIR`、`OPENCLAW_CONFIG_PATH` 是三个关键变量。它们允许你覆盖程序的默认路径查找逻辑。例如，设置 `OPENCLAW_CONFIG_PATH=/my/custom/config.yaml` 会让程序从指定路径读取配置文件，而不是默认位置。</li></ul>
             </div>
           
               <div class="story-card">
                 <div class="story-card-label">最后记一句</div>
-                <p>快速上手只是开始，真正的价值在于把这些功能模块组合成适合你场景的AI工作流</p>
+                <p>基础网关已就绪，现在你可以选择方向：是立刻连接一个聊天应用用起来，还是先深入配置，打造一个更强大的专属助手。</p>
               </div>
             </div>
           </section>

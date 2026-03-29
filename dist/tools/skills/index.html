@@ -3976,11 +3976,11 @@
           <div>
             <p class="section-kicker">DeepSeek 中文解读版</p>
             <h2>OpenClaw技能系统：如何让AI学会使用工具</h2>
-            <p>OpenClaw通过‘技能’文件夹教AI如何使用各种工具。每个技能都是一个包含YAML配置和说明的目录，系统会从多个位置加载这些技能，并根据环境、配置和二进制文件存在情况进行过滤。这页文档告诉你技能从哪里来、如何管理、以及如何让它们安全地工作。</p>
+            <p>OpenClaw通过‘技能’文件夹教会AI如何使用各种工具。每个技能本质上是一个包含说明文档的目录，系统会从多个来源加载这些技能，并根据环境条件智能筛选。这页文档解释了技能从哪里来、如何管理、以及如何配置它们——这是定制AI能力的关键。</p>
           </div>
           <div class="overview-meta">
             <span>原始路径：/tools/skills</span>
-            <span>模型输出章节：13</span>
+            <span>模型输出章节：10</span>
             <a href="https://docs.openclaw.ai/tools/skills" target="_blank" rel="noreferrer">查看官方原文</a>
           </div>
         </div>
@@ -3989,22 +3989,22 @@
           <section class="section-shell" id="section-1">
             <div class="section-heading">
               <p class="section-kicker">第 1 站</p>
-              <h2>技能从哪里加载？优先级如何确定？</h2>
-              <p>这一节解释OpenClaw从哪些地方寻找技能文件，以及当多个地方有同名技能时，哪个会被优先使用。</p>
+              <h2>技能从哪里加载？优先级规则</h2>
+              <p>这一节列出了OpenClaw加载技能的所有来源位置，并明确了当同名技能冲突时，哪个位置的版本会胜出。</p>
             </div>
             <div class="story-grid">
               <div class="story-card">
                 <div class="story-card-label">为什么看这节</div>
-                <p>了解加载顺序能帮你避免技能冲突，知道在哪里放技能最合适。</p>
+                <p>理解加载顺序能帮你预测系统最终会使用哪个技能版本，避免配置冲突。</p>
               </div>
               <div class="source-card">
                 <div class="story-card-label">这一节真正要带走的点</div>
-                <ul><li>OpenClaw会从六个地方加载技能：额外配置的文件夹、安装包自带的技能、用户本地管理的技能、个人代理技能、项目代理技能、以及工作区技能。</li><li>当同名技能出现冲突时，优先级从高到低是：工作区技能 &gt; 项目代理技能 &gt; 个人代理技能 &gt; 本地管理技能 &gt; 安装包自带技能 &gt; 额外配置文件夹。</li><li>简单说，离你当前工作越近的技能文件夹，优先级越高。</li><li>这种设计让你可以在不同层级定制技能：全局的、个人的、项目的、或者仅限当前工作区的。</li></ul>
+                <ul><li>OpenClaw会从六个地方寻找技能：额外配置的文件夹、安装包自带的、用户本地管理的、个人代理的、项目代理的以及工作区的。</li><li>如果同一个技能出现在多个地方，工作区（workspace）里的版本优先级最高，安装包自带的优先级最低。</li><li>这个优先级链是：`&lt;workspace&gt;/skills` → `&lt;workspace&gt;/.agents/skills` → `~/.agents/skills` → `~/.openclaw/skills` → 自带技能 → `skills.load.extraDirs`。</li><li>简单记：离你当前工作越近的配置，优先级越高。</li></ul>
               </div>
               
               <div class="story-card">
                 <div class="story-card-label">最后记一句</div>
-                <p>记住：工作区里的技能优先级最高，适合临时调试或项目专用；全局配置的技能优先级最低，适合基础共享功能。</p>
+                <p>想覆盖默认技能？把它放到你的工作区目录里。</p>
               </div>
             </div>
           </section>
@@ -4013,21 +4013,21 @@
             <div class="section-heading">
               <p class="section-kicker">第 2 站</p>
               <h2>多代理环境下的技能共享与隔离</h2>
-              <p>在多个AI代理同时运行的情况下，这一节说明哪些技能是某个代理私有的，哪些是所有代理都能看到的。</p>
+              <p>解释在运行多个AI代理时，哪些技能是某个代理私有的，哪些是可以在机器或项目间共享的。</p>
             </div>
             <div class="story-grid">
               <div class="story-card">
                 <div class="story-card-label">为什么看这节</div>
-                <p>如果你在团队或复杂项目中使用OpenClaw，需要清楚技能的作用范围，避免意外影响其他代理。</p>
+                <p>在团队协作或复杂工作流中，清晰划分技能作用域至关重要。</p>
               </div>
               <div class="source-card">
                 <div class="story-card-label">这一节真正要带走的点</div>
-                <ul><li>每个代理有自己的工作区，放在`&lt;workspace&gt;/skills`里的技能只属于这个代理。</li><li>项目代理技能放在`&lt;workspace&gt;/.agents/skills`，对同一工作区的所有代理生效。</li><li>个人代理技能放在`~/.agents/skills`，对这台机器上的所有工作区代理都可见。</li><li>共享技能放在`~/.openclaw/skills`，对所有代理开放，优先级低于代理专用技能。</li><li>你还可以通过配置`skills.load.extraDirs`添加额外的共享文件夹，但优先级最低。</li><li>同名技能冲突时，依然遵循工作区优先的规则：工作区技能覆盖项目代理技能，后者覆盖个人代理技能，以此类推。</li></ul>
+                <ul><li>‘按代理技能’放在特定代理的工作区，只属于该代理。</li><li>‘项目代理技能’放在项目目录下，对该项目内的所有代理生效。</li><li>‘个人代理技能’放在用户主目录，对这台机器上的所有代理生效。</li><li>‘共享技能’放在OpenClaw管理目录，对所有代理可见。</li><li>还可以通过配置额外目录来添加共享技能文件夹。</li><li>同名冲突时，依然遵循上一节的优先级规则：工作区优先。</li></ul>
               </div>
               
               <div class="story-card">
                 <div class="story-card-label">最后记一句</div>
-                <p>按需选择技能存放位置：私有技能放工作区，团队共享放项目代理文件夹，全局工具放共享目录。</p>
+                <p>用目录位置来控制技能的可见范围：工作区最私密，用户主目录可跨代理共享。</p>
               </div>
             </div>
           </section>
@@ -4036,21 +4036,21 @@
             <div class="section-heading">
               <p class="section-kicker">第 3 站</p>
               <h2>插件如何自带技能</h2>
-              <p>插件可以打包自己的技能，这一节解释插件技能的加载机制和覆盖规则。</p>
+              <p>说明插件如何打包并提供自己的技能，以及这些技能在加载时的优先级。</p>
             </div>
             <div class="story-grid">
               <div class="story-card">
                 <div class="story-card-label">为什么看这节</div>
-                <p>如果你开发或使用第三方插件，需要知道插件技能如何集成到系统中，以及它们可能被谁覆盖。</p>
+                <p>如果你想开发插件来扩展功能，需要知道如何让插件携带技能。</p>
               </div>
               <div class="source-card">
                 <div class="story-card-label">这一节真正要带走的点</div>
-                <ul><li>插件可以在`openclaw.plugin.json`里声明技能目录，路径相对于插件根目录。</li><li>插件启用时，它的技能会被加载，但优先级和`skills.load.extraDirs`一样低。</li><li>这意味着，如果安装包、管理目录、代理目录或工作区里有同名技能，它们会覆盖插件技能。</li><li>你可以通过插件的配置项`metadata.openclaw.requires.config`来设置启用条件，控制技能是否加载。</li></ul>
+                <ul><li>插件可以在其配置文件中声明技能目录。</li><li>插件启用时，其自带的技能才会被加载。</li><li>目前，插件技能的优先级和通过`extraDirs`配置的额外目录一样，是最低的。</li><li>这意味着，如果其他地方有同名技能（比如工作区或自带技能），会覆盖插件提供的版本。</li><li>可以通过插件的配置元数据来设置技能加载的门槛条件。</li></ul>
               </div>
               
               <div class="story-card">
                 <div class="story-card-label">最后记一句</div>
-                <p>插件技能是扩展系统功能的好方式，但要注意它们容易被更高优先级的技能覆盖，适合提供可选或基础功能。</p>
+                <p>插件技能是扩展系统能力的一种方式，但容易被更高优先级的本地技能覆盖。</p>
               </div>
             </div>
           </section>
@@ -4058,27 +4058,27 @@
           <section class="section-shell" id="section-4">
             <div class="section-heading">
               <p class="section-kicker">第 4 站</p>
-              <h2>使用ClawHub发现和安装技能</h2>
-              <p>ClawHub是OpenClaw的公共技能仓库，这一节介绍如何用它来查找、安装和更新技能。</p>
+              <h2>使用ClawHub技能库</h2>
+              <p>介绍OpenClaw的公共技能注册中心ClawHub，以及如何用它来发现、安装和更新技能。</p>
             </div>
             <div class="story-grid">
               <div class="story-card">
                 <div class="story-card-label">为什么看这节</div>
-                <p>ClawHub让你能轻松获取社区贡献的技能，无需手动编写，快速扩展AI的能力。</p>
+                <p>这是获取社区技能和同步技能更新的主要途径。</p>
               </div>
               <div class="source-card">
                 <div class="story-card-label">这一节真正要带走的点</div>
-                <ul><li>访问https://clawhub.com浏览可用的技能。</li><li>使用`openclaw skills install &lt;skill-slug&gt;`将技能安装到当前工作区。</li><li>用`openclaw skills update --all`更新所有已安装的技能。</li><li>如果需要发布或同步技能，使用独立的`clawhub sync --all`命令。</li><li>`openclaw skills install`默认安装到活动工作区的`skills/`目录，下次会话时OpenClaw会自动加载。</li></ul>
+                <ul><li>ClawHub是一个公共技能库，可以在线浏览。</li><li>使用`openclaw skills`命令来安装或更新技能。</li><li>例如，`openclaw skills install &lt;skill-slug&gt;`会把技能安装到当前工作区。</li><li>`openclaw skills update --all`可以更新所有已安装技能。</li><li>单独的`clawhub` CLI工具用于发布和同步工作流。</li><li>安装的技能会放在工作区的`skills/`目录下，下次会话时生效。</li></ul>
               </div>
               
             <div class="source-card">
               <div class="story-card-label">命令 / 代码怎么理解</div>
-              <ul><li>`openclaw skills install &lt;skill-slug&gt;`：`&lt;skill-slug&gt;`是技能在ClawHub上的唯一标识符，比如`image-lab`。</li><li>`openclaw skills update --all`：`--all`参数表示更新所有技能，不加参数可能只更新指定的。</li><li>`clawhub sync --all`：这是独立CLI工具，用于技能作者同步更改到仓库，普通用户可能用不到。</li></ul>
+              <ul><li>`openclaw skills install &lt;skill-slug&gt;`: 从ClawHub安装指定技能到当前工作区。</li><li>`openclaw skills update --all`: 更新所有已安装的技能到最新版本。</li><li>`clawhub sync --all`: 使用独立CLI工具扫描并发布更新。</li></ul>
             </div>
           
               <div class="story-card">
                 <div class="story-card-label">最后记一句</div>
-                <p>ClawHub是技能生态的核心，安装技能就像安装软件包一样简单，但记得检查技能来源是否可信。</p>
+                <p>想用新技能？去ClawHub找，然后用`openclaw skills install`一键安装。</p>
               </div>
             </div>
           </section>
@@ -4087,21 +4087,21 @@
             <div class="section-heading">
               <p class="section-kicker">第 5 站</p>
               <h2>安全须知：把技能当代码对待</h2>
-              <p>技能可能包含任意指令，这一节强调安全最佳实践，教你如何降低风险。</p>
+              <p>强调第三方技能可能包含不受信任的代码，并提供安全使用的最佳实践。</p>
             </div>
             <div class="story-grid">
               <div class="story-card">
                 <div class="story-card-label">为什么看这节</div>
-                <p>避免因为技能漏洞导致数据泄露或系统损坏，这是生产环境中必须考虑的一环。</p>
+                <p>盲目启用外部技能可能带来安全风险，这部分告诉你如何防范。</p>
               </div>
               <div class="source-card">
                 <div class="story-card-label">这一节真正要带走的点</div>
-                <ul><li>第三方技能应视为不受信任的代码，启用前务必阅读其内容。</li><li>对于不可信的输入或高风险工具，优先使用沙箱运行模式。</li><li>技能发现只接受配置根目录内的文件，防止路径遍历攻击。</li><li>`skills.entries.*.env`和`skills.entries.*.apiKey`会将密钥注入主机进程，仅限于当前代理运行期间。</li><li>不要把密钥放在提示词或日志中，参考安全文档获取完整威胁模型。</li></ul>
+                <ul><li>将第三方技能视为不受信任的代码，启用前务必阅读其内容。</li><li>对不受信任的输入或高风险工具，优先使用沙箱环境运行。</li><li>技能发现机制会严格检查文件路径，防止目录穿越攻击。</li><li>通过配置注入的密钥（如`apiKey`）会进入主机进程环境，仅限单次代理运行，但也要避免在提示词和日志中泄露。</li><li>参考完整的安全文档了解更全面的威胁模型。</li></ul>
               </div>
               
               <div class="story-card">
                 <div class="story-card-label">最后记一句</div>
-                <p>安全第一：审查技能内容、使用沙箱隔离、妥善管理密钥，这些习惯能大幅降低操作风险。</p>
+                <p>安全第一：审阅代码、善用沙箱、保护密钥。</p>
               </div>
             </div>
           </section>
@@ -4109,27 +4109,27 @@
           <section class="section-shell" id="section-6">
             <div class="section-heading">
               <p class="section-kicker">第 6 站</p>
-              <h2>技能文件格式：YAML配置加说明</h2>
-              <p>每个技能的核心是一个`SKILL.md`文件，这一节详解其结构和关键字段。</p>
+              <h2>技能文件格式详解</h2>
+              <p>解释技能定义文件`SKILL.md`必须包含哪些内容，以及关键的前置元数据字段。</p>
             </div>
             <div class="story-grid">
               <div class="story-card">
                 <div class="story-card-label">为什么看这节</div>
-                <p>如果你想自定义技能或理解现有技能如何工作，必须掌握这个文件格式。</p>
+                <p>这是你创建或修改自定义技能时需要遵循的规范。</p>
               </div>
               <div class="source-card">
                 <div class="story-card-label">这一节真正要带走的点</div>
-                <ul><li>`SKILL.md`必须包含YAML前置元数据，至少要有`name`和`description`字段。</li><li>元数据遵循AgentSkills规范，但解析器只支持单行键值对。</li><li>`metadata`字段应是一个单行JSON对象，用于技能加载时的条件过滤。</li><li>在说明中可以用`{baseDir}`引用技能文件夹路径，方便定位资源。</li><li>可选字段控制技能行为：比如`user-invocable`决定是否暴露为用户斜杠命令，`disable-model-invocation`决定是否从模型提示中排除。</li></ul>
+                <ul><li>每个技能目录必须有一个`SKILL.md`文件，包含YAML前置元数据和操作说明。</li><li>前置元数据至少需要`name`（技能名）和`description`（描述）。</li><li>`metadata`字段应是一个单行JSON对象，用于存放扩展配置。</li><li>在说明中可以用`{baseDir}`来引用技能目录本身的路径。</li><li>可选字段控制技能行为，比如是否对用户可见、是否绕过模型直接调用工具等。</li></ul>
               </div>
               
             <div class="source-card">
               <div class="story-card-label">命令 / 代码怎么理解</div>
-              <ul><li>`---`和`---`之间的部分是YAML前置元数据，用于定义技能属性。</li><li>`name: image-lab`：技能的唯一名称，用于在配置中引用。</li><li>`description: Generate or edit images...`：简短描述，告诉AI这个技能是干什么的。</li><li>`metadata: {&quot;openclaw&quot;: {...}}`：单行JSON，设置技能启用条件，如依赖的二进制或环境变量。</li></ul>
+              <ul><li>`---\nname: image-lab\ndescription: Generate or edit images...\n---`: 这是技能文件头部的YAML前置元数据，定义了技能的基本信息。</li><li>`user-invocable: true|false`: 控制技能是否作为用户斜杠命令暴露。</li><li>`command-dispatch: tool`: 设置后，斜杠命令将绕过AI模型，直接调用指定工具。</li></ul>
             </div>
           
               <div class="story-card">
                 <div class="story-card-label">最后记一句</div>
-                <p>技能文件是AI的‘说明书’，写好元数据和说明，AI才能正确理解和使用这个工具。</p>
+                <p>写技能就像写菜谱：文件名固定，开头写明菜名和简介，后面是详细步骤。</p>
               </div>
             </div>
           </section>
@@ -4137,27 +4137,27 @@
           <section class="section-shell" id="section-7">
             <div class="section-heading">
               <p class="section-kicker">第 7 站</p>
-              <h2>技能启用条件：用元数据控制加载</h2>
-              <p>OpenClaw在加载技能时会检查元数据中的条件，这一节解释如何设置这些过滤规则。</p>
+              <h2>用元数据控制技能加载门槛</h2>
+              <p>介绍如何通过`metadata`字段设置条件，让技能只在特定环境（如所需二进制存在、配置启用时）才被加载。</p>
             </div>
             <div class="story-grid">
               <div class="story-card">
                 <div class="story-card-label">为什么看这节</div>
-                <p>通过条件过滤，你可以确保技能只在合适的环境下启用，避免因依赖缺失导致错误。</p>
+                <p>这让你能创建自适应技能，只在条件满足时才启用，避免报错或干扰。</p>
               </div>
               <div class="source-card">
                 <div class="story-card-label">这一节真正要带走的点</div>
-                <ul><li>在`metadata.openclaw`下设置`requires`字段来定义依赖：比如`bins`列表要求所有二进制文件都存在，`env`列表要求环境变量已设置。</li><li>`os`字段可以限制技能只在特定操作系统上启用，如`darwin`、`linux`、`win32`。</li><li>`primaryEnv`指定与`skills.entries.&lt;name&gt;.apiKey`关联的环境变量名，用于密钥管理。</li><li>如果设置了`always: true`，技能会跳过所有条件检查，始终加载。</li><li>在沙箱环境中，`requires.bins`不仅要在主机上存在，还要在容器内可用，可能需要通过`setupCommand`安装。</li></ul>
+                <ul><li>OpenClaw在加载时会根据`metadata`中的条件过滤技能。</li><li>可以要求特定的二进制文件（`bins`）必须在系统路径中存在。</li><li>可以要求特定的环境变量（`env`）必须已设置或在配置中提供。</li><li>可以要求OpenClaw的某些配置项（`config`）必须为真。</li><li>可以指定技能只适用于某些操作系统（`os`）。</li><li>如果代理运行在沙箱中，所需的二进制在沙箱容器内也必须存在。</li></ul>
               </div>
               
             <div class="source-card">
               <div class="story-card-label">命令 / 代码怎么理解</div>
-              <ul><li>`requires.bins: [&quot;uv&quot;]`：技能依赖名为`uv`的二进制文件，加载时会检查PATH。</li><li>`requires.env: [&quot;GEMINI_API_KEY&quot;]`：需要环境变量`GEMINI_API_KEY`，否则技能不会启用。</li><li>`requires.config: [&quot;browser.enabled&quot;]`：要求`openclaw.json`中`browser.enabled`为真值。</li><li>`primaryEnv: &quot;GEMINI_API_KEY&quot;`：将这个环境变量标记为主要密钥，方便在配置中覆盖。</li></ul>
+              <ul><li>`metadata:\n  {\n    \&quot;openclaw\&quot;:\n      {\n        \&quot;requires\&quot;: { \&quot;bins\&quot;: [\&quot;uv\&quot;], \&quot;env\&quot;: [\&quot;GEMINI_API_KEY\&quot;], \&quot;config\&quot;: [\&quot;browser.enabled\&quot;] },\n        \&quot;primaryEnv\&quot;: \&quot;GEMINI_API_KEY\&quot;,\n      },\n  }`: 这是一个JSON格式的元数据示例，定义了加载本技能所需的条件：需要`uv`命令、`GEMINI_API_KEY`环境变量以及`browser.enabled`配置为真。</li><li>`requires.bins`: 列表，要求所有这些命令都存在于主机的PATH中。</li><li>`requires.env`: 列表，要求这些环境变量已定义或在配置中提供。</li><li>`primaryEnv`: 指明与`apiKey`配置关联的主要环境变量名。</li></ul>
             </div>
           
               <div class="story-card">
                 <div class="story-card-label">最后记一句</div>
-                <p>合理设置启用条件，让技能智能地适配不同环境，减少手动干预。</p>
+                <p>用`metadata`给技能上锁：条件不满足，技能不加载。</p>
               </div>
             </div>
           </section>
@@ -4165,27 +4165,27 @@
           <section class="section-shell" id="section-8">
             <div class="section-heading">
               <p class="section-kicker">第 8 站</p>
-              <h2>配置覆盖：在openclaw.json中定制技能</h2>
-              <p>你可以在配置文件中覆盖技能的默认设置，比如启用状态、环境变量和API密钥。</p>
+              <h2>通过配置文件覆盖技能设置</h2>
+              <p>说明如何在用户配置文件中启用/禁用技能，并为它们提供环境变量或API密钥。</p>
             </div>
             <div class="story-grid">
               <div class="story-card">
                 <div class="story-card-label">为什么看这节</div>
-                <p>这让你能灵活调整技能行为，无需修改技能文件本身，适合不同部署场景。</p>
+                <p>这是你个性化技能行为（如切换开关、注入密钥）的主要方式。</p>
               </div>
               <div class="source-card">
                 <div class="story-card-label">这一节真正要带走的点</div>
-                <ul><li>在`~/.openclaw/openclaw.json`的`skills.entries`下，用技能名作为键来配置覆盖。</li><li>可以设置`enabled: true/false`来启用或禁用技能。</li><li>通过`env`字段注入环境变量，比如`GEMINI_API_KEY: &quot;YOUR_KEY&quot;`。</li><li>`apiKey`支持纯文本字符串或SecretRef对象，后者更安全，可以引用外部密钥管理器。</li><li>如果技能名包含连字符，记得在JSON中给键加引号。</li><li>配置键默认匹配技能名，但如果技能定义了`metadata.openclaw.skillKey`，就用那个键。</li></ul>
+                <ul><li>在`~/.openclaw/openclaw.json`的`skills.entries`下，可以按技能名进行配置。</li><li>可以设置`enabled: true/false`来启用或禁用某个技能。</li><li>可以通过`env`字段为技能注入特定的环境变量值。</li><li>可以通过`apiKey`字段提供API密钥，支持明文或引用密钥管理器的对象。</li><li>如果技能名包含连字符，在JSON键中需要用引号括起来。</li><li>配置键默认对应技能名，但如果技能定义了`metadata.openclaw.skillKey`，则使用那个键。</li></ul>
               </div>
               
             <div class="source-card">
               <div class="story-card-label">命令 / 代码怎么理解</div>
-              <ul><li>`&quot;image-lab&quot;: { enabled: true, ... }`：`image-lab`是技能名，作为配置键。</li><li>`apiKey: { source: &quot;env&quot;, provider: &quot;default&quot;, id: &quot;GEMINI_API_KEY&quot; }`：SecretRef对象，从环境变量`GEMINI_API_KEY`获取密钥。</li><li>`env: { GEMINI_API_KEY: &quot;GEMINI_KEY_HERE&quot; }`：直接设置环境变量值，适用于测试或简单部署。</li><li>`config: { endpoint: &quot;https://example.invalid&quot;, model: &quot;nano-pro&quot; }`：自定义配置参数，会传递给技能工具。</li></ul>
+              <ul><li>`\&quot;image-lab\&quot;: {\n        enabled: true,\n        apiKey: { source: \&quot;env\&quot;, provider: \&quot;default\&quot;, id: \&quot;GEMINI_API_KEY\&quot; }, // 或明文字符串\n        env: {\n          GEMINI_API_KEY: \&quot;GEMINI_KEY_HERE\&quot;,\n        },\n        config: {\n          endpoint: \&quot;https://example.invalid\&quot;,\n          model: \&quot;nano-pro\&quot;,\n        },\n      }`: 这是一个技能配置覆盖的示例。它启用了‘image-lab’技能，并通过`apiKey`对象（引用环境变量）或`env`字段（直接设置值）来提供密钥，同时还设置了一些自定义配置。</li><li>`enabled: true`: 启用该技能。</li><li>`apiKey: { source: \&quot;env\&quot;, provider: \&quot;default\&quot;, id: \&quot;GEMINI_API_KEY\&quot; }`: 这是一个SecretRef对象，表示从默认密钥管理器的`GEMINI_API_KEY`条目获取API密钥。</li><li>`env: { GEMINI_API_KEY: \&quot;GEMINI_KEY_HERE\&quot; }`: 直接设置环境变量`GEMINI_API_KEY`的值为‘GEMINI_KEY_HERE’。</li></ul>
             </div>
           
               <div class="story-card">
                 <div class="story-card-label">最后记一句</div>
-                <p>配置文件是管理技能行为的中央控制台，用好它可以在不同环境间保持一致性。</p>
+                <p>在`openclaw.json`里给技能‘开小灶’：配密钥、调参数、决定用不用。</p>
               </div>
             </div>
           </section>
@@ -4193,22 +4193,27 @@
           <section class="section-shell" id="section-9">
             <div class="section-heading">
               <p class="section-kicker">第 9 站</p>
-              <h2>环境注入：技能密钥如何传递给AI</h2>
-              <p>OpenClaw在代理运行时动态注入技能所需的环境变量，运行结束后恢复原状。</p>
+              <h2>技能如何影响AI的‘思考’成本</h2>
+              <p>解释系统将可用技能列表注入AI系统提示词的方式，并估算这带来的额外token开销。</p>
             </div>
             <div class="story-grid">
               <div class="story-card">
                 <div class="story-card-label">为什么看这节</div>
-                <p>这确保了密钥只在需要时暴露，不会污染全局环境，提升安全性。</p>
+                <p>技能列表会占用AI的上下文窗口，了解其成本有助于优化性能和费用。</p>
               </div>
               <div class="source-card">
                 <div class="story-card-label">这一节真正要带走的点</div>
-                <ul><li>代理开始时，系统读取技能元数据，应用`skills.entries.&lt;key&gt;.env`和`apiKey`设置到`process.env`。</li><li>然后构建系统提示，只包含符合条件的技能。</li><li>代理运行结束后，环境变量会被还原，不影响其他进程。</li><li>这个过程仅限于当前代理运行周期，不是永久性的shell环境变更。</li></ul>
+                <ul><li>系统会将一个紧凑的XML格式的技能列表插入给AI的提示词中。</li><li>只要至少有一个技能可用，就会有一个固定的基础开销（约195字符）。</li><li>每个技能本身还会带来约97字符的固定开销，加上其名称、描述等字段的实际长度。</li><li>字段内容会进行XML转义（如`&amp;`变成`&amp;amp;`），这会略微增加长度。</li><li>粗略估算，按OpenAI风格约4字符一个token，每个技能大约贡献24个token外加字段内容。</li></ul>
               </div>
               
+            <div class="source-card">
+              <div class="story-card-label">命令 / 代码怎么理解</div>
+              <ul><li>`total = 195 + Σ (97 + len(name_escaped) + len(description_escaped) + len(location_escaped))`: 计算技能列表总字符数的公式。195是基础开销，然后对每个技能加上97和其转义后字段的长度总和。</li><li>`len(name_escaped)`: 技能名称经过XML转义后的字符长度。转义会将`&amp; &lt; &gt; &quot; &#39;`等字符变成更长的实体表示。</li></ul>
+            </div>
+          
               <div class="story-card">
                 <div class="story-card-label">最后记一句</div>
-                <p>环境注入是临时且隔离的，让技能安全地使用密钥，同时避免系统级副作用。</p>
+                <p>技能越多，AI‘知道’的工具越多，但‘记忆’它们的成本也越高。</p>
               </div>
             </div>
           </section>
@@ -4216,101 +4221,27 @@
           <section class="section-shell" id="section-10">
             <div class="section-heading">
               <p class="section-kicker">第 10 站</p>
-              <h2>会话快照与热重载</h2>
-              <p>OpenClaw在会话开始时缓存技能列表，提升性能，但也支持运行时刷新。</p>
+              <h2>技能的生命周期与热重载</h2>
+              <p>说明技能列表何时被确定、何时会刷新，以及配置变更何时生效。</p>
             </div>
             <div class="story-grid">
               <div class="story-card">
                 <div class="story-card-label">为什么看这节</div>
-                <p>了解这个机制能帮你预测技能更改何时生效，避免困惑。</p>
+                <p>这帮你理解修改技能或配置后，需要做什么才能让改变立即生效。</p>
               </div>
               <div class="source-card">
                 <div class="story-card-label">这一节真正要带走的点</div>
-                <ul><li>会话启动时，系统会快照所有符合条件的技能，后续对话轮次复用这个列表。</li><li>如果你修改了技能或配置，需要开始新会话才能生效。</li><li>启用技能监视器后，`SKILL.md`文件变化会触发热重载，新列表在下个代理轮次被采用。</li><li>当新的远程节点出现时，技能列表也可能刷新，以适应节点能力。</li></ul>
+                <ul><li>OpenClaw在会话开始时对符合条件的技能做一次快照，该会话内的后续交互都使用这个快照。</li><li>因此，对技能或配置的修改，通常需要开始一个新的会话才能生效。</li><li>如果启用了技能监视器，当技能文件发生变化时，系统可以中途刷新技能列表。</li><li>这种刷新类似于热重载，新的列表会在下一次AI交互时被采用。</li><li>远程节点连接状态的变化也可能触发技能列表的刷新。</li></ul>
               </div>
               
             <div class="source-card">
               <div class="story-card-label">命令 / 代码怎么理解</div>
-              <ul><li>`skills.load: { watch: true, watchDebounceMs: 250 }`：启用监视器，`watchDebounceMs`设置防抖延迟，避免频繁刷新。</li><li>热重载意味着你改技能文件后，无需重启整个OpenClaw，AI在下次对话就能感知变化。</li></ul>
+              <ul><li>`watch: true`: 在配置中启用技能文件夹监视功能。</li><li>`watchDebounceMs: 250`: 设置防抖延迟为250毫秒，避免文件频繁保存时过度刷新。</li></ul>
             </div>
           
               <div class="story-card">
                 <div class="story-card-label">最后记一句</div>
-                <p>技能列表在会话中基本是静态的，但热重载让你能动态调整，适合开发调试。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-11">
-            <div class="section-heading">
-              <p class="section-kicker">第 11 站</p>
-              <h2>远程节点支持：跨平台技能执行</h2>
-              <p>如果网关运行在Linux上，但连接了macOS节点，OpenClaw可以让macOS专属技能在远程节点上运行。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">为什么看这节</div>
-                <p>这扩展了技能的使用范围，让你能在异构环境中利用特定平台的工具。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">这一节真正要带走的点</div>
-                <ul><li>需要macOS节点已连接，且`system.run`权限未被拒绝。</li><li>OpenClaw会检查节点上的二进制文件存在情况，将macOS技能标记为可用。</li><li>代理应通过`nodes`工具（通常是`nodes.run`）来执行这些技能。</li><li>如果节点离线，技能仍然可见，但调用可能失败，直到节点重新连接。</li></ul>
-              </div>
-              
-              <div class="story-card">
-                <div class="story-card-label">最后记一句</div>
-                <p>远程节点支持让你能混合使用不同系统的能力，但依赖网络连接和节点状态。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-12">
-            <div class="section-heading">
-              <p class="section-kicker">第 12 站</p>
-              <h2>技能对提示词长度的影响</h2>
-              <p>技能列表会以XML格式注入系统提示，这一节估算其带来的字符开销。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">为什么看这节</div>
-                <p>如果你使用按token计费的AI模型，需要知道技能数量如何影响成本。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">这一节真正要带走的点</div>
-                <ul><li>当至少有一个技能时，基础开销是195字符。</li><li>每个技能额外增加97字符，加上名称、描述和位置的XML转义后长度。</li><li>XML转义会将特殊字符如`&amp;`变成`&amp;amp;`，略微增加长度。</li><li>粗略估计，97字符约等于24个token，具体取决于模型的tokenizer。</li></ul>
-              </div>
-              
-            <div class="source-card">
-              <div class="story-card-label">命令 / 代码怎么理解</div>
-              <ul><li>`total = 195 + Σ (97 + len(name_escaped) + len(description_escaped) + len(location_escaped))`：计算总字符数的公式。</li><li>`len(name_escaped)`：名称经XML转义后的长度，比如`image-lab`不变，但`A&amp;B`会变成`A&amp;amp;B`，长度增加。</li></ul>
-            </div>
-          
-              <div class="story-card">
-                <div class="story-card-label">最后记一句</div>
-                <p>技能越多，提示词越长，成本越高。合理筛选技能，只启用当前任务需要的那些。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-13">
-            <div class="section-heading">
-              <p class="section-kicker">第 13 站</p>
-              <h2>技能生命周期：从安装包到用户覆盖</h2>
-              <p>这一节概述技能从系统自带、本地管理到工作区定制的完整流程。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">为什么看这节</div>
-                <p>理解生命周期能帮你更好地维护技能，知道何时该更新、何时该自定义。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">这一节真正要带走的点</div>
-                <ul><li>OpenClaw安装包自带一组基础技能，作为起点。</li><li>`~/.openclaw/skills`用于本地覆盖，比如你想修改某个技能而不动原版。</li><li>工作区技能由用户完全控制，优先级最高，适合项目特定需求。</li><li>当同名冲突时，工作区技能覆盖本地管理技能，后者覆盖安装包技能。</li></ul>
-              </div>
-              
-              <div class="story-card">
-                <div class="story-card-label">最后记一句</div>
-                <p>技能管理是分层级的：用安装包技能打基础，本地目录做微调，工作区放专属定制。</p>
+                <p>改完配置想生效？要么开新会话，要么等监视器帮你热重载。</p>
               </div>
             </div>
           </section>

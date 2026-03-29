@@ -3975,8 +3975,8 @@
         <div class="overview-card">
           <div>
             <p class="section-kicker">DeepSeek 中文解读版</p>
-            <h2>OpenClaw聊天通道：连接你所有聊天应用的统一入口</h2>
-            <p>这页文档解释了OpenClaw如何通过‘通道’系统连接各种聊天应用。核心思路是：你不用为了用OpenClaw而放弃现有的聊天习惯，它通过一个统一的网关来适配不同平台。所有通道都支持文字，但媒体和互动功能因平台而异。</p>
+            <h2>OpenClaw 聊天通道全解析：如何让AI助手接入你常用的聊天应用</h2>
+            <p>OpenClaw的核心能力之一就是能通过‘通道’接入各种聊天应用，让你在熟悉的界面里直接与AI对话。这页文档系统梳理了所有支持的通道类型、各自特点以及配置要点。无论你是想快速搭建一个测试环境，还是需要为企业部署多平台集成，这里都能找到清晰的指引。</p>
           </div>
           <div class="overview-meta">
             <span>原始路径：/channels/index</span>
@@ -3989,22 +3989,22 @@
           <section class="section-shell" id="section-1">
             <div class="section-heading">
               <p class="section-kicker">第 1 站</p>
-              <h2>从这里开始：理解通道的核心概念</h2>
-              <p>这一节定义了什么是‘聊天通道’，以及它在OpenClaw架构中的基本作用。</p>
+              <h2>通道是什么？为什么需要它？</h2>
+              <p>这一节解释了OpenClaw‘聊天通道’的基本概念和工作原理。它不是简单地翻译术语，而是告诉你这个功能解决了什么问题。</p>
             </div>
             <div class="story-grid">
               <div class="story-card">
                 <div class="story-card-label">为什么看这节</div>
-                <p>这是理解整个通道系统的基础。如果你不清楚OpenClaw如何与外部世界通信，后续的配置和选择都会很困难。</p>
+                <p>理解通道机制是配置OpenClaw的第一步。它能帮你判断：你的使用场景适合哪种通道？不同通道的优缺点是什么？这直接决定了后续的配置复杂度和功能体验。</p>
               </div>
               <div class="source-card">
                 <div class="story-card-label">这一节真正要带走的点</div>
-                <ul><li>OpenClaw的‘通道’就是连接不同聊天应用（如微信、Telegram、Discord）的适配器。</li><li>所有通道都通过一个中央‘网关’来管理，这简化了消息路由和状态管理。</li><li>文字消息是跨所有通道的通用语言，但高级功能（如发送图片、撤回消息、表情回应）则取决于各个聊天平台自身的API能力。</li><li>这意味着你可以用同一个OpenClaw实例同时处理来自不同应用的消息，但需要为每个平台单独配置和了解其限制。</li></ul>
+                <ul><li>OpenClaw本身是一个AI大脑，但它需要‘通道’才能连接到具体的聊天应用（如微信、Discord、Telegram）。</li><li>所有通道都通过统一的‘网关’（Gateway）与OpenClaw核心通信，这保证了架构的清晰和可扩展性。</li><li>基础的文字消息在所有通道都支持，但高级功能（如媒体发送、消息反应、群组管理）则因各个聊天平台API的差异而不同。</li><li>你可以同时配置多个通道，OpenClaw会根据聊天来源自动路由消息，实现‘一个AI，多处响应’。</li></ul>
               </div>
               
               <div class="story-card">
                 <div class="story-card-label">最后记一句</div>
-                <p>把通道想象成OpenClaw伸向不同聊天应用的‘触手’，网关是大脑，而文字是它们都能理解的共同协议。</p>
+                <p>通道是OpenClaw与真实世界聊天的桥梁，选择适合的通道是项目成功的关键起点。</p>
               </div>
             </div>
           </section>
@@ -4012,22 +4012,22 @@
           <section class="section-shell" id="section-2">
             <div class="section-heading">
               <p class="section-kicker">第 2 站</p>
-              <h2>支持的通道列表：你的选择与权衡</h2>
-              <p>这一节列出了OpenClaw目前支持的所有聊天平台，并附带了关键的技术说明和推荐建议。</p>
+              <h2>支持的通道清单与选型指南</h2>
+              <p>本节列出了OpenClaw目前支持的所有聊天通道，并对每个通道的关键特性、推荐场景和注意事项做了标注。</p>
             </div>
             <div class="story-grid">
               <div class="story-card">
                 <div class="story-card-label">为什么看这节</div>
-                <p>你需要根据你的技术栈、功能需求和部署复杂度来选择合适的通道。这个列表提供了关键的决策信息，比如推荐程度、技术实现方式和已知问题。</p>
+                <p>面对二十多种通道选项，盲目尝试会浪费大量时间。这里帮你快速筛选：哪些通道最成熟？哪些需要额外插件？哪些适合个人使用，哪些适合企业部署？</p>
               </div>
               <div class="source-card">
                 <div class="story-card-label">这一节真正要带走的点</div>
-                <ul><li>列表按平台名称字母顺序排列，涵盖了从主流应用（如WhatsApp、Telegram）到小众或企业级方案（如Matrix、Microsoft Teams）。</li><li>每个条目都标注了实现方式（如REST API、Bot API、WebSocket、插件）和关键特性（如是否支持群组、是否需要QR码配对）。</li><li>特别留意‘推荐’和‘已弃用’标记。例如，对于iMessage，官方推荐使用BlueBubbles方案而非旧的imsg CLI。</li><li>许多通道以‘插件’形式提供，这意味着它们可能需要单独安装和配置，增加了部署的灵活性但也带来了额外的管理开销。</li><li>注意功能差异：例如，BlueBubbles支持iMessage的编辑、撤回等高级功能（尽管在特定macOS版本上有已知问题），而一些通道可能只支持基础的文字聊天。</li></ul>
+                <ul><li>对于苹果用户，**BlueBubbles**是接入iMessage的推荐方案（功能全，但需注意macOS特定版本的编辑功能问题）。</li><li>**Telegram**和**Discord**的Bot API非常成熟，通常是最快上手的选项（尤其是Telegram，一个Bot Token即可）。</li><li>**WhatsApp**虽然用户基数大，但需要复杂的QR码配对流程，且基于第三方库Baileys，部署时需留意。</li><li>许多通道（如Feishu飞书、Microsoft Teams、Signal）以‘插件’形式提供，意味着你需要单独安装，这增加了灵活性但也多了步骤。</li><li>**WebChat**是OpenClaw自带的网页聊天界面，适合快速测试或内嵌到自有系统，无需依赖外部聊天应用。</li><li>注意区分‘Bot API’通道（如Telegram Bot）和‘个人账号模拟’通道（如WeChat via QR login），后者通常功能受限且可能有封号风险。</li></ul>
               </div>
               
               <div class="story-card">
                 <div class="story-card-label">最后记一句</div>
-                <p>选择通道时，不仅要看它支持哪个应用，更要关注其实现方式（API vs 插件）、功能完整性和部署复杂度。</p>
+                <p>根据你的目标平台（个人iMessage、团队Slack、大众WhatsApp）和能接受的技术复杂度（简单Bot Token vs. 插件安装+QR配对）来挑选通道。</p>
               </div>
             </div>
           </section>
@@ -4035,22 +4035,22 @@
           <section class="section-shell" id="section-3">
             <div class="section-heading">
               <p class="section-kicker">第 3 站</p>
-              <h2>重要注意事项与最佳实践</h2>
-              <p>这一节补充了关于通道配置、安全、故障排除和高级功能的实用信息。</p>
+              <h2>配置与使用中的重要须知</h2>
+              <p>这一节汇总了跨通道的通用配置原则、安全考量以及常见问题的排查方向。</p>
             </div>
             <div class="story-grid">
               <div class="story-card">
                 <div class="story-card-label">为什么看这节</div>
-                <p>这些要点能帮你避免常见的配置陷阱，理解系统行为，并在出问题时知道该查哪里。</p>
+                <p>即使选对了通道，配置不当也会导致功能异常或安全漏洞。这些注意事项能帮你避开常见陷阱，确保系统稳定运行。</p>
               </div>
               <div class="source-card">
                 <div class="story-card-label">这一节真正要带走的点</div>
-                <ul><li>你可以同时运行多个通道，OpenClaw会根据聊天来源自动路由消息。这让你能用一个AI助手统一处理所有聊天应用。</li><li>部署速度有快慢之分：Telegram（仅需一个Bot Token）通常最快；WhatsApp等需要QR码配对的则更繁琐。</li><li>群组聊天的行为（如如何识别群组、权限管理）因通道而异，有专门的文档页面详细说明。</li><li>出于安全考虑，私聊（DM）通常需要‘配对’（Pairing）和‘允许列表’（Allowlist）机制来防止未经授权的访问。</li><li>如果通道工作不正常，有专门的故障排除指南。模型供应商（提供AI能力的后端）的配置是另一个独立模块。</li></ul>
+                <ul><li>**多通道并行**：OpenClaw支持同时运行多个通道，你需要为每个通道单独配置，系统会根据聊天来源自动分发处理。</li><li>**安全第一**：特别是对于能模拟个人账号的通道，务必配置‘私聊配对’和‘允许名单’，防止AI账号被陌生人滥用。相关设置在安全文档中有详细说明。</li><li>**群组行为差异**：不同聊天平台对群聊的管理API差别很大（如拉人、踢人、修改群名）。如果你的场景涉及群组，务必查阅专门的群组文档。</li><li>**问题排查**：如果某个通道消息收发不正常，首先检查通道自身的连接状态（如Bot Token是否有效、WebSocket是否连通），再参考专门的故障排查指南。</li><li>**模型无关性**：通道只负责消息的‘传输’，背后是哪个AI模型（如GPT、Claude）在思考和回复，由独立的‘模型提供商’配置决定，两者是解耦的。</li></ul>
               </div>
               
               <div class="story-card">
                 <div class="story-card-label">最后记一句</div>
-                <p>配置多通道时，牢记安全设置（配对/允许列表），了解不同平台对群组的处理方式，并知道遇到问题该查阅哪个专门的文档页面。</p>
+                <p>牢记通道配置的核心：连通性、安全性和对平台特性的了解。遇到问题，先按‘连接 -&gt; 安全策略 -&gt; 平台特性’的顺序排查。</p>
               </div>
             </div>
           </section>

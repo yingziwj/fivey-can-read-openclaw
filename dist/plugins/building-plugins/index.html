@@ -3971,735 +3971,273 @@
       </div>
 
       
-    <section class="section-shell">
-      <div class="overview-card">
-        <div>
-          <p class="section-kicker">先听这页的人话版</p>
-          <h2>Building Plugins</h2>
-          <p>这一页像一本关于“Building 新本领插件s”的小绘本，它先告诉我们这位机器人朋友会做什么，再一步一步解释什么时候该这样做。 你可以先把它想成：Building 新本领插件s。</p>
-          <p>如果把这页当成“给普通人看的版本”，你最应该带走的是：它到底在教你一件什么事、什么时候要这样做、以及哪里最容易踩坑。</p>
+      <section class="section-shell">
+        <div class="overview-card">
+          <div>
+            <p class="section-kicker">DeepSeek 中文解读版</p>
+            <h2>为OpenClaw编写插件：从零到发布</h2>
+            <p>插件是OpenClaw的扩展引擎，让你能添加新功能，比如连接聊天平台、接入AI模型或创建智能工具。这页文档告诉你如何从零开始构建一个插件，并确保它能被用户顺利安装和使用。重点不是翻译代码，而是让你理解插件生态的运作逻辑。</p>
+          </div>
+          <div class="overview-meta">
+            <span>原始路径：/plugins/building-plugins</span>
+            <span>模型输出章节：10</span>
+            <a href="https://docs.openclaw.ai/plugins/building-plugins" target="_blank" rel="noreferrer">查看官方原文</a>
+          </div>
         </div>
-        <div class="overview-meta">
-          <span>原始路径：/plugins/building-plugins</span>
-          <span>章节数量：10</span>
-          <a href="https://docs.openclaw.ai/plugins/building-plugins" target="_blank" rel="noreferrer">查看原文</a>
+      </section>
+      
+          <section class="section-shell" id="section-1">
+            <div class="section-heading">
+              <p class="section-kicker">第 1 站</p>
+              <h2>起点：插件是什么，以及如何分发</h2>
+              <p>这节定义了插件的核心概念和分发路径。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">为什么看这节</div>
+                <p>理解插件能做什么以及如何到达用户手中，是决定是否投入开发的前提。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">这一节真正要带走的点</div>
+                <ul><li>插件是OpenClaw的功能模块，可以添加新频道（如Discord）、新模型提供商、语音处理、图像生成、网页搜索或智能体工具。</li><li>你不需要把插件代码提交到OpenClaw主仓库，而是独立发布到ClawHub或npm。</li><li>用户通过`openclaw plugins install &lt;包名&gt;`命令安装，系统会优先从ClawHub查找，找不到则自动回退到npm。</li><li>这意味着你的插件可以独立维护和更新，拥有自己的版本周期。</li></ul>
+              </div>
+              
+              <div class="story-card">
+                <div class="story-card-label">最后记一句</div>
+                <p>插件是独立的功能包，通过包管理器分发，让OpenClaw的功能得以无限扩展。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-2">
+            <div class="section-heading">
+              <p class="section-kicker">第 2 站</p>
+              <h2>开发前的准备</h2>
+              <p>列出开始编写插件前必须满足的技术条件。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">为什么看这节</div>
+                <p>避免因环境或知识缺失而在中途卡住。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">这一节真正要带走的点</div>
+                <ul><li>需要Node.js版本22或更高，以及npm或pnpm作为包管理器。</li><li>最好熟悉TypeScript（尤其是ESM模块系统），因为官方SDK和示例都基于此。</li><li>如果你打算开发内置于OpenClaw仓库的插件（非主流方式），则需要克隆仓库并运行`pnpm install`完成依赖安装。</li></ul>
+              </div>
+              
+              <div class="story-card">
+                <div class="story-card-label">最后记一句</div>
+                <p>确保你的开发环境就绪，这是高效编码的第一步。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-3">
+            <div class="section-heading">
+              <p class="section-kicker">第 3 站</p>
+              <h2>选择你的插件类型</h2>
+              <p>介绍OpenClaw支持的几种主要插件类别，帮你定位开发方向。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">为什么看这节</div>
+                <p>不同类型的插件结构、SDK和开发指南不同，选对类型事半功倍。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">这一节真正要带走的点</div>
+                <ul><li>频道插件：负责连接OpenClaw到外部消息平台（如Discord、IRC），处理消息收发。</li><li>提供商插件：用于接入新的AI模型、代理或自定义API端点，为核心提供推理能力。</li><li>工具/钩子插件：注册智能体工具、事件钩子或自定义服务，是功能扩展的通用形式。</li><li>本页的快速入门将以工具插件为例，频道和提供商插件有更专门的指南。</li></ul>
+              </div>
+              
+              <div class="story-card">
+                <div class="story-card-label">最后记一句</div>
+                <p>明确你要构建的是连接器、能力提供者还是功能增强器，然后查阅对应的专项指南。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-4">
+            <div class="section-heading">
+              <p class="section-kicker">第 4 站</p>
+              <h2>快速上手：构建一个工具插件</h2>
+              <p>通过一个最小化示例，演示创建、定义和注册一个智能体工具的全过程。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">为什么看这节</div>
+                <p>这是理解插件骨架和注册流程最直接的实践。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">这一节真正要带走的点</div>
+                <ul><li>首先创建`package.json`，其中`openclaw.extensions`字段指向你的插件入口文件（如`./index.ts`），这是告诉OpenClaw从哪里加载你的代码。</li><li>必须创建一个`openclaw.plugin.json`清单文件，即使没有配置项。它定义了插件的ID、名称、描述和可选的配置模式。</li><li>在入口文件（如`index.ts`）中，使用`definePluginEntry`函数定义插件。在`register`回调里，通过`api.registerTool`注册你的工具。</li><li>工具需要定义名称、描述、参数模式（使用TypeBox定义类型）和一个执行函数。执行函数接收参数并返回结果。</li><li>对于非频道插件（如工具插件），使用`definePluginEntry`；构建频道插件则需使用`defineChannelPluginEntry`。</li><li>开发完成后，将插件发布到ClawHub或npm，用户即可通过安装命令使用。</li></ul>
+              </div>
+              
+            <div class="source-card">
+              <div class="story-card-label">命令 / 代码怎么理解</div>
+              <ul><li>`openclaw.extensions: [&quot;./index.ts&quot;]`：这个配置告诉OpenClaw你的插件主入口文件路径。</li><li>`definePluginEntry({ register(api) { ... } })`：这是插件的标准定义方式，`api`对象提供了注册各种能力的方法。</li><li>`api.registerTool({ name, description, parameters, execute })`：注册一个工具。`parameters`用TypeBox定义数据结构，`execute`是工具被调用时运行的异步函数。</li><li>`Type.Object({ input: Type.String() })`：使用TypeBox库定义一个对象参数，其中有一个字符串类型的`input`字段。这是为了给AI模型提供清晰的工具调用规范。</li></ul>
+            </div>
+          
+              <div class="story-card">
+                <div class="story-card-label">最后记一句</div>
+                <p>一个插件由包配置、清单文件和入口代码三部分组成，通过`api`对象注册功能，结构清晰且易于测试。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-5">
+            <div class="section-heading">
+              <p class="section-kicker">第 5 站</p>
+              <h2>插件的多种能力</h2>
+              <p>展示单个插件可以通过`api`对象注册的丰富功能类型，远超工具一种。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">为什么看这节</div>
+                <p>让你看到插件的潜力，避免思维局限在单一功能上。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">这一节真正要带走的点</div>
+                <ul><li>一个插件可以同时注册多种能力，例如既提供模型推理，又添加网页搜索工具。</li><li>核心注册方法都通过`api.registerXxx(...)`形式，如`api.registerProvider`（文本推理）、`api.registerChannel`（消息频道）、`api.registerSpeechProvider`（语音）等。</li><li>文档提供了每种能力对应的详细指南链接，方便深入查阅。</li><li>特别需要注意事件钩子的处理语义：`before_tool_call`钩子中返回`{ block: true }`会终止后续低优先级处理；`message_sending`钩子中返回`{ cancel: true }`会取消消息发送。返回`false`则被视为未做决定，流程继续。</li></ul>
+              </div>
+              
+              <div class="story-card">
+                <div class="story-card-label">最后记一句</div>
+                <p>`api`对象是你的瑞士军刀，几乎所有的扩展功能都通过它来挂载到OpenClaw核心系统上。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-6">
+            <div class="section-heading">
+              <p class="section-kicker">第 6 站</p>
+              <h2>注册智能体工具的细节</h2>
+              <p>深入讲解如何注册工具，包括必选工具和可选工具的区别及使用场景。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">为什么看这节</div>
+                <p>工具是插件与AI智能体交互的核心，理解其注册细节能创建更安全、灵活的功能。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">这一节真正要带走的点</div>
+                <ul><li>工具是AI模型可以调用的类型化函数。分为必选工具（默认可用）和可选工具（需要用户显式启用）。</li><li>注册可选工具时，需要在`api.registerTool`的第二个参数传入`{ optional: true }`。</li><li>用户在配置文件中通过`tools: { allow: [&quot;工具名&quot;] }`来启用特定的可选工具。</li><li>工具名称不能与核心工具冲突（冲突的工具会被静默跳过）。</li><li>对于有副作用（如写数据库）或需要额外二进制依赖的工具，建议设为可选，让用户控制启用。</li><li>用户也可以通过将插件ID加入`tools.allow`列表来启用该插件的所有工具。</li></ul>
+              </div>
+              
+            <div class="source-card">
+              <div class="story-card-label">命令 / 代码怎么理解</div>
+              <ul><li>`api.registerTool(toolDef, { optional: true })`：注册一个可选工具，用户需在配置中允许才能使用。</li><li>`tools: { allow: [&quot;workflow_tool&quot;] }`：用户配置示例，表示启用名为`workflow_tool`的可选工具。</li></ul>
+            </div>
+          
+              <div class="story-card">
+                <div class="story-card-label">最后记一句</div>
+                <p>通过必选/可选机制，可以在提供强大功能的同时，把安全性和资源消耗的控制权交给最终用户。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-7">
+            <div class="section-heading">
+              <p class="section-kicker">第 7 站</p>
+              <h2>正确的导入约定</h2>
+              <p>强调从SDK子路径导入的重要性，避免使用已废弃的根路径导入。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">为什么看这节</div>
+                <p>使用正确的导入路径是代码长期兼容的保证，也能获得更好的类型提示和Tree-shaking优化。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">这一节真正要带走的点</div>
+                <ul><li>始终从`openclaw/plugin-sdk/&lt;子路径&gt;`这样的聚焦路径导入，例如`openclaw/plugin-sdk/plugin-entry`。</li><li>避免使用已废弃的`openclaw/plugin-sdk`根路径导入（未来会被移除）。</li><li>在插件内部，应该使用本地桶文件（如`api.ts`）来组织内部模块导入。</li><li>绝对不要通过SDK路径导入你自己的插件（即自我引用），这会导致循环依赖或未定义行为。</li></ul>
+              </div>
+              
+            <div class="source-card">
+              <div class="story-card-label">命令 / 代码怎么理解</div>
+              <ul><li>`import { definePluginEntry } from &quot;openclaw/plugin-sdk/plugin-entry&quot;;`：正确的导入方式，从特定子路径导入。</li><li>`import { ... } from &quot;openclaw/plugin-sdk&quot;;`：错误的方式，使用已废弃的根路径，未来不可用。</li></ul>
+            </div>
+          
+              <div class="story-card">
+                <div class="story-card-label">最后记一句</div>
+                <p>遵循导入约定能确保你的插件与未来版本的OpenClaw SDK保持兼容，减少不必要的升级麻烦。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-8">
+            <div class="section-heading">
+              <p class="section-kicker">第 8 站</p>
+              <h2>提交前的检查清单</h2>
+              <p>在发布或提交插件代码前，需要逐一核对的关键项目。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">为什么看这节</div>
+                <p>这是一个质量保证步骤，能大幅减少因低级错误导致的安装失败或运行时问题。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">这一节真正要带走的点</div>
+                <ul><li>确认`package.json`中的`openclaw`元数据（如`extensions`）配置正确。</li><li>确保`openclaw.plugin.json`清单文件存在且格式有效。</li><li>检查入口点使用的是正确的定义函数（`defineChannelPluginEntry`或`definePluginEntry`）。</li><li>验证所有导入都使用了聚焦的`plugin-sdk/&lt;子路径&gt;`路径。</li><li>内部导入使用本地模块，没有不当的SDK自我导入。</li><li>运行测试并通过（对于仓库内插件，使用`pnpm test -- extensions/my-plugin/`）。</li><li>运行`pnpm check`确保代码规范（针对仓库内插件）。</li></ul>
+              </div>
+              
+              <div class="story-card">
+                <div class="story-card-label">最后记一句</div>
+                <p>花几分钟对照清单检查，能避免大多数常见的部署和兼容性问题。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-9">
+            <div class="section-heading">
+              <p class="section-kicker">第 9 站</p>
+              <h2>Beta版发布测试流程</h2>
+              <p>当OpenClaw发布Beta版本时，作为插件开发者应如何测试并反馈，确保你的插件兼容。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">为什么看这节</div>
+                <p>OpenClaw核心的更新可能破坏插件，主动参与Beta测试能提前发现问题，避免影响正式用户。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">这一节真正要带走的点</div>
+                <ul><li>关注GitHub Release中的Beta标签（如`v2026.3.N-beta.1`），或订阅OpenClaw官方X账号获取发布公告。</li><li>在Beta版发布后尽快测试你的插件，稳定版窗口通常只有几小时。</li><li>在Discord的`plugin-forum`频道中你的插件主题下，汇报测试结果（`all good`或说明问题）。</li><li>如果发现阻塞性问题，在GitHub创建或更新一个标题为`Beta blocker: &lt;插件名&gt; - &lt;摘要&gt;`的Issue，并打上`beta-blocker`标签。</li><li>针对问题提交修复PR，标题格式为`fix(&lt;插件ID&gt;): beta blocker - &lt;摘要&gt;`，并在PR和Discord中关联Issue。</li><li>维护者会关注这些线程，有PR的阻塞问题会被处理；没有PR的问题，稳定版可能照常发布。</li><li>沉默通常意味着通过。如果你错过了测试窗口，修复很可能要等到下一个发布周期。</li></ul>
+              </div>
+              
+              <div class="story-card">
+                <div class="story-card-label">最后记一句</div>
+                <p>积极参与Beta测试是维护插件生态健康的关键，能确保你的插件与新版本核心无缝衔接。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-10">
+            <div class="section-heading">
+              <p class="section-kicker">第 10 站</p>
+              <h2>后续深入学习</h2>
+              <p>提供相关主题的深入指南链接，供你按需拓展。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">为什么看这节</div>
+                <p>构建插件是一个深度话题，这里为你指明了继续探索的方向。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">这一节真正要带走的点</div>
+                <ul><li>频道插件指南：学习如何构建连接消息平台（如Discord）的插件。</li><li>提供商插件指南：深入如何接入新的AI模型或自定义端点。</li><li>SDK概览：查阅完整的导入映射和注册API参考。</li><li>运行时助手：了解如何通过`api.runtime`使用TTS、搜索或创建子智能体。</li><li>测试指南：学习插件测试的工具和模式。</li><li>插件清单参考：查看`openclaw.plugin.json`所有可配置字段的详细说明。</li></ul>
+              </div>
+              
+              <div class="story-card">
+                <div class="story-card-label">最后记一句</div>
+                <p>根据你的具体需求，选择对应的专项文档深入阅读，将概念转化为扎实的实践能力。</p>
+              </div>
+            </div>
+          </section>
+        
+      <section class="section-shell">
+        <div class="ad-placeholder">
+          <p>这里预留给未来的 Google AdSense 模块。</p>
+          <code>&lt;!-- ADSENSE_SNIPPET --&gt;</code>
         </div>
-      </div>
-    </section>
+      </section>
     
-        <section class="section-shell" id="section-1">
-          <div class="section-heading">
-            <p class="section-kicker">第 1 站</p>
-            <h2>Start Here</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Building 新本领插件s 新本领插件s extend OpenClaw with new capabilities: 消息通道s, 聪明脑袋模型 providers, speech, image generation, web se…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Building 新本领插件s”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p># Building Plugins</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“新本领插件s extend OpenClaw with new capabilities: 消息通道s, 聪明脑袋模型 providers, speech, image generation, web search, 机器人朋友 工具小帮…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Plugins extend OpenClaw with new capabilities: channels, model providers, speech, image generation, web search, agent tools, or any combination.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“You do not need to add your 新本领插件 to the OpenClaw repository. Publish to ClawHub or npm and users install with openclaw…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>You do not need to add your plugin to the OpenClaw repository. Publish to <a href="/tools/clawhub" target="_blank" rel="noreferrer">ClawHub</a> or npm and users install with <code>openclaw plugins install &lt;package-name&gt;</code>. OpenClaw tries ClawHub first and falls back to npm automatically.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-2">
-          <div class="section-heading">
-            <p class="section-kicker">第 2 站</p>
-            <h2>Prerequisites</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Prerequisites”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Node &gt;= 22 and a package manager (npm or…、Familiarity with TypeScript (ESM)、For in-repo 新本领插件s: repository cloned and…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Node &gt;= 22 and a package manager (npm or pnpm)</li><li>Familiarity with TypeScript (ESM)</li><li>For in-repo plugins: repository cloned and <code>pnpm install</code> done</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-3">
-          <div class="section-heading">
-            <p class="section-kicker">第 3 站</p>
-            <h2>What kind of 新本领插件?</h2>
-            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>你理解的是能力边界，不只是功能名字。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Card大家一起的房间&gt; &lt;Card title=&quot;消息通道 新本领插件&quot; icon=&quot;小纸条消息s-square&quot; href=&quot;/新本领插件s/sdk-消息通道-新本领插件s&quot;&gt; Connect OpenClaw to a messa…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Card大家一起的房间&gt; &lt;Card title=&quot;消息通道 新本领插件&quot; icon=&quot;小纸条消息s-square&quot; href=&quot;/新本领插件s/sdk-消息通道-新本领插件s&quot;&gt; Connect OpenClaw to a messa…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>&lt;CardGroup&gt; &lt;Card title=&quot;Channel plugin&quot; icon=&quot;messages-square&quot; href=&quot;/plugins/sdk-channel-plugins&quot;&gt; Connect OpenClaw to a messaging platform (Discord, IRC, etc.) &lt;/Card&gt;</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Card title=&quot;Provider 新本领插件&quot; icon=&quot;cpu&quot; href=&quot;/新本领插件s/sdk-provider-新本领插件s&quot;&gt; Add a 聪明脑袋模型 provider (LLM, proxy, or custo…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>&lt;Card title=&quot;Provider plugin&quot; icon=&quot;cpu&quot; href=&quot;/plugins/sdk-provider-plugins&quot;&gt; Add a model provider (LLM, proxy, or custom endpoint) &lt;/Card&gt;</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Card title=&quot;工具小帮手 / hook 新本领插件&quot; icon=&quot;wrench&quot;&gt; Register 机器人朋友 工具小帮手s, event hooks, or services — continue below &lt;/Card…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>&lt;Card title=&quot;Tool / hook plugin&quot; icon=&quot;wrench&quot;&gt; Register agent tools, event hooks, or services — continue below &lt;/Card&gt; &lt;/CardGroup&gt;</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-4">
-          <div class="section-heading">
-            <p class="section-kicker">第 4 站</p>
-            <h2>Quick start: 工具小帮手 新本领插件</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“This walkthrough creates a minimal 新本领插件 that registers an 机器人朋友 工具小帮手. 消息通道 and provider 新本领插件s have dedicated guides…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“This walkthrough creates a minimal 新本领插件 that registers an 机器人朋友 工具小帮手. 消息通道 and provider 新本领插件s have dedicated guides…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>This walkthrough creates a minimal plugin that registers an agent tool. Channel and provider plugins have dedicated guides linked above.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Steps&gt; &lt;Step title=&quot;Create the package and manifest&quot;&gt; &lt;Code大家一起的房间&gt;”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>&lt;Steps&gt; &lt;Step title=&quot;Create the package and manifest&quot;&gt; &lt;CodeGroup&gt; ``<code>json package.json theme={&quot;theme&quot;:{&quot;light&quot;:&quot;min-light&quot;,&quot;dark&quot;:&quot;min-dark&quot;}} { &quot;name&quot;: &quot;@myorg/openclaw-my-plugin&quot;, &quot;version&quot;: &quot;1.0.0&quot;, &quot;type&quot;: &quot;module&quot;, &quot;openclaw&quot;: { &quot;extensions&quot;: [&quot;./index.ts&quot;] } } </code>``</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;/Code大家一起的房间&gt;”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>``<code>json openclaw.plugin.json theme={&quot;theme&quot;:{&quot;light&quot;:&quot;min-light&quot;,&quot;dark&quot;:&quot;min-dark&quot;}} { &quot;id&quot;: &quot;my-plugin&quot;, &quot;name&quot;: &quot;My Plugin&quot;, &quot;description&quot;: &quot;Adds a custom tool to OpenClaw&quot;, &quot;configSchema&quot;: { &quot;type&quot;: &quot;object&quot;, &quot;additionalProperties&quot;: false } } </code>`` &lt;/CodeGroup&gt;</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Every 新本领插件 needs a manifest, even with no 设置说明书. See Manifest for the full schema. &lt;/Step&gt;”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Every plugin needs a manifest, even with no config. See <a href="/plugins/manifest" target="_blank" rel="noreferrer">Manifest</a> for the full schema. &lt;/Step&gt;</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Step title=&quot;Write the entry point&quot;&gt; ```typescript theme={&quot;theme&quot;:{&quot;light&quot;:&quot;min-light&quot;,&quot;dark&quot;:&quot;min-dark&quot;}} // index.ts…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>&lt;Step title=&quot;Write the entry point&quot;&gt; ```typescript theme={&quot;theme&quot;:{&quot;light&quot;:&quot;min-light&quot;,&quot;dark&quot;:&quot;min-dark&quot;}} // index.ts import { definePluginEntry } from &quot;openclaw/plugin-sdk/plugin-entry&quot;; import { Type } from &quot;@sinclair/typebox&quot;;</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“export default define新本领插件Entry({ id: &quot;my-新本领插件&quot;, name: &quot;My 新本领插件&quot;, description: &quot;Adds a custom 工具小帮手 to OpenClaw&quot;, reg…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>export default definePluginEntry({ id: &quot;my-plugin&quot;, name: &quot;My Plugin&quot;, description: &quot;Adds a custom tool to OpenClaw&quot;, register(api) { api.registerTool({ name: &quot;my_tool&quot;, description: &quot;Do a thing&quot;, parameters: Type.Object({ input: Type.String() }), async execute(_id, params) { return { content: [{ type: &quot;text&quot;, text: <code>Got: ${params.input}</code> }] }; }, }); }, }); ```</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“define新本领插件Entry is for non-消息通道 新本领插件s. For 消息通道s, use define消息通道新本领插件Entry — see 消息通道 新本领插件s. For full entry point op…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p><code>definePluginEntry</code> is for non-channel plugins. For channels, use <code>defineChannelPluginEntry</code> — see <a href="/plugins/sdk-channel-plugins" target="_blank" rel="noreferrer">Channel Plugins</a>. For full entry point options, see <a href="/plugins/sdk-entrypoints" target="_blank" rel="noreferrer">Entry Points</a>. &lt;/Step&gt;</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Step title=&quot;Test and publish&quot;&gt; **External 新本领插件s:** publish to ClawHub or npm, then install:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>&lt;Step title=&quot;Test and publish&quot;&gt; **External plugins:** publish to <a href="/tools/clawhub" target="_blank" rel="noreferrer">ClawHub</a> or npm, then install:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>``<code>bash theme={&quot;theme&quot;:{&quot;light&quot;:&quot;min-light&quot;,&quot;dark&quot;:&quot;min-dark&quot;}} openclaw plugins install @myorg/openclaw-my-plugin </code>``</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“OpenClaw checks ClawHub first, then falls back to npm.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>OpenClaw checks ClawHub first, then falls back to npm.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“**In-repo 新本领插件s:** place under extensions/ — automatically discovered.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>**In-repo plugins:** place under <code>extensions/</code> — automatically discovered.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;/Step&gt; &lt;/Steps&gt;”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>``<code>bash theme={&quot;theme&quot;:{&quot;light&quot;:&quot;min-light&quot;,&quot;dark&quot;:&quot;min-dark&quot;}} pnpm test -- extensions/my-plugin/ </code>`` &lt;/Step&gt; &lt;/Steps&gt;</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-5">
-          <div class="section-heading">
-            <p class="section-kicker">第 5 站</p>
-            <h2>新本领插件 capabilities</h2>
-            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>你理解的是能力边界，不只是功能名字。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“A single 新本领插件 can register any number of capabilities via the 对话接口 object: Capability Registration method Detailed gui…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“A single 新本领插件 can register any number of capabilities via the 对话接口 object:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>A single plugin can register any number of capabilities via the <code>api</code> object:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Capability Registration method Detailed guide --------------------- --------------------------------------------- -----…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>| Capability | Registration method | Detailed guide | | --------------------- | --------------------------------------------- | ------------------------------------------------------------------------------- | | Text inference (LLM) | <code>api.registerProvider(...)</code> | <a href="/plugins/sdk-provider-plugins" target="_blank" rel="noreferrer">Provider Plugins</a> | | CLI inference backend | <code>api.registerCliBackend(...)</code> | <a href="/gateway/cli-backends" target="_blank" rel="noreferrer">CLI Backends</a> | | Channel / messaging | <code>api.registerChannel(...)</code> | <a href="/plugins/sdk-channel-plugins" target="_blank" rel="noreferrer">Channel Plugins</a> | | Speech (TTS/STT) | <code>api.registerSpeechProvider(...)</code> | <a href="/plugins/sdk-provider-plugins#step-5-add-extra-capabilities" target="_blank" rel="noreferrer">Provider Plugins</a> | | Media understanding | <code>api.registerMediaUnderstandingProvider(...)</code> | <a href="/plugins/sdk-provider-plugins#step-5-add-extra-capabilities" target="_blank" rel="noreferrer">Provider Plugins</a> | | Image generation | <code>api.registerImageGenerationProvider(...)</code> | <a href="/plugins/sdk-provider-plugins#step-5-add-extra-capabilities" target="_blank" rel="noreferrer">Provider Plugins</a> | | Web search | <code>api.registerWebSearchProvider(...)</code> | <a href="/plugins/sdk-provider-plugins#step-5-add-extra-capabilities" target="_blank" rel="noreferrer">Provider Plugins</a> | | Agent tools | <code>api.registerTool(...)</code> | Below | | Custom commands | <code>api.registerCommand(...)</code> | <a href="/plugins/sdk-entrypoints" target="_blank" rel="noreferrer">Entry Points</a> | | Event hooks | <code>api.registerHook(...)</code> | <a href="/plugins/sdk-entrypoints" target="_blank" rel="noreferrer">Entry Points</a> | | HTTP routes | <code>api.registerHttpRoute(...)</code> | <a href="/plugins/architecture#gateway-http-routes" target="_blank" rel="noreferrer">Internals</a> | | CLI subcommands | <code>api.registerCli(...)</code> | <a href="/plugins/sdk-entrypoints" target="_blank" rel="noreferrer">Entry Points</a> |</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“For the full registration 对话接口, see SDK Overview.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>For the full registration API, see <a href="/plugins/sdk-overview#registration-api" target="_blank" rel="noreferrer">SDK Overview</a>.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Hook guard semantics to keep in mind:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Hook guard semantics to keep in mind:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Plugin capabilities”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：before_工具小帮手_call: { block: true } is ter…、before_工具小帮手_call: { block: false } is tr…、小纸条消息_sending: { cancel: true } is termin…、小纸条消息_sending: { cancel: false } is treat…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>before_tool_call</code>: <code>{ block: true }</code> is terminal and stops lower-priority handlers.</li><li><code>before_tool_call</code>: <code>{ block: false }</code> is treated as no decision.</li><li><code>message_sending</code>: <code>{ cancel: true }</code> is terminal and stops lower-priority handlers.</li><li><code>message_sending</code>: <code>{ cancel: false }</code> is treated as no decision.</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“See SDK Overview hook decision semantics for details.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>See <a href="/plugins/sdk-overview#hook-decision-semantics" target="_blank" rel="noreferrer">SDK Overview hook decision semantics</a> for details.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-6">
-          <div class="section-heading">
-            <p class="section-kicker">第 6 站</p>
-            <h2>Registering 机器人朋友 工具小帮手s</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“工具小帮手s are typed functions the LLM can call. They can be required (always available) or optional (user opt-in): Users e…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“工具小帮手s are typed functions the LLM can call. They can be required (always available) or optional (user opt-in):”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Tools are typed functions the LLM can call. They can be required (always available) or optional (user opt-in):</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段像给机器人看的说明书，告诉它要按什么样子准备东西。</p>
-        <ul class="code-steps">
-          <li>这一行“register(api) {”是当前步骤要交给电脑的一小块提示。</li><li>这一行“// Required tool — always available”是当前步骤要交给电脑的一小块提示。</li><li>这一行“api.registerTool({”是当前步骤要交给电脑的一小块提示。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-typescript">register(api) {
-  // Required tool — always available
-  api.registerTool({
-    name: &quot;my_tool&quot;,
-    description: &quot;Do a thing&quot;,
-    parameters: Type.Object({ input: Type.String() }),
-    async execute(_id, params) {
-      return { content: [{ type: &quot;text&quot;, text: params.input }] };
-    },
-  });
-
-  // Optional tool — user must add to allowlist
-  api.registerTool(
-    {
-      name: &quot;workflow_tool&quot;,
-      description: &quot;Run a workflow&quot;,
-      parameters: Type.Object({ pipeline: Type.String() }),
-      async execute(_id, params) {
-        return { content: [{ type: &quot;text&quot;, text: params.pipeline }] };
-      },
-    },
-    { optional: true },
-  );
-}</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Users enable optional 工具小帮手s in 设置说明书:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Users enable optional tools in config:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“tools”贴标签，意思是把它设置成“{ allow: [workflow_tool] }”。</li><li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json5">{
-  tools: { allow: [&quot;workflow_tool&quot;] },
-}</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Registering agent tools”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：工具小帮手 names must not clash with core 工具小帮…、Use optional: true for 工具小帮手s with side e…、Users can enable all 工具小帮手s from a 新本领插件…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Tool names must not clash with core tools (conflicts are skipped)</li><li>Use <code>optional: true</code> for tools with side effects or extra binary requirements</li><li>Users can enable all tools from a plugin by adding the plugin id to <code>tools.allow</code></li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-7">
-          <div class="section-heading">
-            <p class="section-kicker">第 7 站</p>
-            <h2>Import conventions</h2>
-            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>你理解的是能力边界，不只是功能名字。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Always import from focused openclaw/新本领插件-sdk/&lt;subpath&gt; paths: For the full subpath reference, see SDK Overview. Within…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Always import from focused openclaw/新本领插件-sdk/&lt;subpath&gt; paths:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Always import from focused <code>openclaw/plugin-sdk/&lt;subpath&gt;</code> paths:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段像给机器人看的说明书，告诉它要按什么样子准备东西。</p>
-        <ul class="code-steps">
-          <li>这一行“import { definePluginEntry } from &quot;openclaw/plugin-sdk/plugin-entry&quot;;”是当前步骤要交给电脑的一小块提示。</li><li>这一行“import { createPluginRuntimeStore } from &quot;openclaw/plugin-sdk/runtime-store&quot;;”是当前步骤要交给电脑的一小块提示。</li><li>这里在给“// Wrong”贴标签，意思是把它设置成“monolithic root (deprecated will be removed)”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-typescript">import { definePluginEntry } from &quot;openclaw/plugin-sdk/plugin-entry&quot;;
-import { createPluginRuntimeStore } from &quot;openclaw/plugin-sdk/runtime-store&quot;;
-
-// Wrong: monolithic root (deprecated, will be removed)
-import { ... } from &quot;openclaw/plugin-sdk&quot;;</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“For the full subpath reference, see SDK Overview.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>For the full subpath reference, see <a href="/plugins/sdk-overview" target="_blank" rel="noreferrer">SDK Overview</a>.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Within your 新本领插件, use local barrel files (对话接口.ts, runtime-对话接口.ts) for internal imports — never import your own 新本领插件…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Within your plugin, use local barrel files (<code>api.ts</code>, <code>runtime-api.ts</code>) for internal imports — never import your own plugin through its SDK path.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-8">
-          <div class="section-heading">
-            <p class="section-kicker">第 8 站</p>
-            <h2>Pre-submission checklist</h2>
-            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>你理解的是能力边界，不只是功能名字。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Check&gt;**package.json** has correct openclaw metadata&lt;/Check&gt; &lt;Check&gt;**openclaw\.新本领插件.json** manifest is present and v…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Check&gt;**package.json** has correct openclaw metadata&lt;/Check&gt; &lt;Check&gt;**openclaw\.新本领插件.json** manifest is present and v…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>&lt;Check&gt;**package.json** has correct <code>openclaw</code> metadata&lt;/Check&gt; &lt;Check&gt;**openclaw\.plugin.json** manifest is present and valid&lt;/Check&gt; &lt;Check&gt;Entry point uses <code>defineChannelPluginEntry</code> or <code>definePluginEntry</code>&lt;/Check&gt; &lt;Check&gt;All imports use focused <code>plugin-sdk/&lt;subpath&gt;</code> paths&lt;/Check&gt; &lt;Check&gt;Internal imports use local modules, not SDK self-imports&lt;/Check&gt; &lt;Check&gt;Tests pass (<code>pnpm test -- extensions/my-plugin/</code>)&lt;/Check&gt; &lt;Check&gt;<code>pnpm check</code> passes (in-repo plugins)&lt;/Check&gt;</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-9">
-          <div class="section-heading">
-            <p class="section-kicker">第 9 站</p>
-            <h2>Beta Release Testing</h2>
-            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>你理解的是能力边界，不只是功能名字。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“1. Watch for GitHub release tags on openclaw/openclaw and subscribe via Watch &gt; Releases. Beta tags look like v2026.3.N…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“1. Watch for GitHub release tags on openclaw/openclaw and subscribe via Watch &gt; Releases. Beta tags look like v2026.3.N…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>1. Watch for GitHub release tags on <a href="https://github.com/openclaw/openclaw/releases" target="_blank" rel="noreferrer">openclaw/openclaw</a> and subscribe via <code>Watch</code> &gt; <code>Releases</code>. Beta tags look like <code>v2026.3.N-beta.1</code>. You can also turn on notifications for the official OpenClaw X account <a href="https://x.com/openclaw" target="_blank" rel="noreferrer">@openclaw</a> for release announcements. 2. Test your plugin against the beta tag as soon as it appears. The window before stable is typically only a few hours. 3. Post in your plugin&#39;s thread in the <code>plugin-forum</code> Discord channel after testing with either <code>all good</code> or what broke. If you do not have a thread yet, create one. 4. If something breaks, open or update an issue titled <code>Beta blocker: &lt;plugin-name&gt; - &lt;summary&gt;</code> and apply the <code>beta-blocker</code> label. Put the issue link in your thread. 5. Open a PR to <code>main</code> titled <code>fix(&lt;plugin-id&gt;): beta blocker - &lt;summary&gt;</code> and link the issue in both the PR and your Discord thread. Contributors cannot label PRs, so the title is the PR-side signal for maintainers and automation. Blockers with a PR get merged; blockers without one might ship anyway. Maintainers watch these threads during beta testing. 6. Silence means green. If you miss the window, your fix likely lands in the next cycle.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-10">
-          <div class="section-heading">
-            <p class="section-kicker">第 10 站</p>
-            <h2>Next steps</h2>
-            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>你理解的是能力边界，不只是功能名字。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Card大家一起的房间&gt; &lt;Card title=&quot;消息通道 新本领插件s&quot; icon=&quot;小纸条消息s-square&quot; href=&quot;/新本领插件s/sdk-消息通道-新本领插件s&quot;&gt; Build a messaging 消息通道 新本领…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Card大家一起的房间&gt; &lt;Card title=&quot;消息通道 新本领插件s&quot; icon=&quot;小纸条消息s-square&quot; href=&quot;/新本领插件s/sdk-消息通道-新本领插件s&quot;&gt; Build a messaging 消息通道 新本领…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>&lt;CardGroup&gt; &lt;Card title=&quot;Channel Plugins&quot; icon=&quot;messages-square&quot; href=&quot;/plugins/sdk-channel-plugins&quot;&gt; Build a messaging channel plugin &lt;/Card&gt;</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Card title=&quot;Provider 新本领插件s&quot; icon=&quot;cpu&quot; href=&quot;/新本领插件s/sdk-provider-新本领插件s&quot;&gt; Build a 聪明脑袋模型 provider 新本领插件 &lt;/Card&gt;”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>&lt;Card title=&quot;Provider Plugins&quot; icon=&quot;cpu&quot; href=&quot;/plugins/sdk-provider-plugins&quot;&gt; Build a model provider plugin &lt;/Card&gt;</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Card title=&quot;SDK Overview&quot; icon=&quot;book-open&quot; href=&quot;/新本领插件s/sdk-overview&quot;&gt; Import map and registration 对话接口 reference &lt;/C…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>&lt;Card title=&quot;SDK Overview&quot; icon=&quot;book-open&quot; href=&quot;/plugins/sdk-overview&quot;&gt; Import map and registration API reference &lt;/Card&gt;</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Card title=&quot;Runtime Helpers&quot; icon=&quot;settings&quot; href=&quot;/新本领插件s/sdk-runtime&quot;&gt; TTS, search, sub机器人朋友 via 对话接口.runtime &lt;/Card&gt;”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>&lt;Card title=&quot;Runtime Helpers&quot; icon=&quot;settings&quot; href=&quot;/plugins/sdk-runtime&quot;&gt; TTS, search, subagent via api.runtime &lt;/Card&gt;</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Card title=&quot;Testing&quot; icon=&quot;test-tubes&quot; href=&quot;/新本领插件s/sdk-testing&quot;&gt; Test utilities and patterns &lt;/Card&gt;”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>&lt;Card title=&quot;Testing&quot; icon=&quot;test-tubes&quot; href=&quot;/plugins/sdk-testing&quot;&gt; Test utilities and patterns &lt;/Card&gt;</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Card title=&quot;新本领插件 Manifest&quot; icon=&quot;file-json&quot; href=&quot;/新本领插件s/manifest&quot;&gt; Full manifest schema reference &lt;/Card&gt; &lt;/Card大家一…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>&lt;Card title=&quot;Plugin Manifest&quot; icon=&quot;file-json&quot; href=&quot;/plugins/manifest&quot;&gt; Full manifest schema reference &lt;/Card&gt; &lt;/CardGroup&gt;</p>
-      </div>
-    
-          </div>
-        </section>
-      
-    <section class="section-shell">
-      <div class="ad-placeholder">
-        <p>这里预留给未来的 Google AdSense 模块。</p>
-        <code>&lt;!-- ADSENSE_SNIPPET --&gt;</code>
-      </div>
-    </section>
-  
 
       <footer class="page-footer">
         <div>
