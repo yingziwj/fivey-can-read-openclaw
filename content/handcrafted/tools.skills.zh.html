@@ -1,0 +1,317 @@
+<section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>🧰 Skills 不是新工具，它更像写给 OpenClaw 的“小抄本”</h2>
+      <p>OpenClaw 有很多工具，像手、脚、眼睛、耳朵。可光有工具还不够，它还得知道什么时候该用哪一个、先做什么、后做什么、别踩什么坑。</p>
+      <p>Skills 干的就是这件事。它不是给 OpenClaw 再装一只新手，而是往它脑袋里塞一张“小抄”：遇到这种任务，就按这套路子来。</p>
+    </div>
+    <div class="overview-meta">
+      <span>这页适合第一次搞不清 skill 是什么的人</span>
+      <span>重点不是语法，而是先搞懂 skill 到底在系统里扮演什么角色</span>
+      <a href="https://docs.openclaw.ai/tools/skills" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一站</p>
+    <h2>🧠 先把 skill 想成“做事说明书”</h2>
+    <p>如果工具像积木，那 skill 就像积木拼装说明书。它不负责多给你一块积木，它负责告诉 OpenClaw：这次应该先拿哪块，再拿哪块。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">🛠 工具</div>
+      <p>工具负责动作。比如读文件、跑命令、开浏览器、搜网页，这些都是真正动手的能力。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">📘 Skill</div>
+      <p>Skill 负责教路。它会告诉 OpenClaw：碰到某类问题，先查哪里，再用哪个工具，最后怎么收尾。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🎒 一个技能文件夹</div>
+      <p>本质上就是一个目录，里面最重要的那张纸叫 <code>SKILL.md</code>。你可以把它当成“这套本领的使用说明”。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">⭐ 如果你只记一句</div>
+      <p>Skill 不是给 OpenClaw 新超能力，而是教它把现有能力用得更像样。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二站</p>
+    <h2>📦 Skill 会从很多地方冒出来，但离你越近越算数</h2>
+    <p>官方原文这一大段其实只是在讲一件事：如果同一个 skill 在好几个地方都出现了，到底听谁的？</p>
+  </div>
+  <div class="source-card">
+    <div class="story-card-label">🏆 最容易记的规则</div>
+    <p>离你当前工作区越近的 skill，声音越大。离得越远，声音越小。也就是说，你自己项目里的版本，通常会压过系统自带的版本。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">📁 工作区里的 skill</div>
+      <p>这是最“贴身”的版本。它就在你当前项目边上，所以优先级最高，最像“我这一单就按我项目自己的规矩来”。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🏠 你电脑上的共享 skill</div>
+      <p>像 <code>~/.openclaw/skills</code>、<code>~/.agents/skills</code> 这类地方，更像“这台机器上的通用小抄本”。谁来都能看，但它没有项目本地版本强势。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">📦 系统自带的 skill</div>
+      <p>像出厂说明书。很好用，但只要你自己有更贴身的版本，它就会往后站。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 这节真正想告诉你</div>
+      <p>想改默认 skill，不用去拆系统肚子。最简单的办法，就是在你自己的工作区里放一份同名版本，让它盖过去。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第三站</p>
+    <h2>👥 多代理的时候，skill 其实也分“谁家的”</h2>
+    <p>如果你同时跑很多代理，官方这部分就是在讲：哪些 skill 只归某一个代理，哪些能给大家一起用。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">🧒</span>
+      <h2>某个代理自己的</h2>
+      <p>放在它自己工作区里的 skill，只像它自己的笔记本，别人看不见，也用不到。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🏫</span>
+      <h2>项目里一起用的</h2>
+      <p>放在项目范围的 skill，像班级公用讲义。这个项目里的代理都能看。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🏠</span>
+      <h2>这台机器一起用的</h2>
+      <p>放在你用户目录里的 skill，像家里的常用手册。这台电脑上的代理都能共享。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">📚</span>
+      <h2>额外目录里的</h2>
+      <p>像从别处搬来的资料箱。能用，但优先级通常比较靠后。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第四站</p>
+    <h2>🧩 插件也能带 skill，但它更像“随盒附赠小纸条”</h2>
+    <p>插件可以顺手带一些 skill 进来。这不是坏事，只是你要知道：这种附赠纸条通常没有你工作区里的本地纸条硬。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">📦 插件自带 skill</div>
+      <p>插件启用以后，它附带的 skill 才会一起进来。所以它更像“买这个插件时顺便附送的用法卡片”。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🥇 谁优先</div>
+      <p>如果你本地已经有同名版本，那本地版本一般会赢。意思就是：附赠说明书有用，但项目自己的规矩更大。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">📌 真正要记住的点</div>
+      <p>插件可以带 skill，但别以为它带来的就一定会生效。真正拍板的，还是前面那套“离工作区越近越优先”的规则。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 一句话收住</div>
+      <p>插件带来的 skill 像随盒小卡片，本地 skill 像你自己写的班规。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第五站</p>
+    <h2>🛒 ClawHub 更像一个“技能小卖部”</h2>
+    <p>这一节不是在讲架构，而是在讲“去哪里找 skill、怎么装进来、怎么更新”。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">🏪 ClawHub 是哪儿</div>
+      <p>你可以把它想成 OpenClaw 的技能货架。别人写好的 skill，会放在那里给你挑。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">📥 安装 skill</div>
+      <p>装 skill 不是“召唤云端魔法”，而是把那份技能文件夹真的搬进你当前工作区里。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
+      <ul>
+        <li><code>openclaw skills install &lt;skill-slug&gt;</code>：像去小卖部点名买一盒技能，然后把它放到你当前项目桌上。</li>
+        <li><code>openclaw skills update --all</code>：像检查你桌上这些技能说明书是不是都出了新版，有的话就一起换新。</li>
+        <li><code>clawhub sync --all</code>：更像店员在整理货架、同步库存，不只是单纯给你装一个技能。</li>
+      </ul>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 最后记一句</div>
+      <p>ClawHub 是找 skill 的地方，<code>openclaw skills install</code> 是把它拎回家的动作。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第六站</p>
+    <h2>🔐 第三方 skill 要当成“陌生人给你的代码”来看</h2>
+    <p>这页有一段很重要，不能因为讲故事就讲轻了：第三方 skill 不是可爱小贴纸，它可能真的会影响系统行为。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">⚠️ 先看再用</div>
+      <p>别人给你的 skill，本质上是别人写的做事说明。它会影响代理怎么用工具，所以最好先读，再决定要不要开。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🪵 密钥别乱塞</div>
+      <p>如果 skill 需要 API key，这些东西不是糖果，要尽量别把它们暴露进提示词和日志里。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🏖 该进沙箱就进沙箱</div>
+      <p>如果一个 skill 会碰高风险工具，或者输入来源不可靠，那就尽量让它在沙箱里跑。这样像让它在围栏里活动，不会满院子乱跑。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 一句话记住</div>
+      <p>第三方 skill 要当代码看，不要当贴纸看。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第七站</p>
+    <h2>📝 写一个 skill，最重要的是那张 <code>SKILL.md</code></h2>
+    <p>这一节真正要说的，不是花哨格式，而是：每个 skill 至少得有一张自我介绍卡，系统才能认得它。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">📄 必须要有</div>
+      <p>一个 skill 目录里最重要的文件就是 <code>SKILL.md</code>。没有它，这套本领就像没有封面的作业本，系统不太知道你是谁。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🏷 开头那几行在干嘛</div>
+      <p>前面的 YAML 信息，像把“名字”和“简介”贴在盒子外面。系统先看盒子外的标签，再决定怎么处理这盒东西。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
+      <ul>
+        <li><code>---</code> 到 <code>---</code> 这一段：像技能盒子的封面标签，先写名字，再写它是干嘛的。</li>
+        <li><code>name: image-lab</code>：像在盒子外面写上这套本领叫什么。</li>
+        <li><code>description: ...</code>：像在盒子外面补一句“这盒东西大概是拿来做什么的”。</li>
+        <li><code>user-invocable: true</code>：像告诉系统“这个 skill 可不可以直接摆到前台，给用户自己点着用”。</li>
+        <li><code>command-dispatch: tool</code>：像说“这个按钮按下去别先开会讨论了，直接去叫那个工具干活”。</li>
+      </ul>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 一句话收住</div>
+      <p><code>SKILL.md</code> 就像技能身份证和使用说明写在同一张纸上。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第八站</p>
+    <h2>🚦 metadata 更像“门口检查规则”</h2>
+    <p>官方这段最容易写得很硬，但其实它只是说：不是每个 skill 什么时候都该出现，有些得先检查条件。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">🔍 检查有没有工具</div>
+      <p>比如某个 skill 需要系统里先有 <code>uv</code> 这个命令。没有的话，这个 skill 就像少了零件的玩具，先别拿出来。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🔑 检查有没有钥匙</div>
+      <p>如果它需要某个 API key，也得先确认钥匙在不在。不然它一开口就会卡住。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🖥 检查环境对不对</div>
+      <p>有的 skill 只适合某些系统，或者只有某个配置打开时才该出现。这个检查就像门卫看场合放人。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
+      <ul>
+        <li><code>requires.bins</code>：像检查“你要玩的这套工具，家里有没有那把扳手”。</li>
+        <li><code>requires.env</code>：像检查“这把门钥匙你带没带”。</li>
+        <li><code>requires.config</code>：像检查“这扇门是不是已经被允许打开”。</li>
+        <li><code>primaryEnv</code>：像告诉系统“如果你要找主钥匙，就优先找这一把”。</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第九站</p>
+    <h2>🎛 你还能在配置里给 skill 开小灶</h2>
+    <p>官方这一段其实是在讲：就算 skill 本身已经写好了，你还是可以在自己的配置里决定它开不开、要不要给它密钥、要不要喂它额外参数。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">🔘 开关</div>
+      <p><code>enabled: true/false</code> 就像总开关。你不想让某个 skill 出现，直接关掉就行。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🗝 密钥</div>
+      <p>如果它需要 API key，你可以在配置里塞给它。像做实验前，把专用钥匙放进对应抽屉里。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
+      <ul>
+        <li><code>"image-lab": { enabled: true }</code>：像说“这盒技能今天可以上桌”。</li>
+        <li><code>apiKey: {...}</code>：像把保险柜钥匙交给这一个 skill 用，不是发给全世界看。</li>
+        <li><code>env: { GEMINI_API_KEY: "..." }</code>：像在这个 skill 开工前，把它需要的那张小纸条塞进口袋。</li>
+        <li><code>config: { model: "nano-pro" }</code>：像跟它说“你今天干活时，就按这个口味来”。</li>
+      </ul>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 一句话收住</div>
+      <p>你可以把 skill 当现成玩具买回来，也可以在自己家里再给它调开关、贴标签、换电池。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第十站</p>
+    <h2>⏱ Skill 不是每句话都重新读一遍的，它会先拍一张快照</h2>
+    <p>这一节如果直讲会很硬，但它核心意思很简单：一次会话开始时，OpenClaw 会先把“现在有哪些 skill 可用”记下来，然后按这张清单继续聊。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">📸 会话快照</div>
+      <p>像上课前先点名。点完名以后，中途一般就按这张名单走，不会每说一句话都重新去全校广播里问一遍。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🔄 热刷新</div>
+      <p>如果你开了 watcher，系统也可以像老师中途收到新名单那样，下一轮再换成新版本。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
+      <ul>
+        <li><code>watch: true</code>：像叫一个值日生盯着技能文件夹，一有变化就举手报告。</li>
+        <li><code>watchDebounceMs: 250</code>：像告诉值日生“别每一笔都喊，等 250 毫秒再统一说”，免得太吵。</li>
+      </ul>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 最后记一句</div>
+      <p>改了 skill 想马上生效，要么开新会话，要么让 watcher 帮你中途换新名单。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">最后总结</p>
+    <h2>🎈 把 Skills 这页压缩成一句最好记的话</h2>
+    <p>Skill 不是给 OpenClaw 加新手脚，而是教它怎么把手脚用得更像一个会做事的小助手。</p>
+  </div>
+  <div class="ad-placeholder">
+    <p>如果你接下来只继续看一页，我建议先看 <code>/tools/creating-skills</code> 或者直接去看你项目里的某个 <code>SKILL.md</code>，你会一下子把这张图对上现实。</p>
+  </div>
+</section>
