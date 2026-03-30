@@ -3971,1005 +3971,326 @@
       </div>
 
       
-    <section class="section-shell">
-      <div class="overview-card">
-        <div>
-          <p class="section-kicker">先听这页的人话版</p>
-          <h2>Google Chat</h2>
-          <p>这一页像一本关于“Google Chat”的小绘本，它先告诉我们这位机器人朋友会做什么，再一步一步解释什么时候该这样做。 你可以先把它想成：Google Chat (Chat 对话接口)。</p>
-          <p>如果把这页当成“给普通人看的版本”，你最应该带走的是：它到底在教你一件什么事、什么时候要这样做、以及哪里最容易踩坑。</p>
+      <section class="section-shell">
+        <div class="overview-card">
+          <div>
+            <p class="section-kicker">AI 绘本解读版</p>
+            <h2>🤖 给你的Google Chat请个AI小助手</h2>
+            <p>让OpenClaw住进你的Google Chat。
+就像给聊天室请了个聪明的门卫。
+它会帮你处理消息，还能和你聊天。</p>
+          </div>
+          <div class="overview-meta">
+            <span>原始路径：/channels/googlechat</span>
+            <span>故事卡片：12 张</span>
+            <a href="https://docs.openclaw.ai/channels/googlechat" target="_blank" rel="noreferrer">查看官方原文</a>
+          </div>
         </div>
-        <div class="overview-meta">
-          <span>原始路径：/channels/googlechat</span>
-          <span>章节数量：12</span>
-          <a href="https://docs.openclaw.ai/channels/googlechat" target="_blank" rel="noreferrer">查看原文</a>
+      </section>
+      
+          <section class="section-shell" id="section-1">
+            <div class="section-heading">
+              <p class="section-kicker">第 1 站</p>
+              <h2>🎯 准备开始</h2>
+              <p>先准备好两样东西：一个Google云项目，和一个服务账号。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>这是让AI助手能进Google Chat的“身份证”和“钥匙”。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>Google Chat现在可以和AI助手聊天了。</li><li>它通过一个叫“webhook”的小窗口来传递消息。</li><li>你需要先告诉Google云：“我要用Chat API”。</li><li>然后创建一个“服务账号”，它就是AI助手的官方身份。</li><li>把这个账号的“钥匙”（一个JSON文件）下载下来，放在你的电脑里。</li></ul>
+              </div>
+              
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>准备好身份证和钥匙，AI助手才能上岗。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-2">
+            <div class="section-heading">
+              <p class="section-kicker">第 2 站</p>
+              <h2>🔧 快速安装（新手版）</h2>
+              <p>跟着这几步，把AI助手请进你的Google Chat。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>一步步来，就像搭积木，很简单。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>去Google云控制台，创建一个Chat应用。</li><li>给应用起个名字，比如“OpenClaw”。</li><li>选一张好看的头像图片。</li><li>告诉应用：“你要能加入群聊和私聊”。</li><li>最重要的：设置一个“接收消息的地址”。</li><li>这个地址就是你的OpenClaw网关地址，后面加上“/googlechat”。</li><li>最后，把应用的状态改成“上线”，这样大家就能找到它了。</li><li>在你的OpenClaw里，告诉它服务账号钥匙放在哪里。</li><li>启动OpenClaw，Google Chat就会开始往这里发消息了。</li></ul>
+              </div>
+              
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>创建应用、设置地址、启动网关，三步搞定。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-3">
+            <div class="section-heading">
+              <p class="section-kicker">第 3 站</p>
+              <h2>➕ 把助手加到Google Chat</h2>
+              <p>现在，去你的Google Chat里，把这位新朋友加进来。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>加上了，才能开始和它说话呀。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>打开Google Chat网页。</li><li>在“私聊”旁边，点那个“+”号。</li><li>在搜索框里，输入你刚才给应用起的名字。</li><li>从结果里找到你的AI助手。</li><li>点“添加”或者“聊天”，就可以开始一对一对话了。</li><li>试着发一句“你好”，看看它会不会回应你！</li><li>注意：这个助手是“私人定制”的，不会出现在公共市场里，必须靠名字搜索才能找到。</li></ul>
+              </div>
+              
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>搜索名字，添加好友，打个招呼。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-4">
+            <div class="section-heading">
+              <p class="section-kicker">第 4 站</p>
+              <h2>🌐 需要一个公开的地址</h2>
+              <p>Google Chat需要一个能从外面访问的地址，来发送消息。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>就像你家需要一个门牌号，邮差才知道把信送到哪里。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>这个地址必须是公开的，并且是安全的（HTTPS）。</li><li>为了安全，我们只把“/googlechat”这个小门打开给外面。</li><li>OpenClaw的控制面板和其他重要部分，要藏在你自己的私人网络里。</li></ul>
+              </div>
+              
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>只开一扇小门，保护家里其他房间。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-5">
+            <div class="section-heading">
+              <p class="section-kicker">第 5 站</p>
+              <h2>🚪 开门方案A：用Tailscale Funnel（推荐）</h2>
+              <p>用一个聪明的工具，只把需要的那扇门打开。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>这样最安全，也最方便。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>先用一个命令看看你的OpenClaw网关住在哪个“房间号”（IP地址）。</li><li>用Tailscale Serve把控制面板（整个家）只给你的私人网络看。</li><li>再用Tailscale Funnel，只把“/googlechat”这扇小门公开给全世界。</li></ul>
+              </div>
+              
+            <div class="source-card">
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
+              <ul><li>`ss -tlnp | grep 18789` 这个命令像在问电脑：“18789号端口是谁在住？”</li><li>`tailscale serve --bg --https 8443 http://127.0.0.1:18789` 这个命令像在说：“把我家客厅（8443端口）只展示给我的家人（Tailscale网络）看。”</li><li>`tailscale funnel --bg 8443 /googlechat` 这个命令像在说：“但是，把我家‘/googlechat’这个小房间的门，开一条缝给外面的邮差（Google Chat）。”</li></ul>
+            </div>
+          
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>用Funnel工具，精准地开一扇小窗。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-6">
+            <div class="section-heading">
+              <p class="section-kicker">第 6 站</p>
+              <h2>🚪 开门方案B：用反向代理（比如Caddy）</h2>
+              <p>如果你有个叫“Caddy”的管家，可以让他来帮忙开门。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>管家很可靠，能帮你过滤访客。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>告诉你的管家（Caddy）：只有访问“/googlechat”的客人，才请进家里。</li><li>访问其他地方的客人，就告诉他们“这里不对”或者直接不理。</li></ul>
+              </div>
+              
+            <div class="source-card">
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
+              <ul><li>`reverse_proxy /googlechat* localhost:18789` 这行配置像在给管家下指令：“听着，只有来找‘/googlechat’的人，才带他去localhost的18789号房。其他人，别管。”</li></ul>
+            </div>
+          
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>让管家只放行特定的访客。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-7">
+            <div class="section-heading">
+              <p class="section-kicker">第 7 站</p>
+              <h2>🚪 开门方案C：用Cloudflare隧道</h2>
+              <p>挖一条只通往“/googlechat”的秘密隧道。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>隧道很安全，只走指定的路。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>设置一条隧道规则：只有走“/googlechat”这条路的人，才能通到你的OpenClaw。</li><li>其他所有路，都设置成“此路不通”。</li></ul>
+              </div>
+              
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>挖一条专属的单行道。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-8">
+            <div class="section-heading">
+              <p class="section-kicker">第 8 站</p>
+              <h2>🤔 它是怎么工作的？</h2>
+              <p>看看消息是怎么从Google Chat跑到AI助手那里的。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>了解原理，出了问题才知道怎么修。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>Google Chat发消息时，会带着一张“通行证”（Bearer Token）。</li><li>OpenClaw会先检查这张通行证是不是有效的。</li><li>它会核对“通行证”上写的“观众”是不是你设置的那个地址或项目号。</li><li>私聊和群聊的消息，会被分开放在不同的“会话盒子”里。</li><li>第一次私聊的人，会收到一个“配对码”，需要你批准才能继续聊。</li><li>在群里，AI助手默认需要被@提到才会回复。</li></ul>
+              </div>
+              
+            <div class="source-card">
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
+              <ul><li>`openclaw pairing approve googlechat &lt;code&gt;` 这个命令像在说：“我批准这个配对码，让这个人和我的助手聊天吧。”</li></ul>
+            </div>
+          
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>检查通行证，分装消息，新朋友要配对。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-9">
+            <div class="section-heading">
+              <p class="section-kicker">第 9 站</p>
+              <h2>📮 要发给谁？</h2>
+              <p>怎么告诉AI助手，消息要发给哪个具体的人或群？</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>地址写对了，信才不会送错。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>发给个人：最好用 `users/&lt;用户ID&gt;` 这个格式，像“用户/123”。</li><li>直接用邮箱地址（比如 name@example.com）不太稳定，除非你开了个特殊开关。</li><li>旧的 `users/&lt;邮箱&gt;` 格式，现在会被当成用户ID，而不是邮箱了。</li><li>发给群聊：用 `spaces/&lt;群聊ID&gt;` 这个格式，像“空间/ABC123”。</li></ul>
+              </div>
+              
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>用“用户/ID”找人，用“空间/ID”找群。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-10">
+            <div class="section-heading">
+              <p class="section-kicker">第 10 站</p>
+              <h2>⚙️ 配置规则（像定家规）</h2>
+              <p>这些设置就像给AI助手定的“家规”，告诉它该怎么做事。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>定好规矩，助手才知道什么能做，什么不能做。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>`enabled: true`：打开Google Chat这个通道。</li><li>`serviceAccountFile`：告诉助手钥匙（服务账号文件）放在哪里。</li><li>`audience` 和 `audienceType`：告诉助手要检查谁的“通行证”。</li><li>`webhookPath`：告诉助手消息会从哪扇门进来（默认是“/googlechat”）。</li><li>`dm.policy: &quot;pairing&quot;`：私聊默认需要“配对”，新朋友要你批准。</li><li>`groupPolicy: &quot;allowlist&quot;`：群聊默认只允许名单里的群。</li><li>在群聊规则里，可以设置“需要被@才回复”、“只允许某些用户说话”、“给助手一个简短的回答提示”。</li><li>`actions: { reactions: true }`：打开这个，助手就能在消息上加表情（点赞）了。</li></ul>
+              </div>
+              
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>用配置告诉助手：钥匙在哪、门在哪、对谁客气、在群里怎么回话。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-11">
+            <div class="section-heading">
+              <p class="section-kicker">第 11 站</p>
+              <h2>❌ 常见问题：405错误（门没开）</h2>
+              <p>如果Google那边说“方法不被允许”，通常是门没开对。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>帮你快速找到问题，把门打开。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>最常见的原因：你的OpenClaw配置里，根本没有打开Google Chat这个“通道”。</li><li>用命令检查一下，看看“channels.googlechat”这个配置在不在。</li><li>另一个原因：Google Chat的“插件”没有启用。</li><li>再用命令看看插件列表里有没有“googlechat”。</li></ul>
+              </div>
+              
+            <div class="source-card">
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
+              <ul><li>`openclaw config get channels.googlechat` 这个命令像在问：“配置文件里，Google Chat通道的规则是什么？”</li><li>`openclaw plugins list | grep googlechat` 这个命令像在问：“所有插件里，有没有一个叫googlechat的？”</li></ul>
+            </div>
+          
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>405错误？先检查通道配置和插件开关。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-12">
+            <div class="section-heading">
+              <p class="section-kicker">第 12 站</p>
+              <h2>🔍 其他问题怎么办？</h2>
+              <p>如果还有别的问题，试试这些检查方法。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>自己动手，快速排查。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>用 `openclaw channels status --probe` 检查身份验证和地址配置对不对。</li><li>如果收不到消息，去Google Chat应用设置里，确认“接收消息的地址”和“事件订阅”都设好了。</li><li>如果在群里@了助手它却不回，检查一下“botUser”设置和“requireMention”开关。</li><li>发测试消息时，同时用 `openclaw logs --follow` 看看消息有没有真的送到网关门口。</li></ul>
+              </div>
+              
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>用状态检查、日志跟踪，一步步找到问题所在。</p>
+              </div>
+            </div>
+          </section>
+        
+      <section class="section-shell">
+        <div class="ad-placeholder">
+          <p>这里预留给未来的 Google AdSense 模块。</p>
+          <code>&lt;!-- ADSENSE_SNIPPET --&gt;</code>
         </div>
-      </div>
-    </section>
+      </section>
     
-        <section class="section-shell" id="section-1">
-          <div class="section-heading">
-            <p class="section-kicker">第 1 站</p>
-            <h2>Start Here</h2>
-            <p>这一节主要在解释“Start Here”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“Start Here”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Google Chat (Chat 对话接口) Status: ready for DMs + spaces via Google Chat 对话接口 小铃铛通知s (HTTP only).”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Google Chat (Chat 对话接口)”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p># Google Chat (Chat API)</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Status: ready for DMs + spaces via Google Chat 对话接口 小铃铛通知s (HTTP only).”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Status: ready for DMs + spaces via Google Chat API webhooks (HTTP only).</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-2">
-          <div class="section-heading">
-            <p class="section-kicker">第 2 站</p>
-            <h2>Quick setup (beginner)</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“1. Create a Google Cloud project and enable the **Google Chat 对话接口**. 2. Create a **Service Account**: 3. Create and do…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“1. Create a Google Cloud project and enable the **Google Chat 对话接口**.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>1. Create a Google Cloud project and enable the **Google Chat API**.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“2. Create a **Service Account**:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>2. Create a **Service Account**:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“3. Create and download the **JSON Key**:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>3. Create and download the **JSON Key**:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“4. Store the downloaded JSON file on your 门口的小门卫 host (e.g., ~/.openclaw/googlechat-service-account.json). 5. Create a…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>4. Store the downloaded JSON file on your gateway host (e.g., <code>~/.openclaw/googlechat-service-account.json</code>). 5. Create a Google Chat app in the <a href="https://console.cloud.google.com/apis/api/chat.googleapis.com/hangouts-chat" target="_blank" rel="noreferrer">Google Cloud Console Chat Configuration</a>:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“6. **Enable the app status**:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>6. **Enable the app status**:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“7. 设置说明书ure OpenClaw with the service account path + 小铃铛通知 audience:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>7. Configure OpenClaw with the service account path + webhook audience:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“8. Set the 小铃铛通知 audience type + value (matches your Chat app 设置说明书). 9. Start the 门口的小门卫. Google Chat will POST to you…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>8. Set the webhook audience type + value (matches your Chat app config). 9. Start the gateway. Google Chat will POST to your webhook path.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Quick setup (beginner)”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Go to: Google Chat 对话接口 Credentials、Enable the 对话接口 if it is not already enab…、Press **Create Credentials** &gt; **Service…、Name it whatever you want (e.g., openclaw…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Go to: <a href="https://console.cloud.google.com/apis/api/chat.googleapis.com/credentials" target="_blank" rel="noreferrer">Google Chat API Credentials</a></li><li>Enable the API if it is not already enabled.</li><li>Press **Create Credentials** &gt; **Service Account**.</li><li>Name it whatever you want (e.g., <code>openclaw-chat</code>).</li><li>Leave permissions blank (press **Continue**).</li><li>Leave principals with access blank (press **Done**).</li><li>In the list of service accounts, click on the one you just created.</li><li>Go to the **Keys** tab.</li><li>Click **Add Key** &gt; **Create new key**.</li><li>Select **JSON** and press **Create**.</li><li>Fill in the **Application info**:</li><li>**App name**: (e.g. <code>OpenClaw</code>)</li><li>**Avatar URL**: (e.g. <code>https://openclaw.ai/logo.png</code>)</li><li>**Description**: (e.g. <code>Personal AI Assistant</code>)</li><li>Enable **Interactive features**.</li><li>Under **Functionality**, check **Join spaces and group conversations**.</li><li>Under **Connection settings**, select **HTTP endpoint URL**.</li><li>Under **Triggers**, select **Use a common HTTP endpoint URL for all triggers** and set it to your gateway&#39;s public URL followed by <code>/googlechat</code>.</li><li>*Tip: Run <code>openclaw status</code> to find your gateway&#39;s public URL.*</li><li>Under **Visibility**, check **Make this Chat app available to specific people and groups in \&lt;Your Domain&gt;**.</li><li>Enter your email address (e.g. <code>user@example.com</code>) in the text box.</li><li>Click **Save** at the bottom.</li><li>After saving, **refresh the page**.</li><li>Look for the **App status** section (usually near the top or bottom after saving).</li><li>Change the status to **Live - available to users**.</li><li>Click **Save** again.</li><li>Env: <code>GOOGLE_CHAT_SERVICE_ACCOUNT_FILE=/path/to/service-account.json</code></li><li>Or config: <code>channels.googlechat.serviceAccountFile: &quot;/path/to/service-account.json&quot;</code>.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-3">
-          <div class="section-heading">
-            <p class="section-kicker">第 3 站</p>
-            <h2>Add to Google Chat</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Once the 门口的小门卫 is running and your email is added to the visibility list: 1. Go to Google Chat. 2. Click the **+** (pl…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Once the 门口的小门卫 is running and your email is added to the visibility list:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Once the gateway is running and your email is added to the visibility list:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“1. Go to Google Chat. 2. Click the **+** (plus) icon next to **Direct 小纸条消息s**. 3. In the search bar (where you usually…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>1. Go to <a href="https://chat.google.com/" target="_blank" rel="noreferrer">Google Chat</a>. 2. Click the **+** (plus) icon next to **Direct Messages**. 3. In the search bar (where you usually add people), type the **App name** you configured in the Google Cloud Console.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“4. Select your bot from the results. 5. Click **Add** or **Chat** to start a 1:1 conversation. 6. Send &quot;Hello&quot; to trigg…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>4. Select your bot from the results. 5. Click **Add** or **Chat** to start a 1:1 conversation. 6. Send &quot;Hello&quot; to trigger the assistant!</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Add to Google Chat”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：**Note**: The bot will *not* appear in th…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>**Note**: The bot will *not* appear in the &quot;Marketplace&quot; browse list because it is a private app. You must search for it by name.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-4">
-          <div class="section-heading">
-            <p class="section-kicker">第 4 站</p>
-            <h2>Public URL (小铃铛通知-only)</h2>
-            <p>这一节主要在解释“Public URL (小铃铛通知-only)”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“Public URL (小铃铛通知-only)”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Google Chat 小铃铛通知s require a public HTTPS endpoint. For 安全守门员, **only expose the /googlechat path** to the internet. Ke…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Google Chat 小铃铛通知s require a public HTTPS endpoint. For 安全守门员, **only expose the /googlechat path** to the internet. Ke…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Google Chat webhooks require a public HTTPS endpoint. For security, **only expose the <code>/googlechat</code> path** to the internet. Keep the OpenClaw dashboard and other sensitive endpoints on your private network.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-5">
-          <div class="section-heading">
-            <p class="section-kicker">第 5 站</p>
-            <h2>Option A: Tailscale Funnel (Recommended)</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Use Tailscale Serve for the private dashboard and Funnel for the public 小铃铛通知 path. This keeps / private while exposing…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Use Tailscale Serve for the private dashboard and Funnel for the public 小铃铛通知 path. This keeps / private while exposing…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Use Tailscale Serve for the private dashboard and Funnel for the public webhook path. This keeps <code>/</code> private while exposing only <code>/googlechat</code>.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“1. **Check what address your 门口的小门卫 is bound to:**”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>1. **Check what address your gateway is bound to:**</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>``<code>bash theme={&quot;theme&quot;:{&quot;light&quot;:&quot;min-light&quot;,&quot;dark&quot;:&quot;min-dark&quot;}} ss -tlnp | grep 18789 </code>``</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Note the IP address (e.g., 127.0.0.1, 0.0.0.0, or your Tailscale IP like 100.x.x.x).”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Note the IP address (e.g., <code>127.0.0.1</code>, <code>0.0.0.0</code>, or your Tailscale IP like <code>100.x.x.x</code>).</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“2. **Expose the dashboard to the tailnet only (port 8443):**”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>2. **Expose the dashboard to the tailnet only (port 8443):**</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“```bash theme={&quot;theme&quot;:{&quot;light&quot;:&quot;min-light&quot;,&quot;dark&quot;:&quot;min-dark&quot;}} # If bound to localhost (127.0.0.1 or 0.0.0.0): tailsca…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>```bash theme={&quot;theme&quot;:{&quot;light&quot;:&quot;min-light&quot;,&quot;dark&quot;:&quot;min-dark&quot;}} # If bound to localhost (127.0.0.1 or 0.0.0.0): tailscale serve --bg --https 8443 http://127.0.0.1:18789</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“If bound to Tailscale IP only (e.g., 100.106.161.80): tailscale serve --bg --https 8443 http://100.106.161.80:18789 ```”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p># If bound to Tailscale IP only (e.g., 100.106.161.80): tailscale serve --bg --https 8443 http://100.106.161.80:18789 ```</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“3. **Expose only the 小铃铛通知 path publicly:**”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>3. **Expose only the webhook path publicly:**</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“```bash theme={&quot;theme&quot;:{&quot;light&quot;:&quot;min-light&quot;,&quot;dark&quot;:&quot;min-dark&quot;}} # If bound to localhost (127.0.0.1 or 0.0.0.0): tailsca…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>```bash theme={&quot;theme&quot;:{&quot;light&quot;:&quot;min-light&quot;,&quot;dark&quot;:&quot;min-dark&quot;}} # If bound to localhost (127.0.0.1 or 0.0.0.0): tailscale funnel --bg --set-path /googlechat http://127.0.0.1:18789/googlechat</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“If bound to Tailscale IP only (e.g., 100.106.161.80): tailscale funnel --bg --set-path /googlechat http://100.106.161.8…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p># If bound to Tailscale IP only (e.g., 100.106.161.80): tailscale funnel --bg --set-path /googlechat http://100.106.161.80:18789/googlechat ```</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“4. **Authorize the node for Funnel access:** If prompted, visit the authorization URL shown in the output to enable Fun…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>4. **Authorize the node for Funnel access:** If prompted, visit the authorization URL shown in the output to enable Funnel for this node in your tailnet policy.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“5. **Verify the 设置说明书uration:**”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>5. **Verify the configuration:**</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>``<code>bash theme={&quot;theme&quot;:{&quot;light&quot;:&quot;min-light&quot;,&quot;dark&quot;:&quot;min-dark&quot;}} tailscale serve status tailscale funnel status </code>``</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Your public 小铃铛通知 URL will be: https://&lt;node-name&gt;.&lt;tailnet&gt;.ts.net/googlechat”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Your public webhook URL will be: <code>https://&lt;node-name&gt;.&lt;tailnet&gt;.ts.net/googlechat</code></p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Your private dashboard stays tailnet-only: https://&lt;node-name&gt;.&lt;tailnet&gt;.ts.net:8443/”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Your private dashboard stays tailnet-only: <code>https://&lt;node-name&gt;.&lt;tailnet&gt;.ts.net:8443/</code></p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Use the public URL (without :8443) in the Google Chat app 设置说明书.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Use the public URL (without <code>:8443</code>) in the Google Chat app config.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&gt; Note: This 设置说明书uration persists across reboots. To remove it later, run tailscale funnel reset and tailscale serve r…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>&gt; Note: This configuration persists across reboots. To remove it later, run <code>tailscale funnel reset</code> and <code>tailscale serve reset</code>.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-6">
-          <div class="section-heading">
-            <p class="section-kicker">第 6 站</p>
-            <h2>Option B: Reverse Proxy (Caddy)</h2>
-            <p>这一节主要在解释“Option B: Reverse Proxy (Caddy)”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“Option B: Reverse Proxy (Caddy)”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“If you use a reverse proxy like Caddy, only proxy the specific path: With this 设置说明书, any request to your-domain.com/ w…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“If you use a reverse proxy like Caddy, only proxy the specific path:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>If you use a reverse proxy like Caddy, only proxy the specific path:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段像给机器人看的说明书，告诉它要按什么样子准备东西。</p>
-        <ul class="code-steps">
-          <li>这一行“your-domain.com {”是当前步骤要交给电脑的一小块提示。</li><li>这里在给“reverse_proxy /googlechat* localhost”贴标签，意思是把它设置成“18789”。</li><li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-caddy">your-domain.com {
-    reverse_proxy /googlechat* localhost:18789
-}</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“With this 设置说明书, any request to your-domain.com/ will be ignored or returned as 404, while your-domain.com/googlechat i…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>With this config, any request to <code>your-domain.com/</code> will be ignored or returned as 404, while <code>your-domain.com/googlechat</code> is safely routed to OpenClaw.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-7">
-          <div class="section-heading">
-            <p class="section-kicker">第 7 站</p>
-            <h2>Option C: Cloudflare Tunnel</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“设置说明书ure your tunnel&#39;s ingress rules to only route the 小铃铛通知 path:”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“设置说明书ure your tunnel&#39;s ingress rules to only route the 小铃铛通知 path:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Configure your tunnel&#39;s ingress rules to only route the webhook path:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Option C: Cloudflare Tunnel”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：**Path**: /googlechat -&gt; http://localhost…、**Default Rule**: HTTP 404 (Not Found)。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>**Path**: <code>/googlechat</code> -&gt; <code>http://localhost:18789/googlechat</code></li><li>**Default Rule**: HTTP 404 (Not Found)</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-8">
-          <div class="section-heading">
-            <p class="section-kicker">第 8 站</p>
-            <h2>How it works</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“1. Google Chat sends 小铃铛通知 POSTs to the 门口的小门卫. Each request includes an Authorization: Bearer &lt;token&gt; header. 2. OpenC…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“1. Google Chat sends 小铃铛通知 POSTs to the 门口的小门卫. Each request includes an Authorization: Bearer &lt;token&gt; header.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>1. Google Chat sends webhook POSTs to the gateway. Each request includes an <code>Authorization: Bearer &lt;token&gt;</code> header.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“2. OpenClaw verifies the token against the 设置说明书ured audienceType + audience:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>2. OpenClaw verifies the token against the configured <code>audienceType</code> + <code>audience</code>:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“3. 小纸条消息s are routed by space:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>3. Messages are routed by space:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“4. DM access is pairing by default. Unknown senders receive a pairing code; approve with:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>4. DM access is pairing by default. Unknown senders receive a pairing code; approve with:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“5. 大家一起的房间 spaces require @-mention by default. Use botUser if mention detection needs the app’s user name.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>5. Group spaces require @-mention by default. Use <code>botUser</code> if mention detection needs the app’s user name.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“How it works”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：OpenClaw verifies bearer auth before read…、Google Workspace Add-on requests that car…、audienceType: &quot;app-url&quot; → audience is you…、audienceType: &quot;project-number&quot; → audience…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>OpenClaw verifies bearer auth before reading/parsing full webhook bodies when the header is present.</li><li>Google Workspace Add-on requests that carry <code>authorizationEventObject.systemIdToken</code> in the body are supported via a stricter pre-auth body budget.</li><li><code>audienceType: &quot;app-url&quot;</code> → audience is your HTTPS webhook URL.</li><li><code>audienceType: &quot;project-number&quot;</code> → audience is the Cloud project number.</li><li>DMs use session key <code>agent:&lt;agentId&gt;:googlechat:direct:&lt;spaceId&gt;</code>.</li><li>Spaces use session key <code>agent:&lt;agentId&gt;:googlechat:group:&lt;spaceId&gt;</code>.</li><li><code>openclaw pairing approve googlechat &lt;code&gt;</code></li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-9">
-          <div class="section-heading">
-            <p class="section-kicker">第 9 站</p>
-            <h2>Targets</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Use these identifiers for delivery and allowlists:”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Use these identifiers for delivery and allowlists:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Use these identifiers for delivery and allowlists:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Targets”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Direct 小纸条消息s: users/&lt;userId&gt; (recommende…、Raw email name@example.com is mutable and…、Deprecated: users/&lt;email&gt; is treated as a…、Spaces: spaces/&lt;spaceId&gt;.</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Direct messages: <code>users/&lt;userId&gt;</code> (recommended).</li><li>Raw email <code>name@example.com</code> is mutable and only used for direct allowlist matching when <code>channels.googlechat.dangerouslyAllowNameMatching: true</code>.</li><li>Deprecated: <code>users/&lt;email&gt;</code> is treated as a user id, not an email allowlist.</li><li>Spaces: <code>spaces/&lt;spaceId&gt;</code>.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-10">
-          <div class="section-heading">
-            <p class="section-kicker">第 10 站</p>
-            <h2>设置说明书 highlights</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Notes: Secrets reference details: Secrets Management.”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“channels”贴标签，意思是把它设置成“{”。</li><li>这里在给“googlechat”贴标签，意思是把它设置成“{”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json5">{
-  channels: {
-    googlechat: {
-      enabled: true,
-      serviceAccountFile: &quot;/path/to/service-account.json&quot;,
-      // or serviceAccountRef: { source: &quot;file&quot;, provider: &quot;filemain&quot;, id: &quot;/channels/googlechat/serviceAccount&quot; }
-      audienceType: &quot;app-url&quot;,
-      audience: &quot;https://gateway.example.com/googlechat&quot;,
-      webhookPath: &quot;/googlechat&quot;,
-      botUser: &quot;users/1234567890&quot;, // optional; helps mention detection
-      dm: {
-        policy: &quot;pairing&quot;,
-        allowFrom: [&quot;users/1234567890&quot;],
-      },
-      groupPolicy: &quot;allowlist&quot;,
-      groups: {
-        &quot;spaces/AAAA&quot;: {
-          allow: true,
-          requireMention: true,
-          users: [&quot;users/1234567890&quot;],
-          systemPrompt: &quot;Short answers only.&quot;,
-        },
-      },
-      actions: { reactions: true },
-      typingIndicator: &quot;message&quot;,
-      mediaMaxMb: 20,
-    },
-  },
-}</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Notes:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Notes:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Config highlights”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Service account credentials can also be p…、serviceAccountRef is also supported (env/…、Default 小铃铛通知 path is /googlechat if 小铃铛通…、dangerouslyAllowNameMatching re-enables m…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Service account credentials can also be passed inline with <code>serviceAccount</code> (JSON string).</li><li><code>serviceAccountRef</code> is also supported (env/file SecretRef), including per-account refs under <code>channels.googlechat.accounts.&lt;id&gt;.serviceAccountRef</code>.</li><li>Default webhook path is <code>/googlechat</code> if <code>webhookPath</code> isn’t set.</li><li><code>dangerouslyAllowNameMatching</code> re-enables mutable email principal matching for allowlists (break-glass compatibility mode).</li><li>Reactions are available via the <code>reactions</code> tool and <code>channels action</code> when <code>actions.reactions</code> is enabled.</li><li>Message actions expose <code>send</code> for text and <code>upload-file</code> for explicit attachment sends. <code>upload-file</code> accepts <code>media</code> / <code>filePath</code> / <code>path</code> plus optional <code>message</code>, <code>filename</code>, and thread targeting.</li><li><code>typingIndicator</code> supports <code>none</code>, <code>message</code> (default), and <code>reaction</code> (reaction requires user OAuth).</li><li>Attachments are downloaded through the Chat API and stored in the media pipeline (size capped by <code>mediaMaxMb</code>).</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Secrets reference details: Secrets Management.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Secrets reference details: <a href="/gateway/secrets" target="_blank" rel="noreferrer">Secrets Management</a>.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-11">
-          <div class="section-heading">
-            <p class="section-kicker">第 11 站</p>
-            <h2>405 Method Not Allowed</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“If Google Cloud Logs Explorer shows errors like: This means the 小铃铛通知 handler isn&#39;t registered. Common causes: 1. **消息通…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“If Google Cloud Logs Explorer shows errors like:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>If Google Cloud Logs Explorer shows errors like:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段像给机器人看的说明书，告诉它要按什么样子准备东西。</p>
-        <ul class="code-steps">
-          <li>这里在给“status code”贴标签，意思是把它设置成“405 reason phrase: HTTP error response: HTTP/1.1 405 Method Not Allowed”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-text">status code: 405, reason phrase: HTTP error response: HTTP/1.1 405 Method Not Allowed</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“This means the 小铃铛通知 handler isn&#39;t registered. Common causes:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>This means the webhook handler isn&#39;t registered. Common causes:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“1. **消息通道 not 设置说明书ured**: The 消息通道s.googlechat section is missing from your 设置说明书. Verify with:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>1. **Channel not configured**: The <code>channels.googlechat</code> section is missing from your config. Verify with:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>``<code>bash theme={&quot;theme&quot;:{&quot;light&quot;:&quot;min-light&quot;,&quot;dark&quot;:&quot;min-dark&quot;}} openclaw config get channels.googlechat </code>``</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“If it returns &quot;设置说明书 path not found&quot;, add the 设置说明书uration (see 设置说明书 highlights).”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>If it returns &quot;Config path not found&quot;, add the configuration (see <a href="#config-highlights" target="_blank" rel="noreferrer">Config highlights</a>).</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“2. **新本领插件 not enabled**: Check 新本领插件 status:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>2. **Plugin not enabled**: Check plugin status:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>``<code>bash theme={&quot;theme&quot;:{&quot;light&quot;:&quot;min-light&quot;,&quot;dark&quot;:&quot;min-dark&quot;}} openclaw plugins list | grep googlechat </code>``</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“If it shows &quot;disabled&quot;, add 新本领插件s.entries.googlechat.enabled: true to your 设置说明书.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>If it shows &quot;disabled&quot;, add <code>plugins.entries.googlechat.enabled: true</code> to your config.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“3. **门口的小门卫 not restarted**: After adding 设置说明书, restart the 门口的小门卫:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>3. **Gateway not restarted**: After adding config, restart the gateway:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>``<code>bash theme={&quot;theme&quot;:{&quot;light&quot;:&quot;min-light&quot;,&quot;dark&quot;:&quot;min-dark&quot;}} openclaw gateway restart </code>``</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Verify the 消息通道 is running:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Verify the channel is running:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一句直接对 OpenClaw 说的话，就像对小助手下达任务。</p>
-        <ul class="code-steps">
-          <li>这一句是在直接叫 OpenClaw 做事：“openclaw channels status”。你可以把它想成对机器人说的完整命令。</li><li>这里在给“# Should show”贴标签，意思是把它设置成“Google Chat default: enabled configured ...”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">openclaw channels status
-# Should show: Google Chat default: enabled, configured, ...</code></pre>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-12">
-          <div class="section-heading">
-            <p class="section-kicker">第 12 站</p>
-            <h2>Other issues</h2>
-            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>你理解的是能力边界，不只是功能名字。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Related docs:”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Other issues”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Check openclaw 消息通道s status --probe for a…、If no 小纸条消息s arrive, confirm the Chat app…、If mention gating blocks replies, set bot…、Use openclaw logs --follow while sending…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Check <code>openclaw channels status --probe</code> for auth errors or missing audience config.</li><li>If no messages arrive, confirm the Chat app&#39;s webhook URL + event subscriptions.</li><li>If mention gating blocks replies, set <code>botUser</code> to the app&#39;s user resource name and verify <code>requireMention</code>.</li><li>Use <code>openclaw logs --follow</code> while sending a test message to see if requests reach the gateway.</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Related docs:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Related docs:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Other issues”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：门口的小门卫 设置说明书uration、安全守门员、Reactions。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><a href="/gateway/configuration" target="_blank" rel="noreferrer">Gateway configuration</a></li><li><a href="/gateway/security" target="_blank" rel="noreferrer">Security</a></li><li><a href="/tools/reactions" target="_blank" rel="noreferrer">Reactions</a></li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-    <section class="section-shell">
-      <div class="ad-placeholder">
-        <p>这里预留给未来的 Google AdSense 模块。</p>
-        <code>&lt;!-- ADSENSE_SNIPPET --&gt;</code>
-      </div>
-    </section>
-  
 
       <footer class="page-footer">
         <div>

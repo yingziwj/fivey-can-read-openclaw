@@ -3971,1748 +3971,265 @@
       </div>
 
       
-    <section class="section-shell">
-      <div class="overview-card">
-        <div>
-          <p class="section-kicker">先听这页的人话版</p>
-          <h2>Broadcast Groups</h2>
-          <p>这一页像一本关于“Broadcast 大家一起的房间s”的小绘本，它先告诉我们这位机器人朋友会做什么，再一步一步解释什么时候该这样做。 你可以先把它想成：Broadcast 大家一起的房间s。</p>
-          <p>如果把这页当成“给普通人看的版本”，你最应该带走的是：它到底在教你一件什么事、什么时候要这样做、以及哪里最容易踩坑。</p>
+      <section class="section-shell">
+        <div class="overview-card">
+          <div>
+            <p class="section-kicker">AI 绘本解读版</p>
+            <h2>📢 群聊小分队：让多个AI助手一起工作</h2>
+            <p>就像组建一支超级英雄小队！一个消息发来，所有队员同时出动。每个队员都有自己独特的超能力。</p>
+          </div>
+          <div class="overview-meta">
+            <span>原始路径：/channels/broadcast-groups</span>
+            <span>故事卡片：9 张</span>
+            <a href="https://docs.openclaw.ai/channels/broadcast-groups" target="_blank" rel="noreferrer">查看官方原文</a>
+          </div>
         </div>
-        <div class="overview-meta">
-          <span>原始路径：/channels/broadcast-groups</span>
-          <span>章节数量：31</span>
-          <a href="https://docs.openclaw.ai/channels/broadcast-groups" target="_blank" rel="noreferrer">查看原文</a>
+      </section>
+      
+          <section class="section-shell" id="section-1">
+            <div class="section-heading">
+              <p class="section-kicker">第 1 站</p>
+              <h2>🎯 这是什么？</h2>
+              <p>群聊小分队让多个AI助手一起处理同一个消息。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>这样你就能组建专门的小队，各司其职。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>想象一个开发团队群聊。</li><li>代码审查员、文档机器人、安全检查员同时工作。</li><li>他们都在同一个WhatsApp群里，但各有分工。</li><li>目前只支持WhatsApp这个聊天软件。</li><li>就像门卫先检查，然后小队才出动。</li></ul>
+              </div>
+              
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>一个消息，多个专家一起看。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-2">
+            <div class="section-heading">
+              <p class="section-kicker">第 2 站</p>
+              <h2>🏗️ 怎么组建小队？</h2>
+              <p>告诉系统：在哪个群里，哪些助手要一起工作。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>这是让小队运转起来的魔法配方。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>在配置文件里加一个‘broadcast’区域。</li><li>就像给每个群贴一张队员名单。</li><li>名单的钥匙是群的门牌号。</li><li>群聊用群ID，私聊用电话号码。</li><li>名单的值就是队员的名字列表。</li></ul>
+              </div>
+              
+            <div class="source-card">
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
+              <ul><li>{&quot;broadcast&quot;: {&quot;120363403215116621@g.us&quot;: [&quot;alfred&quot;, &quot;baerbel&quot;, &quot;assistant3&quot;]}} 这行配置就像说：在这个群里，alfred、baerbel、assistant3这三个队员要一起工作。</li></ul>
+            </div>
+          
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>写好名单，小队就位。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-3">
+            <div class="section-heading">
+              <p class="section-kicker">第 3 站</p>
+              <h2>⚡ 怎么工作？并行还是排队？</h2>
+              <p>队员们可以同时干活，也可以一个接一个。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>不同的任务需要不同的配合方式。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>默认是‘并行’模式。</li><li>所有队员像赛跑一样同时开始。</li><li>也可以选‘顺序’模式。</li><li>队员们像接力赛，一个干完下一个再开始。</li><li>在名单里加一个‘strategy’按钮就能切换。</li></ul>
+              </div>
+              
+            <div class="source-card">
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
+              <ul><li>{&quot;strategy&quot;: &quot;parallel&quot;, ...} 这就像按下‘同时开始’的按钮。</li><li>{&quot;strategy&quot;: &quot;sequential&quot;, ...} 这就像按下‘排队接力’的按钮。</li></ul>
+            </div>
+          
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>同时干快，排队干稳。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-4">
+            <div class="section-heading">
+              <p class="section-kicker">第 4 站</p>
+              <h2>🚧 消息怎么流动？</h2>
+              <p>消息来了，系统先检查，再决定谁出动。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>了解流程，就知道小队什么时候会跳出来。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>消息到达WhatsApp群。</li><li>系统检查：这个群在不在小队名单里？</li><li>如果在名单里：名单上的所有队员都处理这个消息。</li><li>每个队员都有自己的小房间和记忆。</li><li>他们按你定的模式（并行或顺序）工作。</li><li>如果不在名单里：就按平常的规则，只有一个助手回应。</li></ul>
+              </div>
+              
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>先查名单，再派队员。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-5">
+            <div class="section-heading">
+              <p class="section-kicker">第 5 站</p>
+              <h2>🧱 队员们独立吗？</h2>
+              <p>每个队员都有自己的小世界，互不干扰。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>这样他们才能专注自己的任务，不会打架。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>每个队员有自己专属的会话钥匙。</li><li>有自己独立的聊天记录。</li><li>有自己的工作台和工具箱。</li><li>可以有不同的性格和技能。</li><li>但他们会看到群里最近同样的聊天背景。</li></ul>
+              </div>
+              
+            <div class="source-card">
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
+              <ul><li>agent:alfred:whatsapp:group:120363... 这是alfred的专属钥匙，别人打不开。</li><li>Tools: read, write, exec 这是alfred的工具箱，里面有什么工具可以自己定。</li></ul>
+            </div>
+          
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>各干各的，共享背景。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-6">
+            <div class="section-heading">
+              <p class="section-kicker">第 6 站</p>
+              <h2>💡 用好小队的秘诀</h2>
+              <p>想让小队高效工作？记住这几个小窍门。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>用对了方法，小队就是你的超级外挂。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>给每个队员一个清晰的小任务。</li><li>起个好听又明白的名字。</li><li>按需分配工具箱，别给太多。</li><li>队员多了可能会慢，注意控制人数。</li><li>一个队员出错，不影响其他队员。</li></ul>
+              </div>
+              
+            <div class="source-card">
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
+              <ul><li>[&quot;formatter&quot;, &quot;linter&quot;, &quot;tester&quot;] 像三个专门队员：整理员、检查员、测试员。</li><li>&quot;tools&quot;: {&quot;allow&quot;: [&quot;read&quot;, &quot;exec&quot;]} 这就像只给这个队员‘读’和‘执行’两把钥匙。</li></ul>
+            </div>
+          
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>专人专事，工具精给。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-7">
+            <div class="section-heading">
+              <p class="section-kicker">第 7 站</p>
+              <h2>🔧 常见问题怎么办？</h2>
+              <p>如果小队不听话，可以这样检查。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>快速找到问题，让小队重新跑起来。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>队员不回应？检查名字写对没，门牌号对不对。</li><li>只有一个队员干活？可能名单没写对。</li><li>速度太慢？试试减少队员，或用轻量级模型。</li><li>可以看系统日志找线索。</li></ul>
+              </div>
+              
+            <div class="source-card">
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
+              <ul><li>tail -f ~/.openclaw/logs/gateway.log | grep broadcast 这行命令就像打开监控屏幕，只看小队活动的记录。</li></ul>
+            </div>
+          
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>对名单，看日志，调配置。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-8">
+            <div class="section-heading">
+              <p class="section-kicker">第 8 站</p>
+              <h2>🚀 看看小队实战！</h2>
+              <p>来看两个活生生的小队例子。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>例子一看，你就知道怎么用了。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>代码审查小队：整理格式、检查安全、生成测试、核对文档，四个专家同时给你反馈。</li><li>多语言支持小队：先检测语言，然后英语翻译员和德语翻译员接力工作。</li></ul>
+              </div>
+              
+            <div class="source-card">
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
+              <ul><li>用户发来代码片段，四个队员同时回应，各说各的专长。</li><li>在私聊里，检测语言队员先工作，然后翻译队员们按顺序接力。</li></ul>
+            </div>
+          
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>例子是最好用的说明书。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-9">
+            <div class="section-heading">
+              <p class="section-kicker">第 9 站</p>
+              <h2>📝 记住这些要点</h2>
+              <p>最后，把最重要的几条记在心里。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>知道边界，用起来更顺手。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>队员太多可能会慢，建议别超过10个。</li><li>队员们看不到彼此的回复（故意设计的）。</li><li>并行回复时，消息到达顺序可能乱。</li><li>所有队员都算在WhatsApp的发送限制里。</li><li>未来可能会有更多好玩的模式。</li></ul>
+              </div>
+              
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>小队强大，但也有小规则。</p>
+              </div>
+            </div>
+          </section>
+        
+      <section class="section-shell">
+        <div class="ad-placeholder">
+          <p>这里预留给未来的 Google AdSense 模块。</p>
+          <code>&lt;!-- ADSENSE_SNIPPET --&gt;</code>
         </div>
-      </div>
-    </section>
+      </section>
     
-        <section class="section-shell" id="section-1">
-          <div class="section-heading">
-            <p class="section-kicker">第 1 站</p>
-            <h2>Start Here</h2>
-            <p>这一节主要在解释“Start Here”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“Start Here”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Broadcast 大家一起的房间s **Status:** Experimental\ **Version:** Added in 2026.1.9”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Broadcast 大家一起的房间s”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p># Broadcast Groups</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“**Status:** Experimental\ **Version:** Added in 2026.1.9”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>**Status:** Experimental\ **Version:** Added in 2026.1.9</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-2">
-          <div class="section-heading">
-            <p class="section-kicker">第 2 站</p>
-            <h2>Overview</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Broadcast 大家一起的房间s enable multiple 机器人朋友s to process and respond to the same 小纸条消息 simultaneously. This allows you to c…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Broadcast 大家一起的房间s enable multiple 机器人朋友s to process and respond to the same 小纸条消息 simultaneously. This allows you to c…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Broadcast Groups enable multiple agents to process and respond to the same message simultaneously. This allows you to create specialized agent teams that work together in a single WhatsApp group or DM — all using one phone number.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Current scope: **WhatsApp only** (web 消息通道).”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Current scope: **WhatsApp only** (web channel).</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Broadcast 大家一起的房间s are evaluated after 消息通道 allowlists and 大家一起的房间 activation rules. In WhatsApp 大家一起的房间s, this means b…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Broadcast groups are evaluated after channel allowlists and group activation rules. In WhatsApp groups, this means broadcasts happen when OpenClaw would normally reply (for example: on mention, depending on your group settings).</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-3">
-          <div class="section-heading">
-            <p class="section-kicker">第 3 站</p>
-            <h2>1. Specialized 机器人朋友 Teams</h2>
-            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>你理解的是能力边界，不只是功能名字。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Deploy multiple 机器人朋友s with atomic, focused responsibilities: Each 机器人朋友 processes the same 小纸条消息 and provides its spec…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Deploy multiple 机器人朋友s with atomic, focused responsibilities:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Deploy multiple agents with atomic, focused responsibilities:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段像给机器人看的说明书，告诉它要按什么样子准备东西。</p>
-        <ul class="code-steps">
-          <li>这里在给“Group”贴标签，意思是把它设置成“Development Team”。</li><li>这里在给“Agents”贴标签，意思是把它设置成“”。</li><li>这一行“- CodeReviewer (reviews code snippets)”是当前步骤要交给电脑的一小块提示。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-text">Group: &quot;Development Team&quot;
-Agents:
-  - CodeReviewer (reviews code snippets)
-  - DocumentationBot (generates docs)
-  - SecurityAuditor (checks for vulnerabilities)
-  - TestGenerator (suggests test cases)</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Each 机器人朋友 processes the same 小纸条消息 and provides its specialized perspective.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Each agent processes the same message and provides its specialized perspective.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-4">
-          <div class="section-heading">
-            <p class="section-kicker">第 4 站</p>
-            <h2>2. Multi-Language Support</h2>
-            <p>这一节主要在解释“2. Multi-Language Support”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“2. Multi-Language Support”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段像给机器人看的说明书，告诉它要按什么样子准备东西。</p>
-        <ul class="code-steps">
-          <li>这里在给“Group”贴标签，意思是把它设置成“International Support”。</li><li>这里在给“Agents”贴标签，意思是把它设置成“”。</li><li>这一行“- Agent_EN (responds in English)”是当前步骤要交给电脑的一小块提示。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-text">Group: &quot;International Support&quot;
-Agents:
-  - Agent_EN (responds in English)
-  - Agent_DE (responds in German)
-  - Agent_ES (responds in Spanish)</code></pre>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-5">
-          <div class="section-heading">
-            <p class="section-kicker">第 5 站</p>
-            <h2>3. Quality Assurance Workflows</h2>
-            <p>这一节主要在解释“3. Quality Assurance Workflows”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“3. Quality Assurance Workflows”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段像给机器人看的说明书，告诉它要按什么样子准备东西。</p>
-        <ul class="code-steps">
-          <li>这里在给“Group”贴标签，意思是把它设置成“Customer Support”。</li><li>这里在给“Agents”贴标签，意思是把它设置成“”。</li><li>这一行“- SupportAgent (provides answer)”是当前步骤要交给电脑的一小块提示。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-text">Group: &quot;Customer Support&quot;
-Agents:
-  - SupportAgent (provides answer)
-  - QAAgent (reviews quality, only responds if issues found)</code></pre>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-6">
-          <div class="section-heading">
-            <p class="section-kicker">第 6 站</p>
-            <h2>4. Task 自动小闹钟</h2>
-            <p>这一节主要在解释“4. Task 自动小闹钟”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“4. Task 自动小闹钟”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段像给机器人看的说明书，告诉它要按什么样子准备东西。</p>
-        <ul class="code-steps">
-          <li>这里在给“Group”贴标签，意思是把它设置成“Project Management”。</li><li>这里在给“Agents”贴标签，意思是把它设置成“”。</li><li>这一行“- TaskTracker (updates task database)”是当前步骤要交给电脑的一小块提示。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-text">Group: &quot;Project Management&quot;
-Agents:
-  - TaskTracker (updates task database)
-  - TimeLogger (logs time spent)
-  - ReportGenerator (creates summaries)</code></pre>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-7">
-          <div class="section-heading">
-            <p class="section-kicker">第 7 站</p>
-            <h2>Basic Setup</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Add a top-level broadcast section (next to bindings). Keys are WhatsApp peer ids: **Result:** When OpenClaw would reply…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Add a top-level broadcast section (next to bindings). Keys are WhatsApp peer ids:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Add a top-level <code>broadcast</code> section (next to <code>bindings</code>). Keys are WhatsApp peer ids:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Basic Setup”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：大家一起的房间 chats: 大家一起的房间 JID (e.g. 12036340…、DMs: E.164 phone number (e.g. +1555123456…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>group chats: group JID (e.g. <code>120363403215116621@g.us</code>)</li><li>DMs: E.164 phone number (e.g. <code>+15551234567</code>)</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“broadcast”贴标签，意思是把它设置成“{”。</li><li>这里在给“120363403215116621@g.us”贴标签，意思是把它设置成“[alfred baerbel assistant3]”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json">{
-  &quot;broadcast&quot;: {
-    &quot;120363403215116621@g.us&quot;: [&quot;alfred&quot;, &quot;baerbel&quot;, &quot;assistant3&quot;]
-  }
-}</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“**Result:** When OpenClaw would reply in this chat, it will run all three 机器人朋友s.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>**Result:** When OpenClaw would reply in this chat, it will run all three agents.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-8">
-          <div class="section-heading">
-            <p class="section-kicker">第 8 站</p>
-            <h2>Processing Strategy</h2>
-            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>你理解的是能力边界，不只是功能名字。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Control how 机器人朋友s process 小纸条消息s:”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Control how 机器人朋友s process 小纸条消息s:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Control how agents process messages:</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-9">
-          <div class="section-heading">
-            <p class="section-kicker">第 9 站</p>
-            <h2>Parallel (Default)</h2>
-            <p>这一节主要在解释“Parallel (Default)”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“Parallel (Default)”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“All 机器人朋友s process simultaneously:”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“All 机器人朋友s process simultaneously:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>All agents process simultaneously:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“broadcast”贴标签，意思是把它设置成“{”。</li><li>这里在给“strategy”贴标签，意思是把它设置成“parallel”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json">{
-  &quot;broadcast&quot;: {
-    &quot;strategy&quot;: &quot;parallel&quot;,
-    &quot;120363403215116621@g.us&quot;: [&quot;alfred&quot;, &quot;baerbel&quot;]
-  }
-}</code></pre>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-10">
-          <div class="section-heading">
-            <p class="section-kicker">第 10 站</p>
-            <h2>Sequential</h2>
-            <p>这一节主要在解释“Sequential”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“Sequential”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“机器人朋友s process in order (one waits for previous to finish):”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“机器人朋友s process in order (one waits for previous to finish):”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Agents process in order (one waits for previous to finish):</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“broadcast”贴标签，意思是把它设置成“{”。</li><li>这里在给“strategy”贴标签，意思是把它设置成“sequential”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json">{
-  &quot;broadcast&quot;: {
-    &quot;strategy&quot;: &quot;sequential&quot;,
-    &quot;120363403215116621@g.us&quot;: [&quot;alfred&quot;, &quot;baerbel&quot;]
-  }
-}</code></pre>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-11">
-          <div class="section-heading">
-            <p class="section-kicker">第 11 站</p>
-            <h2>Complete Example</h2>
-            <p>这一节主要在解释“Complete Example”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“Complete Example”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“agents”贴标签，意思是把它设置成“{”。</li><li>这里在给“list”贴标签，意思是把它设置成“[”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json">{
-  &quot;agents&quot;: {
-    &quot;list&quot;: [
-      {
-        &quot;id&quot;: &quot;code-reviewer&quot;,
-        &quot;name&quot;: &quot;Code Reviewer&quot;,
-        &quot;workspace&quot;: &quot;/path/to/code-reviewer&quot;,
-        &quot;sandbox&quot;: { &quot;mode&quot;: &quot;all&quot; }
-      },
-      {
-        &quot;id&quot;: &quot;security-auditor&quot;,
-        &quot;name&quot;: &quot;Security Auditor&quot;,
-        &quot;workspace&quot;: &quot;/path/to/security-auditor&quot;,
-        &quot;sandbox&quot;: { &quot;mode&quot;: &quot;all&quot; }
-      },
-      {
-        &quot;id&quot;: &quot;docs-generator&quot;,
-        &quot;name&quot;: &quot;Documentation Generator&quot;,
-        &quot;workspace&quot;: &quot;/path/to/docs-generator&quot;,
-        &quot;sandbox&quot;: { &quot;mode&quot;: &quot;all&quot; }
-      }
-    ]
-  },
-  &quot;broadcast&quot;: {
-    &quot;strategy&quot;: &quot;parallel&quot;,
-    &quot;120363403215116621@g.us&quot;: [&quot;code-reviewer&quot;, &quot;security-auditor&quot;, &quot;docs-generator&quot;],
-    &quot;120363424282127706@g.us&quot;: [&quot;support-en&quot;, &quot;support-de&quot;],
-    &quot;+15555550123&quot;: [&quot;assistant&quot;, &quot;logger&quot;]
-  }
-}</code></pre>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-12">
-          <div class="section-heading">
-            <p class="section-kicker">第 12 站</p>
-            <h2>小纸条消息 Flow</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“1. **Incoming 小纸条消息** arrives in a WhatsApp 大家一起的房间 2. **Broadcast check**: System checks if peer ID is in broadcast 3.…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“1. **Incoming 小纸条消息** arrives in a WhatsApp 大家一起的房间 2. **Broadcast check**: System checks if peer ID is in broadcast 3.…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>1. **Incoming message** arrives in a WhatsApp group 2. **Broadcast check**: System checks if peer ID is in <code>broadcast</code> 3. **If in broadcast list**:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“4. **If not in broadcast list**:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>4. **If not in broadcast list**:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Message Flow”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：All listed 机器人朋友s process the 小纸条消息、Each 机器人朋友 has its own session key and is…、机器人朋友s process in parallel (default) or s…、Normal routing applies (first matching bi…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>All listed agents process the message</li><li>Each agent has its own session key and isolated context</li><li>Agents process in parallel (default) or sequentially</li><li>Normal routing applies (first matching binding)</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Note: broadcast 大家一起的房间s do not bypass 消息通道 allowlists or 大家一起的房间 activation rules (mentions/魔法口令s/etc). They only chan…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Note: broadcast groups do not bypass channel allowlists or group activation rules (mentions/commands/etc). They only change *which agents run* when a message is eligible for processing.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-13">
-          <div class="section-heading">
-            <p class="section-kicker">第 13 站</p>
-            <h2>Session Isolation</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Each 机器人朋友 in a broadcast 大家一起的房间 maintains completely separate: This allows each 机器人朋友 to have:”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Each 机器人朋友 in a broadcast 大家一起的房间 maintains completely separate:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Each agent in a broadcast group maintains completely separate:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Session Isolation”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：**Session keys** (机器人朋友:alfred:whatsapp:大…、**Conversation history** (机器人朋友 doesn&#39;t s…、**Workspace** (separate sandboxes if 设置说明…、**工具小帮手 access** (different allow/deny li…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>**Session keys** (<code>agent:alfred:whatsapp:group:120363...</code> vs <code>agent:baerbel:whatsapp:group:120363...</code>)</li><li>**Conversation history** (agent doesn&#39;t see other agents&#39; messages)</li><li>**Workspace** (separate sandboxes if configured)</li><li>**Tool access** (different allow/deny lists)</li><li>**Memory/context** (separate IDENTITY.md, SOUL.md, etc.)</li><li>**Group context buffer** (recent group messages used for context) is shared per peer, so all broadcast agents see the same context when triggered</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“This allows each 机器人朋友 to have:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>This allows each agent to have:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Session Isolation”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Different personalities、Different 工具小帮手 access (e.g., read-only v…、Different 聪明脑袋模型s (e.g., opus vs. sonnet)、Different skills installed。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Different personalities</li><li>Different tool access (e.g., read-only vs. read-write)</li><li>Different models (e.g., opus vs. sonnet)</li><li>Different skills installed</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-14">
-          <div class="section-heading">
-            <p class="section-kicker">第 14 站</p>
-            <h2>Example: Isolated Sessions</h2>
-            <p>这一节主要在解释“Example: Isolated Sessions”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“Example: Isolated Sessions”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“In 大家一起的房间 120363403215116621@g.us with 机器人朋友s [&quot;alfred&quot;, &quot;baerbel&quot;]: **Alfred&#39;s context:** **Bärbel&#39;s context:**”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“In 大家一起的房间 120363403215116621@g.us with 机器人朋友s [&quot;alfred&quot;, &quot;baerbel&quot;]:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>In group <code>120363403215116621@g.us</code> with agents <code>[&quot;alfred&quot;, &quot;baerbel&quot;]</code>:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“**Alfred&#39;s context:**”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>**Alfred&#39;s context:**</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段像给机器人看的说明书，告诉它要按什么样子准备东西。</p>
-        <ul class="code-steps">
-          <li>这里在给“Session”贴标签，意思是把它设置成“agent:alfred:whatsapp:group:120363403215116621@g.us”。</li><li>这里在给“History”贴标签，意思是把它设置成“[user message alfred&#39;s previous responses]”。</li><li>这里在给“Workspace”贴标签，意思是把它设置成“/Users/pascal/openclaw-alfred/”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-text">Session: agent:alfred:whatsapp:group:120363403215116621@g.us
-History: [user message, alfred&#39;s previous responses]
-Workspace: /Users/pascal/openclaw-alfred/
-Tools: read, write, exec</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“**Bärbel&#39;s context:**”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>**Bärbel&#39;s context:**</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段像给机器人看的说明书，告诉它要按什么样子准备东西。</p>
-        <ul class="code-steps">
-          <li>这里在给“Session”贴标签，意思是把它设置成“agent:baerbel:whatsapp:group:120363403215116621@g.us”。</li><li>这里在给“History”贴标签，意思是把它设置成“[user message baerbel&#39;s previous responses]”。</li><li>这里在给“Workspace”贴标签，意思是把它设置成“/Users/pascal/openclaw-baerbel/”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-text">Session: agent:baerbel:whatsapp:group:120363403215116621@g.us
-History: [user message, baerbel&#39;s previous responses]
-Workspace: /Users/pascal/openclaw-baerbel/
-Tools: read only</code></pre>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-15">
-          <div class="section-heading">
-            <p class="section-kicker">第 15 站</p>
-            <h2>1. Keep 机器人朋友s Focused</h2>
-            <p>这一节主要在解释“1. Keep 机器人朋友s Focused”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“1. Keep 机器人朋友s Focused”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Design each 机器人朋友 with a single, clear responsibility: ✅ **Good:** Each 机器人朋友 has one job\ ❌ **Bad:** One generic &quot;dev-…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Design each 机器人朋友 with a single, clear responsibility:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Design each agent with a single, clear responsibility:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“broadcast”贴标签，意思是把它设置成“{”。</li><li>这里在给“DEV_GROUP”贴标签，意思是把它设置成“[formatter linter tester]”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json">{
-  &quot;broadcast&quot;: {
-    &quot;DEV_GROUP&quot;: [&quot;formatter&quot;, &quot;linter&quot;, &quot;tester&quot;]
-  }
-}</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“✅ **Good:** Each 机器人朋友 has one job\ ❌ **Bad:** One generic &quot;dev-helper&quot; 机器人朋友”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>✅ **Good:** Each agent has one job\ ❌ **Bad:** One generic &quot;dev-helper&quot; agent</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-16">
-          <div class="section-heading">
-            <p class="section-kicker">第 16 站</p>
-            <h2>2. Use Descriptive Names</h2>
-            <p>这一节主要在解释“2. Use Descriptive Names”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“2. Use Descriptive Names”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Make it clear what each 机器人朋友 does:”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Make it clear what each 机器人朋友 does:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Make it clear what each agent does:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“agents”贴标签，意思是把它设置成“{”。</li><li>这里在给“security-scanner”贴标签，意思是把它设置成“{ name: Security Scanner }”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json">{
-  &quot;agents&quot;: {
-    &quot;security-scanner&quot;: { &quot;name&quot;: &quot;Security Scanner&quot; },
-    &quot;code-formatter&quot;: { &quot;name&quot;: &quot;Code Formatter&quot; },
-    &quot;test-generator&quot;: { &quot;name&quot;: &quot;Test Generator&quot; }
-  }
-}</code></pre>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-17">
-          <div class="section-heading">
-            <p class="section-kicker">第 17 站</p>
-            <h2>3. 设置说明书ure Different 工具小帮手 Access</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Give 机器人朋友s only the 工具小帮手s they need:”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Give 机器人朋友s only the 工具小帮手s they need:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Give agents only the tools they need:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“agents”贴标签，意思是把它设置成“{”。</li><li>这里在给“reviewer”贴标签，意思是把它设置成“{”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json">{
-  &quot;agents&quot;: {
-    &quot;reviewer&quot;: {
-      &quot;tools&quot;: { &quot;allow&quot;: [&quot;read&quot;, &quot;exec&quot;] } // Read-only
-    },
-    &quot;fixer&quot;: {
-      &quot;tools&quot;: { &quot;allow&quot;: [&quot;read&quot;, &quot;write&quot;, &quot;edit&quot;, &quot;exec&quot;] } // Read-write
-    }
-  }
-}</code></pre>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-18">
-          <div class="section-heading">
-            <p class="section-kicker">第 18 站</p>
-            <h2>4. Monitor Performance</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“With many 机器人朋友s, consider:”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“With many 机器人朋友s, consider:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>With many agents, consider:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“4. Monitor Performance”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Using &quot;strategy&quot;: &quot;parallel&quot; (default) fo…、Limiting broadcast 大家一起的房间s to 5-10 机器人朋友s、Using faster 聪明脑袋模型s for simpler 机器人朋友s。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Using <code>&quot;strategy&quot;: &quot;parallel&quot;</code> (default) for speed</li><li>Limiting broadcast groups to 5-10 agents</li><li>Using faster models for simpler agents</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-19">
-          <div class="section-heading">
-            <p class="section-kicker">第 19 站</p>
-            <h2>5. Handle Failures Gracefully</h2>
-            <p>这一节主要在解释“5. Handle Failures Gracefully”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“5. Handle Failures Gracefully”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“机器人朋友s fail independently. One 机器人朋友&#39;s error doesn&#39;t block others:”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“机器人朋友s fail independently. One 机器人朋友&#39;s error doesn&#39;t block others:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Agents fail independently. One agent&#39;s error doesn&#39;t block others:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段像给机器人看的说明书，告诉它要按什么样子准备东西。</p>
-        <ul class="code-steps">
-          <li>这一行“Message → [Agent A ✓, Agent B ✗ error, Agent C ✓]”是当前步骤要交给电脑的一小块提示。</li><li>这里在给“Result”贴标签，意思是把它设置成“Agent A and C respond Agent B logs error”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-text">Message → [Agent A ✓, Agent B ✗ error, Agent C ✓]
-Result: Agent A and C respond, Agent B logs error</code></pre>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-20">
-          <div class="section-heading">
-            <p class="section-kicker">第 20 站</p>
-            <h2>Providers</h2>
-            <p>这一节主要在解释“Providers”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“Providers”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Broadcast 大家一起的房间s currently work with:”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Broadcast 大家一起的房间s currently work with:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Broadcast groups currently work with:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Providers”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：✅ WhatsApp (implemented)、🚧 Telegram (planned)、🚧 Discord (planned)、🚧 Slack (planned)。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>✅ WhatsApp (implemented)</li><li>🚧 Telegram (planned)</li><li>🚧 Discord (planned)</li><li>🚧 Slack (planned)</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-21">
-          <div class="section-heading">
-            <p class="section-kicker">第 21 站</p>
-            <h2>Routing</h2>
-            <p>这一节主要在解释“Routing”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“Routing”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Broadcast 大家一起的房间s work alongside existing routing: **Precedence:** broadcast takes priority over bindings.”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Broadcast 大家一起的房间s work alongside existing routing:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Broadcast groups work alongside existing routing:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“bindings”贴标签，意思是把它设置成“[”。</li><li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json">{
-  &quot;bindings&quot;: [
-    {
-      &quot;match&quot;: { &quot;channel&quot;: &quot;whatsapp&quot;, &quot;peer&quot;: { &quot;kind&quot;: &quot;group&quot;, &quot;id&quot;: &quot;GROUP_A&quot; } },
-      &quot;agentId&quot;: &quot;alfred&quot;
-    }
-  ],
-  &quot;broadcast&quot;: {
-    &quot;GROUP_B&quot;: [&quot;agent1&quot;, &quot;agent2&quot;]
-  }
-}</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Routing”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：大家一起的房间_A: Only alfred responds (normal r…、大家一起的房间_B: 机器人朋友1 AND 机器人朋友2 respond (bro…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>GROUP_A</code>: Only alfred responds (normal routing)</li><li><code>GROUP_B</code>: agent1 AND agent2 respond (broadcast)</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“**Precedence:** broadcast takes priority over bindings.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>**Precedence:** <code>broadcast</code> takes priority over <code>bindings</code>.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-22">
-          <div class="section-heading">
-            <p class="section-kicker">第 22 站</p>
-            <h2>机器人朋友s Not Responding</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“**Check:** 1. 机器人朋友 IDs exist in 机器人朋友s.list 2. Peer ID format is correct (e.g., 120363403215116621@g.us) 3. 机器人朋友s are…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“**Check:**”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>**Check:**</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“1. 机器人朋友 IDs exist in 机器人朋友s.list 2. Peer ID format is correct (e.g., 120363403215116621@g.us) 3. 机器人朋友s are not in den…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>1. Agent IDs exist in <code>agents.list</code> 2. Peer ID format is correct (e.g., <code>120363403215116621@g.us</code>) 3. Agents are not in deny lists</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“**Debug:**”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>**Debug:**</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一串终端魔法口令，像按步骤按下几个按钮，让电脑开始干活。</p>
-        <ul class="code-steps">
-          <li>这一行“tail -f ~/.openclaw/logs/gateway.log | grep broadcast”是当前步骤要交给电脑的一小块提示。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">tail -f ~/.openclaw/logs/gateway.log | grep broadcast</code></pre>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-23">
-          <div class="section-heading">
-            <p class="section-kicker">第 23 站</p>
-            <h2>Only One 机器人朋友 Responding</h2>
-            <p>这一节主要在解释“Only One 机器人朋友 Responding”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“Only One 机器人朋友 Responding”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“**Cause:** Peer ID might be in bindings but not broadcast. **Fix:** Add to broadcast 设置说明书 or remove from bindings.”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“**Cause:** Peer ID might be in bindings but not broadcast.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>**Cause:** Peer ID might be in <code>bindings</code> but not <code>broadcast</code>.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“**Fix:** Add to broadcast 设置说明书 or remove from bindings.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>**Fix:** Add to broadcast config or remove from bindings.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-24">
-          <div class="section-heading">
-            <p class="section-kicker">第 24 站</p>
-            <h2>Performance Issues</h2>
-            <p>这一节主要在解释“Performance Issues”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“Performance Issues”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“**If slow with many 机器人朋友s:**”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“**If slow with many 机器人朋友s:**”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>**If slow with many agents:**</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Performance Issues”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Reduce number of 机器人朋友s per 大家一起的房间、Use lighter 聪明脑袋模型s (sonnet instead of op…、Check sandbox startup time。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Reduce number of agents per group</li><li>Use lighter models (sonnet instead of opus)</li><li>Check sandbox startup time</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-25">
-          <div class="section-heading">
-            <p class="section-kicker">第 25 站</p>
-            <h2>Example 1: Code Review Team</h2>
-            <p>这一节主要在解释“Example 1: Code Review Team”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“Example 1: Code Review Team”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“**User sends:** Code snippet\ **Responses:**”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“broadcast”贴标签，意思是把它设置成“{”。</li><li>这里在给“strategy”贴标签，意思是把它设置成“parallel”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json">{
-  &quot;broadcast&quot;: {
-    &quot;strategy&quot;: &quot;parallel&quot;,
-    &quot;120363403215116621@g.us&quot;: [
-      &quot;code-formatter&quot;,
-      &quot;security-scanner&quot;,
-      &quot;test-coverage&quot;,
-      &quot;docs-checker&quot;
-    ]
-  },
-  &quot;agents&quot;: {
-    &quot;list&quot;: [
-      {
-        &quot;id&quot;: &quot;code-formatter&quot;,
-        &quot;workspace&quot;: &quot;~/agents/formatter&quot;,
-        &quot;tools&quot;: { &quot;allow&quot;: [&quot;read&quot;, &quot;write&quot;] }
-      },
-      {
-        &quot;id&quot;: &quot;security-scanner&quot;,
-        &quot;workspace&quot;: &quot;~/agents/security&quot;,
-        &quot;tools&quot;: { &quot;allow&quot;: [&quot;read&quot;, &quot;exec&quot;] }
-      },
-      {
-        &quot;id&quot;: &quot;test-coverage&quot;,
-        &quot;workspace&quot;: &quot;~/agents/testing&quot;,
-        &quot;tools&quot;: { &quot;allow&quot;: [&quot;read&quot;, &quot;exec&quot;] }
-      },
-      { &quot;id&quot;: &quot;docs-checker&quot;, &quot;workspace&quot;: &quot;~/agents/docs&quot;, &quot;tools&quot;: { &quot;allow&quot;: [&quot;read&quot;] } }
-    ]
-  }
-}</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“**User sends:** Code snippet\ **Responses:**”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>**User sends:** Code snippet\ **Responses:**</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Example 1: Code Review Team”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：code-formatter: &quot;Fixed indentation and ad…、安全守门员-scanner: &quot;⚠️ SQL injection vulnerab…、test-coverage: &quot;Coverage is 45%, missing…、docs-checker: &quot;Missing docstring for func…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>code-formatter: &quot;Fixed indentation and added type hints&quot;</li><li>security-scanner: &quot;⚠️ SQL injection vulnerability in line 12&quot;</li><li>test-coverage: &quot;Coverage is 45%, missing tests for error cases&quot;</li><li>docs-checker: &quot;Missing docstring for function <code>process_data</code>&quot;</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-26">
-          <div class="section-heading">
-            <p class="section-kicker">第 26 站</p>
-            <h2>Example 2: Multi-Language Support</h2>
-            <p>这一节主要在解释“Example 2: Multi-Language Support”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“Example 2: Multi-Language Support”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“broadcast”贴标签，意思是把它设置成“{”。</li><li>这里在给“strategy”贴标签，意思是把它设置成“sequential”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json">{
-  &quot;broadcast&quot;: {
-    &quot;strategy&quot;: &quot;sequential&quot;,
-    &quot;+15555550123&quot;: [&quot;detect-language&quot;, &quot;translator-en&quot;, &quot;translator-de&quot;]
-  },
-  &quot;agents&quot;: {
-    &quot;list&quot;: [
-      { &quot;id&quot;: &quot;detect-language&quot;, &quot;workspace&quot;: &quot;~/agents/lang-detect&quot; },
-      { &quot;id&quot;: &quot;translator-en&quot;, &quot;workspace&quot;: &quot;~/agents/translate-en&quot; },
-      { &quot;id&quot;: &quot;translator-de&quot;, &quot;workspace&quot;: &quot;~/agents/translate-de&quot; }
-    ]
-  }
-}</code></pre>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-27">
-          <div class="section-heading">
-            <p class="section-kicker">第 27 站</p>
-            <h2>设置说明书 Schema</h2>
-            <p>这一节主要在解释“设置说明书 Schema”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“设置说明书 Schema”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段像给机器人看的说明书，告诉它要按什么样子准备东西。</p>
-        <ul class="code-steps">
-          <li>这一行“interface OpenClawConfig {”是当前步骤要交给电脑的一小块提示。</li><li>这里在给“broadcast?”贴标签，意思是把它设置成“{”。</li><li>这里在给“strategy?”贴标签，意思是把它设置成“parallel | sequential;”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-typescript">interface OpenClawConfig {
-  broadcast?: {
-    strategy?: &quot;parallel&quot; | &quot;sequential&quot;;
-    [peerId: string]: string[];
-  };
-}</code></pre>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-28">
-          <div class="section-heading">
-            <p class="section-kicker">第 28 站</p>
-            <h2>Fields</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Fields”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：strategy (optional): How to process 机器人朋友s、&quot;parallel&quot; (default): All 机器人朋友s process…、&quot;sequential&quot;: 机器人朋友s process in array ord…、[peerId]: WhatsApp 大家一起的房间 JID, E.164 num…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>strategy</code> (optional): How to process agents</li><li><code>&quot;parallel&quot;</code> (default): All agents process simultaneously</li><li><code>&quot;sequential&quot;</code>: Agents process in array order</li><li><code>[peerId]</code>: WhatsApp group JID, E.164 number, or other peer ID</li><li>Value: Array of agent IDs that should process messages</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-29">
-          <div class="section-heading">
-            <p class="section-kicker">第 29 站</p>
-            <h2>Limitations</h2>
-            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>你理解的是能力边界，不只是功能名字。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“1. **Max 机器人朋友s:** No hard limit, but 10+ 机器人朋友s may be slow 2. **Shared context:** 机器人朋友s don&#39;t see each other&#39;s respo…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“1. **Max 机器人朋友s:** No hard limit, but 10+ 机器人朋友s may be slow 2. **Shared context:** 机器人朋友s don&#39;t see each other&#39;s respo…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>1. **Max agents:** No hard limit, but 10+ agents may be slow 2. **Shared context:** Agents don&#39;t see each other&#39;s responses (by design) 3. **Message ordering:** Parallel responses may arrive in any order 4. **Rate limits:** All agents count toward WhatsApp rate limits</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-30">
-          <div class="section-heading">
-            <p class="section-kicker">第 30 站</p>
-            <h2>Future Enhancements</h2>
-            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>你理解的是能力边界，不只是功能名字。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Planned features:”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Planned features:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Planned features:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Future Enhancements”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：[ ] Shared context mode (机器人朋友s see each…、[ ] 机器人朋友 coordination (机器人朋友s can signal…、[ ] Dynamic 机器人朋友 selection (choose 机器人朋友…、[ ] 机器人朋友 priorities (some 机器人朋友s respond…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>[ ] Shared context mode (agents see each other&#39;s responses)</li><li>[ ] Agent coordination (agents can signal each other)</li><li>[ ] Dynamic agent selection (choose agents based on message content)</li><li>[ ] Agent priorities (some agents respond before others)</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-31">
-          <div class="section-heading">
-            <p class="section-kicker">第 31 站</p>
-            <h2>See Also</h2>
-            <p>这一节主要在解释“See Also”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“See Also”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“See Also”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Multi-机器人朋友 设置说明书uration、Routing 设置说明书uration、Session Management。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><a href="/tools/multi-agent-sandbox-tools" target="_blank" rel="noreferrer">Multi-Agent Configuration</a></li><li><a href="/channels/channel-routing" target="_blank" rel="noreferrer">Routing Configuration</a></li><li><a href="/concepts/session" target="_blank" rel="noreferrer">Session Management</a></li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-    <section class="section-shell">
-      <div class="ad-placeholder">
-        <p>这里预留给未来的 Google AdSense 模块。</p>
-        <code>&lt;!-- ADSENSE_SNIPPET --&gt;</code>
-      </div>
-    </section>
-  
 
       <footer class="page-footer">
         <div>

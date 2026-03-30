@@ -3971,1264 +3971,339 @@
       </div>
 
       
-    <section class="section-shell">
-      <div class="overview-card">
-        <div>
-          <p class="section-kicker">先听这页的人话版</p>
-          <h2>Signal</h2>
-          <p>这一页像一本关于“Signal”的小绘本，它先告诉我们这位机器人朋友会做什么，再一步一步解释什么时候该这样做。 你可以先把它想成：Signal (signal-cli)。</p>
-          <p>如果把这页当成“给普通人看的版本”，你最应该带走的是：它到底在教你一件什么事、什么时候要这样做、以及哪里最容易踩坑。</p>
+      <section class="section-shell">
+        <div class="overview-card">
+          <div>
+            <p class="section-kicker">AI 绘本解读版</p>
+            <h2>🤖 给机器人一个Signal号码</h2>
+            <p>让机器人也能用Signal聊天。就像给机器人配一部专属手机。需要先准备好一个号码和一个小帮手程序。</p>
+          </div>
+          <div class="overview-meta">
+            <span>原始路径：/channels/signal</span>
+            <span>故事卡片：12 张</span>
+            <a href="https://docs.openclaw.ai/channels/signal" target="_blank" rel="noreferrer">查看官方原文</a>
+          </div>
         </div>
-        <div class="overview-meta">
-          <span>原始路径：/channels/signal</span>
-          <span>章节数量：18</span>
-          <a href="https://docs.openclaw.ai/channels/signal" target="_blank" rel="noreferrer">查看原文</a>
+      </section>
+      
+          <section class="section-shell" id="section-1">
+            <div class="section-heading">
+              <p class="section-kicker">第 1 站</p>
+              <h2>📦 准备你的工具箱</h2>
+              <p>在开始之前，你需要准备好几样东西。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>没有它们，机器人就没法在Signal上安家。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>一台已经装好OpenClaw的服务器。</li><li>一个叫`signal-cli`的小帮手程序。</li><li>一个能接收短信的手机号码。</li><li>一个能上网的浏览器，用来通过验证码。</li></ul>
+              </div>
+              
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>万事俱备，才能开工。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-2">
+            <div class="section-heading">
+              <p class="section-kicker">第 2 站</p>
+              <h2>🚀 快速上手</h2>
+              <p>给机器人一个专属的Signal号码，然后连接起来。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>这是让机器人开始工作的最快方法。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>最好给机器人一个单独的号码，别用你自己的。</li><li>安装好`signal-cli`这个小帮手。</li><li>你有两条路可以选：A路是扫码连接，B路是用新号码注册。</li><li>然后告诉OpenClaw机器人的号码，再重启一下。</li><li>第一次有人发消息，需要你批准一下配对。</li></ul>
+              </div>
+              
+            <div class="source-card">
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
+              <ul><li>`openclaw pairing approve signal &lt;CODE&gt;` 这行命令就像在说：&#39;我认识这个人，让他进来吧。&#39;</li></ul>
+            </div>
+          
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>选条路，配好号码，机器人就能上线了。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-3">
+            <div class="section-heading">
+              <p class="section-kicker">第 3 站</p>
+              <h2>🔑 机器人怎么用Signal</h2>
+              <p>机器人不是直接和Signal说话，它有个小帮手。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>了解这个，你就知道消息是怎么跑来跑去的了。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>机器人通过`signal-cli`这个小帮手和Signal联系。</li><li>就像派信使去送信和收信。</li><li>机器人回复消息时，信一定会原路返回。</li><li>私聊时，机器人用它的主身份。</li><li>群聊时，每个群就像一个小隔间，是分开的。</li></ul>
+              </div>
+              
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>机器人有个信使，专门负责跑腿送信。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-4">
+            <div class="section-heading">
+              <p class="section-kicker">第 4 站</p>
+              <h2>📝 机器人能改规则吗？</h2>
+              <p>默认情况下，机器人可以从Signal收到命令来修改一些设置。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>这样你就能远程调整机器人了，但也可以关掉这个功能。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>机器人默认允许通过Signal消息来修改配置。</li><li>这需要先打开一个叫`commands.config`的总开关。</li><li>如果你不想让机器人被这样遥控，可以关掉这个功能。</li></ul>
+              </div>
+              
+            <div class="source-card">
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
+              <ul><li>在配置里写上 `configWrites: false`，就像给这个遥控功能上了把锁。</li></ul>
+            </div>
+          
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>机器人可以被遥控，但钥匙在你手里。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-5">
+            <div class="section-heading">
+              <p class="section-kicker">第 5 站</p>
+              <h2>📱 号码很重要！</h2>
+              <p>机器人连接的是一个Signal设备，不是你的个人账户。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>用错号码，机器人可能不理你，或者出乱子。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>机器人连接的是`signal-cli`这个设备账户。</li><li>如果你用自己的个人号码，机器人可能会忽略你自己的消息，这是为了防止它自己跟自己说话。</li><li>想让机器人回复你？最好给它一个单独的号码。</li></ul>
+              </div>
+              
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>给机器人一个它自己的专属号码。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-6">
+            <div class="section-heading">
+              <p class="section-kicker">第 6 站</p>
+              <h2>🅰️ 上路A：扫码连接</h2>
+              <p>如果你已经有一个Signal账户，可以用扫码的方式让机器人加入。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>就像给机器人配一把你家的钥匙。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>先安装好`signal-cli`小帮手。</li><li>运行一个命令，它会显示一个二维码。</li><li>用你手机上的Signal App扫这个码。</li><li>然后告诉OpenClaw机器人的号码，再启动它。</li></ul>
+              </div>
+              
+            <div class="source-card">
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
+              <ul><li>`signal-cli link -n &quot;OpenClaw&quot;` 这行命令就像在说：&#39;生成一把新钥匙，名字叫OpenClaw。&#39;</li><li>用手机扫码，就像把钥匙复制到机器人的信使手里。</li></ul>
+            </div>
+          
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>扫个码，机器人就能用你现有的Signal账户了。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-7">
+            <div class="section-heading">
+              <p class="section-kicker">第 7 站</p>
+              <h2>🅱️ 上路B：注册新号码</h2>
+              <p>给机器人申请一个全新的、只属于它的Signal号码。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>这样最干净，不会和你自己的聊天混在一起。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>找一个能收短信的手机号码（或者能接验证电话的座机号）。</li><li>在服务器上安装`signal-cli`小帮手。</li><li>运行注册命令，输入号码，完成验证码和短信验证。</li><li>这个号码就专属于机器人了。</li></ul>
+              </div>
+              
+            <div class="source-card">
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
+              <ul><li>`signal-cli -a +&lt;号码&gt; register` 这行命令就像在说：&#39;去Signal那里，用这个号码开个新户头。&#39;</li><li>你会收到验证码和短信，就像去银行开户要填表一样。</li></ul>
+            </div>
+          
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>给机器人办个全新的Signal手机号。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-8">
+            <div class="section-heading">
+              <p class="section-kicker">第 8 站</p>
+              <h2>👮 谁可以和机器人聊天？</h2>
+              <p>你可以设定规则，决定谁能私聊机器人，谁能@机器人。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>就像给机器人的家门和微信群设门卫。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>私聊默认是&#39;配对模式&#39;：陌生人发消息会得到一个配对码，等你批准后才能聊天。</li><li>你可以设置一个&#39;允许名单&#39;，只让名单上的人直接私聊。</li><li>也可以完全&#39;打开&#39;或&#39;关闭&#39;私聊。</li><li>群聊里，可以设定是否需要@机器人它才理你。</li><li>也可以为每个群单独定规则。</li></ul>
+              </div>
+              
+            <div class="source-card">
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
+              <ul><li>`openclaw pairing approve signal &lt;CODE&gt;` 这行命令就像门卫在说：&#39;这个配对码的人我认识，放行！&#39;</li><li>在配置里写`allowFrom: [&quot;+123...&quot;]`，就像在门卫的名单上加名字。</li></ul>
+            </div>
+          
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>私聊要批准，群聊可设@规则。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-9">
+            <div class="section-heading">
+              <p class="section-kicker">第 9 站</p>
+              <h2>🔧 高级设置：自己管信使</h2>
+              <p>如果你不想让OpenClaw自动启动`signal-cli`，可以自己管理它。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>这样启动更快，或者更方便你在容器里运行。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>你可以自己把`signal-cli`当成一个常驻服务运行起来。</li><li>然后告诉OpenClaw这个服务在哪。</li><li>OpenClaw就不会自己再去启动它了。</li></ul>
+              </div>
+              
+            <div class="source-card">
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
+              <ul><li>在配置里写上 `httpUrl: &quot;http://127.0.0.1:8080&quot;` 和 `autoStart: false`，就像告诉OpenClaw：&#39;信使已经在8080港口待命了，你不用再叫它。&#39;</li></ul>
+            </div>
+          
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>自己养信使，告诉机器人去哪找它。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-10">
+            <div class="section-heading">
+              <p class="section-kicker">第 10 站</p>
+              <h2>📨 消息怎么送？</h2>
+              <p>告诉机器人，把消息送到哪个号码、哪个群。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>这样你就能指挥机器人给特定的人或群发消息了。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>给个人发私聊：就用手机号码，比如`signal:+15551234567`。</li><li>如果只知道对方的UUID（一种内部ID），就用`uuid:&lt;id&gt;`。</li><li>给群发消息：用`signal:group:&lt;群ID&gt;`。</li><li>如果对方有用户名（不一定支持），也可以用`username:&lt;名字&gt;`。</li></ul>
+              </div>
+              
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>发消息时，要写清楚收信人的&#39;门牌号&#39;。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-11">
+            <div class="section-heading">
+              <p class="section-kicker">第 11 站</p>
+              <h2>🚨 出问题了怎么办？</h2>
+              <p>机器人不工作了？按顺序检查这几步。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>一步步来，最容易找到问题在哪。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>先看看OpenClaw和各个部分的状态是否正常。</li><li>看看日志里有没有报错信息。</li><li>运行一下&#39;医生&#39;命令，它能自动检查并修复一些常见问题。</li><li>检查一下Signal通道的状态。</li><li>看看是不是有私聊在等待配对批准。</li></ul>
+              </div>
+              
+            <div class="source-card">
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
+              <ul><li>`openclaw doctor` 这行命令就像叫来一个机器人医生，给它做个体检。</li><li>`openclaw pairing list signal` 这行命令就像查看&#39;等待批准访客&#39;的名单。</li></ul>
+            </div>
+          
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>先看状态和日志，再用&#39;医生&#39;查查。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-12">
+            <div class="section-heading">
+              <p class="section-kicker">第 12 站</p>
+              <h2>🔒 安全小贴士</h2>
+              <p>保护好机器人的Signal账户和你的服务器。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>安全第一，别让机器人丢了钥匙。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>`signal-cli`会把账户的钥匙存在本地电脑上。</li><li>搬家或重装服务器前，记得备份这些钥匙。</li><li>尽量保持私聊为&#39;配对模式&#39;，这样更安全。</li><li>保管好注册用的手机号，丢了会有点麻烦。</li></ul>
+              </div>
+              
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>备份钥匙，用好配对模式。</p>
+              </div>
+            </div>
+          </section>
+        
+      <section class="section-shell">
+        <div class="ad-placeholder">
+          <p>这里预留给未来的 Google AdSense 模块。</p>
+          <code>&lt;!-- ADSENSE_SNIPPET --&gt;</code>
         </div>
-      </div>
-    </section>
+      </section>
     
-        <section class="section-shell" id="section-1">
-          <div class="section-heading">
-            <p class="section-kicker">第 1 站</p>
-            <h2>Start Here</h2>
-            <p>这一节主要在解释“Start Here”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“Start Here”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Signal (signal-cli) Status: external CLI integration. 门口的小门卫 talks to signal-cli over HTTP JSON-RPC + SSE.”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Signal (signal-cli)”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p># Signal (signal-cli)</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Status: external CLI integration. 门口的小门卫 talks to signal-cli over HTTP JSON-RPC + SSE.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Status: external CLI integration. Gateway talks to <code>signal-cli</code> over HTTP JSON-RPC + SSE.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-2">
-          <div class="section-heading">
-            <p class="section-kicker">第 2 站</p>
-            <h2>Prerequisites</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Prerequisites”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：OpenClaw installed on your 大房子服务器 (Linux…、signal-cli available on the host where th…、A phone number that can receive one verif…、Browser access for Signal captcha (signal…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>OpenClaw installed on your server (Linux flow below tested on Ubuntu 24).</li><li><code>signal-cli</code> available on the host where the gateway runs.</li><li>A phone number that can receive one verification SMS (for SMS registration path).</li><li>Browser access for Signal captcha (<code>signalcaptchas.org</code>) during registration.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-3">
-          <div class="section-heading">
-            <p class="section-kicker">第 3 站</p>
-            <h2>Quick setup (beginner)</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“1. Use a **separate Signal number** for the bot (recommended). 2. Install signal-cli (Java required if you use the JVM…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“1. Use a **separate Signal number** for the bot (recommended). 2. Install signal-cli (Java required if you use the JVM…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>1. Use a **separate Signal number** for the bot (recommended). 2. Install <code>signal-cli</code> (Java required if you use the JVM build). 3. Choose one setup path:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“4. 设置说明书ure OpenClaw and restart the 门口的小门卫. 5. Send a first DM and approve pairing (openclaw pairing approve signal &lt;C…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>4. Configure OpenClaw and restart the gateway. 5. Send a first DM and approve pairing (<code>openclaw pairing approve signal &lt;CODE&gt;</code>).</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Quick setup (beginner)”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：**Path A (QR link):** signal-cli link -n…、**Path B (SMS register):** register a ded…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>**Path A (QR link):** <code>signal-cli link -n &quot;OpenClaw&quot;</code> and scan with Signal.</li><li>**Path B (SMS register):** register a dedicated number with captcha + SMS verification.</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Minimal 设置说明书:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Minimal config:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“channels”贴标签，意思是把它设置成“{”。</li><li>这里在给“signal”贴标签，意思是把它设置成“{”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json5">{
-  channels: {
-    signal: {
-      enabled: true,
-      account: &quot;+15551234567&quot;,
-      cliPath: &quot;signal-cli&quot;,
-      dmPolicy: &quot;pairing&quot;,
-      allowFrom: [&quot;+15557654321&quot;],
-    },
-  },
-}</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Field reference:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Field reference:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Field Description ----------- ------------------------------------------------- account Bot phone number in E.164 forma…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>| Field | Description | | ----------- | ------------------------------------------------- | | <code>account</code> | Bot phone number in E.164 format (<code>+15551234567</code>) | | <code>cliPath</code> | Path to <code>signal-cli</code> (<code>signal-cli</code> if on <code>PATH</code>) | | <code>dmPolicy</code> | DM access policy (<code>pairing</code> recommended) | | <code>allowFrom</code> | Phone numbers or <code>uuid:&lt;id&gt;</code> values allowed to DM |</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-4">
-          <div class="section-heading">
-            <p class="section-kicker">第 4 站</p>
-            <h2>What it is</h2>
-            <p>这一节主要在解释“What it is”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“What it is”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“What it is”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Signal 消息通道 via signal-cli (not embedded…、Deterministic routing: replies always go…、DMs share the 机器人朋友&#39;s main session; 大家一起的…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Signal channel via <code>signal-cli</code> (not embedded libsignal).</li><li>Deterministic routing: replies always go back to Signal.</li><li>DMs share the agent&#39;s main session; groups are isolated (<code>agent:&lt;agentId&gt;:signal:group:&lt;groupId&gt;</code>).</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-5">
-          <div class="section-heading">
-            <p class="section-kicker">第 5 站</p>
-            <h2>设置说明书 writes</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“By default, Signal is allowed to write 设置说明书 updates triggered by /设置说明书 set unset (requires 魔法口令s.设置说明书: true). Disabl…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“By default, Signal is allowed to write 设置说明书 updates triggered by /设置说明书 set unset (requires 魔法口令s.设置说明书: true).”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>By default, Signal is allowed to write config updates triggered by <code>/config set|unset</code> (requires <code>commands.config: true</code>).</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Disable with:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Disable with:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“channels”贴标签，意思是把它设置成“{ signal: { configWrites: false } }”。</li><li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json5">{
-  channels: { signal: { configWrites: false } },
-}</code></pre>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-6">
-          <div class="section-heading">
-            <p class="section-kicker">第 6 站</p>
-            <h2>The number 聪明脑袋模型 (important)</h2>
-            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>你理解的是能力边界，不只是功能名字。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“The number model (important)”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：The 门口的小门卫 connects to a **Signal device*…、If you run the bot on **your personal Sig…、For &quot;I text the bot and it replies,&quot; use…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>The gateway connects to a **Signal device** (the <code>signal-cli</code> account).</li><li>If you run the bot on **your personal Signal account**, it will ignore your own messages (loop protection).</li><li>For &quot;I text the bot and it replies,&quot; use a **separate bot number**.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-7">
-          <div class="section-heading">
-            <p class="section-kicker">第 7 站</p>
-            <h2>Setup path A: link existing Signal account (QR)</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“1. Install signal-cli (JVM or native build). 2. Link a bot account: 3. 设置说明书ure Signal and start the 门口的小门卫. Example: M…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“1. Install signal-cli (JVM or native build). 2. Link a bot account:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>1. Install <code>signal-cli</code> (JVM or native build). 2. Link a bot account:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“3. 设置说明书ure Signal and start the 门口的小门卫.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>3. Configure Signal and start the gateway.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Setup path A: link existing Signal account (QR)”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：signal-cli link -n &quot;OpenClaw&quot; then scan t…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>signal-cli link -n &quot;OpenClaw&quot;</code> then scan the QR in Signal.</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Example:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Example:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“channels”贴标签，意思是把它设置成“{”。</li><li>这里在给“signal”贴标签，意思是把它设置成“{”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json5">{
-  channels: {
-    signal: {
-      enabled: true,
-      account: &quot;+15551234567&quot;,
-      cliPath: &quot;signal-cli&quot;,
-      dmPolicy: &quot;pairing&quot;,
-      allowFrom: [&quot;+15557654321&quot;],
-    },
-  },
-}</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Multi-account support: use 消息通道s.signal.accounts with per-account 设置说明书 and optional name. See 门口的小门卫/设置说明书uration for…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Multi-account support: use <code>channels.signal.accounts</code> with per-account config and optional <code>name</code>. See <a href="/gateway/configuration-reference#multi-account-all-channels" target="_blank" rel="noreferrer"><code>gateway/configuration</code></a> for the shared pattern.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-8">
-          <div class="section-heading">
-            <p class="section-kicker">第 8 站</p>
-            <h2>Setup path B: register dedicated bot number (SMS, Linux)</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Use this when you want a dedicated bot number instead of linking an existing Signal app account. 1. Get a number that c…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Use this when you want a dedicated bot number instead of linking an existing Signal app account.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Use this when you want a dedicated bot number instead of linking an existing Signal app account.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“1. Get a number that can receive SMS (or voice verification for landlines).”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>1. Get a number that can receive SMS (or voice verification for landlines).</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“2. Install signal-cli on the 门口的小门卫 host:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>2. Install <code>signal-cli</code> on the gateway host:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Setup path B: register dedicated bot number (SMS, Linux)”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Use a dedicated bot number to avoid accou…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Use a dedicated bot number to avoid account/session conflicts.</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一串终端魔法口令，像按步骤按下几个按钮，让电脑开始干活。</p>
-        <ul class="code-steps">
-          <li>这里在给“VERSION=$(curl -Ls -o /dev/null -w %{url_effective} https”贴标签，意思是把它设置成“//github.com/AsamK/signal-cli/releases/latest | sed -e &#39;s/^.*\/v//&#39;)”。</li><li>这里在给“curl -L -O https”贴标签，意思是把它设置成“//github.com/AsamK/signal-cli/releases/download/v${VERSION}/signal-cli-${VERSION}-Linux-native.tar.gz”。</li><li>这一行“sudo tar xf &quot;signal-cli-${VERSION}-Linux-native.tar.gz&quot; -C /opt”是当前步骤要交给电脑的一小块提示。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">VERSION=$(curl -Ls -o /dev/null -w %{url_effective} https://github.com/AsamK/signal-cli/releases/latest | sed -e &#39;s/^.*\/v//&#39;)
-curl -L -O &quot;https://github.com/AsamK/signal-cli/releases/download/v${VERSION}/signal-cli-${VERSION}-Linux-native.tar.gz&quot;
-sudo tar xf &quot;signal-cli-${VERSION}-Linux-native.tar.gz&quot; -C /opt
-sudo ln -sf /opt/signal-cli /usr/local/bin/
-signal-cli --version</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“If you use the JVM build (signal-cli-${VERSION}.tar.gz), install JRE 25+ first. Keep signal-cli updated; up一边说一边送 notes…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>If you use the JVM build (<code>signal-cli-${VERSION}.tar.gz</code>), install JRE 25+ first. Keep <code>signal-cli</code> updated; upstream notes that old releases can break as Signal server APIs change.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“3. Register and verify the number:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>3. Register and verify the number:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一串终端魔法口令，像按步骤按下几个按钮，让电脑开始干活。</p>
-        <ul class="code-steps">
-          <li>这一行“signal-cli -a +&lt;BOT_PHONE_NUMBER&gt; register”是当前步骤要交给电脑的一小块提示。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">signal-cli -a +&lt;BOT_PHONE_NUMBER&gt; register</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“If captcha is required:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>If captcha is required:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“1. Open https://signalcaptchas.org/registration/generate.html. 2. Complete captcha, copy the signalcaptcha://... link t…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>1. Open <code>https://signalcaptchas.org/registration/generate.html</code>. 2. Complete captcha, copy the <code>signalcaptcha://...</code> link target from &quot;Open Signal&quot;. 3. Run from the same external IP as the browser session when possible. 4. Run registration again immediately (captcha tokens expire quickly):</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一串终端魔法口令，像按步骤按下几个按钮，让电脑开始干活。</p>
-        <ul class="code-steps">
-          <li>这一行“signal-cli -a +&lt;BOT_PHONE_NUMBER&gt; register --captcha &#39;&lt;SIGNALCAPTCHA_URL&gt;&#39;”是当前步骤要交给电脑的一小块提示。</li><li>这一行“signal-cli -a +&lt;BOT_PHONE_NUMBER&gt; verify &lt;VERIFICATION_CODE&gt;”是当前步骤要交给电脑的一小块提示。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">signal-cli -a +&lt;BOT_PHONE_NUMBER&gt; register --captcha &#39;&lt;SIGNALCAPTCHA_URL&gt;&#39;
-signal-cli -a +&lt;BOT_PHONE_NUMBER&gt; verify &lt;VERIFICATION_CODE&gt;</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“4. 设置说明书ure OpenClaw, restart 门口的小门卫, verify 消息通道:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>4. Configure OpenClaw, restart gateway, verify channel:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一串终端魔法口令，像按步骤按下几个按钮，让电脑开始干活。</p>
-        <ul class="code-steps">
-          <li>这里在给“# If you run the gateway as a user systemd service”贴标签，意思是把它设置成“”。</li><li>这一行“systemctl --user restart openclaw-gateway”是当前步骤要交给电脑的一小块提示。</li><li>这里在给“# Then verify”贴标签，意思是把它设置成“”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash"># If you run the gateway as a user systemd service:
-systemctl --user restart openclaw-gateway
-
-# Then verify:
-openclaw doctor
-openclaw channels status --probe</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“5. Pair your DM sender:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>5. Pair your DM sender:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Setup path B: register dedicated bot number (SMS, Linux)”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Send any 小纸条消息 to the bot number.、Approve code on the 大房子服务器: openclaw pair…、Save the bot number as a contact on your…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Send any message to the bot number.</li><li>Approve code on the server: <code>openclaw pairing approve signal &lt;PAIRING_CODE&gt;</code>.</li><li>Save the bot number as a contact on your phone to avoid &quot;Unknown contact&quot;.</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Important: registering a phone number account with signal-cli can de-authenticate the main Signal app session for that…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Important: registering a phone number account with <code>signal-cli</code> can de-authenticate the main Signal app session for that number. Prefer a dedicated bot number, or use QR link mode if you need to keep your existing phone app setup.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Up一边说一边送 references:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Upstream references:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Setup path B: register dedicated bot number (SMS, Linux)”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：signal-cli README: https://github.com/Asa…、Captcha flow: https://github.com/AsamK/si…、Linking flow: https://github.com/AsamK/si…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>signal-cli</code> README: <code>https://github.com/AsamK/signal-cli</code></li><li>Captcha flow: <code>https://github.com/AsamK/signal-cli/wiki/Registration-with-captcha</code></li><li>Linking flow: <code>https://github.com/AsamK/signal-cli/wiki/Linking-other-devices-(Provisioning)</code></li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-9">
-          <div class="section-heading">
-            <p class="section-kicker">第 9 站</p>
-            <h2>External daemon mode (httpUrl)</h2>
-            <p>这一节主要在解释“External daemon mode (httpUrl)”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“External daemon mode (httpUrl)”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“If you want to manage signal-cli yourself (slow JVM cold starts, container init, or shared CPUs), run the daemon separa…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“If you want to manage signal-cli yourself (slow JVM cold starts, container init, or shared CPUs), run the daemon separa…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>If you want to manage <code>signal-cli</code> yourself (slow JVM cold starts, container init, or shared CPUs), run the daemon separately and point OpenClaw at it:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“channels”贴标签，意思是把它设置成“{”。</li><li>这里在给“signal”贴标签，意思是把它设置成“{”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json5">{
-  channels: {
-    signal: {
-      httpUrl: &quot;http://127.0.0.1:8080&quot;,
-      autoStart: false,
-    },
-  },
-}</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“This skips auto-spawn and the startup wait inside OpenClaw. For slow starts when auto-spawning, set 消息通道s.signal.startu…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>This skips auto-spawn and the startup wait inside OpenClaw. For slow starts when auto-spawning, set <code>channels.signal.startupTimeoutMs</code>.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-10">
-          <div class="section-heading">
-            <p class="section-kicker">第 10 站</p>
-            <h2>Access control (DMs + 大家一起的房间s)</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“DMs: 大家一起的房间s:”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“DMs:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>DMs:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Access control (DMs + groups)”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Default: 消息通道s.signal.dmPolicy = &quot;pairing…、Unknown senders receive a pairing code; 小…、Approve via:、openclaw pairing list signal。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Default: <code>channels.signal.dmPolicy = &quot;pairing&quot;</code>.</li><li>Unknown senders receive a pairing code; messages are ignored until approved (codes expire after 1 hour).</li><li>Approve via:</li><li><code>openclaw pairing list signal</code></li><li><code>openclaw pairing approve signal &lt;CODE&gt;</code></li><li>Pairing is the default token exchange for Signal DMs. Details: <a href="/channels/pairing" target="_blank" rel="noreferrer">Pairing</a></li><li>UUID-only senders (from <code>sourceUuid</code>) are stored as <code>uuid:&lt;id&gt;</code> in <code>channels.signal.allowFrom</code>.</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“大家一起的房间s:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Groups:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Access control (DMs + groups)”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：消息通道s.signal.大家一起的房间Policy = open allowli…、消息通道s.signal.大家一起的房间AllowFrom controls wh…、消息通道s.signal.大家一起的房间s[&quot;&lt;大家一起的房间-id&gt;&quot; &quot;*&quot;]…、Use 消息通道s.signal.accounts.&lt;id&gt;.大家一起的房间s f…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>channels.signal.groupPolicy = open | allowlist | disabled</code>.</li><li><code>channels.signal.groupAllowFrom</code> controls who can trigger in groups when <code>allowlist</code> is set.</li><li><code>channels.signal.groups[&quot;&lt;group-id&gt;&quot; | &quot;*&quot;]</code> can override group behavior with <code>requireMention</code>, <code>tools</code>, and <code>toolsBySender</code>.</li><li>Use <code>channels.signal.accounts.&lt;id&gt;.groups</code> for per-account overrides in multi-account setups.</li><li>Runtime note: if <code>channels.signal</code> is completely missing, runtime falls back to <code>groupPolicy=&quot;allowlist&quot;</code> for group checks (even if <code>channels.defaults.groupPolicy</code> is set).</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-11">
-          <div class="section-heading">
-            <p class="section-kicker">第 11 站</p>
-            <h2>How it works (behavior)</h2>
-            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>你理解的是能力边界，不只是功能名字。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“How it works (behavior)”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：signal-cli runs as a daemon; the 门口的小门卫 r…、Inbound 小纸条消息s are normalized into the sh…、Replies always route back to the same num…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>signal-cli</code> runs as a daemon; the gateway reads events via SSE.</li><li>Inbound messages are normalized into the shared channel envelope.</li><li>Replies always route back to the same number or group.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-12">
-          <div class="section-heading">
-            <p class="section-kicker">第 12 站</p>
-            <h2>Media + limits</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Media + limits”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Outbound text is chunked to 消息通道s.signal.…、Optional newline chunking: set 消息通道s.sign…、Attachments supported (base64 fetched fro…、Default media cap: 消息通道s.signal.mediaMaxM…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Outbound text is chunked to <code>channels.signal.textChunkLimit</code> (default 4000).</li><li>Optional newline chunking: set <code>channels.signal.chunkMode=&quot;newline&quot;</code> to split on blank lines (paragraph boundaries) before length chunking.</li><li>Attachments supported (base64 fetched from <code>signal-cli</code>).</li><li>Default media cap: <code>channels.signal.mediaMaxMb</code> (default 8).</li><li>Use <code>channels.signal.ignoreAttachments</code> to skip downloading media.</li><li>Group history context uses <code>channels.signal.historyLimit</code> (or <code>channels.signal.accounts.*.historyLimit</code>), falling back to <code>messages.groupChat.historyLimit</code>. Set <code>0</code> to disable (default 50).</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-13">
-          <div class="section-heading">
-            <p class="section-kicker">第 13 站</p>
-            <h2>Typing + read receipts</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Typing + read receipts”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：**Typing indicators**: OpenClaw sends typ…、**Read receipts**: when 消息通道s.signal.send…、Signal-cli does not expose read receipts…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>**Typing indicators**: OpenClaw sends typing signals via <code>signal-cli sendTyping</code> and refreshes them while a reply is running.</li><li>**Read receipts**: when <code>channels.signal.sendReadReceipts</code> is true, OpenClaw forwards read receipts for allowed DMs.</li><li>Signal-cli does not expose read receipts for groups.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-14">
-          <div class="section-heading">
-            <p class="section-kicker">第 14 站</p>
-            <h2>Reactions (小纸条消息 工具小帮手)</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Examples: 设置说明书:”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Reactions (message tool)”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Use 小纸条消息 action=react with 消息通道=signal.、Targets: sender E.164 or UUID (use uuid:&lt;…、小纸条消息Id is the Signal timestamp for the 小…、大家一起的房间 reactions require targetAuthor or…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Use <code>message action=react</code> with <code>channel=signal</code>.</li><li>Targets: sender E.164 or UUID (use <code>uuid:&lt;id&gt;</code> from pairing output; bare UUID works too).</li><li><code>messageId</code> is the Signal timestamp for the message you’re reacting to.</li><li>Group reactions require <code>targetAuthor</code> or <code>targetAuthorUuid</code>.</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Examples:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Examples:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段像给机器人看的说明书，告诉它要按什么样子准备东西。</p>
-        <ul class="code-steps">
-          <li>这里在给“message action=react channel=signal target=uuid”贴标签，意思是把它设置成“123e4567-e89b-12d3-a456-426614174000 messageId=1737630212345 emoji=🔥”。</li><li>这一行“message action=react channel=signal target=+15551234567 messageId=1737630212345 emoji=🔥 remove=true”是当前步骤要交给电脑的一小块提示。</li><li>这里在给“message action=react channel=signal target=signal”贴标签，意思是把它设置成“group:&lt;groupId&gt; targetAuthor=uuid:&lt;sender-uuid&gt; messageId=1737630212345 emoji=✅”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-text">message action=react channel=signal target=uuid:123e4567-e89b-12d3-a456-426614174000 messageId=1737630212345 emoji=🔥
-message action=react channel=signal target=+15551234567 messageId=1737630212345 emoji=🔥 remove=true
-message action=react channel=signal target=signal:group:&lt;groupId&gt; targetAuthor=uuid:&lt;sender-uuid&gt; messageId=1737630212345 emoji=✅</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“设置说明书:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Config:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Reactions (message tool)”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：消息通道s.signal.actions.reactions: enable/di…、消息通道s.signal.reactionLevel: off ack minim…、off/ack disables 机器人朋友 reactions (小纸条消息 工…、minimal/extensive enables 机器人朋友 reactions…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>channels.signal.actions.reactions</code>: enable/disable reaction actions (default true).</li><li><code>channels.signal.reactionLevel</code>: <code>off | ack | minimal | extensive</code>.</li><li><code>off</code>/<code>ack</code> disables agent reactions (message tool <code>react</code> will error).</li><li><code>minimal</code>/<code>extensive</code> enables agent reactions and sets the guidance level.</li><li>Per-account overrides: <code>channels.signal.accounts.&lt;id&gt;.actions.reactions</code>, <code>channels.signal.accounts.&lt;id&gt;.reactionLevel</code>.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-15">
-          <div class="section-heading">
-            <p class="section-kicker">第 15 站</p>
-            <h2>Delivery targets (CLI/cron)</h2>
-            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>你理解的是能力边界，不只是功能名字。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Delivery targets (CLI/cron)”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：DMs: signal:+15551234567 (or plain E.164).、UUID DMs: uuid:&lt;id&gt; (or bare UUID).、大家一起的房间s: signal:大家一起的房间:&lt;大家一起的房间Id&gt;.、Usernames: username:&lt;name&gt; (if supported…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>DMs: <code>signal:+15551234567</code> (or plain E.164).</li><li>UUID DMs: <code>uuid:&lt;id&gt;</code> (or bare UUID).</li><li>Groups: <code>signal:group:&lt;groupId&gt;</code>.</li><li>Usernames: <code>username:&lt;name&gt;</code> (if supported by your Signal account).</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-16">
-          <div class="section-heading">
-            <p class="section-kicker">第 16 站</p>
-            <h2>Troubleshooting</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Run this ladder first: Then confirm DM pairing state if needed: Common failures: Extra checks: For triage flow: /消息通道s/…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Run this ladder first:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Run this ladder first:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一句直接对 OpenClaw 说的话，就像对小助手下达任务。</p>
-        <ul class="code-steps">
-          <li>这一句是在直接叫 OpenClaw 做事：“openclaw status”。你可以把它想成对机器人说的完整命令。</li><li>这一句是在直接叫 OpenClaw 做事：“openclaw gateway status”。你可以把它想成对机器人说的完整命令。</li><li>这一句是在直接叫 OpenClaw 做事：“openclaw logs --follow”。你可以把它想成对机器人说的完整命令。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">openclaw status
-openclaw gateway status
-openclaw logs --follow
-openclaw doctor
-openclaw channels status --probe</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Then confirm DM pairing state if needed:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Then confirm DM pairing state if needed:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一句直接对 OpenClaw 说的话，就像对小助手下达任务。</p>
-        <ul class="code-steps">
-          <li>这一句是在直接叫 OpenClaw 做事：“openclaw pairing list signal”。你可以把它想成对机器人说的完整命令。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">openclaw pairing list signal</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Common failures:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Common failures:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Troubleshooting”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Daemon reachable but no replies: verify a…、DMs ignored: sender is pending pairing ap…、大家一起的房间 小纸条消息s ignored: 大家一起的房间 sender/me…、设置说明书 validation errors after edits: run…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Daemon reachable but no replies: verify account/daemon settings (<code>httpUrl</code>, <code>account</code>) and receive mode.</li><li>DMs ignored: sender is pending pairing approval.</li><li>Group messages ignored: group sender/mention gating blocks delivery.</li><li>Config validation errors after edits: run <code>openclaw doctor --fix</code>.</li><li>Signal missing from diagnostics: confirm <code>channels.signal.enabled: true</code>.</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Extra checks:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Extra checks:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一句直接对 OpenClaw 说的话，就像对小助手下达任务。</p>
-        <ul class="code-steps">
-          <li>这一句是在直接叫 OpenClaw 做事：“openclaw pairing list signal”。你可以把它想成对机器人说的完整命令。</li><li>这一行“pgrep -af signal-cli”是当前步骤要交给电脑的一小块提示。</li><li>这一行“grep -i &quot;signal&quot; &quot;/tmp/openclaw/openclaw-$(date +%Y-%m-%d).log&quot; | tail -20”是当前步骤要交给电脑的一小块提示。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">openclaw pairing list signal
-pgrep -af signal-cli
-grep -i &quot;signal&quot; &quot;/tmp/openclaw/openclaw-$(date +%Y-%m-%d).log&quot; | tail -20</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“For triage flow: /消息通道s/troubleshooting.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>For triage flow: <a href="/channels/troubleshooting" target="_blank" rel="noreferrer">/channels/troubleshooting</a>.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-17">
-          <div class="section-heading">
-            <p class="section-kicker">第 17 站</p>
-            <h2>安全守门员 notes</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Security notes”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：signal-cli stores account keys locally (t…、Back up Signal account state before 大房子服务…、Keep 消息通道s.signal.dmPolicy: &quot;pairing&quot; unl…、SMS verification is only needed for regis…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>signal-cli</code> stores account keys locally (typically <code>~/.local/share/signal-cli/data/</code>).</li><li>Back up Signal account state before server migration or rebuild.</li><li>Keep <code>channels.signal.dmPolicy: &quot;pairing&quot;</code> unless you explicitly want broader DM access.</li><li>SMS verification is only needed for registration or recovery flows, but losing control of the number/account can complicate re-registration.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-18">
-          <div class="section-heading">
-            <p class="section-kicker">第 18 站</p>
-            <h2>设置说明书uration reference (Signal)</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Full 设置说明书uration: 设置说明书uration Provider options: Related global options:”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Full 设置说明书uration: 设置说明书uration”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Full configuration: <a href="/gateway/configuration" target="_blank" rel="noreferrer">Configuration</a></p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Provider options:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Provider options:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Configuration reference (Signal)”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：消息通道s.signal.enabled: enable/disable 消息通道…、消息通道s.signal.account: E.164 for the bot a…、消息通道s.signal.cliPath: path to signal-cli.、消息通道s.signal.httpUrl: full daemon URL (ov…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>channels.signal.enabled</code>: enable/disable channel startup.</li><li><code>channels.signal.account</code>: E.164 for the bot account.</li><li><code>channels.signal.cliPath</code>: path to <code>signal-cli</code>.</li><li><code>channels.signal.httpUrl</code>: full daemon URL (overrides host/port).</li><li><code>channels.signal.httpHost</code>, <code>channels.signal.httpPort</code>: daemon bind (default 127.0.0.1:8080).</li><li><code>channels.signal.autoStart</code>: auto-spawn daemon (default true if <code>httpUrl</code> unset).</li><li><code>channels.signal.startupTimeoutMs</code>: startup wait timeout in ms (cap 120000).</li><li><code>channels.signal.receiveMode</code>: <code>on-start | manual</code>.</li><li><code>channels.signal.ignoreAttachments</code>: skip attachment downloads.</li><li><code>channels.signal.ignoreStories</code>: ignore stories from the daemon.</li><li><code>channels.signal.sendReadReceipts</code>: forward read receipts.</li><li><code>channels.signal.dmPolicy</code>: <code>pairing | allowlist | open | disabled</code> (default: pairing).</li><li><code>channels.signal.allowFrom</code>: DM allowlist (E.164 or <code>uuid:&lt;id&gt;</code>). <code>open</code> requires <code>&quot;*&quot;</code>. Signal has no usernames; use phone/UUID ids.</li><li><code>channels.signal.groupPolicy</code>: <code>open | allowlist | disabled</code> (default: allowlist).</li><li><code>channels.signal.groupAllowFrom</code>: group sender allowlist.</li><li><code>channels.signal.groups</code>: per-group overrides keyed by Signal group id (or <code>&quot;*&quot;</code>). Supported fields: <code>requireMention</code>, <code>tools</code>, <code>toolsBySender</code>.</li><li><code>channels.signal.accounts.&lt;id&gt;.groups</code>: per-account version of <code>channels.signal.groups</code> for multi-account setups.</li><li><code>channels.signal.historyLimit</code>: max group messages to include as context (0 disables).</li><li><code>channels.signal.dmHistoryLimit</code>: DM history limit in user turns. Per-user overrides: <code>channels.signal.dms[&quot;&lt;phone_or_uuid&gt;&quot;].historyLimit</code>.</li><li><code>channels.signal.textChunkLimit</code>: outbound chunk size (chars).</li><li><code>channels.signal.chunkMode</code>: <code>length</code> (default) or <code>newline</code> to split on blank lines (paragraph boundaries) before length chunking.</li><li><code>channels.signal.mediaMaxMb</code>: inbound/outbound media cap (MB).</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Related global options:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Related global options:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Configuration reference (Signal)”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：机器人朋友s.list[].大家一起的房间Chat.mentionPatterns…、小纸条消息s.大家一起的房间Chat.mentionPatterns (globa…、小纸条消息s.responsePrefix.</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>agents.list[].groupChat.mentionPatterns</code> (Signal does not support native mentions).</li><li><code>messages.groupChat.mentionPatterns</code> (global fallback).</li><li><code>messages.responsePrefix</code>.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-    <section class="section-shell">
-      <div class="ad-placeholder">
-        <p>这里预留给未来的 Google AdSense 模块。</p>
-        <code>&lt;!-- ADSENSE_SNIPPET --&gt;</code>
-      </div>
-    </section>
-  
 
       <footer class="page-footer">
         <div>

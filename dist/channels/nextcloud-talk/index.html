@@ -3971,533 +3971,192 @@
       </div>
 
       
-    <section class="section-shell">
-      <div class="overview-card">
-        <div>
-          <p class="section-kicker">先听这页的人话版</p>
-          <h2>Nextcloud Talk</h2>
-          <p>这一页像一本关于“Nextcloud Talk”的小绘本，它先告诉我们这位机器人朋友会做什么，再一步一步解释什么时候该这样做。 你可以先把它想成：Nextcloud Talk (新本领插件)。</p>
-          <p>如果把这页当成“给普通人看的版本”，你最应该带走的是：它到底在教你一件什么事、什么时候要这样做、以及哪里最容易踩坑。</p>
+      <section class="section-shell">
+        <div class="overview-card">
+          <div>
+            <p class="section-kicker">AI 绘本解读版</p>
+            <h2>🎤 让OpenClaw和Nextcloud Talk交朋友</h2>
+            <p>OpenClaw想和Nextcloud Talk聊天。
+需要一个特别的“聊天插件”来帮忙。
+就像给机器人一个对讲机，让它能加入你们的对话。</p>
+          </div>
+          <div class="overview-meta">
+            <span>原始路径：/channels/nextcloud-talk</span>
+            <span>故事卡片：6 张</span>
+            <a href="https://docs.openclaw.ai/channels/nextcloud-talk" target="_blank" rel="noreferrer">查看官方原文</a>
+          </div>
         </div>
-        <div class="overview-meta">
-          <span>原始路径：/channels/nextcloud-talk</span>
-          <span>章节数量：8</span>
-          <a href="https://docs.openclaw.ai/channels/nextcloud-talk" target="_blank" rel="noreferrer">查看原文</a>
+      </section>
+      
+          <section class="section-shell" id="section-1">
+            <div class="section-heading">
+              <p class="section-kicker">第 1 站</p>
+              <h2>📦 第一步：拿到“聊天插件”</h2>
+              <p>OpenClaw本身不会和Nextcloud Talk说话，需要一个额外的“聊天插件”。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>没有这个插件，它们俩就像说不同语言，没法聊天。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>这个插件就像一个翻译官。</li><li>它让OpenClaw能听懂Nextcloud Talk的话。</li><li>也能把OpenClaw的话翻译过去。</li><li>插件有两种拿法：从网上商店下载，或者从自己的工具箱里找。</li><li>如果你在搭建OpenClaw时选了Nextcloud Talk，它会聪明地帮你选好方法。</li></ul>
+              </div>
+              
+            <div class="source-card">
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
+              <ul><li>`openclaw plugins install @openclaw/nextcloud-talk` 这行命令就像说：“嘿，去网上商店，把那个叫‘nextcloud-talk’的插件买回来装上！”</li><li>`openclaw plugins install ./extensions/nextcloud-talk` 这行命令就像说：“不用去商店了，我自己的工具箱里就有这个插件，直接从这里拿吧。”</li></ul>
+            </div>
+          
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>先给OpenClaw装上“聊天插件”，它才能开始工作。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-2">
+            <div class="section-heading">
+              <p class="section-kicker">第 2 站</p>
+              <h2>🤖 第二步：在Nextcloud里造一个“机器人朋友”</h2>
+              <p>在你们的Nextcloud服务器上，需要创建一个专门和OpenClaw联系的“机器人”。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>这个机器人是OpenClaw在Nextcloud里的“分身”，负责传递消息。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>这个机器人有个名字，比如叫“OpenClaw”。</li><li>你们要给它一个秘密暗号（shared-secret），只有OpenClaw知道。</li><li>还要告诉它一个“收信地址”（webhook-url），OpenClaw会把话送到这里。</li><li>记得在命令里加上 `--feature reaction`，这样机器人就能看懂和发送“表情反应”了。</li><li>最后，去你想让机器人加入的聊天房间设置里，把它“请进来”。</li></ul>
+              </div>
+              
+            <div class="source-card">
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
+              <ul><li>`./occ talk:bot:install &quot;OpenClaw&quot; &quot;&lt;shared-secret&gt;&quot; &quot;&lt;webhook-url&gt;&quot; --feature reaction` 这整段命令就像在Nextcloud里执行一个魔法仪式：
+1.  `&quot;OpenClaw&quot;`：给新造的机器人起个名字。
+2.  `&quot;&lt;shared-secret&gt;&quot;`：把秘密暗号塞进它手里。
+3.  `&quot;&lt;webhook-url&gt;&quot;`：把收信地址写在小纸条上交给它。
+4.  `--feature reaction`：最后拍拍它，说：“嘿，记得要会做表情哦！”</li></ul>
+            </div>
+          
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>在Nextcloud里造好机器人，并告诉OpenClaw怎么找到它。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-3">
+            <div class="section-heading">
+              <p class="section-kicker">第 3 站</p>
+              <h2>🔧 第三步：告诉OpenClaw你的Nextcloud在哪</h2>
+              <p>现在需要配置OpenClaw，让它知道去哪个Nextcloud服务器找那个机器人朋友。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>OpenClaw得知道地址和暗号，才能和机器人对上话。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>主要告诉它两件事：Nextcloud服务器的地址（baseUrl），和机器人的秘密暗号（botSecret）。</li><li>你可以把地址和暗号写在OpenClaw的“规则本”（配置文件）里。</li><li>或者，如果只用默认账户，也可以把暗号放在一个叫`NEXTCLOUD_TALK_BOT_SECRET`的“环境变量”里，就像把纸条贴在墙上。</li><li>配置好后，记得“重启网关”（或者完成设置向导），让OpenClaw重新读一遍规则。</li></ul>
+              </div>
+              
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>把Nextcloud的地址和机器人的暗号交给OpenClaw。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-4">
+            <div class="section-heading">
+              <p class="section-kicker">第 4 站</p>
+              <h2>🚪 第四步：定好“谁可以敲门”的规矩（私聊篇）</h2>
+              <p>OpenClaw可以和人私聊，但我们需要定规矩：谁可以直接和它说话？</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>防止陌生人随便来敲门，打扰你的机器人。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>默认规矩是“配对模式”（pairing）。陌生人第一次私聊，会得到一个“配对码”。</li><li>你作为管理员，可以用命令查看所有等待配对的请求，并批准合法的那个。</li><li>如果你想完全开放私聊，就把规矩改成“开放模式”（open），并且在“允许名单”（allowFrom）里写上“*”（代表所有人）。</li><li>注意！“允许名单”只认Nextcloud的用户ID（一串数字或字母），不认用户显示的名字。</li></ul>
+              </div>
+              
+            <div class="source-card">
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
+              <ul><li>`openclaw pairing list nextcloud-talk` 这个命令就像你打开一个“访客登记本”，看看有哪些陌生人拿着配对码在门口等着。</li><li>`openclaw pairing approve nextcloud-talk &lt;CODE&gt;` 这个命令就像你核对了一个配对码，然后对门卫说：“这个码是对的，让这个人进来吧。”</li></ul>
+            </div>
+          
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>私聊可以很安全（需要配对），也可以完全开放，由你决定。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-5">
+            <div class="section-heading">
+              <p class="section-kicker">第 5 站</p>
+              <h2>🚪 第五步：定好“哪个房间能进”的规矩（群聊篇）</h2>
+              <p>OpenClaw也可以加入群聊（房间），但同样需要你批准哪些房间它可以进。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>不是每个Nextcloud聊天室都需要机器人加入。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>默认规矩是“白名单模式”（allowlist）。只有你明确写在名单里的房间，OpenClaw才会进去。</li><li>而且，默认情况下，在那些房间里，大家必须“@提到”OpenClaw机器人，它才会回应。就像叫它的名字它才理你。</li><li>你可以在配置文件的 `rooms` 部分，像列清单一样写下允许的房间“令牌”（room-token）。</li><li>如果一个房间都不想让它进，就让名单空着，或者直接把群聊规矩设为“禁用”（disabled）。</li></ul>
+              </div>
+              
+            <div class="source-card">
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
+              <ul><li>配置里写 `rooms: { &quot;room-token&quot;: { requireMention: true } }` 就像你在规则本上写：“只允许令牌是‘room-token’的那个房间进来，而且在里面必须有人喊我名字（@我）我才说话。”</li></ul>
+            </div>
+          
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>群聊需要你亲自批准房间，并且可以要求大家@机器人它才回应。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-6">
+            <div class="section-heading">
+              <p class="section-kicker">第 6 站</p>
+              <h2>📝 最后，记住这些小贴士</h2>
+              <p>还有一些重要的细节和限制，让你的机器人工作得更顺畅。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>了解这些，能避免使用时遇到意外。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>机器人不能主动找人私聊。必须别人先给它发消息，它才能回复。</li><li>你给机器人的那个“收信地址”（webhook-url），必须能让OpenClaw网关访问到。如果你的OpenClaw躲在代理后面，记得设置 `webhookPublicUrl` 这个“对外地址”。</li><li>机器人API不支持直接上传图片/文件。如果有人发媒体，机器人会收到一个“网址链接”。</li><li>为了更好地区分私聊和群聊消息，你可以额外设置 `apiUser` 和 `apiPassword`，让OpenClaw有权限去Nextcloud查一下房间类型。</li><li>它支持私聊、群聊、表情反应和Markdown格式消息。但不支持话题线程，也不支持原生的“斜杠命令”。</li></ul>
+              </div>
+              
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>机器人有些小脾气（比如不能主动私聊），但大部分聊天功能都棒棒的！</p>
+              </div>
+            </div>
+          </section>
+        
+      <section class="section-shell">
+        <div class="ad-placeholder">
+          <p>这里预留给未来的 Google AdSense 模块。</p>
+          <code>&lt;!-- ADSENSE_SNIPPET --&gt;</code>
         </div>
-      </div>
-    </section>
+      </section>
     
-        <section class="section-shell" id="section-1">
-          <div class="section-heading">
-            <p class="section-kicker">第 1 站</p>
-            <h2>Start Here</h2>
-            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>你理解的是能力边界，不只是功能名字。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Nextcloud Talk (新本领插件) Status: supported via 新本领插件 (小铃铛通知 bot). Direct 小纸条消息s, rooms, reactions, and markdown 小纸条消息s ar…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Nextcloud Talk (新本领插件)”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p># Nextcloud Talk (plugin)</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Status: supported via 新本领插件 (小铃铛通知 bot). Direct 小纸条消息s, rooms, reactions, and markdown 小纸条消息s are supported.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Status: supported via plugin (webhook bot). Direct messages, rooms, reactions, and markdown messages are supported.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-2">
-          <div class="section-heading">
-            <p class="section-kicker">第 2 站</p>
-            <h2>新本领插件 required</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Nextcloud Talk ships as a 新本领插件 and is not bundled with the core install. Install via CLI (npm registry): Local checkou…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Nextcloud Talk ships as a 新本领插件 and is not bundled with the core install.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Nextcloud Talk ships as a plugin and is not bundled with the core install.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Install via CLI (npm registry):”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Install via CLI (npm registry):</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一句直接对 OpenClaw 说的话，就像对小助手下达任务。</p>
-        <ul class="code-steps">
-          <li>这一句是在直接叫 OpenClaw 做事：“openclaw plugins install @openclaw/nextcloud-talk”。你可以把它想成对机器人说的完整命令。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">openclaw plugins install @openclaw/nextcloud-talk</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Local checkout (when running from a git repo):”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Local checkout (when running from a git repo):</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一句直接对 OpenClaw 说的话，就像对小助手下达任务。</p>
-        <ul class="code-steps">
-          <li>这一句是在直接叫 OpenClaw 做事：“openclaw plugins install ./extensions/nextcloud-talk”。你可以把它想成对机器人说的完整命令。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">openclaw plugins install ./extensions/nextcloud-talk</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“If you choose Nextcloud Talk during setup and a git checkout is detected, OpenClaw will offer the local install path au…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>If you choose Nextcloud Talk during setup and a git checkout is detected, OpenClaw will offer the local install path automatically.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Details: 新本领插件s”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Details: <a href="/tools/plugin" target="_blank" rel="noreferrer">Plugins</a></p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-3">
-          <div class="section-heading">
-            <p class="section-kicker">第 3 站</p>
-            <h2>Quick setup (beginner)</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“1. Install the Nextcloud Talk 新本领插件. 2. On your Nextcloud 大房子服务器, create a bot: 3. Enable the bot in the target room se…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“1. Install the Nextcloud Talk 新本领插件.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>1. Install the Nextcloud Talk plugin.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“2. On your Nextcloud 大房子服务器, create a bot:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>2. On your Nextcloud server, create a bot:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>``<code>bash theme={&quot;theme&quot;:{&quot;light&quot;:&quot;min-light&quot;,&quot;dark&quot;:&quot;min-dark&quot;}} ./occ talk:bot:install &quot;OpenClaw&quot; &quot;&lt;shared-secret&gt;&quot; &quot;&lt;webhook-url&gt;&quot; --feature reaction </code>``</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“3. Enable the bot in the target room settings.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>3. Enable the bot in the target room settings.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“4. 设置说明书ure OpenClaw:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>4. Configure OpenClaw:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Quick setup (beginner)”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：设置说明书: 消息通道s.nextcloud-talk.baseUrl + 消息通…、Or env: NEXTCLOUD_TALK_BOT_SECRET (defaul…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Config: <code>channels.nextcloud-talk.baseUrl</code> + <code>channels.nextcloud-talk.botSecret</code></li><li>Or env: <code>NEXTCLOUD_TALK_BOT_SECRET</code> (default account only)</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“5. Restart the 门口的小门卫 (or finish setup).”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>5. Restart the gateway (or finish setup).</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Minimal 设置说明书:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Minimal config:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“channels”贴标签，意思是把它设置成“{”。</li><li>这里在给“nextcloud-talk”贴标签，意思是把它设置成“{”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json5">{
-  channels: {
-    &quot;nextcloud-talk&quot;: {
-      enabled: true,
-      baseUrl: &quot;https://cloud.example.com&quot;,
-      botSecret: &quot;shared-secret&quot;,
-      dmPolicy: &quot;pairing&quot;,
-    },
-  },
-}</code></pre>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-4">
-          <div class="section-heading">
-            <p class="section-kicker">第 4 站</p>
-            <h2>Notes</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Notes”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Bots cannot initiate DMs. The user must 小…、小铃铛通知 URL must be reachable by the 门口的小门卫…、Media uploads are not supported by the bo…、The 小铃铛通知 payload does not distinguish DM…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Bots cannot initiate DMs. The user must message the bot first.</li><li>Webhook URL must be reachable by the Gateway; set <code>webhookPublicUrl</code> if behind a proxy.</li><li>Media uploads are not supported by the bot API; media is sent as URLs.</li><li>The webhook payload does not distinguish DMs vs rooms; set <code>apiUser</code> + <code>apiPassword</code> to enable room-type lookups (otherwise DMs are treated as rooms).</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-5">
-          <div class="section-heading">
-            <p class="section-kicker">第 5 站</p>
-            <h2>Access control (DMs)</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Access control (DMs)”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Default: 消息通道s.nextcloud-talk.dmPolicy =…、Approve via:、openclaw pairing list nextcloud-talk、openclaw pairing approve nextcloud-talk &lt;…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Default: <code>channels.nextcloud-talk.dmPolicy = &quot;pairing&quot;</code>. Unknown senders get a pairing code.</li><li>Approve via:</li><li><code>openclaw pairing list nextcloud-talk</code></li><li><code>openclaw pairing approve nextcloud-talk &lt;CODE&gt;</code></li><li>Public DMs: <code>channels.nextcloud-talk.dmPolicy=&quot;open&quot;</code> plus <code>channels.nextcloud-talk.allowFrom=[&quot;*&quot;]</code>.</li><li><code>allowFrom</code> matches Nextcloud user IDs only; display names are ignored.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-6">
-          <div class="section-heading">
-            <p class="section-kicker">第 6 站</p>
-            <h2>Rooms (大家一起的房间s)</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Rooms (groups)”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Default: 消息通道s.nextcloud-talk.大家一起的房间Poli…、Allowlist rooms with 消息通道s.nextcloud-talk…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Default: <code>channels.nextcloud-talk.groupPolicy = &quot;allowlist&quot;</code> (mention-gated).</li><li>Allowlist rooms with <code>channels.nextcloud-talk.rooms</code>:</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“channels”贴标签，意思是把它设置成“{”。</li><li>这里在给“nextcloud-talk”贴标签，意思是把它设置成“{”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json5">{
-  channels: {
-    &quot;nextcloud-talk&quot;: {
-      rooms: {
-        &quot;room-token&quot;: { requireMention: true },
-      },
-    },
-  },
-}</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Rooms (groups)”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：To allow no rooms, keep the allowlist emp…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>To allow no rooms, keep the allowlist empty or set <code>channels.nextcloud-talk.groupPolicy=&quot;disabled&quot;</code>.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-7">
-          <div class="section-heading">
-            <p class="section-kicker">第 7 站</p>
-            <h2>Capabilities</h2>
-            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>你理解的是能力边界，不只是功能名字。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Feature Status --------------- ------------- Direct 小纸条消息s Supported Rooms Supported Threads Not supported Media URL-on…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Feature Status --------------- ------------- Direct 小纸条消息s Supported Rooms Supported Threads Not supported Media URL-on…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>| Feature | Status | | --------------- | ------------- | | Direct messages | Supported | | Rooms | Supported | | Threads | Not supported | | Media | URL-only | | Reactions | Supported | | Native commands | Not supported |</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-8">
-          <div class="section-heading">
-            <p class="section-kicker">第 8 站</p>
-            <h2>设置说明书uration reference (Nextcloud Talk)</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Full 设置说明书uration: 设置说明书uration Provider options:”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Full 设置说明书uration: 设置说明书uration”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Full configuration: <a href="/gateway/configuration" target="_blank" rel="noreferrer">Configuration</a></p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Provider options:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Provider options:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Configuration reference (Nextcloud Talk)”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：消息通道s.nextcloud-talk.enabled: enable/disa…、消息通道s.nextcloud-talk.baseUrl: Nextcloud i…、消息通道s.nextcloud-talk.botSecret: bot share…、消息通道s.nextcloud-talk.botSecretFile: regul…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>channels.nextcloud-talk.enabled</code>: enable/disable channel startup.</li><li><code>channels.nextcloud-talk.baseUrl</code>: Nextcloud instance URL.</li><li><code>channels.nextcloud-talk.botSecret</code>: bot shared secret.</li><li><code>channels.nextcloud-talk.botSecretFile</code>: regular-file secret path. Symlinks are rejected.</li><li><code>channels.nextcloud-talk.apiUser</code>: API user for room lookups (DM detection).</li><li><code>channels.nextcloud-talk.apiPassword</code>: API/app password for room lookups.</li><li><code>channels.nextcloud-talk.apiPasswordFile</code>: API password file path.</li><li><code>channels.nextcloud-talk.webhookPort</code>: webhook listener port (default: 8788).</li><li><code>channels.nextcloud-talk.webhookHost</code>: webhook host (default: 0.0.0.0).</li><li><code>channels.nextcloud-talk.webhookPath</code>: webhook path (default: /nextcloud-talk-webhook).</li><li><code>channels.nextcloud-talk.webhookPublicUrl</code>: externally reachable webhook URL.</li><li><code>channels.nextcloud-talk.dmPolicy</code>: <code>pairing | allowlist | open | disabled</code>.</li><li><code>channels.nextcloud-talk.allowFrom</code>: DM allowlist (user IDs). <code>open</code> requires <code>&quot;*&quot;</code>.</li><li><code>channels.nextcloud-talk.groupPolicy</code>: <code>allowlist | open | disabled</code>.</li><li><code>channels.nextcloud-talk.groupAllowFrom</code>: group allowlist (user IDs).</li><li><code>channels.nextcloud-talk.rooms</code>: per-room settings and allowlist.</li><li><code>channels.nextcloud-talk.historyLimit</code>: group history limit (0 disables).</li><li><code>channels.nextcloud-talk.dmHistoryLimit</code>: DM history limit (0 disables).</li><li><code>channels.nextcloud-talk.dms</code>: per-DM overrides (historyLimit).</li><li><code>channels.nextcloud-talk.textChunkLimit</code>: outbound text chunk size (chars).</li><li><code>channels.nextcloud-talk.chunkMode</code>: <code>length</code> (default) or <code>newline</code> to split on blank lines (paragraph boundaries) before length chunking.</li><li><code>channels.nextcloud-talk.blockStreaming</code>: disable block streaming for this channel.</li><li><code>channels.nextcloud-talk.blockStreamingCoalesce</code>: block streaming coalesce tuning.</li><li><code>channels.nextcloud-talk.mediaMaxMb</code>: inbound media cap (MB).</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-    <section class="section-shell">
-      <div class="ad-placeholder">
-        <p>这里预留给未来的 Google AdSense 模块。</p>
-        <code>&lt;!-- ADSENSE_SNIPPET --&gt;</code>
-      </div>
-    </section>
-  
 
       <footer class="page-footer">
         <div>

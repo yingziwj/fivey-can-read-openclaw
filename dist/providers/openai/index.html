@@ -3974,13 +3974,13 @@
       <section class="section-shell">
         <div class="overview-card">
           <div>
-            <p class="section-kicker">DeepSeek 中文解读版</p>
+            <p class="section-kicker">AI 绘本解读版</p>
             <h2>OpenAI接入指南：两种认证方式与高级配置详解</h2>
             <p>这页文档帮你理清OpenClaw如何对接OpenAI服务。核心是两种认证路径：API密钥适合按量计费，Codex订阅适合已有ChatGPT账户。我们会解释每种方式如何配置、模型命名规则，以及如何优化响应速度和上下文管理。</p>
           </div>
           <div class="overview-meta">
             <span>原始路径：/providers/openai</span>
-            <span>模型输出章节：7</span>
+            <span>故事卡片：7 张</span>
             <a href="https://docs.openclaw.ai/providers/openai" target="_blank" rel="noreferrer">查看官方原文</a>
           </div>
         </div>
@@ -3994,16 +3994,16 @@
             </div>
             <div class="story-grid">
               <div class="story-card">
-                <div class="story-card-label">为什么看这节</div>
+                <div class="story-card-label">🌟 为什么要看</div>
                 <p>选对认证方式直接影响计费模式和功能可用性，这是配置的第一步。</p>
               </div>
               <div class="source-card">
-                <div class="story-card-label">这一节真正要带走的点</div>
+                <div class="story-card-label">🧠 这节要记住什么</div>
                 <ul><li>OpenAI提供GPT模型的开发者API，OpenClaw支持两种登录方式：API密钥和Codex订阅。</li><li>API密钥适合直接调用API并按使用量计费，从OpenAI控制台获取。</li><li>Codex订阅使用ChatGPT账户登录，适合已有订阅的用户，云端服务必须用此方式。</li><li>OpenAI明确支持在OpenClaw这类外部工具中使用订阅OAuth。</li><li>两种方式在模型命名和功能支持上略有差异，需要根据需求选择。</li></ul>
               </div>
               
               <div class="story-card">
-                <div class="story-card-label">最后记一句</div>
+                <div class="story-card-label">🎈 最后记一句</div>
                 <p>先确定你的计费偏好和账户类型，再选择对应的认证路径。</p>
               </div>
             </div>
@@ -4017,21 +4017,21 @@
             </div>
             <div class="story-grid">
               <div class="story-card">
-                <div class="story-card-label">为什么看这节</div>
+                <div class="story-card-label">🌟 为什么要看</div>
                 <p>这是最灵活的接入方式，适合需要精细控制API调用和预算的项目。</p>
               </div>
               <div class="source-card">
-                <div class="story-card-label">这一节真正要带走的点</div>
+                <div class="story-card-label">🧠 这节要记住什么</div>
                 <ul><li>最佳场景：直接API访问和按使用量计费，密钥从OpenAI仪表板获取。</li><li>CLI设置提供交互式和非交互式两种命令，方便自动化集成。</li><li>配置中需设置环境变量OPENAI_API_KEY，并指定默认模型如openai/gpt-5.4。</li><li>OpenClaw只转发OpenAI官方支持的模型（如gpt-5.4），废弃的模型（如gpt-5.3-codex-spark）会被屏蔽。</li><li>这种路径下，Spark模型被视为Codex专属，不通过API密钥暴露。</li></ul>
               </div>
               
             <div class="source-card">
-              <div class="story-card-label">命令 / 代码怎么理解</div>
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
               <ul><li>openclaw onboard --auth-choice openai-api-key：启动交互式向导设置API密钥。</li><li>openclaw onboard --openai-api-key &quot;$OPENAI_API_KEY&quot;：非交互式直接传入密钥，适合脚本环境。</li><li>env: { OPENAI_API_KEY: &quot;sk-...&quot; }：在配置文件中设置密钥，sk-开头的是你的私钥。</li><li>agents: { defaults: { model: { primary: &quot;openai/gpt-5.4&quot; } } }：指定默认使用OpenAI的gpt-5.4模型。</li></ul>
             </div>
           
               <div class="story-card">
-                <div class="story-card-label">最后记一句</div>
+                <div class="story-card-label">🎈 最后记一句</div>
                 <p>API密钥方式简单直接，但需妥善保管密钥并监控使用量。</p>
               </div>
             </div>
@@ -4045,21 +4045,21 @@
             </div>
             <div class="story-grid">
               <div class="story-card">
-                <div class="story-card-label">为什么看这节</div>
+                <div class="story-card-label">🌟 为什么要看</div>
                 <p>如果你已有ChatGPT订阅，这种方式可以无缝集成，避免额外API费用。</p>
               </div>
               <div class="source-card">
-                <div class="story-card-label">这一节真正要带走的点</div>
+                <div class="story-card-label">🧠 这节要记住什么</div>
                 <ul><li>最佳场景：使用ChatGPT/Codex订阅访问，无需单独管理API密钥。</li><li>Codex云端服务必须用ChatGPT登录，CLI支持ChatGPT或API密钥。</li><li>配置中使用openai-codex/gpt-5.4作为模型标识，对应Codex的当前模型。</li><li>如果账户有权使用Codex Spark，OpenClaw也支持openai-codex/gpt-5.3-codex-spark。</li><li>Spark模型是Codex专属，不通过API密钥路径提供，且可用性取决于账户权限。</li></ul>
               </div>
               
             <div class="source-card">
-              <div class="story-card-label">命令 / 代码怎么理解</div>
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
               <ul><li>openclaw onboard --auth-choice openai-codex：在向导中启动Codex OAuth登录。</li><li>openclaw models auth login --provider openai-codex：直接运行OAuth登录命令。</li><li>agents: { defaults: { model: { primary: &quot;openai-codex/gpt-5.4&quot; } } }：配置默认使用Codex的gpt-5.4模型。</li></ul>
             </div>
           
               <div class="story-card">
-                <div class="story-card-label">最后记一句</div>
+                <div class="story-card-label">🎈 最后记一句</div>
                 <p>Codex订阅适合已有ChatGPT的用户，但要注意模型兼容性和账户权限。</p>
               </div>
             </div>
@@ -4073,21 +4073,21 @@
             </div>
             <div class="story-grid">
               <div class="story-card">
-                <div class="story-card-label">为什么看这节</div>
+                <div class="story-card-label">🌟 为什么要看</div>
                 <p>传输设置影响响应速度和稳定性，预热能减少首次请求的等待时间。</p>
               </div>
               <div class="source-card">
-                <div class="story-card-label">这一节真正要带走的点</div>
+                <div class="story-card-label">🧠 这节要记住什么</div>
                 <ul><li>OpenClaw使用pi-ai进行模型流传输，默认传输策略为auto（优先WebSocket，失败回退到SSE）。</li><li>你可以手动设置transport为sse、websocket或auto，以适应不同网络环境。</li><li>对于openai/*路径，OpenClaw默认启用WebSocket预热（openaiWsWarmup: true），以减少首轮延迟。</li><li>预热是可选的，但默认开启以提升体验，相关文档参考OpenAI的实时API指南。</li><li>配置示例展示了如何为特定模型设置传输参数，确保流式响应高效进行。</li></ul>
               </div>
               
             <div class="source-card">
-              <div class="story-card-label">命令 / 代码怎么理解</div>
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
               <ul><li>transport: &quot;auto&quot;：自动选择传输协议，先尝试WebSocket，不行再用SSE。</li><li>openaiWsWarmup: true：启用WebSocket预热，加速首次连接。</li><li>agents.defaults.models[&quot;openai-codex/gpt-5.4&quot;].params.transport：在配置中为指定模型设置传输方式。</li></ul>
             </div>
           
               <div class="story-card">
-                <div class="story-card-label">最后记一句</div>
+                <div class="story-card-label">🎈 最后记一句</div>
                 <p>根据网络条件调整传输协议，启用预热可以显著改善实时交互体验。</p>
               </div>
             </div>
@@ -4101,21 +4101,21 @@
             </div>
             <div class="story-grid">
               <div class="story-card">
-                <div class="story-card-label">为什么看这节</div>
+                <div class="story-card-label">🌟 为什么要看</div>
                 <p>这些功能让你在需要高性能时优化API调用，比如实时应用或高负载场景。</p>
               </div>
               <div class="source-card">
-                <div class="story-card-label">这一节真正要带走的点</div>
+                <div class="story-card-label">🧠 这节要记住什么</div>
                 <ul><li>OpenAI API支持priority服务层级，在OpenClaw中通过serviceTier参数传递。</li><li>支持的值包括auto、default、flex和priority，根据需求选择以调整处理顺序。</li><li>快速模式（fastMode）是一个共享开关，适用于openai/*和openai-codex/*会话。</li><li>启用快速模式后，OpenClaw自动应用低延迟配置：降低推理努力和文本冗余度，并设置优先级。</li><li>会话级别的设置会覆盖配置默认值，UI中清除覆盖后恢复为配置值。</li></ul>
               </div>
               
             <div class="source-card">
-              <div class="story-card-label">命令 / 代码怎么理解</div>
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
               <ul><li>serviceTier: &quot;priority&quot;：设置服务层级为优先级，可能加快处理但成本更高。</li><li>fastMode: true：启用快速模式，自动优化参数以减少延迟。</li><li>agents.defaults.models[&quot;openai/gpt-5.4&quot;].params.fastMode：在配置中为特定模型启用快速模式。</li></ul>
             </div>
           
               <div class="story-card">
-                <div class="story-card-label">最后记一句</div>
+                <div class="story-card-label">🎈 最后记一句</div>
                 <p>使用优先级和快速模式可以在关键时刻提升响应速度，但需权衡成本和效果。</p>
               </div>
             </div>
@@ -4129,21 +4129,21 @@
             </div>
             <div class="story-grid">
               <div class="story-card">
-                <div class="story-card-label">为什么看这节</div>
+                <div class="story-card-label">🌟 为什么要看</div>
                 <p>处理长对话或文档时，压缩能减少令牌使用，提升效率并控制成本。</p>
               </div>
               <div class="source-card">
-                <div class="story-card-label">这一节真正要带走的点</div>
+                <div class="story-card-label">🧠 这节要记住什么</div>
                 <ul><li>对于直接使用OpenAI Responses的模型，OpenClaw默认启用服务器端压缩提示。</li><li>这包括强制store: true（除非模型不支持）和注入context_management压缩配置。</li><li>默认压缩阈值为模型上下文窗口的70%，或80000（当窗口大小未知时）。</li><li>你可以显式启用、禁用或自定义压缩阈值，以适应特定需求如Azure OpenAI。</li><li>responsesServerCompaction参数仅控制压缩注入，store设置仍受模型兼容性影响。</li></ul>
               </div>
               
             <div class="source-card">
-              <div class="story-card-label">命令 / 代码怎么理解</div>
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
               <ul><li>responsesServerCompaction: true：显式启用服务器端压缩，适用于兼容模型。</li><li>responsesCompactThreshold: 120000：自定义压缩阈值，单位是令牌数。</li><li>agents.defaults.models[&quot;openai/gpt-5.4&quot;].params.responsesServerCompaction：在配置中管理压缩设置。</li></ul>
             </div>
           
               <div class="story-card">
-                <div class="story-card-label">最后记一句</div>
+                <div class="story-card-label">🎈 最后记一句</div>
                 <p>利用服务器端压缩可以智能管理长上下文，平衡性能和资源使用。</p>
               </div>
             </div>
@@ -4157,16 +4157,16 @@
             </div>
             <div class="story-grid">
               <div class="story-card">
-                <div class="story-card-label">为什么看这节</div>
+                <div class="story-card-label">🌟 为什么要看</div>
                 <p>这些要点帮助避免常见错误，并指向更深入的文档资源。</p>
               </div>
               <div class="source-card">
-                <div class="story-card-label">这一节真正要带走的点</div>
+                <div class="story-card-label">🧠 这节要记住什么</div>
                 <ul><li>模型引用始终使用provider/model格式（如openai/gpt-5.4），详见概念文档。</li><li>认证详情和重用规则在OAuth概念页中有详细说明，建议查阅以优化登录流程。</li><li>保持配置与OpenAI官方文档同步，及时更新模型名称和参数设置。</li><li>实验性功能如Codex Spark需谨慎使用，依赖账户权限且可能变动。</li></ul>
               </div>
               
               <div class="story-card">
-                <div class="story-card-label">最后记一句</div>
+                <div class="story-card-label">🎈 最后记一句</div>
                 <p>遵循命名规范并参考官方文档，可以确保配置的准确性和未来兼容性。</p>
               </div>
             </div>

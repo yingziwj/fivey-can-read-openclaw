@@ -3971,686 +3971,237 @@
       </div>
 
       
-    <section class="section-shell">
-      <div class="overview-card">
-        <div>
-          <p class="section-kicker">先听这页的人话版</p>
-          <h2>LINE</h2>
-          <p>这一页像一本关于“LINE”的小绘本，它先告诉我们这位机器人朋友会做什么，再一步一步解释什么时候该这样做。 你可以先把它想成：LINE (新本领插件)。</p>
-          <p>如果把这页当成“给普通人看的版本”，你最应该带走的是：它到底在教你一件什么事、什么时候要这样做、以及哪里最容易踩坑。</p>
+      <section class="section-shell">
+        <div class="overview-card">
+          <div>
+            <p class="section-kicker">AI 绘本解读版</p>
+            <h2>LINE 小助手来敲门啦！🚪</h2>
+            <p>让 OpenClaw 和 LINE 做好朋友。装上插件，告诉它门牌号和钥匙，就能在 LINE 里聊天啦！</p>
+          </div>
+          <div class="overview-meta">
+            <span>原始路径：/channels/line</span>
+            <span>故事卡片：8 张</span>
+            <a href="https://docs.openclaw.ai/channels/line" target="_blank" rel="noreferrer">查看官方原文</a>
+          </div>
         </div>
-        <div class="overview-meta">
-          <span>原始路径：/channels/line</span>
-          <span>章节数量：8</span>
-          <a href="https://docs.openclaw.ai/channels/line" target="_blank" rel="noreferrer">查看原文</a>
+      </section>
+      
+          <section class="section-shell" id="section-1">
+            <div class="section-heading">
+              <p class="section-kicker">第 1 站</p>
+              <h2>先认识一下 LINE 小助手</h2>
+              <p>LINE 小助手是一个插件，它能让 OpenClaw 和 LINE 互相说话。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>想用 OpenClaw 回复 LINE 消息吗？先请它进门。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>LINE 小助手像一个传话员，住在 OpenClaw 的网关上。</li><li>它需要两把钥匙才能工作：一个叫访问令牌，一个叫频道密钥。</li><li>它能帮你收消息、发消息，还能处理图片、位置和漂亮的卡片。</li><li>不过，它现在还不会处理点赞和话题串哦。</li><li>它已经准备好为你服务啦！</li></ul>
+              </div>
+              
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>LINE 小助手是连接 OpenClaw 和 LINE 的桥梁。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-2">
+            <div class="section-heading">
+              <p class="section-kicker">第 2 站</p>
+              <h2>请小助手进门 🛠️</h2>
+              <p>就像给手机装新 App，我们也需要给 OpenClaw 装上 LINE 插件。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>不装插件，OpenClaw 就听不懂 LINE 的话。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>打开你的 OpenClaw 工具箱。</li><li>告诉它：去安装一个叫 &#39;@openclaw/line&#39; 的插件。</li><li>如果你是从代码仓库直接运行，就告诉它去 &#39;extensions/line&#39; 文件夹里找。</li><li>安装好，小助手就住进 OpenClaw 的家啦。</li></ul>
+              </div>
+              
+            <div class="source-card">
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
+              <ul><li>`openclaw plugins install @openclaw/line` 这行命令就像说：&#39;嘿，去商店把 LINE 插件买回来装上！&#39;</li><li>`openclaw plugins install ./extensions/line` 这行命令就像说：&#39;不用去商店了，家里仓库就有，直接拿来用！&#39;</li></ul>
+            </div>
+          
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>一句话，把 LINE 插件请进门。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-3">
+            <div class="section-heading">
+              <p class="section-kicker">第 3 站</p>
+              <h2>给小助手配钥匙和门牌 🗝️</h2>
+              <p>小助手需要从 LINE 那里拿到专属钥匙，还要知道把信送到 OpenClaw 的哪个门。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>没有正确的钥匙和地址，LINE 的消息送不进来。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>先去 LINE 开发者的办公室（网站）开个账户。</li><li>在里面创建一个&#39;消息 API&#39;频道，就像申请一个专属信箱。</li><li>从频道设置里，抄下两把重要的钥匙：访问令牌和频道密钥。</li><li>告诉 LINE 这个频道：&#39;请把信都送到这个网址（我们的网关）。&#39;</li><li>这个网址就是小助手收信的门，必须是安全的 HTTPS 门。</li><li>小助手会检查每封信的&#39;签名&#39;，确保是 LINE 本人寄的，不是坏人冒充的。</li></ul>
+              </div>
+              
+            <div class="source-card">
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
+              <ul><li>设置网址 `https://gateway-host/line/webhook` 就像在门牌上写：&#39;LINE 的信请放这里！&#39;</li><li>如果门牌想换地方，可以在配置里告诉小助手新的 `webhookPath`。</li></ul>
+            </div>
+          
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>拿到钥匙，挂好门牌，通信线路就通了。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-4">
+            <div class="section-heading">
+              <p class="section-kicker">第 4 站</p>
+              <h2>告诉小助手家里的规矩 📜</h2>
+              <p>用一张小纸条（配置文件），告诉小助手怎么工作，谁可以进来聊天。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>没有规矩，小助手不知道该怎么处理消息。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>最简单的纸条上要写：启用 LINE，写上那两把钥匙。</li><li>纸条可以放在环境变量里，就像把密码写在便签上。</li><li>也可以把钥匙内容单独存在文件里，纸条只写文件路径。</li><li>文件必须是实实在在的文件，不能是快捷方式哦。</li><li>可以管理多个 LINE 账号，就像给家里不同的房间配不同的门卫。</li></ul>
+              </div>
+              
+            <div class="source-card">
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
+              <ul><li>配置里的 `enabled: true` 就像按下&#39;启动&#39;按钮。</li><li>`channelAccessToken` 和 `channelSecret` 就是那两把钥匙的名字。</li><li>`tokenFile` 和 `secretFile` 是说：&#39;钥匙不在这张纸上，去那个文件里找。&#39;</li></ul>
+            </div>
+          
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>一张纸条，定下所有规矩。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-5">
+            <div class="section-heading">
+              <p class="section-kicker">第 5 站</p>
+              <h2>谁可以进来聊天？🚦</h2>
+              <p>我们可以设定规则，决定哪些 LINE 朋友可以直接聊天，哪些需要先对暗号。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>保护你的 OpenClaw，不让陌生人随便打扰。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>默认情况下，私聊消息需要&#39;配对&#39;。陌生人发消息会被暂时拦住。</li><li>陌生人会收到一个配对码，就像一张临时通行证。</li><li>你可以在 OpenClaw 里查看这些通行证，并决定批准谁进来。</li><li>可以设置白名单，只允许特定的 LINE 用户 ID 和你聊天。</li><li>群聊也可以单独设置规则：全开放、仅白名单、或完全关闭。</li><li>LINE 的用户 ID 像身份证号，有固定格式（U/C/R 开头加一串字符）。</li></ul>
+              </div>
+              
+            <div class="source-card">
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
+              <ul><li>`openclaw pairing list line` 命令就像翻开访客登记簿，看看谁在等。</li><li>`openclaw pairing approve line &lt;CODE&gt;` 命令就像拿起印章，在某个通行证上盖&#39;批准&#39;。</li><li>配置项 `dmPolicy: &quot;pairing&quot;` 就是定下&#39;私聊要先配对&#39;这条规矩。</li></ul>
+            </div>
+          
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>你来决定，谁是你的聊天好友。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-6">
+            <div class="section-heading">
+              <p class="section-kicker">第 6 站</p>
+              <h2>消息怎么送出去？📨</h2>
+              <p>小助手会帮你把 OpenClaw 的回复，漂亮地送到 LINE 上。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>了解消息怎么被处理，聊天更顺畅。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>太长的文字会被切成小块，一块一块送，避免卡住。</li><li>简单的 Markdown 格式会被去掉，但代码块和表格会变成漂亮的 LINE 卡片。</li><li>如果回复需要时间生成，LINE 上会先显示一个&#39;加载中&#39;的动画。</li><li>收到的图片、视频等文件，大小不能超过设定的限制（默认 10MB）。</li></ul>
+              </div>
+              
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>小助手会把回复包装得漂漂亮亮再送出。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-7">
+            <div class="section-heading">
+              <p class="section-kicker">第 7 站</p>
+              <h2>发送超酷的消息！🎨</h2>
+              <p>除了普通文字，你还能让 OpenClaw 发送带按钮的快速回复、位置地图、精美卡片！</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>让聊天变得更有趣、更实用。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>在消息里加上一个特殊的&#39;频道数据&#39;包裹，就能发送高级功能。</li><li>可以放几个快速回复按钮，让对方一点就能选。</li><li>可以发送一个具体的位置，带地图和地址。</li><li>可以发送 Flex 卡片，这是一种可以自由排版的漂亮信息框。</li><li>也可以发送模板消息，比如一个&#39;确认&#39;对话框。</li><li>插件还自带一个 `/card` 魔法命令，能快速生成预设好的卡片。</li></ul>
+              </div>
+              
+            <div class="source-card">
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
+              <ul><li>在 `channelData.line` 里写 `quickReplies: [&quot;Status&quot;, &quot;Help&quot;]`，就像在消息下面放了两个按钮。</li><li>写 `location: {...}` 就像附上了一张地图标记。</li><li>使用 `/card info &quot;Welcome&quot; &quot;Thanks for joining!&quot;` 命令，就像念了一句咒语，一张欢迎卡片就出现了。</li></ul>
+            </div>
+          
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>给你的消息加点魔法，让它变得更好玩！</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-8">
+            <div class="section-heading">
+              <p class="section-kicker">第 8 站</p>
+              <h2>如果出问题了怎么办？🔧</h2>
+              <p>别担心，大部分问题都有简单的检查步骤。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>快速找到问题，让聊天恢复畅通。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>如果 LINE 验证失败：检查网址是不是 HTTPS，钥匙（频道密钥）对不对。</li><li>如果收不到消息：检查门牌（webhook 路径）和配置里写的是不是一样。</li><li>如果图片下载失败：可能是文件太大了，试试把大小限制调高一点。</li><li>确保你的 OpenClaw 网关能从互联网上被 LINE 访问到。</li></ul>
+              </div>
+              
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>检查钥匙、门牌和文件大小，问题迎刃而解。</p>
+              </div>
+            </div>
+          </section>
+        
+      <section class="section-shell">
+        <div class="ad-placeholder">
+          <p>这里预留给未来的 Google AdSense 模块。</p>
+          <code>&lt;!-- ADSENSE_SNIPPET --&gt;</code>
         </div>
-      </div>
-    </section>
+      </section>
     
-        <section class="section-shell" id="section-1">
-          <div class="section-heading">
-            <p class="section-kicker">第 1 站</p>
-            <h2>Start Here</h2>
-            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>你理解的是能力边界，不只是功能名字。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“LINE (新本领插件) LINE connects to OpenClaw via the LINE Messaging 对话接口. The 新本领插件 runs as a 小铃铛通知 receiver on the 门口的小门卫 an…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“LINE (新本领插件)”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p># LINE (plugin)</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“LINE connects to OpenClaw via the LINE Messaging 对话接口. The 新本领插件 runs as a 小铃铛通知 receiver on the 门口的小门卫 and uses your 消…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>LINE connects to OpenClaw via the LINE Messaging API. The plugin runs as a webhook receiver on the gateway and uses your channel access token + channel secret for authentication.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Status: supported via 新本领插件. Direct 小纸条消息s, 大家一起的房间 chats, media, locations, Flex 小纸条消息s, template 小纸条消息s, and quick re…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Status: supported via plugin. Direct messages, group chats, media, locations, Flex messages, template messages, and quick replies are supported. Reactions and threads are not supported.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-2">
-          <div class="section-heading">
-            <p class="section-kicker">第 2 站</p>
-            <h2>新本领插件 required</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Install the LINE 新本领插件: Local checkout (when running from a git repo):”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Install the LINE 新本领插件:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Install the LINE plugin:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一句直接对 OpenClaw 说的话，就像对小助手下达任务。</p>
-        <ul class="code-steps">
-          <li>这一句是在直接叫 OpenClaw 做事：“openclaw plugins install @openclaw/line”。你可以把它想成对机器人说的完整命令。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">openclaw plugins install @openclaw/line</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Local checkout (when running from a git repo):”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Local checkout (when running from a git repo):</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一句直接对 OpenClaw 说的话，就像对小助手下达任务。</p>
-        <ul class="code-steps">
-          <li>这一句是在直接叫 OpenClaw 做事：“openclaw plugins install ./extensions/line”。你可以把它想成对机器人说的完整命令。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">openclaw plugins install ./extensions/line</code></pre>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-3">
-          <div class="section-heading">
-            <p class="section-kicker">第 3 站</p>
-            <h2>Setup</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“1. Create a LINE Developers account and open the Console: https://developers.line.biz/console/ 2. Create (or pick) a Pr…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“1. Create a LINE Developers account and open the Console: https://developers.line.biz/console/ 2. Create (or pick) a Pr…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>1. Create a LINE Developers account and open the Console: <a href="https://developers.line.biz/console/" target="_blank" rel="noreferrer">https://developers.line.biz/console/</a> 2. Create (or pick) a Provider and add a **Messaging API** channel. 3. Copy the **Channel access token** and **Channel secret** from the channel settings. 4. Enable **Use webhook** in the Messaging API settings. 5. Set the webhook URL to your gateway endpoint (HTTPS required):</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段像给机器人看的说明书，告诉它要按什么样子准备东西。</p>
-        <ul class="code-steps">
-          <li>这里在给“https”贴标签，意思是把它设置成“//gateway-host/line/webhook”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-text">https://gateway-host/line/webhook</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“The 门口的小门卫 responds to LINE’s 小铃铛通知 verification (GET) and inbound events (POST). If you need a custom path, set 消息通道s.…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>The gateway responds to LINE’s webhook verification (GET) and inbound events (POST). If you need a custom path, set <code>channels.line.webhookPath</code> or <code>channels.line.accounts.&lt;id&gt;.webhookPath</code> and update the URL accordingly.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“安全守门员 note:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Security note:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Setup”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：LINE signature verification is body-depen…、OpenClaw processes 小铃铛通知 events from the…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>LINE signature verification is body-dependent (HMAC over the raw body), so OpenClaw applies strict pre-auth body limits and timeout before verification.</li><li>OpenClaw processes webhook events from the verified raw request bytes. Upstream middleware-transformed <code>req.body</code> values are ignored for signature-integrity safety.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-4">
-          <div class="section-heading">
-            <p class="section-kicker">第 4 站</p>
-            <h2>设置说明书ure</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Minimal 设置说明书: Env vars (default account only): Token/secret files: tokenFile and secretFile must point to regular file…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Minimal 设置说明书:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Minimal config:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“channels”贴标签，意思是把它设置成“{”。</li><li>这里在给“line”贴标签，意思是把它设置成“{”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json5">{
-  channels: {
-    line: {
-      enabled: true,
-      channelAccessToken: &quot;LINE_CHANNEL_ACCESS_TOKEN&quot;,
-      channelSecret: &quot;LINE_CHANNEL_SECRET&quot;,
-      dmPolicy: &quot;pairing&quot;,
-    },
-  },
-}</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Env vars (default account only):”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Env vars (default account only):</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Configure”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：LINE_消息通道_ACCESS_TOKEN、LINE_消息通道_SECRET。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>LINE_CHANNEL_ACCESS_TOKEN</code></li><li><code>LINE_CHANNEL_SECRET</code></li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Token/secret files:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Token/secret files:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“channels”贴标签，意思是把它设置成“{”。</li><li>这里在给“line”贴标签，意思是把它设置成“{”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json5">{
-  channels: {
-    line: {
-      tokenFile: &quot;/path/to/line-token.txt&quot;,
-      secretFile: &quot;/path/to/line-secret.txt&quot;,
-    },
-  },
-}</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“tokenFile and secretFile must point to regular files. Symlinks are rejected.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p><code>tokenFile</code> and <code>secretFile</code> must point to regular files. Symlinks are rejected.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Multiple accounts:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Multiple accounts:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“channels”贴标签，意思是把它设置成“{”。</li><li>这里在给“line”贴标签，意思是把它设置成“{”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json5">{
-  channels: {
-    line: {
-      accounts: {
-        marketing: {
-          channelAccessToken: &quot;...&quot;,
-          channelSecret: &quot;...&quot;,
-          webhookPath: &quot;/line/marketing&quot;,
-        },
-      },
-    },
-  },
-}</code></pre>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-5">
-          <div class="section-heading">
-            <p class="section-kicker">第 5 站</p>
-            <h2>Access control</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Direct 小纸条消息s default to pairing. Unknown senders get a pairing code and their 小纸条消息s are ignored until approved. Allow…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Direct 小纸条消息s default to pairing. Unknown senders get a pairing code and their 小纸条消息s are ignored until approved.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Direct messages default to pairing. Unknown senders get a pairing code and their messages are ignored until approved.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一句直接对 OpenClaw 说的话，就像对小助手下达任务。</p>
-        <ul class="code-steps">
-          <li>这一句是在直接叫 OpenClaw 做事：“openclaw pairing list line”。你可以把它想成对机器人说的完整命令。</li><li>这一句是在直接叫 OpenClaw 做事：“openclaw pairing approve line &lt;CODE&gt;”。你可以把它想成对机器人说的完整命令。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">openclaw pairing list line
-openclaw pairing approve line &lt;CODE&gt;</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Allowlists and policies:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Allowlists and policies:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Access control”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：消息通道s.line.dmPolicy: pairing allowlist op…、消息通道s.line.allowFrom: allowlisted LINE us…、消息通道s.line.大家一起的房间Policy: allowlist open…、消息通道s.line.大家一起的房间AllowFrom: allowlisted…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>channels.line.dmPolicy</code>: <code>pairing | allowlist | open | disabled</code></li><li><code>channels.line.allowFrom</code>: allowlisted LINE user IDs for DMs</li><li><code>channels.line.groupPolicy</code>: <code>allowlist | open | disabled</code></li><li><code>channels.line.groupAllowFrom</code>: allowlisted LINE user IDs for groups</li><li>Per-group overrides: <code>channels.line.groups.&lt;groupId&gt;.allowFrom</code></li><li>Runtime note: if <code>channels.line</code> is completely missing, runtime falls back to <code>groupPolicy=&quot;allowlist&quot;</code> for group checks (even if <code>channels.defaults.groupPolicy</code> is set).</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“LINE IDs are case-sensitive. Valid IDs look like:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>LINE IDs are case-sensitive. Valid IDs look like:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Access control”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：User: U + 32 hex chars、大家一起的房间: C + 32 hex chars、Room: R + 32 hex chars。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>User: <code>U</code> + 32 hex chars</li><li>Group: <code>C</code> + 32 hex chars</li><li>Room: <code>R</code> + 32 hex chars</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-6">
-          <div class="section-heading">
-            <p class="section-kicker">第 6 站</p>
-            <h2>小纸条消息 behavior</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“cards when possible. animation while the 机器人朋友 works.”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“cards when possible.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>cards when possible.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“animation while the 机器人朋友 works.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>animation while the agent works.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Message behavior”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Text is chunked at 5000 characters.、Markdown formatting is stripped; code blo…、一边说一边送ing responses are buffered; LINE re…、Media downloads are capped by 消息通道s.line.…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Text is chunked at 5000 characters.</li><li>Markdown formatting is stripped; code blocks and tables are converted into Flex</li><li>Streaming responses are buffered; LINE receives full chunks with a loading</li><li>Media downloads are capped by <code>channels.line.mediaMaxMb</code> (default 10).</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-7">
-          <div class="section-heading">
-            <p class="section-kicker">第 7 站</p>
-            <h2>消息通道 data (rich 小纸条消息s)</h2>
-            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>你理解的是能力边界，不只是功能名字。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Use 消息通道Data.line to send quick replies, locations, Flex cards, or template 小纸条消息s. The LINE 新本领插件 also ships a /card 魔…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Use 消息通道Data.line to send quick replies, locations, Flex cards, or template 小纸条消息s.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Use <code>channelData.line</code> to send quick replies, locations, Flex cards, or template messages.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“text”贴标签，意思是把它设置成“Here you go”。</li><li>这里在给“channelData”贴标签，意思是把它设置成“{”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json5">{
-  text: &quot;Here you go&quot;,
-  channelData: {
-    line: {
-      quickReplies: [&quot;Status&quot;, &quot;Help&quot;],
-      location: {
-        title: &quot;Office&quot;,
-        address: &quot;123 Main St&quot;,
-        latitude: 35.681236,
-        longitude: 139.767125,
-      },
-      flexMessage: {
-        altText: &quot;Status card&quot;,
-        contents: {
-          /* Flex payload */
-        },
-      },
-      templateMessage: {
-        type: &quot;confirm&quot;,
-        text: &quot;Proceed?&quot;,
-        confirmLabel: &quot;Yes&quot;,
-        confirmData: &quot;yes&quot;,
-        cancelLabel: &quot;No&quot;,
-        cancelData: &quot;no&quot;,
-      },
-    },
-  },
-}</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“The LINE 新本领插件 also ships a /card 魔法口令 for Flex 小纸条消息 presets:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>The LINE plugin also ships a <code>/card</code> command for Flex message presets:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段像给机器人看的说明书，告诉它要按什么样子准备东西。</p>
-        <ul class="code-steps">
-          <li>这一行“/card info &quot;Welcome&quot; &quot;Thanks for joining!&quot;”是当前步骤要交给电脑的一小块提示。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-text">/card info &quot;Welcome&quot; &quot;Thanks for joining!&quot;</code></pre>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-8">
-          <div class="section-heading">
-            <p class="section-kicker">第 8 站</p>
-            <h2>Troubleshooting</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“消息通道Secret matches the LINE console. and that the 门口的小门卫 is reachable from LINE. default limit.”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“消息通道Secret matches the LINE console.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p><code>channelSecret</code> matches the LINE console.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“and that the 门口的小门卫 is reachable from LINE.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>and that the gateway is reachable from LINE.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“default limit.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>default limit.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Troubleshooting”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：**小铃铛通知 verification fails:** ensure the…、**No inbound events:** confirm the 小铃铛通知…、**Media download errors:** raise 消息通道s.li…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>**Webhook verification fails:** ensure the webhook URL is HTTPS and the</li><li>**No inbound events:** confirm the webhook path matches <code>channels.line.webhookPath</code></li><li>**Media download errors:** raise <code>channels.line.mediaMaxMb</code> if media exceeds the</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-    <section class="section-shell">
-      <div class="ad-placeholder">
-        <p>这里预留给未来的 Google AdSense 模块。</p>
-        <code>&lt;!-- ADSENSE_SNIPPET --&gt;</code>
-      </div>
-    </section>
-  
 
       <footer class="page-footer">
         <div>

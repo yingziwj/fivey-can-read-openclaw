@@ -3971,1514 +3971,298 @@
       </div>
 
       
-    <section class="section-shell">
-      <div class="overview-card">
-        <div>
-          <p class="section-kicker">先听这页的人话版</p>
-          <h2>Mattermost</h2>
-          <p>这一页像一本关于“Mattermost”的小绘本，它先告诉我们这位机器人朋友会做什么，再一步一步解释什么时候该这样做。 你可以先把它想成：Mattermost (新本领插件)。</p>
-          <p>如果把这页当成“给普通人看的版本”，你最应该带走的是：它到底在教你一件什么事、什么时候要这样做、以及哪里最容易踩坑。</p>
+      <section class="section-shell">
+        <div class="overview-card">
+          <div>
+            <p class="section-kicker">AI 绘本解读版</p>
+            <h2>🤖 让OpenClaw机器人住进你的Mattermost聊天室</h2>
+            <p>机器人要来聊天室做客啦！先给它装个插件，再配把钥匙。它能帮你传话、点按钮，还能记住谁是谁。</p>
+          </div>
+          <div class="overview-meta">
+            <span>原始路径：/channels/mattermost</span>
+            <span>故事卡片：10 张</span>
+            <a href="https://docs.openclaw.ai/channels/mattermost" target="_blank" rel="noreferrer">查看官方原文</a>
+          </div>
         </div>
-        <div class="overview-meta">
-          <span>原始路径：/channels/mattermost</span>
-          <span>章节数量：17</span>
-          <a href="https://docs.openclaw.ai/channels/mattermost" target="_blank" rel="noreferrer">查看原文</a>
+      </section>
+      
+          <section class="section-shell" id="section-1">
+            <div class="section-heading">
+              <p class="section-kicker">第 1 站</p>
+              <h2>📦 先装插件，机器人才能进门</h2>
+              <p>机器人不是空手来的，它需要带个“插件工具箱”才能进Mattermost聊天室。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>没插件，机器人连门都找不到。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>Mattermost机器人是个“插件”，不是自带的。</li><li>就像给手机装个新App，机器人才能用。</li><li>可以从网上商店直接安装。</li><li>如果你有机器人的源代码，也可以从本地安装。</li><li>安装时，OpenClaw会帮你选好路。</li></ul>
+              </div>
+              
+            <div class="source-card">
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
+              <ul><li>`openclaw plugins install @openclaw/mattermost` 这行命令就像说：“去网上商店，把Mattermost插件买回来装上！”</li><li>`openclaw plugins install ./extensions/mattermost` 这行命令就像说：“不用去商店了，我家里就有这个插件，直接从这拿吧！”</li></ul>
+            </div>
+          
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>先装插件，再请机器人。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-2">
+            <div class="section-heading">
+              <p class="section-kicker">第 2 站</p>
+              <h2>🔑 给机器人配钥匙和地址</h2>
+              <p>机器人要进聊天室，得有一把“钥匙”（bot token）和知道聊天室“地址”（base URL）。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>没钥匙进不了门，不知道地址找不到路。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>先在Mattermost里创建一个机器人账号，拿到它的“钥匙”。</li><li>记住你的聊天室大门地址，比如 https://chat.example.com。</li><li>把钥匙和地址告诉OpenClaw。</li><li>OpenClaw就能启动“网关”，让机器人开始工作。</li><li>配置里还有个“私聊规则”，可以决定谁可以直接找机器人说话。</li></ul>
+              </div>
+              
+            <div class="source-card">
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
+              <ul><li>`&quot;botToken&quot;: &quot;mm-token&quot;` 这就像把钥匙串上的“Mattermost钥匙”挂上去。</li><li>`&quot;baseUrl&quot;: &quot;https://chat.example.com&quot;` 这就像在地图上标出聊天室的位置。</li><li>`&quot;dmPolicy&quot;: &quot;pairing&quot;` 这就像说：“不认识的人想私聊？先对个暗号！”</li></ul>
+            </div>
+          
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>钥匙和地址，缺一不可。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-3">
+            <div class="section-heading">
+              <p class="section-kicker">第 3 站</p>
+              <h2>💬 机器人什么时候开口说话？</h2>
+              <p>在群里，机器人不能随便插嘴。我们得告诉它什么时候可以说话。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>不然机器人会在群里乱回复，吵到大家。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>私聊里，机器人会自动回复你。</li><li>在群里，默认要@它，它才理你。</li><li>你可以改成：群里每句话它都回。</li><li>或者：看到特定“暗号”（比如 &gt; 或 !）开头，它才回。</li><li>就算改了，@它它还是会理你。</li></ul>
+              </div>
+              
+            <div class="source-card">
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
+              <ul><li>`&quot;chatmode&quot;: &quot;onchar&quot;` 这就像给机器人一个“暗号列表”。</li><li>`&quot;oncharPrefixes&quot;: [&quot;&gt;&quot;, &quot;!&quot;]` 这就像说：“看到消息以&gt;或!开头，你就回答！”</li></ul>
+            </div>
+          
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>定好规矩，机器人就知道什么时候开口。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-4">
+            <div class="section-heading">
+              <p class="section-kicker">第 4 站</p>
+              <h2>🧵 对话是公开聊，还是开小窗？</h2>
+              <p>机器人在群里回复你，是直接在群里说，还是开个“小窗”（线程）悄悄说？</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>开小窗能让对话更整洁，不打扰别人。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>默认：如果你在“小窗”里问，机器人就在“小窗”里答。</li><li>可以改成：你在群里问，机器人就开个新“小窗”和你聊。</li><li>私聊不受这个影响，没有“小窗”。</li><li>一旦开了“小窗”，后面的对话都会在这个“小窗”里。</li><li>这样，一次聊天就不会散得到处都是。</li></ul>
+              </div>
+              
+            <div class="source-card">
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
+              <ul><li>`&quot;replyToMode&quot;: &quot;all&quot;` 这就像告诉机器人：“只要在群里聊天，就都开小窗！”</li></ul>
+            </div>
+          
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>开个小窗，悄悄话更整齐。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-5">
+            <div class="section-heading">
+              <p class="section-kicker">第 5 站</p>
+              <h2>🚪 谁可以私聊或@机器人？</h2>
+              <p>得管好大门，不是谁都能来找机器人私聊或在群里@它。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>防止陌生人随便打扰机器人。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>私聊默认要“对暗号”，你批准了才能聊。</li><li>用命令可以查看和批准“暗号”。</li><li>也可以把私聊大门完全打开。</li><li>在群里，默认只允许“白名单”里的人@机器人。</li><li>白名单最好用用户ID，用名字可能变来变去。</li></ul>
+              </div>
+              
+            <div class="source-card">
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
+              <ul><li>`openclaw pairing list mattermost` 这就像查看“谁在门口对暗号？”。</li><li>`openclaw pairing approve mattermost &lt;CODE&gt;` 这就像说：“暗号对了，进来吧！”。</li><li>`&quot;groupPolicy&quot;: &quot;allowlist&quot;` 这就像在群里贴了个“允许@机器人名单”。</li></ul>
+            </div>
+          
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>管好大门，聊天更安心。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-6">
+            <div class="section-heading">
+              <p class="section-kicker">第 6 站</p>
+              <h2>📨 让机器人主动发消息给谁？</h2>
+              <p>你可以命令机器人主动发消息。但要告诉它，是发给“一个人”还是“一个群”。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>聊天室里的ID，有时分不清是人是群。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>发消息时，要说清楚是 `channel:&lt;群ID&gt;` 还是 `user:&lt;人ID&gt;`。</li><li>也可以用 `@用户名`，机器人会去查这是谁。</li><li>如果只给一个光秃秃的ID，机器人会先猜这是不是个人。</li><li>猜对了就私聊，猜错了就当成群。</li><li>为了不猜错，最好每次都加上 `channel:` 或 `user:`。</li></ul>
+              </div>
+              
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>说清是人是群，消息不送错。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-7">
+            <div class="section-heading">
+              <p class="section-kicker">第 7 站</p>
+              <h2>🔄 私聊通道打不开？多试几次！</h2>
+              <p>机器人想找人私聊，得先开条“私聊通道”。万一第一次没打开，它会耐心多试几次。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>网络有时会卡一下，多试几次就能成功。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>创建私聊通道时，可能会遇到网络忙或出错。</li><li>机器人默认会重试几次，每次等一会儿。</li><li>你可以调整重试次数和等待时间。</li><li>这只在创建私聊通道时重试，别的事不重试。</li><li>如果是你自己的错误（比如地址错了），它不会重试。</li></ul>
+              </div>
+              
+            <div class="source-card">
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
+              <ul><li>`&quot;maxRetries&quot;: 3` 这就像说：“最多试3次！”。</li><li>`&quot;initialDelayMs&quot;: 1000` 这就像：“第一次失败后，先等1秒钟再试。”</li></ul>
+            </div>
+          
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>给点耐心，通道总会打开。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-8">
+            <div class="section-heading">
+              <p class="section-kicker">第 8 站</p>
+              <h2>👍 让机器人给消息点个赞</h2>
+              <p>机器人不仅能说话，还能给消息加表情（比如点赞）。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>点个赞，互动更有趣。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>用专门的命令，告诉机器人去点哪个表情。</li><li>要告诉它是哪条消息（消息ID）。</li><li>表情可以用名字，比如 `thumbsup`。</li><li>也可以让它把点过的赞取消掉。</li><li>默认这个功能是打开的。</li></ul>
+              </div>
+              
+            <div class="source-card">
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
+              <ul><li>`message action=react ... emoji=thumbsup` 这行命令就像说：“机器人，去给那条消息点个赞！”</li><li>`remove=true` 这个设置就像说：“不，把那个赞取消掉！”</li></ul>
+            </div>
+          
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>点个表情，消息更生动。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-9">
+            <div class="section-heading">
+              <p class="section-kicker">第 9 站</p>
+              <h2>🛎️ 发消息，带上可以点的按钮</h2>
+              <p>机器人发的消息，可以带上按钮。别人一点，机器人就知道选了什么。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>按钮让选择变得超简单，一点就行。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>先要打开机器人的“按钮”能力。</li><li>发消息时，告诉它按钮怎么排，上面写什么字。</li><li>按钮上的 `callback_data` 就像它的“身份证号”。</li><li>别人一点按钮，机器人就收到这个“身份证号”。</li><li>按钮可以排成一行行，样子还能选“普通”、“重要”或“危险”。</li></ul>
+              </div>
+              
+            <div class="source-card">
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
+              <ul><li>`&quot;capabilities&quot;: [&quot;inlineButtons&quot;]` 这就像打开机器人身上的“按钮开关”。</li><li>`buttons=[[{&quot;text&quot;:&quot;Yes&quot;,&quot;callback_data&quot;:&quot;yes&quot;}]]` 这就像在消息下面贴一个按钮，写着“Yes”，点了就告诉机器人“yes”。</li></ul>
+            </div>
+          
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>消息加按钮，选择超方便。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-10">
+            <div class="section-heading">
+              <p class="section-kicker">第 10 站</p>
+              <h2>🤔 机器人不听话了？看看这里！</h2>
+              <p>机器人偶尔会闹点小脾气。大部分问题，这里都有答案。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>快速找到原因，让机器人马上恢复工作。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>在群里不说话？检查它有没有进群，你有没有@它。</li><li>认证出错？检查钥匙和地址对不对。</li><li>按钮点了没反应？检查按钮ID是不是只用了字母和数字。</li><li>按钮显示白框？检查按钮的 `text` 和 `callback_data` 写全没有。</li><li>多账号出问题？记住，环境变量只对“默认”账号有用。</li></ul>
+              </div>
+              
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>常见问题，对照检查。</p>
+              </div>
+            </div>
+          </section>
+        
+      <section class="section-shell">
+        <div class="ad-placeholder">
+          <p>这里预留给未来的 Google AdSense 模块。</p>
+          <code>&lt;!-- ADSENSE_SNIPPET --&gt;</code>
         </div>
-      </div>
-    </section>
+      </section>
     
-        <section class="section-shell" id="section-1">
-          <div class="section-heading">
-            <p class="section-kicker">第 1 站</p>
-            <h2>Start Here</h2>
-            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>你理解的是能力边界，不只是功能名字。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Mattermost (新本领插件) Status: supported via 新本领插件 (bot token + WebSocket events). 消息通道s, 大家一起的房间s, and DMs are supported.…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Mattermost (新本领插件)”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p># Mattermost (plugin)</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Status: supported via 新本领插件 (bot token + WebSocket events). 消息通道s, 大家一起的房间s, and DMs are supported. Mattermost is a sel…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Status: supported via plugin (bot token + WebSocket events). Channels, groups, and DMs are supported. Mattermost is a self-hostable team messaging platform; see the official site at <a href="https://mattermost.com" target="_blank" rel="noreferrer">mattermost.com</a> for product details and downloads.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-2">
-          <div class="section-heading">
-            <p class="section-kicker">第 2 站</p>
-            <h2>新本领插件 required</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Mattermost ships as a 新本领插件 and is not bundled with the core install. Install via CLI (npm registry): Local checkout (w…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Mattermost ships as a 新本领插件 and is not bundled with the core install.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Mattermost ships as a plugin and is not bundled with the core install.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Install via CLI (npm registry):”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Install via CLI (npm registry):</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一句直接对 OpenClaw 说的话，就像对小助手下达任务。</p>
-        <ul class="code-steps">
-          <li>这一句是在直接叫 OpenClaw 做事：“openclaw plugins install @openclaw/mattermost”。你可以把它想成对机器人说的完整命令。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">openclaw plugins install @openclaw/mattermost</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Local checkout (when running from a git repo):”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Local checkout (when running from a git repo):</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一句直接对 OpenClaw 说的话，就像对小助手下达任务。</p>
-        <ul class="code-steps">
-          <li>这一句是在直接叫 OpenClaw 做事：“openclaw plugins install ./extensions/mattermost”。你可以把它想成对机器人说的完整命令。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">openclaw plugins install ./extensions/mattermost</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“If you choose Mattermost during setup and a git checkout is detected, OpenClaw will offer the local install path automa…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>If you choose Mattermost during setup and a git checkout is detected, OpenClaw will offer the local install path automatically.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Details: 新本领插件s”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Details: <a href="/tools/plugin" target="_blank" rel="noreferrer">Plugins</a></p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-3">
-          <div class="section-heading">
-            <p class="section-kicker">第 3 站</p>
-            <h2>Quick setup</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“1. Install the Mattermost 新本领插件. 2. Create a Mattermost bot account and copy the **bot token**. 3. Copy the Mattermost…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“1. Install the Mattermost 新本领插件. 2. Create a Mattermost bot account and copy the **bot token**. 3. Copy the Mattermost…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>1. Install the Mattermost plugin. 2. Create a Mattermost bot account and copy the **bot token**. 3. Copy the Mattermost **base URL** (e.g., <code>https://chat.example.com</code>). 4. Configure OpenClaw and start the gateway.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Minimal 设置说明书:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Minimal config:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“channels”贴标签，意思是把它设置成“{”。</li><li>这里在给“mattermost”贴标签，意思是把它设置成“{”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json5">{
-  channels: {
-    mattermost: {
-      enabled: true,
-      botToken: &quot;mm-token&quot;,
-      baseUrl: &quot;https://chat.example.com&quot;,
-      dmPolicy: &quot;pairing&quot;,
-    },
-  },
-}</code></pre>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-4">
-          <div class="section-heading">
-            <p class="section-kicker">第 4 站</p>
-            <h2>Native slash 魔法口令s</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Native slash 魔法口令s are opt-in. When enabled, OpenClaw registers oc_* slash 魔法口令s via the Mattermost 对话接口 and receives c…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Native slash 魔法口令s are opt-in. When enabled, OpenClaw registers oc_* slash 魔法口令s via the Mattermost 对话接口 and receives c…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Native slash commands are opt-in. When enabled, OpenClaw registers <code>oc_*</code> slash commands via the Mattermost API and receives callback POSTs on the gateway HTTP server.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“channels”贴标签，意思是把它设置成“{”。</li><li>这里在给“mattermost”贴标签，意思是把它设置成“{”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json5">{
-  channels: {
-    mattermost: {
-      commands: {
-        native: true,
-        nativeSkills: true,
-        callbackPath: &quot;/api/channels/mattermost/command&quot;,
-        // Use when Mattermost cannot reach the gateway directly (reverse proxy/public URL).
-        callbackUrl: &quot;https://gateway.example.com/api/channels/mattermost/command&quot;,
-      },
-    },
-  },
-}</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Notes:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Notes:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“消息通道s.mattermost.accounts.&lt;id&gt;.魔法口令s (account values override top-level fields).”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p><code>channels.mattermost.accounts.&lt;id&gt;.commands</code> (account values override top-level fields).</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“ServiceSettings.AllowedUntrustedInternalConnections to include the callback host/domain.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p><code>ServiceSettings.AllowedUntrustedInternalConnections</code> to include the callback host/domain.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Native slash commands”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：native: &quot;auto&quot; defaults to disabled for M…、If callbackUrl is omitted, OpenClaw deriv…、For multi-account setups, 魔法口令s can be se…、魔法口令 callbacks are validated with per-魔法口…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>native: &quot;auto&quot;</code> defaults to disabled for Mattermost. Set <code>native: true</code> to enable.</li><li>If <code>callbackUrl</code> is omitted, OpenClaw derives one from gateway host/port + <code>callbackPath</code>.</li><li>For multi-account setups, <code>commands</code> can be set at the top level or under</li><li>Command callbacks are validated with per-command tokens and fail closed when token checks fail.</li><li>Reachability requirement: the callback endpoint must be reachable from the Mattermost server.</li><li>Do not set <code>callbackUrl</code> to <code>localhost</code> unless Mattermost runs on the same host/network namespace as OpenClaw.</li><li>Do not set <code>callbackUrl</code> to your Mattermost base URL unless that URL reverse-proxies <code>/api/channels/mattermost/command</code> to OpenClaw.</li><li>A quick check is <code>curl https://&lt;gateway-host&gt;/api/channels/mattermost/command</code>; a GET should return <code>405 Method Not Allowed</code> from OpenClaw, not <code>404</code>.</li><li>Mattermost egress allowlist requirement:</li><li>If your callback targets private/tailnet/internal addresses, set Mattermost</li><li>Use host/domain entries, not full URLs.</li><li>Good: <code>gateway.tailnet-name.ts.net</code></li><li>Bad: <code>https://gateway.tailnet-name.ts.net</code></li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-5">
-          <div class="section-heading">
-            <p class="section-kicker">第 5 站</p>
-            <h2>Environment variables (default account)</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Set these on the 门口的小门卫 host if you prefer env vars: Env vars apply only to the **default** account (default). Other ac…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Set these on the 门口的小门卫 host if you prefer env vars:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Set these on the gateway host if you prefer env vars:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Environment variables (default account)”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：MATTERMOST_BOT_TOKEN=...、MATTERMOST_URL=https://chat.example.com。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>MATTERMOST_BOT_TOKEN=...</code></li><li><code>MATTERMOST_URL=https://chat.example.com</code></li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Env vars apply only to the **default** account (default). Other accounts must use 设置说明书 values.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Env vars apply only to the **default** account (<code>default</code>). Other accounts must use config values.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-6">
-          <div class="section-heading">
-            <p class="section-kicker">第 6 站</p>
-            <h2>Chat modes</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Mattermost responds to DMs automatically. 消息通道 behavior is controlled by chatmode: 设置说明书 example: Notes:”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Mattermost responds to DMs automatically. 消息通道 behavior is controlled by chatmode:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Mattermost responds to DMs automatically. Channel behavior is controlled by <code>chatmode</code>:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Chat modes”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：oncall (default): respond only when @ment…、on小纸条消息: respond to every 消息通道 小纸条消息.、onchar: respond when a 小纸条消息 starts with…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>oncall</code> (default): respond only when @mentioned in channels.</li><li><code>onmessage</code>: respond to every channel message.</li><li><code>onchar</code>: respond when a message starts with a trigger prefix.</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“设置说明书 example:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Config example:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“channels”贴标签，意思是把它设置成“{”。</li><li>这里在给“mattermost”贴标签，意思是把它设置成“{”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json5">{
-  channels: {
-    mattermost: {
-      chatmode: &quot;onchar&quot;,
-      oncharPrefixes: [&quot;&gt;&quot;, &quot;!&quot;],
-    },
-  },
-}</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Notes:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Notes:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Chat modes”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：onchar still responds to explicit @mentio…、消息通道s.mattermost.requireMention is honore…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>onchar</code> still responds to explicit @mentions.</li><li><code>channels.mattermost.requireMention</code> is honored for legacy configs but <code>chatmode</code> is preferred.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-7">
-          <div class="section-heading">
-            <p class="section-kicker">第 7 站</p>
-            <h2>Threading and sessions</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Use 消息通道s.mattermost.replyToMode to control whether 消息通道 and 大家一起的房间 replies stay in the main 消息通道 or start a thread un…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Use 消息通道s.mattermost.replyToMode to control whether 消息通道 and 大家一起的房间 replies stay in the main 消息通道 or start a thread un…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Use <code>channels.mattermost.replyToMode</code> to control whether channel and group replies stay in the main channel or start a thread under the triggering post.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“conversation to a thread-scoped session.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>conversation to a thread-scoped session.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Threading and sessions”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：off (default): only reply in a thread whe…、first: for top-level 消息通道/大家一起的房间 posts,…、all: same behavior as first for Mattermos…、Direct 小纸条消息s ignore this setting and sta…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>off</code> (default): only reply in a thread when the inbound post is already in one.</li><li><code>first</code>: for top-level channel/group posts, start a thread under that post and route the</li><li><code>all</code>: same behavior as <code>first</code> for Mattermost today.</li><li>Direct messages ignore this setting and stay non-threaded.</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“设置说明书 example:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Config example:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“channels”贴标签，意思是把它设置成“{”。</li><li>这里在给“mattermost”贴标签，意思是把它设置成“{”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json5">{
-  channels: {
-    mattermost: {
-      replyToMode: &quot;all&quot;,
-    },
-  },
-}</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Notes:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Notes:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“follow-up chunks and media continue in that same thread.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>follow-up chunks and media continue in that same thread.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Threading and sessions”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Thread-scoped sessions use the triggering…、first and all are currently equivalent be…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Thread-scoped sessions use the triggering post id as the thread root.</li><li><code>first</code> and <code>all</code> are currently equivalent because once Mattermost has a thread root,</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-8">
-          <div class="section-heading">
-            <p class="section-kicker">第 8 站</p>
-            <h2>Access control (DMs)</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Access control (DMs)”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Default: 消息通道s.mattermost.dmPolicy = &quot;pai…、Approve via:、openclaw pairing list mattermost、openclaw pairing approve mattermost &lt;CODE&gt;。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Default: <code>channels.mattermost.dmPolicy = &quot;pairing&quot;</code> (unknown senders get a pairing code).</li><li>Approve via:</li><li><code>openclaw pairing list mattermost</code></li><li><code>openclaw pairing approve mattermost &lt;CODE&gt;</code></li><li>Public DMs: <code>channels.mattermost.dmPolicy=&quot;open&quot;</code> plus <code>channels.mattermost.allowFrom=[&quot;*&quot;]</code>.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-9">
-          <div class="section-heading">
-            <p class="section-kicker">第 9 站</p>
-            <h2>消息通道s (大家一起的房间s)</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Channels (groups)”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Default: 消息通道s.mattermost.大家一起的房间Policy =…、Allowlist senders with 消息通道s.mattermost.大…、@username matching is mutable and only en…、Open 消息通道s: 消息通道s.mattermost.大家一起的房间Polic…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Default: <code>channels.mattermost.groupPolicy = &quot;allowlist&quot;</code> (mention-gated).</li><li>Allowlist senders with <code>channels.mattermost.groupAllowFrom</code> (user IDs recommended).</li><li><code>@username</code> matching is mutable and only enabled when <code>channels.mattermost.dangerouslyAllowNameMatching: true</code>.</li><li>Open channels: <code>channels.mattermost.groupPolicy=&quot;open&quot;</code> (mention-gated).</li><li>Runtime note: if <code>channels.mattermost</code> is completely missing, runtime falls back to <code>groupPolicy=&quot;allowlist&quot;</code> for group checks (even if <code>channels.defaults.groupPolicy</code> is set).</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-10">
-          <div class="section-heading">
-            <p class="section-kicker">第 10 站</p>
-            <h2>Targets for outbound delivery</h2>
-            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>你理解的是能力边界，不只是功能名字。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Use these target formats with openclaw 小纸条消息 send or cron/小铃铛通知s: Bare opaque IDs (like 64ifufp...) are **ambiguous** i…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Use these target formats with openclaw 小纸条消息 send or cron/小铃铛通知s:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Use these target formats with <code>openclaw message send</code> or cron/webhooks:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Targets for outbound delivery”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：消息通道:&lt;id&gt; for a 消息通道、user:&lt;id&gt; for a DM、@username for a DM (resolved via the Matt…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>channel:&lt;id&gt;</code> for a channel</li><li><code>user:&lt;id&gt;</code> for a DM</li><li><code>@username</code> for a DM (resolved via the Mattermost API)</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Bare opaque IDs (like 64ifufp...) are **ambiguous** in Mattermost (user ID vs 消息通道 ID).”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Bare opaque IDs (like <code>64ifufp...</code>) are **ambiguous** in Mattermost (user ID vs channel ID).</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“OpenClaw resolves them **user-first**:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>OpenClaw resolves them **user-first**:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Targets for outbound delivery”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：If the ID exists as a user (GET /对话接口/v4/…、Otherwise the ID is treated as a **消息通道 I…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>If the ID exists as a user (<code>GET /api/v4/users/&lt;id&gt;</code> succeeds), OpenClaw sends a **DM** by resolving the direct channel via <code>/api/v4/channels/direct</code>.</li><li>Otherwise the ID is treated as a **channel ID**.</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“If you need deterministic behavior, always use the explicit prefixes (user:&lt;id&gt; / 消息通道:&lt;id&gt;).”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>If you need deterministic behavior, always use the explicit prefixes (<code>user:&lt;id&gt;</code> / <code>channel:&lt;id&gt;</code>).</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-11">
-          <div class="section-heading">
-            <p class="section-kicker">第 11 站</p>
-            <h2>DM 消息通道 retry</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“When OpenClaw sends to a Mattermost DM target and needs to resolve the direct 消息通道 first, it retries transient direct-消…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“When OpenClaw sends to a Mattermost DM target and needs to resolve the direct 消息通道 first, it retries transient direct-消…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>When OpenClaw sends to a Mattermost DM target and needs to resolve the direct channel first, it retries transient direct-channel creation failures by default.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Use 消息通道s.mattermost.dm消息通道Retry to tune that behavior globally for the Mattermost 新本领插件, or 消息通道s.mattermost.accounts.…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Use <code>channels.mattermost.dmChannelRetry</code> to tune that behavior globally for the Mattermost plugin, or <code>channels.mattermost.accounts.&lt;id&gt;.dmChannelRetry</code> for one account.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“channels”贴标签，意思是把它设置成“{”。</li><li>这里在给“mattermost”贴标签，意思是把它设置成“{”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json5">{
-  channels: {
-    mattermost: {
-      dmChannelRetry: {
-        maxRetries: 3,
-        initialDelayMs: 1000,
-        maxDelayMs: 10000,
-        timeoutMs: 30000,
-      },
-    },
-  },
-}</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Notes:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Notes:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“DM channel retry”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：This applies only to DM 消息通道 creation (/对…、Retries apply to transient failures such…、4xx 来帮忙的小伙伴 errors other than 429 are tre…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>This applies only to DM channel creation (<code>/api/v4/channels/direct</code>), not every Mattermost API call.</li><li>Retries apply to transient failures such as rate limits, 5xx responses, and network or timeout errors.</li><li>4xx client errors other than <code>429</code> are treated as permanent and are not retried.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-12">
-          <div class="section-heading">
-            <p class="section-kicker">第 12 站</p>
-            <h2>Reactions (小纸条消息 工具小帮手)</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Examples: 设置说明书:”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Reactions (message tool)”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Use 小纸条消息 action=react with 消息通道=mattermo…、小纸条消息Id is the Mattermost post id.、emoji accepts names like thumbsup or :+1:…、Set remove=true (boolean) to remove a rea…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Use <code>message action=react</code> with <code>channel=mattermost</code>.</li><li><code>messageId</code> is the Mattermost post id.</li><li><code>emoji</code> accepts names like <code>thumbsup</code> or <code>:+1:</code> (colons are optional).</li><li>Set <code>remove=true</code> (boolean) to remove a reaction.</li><li>Reaction add/remove events are forwarded as system events to the routed agent session.</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Examples:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Examples:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段像给机器人看的说明书，告诉它要按什么样子准备东西。</p>
-        <ul class="code-steps">
-          <li>这里在给“message action=react channel=mattermost target=channel”贴标签，意思是把它设置成“&lt;channelId&gt; messageId=&lt;postId&gt; emoji=thumbsup”。</li><li>这里在给“message action=react channel=mattermost target=channel”贴标签，意思是把它设置成“&lt;channelId&gt; messageId=&lt;postId&gt; emoji=thumbsup remove=true”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-text">message action=react channel=mattermost target=channel:&lt;channelId&gt; messageId=&lt;postId&gt; emoji=thumbsup
-message action=react channel=mattermost target=channel:&lt;channelId&gt; messageId=&lt;postId&gt; emoji=thumbsup remove=true</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“设置说明书:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Config:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Reactions (message tool)”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：消息通道s.mattermost.actions.reactions: enabl…、Per-account override: 消息通道s.mattermost.ac…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>channels.mattermost.actions.reactions</code>: enable/disable reaction actions (default true).</li><li>Per-account override: <code>channels.mattermost.accounts.&lt;id&gt;.actions.reactions</code>.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-13">
-          <div class="section-heading">
-            <p class="section-kicker">第 13 站</p>
-            <h2>Interactive buttons (小纸条消息 工具小帮手)</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Send 小纸条消息s with clickable buttons. When a user clicks a button, the 机器人朋友 receives the selection and can respond. Enab…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Send 小纸条消息s with clickable buttons. When a user clicks a button, the 机器人朋友 receives the selection and can respond.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Send messages with clickable buttons. When a user clicks a button, the agent receives the selection and can respond.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Enable buttons by adding inlineButtons to the 消息通道 capabilities:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Enable buttons by adding <code>inlineButtons</code> to the channel capabilities:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“channels”贴标签，意思是把它设置成“{”。</li><li>这里在给“mattermost”贴标签，意思是把它设置成“{”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json5">{
-  channels: {
-    mattermost: {
-      capabilities: [&quot;inlineButtons&quot;],
-    },
-  },
-}</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Use 小纸条消息 action=send with a buttons parameter. Buttons are a 2D array (rows of buttons):”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Use <code>message action=send</code> with a <code>buttons</code> parameter. Buttons are a 2D array (rows of buttons):</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段像给机器人看的说明书，告诉它要按什么样子准备东西。</p>
-        <ul class="code-steps">
-          <li>这里在给“message action=send channel=mattermost target=channel”贴标签，意思是把它设置成“&lt;channelId&gt; buttons=[[{text:Yescallback_data:yes}{text:Nocallback_data:no}]]”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-text">message action=send channel=mattermost target=channel:&lt;channelId&gt; buttons=[[{&quot;text&quot;:&quot;Yes&quot;,&quot;callback_data&quot;:&quot;yes&quot;},{&quot;text&quot;:&quot;No&quot;,&quot;callback_data&quot;:&quot;no&quot;}]]</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Button fields:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Button fields:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Interactive buttons (message tool)”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：text (required): display label.、callback_data (required): value sent back…、style (optional): &quot;default&quot;, &quot;primary&quot;, o…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>text</code> (required): display label.</li><li><code>callback_data</code> (required): value sent back on click (used as the action ID).</li><li><code>style</code> (optional): <code>&quot;default&quot;</code>, <code>&quot;primary&quot;</code>, or <code>&quot;danger&quot;</code>.</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“When a user clicks a button:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>When a user clicks a button:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“1. All buttons are replaced with a confirmation line (e.g., &quot;✓ **Yes** selected by @user&quot;). 2. The 机器人朋友 receives the s…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>1. All buttons are replaced with a confirmation line (e.g., &quot;✓ **Yes** selected by @user&quot;). 2. The agent receives the selection as an inbound message and responds.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Notes:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Notes:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“are removed on click — partial removal is not possible.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>are removed on click — partial removal is not possible.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“(Mattermost routing limitation).”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>(Mattermost routing limitation).</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Interactive buttons (message tool)”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Button callbacks use HMAC-SHA256 verifica…、Mattermost strips callback data from its…、Action IDs containing hyphens or undersco…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Button callbacks use HMAC-SHA256 verification (automatic, no config needed).</li><li>Mattermost strips callback data from its API responses (security feature), so all buttons</li><li>Action IDs containing hyphens or underscores are sanitized automatically</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“设置说明书:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Config:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“enable the buttons 工具小帮手 description in the 机器人朋友 system prompt.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>enable the buttons tool description in the agent system prompt.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“callbacks (for example https://门口的小门卫.example.com). Use this when Mattermost cannot reach the 门口的小门卫 at its bind host d…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>callbacks (for example <code>https://gateway.example.com</code>). Use this when Mattermost cannot reach the gateway at its bind host directly.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“消息通道s.mattermost.accounts.&lt;id&gt;.interactions.callbackBaseUrl.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p><code>channels.mattermost.accounts.&lt;id&gt;.interactions.callbackBaseUrl</code>.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“门口的小门卫.customBindHost + 门口的小门卫.port, then falls back to http://localhost:&lt;port&gt;.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p><code>gateway.customBindHost</code> + <code>gateway.port</code>, then falls back to <code>http://localhost:&lt;port&gt;</code>.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“localhost only works when Mattermost and OpenClaw run on the same host/network namespace.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p><code>localhost</code> only works when Mattermost and OpenClaw run on the same host/network namespace.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“ServiceSettings.AllowedUntrustedInternalConnections.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p><code>ServiceSettings.AllowedUntrustedInternalConnections</code>.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Interactive buttons (message tool)”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：消息通道s.mattermost.capabilities: array of c…、消息通道s.mattermost.interactions.callbackBas…、In multi-account setups, you can also set…、If interactions.callbackBaseUrl is omitte…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>channels.mattermost.capabilities</code>: array of capability strings. Add <code>&quot;inlineButtons&quot;</code> to</li><li><code>channels.mattermost.interactions.callbackBaseUrl</code>: optional external base URL for button</li><li>In multi-account setups, you can also set the same field under</li><li>If <code>interactions.callbackBaseUrl</code> is omitted, OpenClaw derives the callback URL from</li><li>Reachability rule: the button callback URL must be reachable from the Mattermost server.</li><li>If your callback target is private/tailnet/internal, add its host/domain to Mattermost</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-14">
-          <div class="section-heading">
-            <p class="section-kicker">第 14 站</p>
-            <h2>Direct 对话接口 integration (external scripts)</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“External scripts and 小铃铛通知s can post buttons directly via the Mattermost REST 对话接口 instead of going through the 机器人朋友&#39;s…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“External scripts and 小铃铛通知s can post buttons directly via the Mattermost REST 对话接口 instead of going through the 机器人朋友&#39;s…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>External scripts and webhooks can post buttons directly via the Mattermost REST API instead of going through the agent&#39;s <code>message</code> tool. Use <code>buildButtonAttachments()</code> from the extension when possible; if posting raw JSON, follow these rules:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“**Payload structure:**”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>**Payload structure:**</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“channel_id”贴标签，意思是把它设置成“&lt;channelId&gt;”。</li><li>这里在给“message”贴标签，意思是把它设置成“Choose an option:”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json5">{
-  channel_id: &quot;&lt;channelId&gt;&quot;,
-  message: &quot;Choose an option:&quot;,
-  props: {
-    attachments: [
-      {
-        actions: [
-          {
-            id: &quot;mybutton01&quot;, // alphanumeric only — see below
-            type: &quot;button&quot;, // required, or clicks are silently ignored
-            name: &quot;Approve&quot;, // display label
-            style: &quot;primary&quot;, // optional: &quot;default&quot;, &quot;primary&quot;, &quot;danger&quot;
-            integration: {
-              url: &quot;https://gateway.example.com/mattermost/interactions/default&quot;,
-              context: {
-                action_id: &quot;mybutton01&quot;, // must match button id (for name lookup)
-                action: &quot;approve&quot;,
-                // ... any custom fields ...
-                _token: &quot;&lt;hmac&gt;&quot;, // see HMAC section below
-              },
-            },
-          },
-        ],
-      },
-    ],
-  },
-}</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“**Critical rules:**”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>**Critical rules:**</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“1. Attachments go in props.attachments, not top-level attachments (silently ignored). 2. Every action needs type: &quot;butt…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>1. Attachments go in <code>props.attachments</code>, not top-level <code>attachments</code> (silently ignored). 2. Every action needs <code>type: &quot;button&quot;</code> — without it, clicks are swallowed silently. 3. Every action needs an <code>id</code> field — Mattermost ignores actions without IDs. 4. Action <code>id</code> must be **alphanumeric only** (<code>[a-zA-Z0-9]</code>). Hyphens and underscores break Mattermost&#39;s server-side action routing (returns 404). Strip them before use. 5. <code>context.action_id</code> must match the button&#39;s <code>id</code> so the confirmation message shows the button name (e.g., &quot;Approve&quot;) instead of a raw ID. 6. <code>context.action_id</code> is required — the interaction handler returns 400 without it.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“**HMAC token generation:**”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>**HMAC token generation:**</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“The 门口的小门卫 verifies button clicks with HMAC-SHA256. External scripts must generate tokens that match the 门口的小门卫&#39;s verif…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>The gateway verifies button clicks with HMAC-SHA256. External scripts must generate tokens that match the gateway&#39;s verification logic:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“1. Derive the secret from the bot token: HMAC-SHA256(key=&quot;openclaw-mattermost-interactions&quot;, data=botToken) 2. Build th…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>1. Derive the secret from the bot token: <code>HMAC-SHA256(key=&quot;openclaw-mattermost-interactions&quot;, data=botToken)</code> 2. Build the context object with all fields **except** <code>_token</code>. 3. Serialize with **sorted keys** and **no spaces** (the gateway uses <code>JSON.stringify</code> with sorted keys, which produces compact output). 4. Sign: <code>HMAC-SHA256(key=secret, data=serializedContext)</code> 5. Add the resulting hex digest as <code>_token</code> in the context.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Python example:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Python example:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段像给机器人看的说明书，告诉它要按什么样子准备东西。</p>
-        <ul class="code-steps">
-          <li>这一行“import hmac, hashlib, json”是当前步骤要交给电脑的一小块提示。</li><li>这一行“secret = hmac.new(”是当前步骤要交给电脑的一小块提示。</li><li>这一行“b&quot;openclaw-mattermost-interactions&quot;,”是当前步骤要交给电脑的一小块提示。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-python">import hmac, hashlib, json
-
-secret = hmac.new(
-    b&quot;openclaw-mattermost-interactions&quot;,
-    bot_token.encode(), hashlib.sha256
-).hexdigest()
-
-ctx = {&quot;action_id&quot;: &quot;mybutton01&quot;, &quot;action&quot;: &quot;approve&quot;}
-payload = json.dumps(ctx, sort_keys=True, separators=(&quot;,&quot;, &quot;:&quot;))
-token = hmac.new(secret.encode(), payload.encode(), hashlib.sha256).hexdigest()
-
-context = {**ctx, &quot;_token&quot;: token}</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Common HMAC pitfalls:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Common HMAC pitfalls:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“separators=(&quot;,&quot;, &quot;:&quot;) to match JavaScript&#39;s compact output ({&quot;key&quot;:&quot;val&quot;}).”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p><code>separators=(&quot;,&quot;, &quot;:&quot;)</code> to match JavaScript&#39;s compact output (<code>{&quot;key&quot;:&quot;val&quot;}</code>).</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“signs everything remaining. Signing a subset causes silent verification failure.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>signs everything remaining. Signing a subset causes silent verification failure.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“reorder context fields when storing the payload.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>reorder context fields when storing the payload.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“must be the same across the process that creates buttons and the 门口的小门卫 that verifies.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>must be the same across the process that creates buttons and the gateway that verifies.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Direct API integration (external scripts)”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Python&#39;s json.dumps adds spaces by defaul…、Always sign **all** context fields (minus…、Use sort_keys=True — the 门口的小门卫 sorts key…、Derive the secret from the bot token (det…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Python&#39;s <code>json.dumps</code> adds spaces by default (<code>{&quot;key&quot;: &quot;val&quot;}</code>). Use</li><li>Always sign **all** context fields (minus <code>_token</code>). The gateway strips <code>_token</code> then</li><li>Use <code>sort_keys=True</code> — the gateway sorts keys before signing, and Mattermost may</li><li>Derive the secret from the bot token (deterministic), not random bytes. The secret</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-15">
-          <div class="section-heading">
-            <p class="section-kicker">第 15 站</p>
-            <h2>Directory adapter</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“The Mattermost 新本领插件 includes a directory adapter that resolves 消息通道 and user names via the Mattermost 对话接口. This enabl…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“The Mattermost 新本领插件 includes a directory adapter that resolves 消息通道 and user names via the Mattermost 对话接口. This enabl…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>The Mattermost plugin includes a directory adapter that resolves channel and user names via the Mattermost API. This enables <code>#channel-name</code> and <code>@username</code> targets in <code>openclaw message send</code> and cron/webhook deliveries.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“No 设置说明书uration is needed — the adapter uses the bot token from the account 设置说明书.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>No configuration is needed — the adapter uses the bot token from the account config.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-16">
-          <div class="section-heading">
-            <p class="section-kicker">第 16 站</p>
-            <h2>Multi-account</h2>
-            <p>这一节主要在解释“Multi-account”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“Multi-account”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Mattermost supports multiple accounts under 消息通道s.mattermost.accounts:”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Mattermost supports multiple accounts under 消息通道s.mattermost.accounts:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Mattermost supports multiple accounts under <code>channels.mattermost.accounts</code>:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“channels”贴标签，意思是把它设置成“{”。</li><li>这里在给“mattermost”贴标签，意思是把它设置成“{”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json5">{
-  channels: {
-    mattermost: {
-      accounts: {
-        default: { name: &quot;Primary&quot;, botToken: &quot;mm-token&quot;, baseUrl: &quot;https://chat.example.com&quot; },
-        alerts: { name: &quot;Alerts&quot;, botToken: &quot;mm-token-2&quot;, baseUrl: &quot;https://alerts.example.com&quot; },
-      },
-    },
-  },
-}</code></pre>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-17">
-          <div class="section-heading">
-            <p class="section-kicker">第 17 站</p>
-            <h2>Troubleshooting</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Troubleshooting”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：No replies in 消息通道s: ensure the bot is in…、Auth errors: check the bot token, base UR…、Multi-account issues: env vars only apply…、Buttons appear as white boxes: the 机器人朋友…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>No replies in channels: ensure the bot is in the channel and mention it (oncall), use a trigger prefix (onchar), or set <code>chatmode: &quot;onmessage&quot;</code>.</li><li>Auth errors: check the bot token, base URL, and whether the account is enabled.</li><li>Multi-account issues: env vars only apply to the <code>default</code> account.</li><li>Buttons appear as white boxes: the agent may be sending malformed button data. Check that each button has both <code>text</code> and <code>callback_data</code> fields.</li><li>Buttons render but clicks do nothing: verify <code>AllowedUntrustedInternalConnections</code> in Mattermost server config includes <code>127.0.0.1 localhost</code>, and that <code>EnablePostActionIntegration</code> is <code>true</code> in ServiceSettings.</li><li>Buttons return 404 on click: the button <code>id</code> likely contains hyphens or underscores. Mattermost&#39;s action router breaks on non-alphanumeric IDs. Use <code>[a-zA-Z0-9]</code> only.</li><li>Gateway logs <code>invalid _token</code>: HMAC mismatch. Check that you sign all context fields (not a subset), use sorted keys, and use compact JSON (no spaces). See the HMAC section above.</li><li>Gateway logs <code>missing _token in context</code>: the <code>_token</code> field is not in the button&#39;s context. Ensure it is included when building the integration payload.</li><li>Confirmation shows raw ID instead of button name: <code>context.action_id</code> does not match the button&#39;s <code>id</code>. Set both to the same sanitized value.</li><li>Agent doesn&#39;t know about buttons: add <code>capabilities: [&quot;inlineButtons&quot;]</code> to the Mattermost channel config.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-    <section class="section-shell">
-      <div class="ad-placeholder">
-        <p>这里预留给未来的 Google AdSense 模块。</p>
-        <code>&lt;!-- ADSENSE_SNIPPET --&gt;</code>
-      </div>
-    </section>
-  
 
       <footer class="page-footer">
         <div>

@@ -3971,380 +3971,204 @@
       </div>
 
       
-    <section class="section-shell">
-      <div class="overview-card">
-        <div>
-          <p class="section-kicker">先听这页的人话版</p>
-          <h2>Group Messages</h2>
-          <p>这一页像一本关于“大家一起的房间 小纸条消息s”的小绘本，它先告诉我们这位机器人朋友会做什么，再一步一步解释什么时候该这样做。 你可以先把它想成：大家一起的房间 小纸条消息s (WhatsApp web 消息通道)。</p>
-          <p>如果把这页当成“给普通人看的版本”，你最应该带走的是：它到底在教你一件什么事、什么时候要这样做、以及哪里最容易踩坑。</p>
+      <section class="section-shell">
+        <div class="overview-card">
+          <div>
+            <p class="section-kicker">AI 绘本解读版</p>
+            <h2>📱 让OpenClaw在群聊里当个聪明小伙伴</h2>
+            <p>OpenClaw可以悄悄待在WhatsApp群聊里。只有被点名时才出来说话。每个群聊都有自己的小房间，不会打扰你的私人聊天。</p>
+          </div>
+          <div class="overview-meta">
+            <span>原始路径：/channels/group-messages</span>
+            <span>故事卡片：7 张</span>
+            <a href="https://docs.openclaw.ai/channels/group-messages" target="_blank" rel="noreferrer">查看官方原文</a>
+          </div>
         </div>
-        <div class="overview-meta">
-          <span>原始路径：/channels/group-messages</span>
-          <span>章节数量：7</span>
-          <a href="https://docs.openclaw.ai/channels/group-messages" target="_blank" rel="noreferrer">查看原文</a>
+      </section>
+      
+          <section class="section-shell" id="section-1">
+            <div class="section-heading">
+              <p class="section-kicker">第 1 站</p>
+              <h2>🎯 它怎么知道该说话了？</h2>
+              <p>OpenClaw在群里有两种工作模式：被点名才说话，或者一直听着但只在需要时回答。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>这样它就不会在群里乱插话，像个懂礼貌的好朋友。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>默认是‘点名模式’：只有@它、提到它的名字或号码，它才会醒来。</li><li>可以改成‘一直听模式’：每条消息都听，但只有觉得能帮忙时才回答，不然就安静。</li><li>你可以给所有群定个规矩，也可以单独给某个群改规矩。</li><li>还能设置一个‘允许名单’，决定哪些群可以让OpenClaw加入。</li><li>默认是‘名单模式’，你得先告诉它哪些群可以进。</li></ul>
+              </div>
+              
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>想让它说话？记得先点名哦！</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-2">
+            <div class="section-heading">
+              <p class="section-kicker">第 2 站</p>
+              <h2>🏠 每个群都有自己的小房间</h2>
+              <p>OpenClaw为每个群都准备了一个独立的小房间，里面发生的事不会影响你和它的私聊。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>这样群里的指令和聊天历史就不会和你的私人对话混在一起。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>每个群聊都有一个专属的‘房间钥匙’。</li><li>在群里发的指令，比如‘/verbose on’（打开详细模式），只在这个群里有效。</li><li>你和它的私人聊天状态完全不受影响。</li><li>为了不打扰大家，它在群里不会发‘心跳’消息（就是那些表示‘我在线’的小提示）。</li><li>每次它要说话时，会先看看最近大家聊了什么（最多50条没触发它回复的消息）。</li><li>它会清楚地知道每句话是谁说的，名字和号码都会告诉它。</li><li>就算消息是‘阅后即焚’的，里面的点名也能叫醒它。</li><li>第一次进群或改模式时，它会收到一个‘群聊说明书’，告诉它这是哪个群、有谁、该怎么工作。</li></ul>
+              </div>
+              
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>群是群，私聊是私聊，互不打扰。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-3">
+            <div class="section-heading">
+              <p class="section-kicker">第 3 站</p>
+              <h2>🔧 怎么给它定群聊规矩？（配置示例）</h2>
+              <p>在你的设置文件里加几行字，就能告诉OpenClaw在群里该怎么工作。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>这样即使WhatsApp把@符号藏起来了，只要提到名字或号码，它也能听到。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>在‘channels.whatsapp.groups’这里定规矩。</li><li>例子里的‘&quot;*&quot;’意思是‘所有群都适用这条规矩’。</li><li>‘requireMention: true’就是要求必须被点名才说话。</li><li>在‘agents.list’里，给每个‘小伙伴’（Agent）单独设置。</li><li>可以告诉它：‘historyLimit: 50’——只看最近50条没回复的消息。</li><li>‘mentionPatterns’是‘点名清单’：写下能叫醒它的名字或号码，比如‘@?openclaw’或‘\\+?15555550123’。</li><li>点名清单不区分大小写，而且很安全，太复杂的规则会被忽略。</li><li>通常别人在群里点你联系人时，WhatsApp会发标准信号，号码备选很少用到，但有个备选更安心。</li></ul>
+              </div>
+              
+            <div class="source-card">
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
+              <ul><li>这就像在总控制台写了一张‘群聊工作守则’。</li><li>守则说：‘所有群（*）都按这个来：必须被点名（requireMention）才说话。’</li><li>还给名叫‘main’的小伙伴一个工具箱，里面装着：‘历史消息只看50条’，‘点名暗号是这些词’。</li><li>写规则时用的词（正则表达式）很灵活，但系统会检查是否安全。</li><li>WhatsApp通常会把点名信号发得很好，这个号码备选就像个安全网，以防万一。</li></ul>
+            </div>
+          
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>写好规则，点名就灵。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-4">
+            <div class="section-heading">
+              <p class="section-kicker">第 4 站</p>
+              <h2>🎛️ 老板，改模式啦！（专属命令）</h2>
+              <p>只有群主（或指定的管理员）能在群里用特殊命令切换OpenClaw的工作模式。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>防止别人随便改变它在群里的行为。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>在群里单独发一条消息：‘/activation mention’——切换到‘点名才说话’模式。</li><li>或者发：‘/activation always’——切换到‘一直听’模式。</li><li>只有老板的号码（或没设老板时它自己的号码）才能发这个命令。</li><li>想看看它现在是什么模式？在群里单独发‘/status’就行。</li></ul>
+              </div>
+              
+            <div class="source-card">
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
+              <ul><li>‘/activation mention’ 就像对OpenClaw喊：‘注意！改成点名模式！’</li><li>‘/activation always’ 则是喊：‘改成一直待命模式！’</li><li>这些命令必须单独发一条消息，它才能听清并执行。</li><li>‘/status’ 是问它：‘你现在是什么工作状态呀？’</li></ul>
+            </div>
+          
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>专属命令，老板专用。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-5">
+            <div class="section-heading">
+              <p class="section-kicker">第 5 站</p>
+              <h2>🚀 开始玩吧！使用步骤</h2>
+              <p>简单几步，让你的OpenClaw小伙伴加入群聊并开始互动。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>跟着做，你就能在群里和它聊天了。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>第一步：把你的WhatsApp账号（就是运行OpenClaw的那个）拉进群里。</li><li>第二步：在群里@它，或者提到它的名字/号码。除非你设置了‘完全开放’，否则只有‘允许名单’里的人才能叫醒它。</li><li>第三步：它要说话前，会先看看最近的聊天，并且知道刚才是谁在叫它。</li><li>第四步：群里的指令（比如‘/verbose on’打开唠叨模式，‘/think high’深度思考，‘/new’开新话题）只在这个群有效，记得单独发一条消息。你的私聊完全不受影响。</li></ul>
+              </div>
+              
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>拉进群，点名它，单独发令，私聊照旧。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-6">
+            <div class="section-heading">
+              <p class="section-kicker">第 6 站</p>
+              <h2>🔍 检查一下，它工作正常吗？</h2>
+              <p>做几个小测试，看看OpenClaw在群里是不是乖乖的。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>确保它按你想的方式在运行。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>手动小测试：在群里@它一下，看看它回复时有没有提到发消息的人的名字。</li><li>再@它一次，确认它把之前的聊天记录也考虑进去了，并且下次会刷新。</li><li>打开详细日志模式（运行加‘--verbose’），看看网关日志。</li><li>在日志里找‘inbound web message’（收到的网页消息），能看到消息来自哪个群，以及‘[from: …]’这个标记加上了没有。</li></ul>
+              </div>
+              
+            <div class="source-card">
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
+              <ul><li>运行命令时加上‘--verbose’，就像打开了‘现场直播监视器’。</li><li>在监视器里，你能看到每条进出消息的详细信息。</li><li>特别注意消息是否标明了来自哪个群（groupJid），以及是否正确附加了发送者信息。</li></ul>
+            </div>
+          
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>点名测试，日志查看，一切明了。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-7">
+            <div class="section-heading">
+              <p class="section-kicker">第 7 站</p>
+              <h2>💡 需要知道的小细节</h2>
+              <p>还有一些小事情，知道了会让体验更好。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>了解这些，你就更懂你的小伙伴了。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>为了不刷屏，它在群里默认不发‘心跳’消息（就是‘我还在哦’的提示）。</li><li>防重复：如果你连续发两条一模一样的、没点名它的消息，它只会回复第一条。</li><li>它的‘群聊小房间’记录会存在一个特定位置，文件名像‘agent:小伙伴ID:whatsapp:group:群ID’。如果找不到，只是说明这个群还没叫醒过它。</li><li>它在群里的‘正在输入…’提示，遵循默认设置（没被点名时，默认只在发消息前显示）。</li></ul>
+              </div>
+              
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>心跳不发，防重复答，记录可查，输入有规。</p>
+              </div>
+            </div>
+          </section>
+        
+      <section class="section-shell">
+        <div class="ad-placeholder">
+          <p>这里预留给未来的 Google AdSense 模块。</p>
+          <code>&lt;!-- ADSENSE_SNIPPET --&gt;</code>
         </div>
-      </div>
-    </section>
+      </section>
     
-        <section class="section-shell" id="section-1">
-          <div class="section-heading">
-            <p class="section-kicker">第 1 站</p>
-            <h2>Start Here</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“大家一起的房间 小纸条消息s (WhatsApp web 消息通道) Goal: let Clawd sit in WhatsApp 大家一起的房间s, wake up only when pinged, and keep that th…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“大家一起的房间 小纸条消息s (WhatsApp web 消息通道)”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p># Group messages (WhatsApp web channel)</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Goal: let Clawd sit in WhatsApp 大家一起的房间s, wake up only when pinged, and keep that thread separate from the personal DM…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Goal: let Clawd sit in WhatsApp groups, wake up only when pinged, and keep that thread separate from the personal DM session.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Note: 机器人朋友s.list[].大家一起的房间Chat.mentionPatterns is now used by Telegram/Discord/Slack/i小纸条消息 as well; this doc focuses…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Note: <code>agents.list[].groupChat.mentionPatterns</code> is now used by Telegram/Discord/Slack/iMessage as well; this doc focuses on WhatsApp-specific behavior. For multi-agent setups, set <code>agents.list[].groupChat.mentionPatterns</code> per agent (or use <code>messages.groupChat.mentionPatterns</code> as a global fallback).</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-2">
-          <div class="section-heading">
-            <p class="section-kicker">第 2 站</p>
-            <h2>Current implementation (2025-12-03)</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Current implementation (2025-12-03)”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Activation modes: mention (default) or al…、大家一起的房间 policy: 消息通道s.whatsapp.大家一起的房间Pol…、Per-大家一起的房间 sessions: session keys look l…、Context injection: **pending-only** 大家一起的…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Activation modes: <code>mention</code> (default) or <code>always</code>. <code>mention</code> requires a ping (real WhatsApp @-mentions via <code>mentionedJids</code>, safe regex patterns, or the bot’s E.164 anywhere in the text). <code>always</code> wakes the agent on every message but it should reply only when it can add meaningful value; otherwise it returns the silent token <code>NO_REPLY</code>. Defaults can be set in config (<code>channels.whatsapp.groups</code>) and overridden per group via <code>/activation</code>. When <code>channels.whatsapp.groups</code> is set, it also acts as a group allowlist (include <code>&quot;*&quot;</code> to allow all).</li><li>Group policy: <code>channels.whatsapp.groupPolicy</code> controls whether group messages are accepted (<code>open|disabled|allowlist</code>). <code>allowlist</code> uses <code>channels.whatsapp.groupAllowFrom</code> (fallback: explicit <code>channels.whatsapp.allowFrom</code>). Default is <code>allowlist</code> (blocked until you add senders).</li><li>Per-group sessions: session keys look like <code>agent:&lt;agentId&gt;:whatsapp:group:&lt;jid&gt;</code> so commands such as <code>/verbose on</code> or <code>/think high</code> (sent as standalone messages) are scoped to that group; personal DM state is untouched. Heartbeats are skipped for group threads.</li><li>Context injection: **pending-only** group messages (default 50) that *did not* trigger a run are prefixed under <code>[Chat messages since your last reply - for context]</code>, with the triggering line under <code>[Current message - respond to this]</code>. Messages already in the session are not re-injected.</li><li>Sender surfacing: every group batch now ends with <code>[from: Sender Name (+E164)]</code> so Pi knows who is speaking.</li><li>Ephemeral/view-once: we unwrap those before extracting text/mentions, so pings inside them still trigger.</li><li>Group system prompt: on the first turn of a group session (and whenever <code>/activation</code> changes the mode) we inject a short blurb into the system prompt like <code>You are replying inside the WhatsApp group &quot;&lt;subject&gt;&quot;. Group members: Alice (+44...), Bob (+43...), … Activation: trigger-only … Address the specific sender noted in the message context.</code> If metadata isn’t available we still tell the agent it’s a group chat.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-3">
-          <div class="section-heading">
-            <p class="section-kicker">第 3 站</p>
-            <h2>设置说明书 example (WhatsApp)</h2>
-            <p>这一节主要在解释“设置说明书 example (WhatsApp)”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“设置说明书 example (WhatsApp)”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Add a 大家一起的房间Chat block to ~/.openclaw/openclaw.json so display-name pings work even when WhatsApp strips the visual @…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Add a 大家一起的房间Chat block to ~/.openclaw/openclaw.json so display-name pings work even when WhatsApp strips the visual @…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Add a <code>groupChat</code> block to <code>~/.openclaw/openclaw.json</code> so display-name pings work even when WhatsApp strips the visual <code>@</code> in the text body:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“channels”贴标签，意思是把它设置成“{”。</li><li>这里在给“whatsapp”贴标签，意思是把它设置成“{”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json5">{
-  channels: {
-    whatsapp: {
-      groups: {
-        &quot;*&quot;: { requireMention: true },
-      },
-    },
-  },
-  agents: {
-    list: [
-      {
-        id: &quot;main&quot;,
-        groupChat: {
-          historyLimit: 50,
-          mentionPatterns: [&quot;@?openclaw&quot;, &quot;\\+?15555550123&quot;],
-        },
-      },
-    ],
-  },
-}</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Notes:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Notes:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Config example (WhatsApp)”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：The regexes are case-insensitive and use…、WhatsApp still sends canonical mentions v…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>The regexes are case-insensitive and use the same safe-regex guardrails as other config regex surfaces; invalid patterns and unsafe nested repetition are ignored.</li><li>WhatsApp still sends canonical mentions via <code>mentionedJids</code> when someone taps the contact, so the number fallback is rarely needed but is a useful safety net.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-4">
-          <div class="section-heading">
-            <p class="section-kicker">第 4 站</p>
-            <h2>Activation 魔法口令 (owner-only)</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Use the 大家一起的房间 chat 魔法口令: Only the owner number (from 消息通道s.whatsapp.allowFrom, or the bot’s own E.164 when unset) can…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Use the 大家一起的房间 chat 魔法口令:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Use the group chat command:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Activation command (owner-only)”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：/activation mention、/activation always。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>/activation mention</code></li><li><code>/activation always</code></li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Only the owner number (from 消息通道s.whatsapp.allowFrom, or the bot’s own E.164 when unset) can change this. Send /status…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Only the owner number (from <code>channels.whatsapp.allowFrom</code>, or the bot’s own E.164 when unset) can change this. Send <code>/status</code> as a standalone message in the group to see the current activation mode.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-5">
-          <div class="section-heading">
-            <p class="section-kicker">第 5 站</p>
-            <h2>How to use</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“1. Add your WhatsApp account (the one running OpenClaw) to the 大家一起的房间. 2. Say @openclaw … (or include the number). Onl…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“1. Add your WhatsApp account (the one running OpenClaw) to the 大家一起的房间. 2. Say @openclaw … (or include the number). Onl…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>1. Add your WhatsApp account (the one running OpenClaw) to the group. 2. Say <code>@openclaw …</code> (or include the number). Only allowlisted senders can trigger it unless you set <code>groupPolicy: &quot;open&quot;</code>. 3. The agent prompt will include recent group context plus the trailing <code>[from: …]</code> marker so it can address the right person. 4. Session-level directives (<code>/verbose on</code>, <code>/think high</code>, <code>/new</code> or <code>/reset</code>, <code>/compact</code>) apply only to that group’s session; send them as standalone messages so they register. Your personal DM session remains independent.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-6">
-          <div class="section-heading">
-            <p class="section-kicker">第 6 站</p>
-            <h2>Testing / verification</h2>
-            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>你理解的是能力边界，不只是功能名字。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Testing / verification”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Manual smoke:、Send an @openclaw ping in the 大家一起的房间 and…、Send a second ping and verify the history…、Check 门口的小门卫 logs (run with --verbose) to…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Manual smoke:</li><li>Send an <code>@openclaw</code> ping in the group and confirm a reply that references the sender name.</li><li>Send a second ping and verify the history block is included then cleared on the next turn.</li><li>Check gateway logs (run with <code>--verbose</code>) to see <code>inbound web message</code> entries showing <code>from: &lt;groupJid&gt;</code> and the <code>[from: …]</code> suffix.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-7">
-          <div class="section-heading">
-            <p class="section-kicker">第 7 站</p>
-            <h2>Known considerations</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Known considerations”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Heartbeats are intentionally skipped for…、Echo suppression uses the combined batch…、Session store entries will appear as 机器人朋…、Typing indicators in 大家一起的房间s follow 机器人朋…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Heartbeats are intentionally skipped for groups to avoid noisy broadcasts.</li><li>Echo suppression uses the combined batch string; if you send identical text twice without mentions, only the first will get a response.</li><li>Session store entries will appear as <code>agent:&lt;agentId&gt;:whatsapp:group:&lt;jid&gt;</code> in the session store (<code>~/.openclaw/agents/&lt;agentId&gt;/sessions/sessions.json</code> by default); a missing entry just means the group hasn’t triggered a run yet.</li><li>Typing indicators in groups follow <code>agents.defaults.typingMode</code> (default: <code>message</code> when unmentioned).</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-    <section class="section-shell">
-      <div class="ad-placeholder">
-        <p>这里预留给未来的 Google AdSense 模块。</p>
-        <code>&lt;!-- ADSENSE_SNIPPET --&gt;</code>
-      </div>
-    </section>
-  
 
       <footer class="page-footer">
         <div>

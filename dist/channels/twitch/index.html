@@ -3971,1401 +3971,270 @@
       </div>
 
       
-    <section class="section-shell">
-      <div class="overview-card">
-        <div>
-          <p class="section-kicker">先听这页的人话版</p>
-          <h2>Twitch</h2>
-          <p>这一页像一本关于“Twitch”的小绘本，它先告诉我们这位机器人朋友会做什么，再一步一步解释什么时候该这样做。 你可以先把它想成：Twitch (新本领插件)。</p>
-          <p>如果把这页当成“给普通人看的版本”，你最应该带走的是：它到底在教你一件什么事、什么时候要这样做、以及哪里最容易踩坑。</p>
+      <section class="section-shell">
+        <div class="overview-card">
+          <div>
+            <p class="section-kicker">AI 绘本解读版</p>
+            <h2>🎮 让OpenClaw小助手去Twitch聊天室玩</h2>
+            <p>OpenClaw可以变成一个小机器人。它能去Twitch的聊天室，听大家说话，还能回话。就像派一个会说话的小精灵去你的直播间。</p>
+          </div>
+          <div class="overview-meta">
+            <span>原始路径：/channels/twitch</span>
+            <span>故事卡片：9 张</span>
+            <a href="https://docs.openclaw.ai/channels/twitch" target="_blank" rel="noreferrer">查看官方原文</a>
+          </div>
         </div>
-        <div class="overview-meta">
-          <span>原始路径：/channels/twitch</span>
-          <span>章节数量：21</span>
-          <a href="https://docs.openclaw.ai/channels/twitch" target="_blank" rel="noreferrer">查看原文</a>
+      </section>
+      
+          <section class="section-shell" id="section-1">
+            <div class="section-heading">
+              <p class="section-kicker">第 1 站</p>
+              <h2>🎁 先领一个“Twitch聊天包”</h2>
+              <p>OpenClaw本身没有Twitch聊天功能，需要额外安装一个“聊天包”。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>装上这个包，OpenClaw才能听懂Twitch的语言。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>这个包就像给OpenClaw戴上一个“Twitch耳机”。</li><li>戴上耳机，它就能听到Twitch聊天室的声音了。</li><li>我们用一个简单的命令来安装它。</li></ul>
+              </div>
+              
+            <div class="source-card">
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
+              <ul><li>`openclaw plugins install @openclaw/twitch` 这行命令就像在说：“嘿，OpenClaw，去把那个叫‘Twitch’的聊天包拿过来装上！”</li></ul>
+            </div>
+          
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>第一步：给OpenClaw装上Twitch聊天包。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-2">
+            <div class="section-heading">
+              <p class="section-kicker">第 2 站</p>
+              <h2>🔑 给小助手办个“Twitch身份证”</h2>
+              <p>要让小助手进聊天室，得先给它办个Twitch账号，再拿一把“钥匙”。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>没有账号和钥匙，聊天室的门卫不让进。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>先给OpenClaw注册一个Twitch账号，这就是它的“身份证”。</li><li>去一个叫“Twitch Token Generator”的网站，选“Bot Token”。</li><li>记得勾上“chat:read”（能看聊天）和“chat:write”（能发消息）这两个小方块。</li><li>网站会给你两串密码：一个叫“Client ID”，一个叫“Access Token”。把它们抄下来。</li><li>这把“Access Token”钥匙几个小时就会失效，需要重新办。</li></ul>
+              </div>
+              
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>第二步：给小助手办账号，拿钥匙。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-3">
+            <div class="section-heading">
+              <p class="section-kicker">第 3 站</p>
+              <h2>🏠 告诉小助手去哪个“房间”</h2>
+              <p>用一张小纸条（配置文件），告诉OpenClaw所有重要信息。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>小助手需要知道用哪个账号、拿哪把钥匙、进哪个聊天室。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>这张纸条上要写：小助手的Twitch账号名（`username`）。</li><li>还要写上刚才拿到的那把“钥匙”（`accessToken`）和“门牌号”（`clientId`）。</li><li>最关键的是要写明去哪个聊天室（`channel`），比如“vevisk”的直播间。</li><li>把这张纸条交给OpenClaw，它就知道怎么行动了。</li></ul>
+              </div>
+              
+            <div class="source-card">
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
+              <ul><li>`&quot;channel&quot;: &quot;vevisk&quot;` 这行配置就像在纸条上写：“小助手，请去‘vevisk’这个房间聊天。”</li></ul>
+            </div>
+          
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>第三步：写张纸条，告诉小助手所有行动指南。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-4">
+            <div class="section-heading">
+              <p class="section-kicker">第 4 站</p>
+              <h2>🚧 设置“门卫”，只让朋友进来</h2>
+              <p>不能让所有人都使唤我们的小助手，得设个“门卫”检查。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>保护小助手，只让它听你或者你朋友的话。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>每个Twitch用户都有一个永远不会变的数字ID，就像终身身份证号。</li><li>在纸条上加一条 `allowFrom`，后面写上你的数字ID。</li><li>这样，只有ID在名单上的人说话，小助手才会搭理。</li><li>你也可以设置按“身份”放行，比如只搭理“房管”（moderator）或“VIP”。</li><li>默认情况下，小助手只回应@了它名字的消息，这样更礼貌。</li></ul>
+              </div>
+              
+            <div class="source-card">
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
+              <ul><li>`&quot;allowFrom&quot;: [&quot;123456789&quot;]` 这行配置就像对门卫说：“只放身份证号是123456789的这个人进来跟我说话。”</li></ul>
+            </div>
+          
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>第四步：设个门卫，小助手只听你的话。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-5">
+            <div class="section-heading">
+              <p class="section-kicker">第 5 站</p>
+              <h2>🔄 给“钥匙”办个自动续期</h2>
+              <p>从网站拿的“钥匙”会过期，手动换很麻烦。可以办一张能自动刷新的“长期通行证”。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>让小助手能一直待在聊天室，不用总操心换钥匙。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>去“Twitch开发者后台”自己创建一个应用。</li><li>这样就能拿到 `clientSecret` 和 `refreshToken` 这两样新东西。</li><li>把它们也写在纸条上。</li><li>以后钥匙快到期时，小助手自己就会去刷新，不用你管。</li></ul>
+              </div>
+              
+            <div class="source-card">
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
+              <ul><li>`&quot;refreshToken&quot;: &quot;your_refresh_token&quot;` 这就像给了小助手一张可以自动续期的长期通行证凭证。</li></ul>
+            </div>
+          
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>（可选）办张长期通行证，省心。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-6">
+            <div class="section-heading">
+              <p class="section-kicker">第 6 站</p>
+              <h2>👥 派多个小助手去不同房间</h2>
+              <p>一个小助手账号，可以同时去好几个不同的聊天室玩。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>一个账号，多处聊天，高效又方便。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>在纸条上，不用只写一个 `channel`。</li><li>可以创建一个 `accounts` 名单，像通讯录一样。</li><li>给每个要去的聊天室（比如“channel1”、“channel2”）单独写一份指南。</li><li>每份指南里都要写明去哪个房间（`channel`），并且用独立的钥匙（`accessToken`）。</li><li>小助手就能分身，同时在不同房间听和说了。</li></ul>
+              </div>
+              
+            <div class="source-card">
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
+              <ul><li>在 `accounts` 下面为每个房间写配置，就像给小助手的任务清单上列了多个出差地点。</li></ul>
+            </div>
+          
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>一个小助手，可以同时跑好几个直播间。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-7">
+            <div class="section-heading">
+              <p class="section-kicker">第 7 站</p>
+              <h2>🚨 小助手不听话了？看看这里</h2>
+              <p>如果小助手没反应，就像玩具没电了，我们来检查一下。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>快速找到问题，让小助手重新活蹦乱跳。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>先问问OpenClaw自己：“你身体好吗？”用 `openclaw doctor` 命令检查。</li><li>再问问：“你和Twitch联系上了吗？”用 `openclaw channels status --probe` 命令探测。</li><li>检查“门卫”名单（`allowFrom`）里有没有你的ID。</li><li>确认小助手真的进了你指定的那个聊天室（`channel`）。</li><li>检查“钥匙”（`accessToken`）是不是对的，有没有过期。</li></ul>
+              </div>
+              
+            <div class="source-card">
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
+              <ul><li>运行 `openclaw doctor` 就像按下玩具的“自检按钮”，看看哪里出了小毛病。</li></ul>
+            </div>
+          
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>出问题？先自检，再查钥匙和门卫。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-8">
+            <div class="section-heading">
+              <p class="section-kicker">第 8 站</p>
+              <h2>💬 让小助手开口说话</h2>
+              <p>除了听聊天，你还可以主动让小助手在聊天室发一句话。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>主动打招呼，或者发布通知。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>你可以给OpenClaw发一个指令，动作（`action`）叫 `twitch`。</li><li>在参数（`params`）里写上要发的消息（`message`）和发给哪个频道（`to`）。</li><li>小助手收到指令，就会在指定的聊天室把这句话说出来。</li><li>每条消息不能超过500个字母，太长了它会自动分成几段说。</li></ul>
+              </div>
+              
+            <div class="source-card">
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
+              <ul><li>`{&quot;action&quot;: &quot;twitch&quot;, &quot;params&quot;: {&quot;message&quot;: &quot;Hello Twitch!&quot;, &quot;to&quot;: &quot;#mychannel&quot;}}` 这个指令就像一张小纸条，上面写着：“小助手，去#mychannel房间，说声‘Hello Twitch！’”。</li></ul>
+            </div>
+          
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>你一句话，小助手就能在Twitch开口。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-9">
+            <div class="section-heading">
+              <p class="section-kicker">第 9 站</p>
+              <h2>⚠️ 重要！保护好小助手</h2>
+              <p>“钥匙”和“密码”非常非常重要，就像真的钥匙不能乱丢。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>防止坏人偷走钥匙，冒充你的小助手。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>“钥匙”（Token）和“秘密”（Secret）绝对不能写在会被公开的地方，比如Git。</li><li>尽量使用能自动刷新的“长期通行证”（Token Refresh）。</li><li>控制权限时，用永远不会变的“数字身份证号”（User ID），不要用可能会改的“用户名”。</li><li>经常看看小助手的“工作日志”（Logs），了解它的状态。</li><li>只申请“看聊天”和“发消息”这两种最小权限，就像只带必要的工具出门。</li></ul>
+              </div>
+              
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>钥匙要藏好，权限设最小，经常看一眼。</p>
+              </div>
+            </div>
+          </section>
+        
+      <section class="section-shell">
+        <div class="ad-placeholder">
+          <p>这里预留给未来的 Google AdSense 模块。</p>
+          <code>&lt;!-- ADSENSE_SNIPPET --&gt;</code>
         </div>
-      </div>
-    </section>
+      </section>
     
-        <section class="section-shell" id="section-1">
-          <div class="section-heading">
-            <p class="section-kicker">第 1 站</p>
-            <h2>Start Here</h2>
-            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>你理解的是能力边界，不只是功能名字。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Twitch (新本领插件) Twitch chat support via IRC connection. OpenClaw connects as a Twitch user (bot account) to receive and…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Twitch (新本领插件)”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p># Twitch (plugin)</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Twitch chat support via IRC connection. OpenClaw connects as a Twitch user (bot account) to receive and send 小纸条消息s in…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Twitch chat support via IRC connection. OpenClaw connects as a Twitch user (bot account) to receive and send messages in channels.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-2">
-          <div class="section-heading">
-            <p class="section-kicker">第 2 站</p>
-            <h2>新本领插件 required</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Twitch ships as a 新本领插件 and is not bundled with the core install. Install via CLI (npm registry): Local checkout (when…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Twitch ships as a 新本领插件 and is not bundled with the core install.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Twitch ships as a plugin and is not bundled with the core install.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Install via CLI (npm registry):”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Install via CLI (npm registry):</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一句直接对 OpenClaw 说的话，就像对小助手下达任务。</p>
-        <ul class="code-steps">
-          <li>这一句是在直接叫 OpenClaw 做事：“openclaw plugins install @openclaw/twitch”。你可以把它想成对机器人说的完整命令。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">openclaw plugins install @openclaw/twitch</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Local checkout (when running from a git repo):”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Local checkout (when running from a git repo):</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一句直接对 OpenClaw 说的话，就像对小助手下达任务。</p>
-        <ul class="code-steps">
-          <li>这一句是在直接叫 OpenClaw 做事：“openclaw plugins install ./extensions/twitch”。你可以把它想成对机器人说的完整命令。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">openclaw plugins install ./extensions/twitch</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Details: 新本领插件s”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Details: <a href="/tools/plugin" target="_blank" rel="noreferrer">Plugins</a></p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-3">
-          <div class="section-heading">
-            <p class="section-kicker">第 3 站</p>
-            <h2>Quick setup (beginner)</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“1. Create a dedicated Twitch account for the bot (or use an existing account). 2. Generate credentials: Twitch Token Ge…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“1. Create a dedicated Twitch account for the bot (or use an existing account). 2. Generate credentials: Twitch Token Ge…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>1. Create a dedicated Twitch account for the bot (or use an existing account). 2. Generate credentials: <a href="https://twitchtokengenerator.com/" target="_blank" rel="noreferrer">Twitch Token Generator</a></p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“3. Find your Twitch user ID: https://www.一边说一边送weasels.com/工具小帮手s/convert-twitch-username-to-user-id/ 4. 设置说明书ure the t…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>3. Find your Twitch user ID: <a href="https://www.streamweasels.com/tools/convert-twitch-username-to-user-id/" target="_blank" rel="noreferrer">https://www.streamweasels.com/tools/convert-twitch-username-to-user-id/</a> 4. Configure the token:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“5. Start the 门口的小门卫.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>5. Start the gateway.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Quick setup (beginner)”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Select **Bot Token**、Verify scopes chat:read and chat:write ar…、Copy the **来帮忙的小伙伴 ID** and **Access Toke…、Env: OPENCLAW_TWITCH_ACCESS_TOKEN=... (de…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Select **Bot Token**</li><li>Verify scopes <code>chat:read</code> and <code>chat:write</code> are selected</li><li>Copy the **Client ID** and **Access Token**</li><li>Env: <code>OPENCLAW_TWITCH_ACCESS_TOKEN=...</code> (default account only)</li><li>Or config: <code>channels.twitch.accessToken</code></li><li>If both are set, config takes precedence (env fallback is default-account only).</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“**⚠️ Important:** Add access control (allowFrom or allowedRoles) to prevent unauthorized users from triggering the bot.…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>**⚠️ Important:** Add access control (<code>allowFrom</code> or <code>allowedRoles</code>) to prevent unauthorized users from triggering the bot. <code>requireMention</code> defaults to <code>true</code>.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Minimal 设置说明书:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Minimal config:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“channels”贴标签，意思是把它设置成“{”。</li><li>这里在给“twitch”贴标签，意思是把它设置成“{”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json5">{
-  channels: {
-    twitch: {
-      enabled: true,
-      username: &quot;openclaw&quot;, // Bot&#39;s Twitch account
-      accessToken: &quot;oauth:abc123...&quot;, // OAuth Access Token (or use OPENCLAW_TWITCH_ACCESS_TOKEN env var)
-      clientId: &quot;xyz789...&quot;, // Client ID from Token Generator
-      channel: &quot;vevisk&quot;, // Which Twitch channel&#39;s chat to join (required)
-      allowFrom: [&quot;123456789&quot;], // (recommended) Your Twitch user ID only - get it from https://www.streamweasels.com/tools/convert-twitch-username-to-user-id/
-    },
-  },
-}</code></pre>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-4">
-          <div class="section-heading">
-            <p class="section-kicker">第 4 站</p>
-            <h2>What it is</h2>
-            <p>这一节主要在解释“What it is”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“What it is”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“What it is”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：A Twitch 消息通道 owned by the 门口的小门卫.、Deterministic routing: replies always go…、Each account maps to an isolated session…、username is the bot&#39;s account (who authen…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>A Twitch channel owned by the Gateway.</li><li>Deterministic routing: replies always go back to Twitch.</li><li>Each account maps to an isolated session key <code>agent:&lt;agentId&gt;:twitch:&lt;accountName&gt;</code>.</li><li><code>username</code> is the bot&#39;s account (who authenticates), <code>channel</code> is which chat room to join.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-5">
-          <div class="section-heading">
-            <p class="section-kicker">第 5 站</p>
-            <h2>Generate credentials</h2>
-            <p>这一节主要在解释“Generate credentials”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“Generate credentials”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Use Twitch Token Generator: No manual app registration needed. Tokens expire after several hours.”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Use Twitch Token Generator:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Use <a href="https://twitchtokengenerator.com/" target="_blank" rel="noreferrer">Twitch Token Generator</a>:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Generate credentials”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Select **Bot Token**、Verify scopes chat:read and chat:write ar…、Copy the **来帮忙的小伙伴 ID** and **Access Toke…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Select **Bot Token**</li><li>Verify scopes <code>chat:read</code> and <code>chat:write</code> are selected</li><li>Copy the **Client ID** and **Access Token**</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“No manual app registration needed. Tokens expire after several hours.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>No manual app registration needed. Tokens expire after several hours.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-6">
-          <div class="section-heading">
-            <p class="section-kicker">第 6 站</p>
-            <h2>设置说明书ure the bot</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“**Env var (default account only):** **Or 设置说明书:** If both env and 设置说明书 are set, 设置说明书 takes precedence.”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“**Env var (default account only):**”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>**Env var (default account only):**</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一串终端魔法口令，像按步骤按下几个按钮，让电脑开始干活。</p>
-        <ul class="code-steps">
-          <li>这里在给“OPENCLAW_TWITCH_ACCESS_TOKEN=oauth”贴标签，意思是把它设置成“abc123...”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">OPENCLAW_TWITCH_ACCESS_TOKEN=oauth:abc123...</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“**Or 设置说明书:**”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>**Or config:**</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“channels”贴标签，意思是把它设置成“{”。</li><li>这里在给“twitch”贴标签，意思是把它设置成“{”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json5">{
-  channels: {
-    twitch: {
-      enabled: true,
-      username: &quot;openclaw&quot;,
-      accessToken: &quot;oauth:abc123...&quot;,
-      clientId: &quot;xyz789...&quot;,
-      channel: &quot;vevisk&quot;,
-    },
-  },
-}</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“If both env and 设置说明书 are set, 设置说明书 takes precedence.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>If both env and config are set, config takes precedence.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-7">
-          <div class="section-heading">
-            <p class="section-kicker">第 7 站</p>
-            <h2>Access control (recommended)</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Prefer allowFrom for a hard allowlist. Use allowedRoles instead if you want role-based access. **Available roles:** &quot;mo…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“channels”贴标签，意思是把它设置成“{”。</li><li>这里在给“twitch”贴标签，意思是把它设置成“{”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json5">{
-  channels: {
-    twitch: {
-      allowFrom: [&quot;123456789&quot;], // (recommended) Your Twitch user ID only
-    },
-  },
-}</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Prefer allowFrom for a hard allowlist. Use allowedRoles instead if you want role-based access.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Prefer <code>allowFrom</code> for a hard allowlist. Use <code>allowedRoles</code> instead if you want role-based access.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“**Available roles:** &quot;moderator&quot;, &quot;owner&quot;, &quot;vip&quot;, &quot;subscriber&quot;, &quot;all&quot;.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>**Available roles:** <code>&quot;moderator&quot;</code>, <code>&quot;owner&quot;</code>, <code>&quot;vip&quot;</code>, <code>&quot;subscriber&quot;</code>, <code>&quot;all&quot;</code>.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“**Why user IDs?** Usernames can change, allowing impersonation. User IDs are permanent.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>**Why user IDs?** Usernames can change, allowing impersonation. User IDs are permanent.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Find your Twitch user ID: https://www.一边说一边送weasels.com/工具小帮手s/convert-twitch-username-to-user-id/ (Convert your Twitch…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Find your Twitch user ID: <a href="https://www.streamweasels.com/tools/convert-twitch-username-to-user-id/" target="_blank" rel="noreferrer">https://www.streamweasels.com/tools/convert-twitch-username-to-user-id/</a> (Convert your Twitch username to ID)</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-8">
-          <div class="section-heading">
-            <p class="section-kicker">第 8 站</p>
-            <h2>Token refresh (optional)</h2>
-            <p>这一节主要在解释“Token refresh (optional)”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“Token refresh (optional)”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Tokens from Twitch Token Generator cannot be automatically refreshed - regenerate when expired. For automatic token ref…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Tokens from Twitch Token Generator cannot be automatically refreshed - regenerate when expired.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Tokens from <a href="https://twitchtokengenerator.com/" target="_blank" rel="noreferrer">Twitch Token Generator</a> cannot be automatically refreshed - regenerate when expired.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“For automatic token refresh, create your own Twitch application at Twitch Developer Console and add to 设置说明书:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>For automatic token refresh, create your own Twitch application at <a href="https://dev.twitch.tv/console" target="_blank" rel="noreferrer">Twitch Developer Console</a> and add to config:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“channels”贴标签，意思是把它设置成“{”。</li><li>这里在给“twitch”贴标签，意思是把它设置成“{”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json5">{
-  channels: {
-    twitch: {
-      clientSecret: &quot;your_client_secret&quot;,
-      refreshToken: &quot;your_refresh_token&quot;,
-    },
-  },
-}</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“The bot automatically refreshes tokens before expiration and logs refresh events.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>The bot automatically refreshes tokens before expiration and logs refresh events.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-9">
-          <div class="section-heading">
-            <p class="section-kicker">第 9 站</p>
-            <h2>Multi-account support</h2>
-            <p>这一节主要在解释“Multi-account support”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“Multi-account support”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Use 消息通道s.twitch.accounts with per-account tokens. See 门口的小门卫/设置说明书uration for the shared pattern. Example (one bot acc…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Use 消息通道s.twitch.accounts with per-account tokens. See 门口的小门卫/设置说明书uration for the shared pattern.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Use <code>channels.twitch.accounts</code> with per-account tokens. See <a href="/gateway/configuration" target="_blank" rel="noreferrer"><code>gateway/configuration</code></a> for the shared pattern.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Example (one bot account in two 消息通道s):”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Example (one bot account in two channels):</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“channels”贴标签，意思是把它设置成“{”。</li><li>这里在给“twitch”贴标签，意思是把它设置成“{”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json5">{
-  channels: {
-    twitch: {
-      accounts: {
-        channel1: {
-          username: &quot;openclaw&quot;,
-          accessToken: &quot;oauth:abc123...&quot;,
-          clientId: &quot;xyz789...&quot;,
-          channel: &quot;vevisk&quot;,
-        },
-        channel2: {
-          username: &quot;openclaw&quot;,
-          accessToken: &quot;oauth:def456...&quot;,
-          clientId: &quot;uvw012...&quot;,
-          channel: &quot;secondchannel&quot;,
-        },
-      },
-    },
-  },
-}</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“**Note:** Each account needs its own token (one token per 消息通道).”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>**Note:** Each account needs its own token (one token per channel).</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-10">
-          <div class="section-heading">
-            <p class="section-kicker">第 10 站</p>
-            <h2>Role-based restrictions</h2>
-            <p>这一节主要在解释“Role-based restrictions”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“Role-based restrictions”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“channels”贴标签，意思是把它设置成“{”。</li><li>这里在给“twitch”贴标签，意思是把它设置成“{”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json5">{
-  channels: {
-    twitch: {
-      accounts: {
-        default: {
-          allowedRoles: [&quot;moderator&quot;, &quot;vip&quot;],
-        },
-      },
-    },
-  },
-}</code></pre>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-11">
-          <div class="section-heading">
-            <p class="section-kicker">第 11 站</p>
-            <h2>Allowlist by User ID (most secure)</h2>
-            <p>这一节主要在解释“Allowlist by User ID (most secure)”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“Allowlist by User ID (most secure)”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“channels”贴标签，意思是把它设置成“{”。</li><li>这里在给“twitch”贴标签，意思是把它设置成“{”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json5">{
-  channels: {
-    twitch: {
-      accounts: {
-        default: {
-          allowFrom: [&quot;123456789&quot;, &quot;987654321&quot;],
-        },
-      },
-    },
-  },
-}</code></pre>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-12">
-          <div class="section-heading">
-            <p class="section-kicker">第 12 站</p>
-            <h2>Role-based access (alternative)</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“allowFrom is a hard allowlist. When set, only those user IDs are allowed. If you want role-based access, leave allowFro…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“allowFrom is a hard allowlist. When set, only those user IDs are allowed. If you want role-based access, leave allowFro…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p><code>allowFrom</code> is a hard allowlist. When set, only those user IDs are allowed. If you want role-based access, leave <code>allowFrom</code> unset and configure <code>allowedRoles</code> instead:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“channels”贴标签，意思是把它设置成“{”。</li><li>这里在给“twitch”贴标签，意思是把它设置成“{”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json5">{
-  channels: {
-    twitch: {
-      accounts: {
-        default: {
-          allowedRoles: [&quot;moderator&quot;],
-        },
-      },
-    },
-  },
-}</code></pre>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-13">
-          <div class="section-heading">
-            <p class="section-kicker">第 13 站</p>
-            <h2>Disable @mention requirement</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“By default, requireMention is true. To disable and respond to all 小纸条消息s:”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“By default, requireMention is true. To disable and respond to all 小纸条消息s:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>By default, <code>requireMention</code> is <code>true</code>. To disable and respond to all messages:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“channels”贴标签，意思是把它设置成“{”。</li><li>这里在给“twitch”贴标签，意思是把它设置成“{”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json5">{
-  channels: {
-    twitch: {
-      accounts: {
-        default: {
-          requireMention: false,
-        },
-      },
-    },
-  },
-}</code></pre>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-14">
-          <div class="section-heading">
-            <p class="section-kicker">第 14 站</p>
-            <h2>Troubleshooting</h2>
-            <p>这一节主要在解释“Troubleshooting”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“Troubleshooting”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“First, run diagnostic 魔法口令s:”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“First, run diagnostic 魔法口令s:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>First, run diagnostic commands:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一句直接对 OpenClaw 说的话，就像对小助手下达任务。</p>
-        <ul class="code-steps">
-          <li>这一句是在直接叫 OpenClaw 做事：“openclaw doctor”。你可以把它想成对机器人说的完整命令。</li><li>这一句是在直接叫 OpenClaw 做事：“openclaw channels status --probe”。你可以把它想成对机器人说的完整命令。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">openclaw doctor
-openclaw channels status --probe</code></pre>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-15">
-          <div class="section-heading">
-            <p class="section-kicker">第 15 站</p>
-            <h2>Bot does not respond to 小纸条消息s</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“**Check access control:** Ensure your user ID is in allowFrom, or temporarily remove allowFrom and set allowedRoles: [&quot;…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“**Check access control:** Ensure your user ID is in allowFrom, or temporarily remove allowFrom and set allowedRoles: [&quot;…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>**Check access control:** Ensure your user ID is in <code>allowFrom</code>, or temporarily remove <code>allowFrom</code> and set <code>allowedRoles: [&quot;all&quot;]</code> to test.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“**Check the bot is in the 消息通道:** The bot must join the 消息通道 specified in 消息通道.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>**Check the bot is in the channel:** The bot must join the channel specified in <code>channel</code>.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-16">
-          <div class="section-heading">
-            <p class="section-kicker">第 16 站</p>
-            <h2>Token issues</h2>
-            <p>这一节主要在解释“Token issues”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“Token issues”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“**&quot;Failed to connect&quot; or authentication errors:**”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“**&quot;Failed to connect&quot; or authentication errors:**”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>**&quot;Failed to connect&quot; or authentication errors:**</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Token issues”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Verify accessToken is the OAuth access to…、Check token has chat:read and chat:write…、If using token refresh, verify 来帮忙的小伙伴Sec…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Verify <code>accessToken</code> is the OAuth access token value (typically starts with <code>oauth:</code> prefix)</li><li>Check token has <code>chat:read</code> and <code>chat:write</code> scopes</li><li>If using token refresh, verify <code>clientSecret</code> and <code>refreshToken</code> are set</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-17">
-          <div class="section-heading">
-            <p class="section-kicker">第 17 站</p>
-            <h2>Token refresh not working</h2>
-            <p>这一节主要在解释“Token refresh not working”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“Token refresh not working”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“**Check logs for refresh events:** If you see &quot;token refresh disabled (no refresh token)&quot;:”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“**Check logs for refresh events:**”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>**Check logs for refresh events:**</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段像给机器人看的说明书，告诉它要按什么样子准备东西。</p>
-        <ul class="code-steps">
-          <li>这一行“Using env token source for mybot”是当前步骤要交给电脑的一小块提示。</li><li>这一行“Access token refreshed for user 123456 (expires in 14400s)”是当前步骤要交给电脑的一小块提示。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-text">Using env token source for mybot
-Access token refreshed for user 123456 (expires in 14400s)</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“If you see &quot;token refresh disabled (no refresh token)&quot;:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>If you see &quot;token refresh disabled (no refresh token)&quot;:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Token refresh not working”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Ensure 来帮忙的小伙伴Secret is provided、Ensure refreshToken is provided。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Ensure <code>clientSecret</code> is provided</li><li>Ensure <code>refreshToken</code> is provided</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-18">
-          <div class="section-heading">
-            <p class="section-kicker">第 18 站</p>
-            <h2>设置说明书</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“**Account 设置说明书:** **Provider options:** Full example:”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“**Account 设置说明书:**”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>**Account config:**</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Config”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：username - Bot username、accessToken - OAuth access token with cha…、来帮忙的小伙伴Id - Twitch 来帮忙的小伙伴 ID (from Token…、消息通道 - 消息通道 to join (required)。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>username</code> - Bot username</li><li><code>accessToken</code> - OAuth access token with <code>chat:read</code> and <code>chat:write</code></li><li><code>clientId</code> - Twitch Client ID (from Token Generator or your app)</li><li><code>channel</code> - Channel to join (required)</li><li><code>enabled</code> - Enable this account (default: <code>true</code>)</li><li><code>clientSecret</code> - Optional: For automatic token refresh</li><li><code>refreshToken</code> - Optional: For automatic token refresh</li><li><code>expiresIn</code> - Token expiry in seconds</li><li><code>obtainmentTimestamp</code> - Token obtained timestamp</li><li><code>allowFrom</code> - User ID allowlist</li><li><code>allowedRoles</code> - Role-based access control (<code>&quot;moderator&quot; | &quot;owner&quot; | &quot;vip&quot; | &quot;subscriber&quot; | &quot;all&quot;</code>)</li><li><code>requireMention</code> - Require @mention (default: <code>true</code>)</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“**Provider options:**”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>**Provider options:**</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Config”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：消息通道s.twitch.enabled - Enable/disable 消息通…、消息通道s.twitch.username - Bot username (sim…、消息通道s.twitch.accessToken - OAuth access t…、消息通道s.twitch.来帮忙的小伙伴Id - Twitch 来帮忙的小伙伴 I…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>channels.twitch.enabled</code> - Enable/disable channel startup</li><li><code>channels.twitch.username</code> - Bot username (simplified single-account config)</li><li><code>channels.twitch.accessToken</code> - OAuth access token (simplified single-account config)</li><li><code>channels.twitch.clientId</code> - Twitch Client ID (simplified single-account config)</li><li><code>channels.twitch.channel</code> - Channel to join (simplified single-account config)</li><li><code>channels.twitch.accounts.&lt;accountName&gt;</code> - Multi-account config (all account fields above)</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Full example:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Full example:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“channels”贴标签，意思是把它设置成“{”。</li><li>这里在给“twitch”贴标签，意思是把它设置成“{”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json5">{
-  channels: {
-    twitch: {
-      enabled: true,
-      username: &quot;openclaw&quot;,
-      accessToken: &quot;oauth:abc123...&quot;,
-      clientId: &quot;xyz789...&quot;,
-      channel: &quot;vevisk&quot;,
-      clientSecret: &quot;secret123...&quot;,
-      refreshToken: &quot;refresh456...&quot;,
-      allowFrom: [&quot;123456789&quot;],
-      allowedRoles: [&quot;moderator&quot;, &quot;vip&quot;],
-      accounts: {
-        default: {
-          username: &quot;mybot&quot;,
-          accessToken: &quot;oauth:abc123...&quot;,
-          clientId: &quot;xyz789...&quot;,
-          channel: &quot;your_channel&quot;,
-          enabled: true,
-          clientSecret: &quot;secret123...&quot;,
-          refreshToken: &quot;refresh456...&quot;,
-          expiresIn: 14400,
-          obtainmentTimestamp: 1706092800000,
-          allowFrom: [&quot;123456789&quot;, &quot;987654321&quot;],
-          allowedRoles: [&quot;moderator&quot;],
-        },
-      },
-    },
-  },
-}</code></pre>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-19">
-          <div class="section-heading">
-            <p class="section-kicker">第 19 站</p>
-            <h2>工具小帮手 actions</h2>
-            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>你理解的是能力边界，不只是功能名字。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“The 机器人朋友 can call twitch with action: Example:”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“The 机器人朋友 can call twitch with action:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>The agent can call <code>twitch</code> with action:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Tool actions”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：send - Send a 小纸条消息 to a 消息通道。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>send</code> - Send a message to a channel</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Example:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Example:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“action”贴标签，意思是把它设置成“twitch”。</li><li>这里在给“params”贴标签，意思是把它设置成“{”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json5">{
-  action: &quot;twitch&quot;,
-  params: {
-    message: &quot;Hello Twitch!&quot;,
-    to: &quot;#mychannel&quot;,
-  },
-}</code></pre>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-20">
-          <div class="section-heading">
-            <p class="section-kicker">第 20 站</p>
-            <h2>Safety &amp; ops</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Safety &amp; ops”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：**Treat tokens like 秘密口令s** - Never commi…、**Use automatic token refresh** for long-…、**Use user ID allowlists** instead of use…、**Monitor logs** for token refresh events…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>**Treat tokens like passwords** - Never commit tokens to git</li><li>**Use automatic token refresh** for long-running bots</li><li>**Use user ID allowlists** instead of usernames for access control</li><li>**Monitor logs** for token refresh events and connection status</li><li>**Scope tokens minimally** - Only request <code>chat:read</code> and <code>chat:write</code></li><li>**If stuck**: Restart the gateway after confirming no other process owns the session</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-21">
-          <div class="section-heading">
-            <p class="section-kicker">第 21 站</p>
-            <h2>Limits</h2>
-            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>你理解的是能力边界，不只是功能名字。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Limits”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：**500 characters** per 小纸条消息 (auto-chunke…、Markdown is stripped before chunking、No rate limiting (uses Twitch&#39;s built-in…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>**500 characters** per message (auto-chunked at word boundaries)</li><li>Markdown is stripped before chunking</li><li>No rate limiting (uses Twitch&#39;s built-in rate limits)</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-    <section class="section-shell">
-      <div class="ad-placeholder">
-        <p>这里预留给未来的 Google AdSense 模块。</p>
-        <code>&lt;!-- ADSENSE_SNIPPET --&gt;</code>
-      </div>
-    </section>
-  
 
       <footer class="page-footer">
         <div>

@@ -3971,1065 +3971,500 @@
       </div>
 
       
-    <section class="section-shell">
-      <div class="overview-card">
-        <div>
-          <p class="section-kicker">先听这页的人话版</p>
-          <h2>Nostr</h2>
-          <p>这一页像一本关于“Nostr”的小绘本，它先告诉我们这位机器人朋友会做什么，再一步一步解释什么时候该这样做。 你可以先把它想成：Nostr。</p>
-          <p>如果把这页当成“给普通人看的版本”，你最应该带走的是：它到底在教你一件什么事、什么时候要这样做、以及哪里最容易踩坑。</p>
+      <section class="section-shell">
+        <div class="overview-card">
+          <div>
+            <p class="section-kicker">AI 绘本解读版</p>
+            <h2>🎭 给OpenClaw装个秘密信箱</h2>
+            <p>Nostr就像个去中心化的社交广场。这个插件能让OpenClaw在广场上收信、回信。装好它，你的机器人就有自己的秘密信箱了。</p>
+          </div>
+          <div class="overview-meta">
+            <span>原始路径：/channels/nostr</span>
+            <span>故事卡片：19 张</span>
+            <a href="https://docs.openclaw.ai/channels/nostr" target="_blank" rel="noreferrer">查看官方原文</a>
+          </div>
         </div>
-        <div class="overview-meta">
-          <span>原始路径：/channels/nostr</span>
-          <span>章节数量：19</span>
-          <a href="https://docs.openclaw.ai/channels/nostr" target="_blank" rel="noreferrer">查看原文</a>
+      </section>
+      
+          <section class="section-shell" id="section-1">
+            <div class="section-heading">
+              <p class="section-kicker">第 1 站</p>
+              <h2>🎁 先认识一下</h2>
+              <p>Nostr是个去中心化的社交网络协议。这个插件能让OpenClaw通过它收发加密私信。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>想让你机器人和朋友在广场上悄悄聊天吗？</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>它是个可选插件，默认是关着的。</li><li>就像给你的机器人配了个秘密信箱。</li><li>信箱用NIP-04加密，只有你和朋友能看。</li><li>机器人能自动收信、回信。</li><li>广场上谁都能发，但机器人只认对的钥匙。</li></ul>
+              </div>
+              
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>这是机器人的秘密社交信箱。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-2">
+            <div class="section-heading">
+              <p class="section-kicker">第 2 站</p>
+              <h2>🚀 推荐安装法</h2>
+              <p>用向导安装，就像逛商店选玩具。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>最简单，跟着提示走就行。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>运行 `openclaw onboard` 或 `openclaw channels add`。</li><li>向导会列出所有可选插件，像玩具清单。</li><li>你选Nostr，它就问你要不要装。</li><li>开发版从本地拿，稳定版从网上商店下。</li><li>随时可以改主意，选别的安装方式。</li></ul>
+              </div>
+              
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>跟着向导，点点选选就装好。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-3">
+            <div class="section-heading">
+              <p class="section-kicker">第 3 站</p>
+              <h2>🔧 手动安装</h2>
+              <p>自己动手，直接告诉机器人装什么。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>适合喜欢敲命令的你。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>一条命令就从网上商店下载安装。</li><li>开发版可以链接本地文件夹，方便改代码。</li><li>装完记得重启机器人，让它加载新插件。</li><li>就像给机器人换新装备，得重启才生效。</li></ul>
+              </div>
+              
+            <div class="source-card">
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
+              <ul><li>`openclaw plugins install @openclaw/nostr`：这行命令像在说“去商店买Nostr插件”。</li><li>`openclaw plugins install --link &lt;路径&gt;`：这行命令像在说“用我本地这个文件夹当插件”。</li><li>重启Gateway：就像让机器人睡一觉，醒来就有新能力。</li></ul>
+            </div>
+          
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>敲命令安装，重启就生效。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-4">
+            <div class="section-heading">
+              <p class="section-kicker">第 4 站</p>
+              <h2>🤖 自动配置</h2>
+              <p>不用问答，直接告诉机器人所有设置。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>适合脚本或自动化流程。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>一条命令配好私钥和信箱地址。</li><li>私钥可以放环境变量里，更安全。</li><li>可以指定多个信箱地址，收信更稳。</li><li>就像直接给机器人一张配置纸条。</li></ul>
+              </div>
+              
+            <div class="source-card">
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
+              <ul><li>`openclaw channels add --channel nostr --private-key &quot;$NOSTR_PRIVATE_KEY&quot;`：这行命令像在说“给机器人配Nostr信箱，钥匙是...”。</li><li>加 `--relay-urls` 参数：像在说“去这几个地址收信”。</li><li>`--use-env` 选项：像在说“钥匙放环境里，别写纸上”。</li></ul>
+            </div>
+          
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>一条命令，全自动配好。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-5">
+            <div class="section-heading">
+              <p class="section-kicker">第 5 站</p>
+              <h2>⚡ 快速上手</h2>
+              <p>四步走，马上让机器人有信箱。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>最快体验秘密聊天。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>第一步：生成一对钥匙（公钥和私钥）。</li><li>第二步：把私钥告诉机器人，写进配置。</li><li>第三步：把私钥放进环境，像藏好真钥匙。</li><li>第四步：重启机器人，信箱就开了。</li></ul>
+              </div>
+              
+            <div class="source-card">
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
+              <ul><li>`nak key generate`：这行命令像在说“造一把新钥匙”。</li><li>配置里的 `privateKey: &quot;${NOSTR_PRIVATE_KEY}&quot;`：像在说“机器人的钥匙是环境里那个”。</li><li>`export NOSTR_PRIVATE_KEY=&quot;nsec1...&quot;`：这行命令像在说“把真钥匙藏进环境口袋”。</li></ul>
+            </div>
+          
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>生成钥匙、写配置、藏钥匙、重启。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-6">
+            <div class="section-heading">
+              <p class="section-kicker">第 6 站</p>
+              <h2>🎛️ 配置按钮大全</h2>
+              <p>所有能调的设置，像机器人的控制面板。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>想精细控制信箱怎么工作？看这里。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>`privateKey`：机器人的私钥，开信箱的钥匙。</li><li>`relays`：信箱地址列表，机器人去这儿收信。</li><li>`dmPolicy`：收信规则，决定谁的信能收。</li><li>`allowFrom`：白名单，只收这些朋友的信。</li><li>`enabled`：开关，打开才能用信箱。</li></ul>
+              </div>
+              
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>私钥、地址、规则、白名单、开关。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-7">
+            <div class="section-heading">
+              <p class="section-kicker">第 7 站</p>
+              <h2>📇 机器人名片</h2>
+              <p>给机器人在广场上做个自我介绍。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>让朋友知道这是谁的信箱。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>名片包括名字、头像、签名、网站等。</li><li>可以在控制界面点点鼠标设置。</li><li>也能直接写进配置，一次搞定。</li><li>网址要用https开头，更安全。</li><li>如果广场上已有名片，会和你本地的合并。</li></ul>
+              </div>
+              
+            <div class="source-card">
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
+              <ul><li>配置里的 `profile` 对象：像在填一张名片表格。</li><li>`name: &quot;openclaw&quot;`：机器人的真名。</li><li>`picture: &quot;https://...&quot;`：机器人的头像地址。</li></ul>
+            </div>
+          
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>给机器人做张漂亮名片。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-8">
+            <div class="section-heading">
+              <p class="section-kicker">第 8 站</p>
+              <h2>🚦 收信规则</h2>
+              <p>决定哪些信能进信箱，哪些被拦下。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>控制谁可以和机器人聊天。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>`pairing`（默认）：陌生人发信，机器人回个配对码。</li><li>`allowlist`：只收白名单里朋友的信。</li><li>`open`：谁的信都收，但得明确设置。</li><li>`disabled`：不收任何信，信箱关闭。</li><li>规则先检查，再解密，省力气。</li></ul>
+              </div>
+              
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>四种规则：配对、白名单、全开、关闭。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-9">
+            <div class="section-heading">
+              <p class="section-kicker">第 9 站</p>
+              <h2>👥 白名单例子</h2>
+              <p>只让特定朋友和机器人聊天。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>生产环境更安全。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>设置 `dmPolicy` 为 `allowlist`。</li><li>在 `allowFrom` 里列出朋友们的公钥。</li><li>只有这些朋友的加密信才会被解密处理。</li><li>其他人的信直接被忽略。</li></ul>
+              </div>
+              
+            <div class="source-card">
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
+              <ul><li>配置里的 `allowFrom: [&quot;npub1abc...&quot;, &quot;npub1xyz...&quot;]`：像在说“只允许这两个朋友发信”。</li></ul>
+            </div>
+          
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>只认名单上的朋友。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-10">
+            <div class="section-heading">
+              <p class="section-kicker">第 10 站</p>
+              <h2>🔑 钥匙格式</h2>
+              <p>机器人认哪种样子的钥匙。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>别给错钥匙了。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>私钥可以是 `nsec...` 格式或64位十六进制。</li><li>公钥（白名单用）可以是 `npub...` 格式或十六进制。</li><li>就像锁认特定形状的钥匙。</li></ul>
+              </div>
+              
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>私钥nsec或hex，公钥npub或hex。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-11">
+            <div class="section-heading">
+              <p class="section-kicker">第 11 站</p>
+              <h2>📮 信箱地址</h2>
+              <p>机器人去哪儿收信。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>地址不对，收不到信。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>默认用两个公共信箱地址。</li><li>可以自己加更多，比如 `wss://relay.primal.net`。</li><li>建议用2-3个，备份更稳。</li><li>太多会慢，信可能重复。</li><li>本地测试可以用 `ws://localhost:7777`。</li></ul>
+              </div>
+              
+            <div class="source-card">
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
+              <ul><li>配置里的 `relays: [&quot;wss://...&quot;]`：像在说“去这些地址查信”。</li></ul>
+            </div>
+          
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>选2-3个靠谱地址。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-12">
+            <div class="section-heading">
+              <p class="section-kicker">第 12 站</p>
+              <h2>📜 支持的信件格式</h2>
+              <p>机器人能处理哪种协议的信。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>知道它能做什么、不能做什么。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>NIP-01：基本事件格式和名片，已支持。</li><li>NIP-04：加密私信，已支持。</li><li>NIP-17：礼物包装的信，计划中。</li><li>NIP-44：新版加密，计划中。</li><li>目前主要收加密私信。</li></ul>
+              </div>
+              
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>现在支持加密私信，更多功能在路上。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-13">
+            <div class="section-heading">
+              <p class="section-kicker">第 13 站</p>
+              <h2>🏠 本地信箱</h2>
+              <p>自己搭个信箱，测试用。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>开发调试更方便。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>用Docker运行strfry，本地起个信箱服务。</li><li>机器人配置里指向 `ws://localhost:7777`。</li><li>不用连外网，快速测试收发。</li><li>适合开发阶段玩一玩。</li></ul>
+              </div>
+              
+            <div class="source-card">
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
+              <ul><li>`docker run -p 7777:7777 ghcr.io/hoytech/strfry`：这行命令像在说“启动一个本地信箱服务”。</li><li>配置里 `relays: [&quot;ws://localhost:7777&quot;]`：像在说“去本地那个地址收信”。</li></ul>
+            </div>
+          
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>本地搭信箱，测试快又稳。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-14">
+            <div class="section-heading">
+              <p class="section-kicker">第 14 站</p>
+              <h2>🧪 手动测试</h2>
+              <p>装好了？试试发封信。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>确保一切正常工作。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>从日志里找到机器人的公钥（npub）。</li><li>打开Nostr客户端，比如Damus。</li><li>给那个公钥发封加密私信。</li><li>看机器人有没有回信。</li></ul>
+              </div>
+              
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>找到公钥，发信测试。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-15">
+            <div class="section-heading">
+              <p class="section-kicker">第 15 站</p>
+              <h2>🔍 收不到信？</h2>
+              <p>常见问题排查。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>帮你快速解决。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>检查私钥对不对，钥匙错了开不了锁。</li><li>确保信箱地址能连通，用wss://（本地用ws://）。</li><li>确认插件开关是打开的（enabled不是false）。</li><li>看机器人日志有没有连接错误。</li></ul>
+              </div>
+              
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>查钥匙、查地址、查开关、查日志。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-16">
+            <div class="section-heading">
+              <p class="section-kicker">第 16 站</p>
+              <h2>📤 发不出回信？</h2>
+              <p>机器人能收不能回？</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>找出回信卡住的原因。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>检查信箱地址是否允许写信。</li><li>确认机器人网络能连出去。</li><li>注意信箱可能有发信速度限制。</li></ul>
+              </div>
+              
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>查写信权限、网络、限速。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-17">
+            <div class="section-heading">
+              <p class="section-kicker">第 17 站</p>
+              <h2>🔄 回信重复了</h2>
+              <p>为什么收到好几封一样的回信？</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>正常现象，别担心。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>用了多个信箱地址时，正常会重复。</li><li>机器人会去重，只处理第一封。</li><li>就像你同时问几个朋友，他们都回你。</li></ul>
+              </div>
+              
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>多地址正常重复，机器人只回一次。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-18">
+            <div class="section-heading">
+              <p class="section-kicker">第 18 站</p>
+              <h2>🛡️ 安全提醒</h2>
+              <p>保护你的钥匙和机器人。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>安全第一，别泄露。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>千万别把私钥直接写进代码或配置文件。</li><li>用环境变量存私钥，更安全。</li><li>生产环境建议用白名单模式。</li><li>规则先检查，陌生信不解密，省资源。</li></ul>
+              </div>
+              
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>钥匙藏好，用白名单，先检查后解密。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-19">
+            <div class="section-heading">
+              <p class="section-kicker">第 19 站</p>
+              <h2>⚠️ 当前限制</h2>
+              <p>第一个版本能做什么、不能做什么。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>了解边界，合理期待。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>只支持一对一私信，没有群聊。</li><li>不能发图片、文件等附件。</li><li>只支持NIP-04加密，礼物包装信以后加。</li><li>专注核心功能，简单可靠。</li></ul>
+              </div>
+              
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>目前只做加密私信，更多功能后续加。</p>
+              </div>
+            </div>
+          </section>
+        
+      <section class="section-shell">
+        <div class="ad-placeholder">
+          <p>这里预留给未来的 Google AdSense 模块。</p>
+          <code>&lt;!-- ADSENSE_SNIPPET --&gt;</code>
         </div>
-      </div>
-    </section>
+      </section>
     
-        <section class="section-shell" id="section-1">
-          <div class="section-heading">
-            <p class="section-kicker">第 1 站</p>
-            <h2>Start Here</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Nostr **Status:** Optional 新本领插件 (disabled by default). Nostr is a decentralized protocol for social networking. This 消…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Nostr”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p># Nostr</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“**Status:** Optional 新本领插件 (disabled by default).”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>**Status:** Optional plugin (disabled by default).</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Nostr is a decentralized protocol for social networking. This 消息通道 enables OpenClaw to receive and respond to encrypted…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Nostr is a decentralized protocol for social networking. This channel enables OpenClaw to receive and respond to encrypted direct messages (DMs) via NIP-04.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-2">
-          <div class="section-heading">
-            <p class="section-kicker">第 2 站</p>
-            <h2>Onboarding (recommended)</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Install defaults: You can always override the choice in the prompt.”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Onboarding (recommended)”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Onboarding (openclaw onboard) and opencla…、Selecting Nostr prompts you to install th…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Onboarding (<code>openclaw onboard</code>) and <code>openclaw channels add</code> list optional channel plugins.</li><li>Selecting Nostr prompts you to install the plugin on demand.</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Install defaults:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Install defaults:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Onboarding (recommended)”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：**Dev 消息通道 + git checkout available:** us…、**Stable/Beta:** downloads from npm.</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>**Dev channel + git checkout available:** uses the local plugin path.</li><li>**Stable/Beta:** downloads from npm.</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“You can always override the choice in the prompt.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>You can always override the choice in the prompt.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-3">
-          <div class="section-heading">
-            <p class="section-kicker">第 3 站</p>
-            <h2>Manual install</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Use a local checkout (dev workflows): Restart the 门口的小门卫 after installing or enabling 新本领插件s.”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一句直接对 OpenClaw 说的话，就像对小助手下达任务。</p>
-        <ul class="code-steps">
-          <li>这一句是在直接叫 OpenClaw 做事：“openclaw plugins install @openclaw/nostr”。你可以把它想成对机器人说的完整命令。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">openclaw plugins install @openclaw/nostr</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Use a local checkout (dev workflows):”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Use a local checkout (dev workflows):</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一句直接对 OpenClaw 说的话，就像对小助手下达任务。</p>
-        <ul class="code-steps">
-          <li>这一句是在直接叫 OpenClaw 做事：“openclaw plugins install --link &lt;path-to-openclaw&gt;/extensions/nostr”。你可以把它想成对机器人说的完整命令。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">openclaw plugins install --link &lt;path-to-openclaw&gt;/extensions/nostr</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Restart the 门口的小门卫 after installing or enabling 新本领插件s.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Restart the Gateway after installing or enabling plugins.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-4">
-          <div class="section-heading">
-            <p class="section-kicker">第 4 站</p>
-            <h2>Non-interactive setup</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Use --use-env to keep NOSTR_PRIVATE_KEY in the environment instead of storing the key in 设置说明书.”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一句直接对 OpenClaw 说的话，就像对小助手下达任务。</p>
-        <ul class="code-steps">
-          <li>这一句是在直接叫 OpenClaw 做事：“openclaw channels add --channel nostr --private-key &quot;$NOSTR_PRIVATE_KEY&quot;”。你可以把它想成对机器人说的完整命令。</li><li>这里在给“openclaw channels add --channel nostr --private-key $NOSTR_PRIVATE_KEY --relay-urls wss”贴标签，意思是把它设置成“//relay.damus.iowss://relay.primal.net”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">openclaw channels add --channel nostr --private-key &quot;$NOSTR_PRIVATE_KEY&quot;
-openclaw channels add --channel nostr --private-key &quot;$NOSTR_PRIVATE_KEY&quot; --relay-urls &quot;wss://relay.damus.io,wss://relay.primal.net&quot;</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Use --use-env to keep NOSTR_PRIVATE_KEY in the environment instead of storing the key in 设置说明书.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Use <code>--use-env</code> to keep <code>NOSTR_PRIVATE_KEY</code> in the environment instead of storing the key in config.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-5">
-          <div class="section-heading">
-            <p class="section-kicker">第 5 站</p>
-            <h2>Quick setup</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“1. Generate a Nostr keypair (if needed): 2. Add to 设置说明书: 3. Export the key: 4. Restart the 门口的小门卫.”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“1. Generate a Nostr keypair (if needed):”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>1. Generate a Nostr keypair (if needed):</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一串终端魔法口令，像按步骤按下几个按钮，让电脑开始干活。</p>
-        <ul class="code-steps">
-          <li>这一行“# Using nak”是当前步骤要交给电脑的一小块提示。</li><li>这一行“nak key generate”是当前步骤要交给电脑的一小块提示。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash"># Using nak
-nak key generate</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“2. Add to 设置说明书:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>2. Add to config:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“channels”贴标签，意思是把它设置成“{”。</li><li>这里在给“nostr”贴标签，意思是把它设置成“{”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json5">{
-  channels: {
-    nostr: {
-      privateKey: &quot;${NOSTR_PRIVATE_KEY}&quot;,
-    },
-  },
-}</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“3. Export the key:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>3. Export the key:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一串终端魔法口令，像按步骤按下几个按钮，让电脑开始干活。</p>
-        <ul class="code-steps">
-          <li>这一行“export NOSTR_PRIVATE_KEY=&quot;nsec1...&quot;”是当前步骤要交给电脑的一小块提示。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">export NOSTR_PRIVATE_KEY=&quot;nsec1...&quot;</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“4. Restart the 门口的小门卫.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>4. Restart the Gateway.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-6">
-          <div class="section-heading">
-            <p class="section-kicker">第 6 站</p>
-            <h2>设置说明书uration reference</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Key Type Default Description ------------ --------- ------------------------------------------- -----------------------…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Key Type Default Description ------------ --------- ------------------------------------------- -----------------------…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>| Key | Type | Default | Description | | ------------ | --------- | ------------------------------------------- | ----------------------------------- | | <code>privateKey</code> | string | required | Private key in <code>nsec</code> or hex format | | <code>relays</code> | string\[] | <code>[&#39;wss://relay.damus.io&#39;, &#39;wss://nos.lol&#39;]</code> | Relay URLs (WebSocket) | | <code>dmPolicy</code> | string | <code>pairing</code> | DM access policy | | <code>allowFrom</code> | string\[] | <code>[]</code> | Allowed sender pubkeys | | <code>enabled</code> | boolean | <code>true</code> | Enable/disable channel | | <code>name</code> | string | - | Display name | | <code>profile</code> | object | - | NIP-01 profile metadata |</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-7">
-          <div class="section-heading">
-            <p class="section-kicker">第 7 站</p>
-            <h2>Profile metadata</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Profile data is published as a NIP-01 kind:0 event. You can manage it from the Control UI (消息通道s -&gt; Nostr -&gt; Profile) o…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Profile data is published as a NIP-01 kind:0 event. You can manage it from the Control UI (消息通道s -&gt; Nostr -&gt; Profile) o…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Profile data is published as a NIP-01 <code>kind:0</code> event. You can manage it from the Control UI (Channels -&gt; Nostr -&gt; Profile) or set it directly in config.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Example:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Example:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“channels”贴标签，意思是把它设置成“{”。</li><li>这里在给“nostr”贴标签，意思是把它设置成“{”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json5">{
-  channels: {
-    nostr: {
-      privateKey: &quot;${NOSTR_PRIVATE_KEY}&quot;,
-      profile: {
-        name: &quot;openclaw&quot;,
-        displayName: &quot;OpenClaw&quot;,
-        about: &quot;Personal assistant DM bot&quot;,
-        picture: &quot;https://example.com/avatar.png&quot;,
-        banner: &quot;https://example.com/banner.png&quot;,
-        website: &quot;https://example.com&quot;,
-        nip05: &quot;openclaw@example.com&quot;,
-        lud16: &quot;openclaw@example.com&quot;,
-      },
-    },
-  },
-}</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Notes:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Notes:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Profile metadata”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Profile URLs must use https://.、Importing from relays merges fields and p…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Profile URLs must use <code>https://</code>.</li><li>Importing from relays merges fields and preserves local overrides.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-8">
-          <div class="section-heading">
-            <p class="section-kicker">第 8 站</p>
-            <h2>DM policies</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Enforcement notes:”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“DM policies”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：**pairing** (default): unknown senders ge…、**allowlist**: only pubkeys in allowFrom…、**open**: public inbound DMs (requires al…、**disabled**: ignore inbound DMs.</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>**pairing** (default): unknown senders get a pairing code.</li><li>**allowlist**: only pubkeys in <code>allowFrom</code> can DM.</li><li>**open**: public inbound DMs (requires <code>allowFrom: [&quot;*&quot;]</code>).</li><li>**disabled**: ignore inbound DMs.</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Enforcement notes:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Enforcement notes:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“DM policies”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Sender policy is checked before signature…、Pairing replies are sent without processi…、Inbound DMs are rate-limited and oversize…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Sender policy is checked before signature verification and NIP-04 decryption.</li><li>Pairing replies are sent without processing the original DM body.</li><li>Inbound DMs are rate-limited and oversized payloads are dropped before decrypt.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-9">
-          <div class="section-heading">
-            <p class="section-kicker">第 9 站</p>
-            <h2>Allowlist example</h2>
-            <p>这一节主要在解释“Allowlist example”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“Allowlist example”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“channels”贴标签，意思是把它设置成“{”。</li><li>这里在给“nostr”贴标签，意思是把它设置成“{”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json5">{
-  channels: {
-    nostr: {
-      privateKey: &quot;${NOSTR_PRIVATE_KEY}&quot;,
-      dmPolicy: &quot;allowlist&quot;,
-      allowFrom: [&quot;npub1abc...&quot;, &quot;npub1xyz...&quot;],
-    },
-  },
-}</code></pre>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-10">
-          <div class="section-heading">
-            <p class="section-kicker">第 10 站</p>
-            <h2>Key formats</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Accepted formats:”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Accepted formats:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Accepted formats:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Key formats”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：**Private key:** nsec... or 64-char hex、**Pubkeys (allowFrom):** npub... or hex。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>**Private key:** <code>nsec...</code> or 64-char hex</li><li>**Pubkeys (<code>allowFrom</code>):** <code>npub...</code> or hex</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-11">
-          <div class="section-heading">
-            <p class="section-kicker">第 11 站</p>
-            <h2>Relays</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Defaults: relay.damus.io and nos.lol. Tips:”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Defaults: relay.damus.io and nos.lol.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Defaults: <code>relay.damus.io</code> and <code>nos.lol</code>.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“channels”贴标签，意思是把它设置成“{”。</li><li>这里在给“nostr”贴标签，意思是把它设置成“{”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json5">{
-  channels: {
-    nostr: {
-      privateKey: &quot;${NOSTR_PRIVATE_KEY}&quot;,
-      relays: [&quot;wss://relay.damus.io&quot;, &quot;wss://relay.primal.net&quot;, &quot;wss://nostr.wine&quot;],
-    },
-  },
-}</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Tips:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Tips:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Relays”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Use 2-3 relays for redundancy.、Avoid too many relays (latency, duplicati…、Paid relays can improve reliability.、Local relays are fine for testing (ws://l…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Use 2-3 relays for redundancy.</li><li>Avoid too many relays (latency, duplication).</li><li>Paid relays can improve reliability.</li><li>Local relays are fine for testing (<code>ws://localhost:7777</code>).</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-12">
-          <div class="section-heading">
-            <p class="section-kicker">第 12 站</p>
-            <h2>Protocol support</h2>
-            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>你理解的是能力边界，不只是功能名字。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“NIP Status Description ------ --------- ------------------------------------- NIP-01 Supported Basic event format + pro…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“NIP Status Description ------ --------- ------------------------------------- NIP-01 Supported Basic event format + pro…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>| NIP | Status | Description | | ------ | --------- | ------------------------------------- | | NIP-01 | Supported | Basic event format + profile metadata | | NIP-04 | Supported | Encrypted DMs (<code>kind:4</code>) | | NIP-17 | Planned | Gift-wrapped DMs | | NIP-44 | Planned | Versioned encryption |</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-13">
-          <div class="section-heading">
-            <p class="section-kicker">第 13 站</p>
-            <h2>Local relay</h2>
-            <p>这一节主要在解释“Local relay”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“Local relay”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一串终端魔法口令，像按步骤按下几个按钮，让电脑开始干活。</p>
-        <ul class="code-steps">
-          <li>这一行“# Start strfry”是当前步骤要交给电脑的一小块提示。</li><li>这里在给“docker run -p 7777”贴标签，意思是把它设置成“7777 ghcr.io/hoytech/strfry”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash"># Start strfry
-docker run -p 7777:7777 ghcr.io/hoytech/strfry</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“channels”贴标签，意思是把它设置成“{”。</li><li>这里在给“nostr”贴标签，意思是把它设置成“{”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json5">{
-  channels: {
-    nostr: {
-      privateKey: &quot;${NOSTR_PRIVATE_KEY}&quot;,
-      relays: [&quot;ws://localhost:7777&quot;],
-    },
-  },
-}</code></pre>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-14">
-          <div class="section-heading">
-            <p class="section-kicker">第 14 站</p>
-            <h2>Manual test</h2>
-            <p>这一节主要在解释“Manual test”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“Manual test”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“1. Note the bot pubkey (npub) from logs. 2. Open a Nostr 来帮忙的小伙伴 (Damus, Amethyst, etc.). 3. DM the bot pubkey. 4. Veri…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“1. Note the bot pubkey (npub) from logs. 2. Open a Nostr 来帮忙的小伙伴 (Damus, Amethyst, etc.). 3. DM the bot pubkey. 4. Veri…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>1. Note the bot pubkey (npub) from logs. 2. Open a Nostr client (Damus, Amethyst, etc.). 3. DM the bot pubkey. 4. Verify the response.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-15">
-          <div class="section-heading">
-            <p class="section-kicker">第 15 站</p>
-            <h2>Not receiving 小纸条消息s</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Not receiving messages”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Verify the private key is valid.、Ensure relay URLs are reachable and use w…、Confirm enabled is not false.、Check 门口的小门卫 logs for relay connection er…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Verify the private key is valid.</li><li>Ensure relay URLs are reachable and use <code>wss://</code> (or <code>ws://</code> for local).</li><li>Confirm <code>enabled</code> is not <code>false</code>.</li><li>Check Gateway logs for relay connection errors.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-16">
-          <div class="section-heading">
-            <p class="section-kicker">第 16 站</p>
-            <h2>Not sending responses</h2>
-            <p>这一节主要在解释“Not sending responses”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“Not sending responses”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Not sending responses”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Check relay accepts writes.、Verify outbound connectivity.、Watch for relay rate limits.</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Check relay accepts writes.</li><li>Verify outbound connectivity.</li><li>Watch for relay rate limits.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-17">
-          <div class="section-heading">
-            <p class="section-kicker">第 17 站</p>
-            <h2>Duplicate responses</h2>
-            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>你理解的是能力边界，不只是功能名字。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Duplicate responses”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Expected when using multiple relays.、小纸条消息s are deduplicated by event ID; only…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Expected when using multiple relays.</li><li>Messages are deduplicated by event ID; only the first delivery triggers a response.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-18">
-          <div class="section-heading">
-            <p class="section-kicker">第 18 站</p>
-            <h2>安全守门员</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Security”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Never commit private keys.、Use environment variables for keys.、Consider allowlist for production bots.、Pairing and allowlist policy is enforced…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Never commit private keys.</li><li>Use environment variables for keys.</li><li>Consider <code>allowlist</code> for production bots.</li><li>Pairing and allowlist policy is enforced before decrypt, so unknown senders cannot force full crypto work.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-19">
-          <div class="section-heading">
-            <p class="section-kicker">第 19 站</p>
-            <h2>Limitations (MVP)</h2>
-            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>你理解的是能力边界，不只是功能名字。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Limitations (MVP)”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Direct 小纸条消息s only (no 大家一起的房间 chats).、No media attachments.、NIP-04 only (NIP-17 gift-wrap planned).</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Direct messages only (no group chats).</li><li>No media attachments.</li><li>NIP-04 only (NIP-17 gift-wrap planned).</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-    <section class="section-shell">
-      <div class="ad-placeholder">
-        <p>这里预留给未来的 Google AdSense 模块。</p>
-        <code>&lt;!-- ADSENSE_SNIPPET --&gt;</code>
-      </div>
-    </section>
-  
 
       <footer class="page-footer">
         <div>

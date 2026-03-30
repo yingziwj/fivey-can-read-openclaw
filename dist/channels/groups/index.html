@@ -3971,1180 +3971,357 @@
       </div>
 
       
-    <section class="section-shell">
-      <div class="overview-card">
-        <div>
-          <p class="section-kicker">先听这页的人话版</p>
-          <h2>Groups</h2>
-          <p>这一页像一本关于“大家一起的房间s”的小绘本，它先告诉我们这位机器人朋友会做什么，再一步一步解释什么时候该这样做。 你可以先把它想成：大家一起的房间s。</p>
-          <p>如果把这页当成“给普通人看的版本”，你最应该带走的是：它到底在教你一件什么事、什么时候要这样做、以及哪里最容易踩坑。</p>
+      <section class="section-shell">
+        <div class="overview-card">
+          <div>
+            <p class="section-kicker">AI 绘本解读版</p>
+            <h2>📱 群聊小管家</h2>
+            <p>OpenClaw是你的聊天小助手。它能帮你管理所有群聊。就像给每个群都配了个小门卫。</p>
+          </div>
+          <div class="overview-meta">
+            <span>原始路径：/channels/groups</span>
+            <span>故事卡片：13 张</span>
+            <a href="https://docs.openclaw.ai/channels/groups" target="_blank" rel="noreferrer">查看官方原文</a>
+          </div>
         </div>
-        <div class="overview-meta">
-          <span>原始路径：/channels/groups</span>
-          <span>章节数量：13</span>
-          <a href="https://docs.openclaw.ai/channels/groups" target="_blank" rel="noreferrer">查看原文</a>
+      </section>
+      
+          <section class="section-shell" id="section-1">
+            <div class="section-heading">
+              <p class="section-kicker">第 1 站</p>
+              <h2>🎯 小助手住在哪？</h2>
+              <p>OpenClaw就住在你自己的聊天账号里。它不是个单独的机器人。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>这样它才能看到你所在的群，并在群里帮你回复。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>它就像你的影子助手。</li><li>你在哪个群，它就能看到哪个群。</li><li>它支持很多聊天软件，比如微信、Telegram、Discord。</li><li>它没有自己的机器人账号。</li><li>它和你共用同一个账号。</li></ul>
+              </div>
+              
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>小助手和你形影不离。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-2">
+            <div class="section-heading">
+              <p class="section-kicker">第 2 站</p>
+              <h2>🔒 默认的群聊规则</h2>
+              <p>默认情况下，小助手在群里很安静。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>这样能防止它在你不希望的地方乱说话。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>群聊默认是‘限制模式’。</li><li>就像给群聊大门上了锁。</li><li>只有‘白名单’里的群才能放行。</li><li>在群里叫它名字（@它），它才会回应。</li><li>不叫它，它就默默听着，不插嘴。</li></ul>
+              </div>
+              
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>不叫它，它就不说话。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-3">
+            <div class="section-heading">
+              <p class="section-kicker">第 3 站</p>
+              <h2>🚦 消息怎么流动？</h2>
+              <p>一条群消息要经过好几道检查。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>看看这条消息能不能送到小助手那里。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>第一关：群聊总开关开了吗？没开就扔掉。</li><li>第二关：这个群在白名单里吗？不在就扔掉。</li><li>第三关：需要@它吗？需要但没@，就只记下来。</li><li>都通过了，小助手才会准备回复。</li></ul>
+              </div>
+              
+            <div class="source-card">
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
+              <ul><li>`groupPolicy? disabled -&gt; drop` 这行命令像在问：‘群聊总开关关了吗？关了就把消息扔掉。’</li><li>`groupPolicy? allowlist -&gt; group allowed? no -&gt; drop` 这行命令像在问：‘这个群在白名单里吗？不在也扔掉。’</li><li>`requireMention? yes -&gt; mentioned? no -&gt; store for context only` 这行命令像在问：‘需要@它吗？需要但没@，那就只把消息存起来当背景知识。’</li><li>`otherwise -&gt; reply` 这行命令像在说：‘上面都通过了？好，那就可以回复了！’</li></ul>
+            </div>
+          
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>消息要过三关，才能到小助手面前。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-4">
+            <div class="section-heading">
+              <p class="section-kicker">第 4 站</p>
+              <h2>🗝️ 每个群都有独立小房间</h2>
+              <p>小助手给每个群都准备了一个独立的小房间。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>这样不同群的聊天记录就不会混在一起。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>群聊的小房间钥匙长得像 `agent:助手ID:软件名:group:群ID`。</li><li>Telegram的论坛话题还有额外的小隔间。</li><li>私聊用的是主房间。</li><li>群聊的小房间不需要定时‘心跳’检查。</li></ul>
+              </div>
+              
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>一个群，一把钥匙，一个独立小房间。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-5">
+            <div class="section-heading">
+              <p class="section-kicker">第 5 站</p>
+              <h2>🏠 私聊和群聊分开住</h2>
+              <p>你可以让私聊和群聊住在不同的‘房子’里。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>这样更安全，群聊不会影响到你的私聊。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>私聊通常住在‘主房子’里。</li><li>群聊都住在‘副房子’里。</li><li>你可以把‘副房子’放进一个更安全的‘沙箱’。</li><li>在沙箱里，群聊能用的‘工具’可以受到限制。</li><li>比如，只让群聊发消息，不让它碰你的电脑文件。</li></ul>
+              </div>
+              
+            <div class="source-card">
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
+              <ul><li>`mode: &quot;non-main&quot;` 这个配置像在说：‘把不是主房间的都放进沙箱。’</li><li>`workspaceAccess: &quot;none&quot;` 这个配置像在说：‘沙箱里的房间，不许碰主房子的任何东西。’</li><li>`allow: [&quot;group:messaging&quot;, &quot;group:sessions&quot;]` 这个配置像在说：‘在沙箱里，只允许用‘发消息’和‘管理小房间’这两个工具。’</li><li>`deny: [&quot;group:runtime&quot;, &quot;group:fs&quot;]` 这个配置像在说：‘在沙箱里，坚决不许用‘运行程序’和‘访问文件’这些工具。’</li></ul>
+            </div>
+          
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>私聊住主屋，群聊住沙箱，安全又清爽。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-6">
+            <div class="section-heading">
+              <p class="section-kicker">第 6 站</p>
+              <h2>🏷️ 给群聊贴标签</h2>
+              <p>在管理界面上，每个群都有个好看的名字标签。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>让你一眼就能认出是哪个群。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>标签会用群聊的显示名。</li><li>格式一般是 `软件名:群标识`。</li><li>专门的频道房间用 `#房间名`。</li><li>普通群聊用 `g-群简称`。</li></ul>
+              </div>
+              
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>每个群都有个漂亮的名牌。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-7">
+            <div class="section-heading">
+              <p class="section-kicker">第 7 站</p>
+              <h2>🚪 群聊大门的三把锁</h2>
+              <p>你可以给每个聊天软件设置群聊大门的规则。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>控制小助手能进哪些群。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>第一把锁叫 `groupPolicy`，有三种模式。</li><li>`&quot;open&quot;` 模式：大门敞开，但进门后可能还要@它。</li><li>`&quot;disabled&quot;` 模式：大门紧闭，所有群消息都不理。</li><li>`&quot;allowlist&quot;` 模式：只给白名单上的群发钥匙。</li></ul>
+              </div>
+              
+            <div class="source-card">
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
+              <ul><li>`groupPolicy: &quot;disabled&quot;` 这个配置像在说：‘给这个软件的所有群聊大门上把死锁，谁也不让进。’</li><li>`groupAllowFrom: [&quot;+15551234567&quot;]` 这个配置像在说：‘只允许电话号码是+15551234567的人所在的群进来。’</li><li>不同软件的钥匙长得不一样，比如Telegram用数字ID，Discord用频道ID。</li></ul>
+            </div>
+          
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>开门、关门、还是只让好朋友进，你说了算。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-8">
+            <div class="section-heading">
+              <p class="section-kicker">第 8 站</p>
+              <h2>📢 怎么在群里叫它？</h2>
+              <p>在群里，通常需要@它或者回复它，它才会理你。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>防止它在群里刷屏。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>这是默认规则，叫‘提门铃’。</li><li>你可以给某个群单独取消这个规则。</li><li>回复小助手的上一条消息，也算叫了它。</li><li>这个功能在Telegram、微信、Discord等软件上都有效。</li></ul>
+              </div>
+              
+            <div class="source-card">
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
+              <ul><li>`&quot;*&quot;: { requireMention: true }` 这个配置像在说：‘默认情况下，所有群都要@我才能说话。’</li><li>`&quot;123@g.us&quot;: { requireMention: false }` 这个配置像在说：‘但是，ID是123@g.us的这个群，不用@我也可以直接说话。’</li></ul>
+            </div>
+          
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>想让它说话？记得@它一下。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-9">
+            <div class="section-heading">
+              <p class="section-kicker">第 9 站</p>
+              <h2>🧰 限制群里的工具箱</h2>
+              <p>你可以规定，在某个群里，小助手只能用哪些工具。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>防止它在群里做危险的事。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>可以给整个群规定一套工具。</li><li>还可以给群里的某个人单独规定工具。</li><li>规则很灵活，最具体的规则说了算。</li><li>比如，禁止整个群用‘运行命令’工具，但允许群主用。</li></ul>
+              </div>
+              
+            <div class="source-card">
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
+              <ul><li>`tools: { deny: [&quot;exec&quot;] }` 这个配置像在说：‘在这个群里，不准用‘运行命令’这个工具。’</li><li>`toolsBySender: { &quot;id:123456789&quot;: { alsoAllow: [&quot;exec&quot;] } }` 这个配置像在说：‘但是，如果发消息的人是ID 123456789，就允许他用。’</li></ul>
+            </div>
+          
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>在谁的地盘，就用谁的规矩。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-10">
+            <div class="section-heading">
+              <p class="section-kicker">第 10 站</p>
+              <h2>📋 白名单的三种用法</h2>
+              <p>白名单就是一份‘好朋友群’的名单。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>快速设置你希望小助手参与的群。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>用法一：关掉所有群聊。</li><li>用法二：只允许名单上的这几个群。</li><li>用法三：允许所有群，但都必须@它才行。</li></ul>
+              </div>
+              
+            <div class="source-card">
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
+              <ul><li>`groupPolicy: &quot;disabled&quot;` 这是用法一，像在说：‘所有群聊，再见！’</li><li>`groups: { &quot;123@g.us&quot;: { requireMention: true } }` 这是用法二，像在说：‘只允许ID是123@g.us的群，并且要@我。’</li><li>`groups: { &quot;*&quot;: { requireMention: true } }` 这是用法三，像在说：‘所有群都可以进，但进门后都要@我一下。’</li></ul>
+            </div>
+          
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>一份名单，三种用法，简单明了。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-11">
+            <div class="section-heading">
+              <p class="section-kicker">第 11 站</p>
+              <h2>👑 群主专属开关</h2>
+              <p>群主有个秘密开关，可以控制小助手在群里的活跃度。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>让群主来管理这个群的小助手。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>只有群主才能用这个开关。</li><li>命令是 `/activation mention` 或 `/activation always`。</li><li>`mention` 模式：需要@它才说话。</li><li>`always` 模式：不用@，它也会参与聊天。</li></ul>
+              </div>
+              
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>群主有个魔法口令。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-12">
+            <div class="section-heading">
+              <p class="section-kicker">第 12 站</p>
+              <h2>📝 小助手看到的群信息</h2>
+              <p>小助手收到群消息时，会附带一些‘小纸条’。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>让它知道这是群聊，以及群里都有谁。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>小纸条上写着‘这是群聊’。</li><li>可能还有群名字和成员名单。</li><li>会注明这条消息有没有@它。</li><li>Telegram的论坛话题还有额外的小纸条。</li></ul>
+              </div>
+              
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>每条消息都带着背景介绍。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-13">
+            <div class="section-heading">
+              <p class="section-kicker">第 13 站</p>
+              <h2>💬 苹果信息（iMessage）小贴士</h2>
+              <p>在苹果信息里，群聊用 `chat_id` 来识别。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>这是找到和进入苹果群聊的钥匙。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>设置规则时，最好用 `chat_id:&lt;数字&gt;`。</li><li>想看看有哪些群？用命令 `imsg chats`。</li><li>在群里回复，消息会自动回到同一个 `chat_id` 的群。</li></ul>
+              </div>
+              
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>苹果群聊，认准chat_id这把钥匙。</p>
+              </div>
+            </div>
+          </section>
+        
+      <section class="section-shell">
+        <div class="ad-placeholder">
+          <p>这里预留给未来的 Google AdSense 模块。</p>
+          <code>&lt;!-- ADSENSE_SNIPPET --&gt;</code>
         </div>
-      </div>
-    </section>
+      </section>
     
-        <section class="section-shell" id="section-1">
-          <div class="section-heading">
-            <p class="section-kicker">第 1 站</p>
-            <h2>Start Here</h2>
-            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>你理解的是能力边界，不只是功能名字。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“大家一起的房间s OpenClaw treats 大家一起的房间 chats consistently across surfaces: WhatsApp, Telegram, Discord, Slack, Signal, i小纸条消息…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“大家一起的房间s”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p># Groups</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“OpenClaw treats 大家一起的房间 chats consistently across surfaces: WhatsApp, Telegram, Discord, Slack, Signal, i小纸条消息, Microso…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>OpenClaw treats group chats consistently across surfaces: WhatsApp, Telegram, Discord, Slack, Signal, iMessage, Microsoft Teams, Zalo.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-2">
-          <div class="section-heading">
-            <p class="section-kicker">第 2 站</p>
-            <h2>Beginner intro (2 minutes)</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“OpenClaw “lives” on your own messaging accounts. There is no separate WhatsApp bot user. If **you** are in a 大家一起的房间, O…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“OpenClaw “lives” on your own messaging accounts. There is no separate WhatsApp bot user. If **you** are in a 大家一起的房间, O…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>OpenClaw “lives” on your own messaging accounts. There is no separate WhatsApp bot user. If **you** are in a group, OpenClaw can see that group and respond there.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Default behavior:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Default behavior:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Beginner intro (2 minutes)”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：大家一起的房间s are restricted (大家一起的房间Policy: &quot;…、Replies require a mention unless you expl…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Groups are restricted (<code>groupPolicy: &quot;allowlist&quot;</code>).</li><li>Replies require a mention unless you explicitly disable mention gating.</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Translation: allowlisted senders can trigger OpenClaw by mentioning it.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Translation: allowlisted senders can trigger OpenClaw by mentioning it.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&gt; TL;DR &gt; &gt; * **DM access** is controlled by *.allowFrom. &gt; * **大家一起的房间 access** is controlled by *.大家一起的房间Policy + all…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>&gt; TL;DR &gt; &gt; * **DM access** is controlled by <code>*.allowFrom</code>. &gt; * **Group access** is controlled by <code>*.groupPolicy</code> + allowlists (<code>*.groups</code>, <code>*.groupAllowFrom</code>). &gt; * **Reply triggering** is controlled by mention gating (<code>requireMention</code>, <code>/activation</code>).</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Quick flow (what happens to a 大家一起的房间 小纸条消息):”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Quick flow (what happens to a group message):</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段像给机器人看的说明书，告诉它要按什么样子准备东西。</p>
-        <ul class="code-steps">
-          <li>这一行“groupPolicy? disabled -&gt; drop”是当前步骤要交给电脑的一小块提示。</li><li>这一行“groupPolicy? allowlist -&gt; group allowed? no -&gt; drop”是当前步骤要交给电脑的一小块提示。</li><li>这一行“requireMention? yes -&gt; mentioned? no -&gt; store for context only”是当前步骤要交给电脑的一小块提示。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-text">groupPolicy? disabled -&gt; drop
-groupPolicy? allowlist -&gt; group allowed? no -&gt; drop
-requireMention? yes -&gt; mentioned? no -&gt; store for context only
-otherwise -&gt; reply</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;img alt=&quot;大家一起的房间 小纸条消息 flow&quot; /&gt;”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>&lt;img alt=&quot;Group message flow&quot; /&gt;</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“If you want...”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>If you want...</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Goal What to set -------------------------------------------- ---------------------------------------------------------…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>| Goal | What to set | | -------------------------------------------- | ---------------------------------------------------------- | | Allow all groups but only reply on @mentions | <code>groups: { &quot;*&quot;: { requireMention: true } }</code> | | Disable all group replies | <code>groupPolicy: &quot;disabled&quot;</code> | | Only specific groups | <code>groups: { &quot;&lt;group-id&gt;&quot;: { ... } }</code> (no <code>&quot;*&quot;</code> key) | | Only you can trigger in groups | <code>groupPolicy: &quot;allowlist&quot;</code>, <code>groupAllowFrom: [&quot;+1555...&quot;]</code> |</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-3">
-          <div class="section-heading">
-            <p class="section-kicker">第 3 站</p>
-            <h2>Session keys</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Session keys”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：大家一起的房间 sessions use 机器人朋友:&lt;机器人朋友Id&gt;:&lt;消息通…、Telegram forum topics add :topic:&lt;threadI…、Direct chats use the main session (or per…、Heartbeats are skipped for 大家一起的房间 sessio…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Group sessions use <code>agent:&lt;agentId&gt;:&lt;channel&gt;:group:&lt;id&gt;</code> session keys (rooms/channels use <code>agent:&lt;agentId&gt;:&lt;channel&gt;:channel:&lt;id&gt;</code>).</li><li>Telegram forum topics add <code>:topic:&lt;threadId&gt;</code> to the group id so each topic has its own session.</li><li>Direct chats use the main session (or per-sender if configured).</li><li>Heartbeats are skipped for group sessions.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-4">
-          <div class="section-heading">
-            <p class="section-kicker">第 4 站</p>
-            <h2>Pattern: personal DMs + public 大家一起的房间s (single 机器人朋友)</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Yes — this works well if your “personal” traffic is **DMs** and your “public” traffic is **大家一起的房间s**. Why: in single-机…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Yes — this works well if your “personal” traffic is **DMs** and your “public” traffic is **大家一起的房间s**.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Yes — this works well if your “personal” traffic is **DMs** and your “public” traffic is **groups**.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Why: in single-机器人朋友 mode, DMs typically land in the **main** session key (机器人朋友:main:main), while 大家一起的房间s always use…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Why: in single-agent mode, DMs typically land in the **main** session key (<code>agent:main:main</code>), while groups always use **non-main** session keys (<code>agent:main:&lt;channel&gt;:group:&lt;id&gt;</code>). If you enable sandboxing with <code>mode: &quot;non-main&quot;</code>, those group sessions run in Docker while your main DM session stays on-host.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“This gives you one 机器人朋友 “brain” (shared workspace + memory), but two execution postures:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>This gives you one agent “brain” (shared workspace + memory), but two execution postures:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Pattern: personal DMs + public groups (single agent)”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：**DMs**: full 工具小帮手s (host)、**大家一起的房间s**: sandbox + restricted 工具小帮手s…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>**DMs**: full tools (host)</li><li>**Groups**: sandbox + restricted tools (Docker)</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&gt; If you need truly separate workspaces/personas (“personal” and “public” must never mix), use a second 机器人朋友 + binding…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>&gt; If you need truly separate workspaces/personas (“personal” and “public” must never mix), use a second agent + bindings. See <a href="/concepts/multi-agent" target="_blank" rel="noreferrer">Multi-Agent Routing</a>.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Example (DMs on host, 大家一起的房间s sandboxed + messaging-only 工具小帮手s):”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Example (DMs on host, groups sandboxed + messaging-only tools):</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“agents”贴标签，意思是把它设置成“{”。</li><li>这里在给“defaults”贴标签，意思是把它设置成“{”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json5">{
-  agents: {
-    defaults: {
-      sandbox: {
-        mode: &quot;non-main&quot;, // groups/channels are non-main -&gt; sandboxed
-        scope: &quot;session&quot;, // strongest isolation (one container per group/channel)
-        workspaceAccess: &quot;none&quot;,
-      },
-    },
-  },
-  tools: {
-    sandbox: {
-      tools: {
-        // If allow is non-empty, everything else is blocked (deny still wins).
-        allow: [&quot;group:messaging&quot;, &quot;group:sessions&quot;],
-        deny: [&quot;group:runtime&quot;, &quot;group:fs&quot;, &quot;group:ui&quot;, &quot;nodes&quot;, &quot;cron&quot;, &quot;gateway&quot;],
-      },
-    },
-  },
-}</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Want “大家一起的房间s can only see folder X” instead of “no host access”? Keep workspaceAccess: &quot;none&quot; and mount only allowlis…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Want “groups can only see folder X” instead of “no host access”? Keep <code>workspaceAccess: &quot;none&quot;</code> and mount only allowlisted paths into the sandbox:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“agents”贴标签，意思是把它设置成“{”。</li><li>这里在给“defaults”贴标签，意思是把它设置成“{”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json5">{
-  agents: {
-    defaults: {
-      sandbox: {
-        mode: &quot;non-main&quot;,
-        scope: &quot;session&quot;,
-        workspaceAccess: &quot;none&quot;,
-        docker: {
-          binds: [
-            // hostPath:containerPath:mode
-            &quot;/home/user/FriendsShared:/data:ro&quot;,
-          ],
-        },
-      },
-    },
-  },
-}</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Related:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Related:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Pattern: personal DMs + public groups (single agent)”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：设置说明书uration keys and defaults: 门口的小门卫 设置…、Debugging why a 工具小帮手 is blocked: Sandbox…、Bind mounts details: Sandboxing。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Configuration keys and defaults: <a href="/gateway/configuration-reference#agentsdefaultssandbox" target="_blank" rel="noreferrer">Gateway configuration</a></li><li>Debugging why a tool is blocked: <a href="/gateway/sandbox-vs-tool-policy-vs-elevated" target="_blank" rel="noreferrer">Sandbox vs Tool Policy vs Elevated</a></li><li>Bind mounts details: <a href="/gateway/sandboxing#custom-bind-mounts" target="_blank" rel="noreferrer">Sandboxing</a></li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-5">
-          <div class="section-heading">
-            <p class="section-kicker">第 5 站</p>
-            <h2>Display labels</h2>
-            <p>这一节主要在解释“Display labels”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“Display labels”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Display labels”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：UI labels use displayName when available,…、#room is reserved for rooms/消息通道s; 大家一起的房…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>UI labels use <code>displayName</code> when available, formatted as <code>&lt;channel&gt;:&lt;token&gt;</code>.</li><li><code>#room</code> is reserved for rooms/channels; group chats use <code>g-&lt;slug&gt;</code> (lowercase, spaces -&gt; <code>-</code>, keep <code>#@+._-</code>).</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-6">
-          <div class="section-heading">
-            <p class="section-kicker">第 6 站</p>
-            <h2>大家一起的房间 policy</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Control how 大家一起的房间/room 小纸条消息s are handled per 消息通道: Policy Behavior ------------- -----------------------------------…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Control how 大家一起的房间/room 小纸条消息s are handled per 消息通道:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Control how group/room messages are handled per channel:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“channels”贴标签，意思是把它设置成“{”。</li><li>这里在给“whatsapp”贴标签，意思是把它设置成“{”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json5">{
-  channels: {
-    whatsapp: {
-      groupPolicy: &quot;disabled&quot;, // &quot;open&quot; | &quot;disabled&quot; | &quot;allowlist&quot;
-      groupAllowFrom: [&quot;+15551234567&quot;],
-    },
-    telegram: {
-      groupPolicy: &quot;disabled&quot;,
-      groupAllowFrom: [&quot;123456789&quot;], // numeric Telegram user id (wizard can resolve @username)
-    },
-    signal: {
-      groupPolicy: &quot;disabled&quot;,
-      groupAllowFrom: [&quot;+15551234567&quot;],
-    },
-    imessage: {
-      groupPolicy: &quot;disabled&quot;,
-      groupAllowFrom: [&quot;chat_id:123&quot;],
-    },
-    msteams: {
-      groupPolicy: &quot;disabled&quot;,
-      groupAllowFrom: [&quot;user@org.com&quot;],
-    },
-    discord: {
-      groupPolicy: &quot;allowlist&quot;,
-      guilds: {
-        GUILD_ID: { channels: { help: { allow: true } } },
-      },
-    },
-    slack: {
-      groupPolicy: &quot;allowlist&quot;,
-      channels: { &quot;#general&quot;: { allow: true } },
-    },
-    matrix: {
-      groupPolicy: &quot;allowlist&quot;,
-      groupAllowFrom: [&quot;@owner:example.org&quot;],
-      groups: {
-        &quot;!roomId:example.org&quot;: { allow: true },
-        &quot;#alias:example.org&quot;: { allow: true },
-      },
-    },
-  },
-}</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Policy Behavior ------------- ------------------------------------------------------------ &quot;open&quot; 大家一起的房间s bypass allow…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>| Policy | Behavior | | ------------- | ------------------------------------------------------------ | | <code>&quot;open&quot;</code> | Groups bypass allowlists; mention-gating still applies. | | <code>&quot;disabled&quot;</code> | Block all group messages entirely. | | <code>&quot;allowlist&quot;</code> | Only allow groups/rooms that match the configured allowlist. |</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Notes:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Notes:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Group policy”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：大家一起的房间Policy is separate from mention-ga…、WhatsApp/Telegram/Signal/i小纸条消息/Microsoft…、DM pairing approvals (*-allowFrom store e…、Discord: allowlist uses 消息通道s.discord.gui…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>groupPolicy</code> is separate from mention-gating (which requires @mentions).</li><li>WhatsApp/Telegram/Signal/iMessage/Microsoft Teams/Zalo: use <code>groupAllowFrom</code> (fallback: explicit <code>allowFrom</code>).</li><li>DM pairing approvals (<code>*-allowFrom</code> store entries) apply to DM access only; group sender authorization stays explicit to group allowlists.</li><li>Discord: allowlist uses <code>channels.discord.guilds.&lt;id&gt;.channels</code>.</li><li>Slack: allowlist uses <code>channels.slack.channels</code>.</li><li>Matrix: allowlist uses <code>channels.matrix.groups</code> (room IDs, aliases, or names). Use <code>channels.matrix.groupAllowFrom</code> to restrict senders; per-room <code>users</code> allowlists are also supported.</li><li>Group DMs are controlled separately (<code>channels.discord.dm.*</code>, <code>channels.slack.dm.*</code>).</li><li>Telegram allowlist can match user IDs (<code>&quot;123456789&quot;</code>, <code>&quot;telegram:123456789&quot;</code>, <code>&quot;tg:123456789&quot;</code>) or usernames (<code>&quot;@alice&quot;</code> or <code>&quot;alice&quot;</code>); prefixes are case-insensitive.</li><li>Default is <code>groupPolicy: &quot;allowlist&quot;</code>; if your group allowlist is empty, group messages are blocked.</li><li>Runtime safety: when a provider block is completely missing (<code>channels.&lt;provider&gt;</code> absent), group policy falls back to a fail-closed mode (typically <code>allowlist</code>) instead of inheriting <code>channels.defaults.groupPolicy</code>.</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Quick mental 聪明脑袋模型 (evaluation order for 大家一起的房间 小纸条消息s):”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Quick mental model (evaluation order for group messages):</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“1. 大家一起的房间Policy (open/disabled/allowlist) 2. 大家一起的房间 allowlists (*.大家一起的房间s, *.大家一起的房间AllowFrom, 消息通道-specific allowli…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>1. <code>groupPolicy</code> (open/disabled/allowlist) 2. group allowlists (<code>*.groups</code>, <code>*.groupAllowFrom</code>, channel-specific allowlist) 3. mention gating (<code>requireMention</code>, <code>/activation</code>)</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-7">
-          <div class="section-heading">
-            <p class="section-kicker">第 7 站</p>
-            <h2>Mention gating (default)</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“大家一起的房间 小纸条消息s require a mention unless overridden per 大家一起的房间. Defaults live per subsystem under *.大家一起的房间s.&quot;*&quot;. Reply…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“大家一起的房间 小纸条消息s require a mention unless overridden per 大家一起的房间. Defaults live per subsystem under *.大家一起的房间s.&quot;*&quot;.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Group messages require a mention unless overridden per group. Defaults live per subsystem under <code>*.groups.&quot;*&quot;</code>.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Replying to a bot 小纸条消息 counts as an implicit mention (when the 消息通道 supports reply metadata). This applies to Telegram…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Replying to a bot message counts as an implicit mention (when the channel supports reply metadata). This applies to Telegram, WhatsApp, Slack, Discord, and Microsoft Teams.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“channels”贴标签，意思是把它设置成“{”。</li><li>这里在给“whatsapp”贴标签，意思是把它设置成“{”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json5">{
-  channels: {
-    whatsapp: {
-      groups: {
-        &quot;*&quot;: { requireMention: true },
-        &quot;123@g.us&quot;: { requireMention: false },
-      },
-    },
-    telegram: {
-      groups: {
-        &quot;*&quot;: { requireMention: true },
-        &quot;123456789&quot;: { requireMention: false },
-      },
-    },
-    imessage: {
-      groups: {
-        &quot;*&quot;: { requireMention: true },
-        &quot;123&quot;: { requireMention: false },
-      },
-    },
-  },
-  agents: {
-    list: [
-      {
-        id: &quot;main&quot;,
-        groupChat: {
-          mentionPatterns: [&quot;@openclaw&quot;, &quot;openclaw&quot;, &quot;\\+15555550123&quot;],
-          historyLimit: 50,
-        },
-      },
-    ],
-  },
-}</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Notes:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Notes:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Mention gating (default)”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：mentionPatterns are case-insensitive safe…、Surfaces that provide explicit mentions s…、Per-机器人朋友 override: 机器人朋友s.list[].大家一起的房间…、Mention gating is only enforced when ment…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>mentionPatterns</code> are case-insensitive safe regex patterns; invalid patterns and unsafe nested-repetition forms are ignored.</li><li>Surfaces that provide explicit mentions still pass; patterns are a fallback.</li><li>Per-agent override: <code>agents.list[].groupChat.mentionPatterns</code> (useful when multiple agents share a group).</li><li>Mention gating is only enforced when mention detection is possible (native mentions or <code>mentionPatterns</code> are configured).</li><li>Discord defaults live in <code>channels.discord.guilds.&quot;*&quot;</code> (overridable per guild/channel).</li><li>Group history context is wrapped uniformly across channels and is **pending-only** (messages skipped due to mention gating); use <code>messages.groupChat.historyLimit</code> for the global default and <code>channels.&lt;channel&gt;.historyLimit</code> (or <code>channels.&lt;channel&gt;.accounts.*.historyLimit</code>) for overrides. Set <code>0</code> to disable.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-8">
-          <div class="section-heading">
-            <p class="section-kicker">第 8 站</p>
-            <h2>大家一起的房间/消息通道 工具小帮手 restrictions (optional)</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Some 消息通道 设置说明书s support restricting which 工具小帮手s are available **inside a specific 大家一起的房间/room/消息通道**. Use explicit k…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Some 消息通道 设置说明书s support restricting which 工具小帮手s are available **inside a specific 大家一起的房间/room/消息通道**.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Some channel configs support restricting which tools are available **inside a specific group/room/channel**.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Use explicit key prefixes: id:&lt;senderId&gt;, e164:&lt;phone&gt;, username:&lt;handle&gt;, name:&lt;displayName&gt;, and &quot;*&quot; wildcard. Legacy…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Use explicit key prefixes: <code>id:&lt;senderId&gt;</code>, <code>e164:&lt;phone&gt;</code>, <code>username:&lt;handle&gt;</code>, <code>name:&lt;displayName&gt;</code>, and <code>&quot;*&quot;</code> wildcard. Legacy unprefixed keys are still accepted and matched as <code>id:</code> only.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Group/channel tool restrictions (optional)”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：工具小帮手s: allow/deny 工具小帮手s for the whole 大…、工具小帮手sBySender: per-sender overrides with…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>tools</code>: allow/deny tools for the whole group.</li><li><code>toolsBySender</code>: per-sender overrides within the group.</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Resolution order (most specific wins):”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Resolution order (most specific wins):</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“1. 大家一起的房间/消息通道 工具小帮手sBySender match 2. 大家一起的房间/消息通道 工具小帮手s 3. default (&quot;*&quot;) 工具小帮手sBySender match 4. default (&quot;*&quot;) 工具小帮…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>1. group/channel <code>toolsBySender</code> match 2. group/channel <code>tools</code> 3. default (<code>&quot;*&quot;</code>) <code>toolsBySender</code> match 4. default (<code>&quot;*&quot;</code>) <code>tools</code></p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Example (Telegram):”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Example (Telegram):</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“channels”贴标签，意思是把它设置成“{”。</li><li>这里在给“telegram”贴标签，意思是把它设置成“{”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json5">{
-  channels: {
-    telegram: {
-      groups: {
-        &quot;*&quot;: { tools: { deny: [&quot;exec&quot;] } },
-        &quot;-1001234567890&quot;: {
-          tools: { deny: [&quot;exec&quot;, &quot;read&quot;, &quot;write&quot;] },
-          toolsBySender: {
-            &quot;id:123456789&quot;: { alsoAllow: [&quot;exec&quot;] },
-          },
-        },
-      },
-    },
-  },
-}</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Notes:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Notes:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Group/channel tool restrictions (optional)”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：大家一起的房间/消息通道 工具小帮手 restrictions are appli…、Some 消息通道s use different nesting for room…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Group/channel tool restrictions are applied in addition to global/agent tool policy (deny still wins).</li><li>Some channels use different nesting for rooms/channels (e.g., Discord <code>guilds.*.channels.*</code>, Slack <code>channels.*</code>, Microsoft Teams <code>teams.*.channels.*</code>).</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-9">
-          <div class="section-heading">
-            <p class="section-kicker">第 9 站</p>
-            <h2>大家一起的房间 allowlists</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“When 消息通道s.whatsapp.大家一起的房间s, 消息通道s.telegram.大家一起的房间s, or 消息通道s.i小纸条消息.大家一起的房间s is 设置说明书ured, the keys act as a 大家一起的房间…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“When 消息通道s.whatsapp.大家一起的房间s, 消息通道s.telegram.大家一起的房间s, or 消息通道s.i小纸条消息.大家一起的房间s is 设置说明书ured, the keys act as a 大家一起的房间…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>When <code>channels.whatsapp.groups</code>, <code>channels.telegram.groups</code>, or <code>channels.imessage.groups</code> is configured, the keys act as a group allowlist. Use <code>&quot;*&quot;</code> to allow all groups while still setting default mention behavior.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Common intents (copy/paste):”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Common intents (copy/paste):</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“1. Disable all 大家一起的房间 replies”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>1. Disable all group replies</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“channels”贴标签，意思是把它设置成“{ whatsapp: { groupPolicy: disabled } }”。</li><li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json5">{
-  channels: { whatsapp: { groupPolicy: &quot;disabled&quot; } },
-}</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“2. Allow only specific 大家一起的房间s (WhatsApp)”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>2. Allow only specific groups (WhatsApp)</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“channels”贴标签，意思是把它设置成“{”。</li><li>这里在给“whatsapp”贴标签，意思是把它设置成“{”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json5">{
-  channels: {
-    whatsapp: {
-      groups: {
-        &quot;123@g.us&quot;: { requireMention: true },
-        &quot;456@g.us&quot;: { requireMention: false },
-      },
-    },
-  },
-}</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“3. Allow all 大家一起的房间s but require mention (explicit)”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>3. Allow all groups but require mention (explicit)</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“channels”贴标签，意思是把它设置成“{”。</li><li>这里在给“whatsapp”贴标签，意思是把它设置成“{”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json5">{
-  channels: {
-    whatsapp: {
-      groups: { &quot;*&quot;: { requireMention: true } },
-    },
-  },
-}</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“4. Only the owner can trigger in 大家一起的房间s (WhatsApp)”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>4. Only the owner can trigger in groups (WhatsApp)</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“channels”贴标签，意思是把它设置成“{”。</li><li>这里在给“whatsapp”贴标签，意思是把它设置成“{”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json5">{
-  channels: {
-    whatsapp: {
-      groupPolicy: &quot;allowlist&quot;,
-      groupAllowFrom: [&quot;+15551234567&quot;],
-      groups: { &quot;*&quot;: { requireMention: true } },
-    },
-  },
-}</code></pre>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-10">
-          <div class="section-heading">
-            <p class="section-kicker">第 10 站</p>
-            <h2>Activation (owner-only)</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“大家一起的房间 owners can toggle per-大家一起的房间 activation: Owner is determined by 消息通道s.whatsapp.allowFrom (or the bot’s self E.…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“大家一起的房间 owners can toggle per-大家一起的房间 activation:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Group owners can toggle per-group activation:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Activation (owner-only)”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：/activation mention、/activation always。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>/activation mention</code></li><li><code>/activation always</code></li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Owner is determined by 消息通道s.whatsapp.allowFrom (or the bot’s self E.164 when unset). Send the 魔法口令 as a standalone 小纸条…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Owner is determined by <code>channels.whatsapp.allowFrom</code> (or the bot’s self E.164 when unset). Send the command as a standalone message. Other surfaces currently ignore <code>/activation</code>.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-11">
-          <div class="section-heading">
-            <p class="section-kicker">第 11 站</p>
-            <h2>Context fields</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“大家一起的房间 inbound payloads set: 消息通道 specific notes: The 机器人朋友 system prompt includes a 大家一起的房间 intro on the first turn o…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“大家一起的房间 inbound payloads set:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Group inbound payloads set:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Context fields”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：ChatType=大家一起的房间、大家一起的房间Subject (if known)、大家一起的房间Members (if known)、WasMentioned (mention gating result)。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>ChatType=group</code></li><li><code>GroupSubject</code> (if known)</li><li><code>GroupMembers</code> (if known)</li><li><code>WasMentioned</code> (mention gating result)</li><li>Telegram forum topics also include <code>MessageThreadId</code> and <code>IsForum</code>.</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“消息通道 specific notes:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Channel specific notes:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Context fields”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：BlueBubbles can optionally enrich unnamed…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>BlueBubbles can optionally enrich unnamed macOS group participants from the local Contacts database before populating <code>GroupMembers</code>. This is off by default and only runs after normal group gating passes.</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“The 机器人朋友 system prompt includes a 大家一起的房间 intro on the first turn of a new 大家一起的房间 session. It reminds the 聪明脑袋模型 to r…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>The agent system prompt includes a group intro on the first turn of a new group session. It reminds the model to respond like a human, avoid Markdown tables, and avoid typing literal <code>\n</code> sequences.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-12">
-          <div class="section-heading">
-            <p class="section-kicker">第 12 站</p>
-            <h2>i小纸条消息 specifics</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“iMessage specifics”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Prefer chat_id:&lt;id&gt; when routing or allow…、List chats: imsg chats --limit 20.、大家一起的房间 replies always go back to the sam…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Prefer <code>chat_id:&lt;id&gt;</code> when routing or allowlisting.</li><li>List chats: <code>imsg chats --limit 20</code>.</li><li>Group replies always go back to the same <code>chat_id</code>.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-13">
-          <div class="section-heading">
-            <p class="section-kicker">第 13 站</p>
-            <h2>WhatsApp specifics</h2>
-            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>你理解的是能力边界，不只是功能名字。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“See 大家一起的房间 小纸条消息s for WhatsApp-only behavior (history injection, mention handling details).”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“See 大家一起的房间 小纸条消息s for WhatsApp-only behavior (history injection, mention handling details).”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>See <a href="/channels/group-messages" target="_blank" rel="noreferrer">Group messages</a> for WhatsApp-only behavior (history injection, mention handling details).</p>
-      </div>
-    
-          </div>
-        </section>
-      
-    <section class="section-shell">
-      <div class="ad-placeholder">
-        <p>这里预留给未来的 Google AdSense 模块。</p>
-        <code>&lt;!-- ADSENSE_SNIPPET --&gt;</code>
-      </div>
-    </section>
-  
 
       <footer class="page-footer">
         <div>

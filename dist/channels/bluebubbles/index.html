@@ -3971,1454 +3971,219 @@
       </div>
 
       
-    <section class="section-shell">
-      <div class="overview-card">
-        <div>
-          <p class="section-kicker">先听这页的人话版</p>
-          <h2>BlueBubbles</h2>
-          <p>这一页像一本关于“BlueBubbles”的小绘本，它先告诉我们这位机器人朋友会做什么，再一步一步解释什么时候该这样做。 你可以先把它想成：BlueBubbles (macOS REST)。</p>
-          <p>如果把这页当成“给普通人看的版本”，你最应该带走的是：它到底在教你一件什么事、什么时候要这样做、以及哪里最容易踩坑。</p>
+      <section class="section-shell">
+        <div class="overview-card">
+          <div>
+            <p class="section-kicker">AI 绘本解读版</p>
+            <h2>🎯 让 OpenClaw 和你的 Mac 悄悄聊天</h2>
+            <p>用 BlueBubbles 这个神奇小助手，把你的 iMessage 变成智能对话窗口。它像一座桥，连接你的 Mac 和 OpenClaw 大脑。</p>
+          </div>
+          <div class="overview-meta">
+            <span>原始路径：/channels/bluebubbles</span>
+            <span>故事卡片：7 张</span>
+            <a href="https://docs.openclaw.ai/channels/bluebubbles" target="_blank" rel="noreferrer">查看官方原文</a>
+          </div>
         </div>
-        <div class="overview-meta">
-          <span>原始路径：/channels/bluebubbles</span>
-          <span>章节数量：21</span>
-          <a href="https://docs.openclaw.ai/channels/bluebubbles" target="_blank" rel="noreferrer">查看原文</a>
+      </section>
+      
+          <section class="section-shell" id="section-1">
+            <div class="section-heading">
+              <p class="section-kicker">第 1 站</p>
+              <h2>🎬 开场白：这是什么？</h2>
+              <p>BlueBubbles 是 Mac 上的一个秘密小助手，能让 OpenClaw 和你的 iMessage 聊天。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>因为它比老办法更聪明、更好玩，还能做更多动作。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>它住在你的 Mac 上，像个小门卫。</li><li>OpenClaw 通过一条叫 REST API 的电话线跟它说话。</li><li>新消息像小包裹一样通过 webhook 送过来。</li><li>你可以发消息、发表情、改名字，甚至撤回说过的话。</li><li>它最喜欢 macOS Sequoia（15），但新版本也能试试。</li></ul>
+              </div>
+              
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>这是连接 iMessage 和 AI 的魔法桥。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-2">
+            <div class="section-heading">
+              <p class="section-kicker">第 2 站</p>
+              <h2>🚀 快速开始：搭起这座桥</h2>
+              <p>三步就能让 OpenClaw 和你的 Mac 握上手。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>跟着做，马上就能开始聊天。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>先去 BlueBubbles 官网，给你的 Mac 装上这个小助手。</li><li>打开小助手的设置，打开“网络大门”，设一个秘密口令。</li><li>告诉 OpenClaw 小助手住在哪里，口令是什么。</li><li>让小助手知道该把包裹送到 OpenClaw 的哪个地址。</li><li>启动 OpenClaw，它就会自动去敲门了。</li></ul>
+              </div>
+              
+            <div class="source-card">
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
+              <ul><li>`openclaw onboard` 像打开一个向导地图，带你一步步走。</li><li>配置里的 `serverUrl` 是小助手的门牌号。</li><li>`password` 是开门的秘密钥匙，一定要保管好。</li><li>`webhookPath` 是收包裹的专用信箱地址。</li></ul>
+            </div>
+          
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>装助手、设密码、连地址，桥就搭好了。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-3">
+            <div class="section-heading">
+              <p class="section-kicker">第 3 站</p>
+              <h2>🔐 安全第一：谁来敲门？</h2>
+              <p>不是谁都能随便敲门的，我们有门卫和秘密口令。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>保护你的聊天，不让陌生人乱入。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>每次小助手送包裹来，都要先对暗号。</li><li>暗号就是你在设置里写的那个密码。</li><li>如果从你自己的电脑（localhost）来，门卫会直接放行。</li><li>如果你用了别的“传话员”（反向代理），要告诉门卫信任它。</li><li>最好给你的小助手也穿上 HTTPS 的盔甲。</li></ul>
+              </div>
+              
+            <div class="source-card">
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
+              <ul><li>Webhook 请求里的 `?password=&lt;密码&gt;` 就像在说“芝麻开门”。</li><li>配置里的 `password` 字段就是门卫手里的正确暗号本。</li><li>`gateway.trustedProxies` 是告诉门卫：“这几个传话员是我朋友”。</li></ul>
+            </div>
+          
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>秘密口令和信任名单，守住聊天的大门。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-4">
+            <div class="section-heading">
+              <p class="section-kicker">第 4 站</p>
+              <h2>👥 谁可以聊天？定规矩</h2>
+              <p>我们可以决定，谁能发私信，谁能在群里说话。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>这样就不会被不认识的人打扰了。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>私信默认要“配对”：陌生人会收到一个配对码，等你批准。</li><li>你可以设一个“允许名单”，只让名单里的人发私信。</li><li>群聊也可以设名单，或者完全开放、完全关闭。</li><li>在群里，你可以要求必须@提到 AI，它才会回答。</li><li>但名单里的人发控制命令（比如 `/config`），不需要@也能执行。</li></ul>
+              </div>
+              
+            <div class="source-card">
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
+              <ul><li>`dmPolicy: &quot;pairing&quot;` 是私信的默认规矩：“先配对，再聊天”。</li><li>`groupPolicy: &quot;allowlist&quot;` 是群聊的默认规矩：“只许名单里的人说话”。</li><li>`requireMention: true` 是给群聊定的：“不@我，我就不吭声”。</li><li>`openclaw pairing approve` 是你批准配对的手势。</li></ul>
+            </div>
+          
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>配对码、允许名单、@规则，管理你的聊天伙伴。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-5">
+            <div class="section-heading">
+              <p class="section-kicker">第 5 站</p>
+              <h2>✨ 高级魔法：能做什么？</h2>
+              <p>除了聊天，还能做好多酷酷的事情，就像给你的消息施魔法。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>让你的 iMessage 聊天变得更有趣、更强大。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>可以给消息点“赞”（加表情反应）。</li><li>可以修改已经发出去的消息。</li><li>可以把发错的消息“嗖”一下撤回来。</li><li>可以专门回复某一条消息，形成对话线。</li><li>可以给消息加上“震撼”、“放大”这些特效。</li><li>可以给群改名字、换头像、加人、踢人，甚至自己退群。</li><li>可以发送图片、文件，甚至能把 MP3 变成语音备忘录发出去。</li></ul>
+              </div>
+              
+            <div class="source-card">
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
+              <ul><li>配置里的 `actions` 部分像是一个魔法开关面板。</li><li>把 `edit: true` 的开关打开，就能修改消息了。</li><li>`sendWithEffect` 是特效魔法的开关。</li><li>`upload-file` 这个动作，能把文件变成消息发出去。</li></ul>
+            </div>
+          
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>反应、编辑、撤回、特效……你的 iMessage 会施魔法了。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-6">
+            <div class="section-heading">
+              <p class="section-kicker">第 6 站</p>
+              <h2>🤖 绑定工作空间：开个长期工位</h2>
+              <p>可以把一个 iMessage 聊天，变成 AI 的专属工作间。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>这样 AI 就会记住这个聊天的所有事情，持续帮你。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>在聊天里输入 `/acp spawn codex --bind here`，就像在这里挂个牌子：“AI 工位”。</li><li>以后这个聊天的所有消息，都会送到这个工位的 AI 那里。</li><li>用 `/new` 或 `/reset` 可以清空工位，重新开始。</li><li>用 `/acp close` 就把工位牌子摘掉，绑定解除。</li><li>你也可以在配置文件里直接给某个聊天永久绑定一个工位。</li></ul>
+              </div>
+              
+            <div class="source-card">
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
+              <ul><li>`/acp spawn codex --bind here` 这个命令像在说：“在这儿给我安个家！”。</li><li>配置文件里的 `bindings` 是预先写好的工位分配表。</li><li>`match.channel: &quot;bluebubbles&quot;` 是说这个工位只接待 BlueBubbles 来的客人。</li></ul>
+            </div>
+          
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>一个命令，把聊天变成 AI 的专属工作室。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-7">
+            <div class="section-heading">
+              <p class="section-kicker">第 7 站</p>
+              <h2>💡 小贴士和故障排除</h2>
+              <p>用的时候可能会遇到一些小状况，这里教你怎么办。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>让魔法一直顺畅运行。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>如果 Mac 是“无头”或虚拟机，Messages 应用可能会睡着。可以写个小脚本，每 5 分钟轻轻戳它一下。</li><li>配对码一小时后就会失效，记得及时批准。</li><li>有些高级魔法（比如编辑消息）在新版 macOS 上可能暂时失灵。</li><li>群头像更新有时会“假成功”，图标没真的变。</li><li>如果“正在输入”或“已读”标记不显示了，检查一下 webhook 地址对不对。</li><li>用 `openclaw status` 可以看看大家是不是都健康在线。</li></ul>
+              </div>
+              
+            <div class="source-card">
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
+              <ul><li>保存的 AppleScript 脚本像个小闹钟，定时叫醒 Messages 应用。</li><li>`launchctl load` 命令是把小闹钟交给系统管家，让它按时执行。</li><li>`openclaw pairing list` 是看看谁在门口等着配对。</li><li>`openclaw status --all` 是给所有部件做个体检。</li></ul>
+            </div>
+          
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>定时唤醒、检查配对、关注版本，魔法体验更流畅。</p>
+              </div>
+            </div>
+          </section>
+        
+      <section class="section-shell">
+        <div class="ad-placeholder">
+          <p>这里预留给未来的 Google AdSense 模块。</p>
+          <code>&lt;!-- ADSENSE_SNIPPET --&gt;</code>
         </div>
-      </div>
-    </section>
+      </section>
     
-        <section class="section-shell" id="section-1">
-          <div class="section-heading">
-            <p class="section-kicker">第 1 站</p>
-            <h2>Start Here</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“BlueBubbles (macOS REST) Status: bundled 新本领插件 that talks to the BlueBubbles macOS 大房子服务器 over HTTP. **Recommended for…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“BlueBubbles (macOS REST)”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p># BlueBubbles (macOS REST)</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Status: bundled 新本领插件 that talks to the BlueBubbles macOS 大房子服务器 over HTTP. **Recommended for i小纸条消息 integration** due…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Status: bundled plugin that talks to the BlueBubbles macOS server over HTTP. **Recommended for iMessage integration** due to its richer API and easier setup compared to the legacy imsg channel.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-2">
-          <div class="section-heading">
-            <p class="section-kicker">第 2 站</p>
-            <h2>Overview</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Overview”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Runs on macOS via the BlueBubbles helper…、Recommended/tested: macOS Sequoia (15). m…、OpenClaw talks to it through its REST 对话接…、Incoming 小纸条消息s arrive via 小铃铛通知s; outgoi…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Runs on macOS via the BlueBubbles helper app (<a href="https://bluebubbles.app" target="_blank" rel="noreferrer">bluebubbles.app</a>).</li><li>Recommended/tested: macOS Sequoia (15). macOS Tahoe (26) works; edit is currently broken on Tahoe, and group icon updates may report success but not sync.</li><li>OpenClaw talks to it through its REST API (<code>GET /api/v1/ping</code>, <code>POST /message/text</code>, <code>POST /chat/:id/*</code>).</li><li>Incoming messages arrive via webhooks; outgoing replies, typing indicators, read receipts, and tapbacks are REST calls.</li><li>Attachments and stickers are ingested as inbound media (and surfaced to the agent when possible).</li><li>Pairing/allowlist works the same way as other channels (<code>/channels/pairing</code> etc) with <code>channels.bluebubbles.allowFrom</code> + pairing codes.</li><li>Reactions are surfaced as system events just like Slack/Telegram so agents can &quot;mention&quot; them before replying.</li><li>Advanced features: edit, unsend, reply threading, message effects, group management.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-3">
-          <div class="section-heading">
-            <p class="section-kicker">第 3 站</p>
-            <h2>Quick start</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“1. Install the BlueBubbles 大房子服务器 on your Mac (follow the instructions at bluebubbles.app/install). 2. In the BlueBubbl…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“1. Install the BlueBubbles 大房子服务器 on your Mac (follow the instructions at bluebubbles.app/install).”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>1. Install the BlueBubbles server on your Mac (follow the instructions at <a href="https://bluebubbles.app/install" target="_blank" rel="noreferrer">bluebubbles.app/install</a>).</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“2. In the BlueBubbles 设置说明书, enable the web 对话接口 and set a 秘密口令.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>2. In the BlueBubbles config, enable the web API and set a password.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“3. Run openclaw onboard and select BlueBubbles, or 设置说明书ure manually:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>3. Run <code>openclaw onboard</code> and select BlueBubbles, or configure manually:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>``<code>json5 theme={&quot;theme&quot;:{&quot;light&quot;:&quot;min-light&quot;,&quot;dark&quot;:&quot;min-dark&quot;}} { channels: { bluebubbles: { enabled: true, serverUrl: &quot;http://192.168.1.100:1234&quot;, password: &quot;example-password&quot;, webhookPath: &quot;/bluebubbles-webhook&quot;, }, }, } </code>``</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“4. Point BlueBubbles 小铃铛通知s to your 门口的小门卫 (example: https://your-门口的小门卫-host:3000/bluebubbles-小铃铛通知?秘密口令=&lt;秘密口令&gt;).”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>4. Point BlueBubbles webhooks to your gateway (example: <code>https://your-gateway-host:3000/bluebubbles-webhook?password=&lt;password&gt;</code>).</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“5. Start the 门口的小门卫; it will register the 小铃铛通知 handler and start pairing.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>5. Start the gateway; it will register the webhook handler and start pairing.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“安全守门员 note:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Security note:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Quick start”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Always set a 小铃铛通知 秘密口令.、小铃铛通知 authentication is always required.…、秘密口令 authentication is checked before rea…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Always set a webhook password.</li><li>Webhook authentication is always required. OpenClaw rejects BlueBubbles webhook requests unless they include a password/guid that matches <code>channels.bluebubbles.password</code> (for example <code>?password=&lt;password&gt;</code> or <code>x-password</code>), regardless of loopback/proxy topology.</li><li>Password authentication is checked before reading/parsing full webhook bodies.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-4">
-          <div class="section-heading">
-            <p class="section-kicker">第 4 站</p>
-            <h2>Keeping 小纸条消息s.app alive (VM / headless setups)</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Some macOS VM / always-on setups can end up with 小纸条消息s.app going “idle” (incoming events stop until the app is opened/…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Some macOS VM / always-on setups can end up with 小纸条消息s.app going “idle” (incoming events stop until the app is opened/…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Some macOS VM / always-on setups can end up with Messages.app going “idle” (incoming events stop until the app is opened/foregrounded). A simple workaround is to **poke Messages every 5 minutes** using an AppleScript + LaunchAgent.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-5">
-          <div class="section-heading">
-            <p class="section-kicker">第 5 站</p>
-            <h2>1) Save the AppleScript</h2>
-            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>你理解的是能力边界，不只是功能名字。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Save this as: Example script (non-interactive; does not steal focus):”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Save this as:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Save this as:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“1) Save the AppleScript”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：~/Scripts/poke-小纸条消息s.scpt。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>~/Scripts/poke-messages.scpt</code></li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Example script (non-interactive; does not steal focus):”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Example script (non-interactive; does not steal focus):</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段像给机器人看的说明书，告诉它要按什么样子准备东西。</p>
-        <ul class="code-steps">
-          <li>这一行“try”是当前步骤要交给电脑的一小块提示。</li><li>这一行“tell application &quot;Messages&quot;”是当前步骤要交给电脑的一小块提示。</li><li>这一行“if not running then”是当前步骤要交给电脑的一小块提示。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-applescript">try
-  tell application &quot;Messages&quot;
-    if not running then
-      launch
-    end if
-
-    -- Touch the scripting interface to keep the process responsive.
-    set _chatCount to (count of chats)
-  end tell
-on error
-  -- Ignore transient failures (first-run prompts, locked session, etc).
-end try</code></pre>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-6">
-          <div class="section-heading">
-            <p class="section-kicker">第 6 站</p>
-            <h2>2) Install a Launch机器人朋友</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Save this as: Notes: Load it:”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Save this as:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Save this as:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“2) Install a LaunchAgent”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：~/Library/Launch机器人朋友s/com.user.poke-小纸条消…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>~/Library/LaunchAgents/com.user.poke-messages.plist</code></li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段像在搭一个小房子的骨架，每个标签都在告诉电脑东西要摆在哪里。</p>
-        <ul class="code-steps">
-          <li>这个尖括号标签“&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;”像拼积木时的一块边框，告诉页面结构怎么搭。</li><li>这里在给“&lt;!DOCTYPE plist PUBLIC -//Apple//DTD PLIST 1.0//EN http”贴标签，意思是把它设置成“//www.apple.com/DTDs/PropertyList-1.0.dtd&gt;”。</li><li>这个尖括号标签“&lt;plist version=&quot;1.0&quot;&gt;”像拼积木时的一块边框，告诉页面结构怎么搭。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-&lt;!DOCTYPE plist PUBLIC &quot;-//Apple//DTD PLIST 1.0//EN&quot; &quot;http://www.apple.com/DTDs/PropertyList-1.0.dtd&quot;&gt;
-&lt;plist version=&quot;1.0&quot;&gt;
-  &lt;dict&gt;
-    &lt;key&gt;Label&lt;/key&gt;
-    &lt;string&gt;com.user.poke-messages&lt;/string&gt;
-
-    &lt;key&gt;ProgramArguments&lt;/key&gt;
-    &lt;array&gt;
-      &lt;string&gt;/bin/bash&lt;/string&gt;
-      &lt;string&gt;-lc&lt;/string&gt;
-      &lt;string&gt;/usr/bin/osascript &amp;quot;$HOME/Scripts/poke-messages.scpt&amp;quot;&lt;/string&gt;
-    &lt;/array&gt;
-
-    &lt;key&gt;RunAtLoad&lt;/key&gt;
-    &lt;true/&gt;
-
-    &lt;key&gt;StartInterval&lt;/key&gt;
-    &lt;integer&gt;300&lt;/integer&gt;
-
-    &lt;key&gt;StandardOutPath&lt;/key&gt;
-    &lt;string&gt;/tmp/poke-messages.log&lt;/string&gt;
-    &lt;key&gt;StandardErrorPath&lt;/key&gt;
-    &lt;string&gt;/tmp/poke-messages.err&lt;/string&gt;
-  &lt;/dict&gt;
-&lt;/plist&gt;</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Notes:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Notes:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“2) Install a LaunchAgent”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：This runs **every 300 seconds** and **on…、The first run may trigger macOS **自动小闹钟**…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>This runs **every 300 seconds** and **on login**.</li><li>The first run may trigger macOS **Automation** prompts (<code>osascript</code> → Messages). Approve them in the same user session that runs the LaunchAgent.</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Load it:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Load it:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一串终端魔法口令，像按步骤按下几个按钮，让电脑开始干活。</p>
-        <ul class="code-steps">
-          <li>这一行“launchctl unload ~/Library/LaunchAgents/com.user.poke-messages.plist 2&gt;/dev/null || true”是当前步骤要交给电脑的一小块提示。</li><li>这一行“launchctl load ~/Library/LaunchAgents/com.user.poke-messages.plist”是当前步骤要交给电脑的一小块提示。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">launchctl unload ~/Library/LaunchAgents/com.user.poke-messages.plist 2&gt;/dev/null || true
-launchctl load ~/Library/LaunchAgents/com.user.poke-messages.plist</code></pre>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-7">
-          <div class="section-heading">
-            <p class="section-kicker">第 7 站</p>
-            <h2>Onboarding</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“BlueBubbles is available in interactive onboarding: The wizard prompts for: You can also add BlueBubbles via CLI:”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“BlueBubbles is available in interactive onboarding:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>BlueBubbles is available in interactive onboarding:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一句直接对 OpenClaw 说的话，就像对小助手下达任务。</p>
-        <ul class="code-steps">
-          <li>这一句是在直接叫 OpenClaw 做事：“openclaw onboard”。你可以把它想成对机器人说的完整命令。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-text">openclaw onboard</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“The wizard prompts for:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>The wizard prompts for:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Onboarding”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：**大房子服务器 URL** (required): BlueBubbles 大房…、**秘密口令** (required): 对话接口 秘密口令 from BlueB…、**小铃铛通知 path** (optional): Defaults to /b…、**DM policy**: pairing, allowlist, open,…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>**Server URL** (required): BlueBubbles server address (e.g., <code>http://192.168.1.100:1234</code>)</li><li>**Password** (required): API password from BlueBubbles Server settings</li><li>**Webhook path** (optional): Defaults to <code>/bluebubbles-webhook</code></li><li>**DM policy**: pairing, allowlist, open, or disabled</li><li>**Allow list**: Phone numbers, emails, or chat targets</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“You can also add BlueBubbles via CLI:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>You can also add BlueBubbles via CLI:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一句直接对 OpenClaw 说的话，就像对小助手下达任务。</p>
-        <ul class="code-steps">
-          <li>这里在给“openclaw channels add bluebubbles --http-url http”贴标签，意思是把它设置成“//192.168.1.100:1234 --password &lt;password&gt;”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-text">openclaw channels add bluebubbles --http-url http://192.168.1.100:1234 --password &lt;password&gt;</code></pre>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-8">
-          <div class="section-heading">
-            <p class="section-kicker">第 8 站</p>
-            <h2>Access control (DMs + 大家一起的房间s)</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“DMs: 大家一起的房间s:”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“DMs:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>DMs:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Access control (DMs + groups)”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Default: 消息通道s.bluebubbles.dmPolicy = &quot;pa…、Unknown senders receive a pairing code; 小…、Approve via:、openclaw pairing list bluebubbles。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Default: <code>channels.bluebubbles.dmPolicy = &quot;pairing&quot;</code>.</li><li>Unknown senders receive a pairing code; messages are ignored until approved (codes expire after 1 hour).</li><li>Approve via:</li><li><code>openclaw pairing list bluebubbles</code></li><li><code>openclaw pairing approve bluebubbles &lt;CODE&gt;</code></li><li>Pairing is the default token exchange. Details: <a href="/channels/pairing" target="_blank" rel="noreferrer">Pairing</a></li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“大家一起的房间s:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Groups:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Access control (DMs + groups)”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：消息通道s.bluebubbles.大家一起的房间Policy = open al…、消息通道s.bluebubbles.大家一起的房间AllowFrom contro…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>channels.bluebubbles.groupPolicy = open | allowlist | disabled</code> (default: <code>allowlist</code>).</li><li><code>channels.bluebubbles.groupAllowFrom</code> controls who can trigger in groups when <code>allowlist</code> is set.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-9">
-          <div class="section-heading">
-            <p class="section-kicker">第 9 站</p>
-            <h2>Contact name enrichment (macOS, optional)</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“BlueBubbles 大家一起的房间 小铃铛通知s often only include raw participant addresses. If you want 大家一起的房间Members context to show loc…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“BlueBubbles 大家一起的房间 小铃铛通知s often only include raw participant addresses. If you want 大家一起的房间Members context to show loc…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>BlueBubbles group webhooks often only include raw participant addresses. If you want <code>GroupMembers</code> context to show local contact names instead, you can opt in to local Contacts enrichment on macOS:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Contact name enrichment (macOS, optional)”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：消息通道s.bluebubbles.enrich大家一起的房间Participan…、Lookups run only after 大家一起的房间 access, 魔法…、Only unnamed phone participants are enric…、Raw phone numbers remain as the fallback…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>channels.bluebubbles.enrichGroupParticipantsFromContacts = true</code> enables the lookup. Default: <code>false</code>.</li><li>Lookups run only after group access, command authorization, and mention gating have allowed the message through.</li><li>Only unnamed phone participants are enriched.</li><li>Raw phone numbers remain as the fallback when no local match is found.</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“channels”贴标签，意思是把它设置成“{”。</li><li>这里在给“bluebubbles”贴标签，意思是把它设置成“{”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json5">{
-  channels: {
-    bluebubbles: {
-      enrichGroupParticipantsFromContacts: true,
-    },
-  },
-}</code></pre>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-10">
-          <div class="section-heading">
-            <p class="section-kicker">第 10 站</p>
-            <h2>Mention gating (大家一起的房间s)</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“BlueBubbles supports mention gating for 大家一起的房间 chats, matching i小纸条消息/WhatsApp behavior: Per-大家一起的房间 设置说明书uration:”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“BlueBubbles supports mention gating for 大家一起的房间 chats, matching i小纸条消息/WhatsApp behavior:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>BlueBubbles supports mention gating for group chats, matching iMessage/WhatsApp behavior:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Mention gating (groups)”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Uses 机器人朋友s.list[].大家一起的房间Chat.mentionPat…、When requireMention is enabled for a 大家一起…、Control 魔法口令s from authorized senders byp…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Uses <code>agents.list[].groupChat.mentionPatterns</code> (or <code>messages.groupChat.mentionPatterns</code>) to detect mentions.</li><li>When <code>requireMention</code> is enabled for a group, the agent only responds when mentioned.</li><li>Control commands from authorized senders bypass mention gating.</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Per-大家一起的房间 设置说明书uration:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Per-group configuration:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“channels”贴标签，意思是把它设置成“{”。</li><li>这里在给“bluebubbles”贴标签，意思是把它设置成“{”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json5">{
-  channels: {
-    bluebubbles: {
-      groupPolicy: &quot;allowlist&quot;,
-      groupAllowFrom: [&quot;+15555550123&quot;],
-      groups: {
-        &quot;*&quot;: { requireMention: true }, // default for all groups
-        &quot;iMessage;-;chat123&quot;: { requireMention: false }, // override for specific group
-      },
-    },
-  },
-}</code></pre>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-11">
-          <div class="section-heading">
-            <p class="section-kicker">第 11 站</p>
-            <h2>魔法口令 gating</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Command gating”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Control 魔法口令s (e.g., /设置说明书, /聪明脑袋模型) req…、Uses allowFrom and 大家一起的房间AllowFrom to de…、Authorized senders can run control 魔法口令s…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Control commands (e.g., <code>/config</code>, <code>/model</code>) require authorization.</li><li>Uses <code>allowFrom</code> and <code>groupAllowFrom</code> to determine command authorization.</li><li>Authorized senders can run control commands even without mentioning in groups.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-12">
-          <div class="section-heading">
-            <p class="section-kicker">第 12 站</p>
-            <h2>ACP conversation bindings</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“BlueBubbles chats can be turned into durable ACP workspaces without changing the transport layer. Fast operator flow: 设…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“BlueBubbles chats can be turned into durable ACP workspaces without changing the transport layer.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>BlueBubbles chats can be turned into durable ACP workspaces without changing the transport layer.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Fast operator flow:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Fast operator flow:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“ACP conversation bindings”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Run /acp spawn codex --bind here inside t…、Future 小纸条消息s in that same BlueBubbles co…、/new and /reset reset the same bound ACP…、/acp close closes the ACP session and rem…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Run <code>/acp spawn codex --bind here</code> inside the DM or allowed group chat.</li><li>Future messages in that same BlueBubbles conversation route to the spawned ACP session.</li><li><code>/new</code> and <code>/reset</code> reset the same bound ACP session in place.</li><li><code>/acp close</code> closes the ACP session and removes the binding.</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“设置说明书ured persistent bindings are also supported through top-level bindings[] entries with type: &quot;acp&quot; and match.消息通道:…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Configured persistent bindings are also supported through top-level <code>bindings[]</code> entries with <code>type: &quot;acp&quot;</code> and <code>match.channel: &quot;bluebubbles&quot;</code>.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“match.peer.id can use any supported BlueBubbles target form:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p><code>match.peer.id</code> can use any supported BlueBubbles target form:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“ACP conversation bindings”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：normalized DM handle such as +15555550123…、chat_id:&lt;id&gt;、chat_guid:&lt;guid&gt;、chat_identifier:&lt;identifier&gt;。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>normalized DM handle such as <code>+15555550123</code> or <code>user@example.com</code></li><li><code>chat_id:&lt;id&gt;</code></li><li><code>chat_guid:&lt;guid&gt;</code></li><li><code>chat_identifier:&lt;identifier&gt;</code></li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“For stable 大家一起的房间 bindings, prefer chat_id:* or chat_identifier:*.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>For stable group bindings, prefer <code>chat_id:*</code> or <code>chat_identifier:*</code>.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Example:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Example:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“agents”贴标签，意思是把它设置成“{”。</li><li>这里在给“list”贴标签，意思是把它设置成“[”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json5">{
-  agents: {
-    list: [
-      {
-        id: &quot;codex&quot;,
-        runtime: {
-          type: &quot;acp&quot;,
-          acp: { agent: &quot;codex&quot;, backend: &quot;acpx&quot;, mode: &quot;persistent&quot; },
-        },
-      },
-    ],
-  },
-  bindings: [
-    {
-      type: &quot;acp&quot;,
-      agentId: &quot;codex&quot;,
-      match: {
-        channel: &quot;bluebubbles&quot;,
-        accountId: &quot;default&quot;,
-        peer: { kind: &quot;dm&quot;, id: &quot;+15555550123&quot; },
-      },
-      acp: { label: &quot;codex-imessage&quot; },
-    },
-  ],
-}</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“See ACP 机器人朋友s for shared ACP binding behavior.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>See <a href="/tools/acp-agents" target="_blank" rel="noreferrer">ACP Agents</a> for shared ACP binding behavior.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-13">
-          <div class="section-heading">
-            <p class="section-kicker">第 13 站</p>
-            <h2>Typing + read receipts</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Typing + read receipts”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：**Typing indicators**: Sent automatically…、**Read receipts**: Controlled by 消息通道s.bl…、**Typing indicators**: OpenClaw sends typ…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>**Typing indicators**: Sent automatically before and during response generation.</li><li>**Read receipts**: Controlled by <code>channels.bluebubbles.sendReadReceipts</code> (default: <code>true</code>).</li><li>**Typing indicators**: OpenClaw sends typing start events; BlueBubbles clears typing automatically on send or timeout (manual stop via DELETE is unreliable).</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“channels”贴标签，意思是把它设置成“{”。</li><li>这里在给“bluebubbles”贴标签，意思是把它设置成“{”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json5">{
-  channels: {
-    bluebubbles: {
-      sendReadReceipts: false, // disable read receipts
-    },
-  },
-}</code></pre>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-14">
-          <div class="section-heading">
-            <p class="section-kicker">第 14 站</p>
-            <h2>Advanced actions</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“BlueBubbles supports advanced 小纸条消息 actions when enabled in 设置说明书: Available actions:”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“BlueBubbles supports advanced 小纸条消息 actions when enabled in 设置说明书:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>BlueBubbles supports advanced message actions when enabled in config:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“channels”贴标签，意思是把它设置成“{”。</li><li>这里在给“bluebubbles”贴标签，意思是把它设置成“{”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json5">{
-  channels: {
-    bluebubbles: {
-      actions: {
-        reactions: true, // tapbacks (default: true)
-        edit: true, // edit sent messages (macOS 13+, broken on macOS 26 Tahoe)
-        unsend: true, // unsend messages (macOS 13+)
-        reply: true, // reply threading by message GUID
-        sendWithEffect: true, // message effects (slam, loud, etc.)
-        renameGroup: true, // rename group chats
-        setGroupIcon: true, // set group chat icon/photo (flaky on macOS 26 Tahoe)
-        addParticipant: true, // add participants to groups
-        removeParticipant: true, // remove participants from groups
-        leaveGroup: true, // leave group chats
-        sendAttachment: true, // send attachments/media
-      },
-    },
-  },
-}</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Available actions:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Available actions:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Advanced actions”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：**react**: Add/remove tapback reactions (…、**edit**: Edit a sent 小纸条消息 (小纸条消息Id, tex…、**unsend**: Unsend a 小纸条消息 (小纸条消息Id)、**reply**: Reply to a specific 小纸条消息 (小纸条…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>**react**: Add/remove tapback reactions (<code>messageId</code>, <code>emoji</code>, <code>remove</code>)</li><li>**edit**: Edit a sent message (<code>messageId</code>, <code>text</code>)</li><li>**unsend**: Unsend a message (<code>messageId</code>)</li><li>**reply**: Reply to a specific message (<code>messageId</code>, <code>text</code>, <code>to</code>)</li><li>**sendWithEffect**: Send with iMessage effect (<code>text</code>, <code>to</code>, <code>effectId</code>)</li><li>**renameGroup**: Rename a group chat (<code>chatGuid</code>, <code>displayName</code>)</li><li>**setGroupIcon**: Set a group chat&#39;s icon/photo (<code>chatGuid</code>, <code>media</code>) — flaky on macOS 26 Tahoe (API may return success but the icon does not sync).</li><li>**addParticipant**: Add someone to a group (<code>chatGuid</code>, <code>address</code>)</li><li>**removeParticipant**: Remove someone from a group (<code>chatGuid</code>, <code>address</code>)</li><li>**leaveGroup**: Leave a group chat (<code>chatGuid</code>)</li><li>**upload-file**: Send media/files (<code>to</code>, <code>buffer</code>, <code>filename</code>, <code>asVoice</code>)</li><li>Voice memos: set <code>asVoice: true</code> with **MP3** or **CAF** audio to send as an iMessage voice message. BlueBubbles converts MP3 → CAF when sending voice memos.</li><li>Legacy alias: <code>sendAttachment</code> still works, but <code>upload-file</code> is the canonical action name.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-15">
-          <div class="section-heading">
-            <p class="section-kicker">第 15 站</p>
-            <h2>小纸条消息 IDs (short vs full)</h2>
-            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>你理解的是能力边界，不只是功能名字。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“OpenClaw may surface *short* 小纸条消息 IDs (e.g., 1, 2) to save tokens. Use full IDs for durable 自动小闹钟s and storage: See 设置…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“OpenClaw may surface *short* 小纸条消息 IDs (e.g., 1, 2) to save tokens.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>OpenClaw may surface *short* message IDs (e.g., <code>1</code>, <code>2</code>) to save tokens.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Message IDs (short vs full)”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：小纸条消息Sid / ReplyToId can be short IDs.、小纸条消息SidFull / ReplyToIdFull contain the…、Short IDs are in-memory; they can expire…、Actions accept short or full 小纸条消息Id, but…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>MessageSid</code> / <code>ReplyToId</code> can be short IDs.</li><li><code>MessageSidFull</code> / <code>ReplyToIdFull</code> contain the provider full IDs.</li><li>Short IDs are in-memory; they can expire on restart or cache eviction.</li><li>Actions accept short or full <code>messageId</code>, but short IDs will error if no longer available.</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Use full IDs for durable 自动小闹钟s and storage:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Use full IDs for durable automations and storage:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Message IDs (short vs full)”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Templates: {{小纸条消息SidFull}}, {{ReplyToIdF…、Context: 小纸条消息SidFull / ReplyToIdFull in…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Templates: <code>{{MessageSidFull}}</code>, <code>{{ReplyToIdFull}}</code></li><li>Context: <code>MessageSidFull</code> / <code>ReplyToIdFull</code> in inbound payloads</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“See 设置说明书uration for template variables.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>See <a href="/gateway/configuration" target="_blank" rel="noreferrer">Configuration</a> for template variables.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-16">
-          <div class="section-heading">
-            <p class="section-kicker">第 16 站</p>
-            <h2>Block 一边说一边送ing</h2>
-            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>你理解的是能力边界，不只是功能名字。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Control whether responses are sent as a single 小纸条消息 or 一边说一边送ed in blocks:”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Control whether responses are sent as a single 小纸条消息 or 一边说一边送ed in blocks:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Control whether responses are sent as a single message or streamed in blocks:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“channels”贴标签，意思是把它设置成“{”。</li><li>这里在给“bluebubbles”贴标签，意思是把它设置成“{”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json5">{
-  channels: {
-    bluebubbles: {
-      blockStreaming: true, // enable block streaming (off by default)
-    },
-  },
-}</code></pre>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-17">
-          <div class="section-heading">
-            <p class="section-kicker">第 17 站</p>
-            <h2>Media + limits</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Media + limits”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Inbound attachments are downloaded and st…、Media cap via 消息通道s.bluebubbles.mediaMaxM…、Outbound text is chunked to 消息通道s.bluebub…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Inbound attachments are downloaded and stored in the media cache.</li><li>Media cap via <code>channels.bluebubbles.mediaMaxMb</code> for inbound and outbound media (default: 8 MB).</li><li>Outbound text is chunked to <code>channels.bluebubbles.textChunkLimit</code> (default: 4000 chars).</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-18">
-          <div class="section-heading">
-            <p class="section-kicker">第 18 站</p>
-            <h2>设置说明书uration reference</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Full 设置说明书uration: 设置说明书uration Provider options: Related global options:”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Full 设置说明书uration: 设置说明书uration”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Full configuration: <a href="/gateway/configuration" target="_blank" rel="noreferrer">Configuration</a></p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Provider options:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Provider options:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Configuration reference”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：消息通道s.bluebubbles.enabled: Enable/disable…、消息通道s.bluebubbles.大房子服务器Url: BlueBubbles…、消息通道s.bluebubbles.秘密口令: 对话接口 秘密口令.、消息通道s.bluebubbles.小铃铛通知Path: 小铃铛通知 endpoi…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>channels.bluebubbles.enabled</code>: Enable/disable the channel.</li><li><code>channels.bluebubbles.serverUrl</code>: BlueBubbles REST API base URL.</li><li><code>channels.bluebubbles.password</code>: API password.</li><li><code>channels.bluebubbles.webhookPath</code>: Webhook endpoint path (default: <code>/bluebubbles-webhook</code>).</li><li><code>channels.bluebubbles.dmPolicy</code>: <code>pairing | allowlist | open | disabled</code> (default: <code>pairing</code>).</li><li><code>channels.bluebubbles.allowFrom</code>: DM allowlist (handles, emails, E.164 numbers, <code>chat_id:*</code>, <code>chat_guid:*</code>).</li><li><code>channels.bluebubbles.groupPolicy</code>: <code>open | allowlist | disabled</code> (default: <code>allowlist</code>).</li><li><code>channels.bluebubbles.groupAllowFrom</code>: Group sender allowlist.</li><li><code>channels.bluebubbles.enrichGroupParticipantsFromContacts</code>: On macOS, optionally enrich unnamed group participants from local Contacts after gating passes. Default: <code>false</code>.</li><li><code>channels.bluebubbles.groups</code>: Per-group config (<code>requireMention</code>, etc.).</li><li><code>channels.bluebubbles.sendReadReceipts</code>: Send read receipts (default: <code>true</code>).</li><li><code>channels.bluebubbles.blockStreaming</code>: Enable block streaming (default: <code>false</code>; required for streaming replies).</li><li><code>channels.bluebubbles.textChunkLimit</code>: Outbound chunk size in chars (default: 4000).</li><li><code>channels.bluebubbles.chunkMode</code>: <code>length</code> (default) splits only when exceeding <code>textChunkLimit</code>; <code>newline</code> splits on blank lines (paragraph boundaries) before length chunking.</li><li><code>channels.bluebubbles.mediaMaxMb</code>: Inbound/outbound media cap in MB (default: 8).</li><li><code>channels.bluebubbles.mediaLocalRoots</code>: Explicit allowlist of absolute local directories permitted for outbound local media paths. Local path sends are denied by default unless this is configured. Per-account override: <code>channels.bluebubbles.accounts.&lt;accountId&gt;.mediaLocalRoots</code>.</li><li><code>channels.bluebubbles.historyLimit</code>: Max group messages for context (0 disables).</li><li><code>channels.bluebubbles.dmHistoryLimit</code>: DM history limit.</li><li><code>channels.bluebubbles.actions</code>: Enable/disable specific actions.</li><li><code>channels.bluebubbles.accounts</code>: Multi-account configuration.</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Related global options:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Related global options:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Configuration reference”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：机器人朋友s.list[].大家一起的房间Chat.mentionPatterns…、小纸条消息s.responsePrefix.</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>agents.list[].groupChat.mentionPatterns</code> (or <code>messages.groupChat.mentionPatterns</code>).</li><li><code>messages.responsePrefix</code>.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-19">
-          <div class="section-heading">
-            <p class="section-kicker">第 19 站</p>
-            <h2>Addressing / delivery targets</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Prefer chat_guid for stable routing:”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Prefer chat_guid for stable routing:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Prefer <code>chat_guid</code> for stable routing:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Addressing / delivery targets”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：chat_guid:i小纸条消息;-;+15555550123 (preferre…、chat_id:123、chat_identifier:...、Direct handles: +15555550123, user@exampl…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>chat_guid:iMessage;-;+15555550123</code> (preferred for groups)</li><li><code>chat_id:123</code></li><li><code>chat_identifier:...</code></li><li>Direct handles: <code>+15555550123</code>, <code>user@example.com</code></li><li>If a direct handle does not have an existing DM chat, OpenClaw will create one via <code>POST /api/v1/chat/new</code>. This requires the BlueBubbles Private API to be enabled.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-20">
-          <div class="section-heading">
-            <p class="section-kicker">第 20 站</p>
-            <h2>安全守门员</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Security”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：小铃铛通知 requests are authenticated by compa…、Keep the 对话接口 秘密口令 and 小铃铛通知 endpoint sec…、Localhost trust means a same-host reverse…、Enable HTTPS + firewall rules on the Blue…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Webhook requests are authenticated by comparing <code>guid</code>/<code>password</code> query params or headers against <code>channels.bluebubbles.password</code>. Requests from <code>localhost</code> are also accepted.</li><li>Keep the API password and webhook endpoint secret (treat them like credentials).</li><li>Localhost trust means a same-host reverse proxy can unintentionally bypass the password. If you proxy the gateway, require auth at the proxy and configure <code>gateway.trustedProxies</code>. See <a href="/gateway/security#reverse-proxy-configuration" target="_blank" rel="noreferrer">Gateway security</a>.</li><li>Enable HTTPS + firewall rules on the BlueBubbles server if exposing it outside your LAN.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-21">
-          <div class="section-heading">
-            <p class="section-kicker">第 21 站</p>
-            <h2>Troubleshooting</h2>
-            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>你理解的是能力边界，不只是功能名字。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“For general 消息通道 workflow reference, see 消息通道s and the 新本领插件s guide.”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Troubleshooting”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：If typing/read events stop working, check…、Pairing codes expire after one hour; use…、Reactions require the BlueBubbles private…、Edit/unsend require macOS 13+ and a compa…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>If typing/read events stop working, check the BlueBubbles webhook logs and verify the gateway path matches <code>channels.bluebubbles.webhookPath</code>.</li><li>Pairing codes expire after one hour; use <code>openclaw pairing list bluebubbles</code> and <code>openclaw pairing approve bluebubbles &lt;code&gt;</code>.</li><li>Reactions require the BlueBubbles private API (<code>POST /api/v1/message/react</code>); ensure the server version exposes it.</li><li>Edit/unsend require macOS 13+ and a compatible BlueBubbles server version. On macOS 26 (Tahoe), edit is currently broken due to private API changes.</li><li>Group icon updates can be flaky on macOS 26 (Tahoe): the API may return success but the new icon does not sync.</li><li>OpenClaw auto-hides known-broken actions based on the BlueBubbles server&#39;s macOS version. If edit still appears on macOS 26 (Tahoe), disable it manually with <code>channels.bluebubbles.actions.edit=false</code>.</li><li>For status/health info: <code>openclaw status --all</code> or <code>openclaw status --deep</code>.</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“For general 消息通道 workflow reference, see 消息通道s and the 新本领插件s guide.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>For general channel workflow reference, see <a href="/channels" target="_blank" rel="noreferrer">Channels</a> and the <a href="/tools/plugin" target="_blank" rel="noreferrer">Plugins</a> guide.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-    <section class="section-shell">
-      <div class="ad-placeholder">
-        <p>这里预留给未来的 Google AdSense 模块。</p>
-        <code>&lt;!-- ADSENSE_SNIPPET --&gt;</code>
-      </div>
-    </section>
-  
 
       <footer class="page-footer">
         <div>

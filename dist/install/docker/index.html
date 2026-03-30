@@ -3974,13 +3974,13 @@
       <section class="section-shell">
         <div class="overview-card">
           <div>
-            <p class="section-kicker">DeepSeek 中文解读版</p>
-            <h2>OpenClaw Docker部署指南：容器化网关的实用选择</h2>
-            <p>Docker在OpenClaw中是可选项，不是必选项。它适合需要隔离环境或特定部署场景的用户。本文档帮你判断是否该用Docker，并详细讲解从镜像构建到健康检查的完整流程。</p>
+            <p class="section-kicker">AI 绘本解读版</p>
+            <h2>🎪 用Docker搭个积木城堡</h2>
+            <p>Docker是个魔法盒子，能把OpenClaw装进去。想玩就玩，不想玩就收起来。</p>
           </div>
           <div class="overview-meta">
             <span>原始路径：/install/docker</span>
-            <span>模型输出章节：10</span>
+            <span>故事卡片：12 张</span>
             <a href="https://docs.openclaw.ai/install/docker" target="_blank" rel="noreferrer">查看官方原文</a>
           </div>
         </div>
@@ -3989,22 +3989,22 @@
           <section class="section-shell" id="section-1">
             <div class="section-heading">
               <p class="section-kicker">第 1 站</p>
-              <h2>决策起点：你真的需要Docker吗？</h2>
-              <p>这节帮你判断Docker部署是否适合你的使用场景。</p>
+              <h2>🎯 先想清楚：你需要这个盒子吗？</h2>
+              <p>Docker是个隔离的玩具箱，不是必须的。</p>
             </div>
             <div class="story-grid">
               <div class="story-card">
-                <div class="story-card-label">为什么看这节</div>
-                <p>避免在不必要的情况下增加复杂度，节省时间和资源。</p>
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>帮你决定要不要走这条路。</p>
               </div>
               <div class="source-card">
-                <div class="story-card-label">这一节真正要带走的点</div>
-                <ul><li>Docker是可选项，主要用于创建隔离的网关环境或验证容器化流程。</li><li>如果你在本地开发且追求最快迭代速度，建议使用标准安装方式。</li><li>注意：代理沙箱功能也使用Docker，但这不要求整个网关都运行在容器中。</li></ul>
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>想玩就玩：你想有个独立、用完就扔的游乐场，或者在不装东西的电脑上运行OpenClaw。</li><li>不想玩就别玩：你在自己电脑上，只想最快地玩起来。用普通安装方式就好。</li><li>小秘密：Agent沙箱也用Docker，但不需要整个城堡都装进盒子。</li></ul>
               </div>
               
               <div class="story-card">
-                <div class="story-card-label">最后记一句</div>
-                <p>先明确需求，再决定是否走Docker路线。</p>
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>盒子是选做题，不是必答题。</p>
               </div>
             </div>
           </section>
@@ -4012,22 +4012,22 @@
           <section class="section-shell" id="section-2">
             <div class="section-heading">
               <p class="section-kicker">第 2 站</p>
-              <h2>部署前的硬性要求</h2>
-              <p>列出运行Docker版OpenClaw必须满足的条件。</p>
+              <h2>📦 准备你的魔法工具箱</h2>
+              <p>搭城堡前，先准备好工具和材料。</p>
             </div>
             <div class="story-grid">
               <div class="story-card">
-                <div class="story-card-label">为什么看这节</div>
-                <p>确保环境准备充分，避免中途失败。</p>
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>缺了东西，城堡就搭不起来。</p>
               </div>
               <div class="source-card">
-                <div class="story-card-label">这一节真正要带走的点</div>
-                <ul><li>必须安装Docker Desktop（或Docker Engine）和Docker Compose v2。</li><li>构建镜像时主机至少需要2GB内存，否则`pnpm install`可能因内存不足而失败。</li><li>确保有足够磁盘空间存放镜像和日志文件。</li><li>如果在VPS或公有主机上运行，务必先完成网络安全加固。</li></ul>
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>工具：Docker Desktop（或Docker Engine）和Docker Compose v2。</li><li>内存：至少2GB，不然搭积木时盒子会‘砰’地关掉（错误137）。</li><li>磁盘：留够地方放城堡图片和日记本（日志）。</li><li>安全：如果在公共电脑上玩，先看看安全规则。</li></ul>
               </div>
               
               <div class="story-card">
-                <div class="story-card-label">最后记一句</div>
-                <p>检查你的系统资源是否达标，这是成功部署的第一步。</p>
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>工具齐全，才能开工。</p>
               </div>
             </div>
           </section>
@@ -4035,27 +4035,27 @@
           <section class="section-shell" id="section-3">
             <div class="section-heading">
               <p class="section-kicker">第 3 站</p>
-              <h2>核心流程：构建并启动容器化网关</h2>
-              <p>通过脚本或手动方式，完成网关镜像的构建和初始化。</p>
+              <h2>🏗️ 搭城堡：自动魔法</h2>
+              <p>有个神奇脚本，能一键帮你搭好城堡。</p>
             </div>
             <div class="story-grid">
               <div class="story-card">
-                <div class="story-card-label">为什么看这节</div>
-                <p>这是将OpenClaw运行在Docker容器中的核心步骤。</p>
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>最省心、最快的搭城堡方法。</p>
               </div>
               <div class="source-card">
-                <div class="story-card-label">这一节真正要带走的点</div>
-                <ul><li>推荐使用`./scripts/docker/setup.sh`脚本一键完成构建和初始化。</li><li>脚本会自动引导你配置API密钥、生成网关令牌并启动服务。</li><li>你也可以选择使用预构建的公共镜像，通过设置`OPENCLAW_IMAGE`环境变量实现。</li><li>初始化过程中的配置写入是通过`openclaw-gateway`直接完成的，`openclaw-cli`用于容器启动后的操作。</li></ul>
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>念咒语：运行 `./scripts/docker/setup.sh`，脚本就开始干活了。</li><li>它会自己搭积木（构建镜像），或者用现成的积木（预构建镜像）。</li><li>然后它会问你几个小问题（比如API钥匙），帮你生成通行证（网关令牌）。</li><li>最后，它用Docker Compose把城堡大门打开。</li><li>整个过程，`openclaw-gateway`是总指挥，`openclaw-cli`是城堡建好后的传令兵。</li></ul>
               </div>
               
             <div class="source-card">
-              <div class="story-card-label">命令 / 代码怎么理解</div>
-              <ul><li>`./scripts/docker/setup.sh`：执行此脚本开始自动化构建和部署流程。</li><li>`export OPENCLAW_IMAGE=&quot;ghcr.io/openclaw/openclaw:latest&quot;`：设置此变量以使用预构建的远程镜像，跳过本地构建。</li><li>脚本会自动处理`onboarding`流程，包括密钥输入和令牌生成。</li></ul>
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
+              <ul><li>`./scripts/docker/setup.sh`：念出这个咒语，魔法就开始了。</li><li>`export OPENCLAW_IMAGE=&quot;ghcr.io/openclaw/openclaw:latest&quot;`：告诉魔法师‘用现成的积木，别自己搭了’。</li></ul>
             </div>
           
               <div class="story-card">
-                <div class="story-card-label">最后记一句</div>
-                <p>使用官方脚本能极大简化部署，手动流程则提供更多控制权。</p>
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>一句咒语，城堡立现。</p>
               </div>
             </div>
           </section>
@@ -4063,27 +4063,27 @@
           <section class="section-shell" id="section-4">
             <div class="section-heading">
               <p class="section-kicker">第 4 站</p>
-              <h2>手动部署流程详解</h2>
-              <p>如果你希望完全掌控每一步，可以按照这里的命令序列手动执行。</p>
+              <h2>🔧 搭城堡：手动拼装</h2>
+              <p>如果你喜欢自己动手，一步步拼装城堡。</p>
             </div>
             <div class="story-grid">
               <div class="story-card">
-                <div class="story-card-label">为什么看这节</div>
-                <p>理解底层命令有助于故障排查和自定义部署。</p>
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>每一步都看得清清楚楚。</p>
               </div>
               <div class="source-card">
-                <div class="story-card-label">这一节真正要带走的点</div>
-                <ul><li>首先使用`docker build`命令构建本地镜像。</li><li>然后通过一系列`docker compose run`命令，以特定入口点运行网关容器来完成初始配置。</li><li>这些配置包括设置网关模式、绑定地址和控制UI允许的源。</li><li>最后使用`docker compose up -d`在后台启动网关服务。</li></ul>
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>第一步：用 `docker build` 命令搭出城堡的模型（镜像）。</li><li>第二步：用 `docker compose run` 命令让模型活过来，完成初始化（onboard）。</li><li>第三步：继续用命令告诉城堡：‘你的模式是本地’、‘你的大门开在局域网’、‘允许谁来敲门’。</li><li>第四步：用 `docker compose up -d` 命令让城堡正式运行起来。</li><li>注意：在城堡大门打开前，总指挥（`openclaw-gateway`）负责所有准备工作。</li></ul>
               </div>
               
             <div class="source-card">
-              <div class="story-card-label">命令 / 代码怎么理解</div>
-              <ul><li>`docker build -t openclaw:local -f Dockerfile .`：基于当前目录的Dockerfile构建一个名为`openclaw:local`的本地镜像。</li><li>`docker compose run --rm --no-deps --entrypoint node openclaw-gateway dist/index.js onboard ...`：这条命令启动一个临时容器，执行`onboard`子命令来完成初始设置。`--rm`表示运行后删除容器，`--no-deps`不启动关联服务，`--entrypoint`指定了执行入口。</li><li>`docker compose up -d openclaw-gateway`：在后台（`-d`）启动`openclaw-gateway`服务。</li><li>注意：在网关容器启动前，配置操作需通过`openclaw-gateway`的入口点进行；`openclaw-cli`用于容器运行后的管理。</li></ul>
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
+              <ul><li>`docker build -t openclaw:local -f Dockerfile .`：搭一个叫‘openclaw:local’的城堡模型。</li><li>`docker compose run --rm --no-deps --entrypoint node openclaw-gateway dist/index.js onboard`：让模型活过来，完成‘新手报到’。</li><li>`docker compose up -d openclaw-gateway`：最后，让城堡安静地在后台运行起来。</li></ul>
             </div>
           
               <div class="story-card">
-                <div class="story-card-label">最后记一句</div>
-                <p>手动流程步骤清晰，是理解Docker Compose与OpenClaw交互的好方法。</p>
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>自己动手，乐趣无穷。</p>
               </div>
             </div>
           </section>
@@ -4091,22 +4091,22 @@
           <section class="section-shell" id="section-5">
             <div class="section-heading">
               <p class="section-kicker">第 5 站</p>
-              <h2>关键环境变量解析</h2>
-              <p>介绍部署脚本支持的可选环境变量，用于定制化构建和运行。</p>
+              <h2>🎛️ 魔法师的调色盘（环境变量）</h2>
+              <p>一些神奇的小开关，能改变搭城堡的方式。</p>
             </div>
             <div class="story-grid">
               <div class="story-card">
-                <div class="story-card-label">为什么看这节</div>
-                <p>通过设置这些变量，你可以灵活调整镜像来源、安装额外包或配置持久化等。</p>
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>让你的城堡更符合你的心意。</p>
               </div>
               <div class="source-card">
-                <div class="story-card-label">这一节真正要带走的点</div>
-                <ul><li>`OPENCLAW_IMAGE`：指定远程镜像地址，替代本地构建。</li><li>`OPENCLAW_EXTRA_MOUNTS`：添加额外的宿主机目录挂载到容器内。</li><li>`OPENCLAW_HOME_VOLUME`：将容器内的`/home/node`目录持久化到Docker命名卷中。</li><li>`OPENCLAW_SANDBOX`：设置为`1`、`true`等值来启用代理沙箱功能。</li></ul>
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>`OPENCLAW_IMAGE`：告诉魔法师‘用哪个现成的积木’。</li><li>`OPENCLAW_DOCKER_APT_PACKAGES`：搭积木时，顺便装些小工具。</li><li>`OPENCLAW_EXTENSIONS`：提前装好扩展包。</li><li>`OPENCLAW_EXTRA_MOUNTS`：给城堡多开几扇窗（挂载额外目录）。</li><li>`OPENCLAW_HOME_VOLUME`：给城堡居民（`/home/node`）一个永久的家（持久化卷）。</li><li>`OPENCLAW_SANDBOX`：打开‘沙箱’模式的小开关。</li><li>`OPENCLAW_DOCKER_SOCKET`：告诉魔法师‘Docker的遥控器在哪里’。</li></ul>
               </div>
               
               <div class="story-card">
-                <div class="story-card-label">最后记一句</div>
-                <p>善用环境变量，让部署脚本适应你的特定环境需求。</p>
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>小开关，大不同。</p>
               </div>
             </div>
           </section>
@@ -4114,27 +4114,27 @@
           <section class="section-shell" id="section-6">
             <div class="section-heading">
               <p class="section-kicker">第 6 站</p>
-              <h2>健康检查：确保服务稳定运行</h2>
-              <p>介绍如何检查Docker容器的存活状态和就绪状态。</p>
+              <h2>❤️ 听听城堡的心跳</h2>
+              <p>城堡运行得怎么样？敲敲门，听听回声。</p>
             </div>
             <div class="story-grid">
               <div class="story-card">
-                <div class="story-card-label">为什么看这节</div>
-                <p>监控服务健康是运维的基础，便于及时发现和解决问题。</p>
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>确保城堡健康活泼。</p>
               </div>
               <div class="source-card">
-                <div class="story-card-label">这一节真正要带走的点</div>
-                <ul><li>通过HTTP端点`/healthz`和`/readyz`可以无认证地检查容器状态。</li><li>Docker镜像内置了`HEALTHCHECK`指令，会定期探测`/healthz`。</li><li>如果健康检查持续失败，Docker会将容器标记为`unhealthy`。</li><li>还可以通过CLI执行需要令牌认证的深度健康检查，获取更详细的状态快照。</li></ul>
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>敲敲 `/healthz` 这扇门，看看城堡是不是还活着（liveness）。</li><li>敲敲 `/readyz` 这扇门，看看城堡是不是准备好接待客人了（readiness）。</li><li>城堡自己也会定期检查心跳。如果总是不好，Docker会认为它‘生病了’。</li><li>想做个全面体检？用带通行证（令牌）的命令，让城堡交出健康报告。</li></ul>
               </div>
               
             <div class="source-card">
-              <div class="story-card-label">命令 / 代码怎么理解</div>
-              <ul><li>`curl -fsS http://127.0.0.1:18789/healthz`：检查容器是否存活（liveness）。`-f`表示失败时静默，`-S`显示错误信息。</li><li>`curl -fsS http://127.0.0.1:18789/readyz`：检查容器是否准备好接收流量（readiness）。</li><li>`docker compose exec openclaw-gateway node dist/index.js health --token &quot;$OPENCLAW_GATEWAY_TOKEN&quot;`：在运行的网关容器内执行深度健康检查命令，需要提供网关令牌。</li></ul>
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
+              <ul><li>`curl -fsS http://127.0.0.1:18789/healthz`：轻轻敲敲‘健康’这扇门。</li><li>`docker compose exec openclaw-gateway node dist/index.js health --token &quot;$OPENCLAW_GATEWAY_TOKEN&quot;`：拿着通行证，让城堡做个深度体检。</li></ul>
             </div>
           
               <div class="story-card">
-                <div class="story-card-label">最后记一句</div>
-                <p>掌握健康检查方法，是维护服务高可用的关键技能。</p>
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>定期敲门，城堡安好。</p>
               </div>
             </div>
           </section>
@@ -4142,22 +4142,22 @@
           <section class="section-shell" id="section-7">
             <div class="section-heading">
               <p class="section-kicker">第 7 站</p>
-              <h2>网络绑定模式：LAN与环回地址</h2>
-              <p>解释网关在容器内如何绑定网络接口，影响外部访问方式。</p>
+              <h2>🚪 大门朝哪开？</h2>
+              <p>城堡的大门，可以只开给家里人，也可以开给整个小区。</p>
             </div>
             <div class="story-grid">
               <div class="story-card">
-                <div class="story-card-label">为什么看这节</div>
-                <p>理解绑定模式能帮你正确配置网络，确保CLI和浏览器能访问到网关。</p>
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>决定谁能从外面敲开城堡的门。</p>
               </div>
               <div class="source-card">
-                <div class="story-card-label">这一节真正要带走的点</div>
-                <ul><li>默认模式`lan`允许宿主机上的浏览器和CLI通过发布的端口访问网关。</li><li>`loopback`模式则限制只有容器网络命名空间内的进程才能访问网关。</li><li>配置时使用`gateway.bind`下的模式值（如`lan`、`loopback`），而不是直接指定IP地址如`0.0.0.0`。</li></ul>
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>默认是‘局域网’（lan）模式：你电脑上的浏览器和命令行都能敲开城堡的门。</li><li>也可以选‘环回’（loopback）模式：只有城堡内部的小伙伴能互相敲门。</li><li>记住：设置的是‘大门模式’，不是具体的门牌号（如0.0.0.0）。</li></ul>
               </div>
               
               <div class="story-card">
-                <div class="story-card-label">最后记一句</div>
-                <p>根据你的访问需求（仅容器内或宿主机也可访问），选择合适的绑定模式。</p>
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>大门模式，决定访客。</p>
               </div>
             </div>
           </section>
@@ -4165,22 +4165,22 @@
           <section class="section-shell" id="section-8">
             <div class="section-heading">
               <p class="section-kicker">第 8 站</p>
-              <h2>数据持久化与存储管理</h2>
-              <p>说明Docker部署中哪些数据是持久化的，以及需要注意的磁盘增长点。</p>
+              <h2>💾 城堡的记忆</h2>
+              <p>城堡里的重要东西，要找个地方存好，别弄丢了。</p>
             </div>
             <div class="story-grid">
               <div class="story-card">
-                <div class="story-card-label">为什么看这节</div>
-                <p>避免容器重建时丢失重要配置和会话数据，并管理磁盘空间。</p>
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>即使城堡重建，记忆还在。</p>
               </div>
               <div class="source-card">
-                <div class="story-card-label">这一节真正要带走的点</div>
-                <ul><li>Docker Compose通过绑定挂载，使配置目录和工作空间目录在容器替换后得以保留。</li><li>需要关注可能快速消耗磁盘的空间：`media/`目录、会话JSONL文件、定时任务运行记录和滚动日志文件。</li><li>关于虚拟机部署的完整持久化细节，请参考相关文档。</li></ul>
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>Docker Compose会把配置目录和工作区目录‘绑’在城堡外面。</li><li>这样，即使拆了城堡（容器替换），这些重要文件还在。</li><li>要留意几个爱长胖的地方：媒体文件夹、会话日记、定时任务记录、临时日志。</li></ul>
               </div>
               
               <div class="story-card">
-                <div class="story-card-label">最后记一句</div>
-                <p>理解数据存储位置，做好持久化配置和磁盘监控。</p>
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>重要记忆，妥善保存。</p>
               </div>
             </div>
           </section>
@@ -4188,27 +4188,27 @@
           <section class="section-shell" id="section-9">
             <div class="section-heading">
               <p class="section-kicker">第 9 站</p>
-              <h2>代理沙箱：为执行环境加上隔离墙</h2>
-              <p>介绍如何启用沙箱功能，将代理的工具执行隔离在独立的Docker容器中。</p>
+              <h2>🛠️ 小帮手：ClawDock</h2>
+              <p>几个方便的小命令，让你管理城堡更轻松。</p>
             </div>
             <div class="story-grid">
               <div class="story-card">
-                <div class="story-card-label">为什么看这节</div>
-                <p>为运行不受信任或多租户的代理会话提供强隔离，提升安全性，而无需容器化整个网关。</p>
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>告别长长的咒语，一键操作。</p>
               </div>
               <div class="source-card">
-                <div class="story-card-label">这一节真正要带走的点</div>
-                <ul><li>沙箱可以按代理、会话或共享范围进行隔离，每个范围有自己的工作空间。</li><li>你可以配置工具策略、网络隔离、资源限制，甚至运行浏览器容器。</li><li>通过设置`agents.defaults.sandbox.mode`等配置项来快速启用。</li><li>需要运行`scripts/sandbox-setup.sh`来构建默认的沙箱镜像。</li></ul>
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>安装后，就能用 `clawdock-start` 启动城堡，`clawdock-stop` 关闭城堡。</li><li>`clawdock-dashboard` 能快速打开城堡的控制面板。</li><li>运行 `clawdock-help` 能看到所有小帮手的名字。</li></ul>
               </div>
               
             <div class="source-card">
-              <div class="story-card-label">命令 / 代码怎么理解</div>
-              <ul><li>在配置中设置`agents.defaults.sandbox.mode`为`&quot;non-main&quot;`或`&quot;all&quot;`来启用沙箱。`off`表示关闭。</li><li>`scope`字段可以设置为`&quot;agent&quot;`（按代理隔离）、`&quot;session&quot;`（按会话隔离）或`&quot;shared&quot;`（共享）。</li><li>`scripts/sandbox-setup.sh`：执行此脚本来构建沙箱功能所需的基础Docker镜像。</li></ul>
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
+              <ul><li>`curl -sL https://raw.githubusercontent.com/openclaw/openclaw/main/scripts/shell-helpers/clawdock-helpers.sh -o ~/.clawdock/clawdock-helpers.sh`：把小帮手的魔法书下载到家里。</li><li>`source ~/.clawdock/clawdock-helpers.sh`：念动咒语，激活小帮手。</li></ul>
             </div>
           
               <div class="story-card">
-                <div class="story-card-label">最后记一句</div>
-                <p>沙箱功能在灵活性和安全性之间取得了平衡，是运行不可信代码的理想选择。</p>
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>有了小帮手，管理不费劲。</p>
               </div>
             </div>
           </section>
@@ -4216,27 +4216,78 @@
           <section class="section-shell" id="section-10">
             <div class="section-heading">
               <p class="section-kicker">第 10 站</p>
-              <h2>常见问题排查指南</h2>
-              <p>汇总了Docker部署和沙箱使用中可能遇到的典型问题及解决方法。</p>
+              <h2>🏖️ 神奇的沙箱游乐场</h2>
+              <p>在城堡里，给每个小精灵（Agent）一个独立的沙箱玩。</p>
             </div>
             <div class="story-grid">
               <div class="story-card">
-                <div class="story-card-label">为什么看这节</div>
-                <p>当部署或运行出现异常时，这里提供快速定位和解决的思路。</p>
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>让小精灵们安全地玩耍，互不打扰。</p>
               </div>
               <div class="source-card">
-                <div class="story-card-label">这一节真正要带走的点</div>
-                <ul><li>如果沙箱容器无法启动，检查是否已构建沙箱镜像或正确配置了自定义镜像。</li><li>遇到沙箱内的权限错误，尝试调整`docker.user`的UID:GID以匹配挂载目录的所有权。</li><li>自定义工具在沙箱中找不到，可能是因为shell环境重置了PATH，需通过`docker.env.PATH`或Dockerfile配置。</li><li>镜像构建时因内存不足退出（代码137），请确保主机至少有2GB可用内存。</li><li>控制UI提示未授权或需要配对，尝试获取新的仪表盘链接并批准设备。</li></ul>
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>打开沙箱模式，小精灵们干活（运行工具）就在独立的Docker盒子里。</li><li>城堡本身还在外面，很安全。</li><li>沙箱可以按小精灵分、按会话分，或者大家共享。</li><li>每个沙箱都有自己的工作区，还能设置规则、隔离网络、限制资源。</li></ul>
+              </div>
+              
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>沙箱隔离，玩耍安全。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-11">
+            <div class="section-heading">
+              <p class="section-kicker">第 11 站</p>
+              <h2>⚡ 快速打开沙箱</h2>
+              <p>改个配置，运行个脚本，沙箱就准备好了。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>马上体验隔离的乐趣。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>在配置里，把 `agents.defaults.sandbox.mode` 改成 `&quot;non-main&quot;` 或 `&quot;all&quot;`。</li><li>把 `scope` 改成 `&quot;agent&quot;`（按小精灵分）。</li><li>然后运行 `scripts/sandbox-setup.sh` 脚本，搭建默认的沙箱模型。</li></ul>
               </div>
               
             <div class="source-card">
-              <div class="story-card-label">命令 / 代码怎么理解</div>
-              <ul><li>`docker compose run --rm openclaw-cli dashboard --no-open`：生成仪表盘访问链接但不自动打开浏览器。</li><li>`docker compose run --rm openclaw-cli devices list`：列出待批准的设备请求。</li><li>`docker compose run --rm openclaw-cli devices approve &lt;requestId&gt;`：批准指定ID的设备请求。</li></ul>
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
+              <ul><li>`scripts/sandbox-setup.sh`：运行这个，魔法师就开始搭沙箱了。</li></ul>
             </div>
           
               <div class="story-card">
-                <div class="story-card-label">最后记一句</div>
-                <p>遇到问题先对照此清单，大多数常见错误都能找到解决方向。</p>
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>配置一改，沙箱就来。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-12">
+            <div class="section-heading">
+              <p class="section-kicker">第 12 站</p>
+              <h2>🔍 城堡出问题了？</h2>
+              <p>别着急，看看常见问题和解决办法。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>帮你快速恢复城堡的活力。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>沙箱模型找不到？运行 `scripts/sandbox-setup.sh` 重新搭一个。</li><li>沙箱里权限不对？检查用户ID和文件归属。</li><li>沙箱里找不到自定义工具？可能是路径被重置了，需要特别设置。</li><li>搭积木时内存不足（错误137）？换台内存更大的电脑（至少2GB）。</li><li>控制面板进不去？获取新的面板链接，并批准你的浏览器设备。</li><li>网关地址不对或配对错误？重置一下网关模式和绑定设置。</li></ul>
+              </div>
+              
+            <div class="source-card">
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
+              <ul><li>`docker compose run --rm openclaw-cli dashboard --no-open`：让传令兵去拿新的控制面板邀请函。</li><li>`docker compose run --rm openclaw-cli devices approve &lt;requestId&gt;`：批准你的设备进入城堡。</li></ul>
+            </div>
+          
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>遇到问题，先查这里。</p>
               </div>
             </div>
           </section>

@@ -3971,580 +3971,250 @@
       </div>
 
       
-    <section class="section-shell">
-      <div class="overview-card">
-        <div>
-          <p class="section-kicker">先听这页的人话版</p>
-          <h2>Pairing</h2>
-          <p>这一页像一本关于“Pairing”的小绘本，它先告诉我们这位机器人朋友会做什么，再一步一步解释什么时候该这样做。 你可以先把它想成：Pairing。</p>
-          <p>如果把这页当成“给普通人看的版本”，你最应该带走的是：它到底在教你一件什么事、什么时候要这样做、以及哪里最容易踩坑。</p>
+      <section class="section-shell">
+        <div class="overview-card">
+          <div>
+            <p class="section-kicker">AI 绘本解读版</p>
+            <h2>🔐 配对：给机器人找朋友和开门</h2>
+            <p>配对就像给机器人发门禁卡。陌生人想聊天，先要你点头。新设备想加入，也得你批准。</p>
+          </div>
+          <div class="overview-meta">
+            <span>原始路径：/channels/pairing</span>
+            <span>故事卡片：9 张</span>
+            <a href="https://docs.openclaw.ai/channels/pairing" target="_blank" rel="noreferrer">查看官方原文</a>
+          </div>
         </div>
-        <div class="overview-meta">
-          <span>原始路径：/channels/pairing</span>
-          <span>章节数量：10</span>
-          <a href="https://docs.openclaw.ai/channels/pairing" target="_blank" rel="noreferrer">查看原文</a>
+      </section>
+      
+          <section class="section-shell" id="section-1">
+            <div class="section-heading">
+              <p class="section-kicker">第 1 站</p>
+              <h2>配对是什么？</h2>
+              <p>配对就是主人亲自点头，说“这个人可以跟我的机器人聊天”或者“这个设备可以加入我的网络”。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>这样机器人就不会随便跟陌生人说话，你的网络也不会让陌生设备闯进来。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>配对用在两个地方：聊天配对和设备配对。</li><li>聊天配对管谁可以和机器人私聊。</li><li>设备配对管哪些手机、电脑可以连进你的网络。</li><li>这就像给大门装上门卫，必须你同意才能进。</li><li>安全第一，主人说了算。</li></ul>
+              </div>
+              
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>配对就是主人亲自点头放行。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-2">
+            <div class="section-heading">
+              <p class="section-kicker">第 2 站</p>
+              <h2>1️⃣ 聊天配对：谁可以私聊机器人</h2>
+              <p>如果设置成需要配对，陌生人发消息来，机器人会先拦住，给你一个密码，等你批准。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>这样机器人就不会被陌生人打扰，只有你认可的朋友才能聊天。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>陌生人发消息，机器人会拦住。</li><li>机器人会给你一个8位大写字母的密码，像临时门牌号。</li><li>这个密码1小时后就失效，像一张会过期的门票。</li><li>每个聊天通道最多同时有3个陌生人在排队等你批准。</li><li>超过3个，机器人就暂时不理新的陌生人了。</li></ul>
+              </div>
+              
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>陌生人想聊天，先拿密码等你批准。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-3">
+            <div class="section-heading">
+              <p class="section-kicker">第 3 站</p>
+              <h2>📱 批准一个聊天朋友</h2>
+              <p>用命令看看谁在排队，然后输入密码，说“可以”。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>这样你就能轻松管理谁可以和机器人聊天。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>先看看谁在排队：openclaw pairing list telegram。</li><li>然后批准他：openclaw pairing approve telegram &lt;密码&gt;。</li><li>机器人支持很多聊天软件，比如微信、钉钉、Telegram、WhatsApp。</li><li>这些软件就像不同的聊天房间，配对规则都差不多。</li><li>批准后，这个人就可以一直和机器人聊天了。</li></ul>
+              </div>
+              
+            <div class="source-card">
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
+              <ul><li>openclaw pairing list telegram：这个命令像打开排队名单，看看谁在门外等着。</li><li>openclaw pairing approve telegram &lt;密码&gt;：这个命令像你拿着密码，对门卫说“让这个人进来吧”。</li></ul>
+            </div>
+          
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>看看名单，输入密码，说“可以”。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-4">
+            <div class="section-heading">
+              <p class="section-kicker">第 4 站</p>
+              <h2>🗂️ 配对名单藏在哪里</h2>
+              <p>配对的名单都放在你电脑的一个小文件夹里，像一本通讯录。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>知道在哪里，你就能备份或检查，确保安全。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>名单藏在 ~/.openclaw/credentials/ 这个文件夹里。</li><li>排队名单叫 &lt;聊天软件&gt;-pairing.json，像临时访客登记表。</li><li>批准名单叫 &lt;聊天软件&gt;-allowFrom.json，像永久朋友通讯录。</li><li>如果你有多个账号，每个账号有自己的通讯录。</li><li>这些文件很重要，像大门的钥匙，要保管好。</li></ul>
+              </div>
+              
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>配对名单像通讯录，藏在电脑的小文件夹里。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-5">
+            <div class="section-heading">
+              <p class="section-kicker">第 5 站</p>
+              <h2>2️⃣ 设备配对：哪些设备可以加入网络</h2>
+              <p>手机、电脑想连进你的网络，也得先配对，等你批准。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>这样只有你信任的设备才能加入，网络更安全。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>设备想加入，会发一个配对请求，像举手说“我想进来”。</li><li>你需要在网关上批准这个请求。</li><li>设备可以是手机、电脑，甚至没有屏幕的小盒子。</li><li>配对后，设备才能和网络里的其他部分聊天。</li><li>这就像给每个设备发一张网络通行证。</li></ul>
+              </div>
+              
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>设备想加入网络，先举手等你批准。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-6">
+            <div class="section-heading">
+              <p class="section-kicker">第 6 站</p>
+              <h2>📲 用Telegram配对设备（推荐给iPhone）</h2>
+              <p>用Telegram机器人，可以轻松给手机配对，像玩一个简单的游戏。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>这样你不用在电脑上打命令，用手机聊天就能搞定。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>在Telegram里，给你的机器人发 /pair。</li><li>机器人会回复两条消息：一条说明，一条带一个安装码。</li><li>安装码像一张电子门票，里面有网络地址和临时密码。</li><li>在手机OpenClaw应用里，打开设置，粘贴安装码，点连接。</li><li>回到Telegram，发 /pair pending 看看谁在排队，然后批准。</li></ul>
+              </div>
+              
+            <div class="source-card">
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
+              <ul><li>/pair：这个命令像对机器人说“我想给设备配对”。</li><li>/pair pending：这个命令像问机器人“现在谁在排队等批准？”。</li></ul>
+            </div>
+          
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>用Telegram发命令，轻松给手机配对。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-7">
+            <div class="section-heading">
+              <p class="section-kicker">第 7 站</p>
+              <h2>💻 批准一个设备</h2>
+              <p>用命令看看设备排队名单，然后批准或拒绝。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>这样你就能控制哪些设备可以连进网络。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>先看看设备排队名单：openclaw devices list。</li><li>批准一个设备：openclaw devices approve &lt;请求ID&gt;。</li><li>拒绝一个设备：openclaw devices reject &lt;请求ID&gt;。</li><li>如果设备换了身份重新申请，会有一个新的请求ID。</li><li>这就像门卫核对每个设备的身份证。</li></ul>
+              </div>
+              
+            <div class="source-card">
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
+              <ul><li>openclaw devices list：这个命令像打开设备访客登记表。</li><li>openclaw devices approve &lt;请求ID&gt;：这个命令像在登记表上打勾，说“这个设备可以进”。</li><li>openclaw devices reject &lt;请求ID&gt;：这个命令像在登记表上画叉，说“这个设备不能进”。</li></ul>
+            </div>
+          
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>看看设备名单，批准或拒绝。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-8">
+            <div class="section-heading">
+              <p class="section-kicker">第 8 站</p>
+              <h2>🗃️ 设备配对名单藏在哪里</h2>
+              <p>设备配对的名单放在另一个小文件夹里，像设备的花名册。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>分开存放，管理起来更清晰。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>名单藏在 ~/.openclaw/devices/ 这个文件夹里。</li><li>pending.json 是排队名单，像临时等候室名单，会过期。</li><li>paired.json 是已配对名单，像正式成员花名册，带通行证。</li><li>这些文件也很重要，要像保管钥匙一样保管好。</li><li>分开存放，聊天配对和设备配对不会搞混。</li></ul>
+              </div>
+              
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>设备名单像花名册，藏在另一个小文件夹里。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-9">
+            <div class="section-heading">
+              <p class="section-kicker">第 9 站</p>
+              <h2>💡 小提示</h2>
+              <p>配对是安全的重要一环，记得定期检查。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>保持配对名单更新，你的机器人和网络才更安全。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>配对名单很重要，定期备份或检查。</li><li>安装码像临时密码，有效期内要保管好。</li><li>旧版的配对命令还能用，但推荐用新的。</li><li>安全模型和更多细节，可以看相关文档。</li><li>更新软件时，记得运行检查命令，确保配对设置没问题。</li></ul>
+              </div>
+              
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>配对是安全钥匙，记得保管好。</p>
+              </div>
+            </div>
+          </section>
+        
+      <section class="section-shell">
+        <div class="ad-placeholder">
+          <p>这里预留给未来的 Google AdSense 模块。</p>
+          <code>&lt;!-- ADSENSE_SNIPPET --&gt;</code>
         </div>
-      </div>
-    </section>
+      </section>
     
-        <section class="section-shell" id="section-1">
-          <div class="section-heading">
-            <p class="section-kicker">第 1 站</p>
-            <h2>Start Here</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Pairing “Pairing” is OpenClaw’s explicit **owner approval** step. It is used in two places: 1. **DM pairing** (who is a…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Pairing”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p># Pairing</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是““Pairing” is OpenClaw’s explicit **owner approval** step. It is used in two places:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>“Pairing” is OpenClaw’s explicit **owner approval** step. It is used in two places:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“1. **DM pairing** (who is allowed to talk to the bot) 2. **Node pairing** (which devices/nodes are allowed to join the…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>1. **DM pairing** (who is allowed to talk to the bot) 2. **Node pairing** (which devices/nodes are allowed to join the gateway network)</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“安全守门员 context: 安全守门员”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Security context: <a href="/gateway/security" target="_blank" rel="noreferrer">Security</a></p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-2">
-          <div class="section-heading">
-            <p class="section-kicker">第 2 站</p>
-            <h2>1) DM pairing (inbound chat access)</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“When a 消息通道 is 设置说明书ured with DM policy pairing, unknown senders get a short code and their 小纸条消息 is **not processed**…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“When a 消息通道 is 设置说明书ured with DM policy pairing, unknown senders get a short code and their 小纸条消息 is **not processed**…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>When a channel is configured with DM policy <code>pairing</code>, unknown senders get a short code and their message is **not processed** until you approve.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Default DM policies are documented in: 安全守门员”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Default DM policies are documented in: <a href="/gateway/security" target="_blank" rel="noreferrer">Security</a></p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Pairing codes:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Pairing codes:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“1) DM pairing (inbound chat access)”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：8 characters, uppercase, no ambiguous cha…、**Expire after 1 hour**. The bot only sen…、Pending DM pairing requests are capped at…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>8 characters, uppercase, no ambiguous chars (<code>0O1I</code>).</li><li>**Expire after 1 hour**. The bot only sends the pairing message when a new request is created (roughly once per hour per sender).</li><li>Pending DM pairing requests are capped at **3 per channel** by default; additional requests are ignored until one expires or is approved.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-3">
-          <div class="section-heading">
-            <p class="section-kicker">第 3 站</p>
-            <h2>Approve a sender</h2>
-            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>你理解的是能力边界，不只是功能名字。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Supported 消息通道s: bluebubbles, discord, feishu, googlechat, i小纸条消息, irc, line, matrix, mattermost, msteams, nextcloud-ta…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一句直接对 OpenClaw 说的话，就像对小助手下达任务。</p>
-        <ul class="code-steps">
-          <li>这一句是在直接叫 OpenClaw 做事：“openclaw pairing list telegram”。你可以把它想成对机器人说的完整命令。</li><li>这一句是在直接叫 OpenClaw 做事：“openclaw pairing approve telegram &lt;CODE&gt;”。你可以把它想成对机器人说的完整命令。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">openclaw pairing list telegram
-openclaw pairing approve telegram &lt;CODE&gt;</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Supported 消息通道s: bluebubbles, discord, feishu, googlechat, i小纸条消息, irc, line, matrix, mattermost, msteams, nextcloud-ta…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Supported channels: <code>bluebubbles</code>, <code>discord</code>, <code>feishu</code>, <code>googlechat</code>, <code>imessage</code>, <code>irc</code>, <code>line</code>, <code>matrix</code>, <code>mattermost</code>, <code>msteams</code>, <code>nextcloud-talk</code>, <code>nostr</code>, <code>openclaw-weixin</code>, <code>signal</code>, <code>slack</code>, <code>synology-chat</code>, <code>telegram</code>, <code>twitch</code>, <code>whatsapp</code>, <code>zalo</code>, <code>zalouser</code>.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-4">
-          <div class="section-heading">
-            <p class="section-kicker">第 4 站</p>
-            <h2>Where the state lives</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Stored under ~/.openclaw/credentials/: Account scoping behavior: Treat these as sensitive (they gate access to your ass…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Stored under ~/.openclaw/credentials/:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Stored under <code>~/.openclaw/credentials/</code>:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Where the state lives”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Pending requests: &lt;消息通道&gt;-pairing.json、Approved allowlist store:、Default account: &lt;消息通道&gt;-allowFrom.json、Non-default account: &lt;消息通道&gt;-&lt;accountId&gt;-a…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Pending requests: <code>&lt;channel&gt;-pairing.json</code></li><li>Approved allowlist store:</li><li>Default account: <code>&lt;channel&gt;-allowFrom.json</code></li><li>Non-default account: <code>&lt;channel&gt;-&lt;accountId&gt;-allowFrom.json</code></li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Account scoping behavior:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Account scoping behavior:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Where the state lives”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Non-default accounts read/write only thei…、Default account uses the 消息通道-scoped unsc…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Non-default accounts read/write only their scoped allowlist file.</li><li>Default account uses the channel-scoped unscoped allowlist file.</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Treat these as sensitive (they gate access to your assistant).”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Treat these as sensitive (they gate access to your assistant).</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-5">
-          <div class="section-heading">
-            <p class="section-kicker">第 5 站</p>
-            <h2>2) Node device pairing (iOS/Android/macOS/headless nodes)</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Nodes connect to the 门口的小门卫 as **devices** with role: node. The 门口的小门卫 creates a device pairing request that must be ap…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Nodes connect to the 门口的小门卫 as **devices** with role: node. The 门口的小门卫 creates a device pairing request that must be ap…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Nodes connect to the Gateway as **devices** with <code>role: node</code>. The Gateway creates a device pairing request that must be approved.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-6">
-          <div class="section-heading">
-            <p class="section-kicker">第 6 站</p>
-            <h2>Pair via Telegram (recommended for iOS)</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“If you use the device-pair 新本领插件, you can do first-time device pairing entirely from Telegram: 1. In Telegram, 小纸条消息 yo…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“If you use the device-pair 新本领插件, you can do first-time device pairing entirely from Telegram:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>If you use the <code>device-pair</code> plugin, you can do first-time device pairing entirely from Telegram:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“1. In Telegram, 小纸条消息 your bot: /pair 2. The bot replies with two 小纸条消息s: an instruction 小纸条消息 and a separate **setup c…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>1. In Telegram, message your bot: <code>/pair</code> 2. The bot replies with two messages: an instruction message and a separate **setup code** message (easy to copy/paste in Telegram). 3. On your phone, open the OpenClaw iOS app → Settings → Gateway. 4. Paste the setup code and connect. 5. Back in Telegram: <code>/pair pending</code> (review request IDs, role, and scopes), then approve.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“The setup code is a base64-encoded JSON payload that contains:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>The setup code is a base64-encoded JSON payload that contains:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Pair via Telegram (recommended for iOS)”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：url: the 门口的小门卫 WebSocket URL (ws://... o…、bootstrapToken: a short-lived single-devi…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>url</code>: the Gateway WebSocket URL (<code>ws://...</code> or <code>wss://...</code>)</li><li><code>bootstrapToken</code>: a short-lived single-device bootstrap token used for the initial pairing handshake</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Treat the setup code like a 秘密口令 while it is valid.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Treat the setup code like a password while it is valid.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-7">
-          <div class="section-heading">
-            <p class="section-kicker">第 7 站</p>
-            <h2>Approve a node device</h2>
-            <p>这一节主要在解释“Approve a node device”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“Approve a node device”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“If the same device retries with different auth details (for example different role/scopes/public key), the previous pen…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一句直接对 OpenClaw 说的话，就像对小助手下达任务。</p>
-        <ul class="code-steps">
-          <li>这一句是在直接叫 OpenClaw 做事：“openclaw devices list”。你可以把它想成对机器人说的完整命令。</li><li>这一句是在直接叫 OpenClaw 做事：“openclaw devices approve &lt;requestId&gt;”。你可以把它想成对机器人说的完整命令。</li><li>这一句是在直接叫 OpenClaw 做事：“openclaw devices reject &lt;requestId&gt;”。你可以把它想成对机器人说的完整命令。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">openclaw devices list
-openclaw devices approve &lt;requestId&gt;
-openclaw devices reject &lt;requestId&gt;</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“If the same device retries with different auth details (for example different role/scopes/public key), the previous pen…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>If the same device retries with different auth details (for example different role/scopes/public key), the previous pending request is superseded and a new <code>requestId</code> is created.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-8">
-          <div class="section-heading">
-            <p class="section-kicker">第 8 站</p>
-            <h2>Node pairing state storage</h2>
-            <p>这一节主要在解释“Node pairing state storage”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“Node pairing state storage”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Stored under ~/.openclaw/devices/:”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Stored under ~/.openclaw/devices/:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Stored under <code>~/.openclaw/devices/</code>:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Node pairing state storage”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：pending.json (short-lived; pending reques…、paired.json (paired devices + tokens)。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>pending.json</code> (short-lived; pending requests expire)</li><li><code>paired.json</code> (paired devices + tokens)</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-9">
-          <div class="section-heading">
-            <p class="section-kicker">第 9 站</p>
-            <h2>Notes</h2>
-            <p>这一节主要在解释“Notes”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“Notes”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“separate 门口的小门卫-owned pairing store. WS nodes still require device pairing.”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“separate 门口的小门卫-owned pairing store. WS nodes still require device pairing.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>separate gateway-owned pairing store. WS nodes still require device pairing.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Notes”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：The legacy node.pair.* 对话接口 (CLI: opencla…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>The legacy <code>node.pair.*</code> API (CLI: <code>openclaw nodes pending/approve</code>) is a</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-10">
-          <div class="section-heading">
-            <p class="section-kicker">第 10 站</p>
-            <h2>Related docs</h2>
-            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>你理解的是能力边界，不只是功能名字。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Related docs”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：安全守门员 聪明脑袋模型 + prompt injection: 安全守门员、Updating safely (run doctor): Updating、消息通道 设置说明书s:、Telegram: Telegram。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Security model + prompt injection: <a href="/gateway/security" target="_blank" rel="noreferrer">Security</a></li><li>Updating safely (run doctor): <a href="/install/updating" target="_blank" rel="noreferrer">Updating</a></li><li>Channel configs:</li><li>Telegram: <a href="/channels/telegram" target="_blank" rel="noreferrer">Telegram</a></li><li>WhatsApp: <a href="/channels/whatsapp" target="_blank" rel="noreferrer">WhatsApp</a></li><li>Signal: <a href="/channels/signal" target="_blank" rel="noreferrer">Signal</a></li><li>BlueBubbles (iMessage): <a href="/channels/bluebubbles" target="_blank" rel="noreferrer">BlueBubbles</a></li><li>iMessage (legacy): <a href="/channels/imessage" target="_blank" rel="noreferrer">iMessage</a></li><li>Discord: <a href="/channels/discord" target="_blank" rel="noreferrer">Discord</a></li><li>Slack: <a href="/channels/slack" target="_blank" rel="noreferrer">Slack</a></li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-    <section class="section-shell">
-      <div class="ad-placeholder">
-        <p>这里预留给未来的 Google AdSense 模块。</p>
-        <code>&lt;!-- ADSENSE_SNIPPET --&gt;</code>
-      </div>
-    </section>
-  
 
       <footer class="page-footer">
         <div>

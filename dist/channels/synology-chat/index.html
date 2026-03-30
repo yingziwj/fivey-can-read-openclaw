@@ -3971,531 +3971,243 @@
       </div>
 
       
-    <section class="section-shell">
-      <div class="overview-card">
-        <div>
-          <p class="section-kicker">先听这页的人话版</p>
-          <h2>Synology Chat</h2>
-          <p>这一页像一本关于“Synology Chat”的小绘本，它先告诉我们这位机器人朋友会做什么，再一步一步解释什么时候该这样做。 你可以先把它想成：Synology Chat (新本领插件)。</p>
-          <p>如果把这页当成“给普通人看的版本”，你最应该带走的是：它到底在教你一件什么事、什么时候要这样做、以及哪里最容易踩坑。</p>
+      <section class="section-shell">
+        <div class="overview-card">
+          <div>
+            <p class="section-kicker">AI 绘本解读版</p>
+            <h2>🤖 给群晖聊天装个机器人小助手</h2>
+            <p>OpenClaw 可以变成群晖聊天里的智能机器人。
+它通过一个插件来工作，能收消息也能回消息。</p>
+          </div>
+          <div class="overview-meta">
+            <span>原始路径：/channels/synology-chat</span>
+            <span>故事卡片：8 张</span>
+            <a href="https://docs.openclaw.ai/channels/synology-chat" target="_blank" rel="noreferrer">查看官方原文</a>
+          </div>
         </div>
-        <div class="overview-meta">
-          <span>原始路径：/channels/synology-chat</span>
-          <span>章节数量：8</span>
-          <a href="https://docs.openclaw.ai/channels/synology-chat" target="_blank" rel="noreferrer">查看原文</a>
+      </section>
+      
+          <section class="section-shell" id="section-1">
+            <div class="section-heading">
+              <p class="section-kicker">第 1 站</p>
+              <h2>🎁 先装插件</h2>
+              <p>群晖聊天这个功能是个插件，不是自带的。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>装上它，你的机器人才能听懂群晖聊天的话。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>想象一下，OpenClaw 是个大机器人，但它不认识群晖聊天。</li><li>这个插件就像一本翻译词典，让它们俩能互相听懂。</li><li>装上插件，机器人就学会了群晖聊天的语言。</li><li>插件装好，机器人就多了一个新本领。</li></ul>
+              </div>
+              
+            <div class="source-card">
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
+              <ul><li>这行命令就像在说：“嘿，机器人，去把那个叫 synology-chat 的插件装起来！”</li><li>执行后，机器人会去指定的地方找到插件，然后把它安装好。</li></ul>
+            </div>
+          
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>先装插件，机器人才能和群晖聊天做朋友。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-2">
+            <div class="section-heading">
+              <p class="section-kicker">第 2 站</p>
+              <h2>🔧 快速搭桥</h2>
+              <p>几步就能让机器人和群晖聊天连上线。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>搭好桥，消息就能在两个地方跑来跑去了。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>在群晖聊天里，造一个‘发消息的钩子’和一个‘收消息的钩子’。</li><li>把‘发消息的钩子’的地址，告诉你的 OpenClaw 机器人。</li><li>在 OpenClaw 里，告诉机器人群晖聊天的‘收消息钩子’地址和密码。</li><li>重启机器人，然后试着在群晖聊天里给它发条私信。</li><li>机器人收到后，就能通过‘收消息钩子’给你回信了。</li></ul>
+              </div>
+              
+            <div class="source-card">
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
+              <ul><li>`openclaw onboard` 就像带机器人参观新房间，它会问你要不要连群晖聊天。</li><li>`openclaw channels add ...` 就像直接告诉机器人：“去，连上群晖聊天，这是地址和密码。”</li><li>执行这些命令，机器人就会去和群晖聊天握手，建立连接。</li></ul>
+            </div>
+          
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>两边都告诉对方地址和密码，桥就搭好了。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-3">
+            <div class="section-heading">
+              <p class="section-kicker">第 3 站</p>
+              <h2>📝 机器人的小本本</h2>
+              <p>给机器人写个配置，告诉它怎么和群晖聊天玩。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>有了这个小本本，机器人就知道规则了。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>`enabled: true` 是打开这个功能的开关。</li><li>`token` 是群晖聊天发来的秘密暗号，机器人要核对。</li><li>`incomingUrl` 是机器人回消息时要找的地址。</li><li>`webhookPath` 是机器人自己家的门牌，群晖聊天要往这里发消息。</li><li>`dmPolicy: &quot;allowlist&quot;` 是说，只让名单上的好朋友发私信。</li><li>`allowedUserIds` 就是那个好朋友名单，里面是用户的数字ID。</li><li>`rateLimitPerMinute: 30` 是限速器，防止有人发消息太快。</li><li>`allowInsecureSsl: false` 是安全锁，不让走不安全的通道。</li></ul>
+              </div>
+              
+            <div class="source-card">
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
+              <ul><li>这段配置就像在机器人的小本本上写规则：谁可以来、从哪条路来、回信寄到哪、说话不能太快。</li><li>机器人启动时会读这个小本本，然后按上面的规则办事。</li></ul>
+            </div>
+          
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>小本本写清楚，机器人做事不糊涂。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-4">
+            <div class="section-heading">
+              <p class="section-kicker">第 4 站</p>
+              <h2>🌍 用环境变量打招呼</h2>
+              <p>也可以把一些秘密告诉机器人的‘环境’。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>这样配置更灵活，有些秘密不用写在文件里。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>比如 `SYNOLOGY_CHAT_TOKEN` 这个环境变量，可以放暗号。</li><li>`SYNOLOGY_CHAT_INCOMING_URL` 可以放回信地址。</li><li>机器人会先看环境里有没有这些信息。</li><li>如果小本本（配置文件）里也写了，就以小本本为准。</li></ul>
+              </div>
+              
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>秘密可以放环境里，但小本本说了算。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-5">
+            <div class="section-heading">
+              <p class="section-kicker">第 5 站</p>
+              <h2>🚪 私信门卫规则</h2>
+              <p>谁来敲机器人的私信门？得看规则。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>管好门，不让陌生人随便进来聊天。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>`dmPolicy: &quot;allowlist&quot;` 是推荐的门卫，只放名单上的人进来。</li><li>名单就是 `allowedUserIds`，里面是用户的数字ID。</li><li>如果名单是空的，门卫会罢工（这是配置错了）。</li><li>`dmPolicy: &quot;open&quot;` 是敞开大门，谁都可以进。</li><li>`dmPolicy: &quot;disabled&quot;` 是锁死大门，谁也不让进。</li><li>机器人回信时，默认认准稳定的数字ID。</li><li>有个叫 `dangerouslyAllowNameMatching` 的紧急开关，打开后机器人会试着用用户名找人了（不推荐）。</li><li>可以用 `openclaw pairing` 命令来批准新朋友。</li></ul>
+              </div>
+              
+            <div class="source-card">
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
+              <ul><li>`openclaw pairing list synology-chat` 是看看谁在申请加好友。</li><li>`openclaw pairing approve ...` 是批准某个申请。</li><li>这些命令就像门卫在检查访客名单和发放通行证。</li></ul>
+            </div>
+          
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>门卫管好门，聊天更安心。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-6">
+            <div class="section-heading">
+              <p class="section-kicker">第 6 站</p>
+              <h2>📤 机器人主动发消息</h2>
+              <p>机器人也可以主动去群晖聊天里找人说话。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>不只是回信，还能主动打招呼、发通知。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>发消息时，要告诉机器人找哪个用户，用数字ID。</li><li>比如 `--target 123456` 就是发给ID是123456的用户。</li><li>也支持发带链接的图片或文件。</li><li>机器人就会把消息送到那个用户的群晖聊天里。</li></ul>
+              </div>
+              
+            <div class="source-card">
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
+              <ul><li>`openclaw message send --channel synology-chat --target 123456 --text &quot;Hello&quot;`</li><li>这行命令就像在说：“机器人，去群晖聊天频道，找到用户123456，对他说Hello。”</li><li>执行后，机器人就会去送信。</li></ul>
+            </div>
+          
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>告诉机器人用户ID，它就能去送信。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-7">
+            <div class="section-heading">
+              <p class="section-kicker">第 7 站</p>
+              <h2>🏢 多个群晖聊天账户</h2>
+              <p>机器人可以同时和好几个群晖聊天做朋友。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>比如一个管日常聊天，一个管报警通知。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>在 `accounts` 下面，可以给每个朋友起个名字，比如 `default` 和 `alerts`。</li><li>每个朋友可以有自己的暗号、回信地址和门牌。</li><li>给每个朋友的门牌（`webhookPath`）最好不一样。</li><li>机器人很聪明，如果发现两个朋友用一模一样的门牌，它会拒绝启动。</li><li>有个叫 `dangerouslyAllowInheritedWebhookPath` 的开关，能允许继承门牌，但有风险。</li></ul>
+              </div>
+              
+            <div class="source-card">
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
+              <ul><li>这段配置就像给机器人一本通讯录，里面记着好几个群晖聊天朋友的不同联系方式。</li><li>机器人会为每个朋友单独记聊天记录，即使数字ID相同也不会搞混。</li></ul>
+            </div>
+          
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>多个朋友分开记，门牌不要用一样的。</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-8">
+            <div class="section-heading">
+              <p class="section-kicker">第 8 站</p>
+              <h2>🔒 安全小贴士</h2>
+              <p>和机器人玩，也要注意安全。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>保护好秘密，机器人才能可靠地工作。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>暗号（`token`）要保密，泄露了就换一个。</li><li>安全锁（`allowInsecureSsl`）最好关着，除非你特别信任。</li><li>门卫（`dmPolicy`）在生产环境最好用‘只允许名单’模式。</li><li>紧急开关（`dangerouslyAllowNameMatching` 和 `dangerouslyAllowInheritedWebhookPath`）没事别打开。</li><li>机器人会检查暗号，还会给发消息太快的人限速。</li></ul>
+              </div>
+              
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>秘密保管好，开关不乱开，机器人更可靠。</p>
+              </div>
+            </div>
+          </section>
+        
+      <section class="section-shell">
+        <div class="ad-placeholder">
+          <p>这里预留给未来的 Google AdSense 模块。</p>
+          <code>&lt;!-- ADSENSE_SNIPPET --&gt;</code>
         </div>
-      </div>
-    </section>
+      </section>
     
-        <section class="section-shell" id="section-1">
-          <div class="section-heading">
-            <p class="section-kicker">第 1 站</p>
-            <h2>Start Here</h2>
-            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>你理解的是能力边界，不只是功能名字。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Synology Chat (新本领插件) Status: supported via 新本领插件 as a direct-小纸条消息 消息通道 using Synology Chat 小铃铛通知s. The 新本领插件 accepts…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Synology Chat (新本领插件)”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p># Synology Chat (plugin)</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Status: supported via 新本领插件 as a direct-小纸条消息 消息通道 using Synology Chat 小铃铛通知s. The 新本领插件 accepts inbound 小纸条消息s from Sy…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Status: supported via plugin as a direct-message channel using Synology Chat webhooks. The plugin accepts inbound messages from Synology Chat outgoing webhooks and sends replies through a Synology Chat incoming webhook.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-2">
-          <div class="section-heading">
-            <p class="section-kicker">第 2 站</p>
-            <h2>新本领插件 required</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Synology Chat is 新本领插件-based and not part of the default core 消息通道 install. Install from a local checkout: Details: 新本领…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Synology Chat is 新本领插件-based and not part of the default core 消息通道 install.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Synology Chat is plugin-based and not part of the default core channel install.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Install from a local checkout:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Install from a local checkout:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一句直接对 OpenClaw 说的话，就像对小助手下达任务。</p>
-        <ul class="code-steps">
-          <li>这一句是在直接叫 OpenClaw 做事：“openclaw plugins install ./extensions/synology-chat”。你可以把它想成对机器人说的完整命令。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">openclaw plugins install ./extensions/synology-chat</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Details: 新本领插件s”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Details: <a href="/tools/plugin" target="_blank" rel="noreferrer">Plugins</a></p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-3">
-          <div class="section-heading">
-            <p class="section-kicker">第 3 站</p>
-            <h2>Quick setup</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“1. Install and enable the Synology Chat 新本领插件. 2. In Synology Chat integrations: 3. Point the outgoing 小铃铛通知 URL to you…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“1. Install and enable the Synology Chat 新本领插件.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>1. Install and enable the Synology Chat plugin.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“2. In Synology Chat integrations:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>2. In Synology Chat integrations:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“3. Point the outgoing 小铃铛通知 URL to your OpenClaw 门口的小门卫:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>3. Point the outgoing webhook URL to your OpenClaw gateway:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“4. Finish setup in OpenClaw.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>4. Finish setup in OpenClaw.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“5. Restart 门口的小门卫 and send a DM to the Synology Chat bot.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>5. Restart gateway and send a DM to the Synology Chat bot.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Quick setup”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：openclaw onboard now shows Synology Chat…、Non-interactive setup: openclaw 消息通道s add…、Create an incoming 小铃铛通知 and copy its URL.、Create an outgoing 小铃铛通知 with your secret…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>openclaw onboard</code> now shows Synology Chat in the same channel setup list as <code>openclaw channels add</code>.</li><li>Non-interactive setup: <code>openclaw channels add --channel synology-chat --token &lt;token&gt; --url &lt;incoming-webhook-url&gt;</code></li><li>Create an incoming webhook and copy its URL.</li><li>Create an outgoing webhook with your secret token.</li><li><code>https://gateway-host/webhook/synology</code> by default.</li><li>Or your custom <code>channels.synology-chat.webhookPath</code>.</li><li>Guided: <code>openclaw onboard</code></li><li>Direct: <code>openclaw channels add --channel synology-chat --token &lt;token&gt; --url &lt;incoming-webhook-url&gt;</code></li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Minimal 设置说明书:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Minimal config:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“channels”贴标签，意思是把它设置成“{”。</li><li>这里在给“synology-chat”贴标签，意思是把它设置成“{”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json5">{
-  channels: {
-    &quot;synology-chat&quot;: {
-      enabled: true,
-      token: &quot;synology-outgoing-token&quot;,
-      incomingUrl: &quot;https://nas.example.com/webapi/entry.cgi?api=SYNO.Chat.External&amp;method=incoming&amp;version=2&amp;token=...&quot;,
-      webhookPath: &quot;/webhook/synology&quot;,
-      dmPolicy: &quot;allowlist&quot;,
-      allowedUserIds: [&quot;123456&quot;],
-      rateLimitPerMinute: 30,
-      allowInsecureSsl: false,
-    },
-  },
-}</code></pre>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-4">
-          <div class="section-heading">
-            <p class="section-kicker">第 4 站</p>
-            <h2>Environment variables</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“For the default account, you can use env vars: 设置说明书 values override env vars.”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“For the default account, you can use env vars:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>For the default account, you can use env vars:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Environment variables”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：SYNOLOGY_CHAT_TOKEN、SYNOLOGY_CHAT_INCOMING_URL、SYNOLOGY_NAS_HOST、SYNOLOGY_ALLOWED_USER_IDS (comma-separate…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>SYNOLOGY_CHAT_TOKEN</code></li><li><code>SYNOLOGY_CHAT_INCOMING_URL</code></li><li><code>SYNOLOGY_NAS_HOST</code></li><li><code>SYNOLOGY_ALLOWED_USER_IDS</code> (comma-separated)</li><li><code>SYNOLOGY_RATE_LIMIT</code></li><li><code>OPENCLAW_BOT_NAME</code></li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“设置说明书 values override env vars.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Config values override env vars.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-5">
-          <div class="section-heading">
-            <p class="section-kicker">第 5 站</p>
-            <h2>DM policy and access control</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“DM policy and access control”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：dmPolicy: &quot;allowlist&quot; is the recommended…、allowedUserIds accepts a list (or comma-s…、In allowlist mode, an empty allowedUserId…、dmPolicy: &quot;open&quot; allows any sender.</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>dmPolicy: &quot;allowlist&quot;</code> is the recommended default.</li><li><code>allowedUserIds</code> accepts a list (or comma-separated string) of Synology user IDs.</li><li>In <code>allowlist</code> mode, an empty <code>allowedUserIds</code> list is treated as misconfiguration and the webhook route will not start (use <code>dmPolicy: &quot;open&quot;</code> for allow-all).</li><li><code>dmPolicy: &quot;open&quot;</code> allows any sender.</li><li><code>dmPolicy: &quot;disabled&quot;</code> blocks DMs.</li><li>Reply recipient binding stays on stable numeric <code>user_id</code> by default. <code>channels.synology-chat.dangerouslyAllowNameMatching: true</code> is break-glass compatibility mode that re-enables mutable username/nickname lookup for reply delivery.</li><li>Pairing approvals work with:</li><li><code>openclaw pairing list synology-chat</code></li><li><code>openclaw pairing approve synology-chat &lt;CODE&gt;</code></li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-6">
-          <div class="section-heading">
-            <p class="section-kicker">第 6 站</p>
-            <h2>Outbound delivery</h2>
-            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>你理解的是能力边界，不只是功能名字。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Use numeric Synology Chat user IDs as targets. Examples: Media sends are supported by URL-based file delivery.”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Use numeric Synology Chat user IDs as targets.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Use numeric Synology Chat user IDs as targets.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Examples:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Examples:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一句直接对 OpenClaw 说的话，就像对小助手下达任务。</p>
-        <ul class="code-steps">
-          <li>这一句是在直接叫 OpenClaw 做事：“openclaw message send --channel synology-chat --target 123456 --text &quot;Hello from OpenClaw&quot;”。你可以把它想成对机器人说的完整命令。</li><li>这里在给“openclaw message send --channel synology-chat --target synology-chat”贴标签，意思是把它设置成“123456 --text Hello again”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">openclaw message send --channel synology-chat --target 123456 --text &quot;Hello from OpenClaw&quot;
-openclaw message send --channel synology-chat --target synology-chat:123456 --text &quot;Hello again&quot;</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Media sends are supported by URL-based file delivery.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Media sends are supported by URL-based file delivery.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-7">
-          <div class="section-heading">
-            <p class="section-kicker">第 7 站</p>
-            <h2>Multi-account</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Multiple Synology Chat accounts are supported under 消息通道s.synology-chat.accounts. Each account can override token, inco…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Multiple Synology Chat accounts are supported under 消息通道s.synology-chat.accounts. Each account can override token, inco…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Multiple Synology Chat accounts are supported under <code>channels.synology-chat.accounts</code>. Each account can override token, incoming URL, webhook path, DM policy, and limits. Direct-message sessions are isolated per account and user, so the same numeric <code>user_id</code> on two different Synology accounts does not share transcript state. Give each enabled account a distinct <code>webhookPath</code>. OpenClaw now rejects duplicate exact paths and refuses to start named accounts that only inherit a shared webhook path in multi-account setups. If you intentionally need legacy inheritance for a named account, set <code>dangerouslyAllowInheritedWebhookPath: true</code> on that account or at <code>channels.synology-chat</code>, but duplicate exact paths are still rejected fail-closed. Prefer explicit per-account paths.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“channels”贴标签，意思是把它设置成“{”。</li><li>这里在给“synology-chat”贴标签，意思是把它设置成“{”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json5">{
-  channels: {
-    &quot;synology-chat&quot;: {
-      enabled: true,
-      accounts: {
-        default: {
-          token: &quot;token-a&quot;,
-          incomingUrl: &quot;https://nas-a.example.com/...token=...&quot;,
-        },
-        alerts: {
-          token: &quot;token-b&quot;,
-          incomingUrl: &quot;https://nas-b.example.com/...token=...&quot;,
-          webhookPath: &quot;/webhook/synology-alerts&quot;,
-          dmPolicy: &quot;allowlist&quot;,
-          allowedUserIds: [&quot;987654&quot;],
-        },
-      },
-    },
-  },
-}</code></pre>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-8">
-          <div class="section-heading">
-            <p class="section-kicker">第 8 站</p>
-            <h2>安全守门员 notes</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Security notes”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Keep token secret and rotate it if leaked.、Keep allowInsecureSsl: false unless you e…、Inbound 小铃铛通知 requests are token-verified…、Prefer dmPolicy: &quot;allowlist&quot; for producti…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Keep <code>token</code> secret and rotate it if leaked.</li><li>Keep <code>allowInsecureSsl: false</code> unless you explicitly trust a self-signed local NAS cert.</li><li>Inbound webhook requests are token-verified and rate-limited per sender.</li><li>Prefer <code>dmPolicy: &quot;allowlist&quot;</code> for production.</li><li>Keep <code>dangerouslyAllowNameMatching</code> off unless you explicitly need legacy username-based reply delivery.</li><li>Keep <code>dangerouslyAllowInheritedWebhookPath</code> off unless you explicitly accept shared-path routing risk in a multi-account setup.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-    <section class="section-shell">
-      <div class="ad-placeholder">
-        <p>这里预留给未来的 Google AdSense 模块。</p>
-        <code>&lt;!-- ADSENSE_SNIPPET --&gt;</code>
-      </div>
-    </section>
-  
 
       <footer class="page-footer">
         <div>

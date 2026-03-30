@@ -269,7 +269,7 @@ async function renderAiPageContent(page) {
         const codeNotes = (section.codeNotes || []).length
           ? `
             <div class="source-card">
-              <div class="story-card-label">命令 / 代码怎么理解</div>
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
               <ul>${section.codeNotes.map((note) => `<li>${escapeHtml(note)}</li>`).join("")}</ul>
             </div>
           `
@@ -284,16 +284,16 @@ async function renderAiPageContent(page) {
             </div>
             <div class="story-grid">
               <div class="story-card">
-                <div class="story-card-label">为什么看这节</div>
+                <div class="story-card-label">🌟 为什么要看</div>
                 <p>${escapeHtml(section.why)}</p>
               </div>
               <div class="source-card">
-                <div class="story-card-label">这一节真正要带走的点</div>
+                <div class="story-card-label">🧠 这节要记住什么</div>
                 <ul>${points}</ul>
               </div>
               ${codeNotes}
               <div class="story-card">
-                <div class="story-card-label">最后记一句</div>
+                <div class="story-card-label">🎈 最后记一句</div>
                 <p>${escapeHtml(section.takeaway)}</p>
               </div>
             </div>
@@ -306,13 +306,13 @@ async function renderAiPageContent(page) {
       <section class="section-shell">
         <div class="overview-card">
           <div>
-            <p class="section-kicker">DeepSeek 中文解读版</p>
+            <p class="section-kicker">AI 绘本解读版</p>
             <h2>${escapeHtml(result.heroTitle || page.title)}</h2>
             <p>${escapeHtml(result.heroSummary || "")}</p>
           </div>
           <div class="overview-meta">
             <span>原始路径：${escapeHtml(page.pathname)}</span>
-            <span>模型输出章节：${result.sections.length}</span>
+            <span>故事卡片：${result.sections.length} 张</span>
             <a href="${escapeHtml(page.url)}" target="_blank" rel="noreferrer">查看官方原文</a>
           </div>
         </div>

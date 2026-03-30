@@ -3974,13 +3974,13 @@
       <section class="section-shell">
         <div class="overview-card">
           <div>
-            <p class="section-kicker">DeepSeek 中文解读版</p>
+            <p class="section-kicker">AI 绘本解读版</p>
             <h2>OpenClaw技能系统：如何让AI学会使用工具</h2>
             <p>OpenClaw通过‘技能’文件夹教会AI如何使用各种工具。每个技能本质上是一个包含说明文档的目录，系统会从多个来源加载这些技能，并根据环境条件智能筛选。这页文档解释了技能从哪里来、如何管理、以及如何配置它们——这是定制AI能力的关键。</p>
           </div>
           <div class="overview-meta">
             <span>原始路径：/tools/skills</span>
-            <span>模型输出章节：10</span>
+            <span>故事卡片：10 张</span>
             <a href="https://docs.openclaw.ai/tools/skills" target="_blank" rel="noreferrer">查看官方原文</a>
           </div>
         </div>
@@ -3994,16 +3994,16 @@
             </div>
             <div class="story-grid">
               <div class="story-card">
-                <div class="story-card-label">为什么看这节</div>
+                <div class="story-card-label">🌟 为什么要看</div>
                 <p>理解加载顺序能帮你预测系统最终会使用哪个技能版本，避免配置冲突。</p>
               </div>
               <div class="source-card">
-                <div class="story-card-label">这一节真正要带走的点</div>
+                <div class="story-card-label">🧠 这节要记住什么</div>
                 <ul><li>OpenClaw会从六个地方寻找技能：额外配置的文件夹、安装包自带的、用户本地管理的、个人代理的、项目代理的以及工作区的。</li><li>如果同一个技能出现在多个地方，工作区（workspace）里的版本优先级最高，安装包自带的优先级最低。</li><li>这个优先级链是：`&lt;workspace&gt;/skills` → `&lt;workspace&gt;/.agents/skills` → `~/.agents/skills` → `~/.openclaw/skills` → 自带技能 → `skills.load.extraDirs`。</li><li>简单记：离你当前工作越近的配置，优先级越高。</li></ul>
               </div>
               
               <div class="story-card">
-                <div class="story-card-label">最后记一句</div>
+                <div class="story-card-label">🎈 最后记一句</div>
                 <p>想覆盖默认技能？把它放到你的工作区目录里。</p>
               </div>
             </div>
@@ -4017,16 +4017,16 @@
             </div>
             <div class="story-grid">
               <div class="story-card">
-                <div class="story-card-label">为什么看这节</div>
+                <div class="story-card-label">🌟 为什么要看</div>
                 <p>在团队协作或复杂工作流中，清晰划分技能作用域至关重要。</p>
               </div>
               <div class="source-card">
-                <div class="story-card-label">这一节真正要带走的点</div>
+                <div class="story-card-label">🧠 这节要记住什么</div>
                 <ul><li>‘按代理技能’放在特定代理的工作区，只属于该代理。</li><li>‘项目代理技能’放在项目目录下，对该项目内的所有代理生效。</li><li>‘个人代理技能’放在用户主目录，对这台机器上的所有代理生效。</li><li>‘共享技能’放在OpenClaw管理目录，对所有代理可见。</li><li>还可以通过配置额外目录来添加共享技能文件夹。</li><li>同名冲突时，依然遵循上一节的优先级规则：工作区优先。</li></ul>
               </div>
               
               <div class="story-card">
-                <div class="story-card-label">最后记一句</div>
+                <div class="story-card-label">🎈 最后记一句</div>
                 <p>用目录位置来控制技能的可见范围：工作区最私密，用户主目录可跨代理共享。</p>
               </div>
             </div>
@@ -4040,16 +4040,16 @@
             </div>
             <div class="story-grid">
               <div class="story-card">
-                <div class="story-card-label">为什么看这节</div>
+                <div class="story-card-label">🌟 为什么要看</div>
                 <p>如果你想开发插件来扩展功能，需要知道如何让插件携带技能。</p>
               </div>
               <div class="source-card">
-                <div class="story-card-label">这一节真正要带走的点</div>
+                <div class="story-card-label">🧠 这节要记住什么</div>
                 <ul><li>插件可以在其配置文件中声明技能目录。</li><li>插件启用时，其自带的技能才会被加载。</li><li>目前，插件技能的优先级和通过`extraDirs`配置的额外目录一样，是最低的。</li><li>这意味着，如果其他地方有同名技能（比如工作区或自带技能），会覆盖插件提供的版本。</li><li>可以通过插件的配置元数据来设置技能加载的门槛条件。</li></ul>
               </div>
               
               <div class="story-card">
-                <div class="story-card-label">最后记一句</div>
+                <div class="story-card-label">🎈 最后记一句</div>
                 <p>插件技能是扩展系统能力的一种方式，但容易被更高优先级的本地技能覆盖。</p>
               </div>
             </div>
@@ -4063,21 +4063,21 @@
             </div>
             <div class="story-grid">
               <div class="story-card">
-                <div class="story-card-label">为什么看这节</div>
+                <div class="story-card-label">🌟 为什么要看</div>
                 <p>这是获取社区技能和同步技能更新的主要途径。</p>
               </div>
               <div class="source-card">
-                <div class="story-card-label">这一节真正要带走的点</div>
+                <div class="story-card-label">🧠 这节要记住什么</div>
                 <ul><li>ClawHub是一个公共技能库，可以在线浏览。</li><li>使用`openclaw skills`命令来安装或更新技能。</li><li>例如，`openclaw skills install &lt;skill-slug&gt;`会把技能安装到当前工作区。</li><li>`openclaw skills update --all`可以更新所有已安装技能。</li><li>单独的`clawhub` CLI工具用于发布和同步工作流。</li><li>安装的技能会放在工作区的`skills/`目录下，下次会话时生效。</li></ul>
               </div>
               
             <div class="source-card">
-              <div class="story-card-label">命令 / 代码怎么理解</div>
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
               <ul><li>`openclaw skills install &lt;skill-slug&gt;`: 从ClawHub安装指定技能到当前工作区。</li><li>`openclaw skills update --all`: 更新所有已安装的技能到最新版本。</li><li>`clawhub sync --all`: 使用独立CLI工具扫描并发布更新。</li></ul>
             </div>
           
               <div class="story-card">
-                <div class="story-card-label">最后记一句</div>
+                <div class="story-card-label">🎈 最后记一句</div>
                 <p>想用新技能？去ClawHub找，然后用`openclaw skills install`一键安装。</p>
               </div>
             </div>
@@ -4091,16 +4091,16 @@
             </div>
             <div class="story-grid">
               <div class="story-card">
-                <div class="story-card-label">为什么看这节</div>
+                <div class="story-card-label">🌟 为什么要看</div>
                 <p>盲目启用外部技能可能带来安全风险，这部分告诉你如何防范。</p>
               </div>
               <div class="source-card">
-                <div class="story-card-label">这一节真正要带走的点</div>
+                <div class="story-card-label">🧠 这节要记住什么</div>
                 <ul><li>将第三方技能视为不受信任的代码，启用前务必阅读其内容。</li><li>对不受信任的输入或高风险工具，优先使用沙箱环境运行。</li><li>技能发现机制会严格检查文件路径，防止目录穿越攻击。</li><li>通过配置注入的密钥（如`apiKey`）会进入主机进程环境，仅限单次代理运行，但也要避免在提示词和日志中泄露。</li><li>参考完整的安全文档了解更全面的威胁模型。</li></ul>
               </div>
               
               <div class="story-card">
-                <div class="story-card-label">最后记一句</div>
+                <div class="story-card-label">🎈 最后记一句</div>
                 <p>安全第一：审阅代码、善用沙箱、保护密钥。</p>
               </div>
             </div>
@@ -4114,21 +4114,21 @@
             </div>
             <div class="story-grid">
               <div class="story-card">
-                <div class="story-card-label">为什么看这节</div>
+                <div class="story-card-label">🌟 为什么要看</div>
                 <p>这是你创建或修改自定义技能时需要遵循的规范。</p>
               </div>
               <div class="source-card">
-                <div class="story-card-label">这一节真正要带走的点</div>
+                <div class="story-card-label">🧠 这节要记住什么</div>
                 <ul><li>每个技能目录必须有一个`SKILL.md`文件，包含YAML前置元数据和操作说明。</li><li>前置元数据至少需要`name`（技能名）和`description`（描述）。</li><li>`metadata`字段应是一个单行JSON对象，用于存放扩展配置。</li><li>在说明中可以用`{baseDir}`来引用技能目录本身的路径。</li><li>可选字段控制技能行为，比如是否对用户可见、是否绕过模型直接调用工具等。</li></ul>
               </div>
               
             <div class="source-card">
-              <div class="story-card-label">命令 / 代码怎么理解</div>
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
               <ul><li>`---\nname: image-lab\ndescription: Generate or edit images...\n---`: 这是技能文件头部的YAML前置元数据，定义了技能的基本信息。</li><li>`user-invocable: true|false`: 控制技能是否作为用户斜杠命令暴露。</li><li>`command-dispatch: tool`: 设置后，斜杠命令将绕过AI模型，直接调用指定工具。</li></ul>
             </div>
           
               <div class="story-card">
-                <div class="story-card-label">最后记一句</div>
+                <div class="story-card-label">🎈 最后记一句</div>
                 <p>写技能就像写菜谱：文件名固定，开头写明菜名和简介，后面是详细步骤。</p>
               </div>
             </div>
@@ -4142,21 +4142,21 @@
             </div>
             <div class="story-grid">
               <div class="story-card">
-                <div class="story-card-label">为什么看这节</div>
+                <div class="story-card-label">🌟 为什么要看</div>
                 <p>这让你能创建自适应技能，只在条件满足时才启用，避免报错或干扰。</p>
               </div>
               <div class="source-card">
-                <div class="story-card-label">这一节真正要带走的点</div>
+                <div class="story-card-label">🧠 这节要记住什么</div>
                 <ul><li>OpenClaw在加载时会根据`metadata`中的条件过滤技能。</li><li>可以要求特定的二进制文件（`bins`）必须在系统路径中存在。</li><li>可以要求特定的环境变量（`env`）必须已设置或在配置中提供。</li><li>可以要求OpenClaw的某些配置项（`config`）必须为真。</li><li>可以指定技能只适用于某些操作系统（`os`）。</li><li>如果代理运行在沙箱中，所需的二进制在沙箱容器内也必须存在。</li></ul>
               </div>
               
             <div class="source-card">
-              <div class="story-card-label">命令 / 代码怎么理解</div>
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
               <ul><li>`metadata:\n  {\n    \&quot;openclaw\&quot;:\n      {\n        \&quot;requires\&quot;: { \&quot;bins\&quot;: [\&quot;uv\&quot;], \&quot;env\&quot;: [\&quot;GEMINI_API_KEY\&quot;], \&quot;config\&quot;: [\&quot;browser.enabled\&quot;] },\n        \&quot;primaryEnv\&quot;: \&quot;GEMINI_API_KEY\&quot;,\n      },\n  }`: 这是一个JSON格式的元数据示例，定义了加载本技能所需的条件：需要`uv`命令、`GEMINI_API_KEY`环境变量以及`browser.enabled`配置为真。</li><li>`requires.bins`: 列表，要求所有这些命令都存在于主机的PATH中。</li><li>`requires.env`: 列表，要求这些环境变量已定义或在配置中提供。</li><li>`primaryEnv`: 指明与`apiKey`配置关联的主要环境变量名。</li></ul>
             </div>
           
               <div class="story-card">
-                <div class="story-card-label">最后记一句</div>
+                <div class="story-card-label">🎈 最后记一句</div>
                 <p>用`metadata`给技能上锁：条件不满足，技能不加载。</p>
               </div>
             </div>
@@ -4170,21 +4170,21 @@
             </div>
             <div class="story-grid">
               <div class="story-card">
-                <div class="story-card-label">为什么看这节</div>
+                <div class="story-card-label">🌟 为什么要看</div>
                 <p>这是你个性化技能行为（如切换开关、注入密钥）的主要方式。</p>
               </div>
               <div class="source-card">
-                <div class="story-card-label">这一节真正要带走的点</div>
+                <div class="story-card-label">🧠 这节要记住什么</div>
                 <ul><li>在`~/.openclaw/openclaw.json`的`skills.entries`下，可以按技能名进行配置。</li><li>可以设置`enabled: true/false`来启用或禁用某个技能。</li><li>可以通过`env`字段为技能注入特定的环境变量值。</li><li>可以通过`apiKey`字段提供API密钥，支持明文或引用密钥管理器的对象。</li><li>如果技能名包含连字符，在JSON键中需要用引号括起来。</li><li>配置键默认对应技能名，但如果技能定义了`metadata.openclaw.skillKey`，则使用那个键。</li></ul>
               </div>
               
             <div class="source-card">
-              <div class="story-card-label">命令 / 代码怎么理解</div>
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
               <ul><li>`\&quot;image-lab\&quot;: {\n        enabled: true,\n        apiKey: { source: \&quot;env\&quot;, provider: \&quot;default\&quot;, id: \&quot;GEMINI_API_KEY\&quot; }, // 或明文字符串\n        env: {\n          GEMINI_API_KEY: \&quot;GEMINI_KEY_HERE\&quot;,\n        },\n        config: {\n          endpoint: \&quot;https://example.invalid\&quot;,\n          model: \&quot;nano-pro\&quot;,\n        },\n      }`: 这是一个技能配置覆盖的示例。它启用了‘image-lab’技能，并通过`apiKey`对象（引用环境变量）或`env`字段（直接设置值）来提供密钥，同时还设置了一些自定义配置。</li><li>`enabled: true`: 启用该技能。</li><li>`apiKey: { source: \&quot;env\&quot;, provider: \&quot;default\&quot;, id: \&quot;GEMINI_API_KEY\&quot; }`: 这是一个SecretRef对象，表示从默认密钥管理器的`GEMINI_API_KEY`条目获取API密钥。</li><li>`env: { GEMINI_API_KEY: \&quot;GEMINI_KEY_HERE\&quot; }`: 直接设置环境变量`GEMINI_API_KEY`的值为‘GEMINI_KEY_HERE’。</li></ul>
             </div>
           
               <div class="story-card">
-                <div class="story-card-label">最后记一句</div>
+                <div class="story-card-label">🎈 最后记一句</div>
                 <p>在`openclaw.json`里给技能‘开小灶’：配密钥、调参数、决定用不用。</p>
               </div>
             </div>
@@ -4198,21 +4198,21 @@
             </div>
             <div class="story-grid">
               <div class="story-card">
-                <div class="story-card-label">为什么看这节</div>
+                <div class="story-card-label">🌟 为什么要看</div>
                 <p>技能列表会占用AI的上下文窗口，了解其成本有助于优化性能和费用。</p>
               </div>
               <div class="source-card">
-                <div class="story-card-label">这一节真正要带走的点</div>
+                <div class="story-card-label">🧠 这节要记住什么</div>
                 <ul><li>系统会将一个紧凑的XML格式的技能列表插入给AI的提示词中。</li><li>只要至少有一个技能可用，就会有一个固定的基础开销（约195字符）。</li><li>每个技能本身还会带来约97字符的固定开销，加上其名称、描述等字段的实际长度。</li><li>字段内容会进行XML转义（如`&amp;`变成`&amp;amp;`），这会略微增加长度。</li><li>粗略估算，按OpenAI风格约4字符一个token，每个技能大约贡献24个token外加字段内容。</li></ul>
               </div>
               
             <div class="source-card">
-              <div class="story-card-label">命令 / 代码怎么理解</div>
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
               <ul><li>`total = 195 + Σ (97 + len(name_escaped) + len(description_escaped) + len(location_escaped))`: 计算技能列表总字符数的公式。195是基础开销，然后对每个技能加上97和其转义后字段的长度总和。</li><li>`len(name_escaped)`: 技能名称经过XML转义后的字符长度。转义会将`&amp; &lt; &gt; &quot; &#39;`等字符变成更长的实体表示。</li></ul>
             </div>
           
               <div class="story-card">
-                <div class="story-card-label">最后记一句</div>
+                <div class="story-card-label">🎈 最后记一句</div>
                 <p>技能越多，AI‘知道’的工具越多，但‘记忆’它们的成本也越高。</p>
               </div>
             </div>
@@ -4226,21 +4226,21 @@
             </div>
             <div class="story-grid">
               <div class="story-card">
-                <div class="story-card-label">为什么看这节</div>
+                <div class="story-card-label">🌟 为什么要看</div>
                 <p>这帮你理解修改技能或配置后，需要做什么才能让改变立即生效。</p>
               </div>
               <div class="source-card">
-                <div class="story-card-label">这一节真正要带走的点</div>
+                <div class="story-card-label">🧠 这节要记住什么</div>
                 <ul><li>OpenClaw在会话开始时对符合条件的技能做一次快照，该会话内的后续交互都使用这个快照。</li><li>因此，对技能或配置的修改，通常需要开始一个新的会话才能生效。</li><li>如果启用了技能监视器，当技能文件发生变化时，系统可以中途刷新技能列表。</li><li>这种刷新类似于热重载，新的列表会在下一次AI交互时被采用。</li><li>远程节点连接状态的变化也可能触发技能列表的刷新。</li></ul>
               </div>
               
             <div class="source-card">
-              <div class="story-card-label">命令 / 代码怎么理解</div>
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
               <ul><li>`watch: true`: 在配置中启用技能文件夹监视功能。</li><li>`watchDebounceMs: 250`: 设置防抖延迟为250毫秒，避免文件频繁保存时过度刷新。</li></ul>
             </div>
           
               <div class="story-card">
-                <div class="story-card-label">最后记一句</div>
+                <div class="story-card-label">🎈 最后记一句</div>
                 <p>改完配置想生效？要么开新会话，要么等监视器帮你热重载。</p>
               </div>
             </div>

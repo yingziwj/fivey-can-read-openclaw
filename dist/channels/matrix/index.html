@@ -3971,2236 +3971,359 @@
       </div>
 
       
-    <section class="section-shell">
-      <div class="overview-card">
-        <div>
-          <p class="section-kicker">先听这页的人话版</p>
-          <h2>Matrix</h2>
-          <p>这一页像一本关于“Matrix”的小绘本，它先告诉我们这位机器人朋友会做什么，再一步一步解释什么时候该这样做。 你可以先把它想成：Matrix (新本领插件)。</p>
-          <p>如果把这页当成“给普通人看的版本”，你最应该带走的是：它到底在教你一件什么事、什么时候要这样做、以及哪里最容易踩坑。</p>
+      <section class="section-shell">
+        <div class="overview-card">
+          <div>
+            <p class="section-kicker">AI 绘本解读版</p>
+            <h2>🤖 欢迎来到 OpenClaw 的魔法聊天屋！</h2>
+            <p>这是一个叫 Matrix 的插件，能让你的机器人去一个叫 Matrix 的聊天城堡里玩。它支持悄悄话、群聊、加密信件，还有好多好玩的！</p>
+          </div>
+          <div class="overview-meta">
+            <span>原始路径：/channels/matrix</span>
+            <span>故事卡片：12 张</span>
+            <a href="https://docs.openclaw.ai/channels/matrix" target="_blank" rel="noreferrer">查看官方原文</a>
+          </div>
         </div>
-        <div class="overview-meta">
-          <span>原始路径：/channels/matrix</span>
-          <span>章节数量：22</span>
-          <a href="https://docs.openclaw.ai/channels/matrix" target="_blank" rel="noreferrer">查看原文</a>
+      </section>
+      
+          <section class="section-shell" id="section-1">
+            <div class="section-heading">
+              <p class="section-kicker">第 1 站</p>
+              <h2>🎁 先拿礼物</h2>
+              <p>Matrix 是个插件，就像给你的机器人买一个新玩具。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>不装这个玩具，机器人就没法去 Matrix 城堡玩。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>玩具不在盒子里，得单独去拿。</li><li>用一条魔法咒语就能把它装进机器人的口袋里。</li><li>咒语是：openclaw plugins install @openclaw/matrix。</li><li>念完咒语，玩具就装好啦！</li></ul>
+              </div>
+              
+            <div class="source-card">
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
+              <ul><li>openclaw plugins install @openclaw/matrix 就像在说：&#39;机器人，快把这个叫 Matrix 的玩具装好！&#39;</li><li>念完这句，机器人就会点点头，把玩具放进它的工具箱。</li></ul>
+            </div>
+          
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>先拿玩具，才能去玩！</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-2">
+            <div class="section-heading">
+              <p class="section-kicker">第 2 站</p>
+              <h2>🔑 开门进城堡</h2>
+              <p>要进 Matrix 城堡，得先有钥匙和门牌号。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>没有钥匙，机器人连城堡的门都打不开。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>钥匙有两种：一种是密码钥匙（accessToken），一种是用户名加密码钥匙。</li><li>门牌号就是城堡的地址（homeserver URL），比如 https://matrix.example.org。</li><li>把钥匙和门牌号告诉机器人，它就能开门进去啦！</li><li>机器人进去后，你就可以在城堡里找它聊天了。</li></ul>
+              </div>
+              
+            <div class="source-card">
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
+              <ul><li>openclaw channels add 就像在说：&#39;机器人，我们加个新聊天屋吧！&#39;</li><li>然后它会问你：城堡地址是啥？用哪种钥匙？</li><li>你回答完，机器人就记下钥匙，准备开门。</li></ul>
+            </div>
+          
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>钥匙和地址，一个都不能少！</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-3">
+            <div class="section-heading">
+              <p class="section-kicker">第 3 站</p>
+              <h2>📜 城堡守则</h2>
+              <p>在城堡里玩，得定一些规则，比如谁能进来、怎么回话。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>有了规则，机器人就不会乱跑乱说话啦。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>可以定一条&#39;悄悄话规则&#39;：只让好朋友给你发悄悄话。</li><li>可以定一条&#39;群聊规则&#39;：只进允许的群，或者只在被@时才说话。</li><li>机器人回话时，可以决定是单独开个小话题（线程），还是在大厅里说。</li><li>这些规则都写在一张魔法纸上（配置文件）。</li></ul>
+              </div>
+              
+            <div class="source-card">
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
+              <ul><li>在魔法纸上写 &#39;dm: { policy: &quot;allowlist&quot; }&#39; 就像说：&#39;悄悄话只让名单上的人发！&#39;</li><li>写 &#39;groupPolicy: &quot;allowlist&quot;&#39; 就像说：&#39;群聊只进名单上的群！&#39;</li><li>机器人看到这些，就会乖乖照做。</li></ul>
+            </div>
+          
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>定好规则，玩得更开心！</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-4">
+            <div class="section-heading">
+              <p class="section-kicker">第 4 站</p>
+              <h2>🤝 机器人交朋友</h2>
+              <p>有时候，你想让两个机器人自己在城堡里聊天。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>这样它们就能互相帮忙，不用总找你。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>默认情况下，机器人会忽略其他机器人的消息，怕吵到你。</li><li>但你可以打开&#39;允许机器人聊天&#39;的开关。</li><li>开关有两种：一种是随便聊，一种是只在被@时才聊。</li><li>打开开关后，记得把群聊规则定严一点，别让它们乱跑。</li></ul>
+              </div>
+              
+            <div class="source-card">
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
+              <ul><li>在魔法纸上写 &#39;allowBots: &quot;mentions&quot;&#39; 就像说：&#39;机器人朋友，只有被点名时，你们才能聊天哦！&#39;</li><li>这样它们就会安静地等点名，不会瞎嚷嚷。</li></ul>
+            </div>
+          
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>机器人也能做好朋友！</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-5">
+            <div class="section-heading">
+              <p class="section-kicker">第 5 站</p>
+              <h2>🔐 魔法加密信</h2>
+              <p>在城堡里，可以给信件加上魔法锁，只有你和收信人能打开。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>这样你的悄悄话就不会被别人偷看啦！</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>魔法锁叫 E2EE（端到端加密）。</li><li>打开它，机器人就会用魔法锁保护所有悄悄话和群聊消息。</li><li>但用魔法锁前，得先&#39;验证&#39;一下，确保锁是你自己的。</li><li>验证就像对暗号：你和机器人在另一个地方（比如手机）核对一串表情或数字。</li></ul>
+              </div>
+              
+            <div class="source-card">
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
+              <ul><li>在魔法纸上写 &#39;encryption: true&#39; 就像说：&#39;机器人，快给所有信加上魔法锁！&#39;</li><li>然后它会点点头，开始准备锁和钥匙。</li></ul>
+            </div>
+          
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>魔法锁让悄悄话更安全！</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-6">
+            <div class="section-heading">
+              <p class="section-kicker">第 6 站</p>
+              <h2>🛠️ 修锁小能手</h2>
+              <p>如果魔法锁坏了或丢了，别怕，机器人会修！</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>锁坏了，就看不了以前的加密信了，得赶紧修好。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>用 openclaw matrix verify bootstrap 这个咒语，机器人就会检查并修复锁。</li><li>它会先找找有没有备用的钥匙（恢复密钥），没有就做一把新的。</li><li>然后它会设置好&#39;交叉签名&#39;，这是一种高级魔法，让锁更牢靠。</li><li>如果故意想换把新锁，可以加个 --force-reset-cross-signing 的选项。</li></ul>
+              </div>
+              
+            <div class="source-card">
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
+              <ul><li>念 openclaw matrix verify bootstrap 就像说：&#39;机器人，快检查一下魔法锁，坏了就修好！&#39;</li><li>它会忙活一阵，然后告诉你：&#39;锁修好啦，钥匙在这儿！&#39;</li></ul>
+            </div>
+          
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>锁坏了？机器人来修！</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-7">
+            <div class="section-heading">
+              <p class="section-kicker">第 7 站</p>
+              <h2>🧹 打扫旧玩具</h2>
+              <p>机器人用久了，可能会留下一些旧&#39;设备&#39;，就像不玩的旧玩具。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>旧玩具多了，城堡会乱，加密信也容易搞混。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>用 openclaw matrix devices list 看看有哪些旧玩具。</li><li>用 openclaw matrix devices prune-stale 把不用的旧玩具清理掉。</li><li>清理后，城堡更整洁，加密信也更清楚该用哪把锁。</li></ul>
+              </div>
+              
+            <div class="source-card">
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
+              <ul><li>念 openclaw matrix devices list 就像说：&#39;机器人，把你所有的玩具都拿出来我看看！&#39;</li><li>念 openclaw matrix devices prune-stale 就像说：&#39;把那些旧了的、不玩的玩具都扔掉吧！&#39;</li></ul>
+            </div>
+          
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>定期打扫，城堡更亮堂！</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-8">
+            <div class="section-heading">
+              <p class="section-kicker">第 8 站</p>
+              <h2>🧵 话题小房间</h2>
+              <p>在城堡里，可以开一个个&#39;小话题房间&#39;，专门聊一件事。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>这样聊天不会乱，想找什么话题一下就找到。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>小话题房间叫&#39;线程&#39;（threads）。</li><li>你可以让机器人总是在小房间里回话，或者只在原话题里回。</li><li>在小房间里，还能绑定一个&#39;工作空间&#39;（ACP），让机器人一直在这里帮你。</li><li>用 /focus 或 /acp spawn 就能创建或绑定小房间。</li></ul>
+              </div>
+              
+            <div class="source-card">
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
+              <ul><li>在魔法纸上写 &#39;threadReplies: &quot;always&quot;&#39; 就像说：&#39;机器人，回话时都开个小房间吧！&#39;</li><li>这样它就会把每次聊天都整理得整整齐齐。</li></ul>
+            </div>
+          
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>小房间让聊天井井有条！</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-9">
+            <div class="section-heading">
+              <p class="section-kicker">第 9 站</p>
+              <h2>😊 表情小贴纸</h2>
+              <p>在城堡里，可以给消息贴&#39;表情小贴纸&#39;，就像点赞或评论。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>贴个小贴纸，聊天更有趣，还能告诉机器人&#39;我收到啦&#39;。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>机器人可以给别人贴贴纸（发反应），也可以看别人贴的贴纸。</li><li>你可以定一个&#39;收到贴纸&#39;，比如👍，机器人收到消息就自动贴一个。</li><li>贴纸规则可以按账号、按频道定，非常灵活。</li><li>这样聊天时，机器人会更懂你的心情。</li></ul>
+              </div>
+              
+            <div class="source-card">
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
+              <ul><li>在魔法纸上写 &#39;ackReaction: &quot;👍&quot;&#39; 就像说：&#39;机器人，每次收到消息，就贴个👍小贴纸！&#39;</li><li>它就会乖乖照做，让你的聊天充满点赞。</li></ul>
+            </div>
+          
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>小贴纸，大心情！</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-10">
+            <div class="section-heading">
+              <p class="section-kicker">第 10 站</p>
+              <h2>🏠 多个机器人管家</h2>
+              <p>你可以有好几个机器人，每个管不同的事，比如一个当助手，一个发警报。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>分工合作，效率更高！</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>给每个机器人起个名字，比如&#39;助手&#39;和&#39;警报员&#39;。</li><li>分别给它们钥匙和规则，让&#39;助手&#39;收悄悄话，&#39;警报员&#39;只收管理员的消息。</li><li>定一个&#39;默认管家&#39;，平时就它主要干活。</li><li>这样，你的城堡就有好几个能干的小帮手啦！</li></ul>
+              </div>
+              
+            <div class="source-card">
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
+              <ul><li>在魔法纸上写 &#39;accounts: { assistant: {...}, alerts: {...} }&#39; 就像说：&#39;我有两个机器人，一个叫助手，一个叫警报员，这是它们的钥匙和规则。&#39;</li><li>机器人看到后，就会各自站好岗。</li></ul>
+            </div>
+          
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>多个管家，城堡更热闹！</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-11">
+            <div class="section-heading">
+              <p class="section-kicker">第 11 站</p>
+              <h2>🚪 自家小城堡</h2>
+              <p>如果你的 Matrix 城堡在自己家里（比如本地服务器），得特别告诉机器人一声。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>默认机器人只去公共城堡，怕走错门。</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>自家城堡地址可能是 localhost 或内部名字，比如 http://matrix-synapse:8008。</li><li>在魔法纸上加个 allowPrivateNetwork: true，机器人就知道这是自家门，可以进。</li><li>但为了安全，最好还是用 https:// 的地址，像给门加把锁。</li></ul>
+              </div>
+              
+            <div class="source-card">
+              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
+              <ul><li>写 &#39;allowPrivateNetwork: true&#39; 就像说：&#39;机器人，这个地址是咱家的，放心进去吧！&#39;</li><li>它就会点点头，不再犹豫。</li></ul>
+            </div>
+          
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>自家城堡，打个招呼就能进！</p>
+              </div>
+            </div>
+          </section>
+        
+          <section class="section-shell" id="section-12">
+            <div class="section-heading">
+              <p class="section-kicker">第 12 站</p>
+              <h2>📋 规则大全</h2>
+              <p>最后，这是一张所有规则的清单，方便你随时查看。</p>
+            </div>
+            <div class="story-grid">
+              <div class="story-card">
+                <div class="story-card-label">🌟 为什么要看</div>
+                <p>有了清单，定规则时就不会漏掉什么啦！</p>
+              </div>
+              <div class="source-card">
+                <div class="story-card-label">🧠 这节要记住什么</div>
+                <ul><li>enabled：开关，打开机器人才能玩。</li><li>homeserver：城堡地址。</li><li>accessToken 或 password：钥匙。</li><li>encryption：魔法锁开关。</li><li>dm 和 groupPolicy：悄悄话和群聊规则。</li><li>threadReplies：小话题房间规则。</li><li>还有很多其他按钮，比如怎么回话、贴纸规则等。</li></ul>
+              </div>
+              
+              <div class="story-card">
+                <div class="story-card-label">🎈 最后记一句</div>
+                <p>规则在手，城堡任你游！</p>
+              </div>
+            </div>
+          </section>
+        
+      <section class="section-shell">
+        <div class="ad-placeholder">
+          <p>这里预留给未来的 Google AdSense 模块。</p>
+          <code>&lt;!-- ADSENSE_SNIPPET --&gt;</code>
         </div>
-      </div>
-    </section>
+      </section>
     
-        <section class="section-shell" id="section-1">
-          <div class="section-heading">
-            <p class="section-kicker">第 1 站</p>
-            <h2>Start Here</h2>
-            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>你理解的是能力边界，不只是功能名字。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Matrix (新本领插件) Matrix is the Matrix 消息通道 新本领插件 for OpenClaw. It uses the official matrix-js-sdk and supports DMs, rooms…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Matrix (新本领插件)”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p># Matrix (plugin)</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Matrix is the Matrix 消息通道 新本领插件 for OpenClaw. It uses the official matrix-js-sdk and supports DMs, rooms, threads, medi…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Matrix is the Matrix channel plugin for OpenClaw. It uses the official <code>matrix-js-sdk</code> and supports DMs, rooms, threads, media, reactions, polls, location, and E2EE.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-2">
-          <div class="section-heading">
-            <p class="section-kicker">第 2 站</p>
-            <h2>新本领插件 required</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Matrix is a 新本领插件 and is not bundled with core OpenClaw. Install from npm: Install from a local checkout: See 新本领插件s fo…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Matrix is a 新本领插件 and is not bundled with core OpenClaw.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Matrix is a plugin and is not bundled with core OpenClaw.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Install from npm:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Install from npm:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一句直接对 OpenClaw 说的话，就像对小助手下达任务。</p>
-        <ul class="code-steps">
-          <li>这一句是在直接叫 OpenClaw 做事：“openclaw plugins install @openclaw/matrix”。你可以把它想成对机器人说的完整命令。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">openclaw plugins install @openclaw/matrix</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Install from a local checkout:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Install from a local checkout:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一句直接对 OpenClaw 说的话，就像对小助手下达任务。</p>
-        <ul class="code-steps">
-          <li>这一句是在直接叫 OpenClaw 做事：“openclaw plugins install ./extensions/matrix”。你可以把它想成对机器人说的完整命令。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">openclaw plugins install ./extensions/matrix</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“See 新本领插件s for 新本领插件 behavior and install rules.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>See <a href="/tools/plugin" target="_blank" rel="noreferrer">Plugins</a> for plugin behavior and install rules.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-3">
-          <div class="section-heading">
-            <p class="section-kicker">第 3 站</p>
-            <h2>Setup</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“1. Install the 新本领插件. 2. Create a Matrix account on your home大房子服务器. 3. 设置说明书ure 消息通道s.matrix with either: 4. Restart t…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“1. Install the 新本领插件. 2. Create a Matrix account on your home大房子服务器. 3. 设置说明书ure 消息通道s.matrix with either:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>1. Install the plugin. 2. Create a Matrix account on your homeserver. 3. Configure <code>channels.matrix</code> with either:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“4. Restart the 门口的小门卫. 5. Start a DM with the bot or invite it to a room.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>4. Restart the gateway. 5. Start a DM with the bot or invite it to a room.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Setup”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：home大房子服务器 + accessToken, or、home大房子服务器 + userId + 秘密口令.</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>homeserver</code> + <code>accessToken</code>, or</li><li><code>homeserver</code> + <code>userId</code> + <code>password</code>.</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Interactive setup paths:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Interactive setup paths:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一句直接对 OpenClaw 说的话，就像对小助手下达任务。</p>
-        <ul class="code-steps">
-          <li>这一句是在直接叫 OpenClaw 做事：“openclaw channels add”。你可以把它想成对机器人说的完整命令。</li><li>这一句是在直接叫 OpenClaw 做事：“openclaw configure --section channels”。你可以把它想成对机器人说的完整命令。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">openclaw channels add
-openclaw configure --section channels</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“What the Matrix wizard actually asks for:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>What the Matrix wizard actually asks for:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Setup”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：home大房子服务器 URL、auth method: access token or 秘密口令、user ID only when you choose 秘密口令 auth、optional device name。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>homeserver URL</li><li>auth method: access token or password</li><li>user ID only when you choose password auth</li><li>optional device name</li><li>whether to enable E2EE</li><li>whether to configure Matrix room access now</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Wizard behavior that matters:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Wizard behavior that matters:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Setup”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：If Matrix auth env vars already exist for…、When you add another Matrix account inter…、DM allowlist prompts accept full @user:大房…、Room allowlist prompts accept room IDs an…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>If Matrix auth env vars already exist for the selected account, and that account does not already have auth saved in config, the wizard offers an env shortcut and only writes <code>enabled: true</code> for that account.</li><li>When you add another Matrix account interactively, the entered account name is normalized into the account ID used in config and env vars. For example, <code>Ops Bot</code> becomes <code>ops-bot</code>.</li><li>DM allowlist prompts accept full <code>@user:server</code> values immediately. Display names only work when live directory lookup finds one exact match; otherwise the wizard asks you to retry with a full Matrix ID.</li><li>Room allowlist prompts accept room IDs and aliases directly. They can also resolve joined-room names live, but unresolved names are only kept as typed during setup and are ignored later by runtime allowlist resolution. Prefer <code>!room:server</code> or <code>#alias:server</code>.</li><li>Runtime room/session identity uses the stable Matrix room ID. Room-declared aliases are only used as lookup inputs, not as the long-term session key or stable group identity.</li><li>To resolve room names before saving them, use <code>openclaw channels resolve --channel matrix &quot;Project Room&quot;</code>.</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Minimal token-based setup:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Minimal token-based setup:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“channels”贴标签，意思是把它设置成“{”。</li><li>这里在给“matrix”贴标签，意思是把它设置成“{”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json5">{
-  channels: {
-    matrix: {
-      enabled: true,
-      homeserver: &quot;https://matrix.example.org&quot;,
-      accessToken: &quot;syt_xxx&quot;,
-      dm: { policy: &quot;pairing&quot; },
-    },
-  },
-}</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“秘密口令-based setup (token is cached after login):”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Password-based setup (token is cached after login):</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“channels”贴标签，意思是把它设置成“{”。</li><li>这里在给“matrix”贴标签，意思是把它设置成“{”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json5">{
-  channels: {
-    matrix: {
-      enabled: true,
-      homeserver: &quot;https://matrix.example.org&quot;,
-      userId: &quot;@bot:example.org&quot;,
-      password: &quot;replace-me&quot;, // pragma: allowlist secret
-      deviceName: &quot;OpenClaw Gateway&quot;,
-    },
-  },
-}</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Matrix stores cached credentials in ~/.openclaw/credentials/matrix/. The default account uses credentials.json; named a…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Matrix stores cached credentials in <code>~/.openclaw/credentials/matrix/</code>. The default account uses <code>credentials.json</code>; named accounts use <code>credentials-&lt;account&gt;.json</code>.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Environment variable equivalents (used when the 设置说明书 key is not set):”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Environment variable equivalents (used when the config key is not set):</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Setup”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：MATRIX_HOME大房子服务器、MATRIX_ACCESS_TOKEN、MATRIX_USER_ID、MATRIX_秘密口令。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>MATRIX_HOMESERVER</code></li><li><code>MATRIX_ACCESS_TOKEN</code></li><li><code>MATRIX_USER_ID</code></li><li><code>MATRIX_PASSWORD</code></li><li><code>MATRIX_DEVICE_ID</code></li><li><code>MATRIX_DEVICE_NAME</code></li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“For non-default accounts, use account-scoped env vars:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>For non-default accounts, use account-scoped env vars:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Setup”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：MATRIX_&lt;ACCOUNT_ID&gt;_HOME大房子服务器、MATRIX_&lt;ACCOUNT_ID&gt;_ACCESS_TOKEN、MATRIX_&lt;ACCOUNT_ID&gt;_USER_ID、MATRIX_&lt;ACCOUNT_ID&gt;_秘密口令。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>MATRIX_&lt;ACCOUNT_ID&gt;_HOMESERVER</code></li><li><code>MATRIX_&lt;ACCOUNT_ID&gt;_ACCESS_TOKEN</code></li><li><code>MATRIX_&lt;ACCOUNT_ID&gt;_USER_ID</code></li><li><code>MATRIX_&lt;ACCOUNT_ID&gt;_PASSWORD</code></li><li><code>MATRIX_&lt;ACCOUNT_ID&gt;_DEVICE_ID</code></li><li><code>MATRIX_&lt;ACCOUNT_ID&gt;_DEVICE_NAME</code></li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Example for account ops:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Example for account <code>ops</code>:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Setup”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：MATRIX_OPS_HOME大房子服务器、MATRIX_OPS_ACCESS_TOKEN。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>MATRIX_OPS_HOMESERVER</code></li><li><code>MATRIX_OPS_ACCESS_TOKEN</code></li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“For normalized account ID ops-bot, use:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>For normalized account ID <code>ops-bot</code>, use:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Setup”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：MATRIX_OPS_BOT_HOME大房子服务器、MATRIX_OPS_BOT_ACCESS_TOKEN。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>MATRIX_OPS_BOT_HOMESERVER</code></li><li><code>MATRIX_OPS_BOT_ACCESS_TOKEN</code></li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“The interactive wizard only offers the env-var shortcut when those auth env vars are already present and the selected a…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>The interactive wizard only offers the env-var shortcut when those auth env vars are already present and the selected account does not already have Matrix auth saved in config.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-4">
-          <div class="section-heading">
-            <p class="section-kicker">第 4 站</p>
-            <h2>设置说明书uration example</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“This is a practical baseline 设置说明书 with DM pairing, room allowlist, and E2EE enabled:”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“This is a practical baseline 设置说明书 with DM pairing, room allowlist, and E2EE enabled:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>This is a practical baseline config with DM pairing, room allowlist, and E2EE enabled:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“channels”贴标签，意思是把它设置成“{”。</li><li>这里在给“matrix”贴标签，意思是把它设置成“{”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json5">{
-  channels: {
-    matrix: {
-      enabled: true,
-      homeserver: &quot;https://matrix.example.org&quot;,
-      accessToken: &quot;syt_xxx&quot;,
-      encryption: true,
-
-      dm: {
-        policy: &quot;pairing&quot;,
-      },
-
-      groupPolicy: &quot;allowlist&quot;,
-      groupAllowFrom: [&quot;@admin:example.org&quot;],
-      groups: {
-        &quot;!roomid:example.org&quot;: {
-          requireMention: true,
-        },
-      },
-
-      autoJoin: &quot;allowlist&quot;,
-      autoJoinAllowlist: [&quot;!roomid:example.org&quot;],
-      threadReplies: &quot;inbound&quot;,
-      replyToMode: &quot;off&quot;,
-    },
-  },
-}</code></pre>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-5">
-          <div class="section-heading">
-            <p class="section-kicker">第 5 站</p>
-            <h2>Bot to bot rooms</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“By default, Matrix 小纸条消息s from other 设置说明书ured OpenClaw Matrix accounts are ignored. Use allowBots when you intentional…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“By default, Matrix 小纸条消息s from other 设置说明书ured OpenClaw Matrix accounts are ignored.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>By default, Matrix messages from other configured OpenClaw Matrix accounts are ignored.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Use allowBots when you intentionally want inter-机器人朋友 Matrix traffic:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Use <code>allowBots</code> when you intentionally want inter-agent Matrix traffic:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“channels”贴标签，意思是把它设置成“{”。</li><li>这里在给“matrix”贴标签，意思是把它设置成“{”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json5">{
-  channels: {
-    matrix: {
-      allowBots: &quot;mentions&quot;, // true | &quot;mentions&quot;
-      groups: {
-        &quot;!roomid:example.org&quot;: {
-          requireMention: true,
-        },
-      },
-    },
-  },
-}</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Bot to bot rooms”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：allowBots: true accepts 小纸条消息s from other…、allowBots: &quot;mentions&quot; accepts those 小纸条消息…、大家一起的房间s.&lt;room&gt;.allowBots overrides the a…、OpenClaw still ignores 小纸条消息s from the sa…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>allowBots: true</code> accepts messages from other configured Matrix bot accounts in allowed rooms and DMs.</li><li><code>allowBots: &quot;mentions&quot;</code> accepts those messages only when they visibly mention this bot in rooms. DMs are still allowed.</li><li><code>groups.&lt;room&gt;.allowBots</code> overrides the account-level setting for one room.</li><li>OpenClaw still ignores messages from the same Matrix user ID to avoid self-reply loops.</li><li>Matrix does not expose a native bot flag here; OpenClaw treats &quot;bot-authored&quot; as &quot;sent by another configured Matrix account on this OpenClaw gateway&quot;.</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Use strict room allowlists and mention requirements when enabling bot-to-bot traffic in shared rooms.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Use strict room allowlists and mention requirements when enabling bot-to-bot traffic in shared rooms.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Enable encryption:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Enable encryption:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“channels”贴标签，意思是把它设置成“{”。</li><li>这里在给“matrix”贴标签，意思是把它设置成“{”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json5">{
-  channels: {
-    matrix: {
-      enabled: true,
-      homeserver: &quot;https://matrix.example.org&quot;,
-      accessToken: &quot;syt_xxx&quot;,
-      encryption: true,
-      dm: { policy: &quot;pairing&quot; },
-    },
-  },
-}</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Check verification status:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Check verification status:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一句直接对 OpenClaw 说的话，就像对小助手下达任务。</p>
-        <ul class="code-steps">
-          <li>这一句是在直接叫 OpenClaw 做事：“openclaw matrix verify status”。你可以把它想成对机器人说的完整命令。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">openclaw matrix verify status</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Verbose status (full diagnostics):”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Verbose status (full diagnostics):</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一句直接对 OpenClaw 说的话，就像对小助手下达任务。</p>
-        <ul class="code-steps">
-          <li>这一句是在直接叫 OpenClaw 做事：“openclaw matrix verify status --verbose”。你可以把它想成对机器人说的完整命令。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">openclaw matrix verify status --verbose</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Include the stored recovery key in machine-readable output:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Include the stored recovery key in machine-readable output:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一句直接对 OpenClaw 说的话，就像对小助手下达任务。</p>
-        <ul class="code-steps">
-          <li>这一句是在直接叫 OpenClaw 做事：“openclaw matrix verify status --include-recovery-key --json”。你可以把它想成对机器人说的完整命令。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">openclaw matrix verify status --include-recovery-key --json</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Bootstrap cross-signing and verification state:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Bootstrap cross-signing and verification state:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一句直接对 OpenClaw 说的话，就像对小助手下达任务。</p>
-        <ul class="code-steps">
-          <li>这一句是在直接叫 OpenClaw 做事：“openclaw matrix verify bootstrap”。你可以把它想成对机器人说的完整命令。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">openclaw matrix verify bootstrap</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Multi-account support: use 消息通道s.matrix.accounts with per-account credentials and optional name. See 设置说明书uration refer…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Multi-account support: use <code>channels.matrix.accounts</code> with per-account credentials and optional <code>name</code>. See <a href="/gateway/configuration-reference#multi-account-all-channels" target="_blank" rel="noreferrer">Configuration reference</a> for the shared pattern.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Verbose bootstrap diagnostics:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Verbose bootstrap diagnostics:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一句直接对 OpenClaw 说的话，就像对小助手下达任务。</p>
-        <ul class="code-steps">
-          <li>这一句是在直接叫 OpenClaw 做事：“openclaw matrix verify bootstrap --verbose”。你可以把它想成对机器人说的完整命令。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">openclaw matrix verify bootstrap --verbose</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Force a fresh cross-signing identity reset before bootstrapping:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Force a fresh cross-signing identity reset before bootstrapping:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一句直接对 OpenClaw 说的话，就像对小助手下达任务。</p>
-        <ul class="code-steps">
-          <li>这一句是在直接叫 OpenClaw 做事：“openclaw matrix verify bootstrap --force-reset-cross-signing”。你可以把它想成对机器人说的完整命令。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">openclaw matrix verify bootstrap --force-reset-cross-signing</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Verify this device with a recovery key:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Verify this device with a recovery key:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一句直接对 OpenClaw 说的话，就像对小助手下达任务。</p>
-        <ul class="code-steps">
-          <li>这一句是在直接叫 OpenClaw 做事：“openclaw matrix verify device &quot;&lt;your-recovery-key&gt;&quot;”。你可以把它想成对机器人说的完整命令。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">openclaw matrix verify device &quot;&lt;your-recovery-key&gt;&quot;</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Verbose device verification details:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Verbose device verification details:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一句直接对 OpenClaw 说的话，就像对小助手下达任务。</p>
-        <ul class="code-steps">
-          <li>这一句是在直接叫 OpenClaw 做事：“openclaw matrix verify device &quot;&lt;your-recovery-key&gt;&quot; --verbose”。你可以把它想成对机器人说的完整命令。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">openclaw matrix verify device &quot;&lt;your-recovery-key&gt;&quot; --verbose</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Check room-key backup health:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Check room-key backup health:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一句直接对 OpenClaw 说的话，就像对小助手下达任务。</p>
-        <ul class="code-steps">
-          <li>这一句是在直接叫 OpenClaw 做事：“openclaw matrix verify backup status”。你可以把它想成对机器人说的完整命令。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">openclaw matrix verify backup status</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Verbose backup health diagnostics:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Verbose backup health diagnostics:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一句直接对 OpenClaw 说的话，就像对小助手下达任务。</p>
-        <ul class="code-steps">
-          <li>这一句是在直接叫 OpenClaw 做事：“openclaw matrix verify backup status --verbose”。你可以把它想成对机器人说的完整命令。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">openclaw matrix verify backup status --verbose</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Restore room keys from 大房子服务器 backup:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Restore room keys from server backup:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一句直接对 OpenClaw 说的话，就像对小助手下达任务。</p>
-        <ul class="code-steps">
-          <li>这一句是在直接叫 OpenClaw 做事：“openclaw matrix verify backup restore”。你可以把它想成对机器人说的完整命令。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">openclaw matrix verify backup restore</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Verbose restore diagnostics:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Verbose restore diagnostics:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一句直接对 OpenClaw 说的话，就像对小助手下达任务。</p>
-        <ul class="code-steps">
-          <li>这一句是在直接叫 OpenClaw 做事：“openclaw matrix verify backup restore --verbose”。你可以把它想成对机器人说的完整命令。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">openclaw matrix verify backup restore --verbose</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Delete the current 大房子服务器 backup and create a fresh backup baseline:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Delete the current server backup and create a fresh backup baseline:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一句直接对 OpenClaw 说的话，就像对小助手下达任务。</p>
-        <ul class="code-steps">
-          <li>这一句是在直接叫 OpenClaw 做事：“openclaw matrix verify backup reset --yes”。你可以把它想成对机器人说的完整命令。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">openclaw matrix verify backup reset --yes</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“All verify 魔法口令s are concise by default (including quiet internal SDK logging) and show detailed diagnostics only with…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>All <code>verify</code> commands are concise by default (including quiet internal SDK logging) and show detailed diagnostics only with <code>--verbose</code>. Use <code>--json</code> for full machine-readable output when scripting.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“In multi-account setups, Matrix CLI 魔法口令s use the implicit Matrix default account unless you pass --account &lt;id&gt;. If yo…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>In multi-account setups, Matrix CLI commands use the implicit Matrix default account unless you pass <code>--account &lt;id&gt;</code>. If you configure multiple named accounts, set <code>channels.matrix.defaultAccount</code> first or those implicit CLI operations will stop and ask you to choose an account explicitly. Use <code>--account</code> whenever you want verification or device operations to target a named account explicitly:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一句直接对 OpenClaw 说的话，就像对小助手下达任务。</p>
-        <ul class="code-steps">
-          <li>这一句是在直接叫 OpenClaw 做事：“openclaw matrix verify status --account assistant”。你可以把它想成对机器人说的完整命令。</li><li>这一句是在直接叫 OpenClaw 做事：“openclaw matrix verify backup restore --account assistant”。你可以把它想成对机器人说的完整命令。</li><li>这一句是在直接叫 OpenClaw 做事：“openclaw matrix devices list --account assistant”。你可以把它想成对机器人说的完整命令。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">openclaw matrix verify status --account assistant
-openclaw matrix verify backup restore --account assistant
-openclaw matrix devices list --account assistant</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“When encryption is disabled or unavailable for a named account, Matrix warnings and verification errors point at that a…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>When encryption is disabled or unavailable for a named account, Matrix warnings and verification errors point at that account&#39;s config key, for example <code>channels.matrix.accounts.assistant.encryption</code>.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-6">
-          <div class="section-heading">
-            <p class="section-kicker">第 6 站</p>
-            <h2>What &quot;verified&quot; means</h2>
-            <p>这一节主要在解释“What &quot;verified&quot; means”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“What &quot;verified&quot; means”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“OpenClaw treats this Matrix device as verified only when it is verified by your own cross-signing identity. In practice…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“OpenClaw treats this Matrix device as verified only when it is verified by your own cross-signing identity. In practice…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>OpenClaw treats this Matrix device as verified only when it is verified by your own cross-signing identity. In practice, <code>openclaw matrix verify status --verbose</code> exposes three trust signals:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“What &quot;verified&quot; means”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Locally trusted: this device is trusted b…、Cross-signing verified: the SDK reports t…、Signed by owner: the device is signed by…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>Locally trusted</code>: this device is trusted by the current client only</li><li><code>Cross-signing verified</code>: the SDK reports the device as verified through cross-signing</li><li><code>Signed by owner</code>: the device is signed by your own self-signing key</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Verified by owner becomes yes only when cross-signing verification or owner-signing is present. Local trust by itself i…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p><code>Verified by owner</code> becomes <code>yes</code> only when cross-signing verification or owner-signing is present. Local trust by itself is not enough for OpenClaw to treat the device as fully verified.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-7">
-          <div class="section-heading">
-            <p class="section-kicker">第 7 站</p>
-            <h2>What bootstrap does</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“openclaw matrix verify bootstrap is the repair and setup 魔法口令 for encrypted Matrix accounts. It does all of the followi…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“openclaw matrix verify bootstrap is the repair and setup 魔法口令 for encrypted Matrix accounts. It does all of the followi…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p><code>openclaw matrix verify bootstrap</code> is the repair and setup command for encrypted Matrix accounts. It does all of the following in order:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“What bootstrap does”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：bootstraps secret storage, reusing an exi…、bootstraps cross-signing and uploads miss…、attempts to mark and cross-sign the curre…、creates a new 大房子服务器-side room-key backup…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>bootstraps secret storage, reusing an existing recovery key when possible</li><li>bootstraps cross-signing and uploads missing public cross-signing keys</li><li>attempts to mark and cross-sign the current device</li><li>creates a new server-side room-key backup if one does not already exist</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“If the home大房子服务器 requires interactive auth to upload cross-signing keys, OpenClaw tries the upload without auth first,…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>If the homeserver requires interactive auth to upload cross-signing keys, OpenClaw tries the upload without auth first, then with <code>m.login.dummy</code>, then with <code>m.login.password</code> when <code>channels.matrix.password</code> is configured.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Use --force-reset-cross-signing only when you intentionally want to discard the current cross-signing identity and crea…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Use <code>--force-reset-cross-signing</code> only when you intentionally want to discard the current cross-signing identity and create a new one.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“If you intentionally want to discard the current room-key backup and start a new backup baseline for future 小纸条消息s, use…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>If you intentionally want to discard the current room-key backup and start a new backup baseline for future messages, use <code>openclaw matrix verify backup reset --yes</code>. Do this only when you accept that unrecoverable old encrypted history will stay unavailable.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-8">
-          <div class="section-heading">
-            <p class="section-kicker">第 8 站</p>
-            <h2>Fresh backup baseline</h2>
-            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>你理解的是能力边界，不只是功能名字。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“If you want to keep future encrypted 小纸条消息s working and accept losing unrecoverable old history, run these 魔法口令s in ord…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“If you want to keep future encrypted 小纸条消息s working and accept losing unrecoverable old history, run these 魔法口令s in ord…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>If you want to keep future encrypted messages working and accept losing unrecoverable old history, run these commands in order:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一句直接对 OpenClaw 说的话，就像对小助手下达任务。</p>
-        <ul class="code-steps">
-          <li>这一句是在直接叫 OpenClaw 做事：“openclaw matrix verify backup reset --yes”。你可以把它想成对机器人说的完整命令。</li><li>这一句是在直接叫 OpenClaw 做事：“openclaw matrix verify backup status --verbose”。你可以把它想成对机器人说的完整命令。</li><li>这一句是在直接叫 OpenClaw 做事：“openclaw matrix verify status”。你可以把它想成对机器人说的完整命令。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">openclaw matrix verify backup reset --yes
-openclaw matrix verify backup status --verbose
-openclaw matrix verify status</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Add --account &lt;id&gt; to each 魔法口令 when you want to target a named Matrix account explicitly.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Add <code>--account &lt;id&gt;</code> to each command when you want to target a named Matrix account explicitly.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-9">
-          <div class="section-heading">
-            <p class="section-kicker">第 9 站</p>
-            <h2>Startup behavior</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“When encryption: true, Matrix defaults startupVerification to &quot;if-unverified&quot;. On startup, if this device is still unve…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“When encryption: true, Matrix defaults startupVerification to &quot;if-unverified&quot;. On startup, if this device is still unve…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>When <code>encryption: true</code>, Matrix defaults <code>startupVerification</code> to <code>&quot;if-unverified&quot;</code>. On startup, if this device is still unverified, Matrix will request self-verification in another Matrix client, skip duplicate requests while one is already pending, and apply a local cooldown before retrying after restarts. Failed request attempts retry sooner than successful request creation by default. Set <code>startupVerification: &quot;off&quot;</code> to disable automatic startup requests, or tune <code>startupVerificationCooldownHours</code> if you want a shorter or longer retry window.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Startup also performs a conservative crypto bootstrap pass automatically. That pass tries to reuse the current secret s…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Startup also performs a conservative crypto bootstrap pass automatically. That pass tries to reuse the current secret storage and cross-signing identity first, and avoids resetting cross-signing unless you run an explicit bootstrap repair flow.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“If startup finds broken bootstrap state and 消息通道s.matrix.秘密口令 is 设置说明书ured, OpenClaw can attempt a stricter repair path…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>If startup finds broken bootstrap state and <code>channels.matrix.password</code> is configured, OpenClaw can attempt a stricter repair path. If the current device is already owner-signed, OpenClaw preserves that identity instead of resetting it automatically.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Upgrading from the previous public Matrix 新本领插件:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Upgrading from the previous public Matrix plugin:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Startup behavior”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：OpenClaw automatically reuses the same Ma…、Before any actionable Matrix migration ch…、If you use multiple Matrix accounts, set…、If the previous 新本领插件 stored a Matrix roo…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>OpenClaw automatically reuses the same Matrix account, access token, and device identity when possible.</li><li>Before any actionable Matrix migration changes run, OpenClaw creates or reuses a recovery snapshot under <code>~/Backups/openclaw-migrations/</code>.</li><li>If you use multiple Matrix accounts, set <code>channels.matrix.defaultAccount</code> before upgrading from the old flat-store layout so OpenClaw knows which account should receive that shared legacy state.</li><li>If the previous plugin stored a Matrix room-key backup decryption key locally, startup or <code>openclaw doctor --fix</code> will import it into the new recovery-key flow automatically.</li><li>If the Matrix access token changed after migration was prepared, startup now scans sibling token-hash storage roots for pending legacy restore state before giving up on the automatic backup restore.</li><li>If the Matrix access token changes later for the same account, homeserver, and user, OpenClaw now prefers reusing the most complete existing token-hash storage root instead of starting from an empty Matrix state directory.</li><li>On the next gateway start, backed-up room keys are restored automatically into the new crypto store.</li><li>If the old plugin had local-only room keys that were never backed up, OpenClaw will warn clearly. Those keys cannot be exported automatically from the previous rust crypto store, so some old encrypted history may remain unavailable until recovered manually.</li><li>See <a href="/install/migrating-matrix" target="_blank" rel="noreferrer">Matrix migration</a> for the full upgrade flow, limits, recovery commands, and common migration messages.</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Encrypted runtime state is organized under per-account, per-user token-hash roots in ~/.openclaw/matrix/accounts/&lt;accou…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Encrypted runtime state is organized under per-account, per-user token-hash roots in <code>~/.openclaw/matrix/accounts/&lt;account&gt;/&lt;homeserver&gt;__&lt;user&gt;/&lt;token-hash&gt;/</code>. That directory contains the sync store (<code>bot-storage.json</code>), crypto store (<code>crypto/</code>), recovery key file (<code>recovery-key.json</code>), IndexedDB snapshot (<code>crypto-idb-snapshot.json</code>), thread bindings (<code>thread-bindings.json</code>), and startup verification state (<code>startup-verification.json</code>) when those features are in use. When the token changes but the account identity stays the same, OpenClaw reuses the best existing root for that account/homeserver/user tuple so prior sync state, crypto state, thread bindings, and startup verification state remain visible.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-10">
-          <div class="section-heading">
-            <p class="section-kicker">第 10 站</p>
-            <h2>Node crypto store 聪明脑袋模型</h2>
-            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>你理解的是能力边界，不只是功能名字。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Matrix E2EE in this 新本领插件 uses the official matrix-js-sdk Rust crypto path in Node. That path expects IndexedDB-backed…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Matrix E2EE in this 新本领插件 uses the official matrix-js-sdk Rust crypto path in Node. That path expects IndexedDB-backed…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Matrix E2EE in this plugin uses the official <code>matrix-js-sdk</code> Rust crypto path in Node. That path expects IndexedDB-backed persistence when you want crypto state to survive restarts.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“OpenClaw currently provides that in Node by:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>OpenClaw currently provides that in Node by:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Node crypto store model”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：using fake-indexeddb as the IndexedDB 对话接…、restoring the Rust crypto IndexedDB conte…、persisting the updated IndexedDB contents…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>using <code>fake-indexeddb</code> as the IndexedDB API shim expected by the SDK</li><li>restoring the Rust crypto IndexedDB contents from <code>crypto-idb-snapshot.json</code> before <code>initRustCrypto</code></li><li>persisting the updated IndexedDB contents back to <code>crypto-idb-snapshot.json</code> after init and during runtime</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“This is compatibility/storage plumbing, not a custom crypto implementation. The snapshot file is sensitive runtime stat…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>This is compatibility/storage plumbing, not a custom crypto implementation. The snapshot file is sensitive runtime state and is stored with restrictive file permissions. Under OpenClaw&#39;s security model, the gateway host and local OpenClaw state directory are already inside the trusted operator boundary, so this is primarily an operational durability concern rather than a separate remote trust boundary.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Planned improvement:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Planned improvement:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Node crypto store model”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：add SecretRef support for persistent Matr…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>add SecretRef support for persistent Matrix key material so recovery keys and related store-encryption secrets can be sourced from OpenClaw secrets providers instead of only local files</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-11">
-          <div class="section-heading">
-            <p class="section-kicker">第 11 站</p>
-            <h2>Automatic verification notices</h2>
-            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>你理解的是能力边界，不只是功能名字。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Matrix now posts verification lifecycle notices directly into the strict DM verification room as m.notice 小纸条消息s. That…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Matrix now posts verification lifecycle notices directly into the strict DM verification room as m.notice 小纸条消息s. That…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Matrix now posts verification lifecycle notices directly into the strict DM verification room as <code>m.notice</code> messages. That includes:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Automatic verification notices”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：verification request notices、verification ready notices (with explicit…、verification start and completion notices、SAS details (emoji and decimal) when avai…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>verification request notices</li><li>verification ready notices (with explicit &quot;Verify by emoji&quot; guidance)</li><li>verification start and completion notices</li><li>SAS details (emoji and decimal) when available</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Incoming verification requests from another Matrix 来帮忙的小伙伴 are tracked and auto-accepted by OpenClaw. For self-verifica…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Incoming verification requests from another Matrix client are tracked and auto-accepted by OpenClaw. For self-verification flows, OpenClaw also starts the SAS flow automatically when emoji verification becomes available and confirms its own side. For verification requests from another Matrix user/device, OpenClaw auto-accepts the request and then waits for the SAS flow to proceed normally. You still need to compare the emoji or decimal SAS in your Matrix client and confirm &quot;They match&quot; there to complete the verification.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“OpenClaw does not auto-accept self-initiated duplicate flows blindly. Startup skips creating a new request when a self-…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>OpenClaw does not auto-accept self-initiated duplicate flows blindly. Startup skips creating a new request when a self-verification request is already pending.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Verification protocol/system notices are not forwarded to the 机器人朋友 chat pipeline, so they do not produce NO_REPLY.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Verification protocol/system notices are not forwarded to the agent chat pipeline, so they do not produce <code>NO_REPLY</code>.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-12">
-          <div class="section-heading">
-            <p class="section-kicker">第 12 站</p>
-            <h2>Device hygiene</h2>
-            <p>这一节主要在解释“Device hygiene”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“Device hygiene”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Old OpenClaw-managed Matrix devices can accumulate on the account and make encrypted-room trust harder to reason about.…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Old OpenClaw-managed Matrix devices can accumulate on the account and make encrypted-room trust harder to reason about.…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Old OpenClaw-managed Matrix devices can accumulate on the account and make encrypted-room trust harder to reason about. List them with:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一句直接对 OpenClaw 说的话，就像对小助手下达任务。</p>
-        <ul class="code-steps">
-          <li>这一句是在直接叫 OpenClaw 做事：“openclaw matrix devices list”。你可以把它想成对机器人说的完整命令。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">openclaw matrix devices list</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Remove stale OpenClaw-managed devices with:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Remove stale OpenClaw-managed devices with:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一句直接对 OpenClaw 说的话，就像对小助手下达任务。</p>
-        <ul class="code-steps">
-          <li>这一句是在直接叫 OpenClaw 做事：“openclaw matrix devices prune-stale”。你可以把它想成对机器人说的完整命令。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">openclaw matrix devices prune-stale</code></pre>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-13">
-          <div class="section-heading">
-            <p class="section-kicker">第 13 站</p>
-            <h2>Direct Room Repair</h2>
-            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>你理解的是能力边界，不只是功能名字。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“If direct-小纸条消息 state gets out of sync, OpenClaw can end up with stale m.direct mappings that point at old solo rooms i…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“If direct-小纸条消息 state gets out of sync, OpenClaw can end up with stale m.direct mappings that point at old solo rooms i…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>If direct-message state gets out of sync, OpenClaw can end up with stale <code>m.direct</code> mappings that point at old solo rooms instead of the live DM. Inspect the current mapping for a peer with:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一句直接对 OpenClaw 说的话，就像对小助手下达任务。</p>
-        <ul class="code-steps">
-          <li>这里在给“openclaw matrix direct inspect --user-id @alice”贴标签，意思是把它设置成“example.org”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">openclaw matrix direct inspect --user-id @alice:example.org</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Repair it with:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Repair it with:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一句直接对 OpenClaw 说的话，就像对小助手下达任务。</p>
-        <ul class="code-steps">
-          <li>这里在给“openclaw matrix direct repair --user-id @alice”贴标签，意思是把它设置成“example.org”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">openclaw matrix direct repair --user-id @alice:example.org</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Repair keeps the Matrix-specific logic inside the 新本领插件:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Repair keeps the Matrix-specific logic inside the plugin:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Direct Room Repair”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：it prefers a strict 1:1 DM that is alread…、otherwise it falls back to any currently…、if no healthy DM exists, it creates a fre…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>it prefers a strict 1:1 DM that is already mapped in <code>m.direct</code></li><li>otherwise it falls back to any currently joined strict 1:1 DM with that user</li><li>if no healthy DM exists, it creates a fresh direct room and rewrites <code>m.direct</code> to point at it</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“The repair flow does not delete old rooms automatically. It only picks the healthy DM and updates the mapping so new Ma…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>The repair flow does not delete old rooms automatically. It only picks the healthy DM and updates the mapping so new Matrix sends, verification notices, and other direct-message flows target the right room again.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-14">
-          <div class="section-heading">
-            <p class="section-kicker">第 14 站</p>
-            <h2>Threads</h2>
-            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>你理解的是能力边界，不只是功能名字。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Matrix supports native Matrix threads for both automatic replies and 小纸条消息-工具小帮手 sends.”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Matrix supports native Matrix threads for both automatic replies and 小纸条消息-工具小帮手 sends.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Matrix supports native Matrix threads for both automatic replies and message-tool sends.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Threads”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：threadReplies: &quot;off&quot; keeps replies top-le…、threadReplies: &quot;inbound&quot; replies inside a…、threadReplies: &quot;always&quot; keeps room replie…、Inbound threaded 小纸条消息s include the threa…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>threadReplies: &quot;off&quot;</code> keeps replies top-level.</li><li><code>threadReplies: &quot;inbound&quot;</code> replies inside a thread only when the inbound message was already in that thread.</li><li><code>threadReplies: &quot;always&quot;</code> keeps room replies in a thread rooted at the triggering message.</li><li>Inbound threaded messages include the thread root message as extra agent context.</li><li>Message-tool sends now auto-inherit the current Matrix thread when the target is the same room, or the same DM user target, unless an explicit <code>threadId</code> is provided.</li><li>Runtime thread bindings are supported for Matrix. <code>/focus</code>, <code>/unfocus</code>, <code>/agents</code>, <code>/session idle</code>, <code>/session max-age</code>, and thread-bound <code>/acp spawn</code> now work in Matrix rooms and DMs.</li><li>Top-level Matrix room/DM <code>/focus</code> creates a new Matrix thread and binds it to the target session when <code>threadBindings.spawnSubagentSessions=true</code>.</li><li>Running <code>/focus</code> or <code>/acp spawn --thread here</code> inside an existing Matrix thread binds that current thread instead.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-15">
-          <div class="section-heading">
-            <p class="section-kicker">第 15 站</p>
-            <h2>ACP conversation bindings</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Matrix rooms, DMs, and existing Matrix threads can be turned into durable ACP workspaces without changing the chat surf…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Matrix rooms, DMs, and existing Matrix threads can be turned into durable ACP workspaces without changing the chat surf…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Matrix rooms, DMs, and existing Matrix threads can be turned into durable ACP workspaces without changing the chat surface.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Fast operator flow:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Fast operator flow:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“ACP conversation bindings”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Run /acp spawn codex --bind here inside t…、In a top-level Matrix DM or room, the cur…、Inside an existing Matrix thread, --bind…、/new and /reset reset the same bound ACP…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Run <code>/acp spawn codex --bind here</code> inside the Matrix DM, room, or existing thread you want to keep using.</li><li>In a top-level Matrix DM or room, the current DM/room stays the chat surface and future messages route to the spawned ACP session.</li><li>Inside an existing Matrix thread, <code>--bind here</code> binds that current thread in place.</li><li><code>/new</code> and <code>/reset</code> reset the same bound ACP session in place.</li><li><code>/acp close</code> closes the ACP session and removes the binding.</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Notes:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Notes:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“ACP conversation bindings”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：--bind here does not create a child Matri…、threadBindings.spawnAcpSessions is only r…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>--bind here</code> does not create a child Matrix thread.</li><li><code>threadBindings.spawnAcpSessions</code> is only required for <code>/acp spawn --thread auto|here</code>, where OpenClaw needs to create or bind a child Matrix thread.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-16">
-          <div class="section-heading">
-            <p class="section-kicker">第 16 站</p>
-            <h2>Thread Binding 设置说明书</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Matrix inherits global defaults from session.threadBindings, and also supports per-消息通道 overrides: Matrix thread-bound…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Matrix inherits global defaults from session.threadBindings, and also supports per-消息通道 overrides:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Matrix inherits global defaults from <code>session.threadBindings</code>, and also supports per-channel overrides:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Thread Binding Config”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：threadBindings.enabled、threadBindings.idleHours、threadBindings.maxAgeHours、threadBindings.spawnSub机器人朋友Sessions。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>threadBindings.enabled</code></li><li><code>threadBindings.idleHours</code></li><li><code>threadBindings.maxAgeHours</code></li><li><code>threadBindings.spawnSubagentSessions</code></li><li><code>threadBindings.spawnAcpSessions</code></li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Matrix thread-bound spawn flags are opt-in:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Matrix thread-bound spawn flags are opt-in:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Thread Binding Config”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Set threadBindings.spawnSub机器人朋友Sessions:…、Set threadBindings.spawnAcpSessions: true…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Set <code>threadBindings.spawnSubagentSessions: true</code> to allow top-level <code>/focus</code> to create and bind new Matrix threads.</li><li>Set <code>threadBindings.spawnAcpSessions: true</code> to allow <code>/acp spawn --thread auto|here</code> to bind ACP sessions to Matrix threads.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-17">
-          <div class="section-heading">
-            <p class="section-kicker">第 17 站</p>
-            <h2>Reactions</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Matrix supports outbound reaction actions, inbound reaction notifications, and inbound ack reactions. Ack reactions use…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Matrix supports outbound reaction actions, inbound reaction notifications, and inbound ack reactions.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Matrix supports outbound reaction actions, inbound reaction notifications, and inbound ack reactions.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Reactions”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Outbound reaction 工具小帮手ing is gated by 消息…、react adds a reaction to a specific Matri…、reactions lists the current reaction summ…、emoji=&quot;&quot; removes the bot account&#39;s own re…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Outbound reaction tooling is gated by <code>channels[&quot;matrix&quot;].actions.reactions</code>.</li><li><code>react</code> adds a reaction to a specific Matrix event.</li><li><code>reactions</code> lists the current reaction summary for a specific Matrix event.</li><li><code>emoji=&quot;&quot;</code> removes the bot account&#39;s own reactions on that event.</li><li><code>remove: true</code> removes only the specified emoji reaction from the bot account.</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Ack reactions use the standard OpenClaw resolution order:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Ack reactions use the standard OpenClaw resolution order:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Reactions”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：消息通道s[&quot;matrix&quot;].accounts.&lt;accountId&gt;.ackR…、消息通道s[&quot;matrix&quot;].ackReaction、小纸条消息s.ackReaction、机器人朋友 identity emoji fallback。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>channels[&quot;matrix&quot;].accounts.&lt;accountId&gt;.ackReaction</code></li><li><code>channels[&quot;matrix&quot;].ackReaction</code></li><li><code>messages.ackReaction</code></li><li>agent identity emoji fallback</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Ack reaction scope resolves in this order:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Ack reaction scope resolves in this order:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Reactions”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：消息通道s[&quot;matrix&quot;].accounts.&lt;accountId&gt;.ackR…、消息通道s[&quot;matrix&quot;].ackReactionScope、小纸条消息s.ackReactionScope。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>channels[&quot;matrix&quot;].accounts.&lt;accountId&gt;.ackReactionScope</code></li><li><code>channels[&quot;matrix&quot;].ackReactionScope</code></li><li><code>messages.ackReactionScope</code></li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Reaction notification mode resolves in this order:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Reaction notification mode resolves in this order:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Reactions”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：消息通道s[&quot;matrix&quot;].accounts.&lt;accountId&gt;.reac…、消息通道s[&quot;matrix&quot;].reactionNotifications、default: own。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>channels[&quot;matrix&quot;].accounts.&lt;accountId&gt;.reactionNotifications</code></li><li><code>channels[&quot;matrix&quot;].reactionNotifications</code></li><li>default: <code>own</code></li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Current behavior:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Current behavior:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Reactions”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：reactionNotifications: &quot;own&quot; forwards add…、reactionNotifications: &quot;off&quot; disables rea…、Reaction removals are still not synthesiz…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>reactionNotifications: &quot;own&quot;</code> forwards added <code>m.reaction</code> events when they target bot-authored Matrix messages.</li><li><code>reactionNotifications: &quot;off&quot;</code> disables reaction system events.</li><li>Reaction removals are still not synthesized into system events because Matrix surfaces those as redactions, not as standalone <code>m.reaction</code> removals.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-18">
-          <div class="section-heading">
-            <p class="section-kicker">第 18 站</p>
-            <h2>DM and room policy example</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“See 大家一起的房间s for mention-gating and allowlist behavior. Pairing example for Matrix DMs: If an unapproved Matrix user ke…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“channels”贴标签，意思是把它设置成“{”。</li><li>这里在给“matrix”贴标签，意思是把它设置成“{”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json5">{
-  channels: {
-    matrix: {
-      dm: {
-        policy: &quot;allowlist&quot;,
-        allowFrom: [&quot;@admin:example.org&quot;],
-      },
-      groupPolicy: &quot;allowlist&quot;,
-      groupAllowFrom: [&quot;@admin:example.org&quot;],
-      groups: {
-        &quot;!roomid:example.org&quot;: {
-          requireMention: true,
-        },
-      },
-    },
-  },
-}</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“See 大家一起的房间s for mention-gating and allowlist behavior.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>See <a href="/channels/groups" target="_blank" rel="noreferrer">Groups</a> for mention-gating and allowlist behavior.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Pairing example for Matrix DMs:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Pairing example for Matrix DMs:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一句直接对 OpenClaw 说的话，就像对小助手下达任务。</p>
-        <ul class="code-steps">
-          <li>这一句是在直接叫 OpenClaw 做事：“openclaw pairing list matrix”。你可以把它想成对机器人说的完整命令。</li><li>这一句是在直接叫 OpenClaw 做事：“openclaw pairing approve matrix &lt;CODE&gt;”。你可以把它想成对机器人说的完整命令。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">openclaw pairing list matrix
-openclaw pairing approve matrix &lt;CODE&gt;</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“If an unapproved Matrix user keeps messaging you before approval, OpenClaw reuses the same pending pairing code and may…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>If an unapproved Matrix user keeps messaging you before approval, OpenClaw reuses the same pending pairing code and may send a reminder reply again after a short cooldown instead of minting a new code.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“See Pairing for the shared DM pairing flow and storage layout.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>See <a href="/channels/pairing" target="_blank" rel="noreferrer">Pairing</a> for the shared DM pairing flow and storage layout.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-19">
-          <div class="section-heading">
-            <p class="section-kicker">第 19 站</p>
-            <h2>Multi-account example</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Top-level 消息通道s.matrix values act as defaults for named accounts unless an account overrides them. Set defaultAccount w…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“channels”贴标签，意思是把它设置成“{”。</li><li>这里在给“matrix”贴标签，意思是把它设置成“{”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json5">{
-  channels: {
-    matrix: {
-      enabled: true,
-      defaultAccount: &quot;assistant&quot;,
-      dm: { policy: &quot;pairing&quot; },
-      accounts: {
-        assistant: {
-          homeserver: &quot;https://matrix.example.org&quot;,
-          accessToken: &quot;syt_assistant_xxx&quot;,
-          encryption: true,
-        },
-        alerts: {
-          homeserver: &quot;https://matrix.example.org&quot;,
-          accessToken: &quot;syt_alerts_xxx&quot;,
-          dm: {
-            policy: &quot;allowlist&quot;,
-            allowFrom: [&quot;@ops:example.org&quot;],
-          },
-        },
-      },
-    },
-  },
-}</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Top-level 消息通道s.matrix values act as defaults for named accounts unless an account overrides them. Set defaultAccount w…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Top-level <code>channels.matrix</code> values act as defaults for named accounts unless an account overrides them. Set <code>defaultAccount</code> when you want OpenClaw to prefer one named Matrix account for implicit routing, probing, and CLI operations. If you configure multiple named accounts, set <code>defaultAccount</code> or pass <code>--account &lt;id&gt;</code> for CLI commands that rely on implicit account selection. Pass <code>--account &lt;id&gt;</code> to <code>openclaw matrix verify ...</code> and <code>openclaw matrix devices ...</code> when you want to override that implicit selection for one command.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-20">
-          <div class="section-heading">
-            <p class="section-kicker">第 20 站</p>
-            <h2>Private/LAN home大房子服务器s</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“By default, OpenClaw blocks private/internal Matrix home大房子服务器s for SSRF protection unless you explicitly opt in per ac…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“By default, OpenClaw blocks private/internal Matrix home大房子服务器s for SSRF protection unless you explicitly opt in per ac…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>By default, OpenClaw blocks private/internal Matrix homeservers for SSRF protection unless you explicitly opt in per account.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“If your home大房子服务器 runs on localhost, a LAN/Tailscale IP, or an internal hostname, enable allowPrivateNetwork for that…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>If your homeserver runs on localhost, a LAN/Tailscale IP, or an internal hostname, enable <code>allowPrivateNetwork</code> for that Matrix account:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“channels”贴标签，意思是把它设置成“{”。</li><li>这里在给“matrix”贴标签，意思是把它设置成“{”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json5">{
-  channels: {
-    matrix: {
-      homeserver: &quot;http://matrix-synapse:8008&quot;,
-      allowPrivateNetwork: true,
-      accessToken: &quot;syt_internal_xxx&quot;,
-    },
-  },
-}</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“CLI setup example:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>CLI setup example:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一句直接对 OpenClaw 说的话，就像对小助手下达任务。</p>
-        <ul class="code-steps">
-          <li>这一句是在直接叫 OpenClaw 做事：“openclaw matrix account add \”。你可以把它想成对机器人说的完整命令。</li><li>这一行“--account ops \”是当前步骤要交给电脑的一小块提示。</li><li>这里在给“--homeserver http”贴标签，意思是把它设置成“//matrix-synapse:8008 \”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">openclaw matrix account add \
-  --account ops \
-  --homeserver http://matrix-synapse:8008 \
-  --allow-private-network \
-  --access-token syt_ops_xxx</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“This opt-in only allows trusted private/internal targets. Public cleartext home大房子服务器s such as http://matrix.example.or…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>This opt-in only allows trusted private/internal targets. Public cleartext homeservers such as <code>http://matrix.example.org:8008</code> remain blocked. Prefer <code>https://</code> whenever possible.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-21">
-          <div class="section-heading">
-            <p class="section-kicker">第 21 站</p>
-            <h2>Target resolution</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Matrix accepts these target forms anywhere OpenClaw asks you for a room or user target: Live directory lookup uses the…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Matrix accepts these target forms anywhere OpenClaw asks you for a room or user target:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Matrix accepts these target forms anywhere OpenClaw asks you for a room or user target:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Target resolution”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Users: @user:大房子服务器, user:@user:大房子服务器, o…、Rooms: !room:大房子服务器, room:!room:大房子服务器, o…、Aliases: #alias:大房子服务器, 消息通道:#alias:大房子服务…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Users: <code>@user:server</code>, <code>user:@user:server</code>, or <code>matrix:user:@user:server</code></li><li>Rooms: <code>!room:server</code>, <code>room:!room:server</code>, or <code>matrix:room:!room:server</code></li><li>Aliases: <code>#alias:server</code>, <code>channel:#alias:server</code>, or <code>matrix:channel:#alias:server</code></li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Live directory lookup uses the logged-in Matrix account:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Live directory lookup uses the logged-in Matrix account:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Target resolution”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：User lookups query the Matrix user direct…、Room lookups accept explicit room IDs and…、Joined-room name lookup is best-effort. I…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>User lookups query the Matrix user directory on that homeserver.</li><li>Room lookups accept explicit room IDs and aliases directly, then fall back to searching joined room names for that account.</li><li>Joined-room name lookup is best-effort. If a room name cannot be resolved to an ID or alias, it is ignored by runtime allowlist resolution.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-22">
-          <div class="section-heading">
-            <p class="section-kicker">第 22 站</p>
-            <h2>设置说明书uration reference</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Configuration reference”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：enabled: enable or disable the 消息通道.、name: optional label for the account.、defaultAccount: preferred account ID when…、home大房子服务器: home大房子服务器 URL, for example h…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>enabled</code>: enable or disable the channel.</li><li><code>name</code>: optional label for the account.</li><li><code>defaultAccount</code>: preferred account ID when multiple Matrix accounts are configured.</li><li><code>homeserver</code>: homeserver URL, for example <code>https://matrix.example.org</code>.</li><li><code>allowPrivateNetwork</code>: allow this Matrix account to connect to private/internal homeservers. Enable this when the homeserver resolves to <code>localhost</code>, a LAN/Tailscale IP, or an internal host such as <code>matrix-synapse</code>.</li><li><code>userId</code>: full Matrix user ID, for example <code>@bot:example.org</code>.</li><li><code>accessToken</code>: access token for token-based auth. Plaintext values and SecretRef values are supported for <code>channels.matrix.accessToken</code> and <code>channels.matrix.accounts.&lt;id&gt;.accessToken</code> across env/file/exec providers. See <a href="/gateway/secrets" target="_blank" rel="noreferrer">Secrets Management</a>.</li><li><code>password</code>: password for password-based login. Plaintext values and SecretRef values are supported.</li><li><code>deviceId</code>: explicit Matrix device ID.</li><li><code>deviceName</code>: device display name for password login.</li><li><code>avatarUrl</code>: stored self-avatar URL for profile sync and <code>set-profile</code> updates.</li><li><code>initialSyncLimit</code>: startup sync event limit.</li><li><code>encryption</code>: enable E2EE.</li><li><code>allowlistOnly</code>: force allowlist-only behavior for DMs and rooms.</li><li><code>groupPolicy</code>: <code>open</code>, <code>allowlist</code>, or <code>disabled</code>.</li><li><code>groupAllowFrom</code>: allowlist of user IDs for room traffic.</li><li><code>groupAllowFrom</code> entries should be full Matrix user IDs. Unresolved names are ignored at runtime.</li><li><code>replyToMode</code>: <code>off</code>, <code>first</code>, or <code>all</code>.</li><li><code>threadReplies</code>: <code>off</code>, <code>inbound</code>, or <code>always</code>.</li><li><code>threadBindings</code>: per-channel overrides for thread-bound session routing and lifecycle.</li><li><code>startupVerification</code>: automatic self-verification request mode on startup (<code>if-unverified</code>, <code>off</code>).</li><li><code>startupVerificationCooldownHours</code>: cooldown before retrying automatic startup verification requests.</li><li><code>textChunkLimit</code>: outbound message chunk size.</li><li><code>chunkMode</code>: <code>length</code> or <code>newline</code>.</li><li><code>responsePrefix</code>: optional message prefix for outbound replies.</li><li><code>ackReaction</code>: optional ack reaction override for this channel/account.</li><li><code>ackReactionScope</code>: optional ack reaction scope override (<code>group-mentions</code>, <code>group-all</code>, <code>direct</code>, <code>all</code>, <code>none</code>, <code>off</code>).</li><li><code>reactionNotifications</code>: inbound reaction notification mode (<code>own</code>, <code>off</code>).</li><li><code>mediaMaxMb</code>: outbound media size cap in MB.</li><li><code>autoJoin</code>: invite auto-join policy (<code>always</code>, <code>allowlist</code>, <code>off</code>). Default: <code>off</code>.</li><li><code>autoJoinAllowlist</code>: rooms/aliases allowed when <code>autoJoin</code> is <code>allowlist</code>. Alias entries are resolved to room IDs during invite handling; OpenClaw does not trust alias state claimed by the invited room.</li><li><code>dm</code>: DM policy block (<code>enabled</code>, <code>policy</code>, <code>allowFrom</code>).</li><li><code>dm.allowFrom</code> entries should be full Matrix user IDs unless you already resolved them through live directory lookup.</li><li><code>accounts</code>: named per-account overrides. Top-level <code>channels.matrix</code> values act as defaults for these entries.</li><li><code>groups</code>: per-room policy map. Prefer room IDs or aliases; unresolved room names are ignored at runtime. Session/group identity uses the stable room ID after resolution, while human-readable labels still come from room names.</li><li><code>rooms</code>: legacy alias for <code>groups</code>.</li><li><code>actions</code>: per-action tool gating (<code>messages</code>, <code>reactions</code>, <code>pins</code>, <code>profile</code>, <code>memberInfo</code>, <code>channelInfo</code>, <code>verification</code>).</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-    <section class="section-shell">
-      <div class="ad-placeholder">
-        <p>这里预留给未来的 Google AdSense 模块。</p>
-        <code>&lt;!-- ADSENSE_SNIPPET --&gt;</code>
-      </div>
-    </section>
-  
 
       <footer class="page-footer">
         <div>
