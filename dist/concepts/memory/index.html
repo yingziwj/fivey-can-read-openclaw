@@ -3970,283 +3970,168 @@
   
       </div>
 
-      
-    <section class="section-shell">
-      <div class="overview-card">
-        <div>
-          <p class="section-kicker">先听这页的人话版</p>
-          <h2>Memory</h2>
-          <p>这一页像一本关于“Memory”的小绘本，它先告诉我们这位机器人朋友会做什么，再一步一步解释什么时候该这样做。 你可以先把它想成：Memory。</p>
-          <p>如果把这页当成“给普通人看的版本”，你最应该带走的是：它到底在教你一件什么事、什么时候要这样做、以及哪里最容易踩坑。</p>
-        </div>
-        <div class="overview-meta">
-          <span>原始路径：/concepts/memory</span>
-          <span>章节数量：6</span>
-          <a href="https://docs.openclaw.ai/concepts/memory" target="_blank" rel="noreferrer">查看原文</a>
-        </div>
-      </div>
-    </section>
-    
-        <section class="section-shell" id="section-1">
-          <div class="section-heading">
-            <p class="section-kicker">第 1 站</p>
-            <h2>Start Here</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Memory OpenClaw memory is **plain Markdown in the 机器人朋友 workspace**. The files are the source of truth; the 聪明脑袋模型 only…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Memory”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p># Memory</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“OpenClaw memory is **plain Markdown in the 机器人朋友 workspace**. The files are the source of truth; the 聪明脑袋模型 only &quot;remem…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>OpenClaw memory is **plain Markdown in the agent workspace**. The files are the source of truth; the model only &quot;remembers&quot; what gets written to disk.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Memory search 工具小帮手s are provided by the active memory 新本领插件 (default: memory-core). Disable memory 新本领插件s with 新本领插件s.…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Memory search tools are provided by the active memory plugin (default: <code>memory-core</code>). Disable memory plugins with <code>plugins.slots.memory = &quot;none&quot;</code>.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-2">
-          <div class="section-heading">
-            <p class="section-kicker">第 2 站</p>
-            <h2>Memory files (Markdown)</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“The default workspace layout uses two memory layers: These files live under the workspace (机器人朋友s.defaults.workspace, d…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“The default workspace layout uses two memory layers:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>The default workspace layout uses two memory layers:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Memory files (Markdown)”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：memory/YYYY-MM-DD.md、Daily log (append-only).、Read today + yesterday at session start.、MEMORY.md (optional)。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>memory/YYYY-MM-DD.md</code></li><li>Daily log (append-only).</li><li>Read today + yesterday at session start.</li><li><code>MEMORY.md</code> (optional)</li><li>Curated long-term memory.</li><li>If both <code>MEMORY.md</code> and <code>memory.md</code> exist at the workspace root, OpenClaw loads both (deduplicated by realpath so symlinks pointing to the same file are not injected twice).</li><li>**Only load in the main, private session** (never in group contexts).</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“These files live under the workspace (机器人朋友s.defaults.workspace, default ~/.openclaw/workspace). See 机器人朋友 workspace fo…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>These files live under the workspace (<code>agents.defaults.workspace</code>, default <code>~/.openclaw/workspace</code>). See <a href="/concepts/agent-workspace" target="_blank" rel="noreferrer">Agent workspace</a> for the full layout.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-3">
-          <div class="section-heading">
-            <p class="section-kicker">第 3 站</p>
-            <h2>Memory 工具小帮手s</h2>
-            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>你理解的是能力边界，不只是功能名字。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“OpenClaw exposes two 机器人朋友-facing 工具小帮手s for these Markdown files: memory_get now **degrades gracefully when a file doe…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“OpenClaw exposes two 机器人朋友-facing 工具小帮手s for these Markdown files:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>OpenClaw exposes two agent-facing tools for these Markdown files:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Memory tools”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：memory_search -- semantic recall over ind…、memory_get -- targeted read of a specific…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>memory_search</code> -- semantic recall over indexed snippets.</li><li><code>memory_get</code> -- targeted read of a specific Markdown file/line range.</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“memory_get now **degrades gracefully when a file doesn&#39;t exist** (for example, today&#39;s daily log before the first write…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p><code>memory_get</code> now **degrades gracefully when a file doesn&#39;t exist** (for example, today&#39;s daily log before the first write). Both the builtin manager and the QMD backend return <code>{ text: &quot;&quot;, path }</code> instead of throwing <code>ENOENT</code>, so agents can handle &quot;nothing recorded yet&quot; and continue their workflow without wrapping the tool call in try/catch logic.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-4">
-          <div class="section-heading">
-            <p class="section-kicker">第 4 站</p>
-            <h2>When to write memory</h2>
-            <p>这一节主要在解释“When to write memory”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“When to write memory”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“When to write memory”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Decisions, preferences, and durable facts…、Day-to-day notes and running context go t…、If someone says &quot;remember this,&quot; write it…、This area is still evolving. It helps to…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Decisions, preferences, and durable facts go to <code>MEMORY.md</code>.</li><li>Day-to-day notes and running context go to <code>memory/YYYY-MM-DD.md</code>.</li><li>If someone says &quot;remember this,&quot; write it down (do not keep it in RAM).</li><li>This area is still evolving. It helps to remind the model to store memories; it will know what to do.</li><li>If you want something to stick, **ask the bot to write it** into memory.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-5">
-          <div class="section-heading">
-            <p class="section-kicker">第 5 站</p>
-            <h2>Automatic memory flush (pre-compaction ping)</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“When a session is **close to auto-compaction**, OpenClaw triggers a **silent, 机器人朋友ic turn** that reminds the 聪明脑袋模型 to…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“When a session is **close to auto-compaction**, OpenClaw triggers a **silent, 机器人朋友ic turn** that reminds the 聪明脑袋模型 to…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>When a session is **close to auto-compaction**, OpenClaw triggers a **silent, agentic turn** that reminds the model to write durable memory **before** the context is compacted. The default prompts explicitly say the model *may reply*, but usually <code>NO_REPLY</code> is the correct response so the user never sees this turn. The active memory plugin owns the prompt/path policy for that flush; the default <code>memory-core</code> plugin writes to the canonical daily file under <code>memory/YYYY-MM-DD.md</code>.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“This is controlled by 机器人朋友s.defaults.compaction.memoryFlush:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>This is controlled by <code>agents.defaults.compaction.memoryFlush</code>:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“agents”贴标签，意思是把它设置成“{”。</li><li>这里在给“defaults”贴标签，意思是把它设置成“{”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json5">{
+      <section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>🗂 Memory 不是脑袋里的记忆，它更像 OpenClaw 的小仓库</h2>
+      <p>OpenClaw 的 memory 不住在大脑里，而是住在工作区的 Markdown 文件里。你写进去，它就留下来；你不写进去，它就不会自己凭空记住。</p>
+      <p>所以这页真正讲的是：哪些东西应该存进仓库，仓库长什么样，谁来搜，谁来取，什么时候系统还会先提醒你“快把重要东西记下来”。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合第一次想弄懂“什么才算真的记住”</span>
+      <span>重点是文件、规则和写入时机，不是抽象记忆比喻</span>
+      <a href="https://docs.openclaw.ai/concepts/memory" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一站</p>
+    <h2>📝 Memory 的原料不是神秘数据库，而是普通 Markdown</h2>
+    <p>原文开头说得很清楚：memory 就是工作区里的 Markdown 文件。文件本身就是事实来源。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">📘</span>
+      <h2>每日日志</h2>
+      <p><code>memory/YYYY-MM-DD.md</code> 像每天一本小日记，专门记当天发生的事。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🧾</span>
+      <h2>长期记忆</h2>
+      <p><code>MEMORY.md</code> 像一本总笔记，放长期要保留的偏好、决定和事实。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">📎</span>
+      <h2>仓库在工作区里</h2>
+      <p>这些文件都放在 agent workspace 下面，不是飘在云里等你猜。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🔎</span>
+      <h2>文件就是证据</h2>
+      <p>模型只有写进去的才算真正记住。没写到文件里的东西，只是这轮脑子里飘过一下。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二站</p>
+    <h2>📂 默认会读哪几本，原文也说得很朴素</h2>
+    <p>OpenClaw 不是把整个仓库都翻出来，而是有一套默认会看的文件层级。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">🗓 今天和昨天</div>
+      <p>默认会读今天和昨天的 daily log。这样一开始就能接上最近发生的事。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">📌 长期总笔记</div>
+      <p>如果有 <code>MEMORY.md</code>，也会一起读。这样老偏好、老决定不会只躲在某一天的日志里。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🛠 配置像在做什么</div>
+      <ul>
+        <li><code>plugins.slots.memory = "none"</code>：像直接把记忆管理员关掉，不再自动搜 memory。</li>
+        <li><code>agents.defaults.workspace</code>：像告诉系统“仓库从哪一间屋子开始找”。</li>
+      </ul>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">📌 这节真正想告诉你</div>
+      <p>memory 不是无限乱读。它只会按规则读默认范围，先把最近和最重要的拿出来。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第三站</p>
+    <h2>🔍 找 memory，不是翻抽屉，而是有两把工具</h2>
+    <p>原文给了两个 agent-facing 工具：一个用来搜，一个用来精读。它们都不是人类手工翻文件，而是给模型用的。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">🔎</span>
+      <h2><code>memory_search</code></h2>
+      <p>像在仓库里问“有没有跟这个意思相近的旧记录”。它适合语义搜索，不一定非要一模一样的字。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">📄</span>
+      <h2><code>memory_get</code></h2>
+      <p>像把某一页文件直接拿出来看。你可以指定文件和行号范围。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🧯</span>
+      <h2>找不到也不炸</h2>
+      <p>原文特别提到：文件不存在时会优雅返回空文本，不会直接报错炸掉流程。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🧠</span>
+      <h2>这很像谁在干活</h2>
+      <p>不是人类手动一页一页翻，而是让 memory 插件帮模型自己找。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第四站</p>
+    <h2>✍️ 什么时候该写进 memory</h2>
+    <p>原文给了很实用的规则：能长期影响后面工作的，就应该写进去，不要只记在当下会话里。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">🧭 偏好</div>
+      <p>比如用户喜欢哪种风格、哪个称呼、哪个模板，这类东西就该放进长期记忆。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🧾 决定</div>
+      <p>做过什么选择、定过什么规则、以后要遵守什么约定，也应该记下来。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">📌 别只留在脑子里</div>
+      <p>原文直接说：如果你想让东西真的留下，就得让 bot 写进 memory。只在对话里说过一遍，不算真的保存。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🛠 命令像在做什么</div>
+      <p>这页没有很重的命令操作，但核心动作就是“写文件”。比起记在心里，落到 <code>MEMORY.md</code> 或当天日志里更可靠。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第五站</p>
+    <h2>🧹 接近压缩前，系统会轻轻提醒你先整理一份长期笔记</h2>
+    <p>这段很像贴心小秘书：在上下文快满的时候，OpenClaw 会悄悄提醒模型，先把该留下的东西写进 memory，再去做压缩。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">🔔</span>
+      <h2>快满了会提醒</h2>
+      <p>当会话快到 auto-compaction 附近时，系统会触发一个静默的提醒回合。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">📝</span>
+      <h2>先写长期的</h2>
+      <p>提醒内容就是：把真正值得长期保留的东西写进 daily log 或总笔记。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🤫</span>
+      <h2>通常不需要回话</h2>
+      <p>原文说得很明确，这轮通常应该返回 <code>NO_REPLY</code>，让用户看不到多余噪音。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🏠</span>
+      <h2>仓库得能写</h2>
+      <p>如果 workspace 只读，这个提醒就会跳过。因为没地方写，也就没法存。</p>
+    </article>
+  </div>
+  <div class="source-card">
+    <div class="story-card-label">🛠 配置像在做什么</div>
+    <pre><code class="language-json5">{
   agents: {
     defaults: {
       compaction: {
@@ -4254,126 +4139,53 @@
         memoryFlush: {
           enabled: true,
           softThresholdTokens: 4000,
-          systemPrompt: &quot;Session nearing compaction. Store durable memories now.&quot;,
-          prompt: &quot;Write any lasting notes to memory/YYYY-MM-DD.md; reply with NO_REPLY if nothing to store.&quot;,
+          systemPrompt: "Session nearing compaction. Store durable memories now.",
+          prompt: "Write any lasting notes to memory/YYYY-MM-DD.md; reply with NO_REPLY if nothing to store.",
         },
       },
     },
   },
 }</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Details:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Details:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“contextWindow - reserveTokensFloor - softThresholdTokens.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p><code>contextWindow - reserveTokensFloor - softThresholdTokens</code>.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“workspaceAccess: &quot;ro&quot; or &quot;none&quot;, the flush is skipped.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p><code>workspaceAccess: &quot;ro&quot;</code> or <code>&quot;none&quot;</code>, the flush is skipped.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Automatic memory flush (pre-compaction ping)”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：**Soft threshold**: flush triggers when t…、**Silent** by default: prompts include NO…、**Two prompts**: a user prompt plus a sys…、**One flush per compaction cycle** (track…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>**Soft threshold**: flush triggers when the session token estimate crosses</li><li>**Silent** by default: prompts include <code>NO_REPLY</code> so nothing is delivered.</li><li>**Two prompts**: a user prompt plus a system prompt append the reminder.</li><li>**One flush per compaction cycle** (tracked in <code>sessions.json</code>).</li><li>**Workspace must be writable**: if the session runs sandboxed with</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“For the full compaction lifecycle, see Session management + compaction.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>For the full compaction lifecycle, see <a href="/reference/session-management-compaction" target="_blank" rel="noreferrer">Session management + compaction</a>.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-6">
-          <div class="section-heading">
-            <p class="section-kicker">第 6 站</p>
-            <h2>Vector memory search</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“OpenClaw can build a small vector index over MEMORY.md and memory/*.md so semantic queries can find related notes even…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“OpenClaw can build a small vector index over MEMORY.md and memory/*.md so semantic queries can find related notes even…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>OpenClaw can build a small vector index over <code>MEMORY.md</code> and <code>memory/*.md</code> so semantic queries can find related notes even when wording differs. Hybrid search (BM25 + vector) is available for combining semantic matching with exact keyword lookups.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Memory search adapter ids come from the active memory 新本领插件. The default memory-core 新本领插件 ships built-ins for OpenAI,…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Memory search adapter ids come from the active memory plugin. The default <code>memory-core</code> plugin ships built-ins for OpenAI, Gemini, Voyage, Mistral, Ollama, and local GGUF models, plus an optional QMD sidecar backend for advanced retrieval and post-processing features like MMR diversity re-ranking and temporal decay.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“For the full 设置说明书uration reference -- including embedding provider setup, QMD backend, hybrid search tuning, multimoda…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>For the full configuration reference -- including embedding provider setup, QMD backend, hybrid search tuning, multimodal memory, and all config knobs -- see <a href="/reference/memory-config" target="_blank" rel="noreferrer">Memory configuration reference</a>.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-    <section class="section-shell">
-      <div class="ad-placeholder">
-        <p>这里预留给未来的 Google AdSense 模块。</p>
-        <code>&lt;!-- ADSENSE_SNIPPET --&gt;</code>
-      </div>
-    </section>
-  
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第六站</p>
+    <h2>🧠 Vector memory search 是“意思相近也能找到”的那种找法</h2>
+    <p>原文最后一段说明 memory 不只是关键词查找，还能做语义搜索，像你在找“意思差不多的旧记录”。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">🪄 语义搜索</div>
+      <p>不需要字面完全一样，只要意思接近，也可能搜出来。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🔀 混合搜索</div>
+      <p>还可以把关键词和语义一起用，既看意思，也看字面，找得更稳。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🧰 多种后端</div>
+      <p>OpenClaw 的默认 memory 插件支持多种 embedding 提供商和后端，不只一种办法。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">📌 这节真正想告诉你</div>
+      <p>memory 不是单纯“存文件”，它还可以在需要时帮你把旧线索找回来。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">最后总结</p>
+    <h2>🎈 把 Memory 这页压成一句最好记的话</h2>
+    <p>Memory 就是 OpenClaw 真正写进工作区的小仓库，平时能搜、能取、能写，快压缩前还会提醒你把重要东西先存好。</p>
+  </div>
+  <div class="ad-placeholder">
+    <p>如果你下一页只想继续看一页，我建议接着看 <code>/concepts/compaction</code> 或 <code>/concepts/context</code>。因为 memory 负责“存下来”，context 负责“这次带上来”，两页正好是一前一后。</p>
+  </div>
+</section>
+
 
       <footer class="page-footer">
         <div>

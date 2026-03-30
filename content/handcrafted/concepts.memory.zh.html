@@ -1,0 +1,215 @@
+<section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>🗂 Memory 不是脑袋里的记忆，它更像 OpenClaw 的小仓库</h2>
+      <p>OpenClaw 的 memory 不住在大脑里，而是住在工作区的 Markdown 文件里。你写进去，它就留下来；你不写进去，它就不会自己凭空记住。</p>
+      <p>所以这页真正讲的是：哪些东西应该存进仓库，仓库长什么样，谁来搜，谁来取，什么时候系统还会先提醒你“快把重要东西记下来”。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合第一次想弄懂“什么才算真的记住”</span>
+      <span>重点是文件、规则和写入时机，不是抽象记忆比喻</span>
+      <a href="https://docs.openclaw.ai/concepts/memory" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一站</p>
+    <h2>📝 Memory 的原料不是神秘数据库，而是普通 Markdown</h2>
+    <p>原文开头说得很清楚：memory 就是工作区里的 Markdown 文件。文件本身就是事实来源。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">📘</span>
+      <h2>每日日志</h2>
+      <p><code>memory/YYYY-MM-DD.md</code> 像每天一本小日记，专门记当天发生的事。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🧾</span>
+      <h2>长期记忆</h2>
+      <p><code>MEMORY.md</code> 像一本总笔记，放长期要保留的偏好、决定和事实。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">📎</span>
+      <h2>仓库在工作区里</h2>
+      <p>这些文件都放在 agent workspace 下面，不是飘在云里等你猜。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🔎</span>
+      <h2>文件就是证据</h2>
+      <p>模型只有写进去的才算真正记住。没写到文件里的东西，只是这轮脑子里飘过一下。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二站</p>
+    <h2>📂 默认会读哪几本，原文也说得很朴素</h2>
+    <p>OpenClaw 不是把整个仓库都翻出来，而是有一套默认会看的文件层级。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">🗓 今天和昨天</div>
+      <p>默认会读今天和昨天的 daily log。这样一开始就能接上最近发生的事。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">📌 长期总笔记</div>
+      <p>如果有 <code>MEMORY.md</code>，也会一起读。这样老偏好、老决定不会只躲在某一天的日志里。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🛠 配置像在做什么</div>
+      <ul>
+        <li><code>plugins.slots.memory = "none"</code>：像直接把记忆管理员关掉，不再自动搜 memory。</li>
+        <li><code>agents.defaults.workspace</code>：像告诉系统“仓库从哪一间屋子开始找”。</li>
+      </ul>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">📌 这节真正想告诉你</div>
+      <p>memory 不是无限乱读。它只会按规则读默认范围，先把最近和最重要的拿出来。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第三站</p>
+    <h2>🔍 找 memory，不是翻抽屉，而是有两把工具</h2>
+    <p>原文给了两个 agent-facing 工具：一个用来搜，一个用来精读。它们都不是人类手工翻文件，而是给模型用的。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">🔎</span>
+      <h2><code>memory_search</code></h2>
+      <p>像在仓库里问“有没有跟这个意思相近的旧记录”。它适合语义搜索，不一定非要一模一样的字。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">📄</span>
+      <h2><code>memory_get</code></h2>
+      <p>像把某一页文件直接拿出来看。你可以指定文件和行号范围。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🧯</span>
+      <h2>找不到也不炸</h2>
+      <p>原文特别提到：文件不存在时会优雅返回空文本，不会直接报错炸掉流程。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🧠</span>
+      <h2>这很像谁在干活</h2>
+      <p>不是人类手动一页一页翻，而是让 memory 插件帮模型自己找。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第四站</p>
+    <h2>✍️ 什么时候该写进 memory</h2>
+    <p>原文给了很实用的规则：能长期影响后面工作的，就应该写进去，不要只记在当下会话里。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">🧭 偏好</div>
+      <p>比如用户喜欢哪种风格、哪个称呼、哪个模板，这类东西就该放进长期记忆。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🧾 决定</div>
+      <p>做过什么选择、定过什么规则、以后要遵守什么约定，也应该记下来。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">📌 别只留在脑子里</div>
+      <p>原文直接说：如果你想让东西真的留下，就得让 bot 写进 memory。只在对话里说过一遍，不算真的保存。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🛠 命令像在做什么</div>
+      <p>这页没有很重的命令操作，但核心动作就是“写文件”。比起记在心里，落到 <code>MEMORY.md</code> 或当天日志里更可靠。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第五站</p>
+    <h2>🧹 接近压缩前，系统会轻轻提醒你先整理一份长期笔记</h2>
+    <p>这段很像贴心小秘书：在上下文快满的时候，OpenClaw 会悄悄提醒模型，先把该留下的东西写进 memory，再去做压缩。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">🔔</span>
+      <h2>快满了会提醒</h2>
+      <p>当会话快到 auto-compaction 附近时，系统会触发一个静默的提醒回合。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">📝</span>
+      <h2>先写长期的</h2>
+      <p>提醒内容就是：把真正值得长期保留的东西写进 daily log 或总笔记。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🤫</span>
+      <h2>通常不需要回话</h2>
+      <p>原文说得很明确，这轮通常应该返回 <code>NO_REPLY</code>，让用户看不到多余噪音。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🏠</span>
+      <h2>仓库得能写</h2>
+      <p>如果 workspace 只读，这个提醒就会跳过。因为没地方写，也就没法存。</p>
+    </article>
+  </div>
+  <div class="source-card">
+    <div class="story-card-label">🛠 配置像在做什么</div>
+    <pre><code class="language-json5">{
+  agents: {
+    defaults: {
+      compaction: {
+        reserveTokensFloor: 20000,
+        memoryFlush: {
+          enabled: true,
+          softThresholdTokens: 4000,
+          systemPrompt: "Session nearing compaction. Store durable memories now.",
+          prompt: "Write any lasting notes to memory/YYYY-MM-DD.md; reply with NO_REPLY if nothing to store.",
+        },
+      },
+    },
+  },
+}</code></pre>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第六站</p>
+    <h2>🧠 Vector memory search 是“意思相近也能找到”的那种找法</h2>
+    <p>原文最后一段说明 memory 不只是关键词查找，还能做语义搜索，像你在找“意思差不多的旧记录”。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">🪄 语义搜索</div>
+      <p>不需要字面完全一样，只要意思接近，也可能搜出来。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🔀 混合搜索</div>
+      <p>还可以把关键词和语义一起用，既看意思，也看字面，找得更稳。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🧰 多种后端</div>
+      <p>OpenClaw 的默认 memory 插件支持多种 embedding 提供商和后端，不只一种办法。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">📌 这节真正想告诉你</div>
+      <p>memory 不是单纯“存文件”，它还可以在需要时帮你把旧线索找回来。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">最后总结</p>
+    <h2>🎈 把 Memory 这页压成一句最好记的话</h2>
+    <p>Memory 就是 OpenClaw 真正写进工作区的小仓库，平时能搜、能取、能写，快压缩前还会提醒你把重要东西先存好。</p>
+  </div>
+  <div class="ad-placeholder">
+    <p>如果你下一页只想继续看一页，我建议接着看 <code>/concepts/compaction</code> 或 <code>/concepts/context</code>。因为 memory 负责“存下来”，context 负责“这次带上来”，两页正好是一前一后。</p>
+  </div>
+</section>
