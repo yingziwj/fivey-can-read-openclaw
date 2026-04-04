@@ -3970,1138 +3970,234 @@
   
       </div>
 
-      
-    <section class="section-shell">
-      <div class="overview-card">
-        <div>
-          <p class="section-kicker">先听这页的人话版</p>
-          <h2>Sub-Agents</h2>
-          <p>这一页像一本关于“Sub-机器人朋友s”的小绘本，它先告诉我们这位机器人朋友会做什么，再一步一步解释什么时候该这样做。 你可以先把它想成：Sub-机器人朋友s。</p>
-          <p>如果把这页当成“给普通人看的版本”，你最应该带走的是：它到底在教你一件什么事、什么时候要这样做、以及哪里最容易踩坑。</p>
-        </div>
-        <div class="overview-meta">
-          <span>原始路径：/tools/subagents</span>
-          <span>章节数量：19</span>
-          <a href="https://docs.openclaw.ai/tools/subagents" target="_blank" rel="noreferrer">查看原文</a>
-        </div>
-      </div>
-    </section>
-    
-        <section class="section-shell" id="section-1">
-          <div class="section-heading">
-            <p class="section-kicker">第 1 站</p>
-            <h2>Start Here</h2>
-            <p>这一节主要在解释“Start Here”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“Start Here”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Sub-机器人朋友s Sub-机器人朋友s are background 机器人朋友 runs spawned from an existing 机器人朋友 run. They run in their own session (机器人朋…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Sub-机器人朋友s”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p># Sub-agents</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Sub-机器人朋友s are background 机器人朋友 runs spawned from an existing 机器人朋友 run. They run in their own session (机器人朋友:&lt;机器人朋友Id&gt;…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Sub-agents are background agent runs spawned from an existing agent run. They run in their own session (<code>agent:&lt;agentId&gt;:subagent:&lt;uuid&gt;</code>) and, when finished, **announce** their result back to the requester chat channel.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-2">
-          <div class="section-heading">
-            <p class="section-kicker">第 2 站</p>
-            <h2>Slash 魔法口令</h2>
-            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>你理解的是能力边界，不只是功能名字。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Use /sub机器人朋友s to inspect or control sub-机器人朋友 runs for the **current session**: Thread binding controls: These 魔法口令s w…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Use /sub机器人朋友s to inspect or control sub-机器人朋友 runs for the **current session**:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Use <code>/subagents</code> to inspect or control sub-agent runs for the **current session**:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Slash command”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：/sub机器人朋友s list、/sub机器人朋友s kill &lt;id # all&gt;、/sub机器人朋友s log &lt;id #&gt; [limit] [工具小帮手s]、/sub机器人朋友s info &lt;id #&gt;。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>/subagents list</code></li><li><code>/subagents kill &lt;id|#|all&gt;</code></li><li><code>/subagents log &lt;id|#&gt; [limit] [tools]</code></li><li><code>/subagents info &lt;id|#&gt;</code></li><li><code>/subagents send &lt;id|#&gt; &lt;message&gt;</code></li><li><code>/subagents steer &lt;id|#&gt; &lt;message&gt;</code></li><li><code>/subagents spawn &lt;agentId&gt; &lt;task&gt; [--model &lt;model&gt;] [--thinking &lt;level&gt;]</code></li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Thread binding controls:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Thread binding controls:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“These 魔法口令s work on 消息通道s that support persistent thread bindings. See **Thread supporting 消息通道s** below.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>These commands work on channels that support persistent thread bindings. See **Thread supporting channels** below.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Slash command”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：/focus &lt;sub机器人朋友-label session-key sessio…、/unfocus、/机器人朋友s、/session idle &lt;duration off&gt;。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>/focus &lt;subagent-label|session-key|session-id|session-label&gt;</code></li><li><code>/unfocus</code></li><li><code>/agents</code></li><li><code>/session idle &lt;duration|off&gt;</code></li><li><code>/session max-age &lt;duration|off&gt;</code></li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“/sub机器人朋友s info shows run metadata (status, timestamps, session id, transcript path, cleanup).”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p><code>/subagents info</code> shows run metadata (status, timestamps, session id, transcript path, cleanup).</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-3">
-          <div class="section-heading">
-            <p class="section-kicker">第 3 站</p>
-            <h2>Spawn behavior</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“/sub机器人朋友s spawn starts a background sub-机器人朋友 as a user 魔法口令, not an internal relay, and it sends one final completion…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“/sub机器人朋友s spawn starts a background sub-机器人朋友 as a user 魔法口令, not an internal relay, and it sends one final completion…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p><code>/subagents spawn</code> starts a background sub-agent as a user command, not an internal relay, and it sends one final completion update back to the requester chat when the run finishes.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Spawn behavior”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：The spawn 魔法口令 is non-blocking; it return…、On completion, the sub-机器人朋友 announces a…、For manual spawns, delivery is resilient:、OpenClaw tries direct 机器人朋友 delivery firs…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>The spawn command is non-blocking; it returns a run id immediately.</li><li>On completion, the sub-agent announces a summary/result message back to the requester chat channel.</li><li>For manual spawns, delivery is resilient:</li><li>OpenClaw tries direct <code>agent</code> delivery first with a stable idempotency key.</li><li>If direct delivery fails, it falls back to queue routing.</li><li>If queue routing is still not available, the announce is retried with a short exponential backoff before final give-up.</li><li>The completion handoff to the requester session is runtime-generated internal context (not user-authored text) and includes:</li><li><code>Result</code> (<code>assistant</code> reply text, or latest <code>toolResult</code> if the assistant reply is empty)</li><li><code>Status</code> (<code>completed successfully</code> / <code>failed</code> / <code>timed out</code> / <code>unknown</code>)</li><li>compact runtime/token stats</li><li>a delivery instruction telling the requester agent to rewrite in normal assistant voice (not forward raw internal metadata)</li><li><code>--model</code> and <code>--thinking</code> override defaults for that specific run.</li><li>Use <code>info</code>/<code>log</code> to inspect details and output after completion.</li><li><code>/subagents spawn</code> is one-shot mode (<code>mode: &quot;run&quot;</code>). For persistent thread-bound sessions, use <code>sessions_spawn</code> with <code>thread: true</code> and <code>mode: &quot;session&quot;</code>.</li><li>For ACP harness sessions (Codex, Claude Code, Gemini CLI), use <code>sessions_spawn</code> with <code>runtime: &quot;acp&quot;</code> and see <a href="/tools/acp-agents" target="_blank" rel="noreferrer">ACP Agents</a>.</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Primary goals:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Primary goals:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Spawn behavior”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Parallelize &quot;research / long task / slow…、Keep sub-机器人朋友s isolated by default (sess…、Keep the 工具小帮手 surface hard to misuse: su…、Support 设置说明书urable nesting depth for orc…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Parallelize &quot;research / long task / slow tool&quot; work without blocking the main run.</li><li>Keep sub-agents isolated by default (session separation + optional sandboxing).</li><li>Keep the tool surface hard to misuse: sub-agents do **not** get session tools by default.</li><li>Support configurable nesting depth for orchestrator patterns.</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Cost note: each sub-机器人朋友 has its **own** context and token usage. For heavy or repetitive tasks, set a cheaper 聪明脑袋模型…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Cost note: each sub-agent has its **own** context and token usage. For heavy or repetitive tasks, set a cheaper model for sub-agents and keep your main agent on a higher-quality model. You can configure this via <code>agents.defaults.subagents.model</code> or per-agent overrides.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-4">
-          <div class="section-heading">
-            <p class="section-kicker">第 4 站</p>
-            <h2>工具小帮手</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Use sessions_spawn: 工具小帮手 params:”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Use sessions_spawn:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Use <code>sessions_spawn</code>:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Tool”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Starts a sub-机器人朋友 run (deliver: false, g…、Then runs an announce step and posts the…、Default 聪明脑袋模型: inherits the caller unles…、Default thinking: inherits the caller unl…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Starts a sub-agent run (<code>deliver: false</code>, global lane: <code>subagent</code>)</li><li>Then runs an announce step and posts the announce reply to the requester chat channel</li><li>Default model: inherits the caller unless you set <code>agents.defaults.subagents.model</code> (or per-agent <code>agents.list[].subagents.model</code>); an explicit <code>sessions_spawn.model</code> still wins.</li><li>Default thinking: inherits the caller unless you set <code>agents.defaults.subagents.thinking</code> (or per-agent <code>agents.list[].subagents.thinking</code>); an explicit <code>sessions_spawn.thinking</code> still wins.</li><li>Default run timeout: if <code>sessions_spawn.runTimeoutSeconds</code> is omitted, OpenClaw uses <code>agents.defaults.subagents.runTimeoutSeconds</code> when set; otherwise it falls back to <code>0</code> (no timeout).</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“工具小帮手 params:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Tool params:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Tool”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：task (required)、label? (optional)、机器人朋友Id? (optional; spawn under another 机…、聪明脑袋模型? (optional; overrides the sub-机器人朋…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>task</code> (required)</li><li><code>label?</code> (optional)</li><li><code>agentId?</code> (optional; spawn under another agent id if allowed)</li><li><code>model?</code> (optional; overrides the sub-agent model; invalid values are skipped and the sub-agent runs on the default model with a warning in the tool result)</li><li><code>thinking?</code> (optional; overrides thinking level for the sub-agent run)</li><li><code>runTimeoutSeconds?</code> (defaults to <code>agents.defaults.subagents.runTimeoutSeconds</code> when set, otherwise <code>0</code>; when set, the sub-agent run is aborted after N seconds)</li><li><code>thread?</code> (default <code>false</code>; when <code>true</code>, requests channel thread binding for this sub-agent session)</li><li><code>mode?</code> (<code>run|session</code>)</li><li>default is <code>run</code></li><li>if <code>thread: true</code> and <code>mode</code> omitted, default becomes <code>session</code></li><li><code>mode: &quot;session&quot;</code> requires <code>thread: true</code></li><li><code>cleanup?</code> (<code>delete|keep</code>, default <code>keep</code>)</li><li><code>sandbox?</code> (<code>inherit|require</code>, default <code>inherit</code>; <code>require</code> rejects spawn unless target child runtime is sandboxed)</li><li><code>sessions_spawn</code> does **not** accept channel-delivery params (<code>target</code>, <code>channel</code>, <code>to</code>, <code>threadId</code>, <code>replyTo</code>, <code>transport</code>). For delivery, use <code>message</code>/<code>sessions_send</code> from the spawned run.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-5">
-          <div class="section-heading">
-            <p class="section-kicker">第 5 站</p>
-            <h2>Thread-bound sessions</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“When thread bindings are enabled for a 消息通道, a sub-机器人朋友 can stay bound to a thread so follow-up user 小纸条消息s in that th…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“When thread bindings are enabled for a 消息通道, a sub-机器人朋友 can stay bound to a thread so follow-up user 小纸条消息s in that th…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>When thread bindings are enabled for a channel, a sub-agent can stay bound to a thread so follow-up user messages in that thread keep routing to the same sub-agent session.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-6">
-          <div class="section-heading">
-            <p class="section-kicker">第 6 站</p>
-            <h2>Thread supporting 消息通道s</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Quick flow: 1. Spawn with sessions_spawn using thread: true (and optionally mode: &quot;session&quot;). 2. OpenClaw creates or bi…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Thread supporting channels”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Discord (currently the only supported 消息通…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Discord (currently the only supported channel): supports persistent thread-bound subagent sessions (<code>sessions_spawn</code> with <code>thread: true</code>), manual thread controls (<code>/focus</code>, <code>/unfocus</code>, <code>/agents</code>, <code>/session idle</code>, <code>/session max-age</code>), and adapter keys <code>channels.discord.threadBindings.enabled</code>, <code>channels.discord.threadBindings.idleHours</code>, <code>channels.discord.threadBindings.maxAgeHours</code>, and <code>channels.discord.threadBindings.spawnSubagentSessions</code>.</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Quick flow:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Quick flow:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“1. Spawn with sessions_spawn using thread: true (and optionally mode: &quot;session&quot;). 2. OpenClaw creates or binds a thread…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>1. Spawn with <code>sessions_spawn</code> using <code>thread: true</code> (and optionally <code>mode: &quot;session&quot;</code>). 2. OpenClaw creates or binds a thread to that session target in the active channel. 3. Replies and follow-up messages in that thread route to the bound session. 4. Use <code>/session idle</code> to inspect/update inactivity auto-unfocus and <code>/session max-age</code> to control the hard cap. 5. Use <code>/unfocus</code> to detach manually.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Manual controls:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Manual controls:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Thread supporting channels”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：/focus &lt;target&gt; binds the current thread…、/unfocus removes the binding for the curr…、/机器人朋友s lists active runs and binding sta…、/session idle and /session max-age only w…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>/focus &lt;target&gt;</code> binds the current thread (or creates one) to a sub-agent/session target.</li><li><code>/unfocus</code> removes the binding for the current bound thread.</li><li><code>/agents</code> lists active runs and binding state (<code>thread:&lt;id&gt;</code> or <code>unbound</code>).</li><li><code>/session idle</code> and <code>/session max-age</code> only work for focused bound threads.</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“设置说明书 switches:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Config switches:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Thread supporting channels”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Global default: session.threadBindings.en…、消息通道 override and spawn auto-bind keys ar…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Global default: <code>session.threadBindings.enabled</code>, <code>session.threadBindings.idleHours</code>, <code>session.threadBindings.maxAgeHours</code></li><li>Channel override and spawn auto-bind keys are adapter-specific. See **Thread supporting channels** above.</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“See 设置说明书uration Reference and Slash 魔法口令s for current adapter details.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>See <a href="/gateway/configuration-reference" target="_blank" rel="noreferrer">Configuration Reference</a> and <a href="/tools/slash-commands" target="_blank" rel="noreferrer">Slash commands</a> for current adapter details.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Allowlist:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Allowlist:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Thread supporting channels”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：机器人朋友s.list[].sub机器人朋友s.allow机器人朋友s: list…、Sandbox inheritance guard: if the request…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>agents.list[].subagents.allowAgents</code>: list of agent ids that can be targeted via <code>agentId</code> (<code>[&quot;*&quot;]</code> to allow any). Default: only the requester agent.</li><li>Sandbox inheritance guard: if the requester session is sandboxed, <code>sessions_spawn</code> rejects targets that would run unsandboxed.</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Discovery:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Discovery:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Thread supporting channels”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Use 机器人朋友s_list to see which 机器人朋友 ids ar…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Use <code>agents_list</code> to see which agent ids are currently allowed for <code>sessions_spawn</code>.</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Auto-archive:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Auto-archive:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Thread supporting channels”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Sub-机器人朋友 sessions are automatically arch…、Archive uses sessions.delete and renames…、cleanup: &quot;delete&quot; archives immediately af…、Auto-archive is best-effort; pending time…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Sub-agent sessions are automatically archived after <code>agents.defaults.subagents.archiveAfterMinutes</code> (default: 60).</li><li>Archive uses <code>sessions.delete</code> and renames the transcript to <code>*.deleted.&lt;timestamp&gt;</code> (same folder).</li><li><code>cleanup: &quot;delete&quot;</code> archives immediately after announce (still keeps the transcript via rename).</li><li>Auto-archive is best-effort; pending timers are lost if the gateway restarts.</li><li><code>runTimeoutSeconds</code> does **not** auto-archive; it only stops the run. The session remains until auto-archive.</li><li>Auto-archive applies equally to depth-1 and depth-2 sessions.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-7">
-          <div class="section-heading">
-            <p class="section-kicker">第 7 站</p>
-            <h2>Nested Sub-机器人朋友s</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“By default, sub-机器人朋友s cannot spawn their own sub-机器人朋友s (maxSpawnDepth: 1). You can enable one level of nesting by set…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“By default, sub-机器人朋友s cannot spawn their own sub-机器人朋友s (maxSpawnDepth: 1). You can enable one level of nesting by set…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>By default, sub-agents cannot spawn their own sub-agents (<code>maxSpawnDepth: 1</code>). You can enable one level of nesting by setting <code>maxSpawnDepth: 2</code>, which allows the **orchestrator pattern**: main → orchestrator sub-agent → worker sub-sub-agents.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-8">
-          <div class="section-heading">
-            <p class="section-kicker">第 8 站</p>
-            <h2>How to enable</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“agents”贴标签，意思是把它设置成“{”。</li><li>这里在给“defaults”贴标签，意思是把它设置成“{”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json5">{
-  agents: {
-    defaults: {
-      subagents: {
-        maxSpawnDepth: 2, // allow sub-agents to spawn children (default: 1)
-        maxChildrenPerAgent: 5, // max active children per agent session (default: 5)
-        maxConcurrent: 8, // global concurrency lane cap (default: 8)
-        runTimeoutSeconds: 900, // default timeout for sessions_spawn when omitted (0 = no timeout)
-      },
-    },
-  },
-}</code></pre>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-9">
-          <div class="section-heading">
-            <p class="section-kicker">第 9 站</p>
-            <h2>Depth levels</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Depth Session key shape Role Can spawn? ----- -------------------------------------------- ----------------------------…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Depth Session key shape Role Can spawn? ----- -------------------------------------------- ----------------------------…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>| Depth | Session key shape | Role | Can spawn? | | ----- | -------------------------------------------- | --------------------------------------------- | ---------------------------- | | 0 | <code>agent:&lt;id&gt;:main</code> | Main agent | Always | | 1 | <code>agent:&lt;id&gt;:subagent:&lt;uuid&gt;</code> | Sub-agent (orchestrator when depth 2 allowed) | Only if <code>maxSpawnDepth &gt;= 2</code> | | 2 | <code>agent:&lt;id&gt;:subagent:&lt;uuid&gt;:subagent:&lt;uuid&gt;</code> | Sub-sub-agent (leaf worker) | Never |</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-10">
-          <div class="section-heading">
-            <p class="section-kicker">第 10 站</p>
-            <h2>Announce chain</h2>
-            <p>这一节主要在解释“Announce chain”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“Announce chain”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Results flow back up the chain: 1. Depth-2 worker finishes → announces to its parent (depth-1 orchestrator) 2. Depth-1…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Results flow back up the chain:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Results flow back up the chain:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“1. Depth-2 worker finishes → announces to its parent (depth-1 orchestrator) 2. Depth-1 orchestrator receives the announ…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>1. Depth-2 worker finishes → announces to its parent (depth-1 orchestrator) 2. Depth-1 orchestrator receives the announce, synthesizes results, finishes → announces to main 3. Main agent receives the announce and delivers to the user</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Each level only sees announces from its direct children.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Each level only sees announces from its direct children.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-11">
-          <div class="section-heading">
-            <p class="section-kicker">第 11 站</p>
-            <h2>工具小帮手 policy by depth</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Tool policy by depth”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Role and control scope are written into s…、**Depth 1 (orchestrator, when maxSpawnDep…、**Depth 1 (leaf, when maxSpawnDepth == 1)…、**Depth 2 (leaf worker)**: No session 工具小…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Role and control scope are written into session metadata at spawn time. That keeps flat or restored session keys from accidentally regaining orchestrator privileges.</li><li>**Depth 1 (orchestrator, when <code>maxSpawnDepth &gt;= 2</code>)**: Gets <code>sessions_spawn</code>, <code>subagents</code>, <code>sessions_list</code>, <code>sessions_history</code> so it can manage its children. Other session/system tools remain denied.</li><li>**Depth 1 (leaf, when <code>maxSpawnDepth == 1</code>)**: No session tools (current default behavior).</li><li>**Depth 2 (leaf worker)**: No session tools — <code>sessions_spawn</code> is always denied at depth 2. Cannot spawn further children.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-12">
-          <div class="section-heading">
-            <p class="section-kicker">第 12 站</p>
-            <h2>Per-机器人朋友 spawn limit</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Each 机器人朋友 session (at any depth) can have at most maxChildrenPer机器人朋友 (default: 5) active children at a time. This pre…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Each 机器人朋友 session (at any depth) can have at most maxChildrenPer机器人朋友 (default: 5) active children at a time. This pre…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Each agent session (at any depth) can have at most <code>maxChildrenPerAgent</code> (default: 5) active children at a time. This prevents runaway fan-out from a single orchestrator.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-13">
-          <div class="section-heading">
-            <p class="section-kicker">第 13 站</p>
-            <h2>Cascade stop</h2>
-            <p>这一节主要在解释“Cascade stop”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“Cascade stop”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Stopping a depth-1 orchestrator automatically stops all its depth-2 children:”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Stopping a depth-1 orchestrator automatically stops all its depth-2 children:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Stopping a depth-1 orchestrator automatically stops all its depth-2 children:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Cascade stop”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：/stop in the main chat stops all depth-1…、/sub机器人朋友s kill &lt;id&gt; stops a specific sub…、/sub机器人朋友s kill all stops all sub-机器人朋友s…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>/stop</code> in the main chat stops all depth-1 agents and cascades to their depth-2 children.</li><li><code>/subagents kill &lt;id&gt;</code> stops a specific sub-agent and cascades to its children.</li><li><code>/subagents kill all</code> stops all sub-agents for the requester and cascades.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-14">
-          <div class="section-heading">
-            <p class="section-kicker">第 14 站</p>
-            <h2>Authentication</h2>
-            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>你理解的是能力边界，不只是功能名字。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Sub-机器人朋友 auth is resolved by **机器人朋友 id**, not by session type: Note: the merge is additive, so main profiles are alwa…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Sub-机器人朋友 auth is resolved by **机器人朋友 id**, not by session type:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Sub-agent auth is resolved by **agent id**, not by session type:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Authentication”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：The sub-机器人朋友 session key is 机器人朋友:&lt;机器人朋友…、The auth store is loaded from that 机器人朋友&#39;…、The main 机器人朋友&#39;s auth profiles are merged…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>The sub-agent session key is <code>agent:&lt;agentId&gt;:subagent:&lt;uuid&gt;</code>.</li><li>The auth store is loaded from that agent&#39;s <code>agentDir</code>.</li><li>The main agent&#39;s auth profiles are merged in as a **fallback**; agent profiles override main profiles on conflicts.</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Note: the merge is additive, so main profiles are always available as fallbacks. Fully isolated auth per 机器人朋友 is not s…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Note: the merge is additive, so main profiles are always available as fallbacks. Fully isolated auth per agent is not supported yet.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-15">
-          <div class="section-heading">
-            <p class="section-kicker">第 15 站</p>
-            <h2>Announce</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Sub-机器人朋友s report back via an announce step: Announce payloads include a stats line at the end (even when wrapped):”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Sub-机器人朋友s report back via an announce step:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Sub-agents report back via an announce step:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Announce”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：The announce step runs inside the sub-机器人…、If the sub-机器人朋友 replies exactly ANNOUNCE…、Otherwise delivery depends on requester d…、top-level requester sessions use a follow…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>The announce step runs inside the sub-agent session (not the requester session).</li><li>If the sub-agent replies exactly <code>ANNOUNCE_SKIP</code>, nothing is posted.</li><li>Otherwise delivery depends on requester depth:</li><li>top-level requester sessions use a follow-up <code>agent</code> call with external delivery (<code>deliver=true</code>)</li><li>nested requester subagent sessions receive an internal follow-up injection (<code>deliver=false</code>) so the orchestrator can synthesize child results in-session</li><li>if a nested requester subagent session is gone, OpenClaw falls back to that session&#39;s requester when available</li><li>Child completion aggregation is scoped to the current requester run when building nested completion findings, preventing stale prior-run child outputs from leaking into the current announce.</li><li>Announce replies preserve thread/topic routing when available on channel adapters.</li><li>Announce context is normalized to a stable internal event block:</li><li>source (<code>subagent</code> or <code>cron</code>)</li><li>child session key/id</li><li>announce type + task label</li><li>status line derived from runtime outcome (<code>success</code>, <code>error</code>, <code>timeout</code>, or <code>unknown</code>)</li><li>result content from the announce step (or <code>(no output)</code> if missing)</li><li>a follow-up instruction describing when to reply vs. stay silent</li><li><code>Status</code> is not inferred from model output; it comes from runtime outcome signals.</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Announce payloads include a stats line at the end (even when wrapped):”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Announce payloads include a stats line at the end (even when wrapped):</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Announce”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Runtime (e.g., runtime 5m12s)、Token usage (input/output/total)、Estimated cost when 聪明脑袋模型 pricing is 设置说…、sessionKey, sessionId, and transcript pat…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Runtime (e.g., <code>runtime 5m12s</code>)</li><li>Token usage (input/output/total)</li><li>Estimated cost when model pricing is configured (<code>models.providers.*.models[].cost</code>)</li><li><code>sessionKey</code>, <code>sessionId</code>, and transcript path (so the main agent can fetch history via <code>sessions_history</code> or inspect the file on disk)</li><li>Internal metadata is meant for orchestration only; user-facing replies should be rewritten in normal assistant voice.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-16">
-          <div class="section-heading">
-            <p class="section-kicker">第 16 站</p>
-            <h2>工具小帮手 Policy (sub-机器人朋友 工具小帮手s)</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“By default, sub-机器人朋友s get **all 工具小帮手s except session 工具小帮手s** and system 工具小帮手s: When maxSpawnDepth &gt;= 2, depth-1 orc…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“By default, sub-机器人朋友s get **all 工具小帮手s except session 工具小帮手s** and system 工具小帮手s:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>By default, sub-agents get **all tools except session tools** and system tools:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Tool Policy (sub-agent tools)”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：sessions_list、sessions_history、sessions_send、sessions_spawn。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>sessions_list</code></li><li><code>sessions_history</code></li><li><code>sessions_send</code></li><li><code>sessions_spawn</code></li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“When maxSpawnDepth &gt;= 2, depth-1 orchestrator sub-机器人朋友s additionally receive sessions_spawn, sub机器人朋友s, sessions_list,…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>When <code>maxSpawnDepth &gt;= 2</code>, depth-1 orchestrator sub-agents additionally receive <code>sessions_spawn</code>, <code>subagents</code>, <code>sessions_list</code>, and <code>sessions_history</code> so they can manage their children.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Override via 设置说明书:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Override via config:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“agents”贴标签，意思是把它设置成“{”。</li><li>这里在给“defaults”贴标签，意思是把它设置成“{”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json5">{
-  agents: {
-    defaults: {
-      subagents: {
-        maxConcurrent: 1,
-      },
-    },
-  },
-  tools: {
-    subagents: {
-      tools: {
-        // deny wins
-        deny: [&quot;gateway&quot;, &quot;cron&quot;],
-        // if allow is set, it becomes allow-only (deny still wins)
-        // allow: [&quot;read&quot;, &quot;exec&quot;, &quot;process&quot;]
-      },
-    },
-  },
-}</code></pre>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-17">
-          <div class="section-heading">
-            <p class="section-kicker">第 17 站</p>
-            <h2>Concurrency</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Sub-机器人朋友s use a dedicated in-process queue lane:”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Sub-机器人朋友s use a dedicated in-process queue lane:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Sub-agents use a dedicated in-process queue lane:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Concurrency”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Lane name: sub机器人朋友、Concurrency: 机器人朋友s.defaults.sub机器人朋友s.ma…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Lane name: <code>subagent</code></li><li>Concurrency: <code>agents.defaults.subagents.maxConcurrent</code> (default <code>8</code>)</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-18">
-          <div class="section-heading">
-            <p class="section-kicker">第 18 站</p>
-            <h2>Stopping</h2>
-            <p>这一节主要在解释“Stopping”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“Stopping”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Stopping”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Sending /stop in the requester chat abort…、/sub机器人朋友s kill &lt;id&gt; stops a specific sub…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Sending <code>/stop</code> in the requester chat aborts the requester session and stops any active sub-agent runs spawned from it, cascading to nested children.</li><li><code>/subagents kill &lt;id&gt;</code> stops a specific sub-agent and cascades to its children.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-19">
-          <div class="section-heading">
-            <p class="section-kicker">第 19 站</p>
-            <h2>Limitations</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Limitations”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Sub-机器人朋友 announce is **best-effort**. If…、Sub-机器人朋友s still share the same 门口的小门卫 pr…、sessions_spawn is always non-blocking: it…、Sub-机器人朋友 context only injects 机器人朋友S.md…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Sub-agent announce is **best-effort**. If the gateway restarts, pending &quot;announce back&quot; work is lost.</li><li>Sub-agents still share the same gateway process resources; treat <code>maxConcurrent</code> as a safety valve.</li><li><code>sessions_spawn</code> is always non-blocking: it returns <code>{ status: &quot;accepted&quot;, runId, childSessionKey }</code> immediately.</li><li>Sub-agent context only injects <code>AGENTS.md</code> + <code>TOOLS.md</code> (no <code>SOUL.md</code>, <code>IDENTITY.md</code>, <code>USER.md</code>, <code>HEARTBEAT.md</code>, or <code>BOOTSTRAP.md</code>).</li><li>Maximum nesting depth is 5 (<code>maxSpawnDepth</code> range: 1–5). Depth 2 is recommended for most use cases.</li><li><code>maxChildrenPerAgent</code> caps active children per session (default: 5, range: 1–20).</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-    <section class="section-shell">
-      <div class="ad-placeholder">
-        <p>这里预留给未来的 Google AdSense 模块。</p>
-        <code>&lt;!-- ADSENSE_SNIPPET --&gt;</code>
-      </div>
-    </section>
-  
+      <section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>🧑‍🤝‍🧑 Sub-agents 就是“主代理叫来几个小帮手去分头干活”</h2>
+      <p>你可以把主代理想成一个总工头。它本来自己也能做事，但有些任务太长、太慢、太适合拆开，于是它会再叫几个小工出去单干。</p>
+      <p>这些小工就是 sub-agents。它们不是聊天分身，不是同一个脑袋的回音，而是各自带着自己会话、自己上下文、自己账单去后台做工，做完再回来报结果。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合开始做并行研究、长任务拆分、后台调度的人</span>
+      <span>这页最重要的是先看懂“子代理是独立会话，不是主代理脑中多开一个窗口”</span>
+      <a href="https://docs.openclaw.ai/tools/subagents" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一站</p>
+    <h2>🏗 先想画面：总工头把活拆出去，小工做完再回来汇报</h2>
+    <p>官方开头那句最重要：sub-agent 是从现有 agent run 里“生出来”的后台 run。它有自己的 session，结束后会回到请求它的聊天里报一声。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">🧑 主代理</div>
+      <p>像坐在前台接需求的总工头，负责和用户对话、决定要不要拆活。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🏃 子代理</div>
+      <p>像被派出去单独干活的小工。它拿着自己的任务单去忙，不会一直堵在主工头手边。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">📣 announce</div>
+      <p>像小工干完后回前台交差，告诉总工头：我做完了、结果在这儿、花了多久、用了多少料。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">⭐ 先记一句</div>
+      <p>Sub-agent 的重点不是“多一个回复框”，而是“把活拆到后台并行去做”。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二站</p>
+    <h2>🚀 <code>/subagents spawn</code> 其实就是“立刻派出去一个小工”</h2>
+    <p>这页里最重要的命令就是 <code>/subagents spawn</code>。它的本质不复杂，复杂的是它后面那堆选项。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>/subagents spawn &lt;agentId&gt; &lt;task&gt;</code></div>
+      <p>像工头喊：“你，去干这件事。”命令一发出去，不会等小工当场干完，而是先立刻给你一个 run id。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">为什么它是 non-blocking</div>
+      <p>因为主代理不能为了等一个慢任务，把前台窗口一直堵住。它先把小工派走，自己该接别的活还可以继续接。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>--model</code> / <code>--thinking</code></div>
+      <p>像给这个小工单独换一套脑子和思考档位。主工头用贵一点的大脑，小工可以换成便宜点的，也很正常。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">📌 完成后会发生什么</div>
+      <p>小工不会默默消失。它会回来发一条“我干完了”的总结消息，告诉原来的聊天线程结果如何。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第三站</p>
+    <h2>🛠 那一排命令，都可以翻成“工头怎么管小工”</h2>
+    <p>官方给了很多 <code>/subagents ...</code> 子命令。别硬背，按动作来记就很顺。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">📋</span>
+      <h2><code>list</code></h2>
+      <p>像看值班表：现在有几个小工在干活，编号分别是多少。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🪵</span>
+      <h2><code>log</code></h2>
+      <p>像翻这个小工的施工日志，看看它一路上做了什么。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">📇</span>
+      <h2><code>info</code></h2>
+      <p>像看它的工牌详情：状态、开始时间、会话 id、清理策略都在上面。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">📣</span>
+      <h2><code>send</code> / <code>steer</code></h2>
+      <p>像工头又补了一句新指令。<code>steer</code> 更像“立刻调头，按我现在说的走”。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第四站</p>
+    <h2>🧵 thread-bound sessions 在讲“能不能把一整个聊天线程绑给某个小工”</h2>
+    <p>这段最容易写得像术语堆。翻成人话，就是：有些平台上，你可以把一个聊天线程长期交给某个子代理接手。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label"><code>thread: true</code></div>
+      <p>像不是只派小工出去做一次活，而是顺手给它分了一间固定小办公室，后面这个线程里的消息都继续送到它手上。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>/focus</code></div>
+      <p>像把当前线程和某个小工手里的办公室门牌绑起来。以后你在这个线程继续说话，就会继续叫到它。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>/unfocus</code></div>
+      <p>像把这根线剪开，让这个线程不再固定跟着某个子代理走。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">📌 目前谁支持</div>
+      <p>官方这版写得很清楚：现在真正支持持久线程绑定的，主要就是 Discord。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第五站</p>
+    <h2>🧠 子代理为什么会单独花钱、单独吃上下文</h2>
+    <p>这是很多人第一次用 sub-agents 最容易忽视的点。官方特地提醒，是因为它真的会影响成本和设计。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">💸 单独账单</div>
+      <p>每个子代理都像单独开了一台小脑子。它有自己的 token 使用量，所以“多叫几个小工”不是白来的。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">📚 单独上下文</div>
+      <p>它不是直接共享主代理脑袋里所有细节，而是带着自己的会话去干活。所以有时需要你把任务描述得更明确。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">💡 为什么建议给小工换便宜模型</div>
+      <p>因为重复调研、慢工具探路这类活，常常不用最贵那颗脑。让主工头保留高质量模型，小工用便宜点的，很合理。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 一句话</div>
+      <p>子代理能并行提速，但也会单独消耗脑力预算。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第六站</p>
+    <h2>🌲 Nested sub-agents 不是炫技，它是在讲“工头下面还能不能再有小工头”</h2>
+    <p>默认情况下，小工不能继续再招人。官方把默认值设成 <code>maxSpawnDepth: 1</code>，就是为了别让整个工地自己长疯。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label"><code>maxSpawnDepth: 1</code></div>
+      <p>像只有总工头能派工，小工自己不能再招人。这是默认最稳的状态。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>maxSpawnDepth: 2</code></div>
+      <p>像你允许一级小工再当一次小工头，下面再拆给更细的小工。这就是官方说的 orchestrator pattern。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">📉 为什么还要限并发和孩子数量</div>
+      <p>因为不设上限，小工头一兴奋，可能一下子放出一大群小工，把整台机器挤满。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🧵 结果怎么往回传</div>
+      <p>深层小工先把结果交给上一层小工头，再一层层往上报，最后才回到最前台。它像工地逐级汇报，不是所有人一起冲到老板脸上说。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第七站</p>
+    <h2>🛑 stop、kill、cleanup 都是在管“活停了以后，现场怎么收”</h2>
+    <p>官方后面这部分很实用，因为真实世界里任务经常要被取消，或者做完后得收尾。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>/stop</code></div>
+      <p>像前台喊全场暂停。它不只停主代理，也会把它派出去、还在跑的子代理一起叫停。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>/subagents kill &lt;id&gt;</code></div>
+      <p>像精准停掉某一个小工，如果它下面还有自己的小工，也会跟着一起停。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>cleanup: \"delete\"</code></div>
+      <p>像这个小工回来交差后，立刻收工位、关办公室。但官方也提醒，记录不会完全消失，而是被改名归档。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">⏰ auto-archive</div>
+      <p>像小工下班太久后，系统会自动把这张工位卡收起来。只是如果网关重启，正在等下班计时的闹钟可能会丢。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第八站</p>
+    <h2>🔐 Tool policy 那段的核心，是“别让小工天生就能碰所有后台总开关”</h2>
+    <p>官方默认不给子代理 session tools 和 system tools，这个设计其实很有味道。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">🧰 默认不给的工具</div>
+      <p>像 <code>sessions_spawn</code>、<code>sessions_send</code> 这些“能改调度秩序”的工具，默认不会发给普通子代理。因为小工的职责是干活，不是改工地规则。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🏖 sandbox</div>
+      <p>如果主会话本来就在沙箱里，官方还会防止你把活拆给一个没有围栏的小工，避免安全级别悄悄变低。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🚦 dedicated lane</div>
+      <p>Sub-agents 还有自己的并发车道 <code>subagent</code>。像工地专门给小工开了一条施工通道，避免把前台也堵死。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 最后一收</div>
+      <p>Sub-agents 这页的主线其实很简单：主代理派小工分头干活，小工各自独立、各自记账、做完回来汇报；而所有那些配置项，都是在回答“最多派几个、能派多深、谁能停、停后怎么收”。</p>
+    </div>
+  </div>
+</section>
+
 
       <footer class="page-footer">
         <div>

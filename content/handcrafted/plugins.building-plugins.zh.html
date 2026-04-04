@@ -1,0 +1,227 @@
+<section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>🧩 Building Plugins，就是教你给 OpenClaw 做一盒“新能力积木”</h2>
+      <p>这页不是在讲怎么改 OpenClaw 内脏，而是在讲怎么做一盒外挂积木，让 OpenClaw 多一项会的事。这个“会的事”可以是新通道、新模型提供商、新工具，甚至是一整套事件钩子。</p>
+      <p>如果你把 OpenClaw 想成一个机器人，那 plugin 更像你递给它的新零件盒。盒子里要写清楚自己是谁、能干嘛、怎么装上去。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合想自己加功能，而不是只会装现成插件的人</span>
+      <span>这页最重要的是先看懂“插件盒子”里最少要装什么</span>
+      <a href="https://docs.openclaw.ai/plugins/building-plugins" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一站</p>
+    <h2>📦 先把 plugin 想成“一盒写清楚标签的新积木”</h2>
+    <p>官方原文前两段最想告诉你的，其实不是 TypeScript 语法，而是插件最本质的样子：它是一份可以被安装、被识别、被启用的能力包。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">🛠 它能加什么</div>
+      <p>可以是新聊天通道、新模型提供商、新工具，也可以是会在某些时刻自动出手的钩子。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">📮 它不一定要塞进官方仓库</div>
+      <p>官方明确说了，你不用把插件塞回 OpenClaw 主仓库。你可以发到 ClawHub，也可以发到 npm。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🚚 用户怎么拿到它</div>
+      <p>别人用 <code>openclaw plugins install &lt;package-name&gt;</code>，OpenClaw 会先去 ClawHub 找，找不到再去 npm 找。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">⭐ 先记一句</div>
+      <p>Plugin 不是往系统里硬插代码，而是做一盒能被 OpenClaw 正式认出来的新能力。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二站</p>
+    <h2>🧭 先别急着写代码，先决定你这盒积木是什么类型</h2>
+    <p>官方在这一步把插件分成三类，是为了防止你一开始就走错入口。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">💬</span>
+      <h2>通道插件</h2>
+      <p>像给 OpenClaw 新开一扇门，让它能接 Discord、IRC 之类的新消息平台。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🧠</span>
+      <h2>提供商插件</h2>
+      <p>像给它加一个新的“大脑供应商”，告诉它可以从哪里拿模型能力。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🔧</span>
+      <h2>工具 / Hook 插件</h2>
+      <p>像给它加新手新脚，或者在某些关键时刻加一个会自动出手的小帮手。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">📌</span>
+      <h2>这页主讲哪种</h2>
+      <p>官方这页的 quick start 主要是在教你做一个最简单的“工具插件”。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第三站</p>
+    <h2>🏷 先做盒子外面的标签：<code>package.json</code> 和 <code>openclaw.plugin.json</code></h2>
+    <p>第一次看这两份 JSON，很容易觉得它们很像。其实一个更像“快递外箱”，另一个更像“产品说明卡”。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>package.json</code></div>
+      <p>像快递箱外面的通用寄件标签：包裹名字、版本号、模块类型，还有告诉 OpenClaw “入口文件在这里”。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw.plugin.json</code></div>
+      <p>像这盒插件自己的名片。它会写上 <code>id</code>、<code>name</code>、<code>description</code>，还会说配置长什么样。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>\"openclaw\": { \"extensions\": [\"./index.ts\"] }</code></div>
+      <p>这行不是装饰，它像在盒子外写清楚：“真正的接线口在 <code>index.ts</code> 这儿。”</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🧠 为什么 manifest 必须有</div>
+      <p>官方说得很硬：哪怕你没有配置项，也得有 manifest。因为系统总得先认清“你是谁”，才能决定要不要把你装进去。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第四站</p>
+    <h2>🧪 <code>definePluginEntry</code> 那段代码，其实是在说“你好，我来登记一个新工具”</h2>
+    <p>示例代码看起来像技术文，其实翻成人话非常简单：先声明插件是谁，再在 <code>register</code> 里把新能力挂上去。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>definePluginEntry({ ... })</code></div>
+      <p>像插件到前台做自我介绍：“我叫这个名字，我是干这个的，现在开始登记我能提供的能力。”</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>register(api)</code></div>
+      <p>像系统给你一张登记表。你可以往里面填：我要注册一个工具、一个通道、一个 provider，或者别的东西。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>api.registerTool({ ... })</code></div>
+      <p>像正式把一个新工具挂到墙上，让 OpenClaw 以后在需要时可以把它拿下来用。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>parameters: Type.Object({ input: Type.String() })</code></div>
+      <p>像告诉系统：“这个工具吃进来的东西应该长什么样。”不是随便乱喂，而是先说明输入格式。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第五站</p>
+    <h2>🛠 <code>execute</code> 里面才是“工具真正上班的地方”</h2>
+    <p>前面那些声明像写名片，<code>execute</code> 才像真的把工具叫起来干活。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>async execute(_id, params) { ... }</code></div>
+      <p>像前台已经把任务单递到了这个工具手里。接下来它要看参数、做动作、再把结果交回来。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>return { content: [{ type: \"text\", text: ... }] }</code></div>
+      <p>像工具做完事后把一张回执条交回系统，说：“这是我干完以后要交给你看的内容。”</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">📌 示例里为什么这么简单</div>
+      <p>因为官方只是想让你看懂框架，不是想第一次就把你扔进复杂业务里。所以它故意做了个“把输入又吐回去”的极简例子。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 真正要记住的点</div>
+      <p>插件代码不是神秘黑箱。它就是在告诉 OpenClaw：我能接什么任务，接到以后怎么干，干完怎么回报。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第六站</p>
+    <h2>📚 官方后面那张大表，其实是在说“这一盒插件不只会一种本领”</h2>
+    <p>很多人看到 capability 表就头大。其实它只是把“api 还能登记什么”一股脑摆出来了。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">🧠 <code>api.registerProvider(...)</code></div>
+      <p>像登记一个新的大脑来源，让 OpenClaw 知道可以找谁来推理。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">💬 <code>api.registerChannel(...)</code></div>
+      <p>像新开一扇沟通大门。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🪝 <code>api.registerHook(...)</code></div>
+      <p>像在某些关键时刻安排一个小哨兵，事情发生时它会自动跳出来看一眼、拦一下、或者补一手。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🌈 为什么说一个插件能装很多能力</div>
+      <p>因为同一盒插件不一定只能放一种零件。它完全可以又注册工具、又挂钩子、再顺手加个 HTTP 路由。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第七站</p>
+    <h2>🚦 Required tool 和 optional tool，像“默认发放”与“先放仓库等你点头”</h2>
+    <p>官方专门强调这一点，是因为很多工具并不适合一装上就默认给模型乱用。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">✅ 默认工具</div>
+      <p>直接注册就会跟着插件一起上线，像开盒就附送的积木。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🧰 <code>{ optional: true }</code></div>
+      <p>像把这块积木先放在仓库架子上，不默认发给代理。用户得自己点头，把它加入允许名单。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>tools: { allow: [\"workflow_tool\"] }</code></div>
+      <p>这段配置像仓库管理员在清单上画勾：“好，这个可选工具现在允许领用了。”</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">📌 官方为什么建议副作用工具设成 optional</div>
+      <p>因为会改东西、会碰外部系统、会依赖额外二进制的工具，不该像糖果一样随手乱发。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第八站</p>
+    <h2>🪵 Import conventions 和 checklist，看起来碎，其实是在防“盒子长得像插件，装上去却会摇晃”</h2>
+    <p>官方后面这些注意事项并不花哨，但很重要。它们是在帮你做一盒不容易散架的插件。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">📍 用子路径导入</div>
+      <p>官方让你从 <code>openclaw/plugin-sdk/&lt;subpath&gt;</code> 导，而不是整坨从根路径导。像从工具箱里拿具体抽屉，不要整箱全拖出来。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🧪 测试和 <code>pnpm check</code></div>
+      <p>像装箱前先摇一摇，看会不会散。不是走流程，而是避免你发布出去后别人一装就裂开。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">📢 beta testing</div>
+      <p>像新学期开始前先试穿校服。官方更新快时，你的插件最好提前去 beta 版里过一遍，不然正式版一来就可能当场掉链子。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 一句话收住</div>
+      <p>做插件这页的主线其实很朴素：先做清楚标签，再登记能力，再决定哪些默认发、哪些先锁起来，最后把整盒东西测稳后再交给别人装。</p>
+    </div>
+  </div>
+</section>

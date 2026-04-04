@@ -3970,923 +3970,223 @@
   
       </div>
 
-      
-    <section class="section-shell">
-      <div class="overview-card">
-        <div>
-          <p class="section-kicker">先听这页的人话版</p>
-          <h2>Slash Commands</h2>
-          <p>这一页像一本关于“Slash 魔法口令s”的小绘本，它先告诉我们这位机器人朋友会做什么，再一步一步解释什么时候该这样做。 你可以先把它想成：Slash 魔法口令s。</p>
-          <p>如果把这页当成“给普通人看的版本”，你最应该带走的是：它到底在教你一件什么事、什么时候要这样做、以及哪里最容易踩坑。</p>
-        </div>
-        <div class="overview-meta">
-          <span>原始路径：/tools/slash-commands</span>
-          <span>章节数量：12</span>
-          <a href="https://docs.openclaw.ai/tools/slash-commands" target="_blank" rel="noreferrer">查看原文</a>
-        </div>
-      </div>
-    </section>
-    
-        <section class="section-shell" id="section-1">
-          <div class="section-heading">
-            <p class="section-kicker">第 1 站</p>
-            <h2>Start Here</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Slash 魔法口令s 魔法口令s are handled by the 门口的小门卫. Most 魔法口令s must be sent as a **standalone** 小纸条消息 that starts with /. The…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Slash 魔法口令s”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p># Slash commands</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“魔法口令s are handled by the 门口的小门卫. Most 魔法口令s must be sent as a **standalone** 小纸条消息 that starts with /. The host-only ba…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Commands are handled by the Gateway. Most commands must be sent as a **standalone** message that starts with <code>/</code>. The host-only bash chat command uses <code>! &lt;cmd&gt;</code> (with <code>/bash &lt;cmd&gt;</code> as an alias).</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“There are two related systems:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>There are two related systems:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“allowlist used; otherwise authorization comes from 消息通道 allowlists/pairing plus 魔法口令s.useAccess大家一起的房间s. Unauthorized s…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>allowlist used; otherwise authorization comes from channel allowlists/pairing plus <code>commands.useAccessGroups</code>. Unauthorized senders see directives treated as plain text.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Start Here”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：**魔法口令s**: standalone /... 小纸条消息s.、**Directives**: /think, /fast, /verbose,…、Directives are stripped from the 小纸条消息 be…、In normal chat 小纸条消息s (not directive-only…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>**Commands**: standalone <code>/...</code> messages.</li><li>**Directives**: <code>/think</code>, <code>/fast</code>, <code>/verbose</code>, <code>/reasoning</code>, <code>/elevated</code>, <code>/exec</code>, <code>/model</code>, <code>/queue</code>.</li><li>Directives are stripped from the message before the model sees it.</li><li>In normal chat messages (not directive-only), they are treated as “inline hints” and do **not** persist session settings.</li><li>In directive-only messages (the message contains only directives), they persist to the session and reply with an acknowledgement.</li><li>Directives are only applied for **authorized senders**. If <code>commands.allowFrom</code> is set, it is the only</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“There are also a few **inline shortcuts** (allowlisted/authorized senders only): /help, /魔法口令s, /status, /whoami (/id).…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>There are also a few **inline shortcuts** (allowlisted/authorized senders only): <code>/help</code>, <code>/commands</code>, <code>/status</code>, <code>/whoami</code> (<code>/id</code>). They run immediately, are stripped before the model sees the message, and the remaining text continues through the normal flow.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-2">
-          <div class="section-heading">
-            <p class="section-kicker">第 2 站</p>
-            <h2>设置说明书</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“only authorization source for 魔法口令s and directives (消息通道 allowlists/pairing and 魔法口令s.useAccess大家一起的房间s are ignored). U…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“commands”贴标签，意思是把它设置成“{”。</li><li>这里在给“native”贴标签，意思是把它设置成“auto”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json5">{
-  commands: {
-    native: &quot;auto&quot;,
-    nativeSkills: &quot;auto&quot;,
-    text: true,
-    bash: false,
-    bashForegroundMs: 2000,
-    config: false,
-    mcp: false,
-    plugins: false,
-    debug: false,
-    restart: false,
-    allowFrom: {
-      &quot;*&quot;: [&quot;user1&quot;],
-      discord: [&quot;user:123&quot;],
-    },
-    useAccessGroups: true,
-  },
-}</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“only authorization source for 魔法口令s and directives (消息通道 allowlists/pairing and 魔法口令s.useAccess大家一起的房间s are ignored). U…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>only authorization source for commands and directives (channel allowlists/pairing and <code>commands.useAccessGroups</code> are ignored). Use <code>&quot;*&quot;</code> for a global default; provider-specific keys override it.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Config”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：魔法口令s.text (default true) enables parsing…、On surfaces without native 魔法口令s (WhatsAp…、魔法口令s.native (default &quot;auto&quot;) registers n…、Auto: on for Discord/Telegram; off for Sl…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>commands.text</code> (default <code>true</code>) enables parsing <code>/...</code> in chat messages.</li><li>On surfaces without native commands (WhatsApp/WebChat/Signal/iMessage/Google Chat/Microsoft Teams), text commands still work even if you set this to <code>false</code>.</li><li><code>commands.native</code> (default <code>&quot;auto&quot;</code>) registers native commands.</li><li>Auto: on for Discord/Telegram; off for Slack (until you add slash commands); ignored for providers without native support.</li><li>Set <code>channels.discord.commands.native</code>, <code>channels.telegram.commands.native</code>, or <code>channels.slack.commands.native</code> to override per provider (bool or <code>&quot;auto&quot;</code>).</li><li><code>false</code> clears previously registered commands on Discord/Telegram at startup. Slack commands are managed in the Slack app and are not removed automatically.</li><li><code>commands.nativeSkills</code> (default <code>&quot;auto&quot;</code>) registers **skill** commands natively when supported.</li><li>Auto: on for Discord/Telegram; off for Slack (Slack requires creating a slash command per skill).</li><li>Set <code>channels.discord.commands.nativeSkills</code>, <code>channels.telegram.commands.nativeSkills</code>, or <code>channels.slack.commands.nativeSkills</code> to override per provider (bool or <code>&quot;auto&quot;</code>).</li><li><code>commands.bash</code> (default <code>false</code>) enables <code>! &lt;cmd&gt;</code> to run host shell commands (<code>/bash &lt;cmd&gt;</code> is an alias; requires <code>tools.elevated</code> allowlists).</li><li><code>commands.bashForegroundMs</code> (default <code>2000</code>) controls how long bash waits before switching to background mode (<code>0</code> backgrounds immediately).</li><li><code>commands.config</code> (default <code>false</code>) enables <code>/config</code> (reads/writes <code>openclaw.json</code>).</li><li><code>commands.mcp</code> (default <code>false</code>) enables <code>/mcp</code> (reads/writes OpenClaw-managed MCP config under <code>mcp.servers</code>).</li><li><code>commands.plugins</code> (default <code>false</code>) enables <code>/plugins</code> (plugin discovery/status plus install + enable/disable controls).</li><li><code>commands.debug</code> (default <code>false</code>) enables <code>/debug</code> (runtime-only overrides).</li><li><code>commands.allowFrom</code> (optional) sets a per-provider allowlist for command authorization. When configured, it is the</li><li><code>commands.useAccessGroups</code> (default <code>true</code>) enforces allowlists/policies for commands when <code>commands.allowFrom</code> is not set.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-3">
-          <div class="section-heading">
-            <p class="section-kicker">第 3 站</p>
-            <h2>魔法口令 list</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Text + native (when enabled): Text-only: Notes:”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Text + native (when enabled):”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Text + native (when enabled):</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Command list”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：/help、/魔法口令s、/工具小帮手s [compact verbose] (show what the…、/skill &lt;name&gt; [input] (run a skill by nam…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>/help</code></li><li><code>/commands</code></li><li><code>/tools [compact|verbose]</code> (show what the current agent can use right now; <code>verbose</code> adds descriptions)</li><li><code>/skill &lt;name&gt; [input]</code> (run a skill by name)</li><li><code>/status</code> (show current status; includes provider usage/quota for the current model provider when available)</li><li><code>/allowlist</code> (list/add/remove allowlist entries)</li><li><code>/approve &lt;id&gt; allow-once|allow-always|deny</code> (resolve exec approval prompts)</li><li><code>/context [list|detail|json]</code> (explain “context”; <code>detail</code> shows per-file + per-tool + per-skill + system prompt size)</li><li><code>/btw &lt;question&gt;</code> (ask an ephemeral side question about the current session without changing future session context; see <a href="/tools/btw" target="_blank" rel="noreferrer">/tools/btw</a>)</li><li><code>/export-session [path]</code> (alias: <code>/export</code>) (export current session to HTML with full system prompt)</li><li><code>/whoami</code> (show your sender id; alias: <code>/id</code>)</li><li><code>/session idle &lt;duration|off&gt;</code> (manage inactivity auto-unfocus for focused thread bindings)</li><li><code>/session max-age &lt;duration|off&gt;</code> (manage hard max-age auto-unfocus for focused thread bindings)</li><li><code>/subagents list|kill|log|info|send|steer|spawn</code> (inspect, control, or spawn sub-agent runs for the current session)</li><li><code>/acp spawn|cancel|steer|close|status|set-mode|set|cwd|permissions|timeout|model|reset-options|doctor|install|sessions</code> (inspect and control ACP runtime sessions)</li><li><code>/agents</code> (list thread-bound agents for this session)</li><li><code>/focus &lt;target&gt;</code> (Discord: bind this thread, or a new thread, to a session/subagent target)</li><li><code>/unfocus</code> (Discord: remove the current thread binding)</li><li><code>/kill &lt;id|#|all&gt;</code> (immediately abort one or all running sub-agents for this session; no confirmation message)</li><li><code>/steer &lt;id|#&gt; &lt;message&gt;</code> (steer a running sub-agent immediately: in-run when possible, otherwise abort current work and restart on the steer message)</li><li><code>/tell &lt;id|#&gt; &lt;message&gt;</code> (alias for <code>/steer</code>)</li><li><code>/config show|get|set|unset</code> (persist config to disk, owner-only; requires <code>commands.config: true</code>)</li><li><code>/mcp show|get|set|unset</code> (manage OpenClaw MCP server config, owner-only; requires <code>commands.mcp: true</code>)</li><li><code>/plugins list|show|get|install|enable|disable</code> (inspect discovered plugins, install new ones, and toggle enablement; owner-only for writes; requires <code>commands.plugins: true</code>)</li><li><code>/plugin</code> is an alias for <code>/plugins</code>.</li><li><code>/plugin install &lt;spec&gt;</code> accepts the same plugin specs as <code>openclaw plugins install</code>: local path/archive, npm package, or <code>clawhub:&lt;pkg&gt;</code>.</li><li>Enable/disable writes still reply with a restart hint. On a watched foreground gateway, OpenClaw may perform that restart automatically right after the write.</li><li><code>/debug show|set|unset|reset</code> (runtime overrides, owner-only; requires <code>commands.debug: true</code>)</li><li><code>/usage off|tokens|full|cost</code> (per-response usage footer or local cost summary)</li><li><code>/tts off|always|inbound|tagged|status|provider|limit|summary|audio</code> (control TTS; see <a href="/tools/tts" target="_blank" rel="noreferrer">/tts</a>)</li><li>Discord: native command is <code>/voice</code> (Discord reserves <code>/tts</code>); text <code>/tts</code> still works.</li><li><code>/stop</code></li><li><code>/restart</code></li><li><code>/dock-telegram</code> (alias: <code>/dock_telegram</code>) (switch replies to Telegram)</li><li><code>/dock-discord</code> (alias: <code>/dock_discord</code>) (switch replies to Discord)</li><li><code>/dock-slack</code> (alias: <code>/dock_slack</code>) (switch replies to Slack)</li><li><code>/activation mention|always</code> (groups only)</li><li><code>/send on|off|inherit</code> (owner-only)</li><li><code>/reset</code> or <code>/new [model]</code> (optional model hint; remainder is passed through)</li><li><code>/think &lt;off|minimal|low|medium|high|xhigh&gt;</code> (dynamic choices by model/provider; aliases: <code>/thinking</code>, <code>/t</code>)</li><li><code>/fast status|on|off</code> (omitting the arg shows the current effective fast-mode state)</li><li><code>/verbose on|full|off</code> (alias: <code>/v</code>)</li><li><code>/reasoning on|off|stream</code> (alias: <code>/reason</code>; when on, sends a separate message prefixed <code>Reasoning:</code>; <code>stream</code> = Telegram draft only)</li><li><code>/elevated on|off|ask|full</code> (alias: <code>/elev</code>; <code>full</code> skips exec approvals)</li><li><code>/exec host=&lt;sandbox|gateway|node&gt; security=&lt;deny|allowlist|full&gt; ask=&lt;off|on-miss|always&gt; node=&lt;id&gt;</code> (send <code>/exec</code> to show current)</li><li><code>/model &lt;name&gt;</code> (alias: <code>/models</code>; or <code>/&lt;alias&gt;</code> from <code>agents.defaults.models.*.alias</code>)</li><li><code>/queue &lt;mode&gt;</code> (plus options like <code>debounce:2s cap:25 drop:summarize</code>; send <code>/queue</code> to see current settings)</li><li><code>/bash &lt;command&gt;</code> (host-only; alias for <code>! &lt;command&gt;</code>; requires <code>commands.bash: true</code> + <code>tools.elevated</code> allowlists)</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Text-only:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Text-only:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Command list”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：/compact [instructions] (see /concepts/co…、! &lt;魔法口令&gt; (host-only; one at a time; use !…、!poll (check output / status; accepts opt…、!stop (stop the running bash job; accepts…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>/compact [instructions]</code> (see <a href="/concepts/compaction" target="_blank" rel="noreferrer">/concepts/compaction</a>)</li><li><code>! &lt;command&gt;</code> (host-only; one at a time; use <code>!poll</code> + <code>!stop</code> for long-running jobs)</li><li><code>!poll</code> (check output / status; accepts optional <code>sessionId</code>; <code>/bash poll</code> also works)</li><li><code>!stop</code> (stop the running bash job; accepts optional <code>sessionId</code>; <code>/bash stop</code> also works)</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Notes:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Notes:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Command list”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：魔法口令s accept an optional : between the 魔法…、/new &lt;聪明脑袋模型&gt; accepts a 聪明脑袋模型 alias, pro…、For full provider usage breakdown, use op…、/allowlist add remove requires 魔法口令s.设置说明…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Commands accept an optional <code>:</code> between the command and args (e.g. <code>/think: high</code>, <code>/send: on</code>, <code>/help:</code>).</li><li><code>/new &lt;model&gt;</code> accepts a model alias, <code>provider/model</code>, or a provider name (fuzzy match); if no match, the text is treated as the message body.</li><li>For full provider usage breakdown, use <code>openclaw status --usage</code>.</li><li><code>/allowlist add|remove</code> requires <code>commands.config=true</code> and honors channel <code>configWrites</code>.</li><li>In multi-account channels, config-targeted <code>/allowlist --account &lt;id&gt;</code> and <code>/config set channels.&lt;provider&gt;.accounts.&lt;id&gt;...</code> also honor the target account&#39;s <code>configWrites</code>.</li><li><code>/usage</code> controls the per-response usage footer; <code>/usage cost</code> prints a local cost summary from OpenClaw session logs.</li><li><code>/restart</code> is enabled by default; set <code>commands.restart: false</code> to disable it.</li><li>Discord-only native command: <code>/vc join|leave|status</code> controls voice channels (requires <code>channels.discord.voice</code> and native commands; not available as text).</li><li>Discord thread-binding commands (<code>/focus</code>, <code>/unfocus</code>, <code>/agents</code>, <code>/session idle</code>, <code>/session max-age</code>) require effective thread bindings to be enabled (<code>session.threadBindings.enabled</code> and/or <code>channels.discord.threadBindings.enabled</code>).</li><li>ACP command reference and runtime behavior: <a href="/tools/acp-agents" target="_blank" rel="noreferrer">ACP Agents</a>.</li><li><code>/verbose</code> is meant for debugging and extra visibility; keep it **off** in normal use.</li><li><code>/fast on|off</code> persists a session override. Use the Sessions UI <code>inherit</code> option to clear it and fall back to config defaults.</li><li>Tool failure summaries are still shown when relevant, but detailed failure text is only included when <code>/verbose</code> is <code>on</code> or <code>full</code>.</li><li><code>/reasoning</code> (and <code>/verbose</code>) are risky in group settings: they may reveal internal reasoning or tool output you did not intend to expose. Prefer leaving them off, especially in group chats.</li><li>**Fast path:** command-only messages from allowlisted senders are handled immediately (bypass queue + model).</li><li>**Group mention gating:** command-only messages from allowlisted senders bypass mention requirements.</li><li>**Inline shortcuts (allowlisted senders only):** certain commands also work when embedded in a normal message and are stripped before the model sees the remaining text.</li><li>Example: <code>hey /status</code> triggers a status reply, and the remaining text continues through the normal flow.</li><li>Currently: <code>/help</code>, <code>/commands</code>, <code>/status</code>, <code>/whoami</code> (<code>/id</code>).</li><li>Unauthorized command-only messages are silently ignored, and inline <code>/...</code> tokens are treated as plain text.</li><li>**Skill commands:** <code>user-invocable</code> skills are exposed as slash commands. Names are sanitized to <code>a-z0-9_</code> (max 32 chars); collisions get numeric suffixes (e.g. <code>_2</code>).</li><li><code>/skill &lt;name&gt; [input]</code> runs a skill by name (useful when native command limits prevent per-skill commands).</li><li>By default, skill commands are forwarded to the model as a normal request.</li><li>Skills may optionally declare <code>command-dispatch: tool</code> to route the command directly to a tool (deterministic, no model).</li><li>Example: <code>/prose</code> (OpenProse plugin) — see <a href="/prose" target="_blank" rel="noreferrer">OpenProse</a>.</li><li>**Native command arguments:** Discord uses autocomplete for dynamic options (and button menus when you omit required args). Telegram and Slack show a button menu when a command supports choices and you omit the arg.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-4">
-          <div class="section-heading">
-            <p class="section-kicker">第 4 站</p>
-            <h2>`/工具小帮手s`</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“/工具小帮手s answers a runtime question, not a 设置说明书 question: **what this 机器人朋友 can use right now in this conversation**. c…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“/工具小帮手s answers a runtime question, not a 设置说明书 question: **what this 机器人朋友 can use right now in this conversation**.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p><code>/tools</code> answers a runtime question, not a config question: **what this agent can use right now in this conversation**.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“change the output.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>change the output.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“新本领插件 工具小帮手s, and 消息通道-owned 工具小帮手s.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>plugin tools, and channel-owned tools.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“`/tools`”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Default /工具小帮手s is compact and optimized…、/工具小帮手s verbose adds short descriptions.、Native-魔法口令 surfaces that support argumen…、Results are session-scoped, so changing 机…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Default <code>/tools</code> is compact and optimized for quick scanning.</li><li><code>/tools verbose</code> adds short descriptions.</li><li>Native-command surfaces that support arguments expose the same mode switch as <code>compact|verbose</code>.</li><li>Results are session-scoped, so changing agent, channel, thread, sender authorization, or model can</li><li><code>/tools</code> includes tools that are actually reachable at runtime, including core tools, connected</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“For profile and override editing, use the Control UI 工具小帮手s panel or 设置说明书/catalog surfaces instead of treating /工具小帮手s…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>For profile and override editing, use the Control UI Tools panel or config/catalog surfaces instead of treating <code>/tools</code> as a static catalog.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-5">
-          <div class="section-heading">
-            <p class="section-kicker">第 5 站</p>
-            <h2>Usage surfaces (what shows where)</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Usage surfaces (what shows where)”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：**Provider usage/quota** (example: “Claud…、**Per-response tokens/cost** is controlle…、/聪明脑袋模型 status is about **聪明脑袋模型s/auth/en…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>**Provider usage/quota** (example: “Claude 80% left”) shows up in <code>/status</code> for the current model provider when usage tracking is enabled.</li><li>**Per-response tokens/cost** is controlled by <code>/usage off|tokens|full</code> (appended to normal replies).</li><li><code>/model status</code> is about **models/auth/endpoints**, not usage.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-6">
-          <div class="section-heading">
-            <p class="section-kicker">第 6 站</p>
-            <h2>聪明脑袋模型 selection (`/聪明脑袋模型`)</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“/聪明脑袋模型 is implemented as a directive. Examples: Notes:”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“/聪明脑袋模型 is implemented as a directive.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p><code>/model</code> is implemented as a directive.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Examples:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Examples:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段像给机器人看的说明书，告诉它要按什么样子准备东西。</p>
-        <ul class="code-steps">
-          <li>这一行“/model”是当前步骤要交给电脑的一小块提示。</li><li>这一行“/model list”是当前步骤要交给电脑的一小块提示。</li><li>这一行“/model 3”是当前步骤要交给电脑的一小块提示。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-text">/model
-/model list
-/model 3
-/model openai/gpt-5.2
-/model opus@anthropic:default
-/model status</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Notes:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Notes:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Model selection (`/model`)”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：/聪明脑袋模型 and /聪明脑袋模型 list show a compact,…、On Discord, /聪明脑袋模型 and /聪明脑袋模型s open an…、/聪明脑袋模型 &lt;#&gt; selects from that picker (and…、/聪明脑袋模型 status shows the detailed view, i…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>/model</code> and <code>/model list</code> show a compact, numbered picker (model family + available providers).</li><li>On Discord, <code>/model</code> and <code>/models</code> open an interactive picker with provider and model dropdowns plus a Submit step.</li><li><code>/model &lt;#&gt;</code> selects from that picker (and prefers the current provider when possible).</li><li><code>/model status</code> shows the detailed view, including configured provider endpoint (<code>baseUrl</code>) and API mode (<code>api</code>) when available.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-7">
-          <div class="section-heading">
-            <p class="section-kicker">第 7 站</p>
-            <h2>Debug overrides</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“/debug lets you set **runtime-only** 设置说明书 overrides (memory, not disk). Owner-only. Disabled by default; enable with 魔…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“/debug lets you set **runtime-only** 设置说明书 overrides (memory, not disk). Owner-only. Disabled by default; enable with 魔…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p><code>/debug</code> lets you set **runtime-only** config overrides (memory, not disk). Owner-only. Disabled by default; enable with <code>commands.debug: true</code>.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Examples:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Examples:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段像给机器人看的说明书，告诉它要按什么样子准备东西。</p>
-        <ul class="code-steps">
-          <li>这一行“/debug show”是当前步骤要交给电脑的一小块提示。</li><li>这一行“/debug set messages.responsePrefix=&quot;[openclaw]&quot;”是当前步骤要交给电脑的一小块提示。</li><li>这一行“/debug set channels.whatsapp.allowFrom=[&quot;+1555&quot;,&quot;+4477&quot;]”是当前步骤要交给电脑的一小块提示。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-text">/debug show
-/debug set messages.responsePrefix=&quot;[openclaw]&quot;
-/debug set channels.whatsapp.allowFrom=[&quot;+1555&quot;,&quot;+4477&quot;]
-/debug unset messages.responsePrefix
-/debug reset</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Notes:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Notes:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Debug overrides”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Overrides apply immediately to new 设置说明书…、Use /debug reset to clear all overrides a…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Overrides apply immediately to new config reads, but do **not** write to <code>openclaw.json</code>.</li><li>Use <code>/debug reset</code> to clear all overrides and return to the on-disk config.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-8">
-          <div class="section-heading">
-            <p class="section-kicker">第 8 站</p>
-            <h2>设置说明书 updates</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“/设置说明书 writes to your on-disk 设置说明书 (openclaw.json). Owner-only. Disabled by default; enable with 魔法口令s.设置说明书: true. Ex…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“/设置说明书 writes to your on-disk 设置说明书 (openclaw.json). Owner-only. Disabled by default; enable with 魔法口令s.设置说明书: true.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p><code>/config</code> writes to your on-disk config (<code>openclaw.json</code>). Owner-only. Disabled by default; enable with <code>commands.config: true</code>.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Examples:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Examples:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段像给机器人看的说明书，告诉它要按什么样子准备东西。</p>
-        <ul class="code-steps">
-          <li>这一行“/config show”是当前步骤要交给电脑的一小块提示。</li><li>这一行“/config show messages.responsePrefix”是当前步骤要交给电脑的一小块提示。</li><li>这一行“/config get messages.responsePrefix”是当前步骤要交给电脑的一小块提示。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-text">/config show
-/config show messages.responsePrefix
-/config get messages.responsePrefix
-/config set messages.responsePrefix=&quot;[openclaw]&quot;
-/config unset messages.responsePrefix</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Notes:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Notes:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Config updates”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：设置说明书 is validated before write; invalid…、/设置说明书 updates persist across restarts.</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Config is validated before write; invalid changes are rejected.</li><li><code>/config</code> updates persist across restarts.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-9">
-          <div class="section-heading">
-            <p class="section-kicker">第 9 站</p>
-            <h2>MCP updates</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“/mcp writes OpenClaw-managed MCP 大房子服务器 definitions under mcp.大房子服务器s. Owner-only. Disabled by default; enable with 魔法口…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“/mcp writes OpenClaw-managed MCP 大房子服务器 definitions under mcp.大房子服务器s. Owner-only. Disabled by default; enable with 魔法口…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p><code>/mcp</code> writes OpenClaw-managed MCP server definitions under <code>mcp.servers</code>. Owner-only. Disabled by default; enable with <code>commands.mcp: true</code>.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Examples:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Examples:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段像给机器人看的说明书，告诉它要按什么样子准备东西。</p>
-        <ul class="code-steps">
-          <li>这一行“/mcp show”是当前步骤要交给电脑的一小块提示。</li><li>这一行“/mcp show context7”是当前步骤要交给电脑的一小块提示。</li><li>这里在给“/mcp set context7={command”贴标签，意思是把它设置成“uvxargs:[context7-mcp]}”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-text">/mcp show
-/mcp show context7
-/mcp set context7={&quot;command&quot;:&quot;uvx&quot;,&quot;args&quot;:[&quot;context7-mcp&quot;]}
-/mcp unset context7</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Notes:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Notes:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“MCP updates”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：/mcp stores 设置说明书 in OpenClaw 设置说明书, not…、Runtime adapters decide which transports…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>/mcp</code> stores config in OpenClaw config, not Pi-owned project settings.</li><li>Runtime adapters decide which transports are actually executable.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-10">
-          <div class="section-heading">
-            <p class="section-kicker">第 10 站</p>
-            <h2>新本领插件 updates</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“/新本领插件s lets operators inspect discovered 新本领插件s and toggle enablement in 设置说明书. Read-only flows can use /新本领插件 as an a…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“/新本领插件s lets operators inspect discovered 新本领插件s and toggle enablement in 设置说明书. Read-only flows can use /新本领插件 as an a…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p><code>/plugins</code> lets operators inspect discovered plugins and toggle enablement in config. Read-only flows can use <code>/plugin</code> as an alias. Disabled by default; enable with <code>commands.plugins: true</code>.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Examples:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Examples:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段像给机器人看的说明书，告诉它要按什么样子准备东西。</p>
-        <ul class="code-steps">
-          <li>这一行“/plugins”是当前步骤要交给电脑的一小块提示。</li><li>这一行“/plugins list”是当前步骤要交给电脑的一小块提示。</li><li>这一行“/plugin show context7”是当前步骤要交给电脑的一小块提示。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-text">/plugins
-/plugins list
-/plugin show context7
-/plugins enable context7
-/plugins disable context7</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Notes:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Notes:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Plugin updates”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：/新本领插件s list and /新本领插件s show use real 新本…、/新本领插件s enable disable updates 新本领插件 设置说明…、After enable/disable changes, restart the…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>/plugins list</code> and <code>/plugins show</code> use real plugin discovery against the current workspace plus on-disk config.</li><li><code>/plugins enable|disable</code> updates plugin config only; it does not install or uninstall plugins.</li><li>After enable/disable changes, restart the gateway to apply them.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-11">
-          <div class="section-heading">
-            <p class="section-kicker">第 11 站</p>
-            <h2>Surface notes</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Surface notes”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：**Text 魔法口令s** run in the normal chat ses…、**Native 魔法口令s** use isolated sessions:、Discord: 机器人朋友:&lt;机器人朋友Id&gt;:discord:slash:&lt;u…、Slack: 机器人朋友:&lt;机器人朋友Id&gt;:slack:slash:&lt;userI…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>**Text commands** run in the normal chat session (DMs share <code>main</code>, groups have their own session).</li><li>**Native commands** use isolated sessions:</li><li>Discord: <code>agent:&lt;agentId&gt;:discord:slash:&lt;userId&gt;</code></li><li>Slack: <code>agent:&lt;agentId&gt;:slack:slash:&lt;userId&gt;</code> (prefix configurable via <code>channels.slack.slashCommand.sessionPrefix</code>)</li><li>Telegram: <code>telegram:slash:&lt;userId&gt;</code> (targets the chat session via <code>CommandTargetSessionKey</code>)</li><li>**<code>/stop</code>** targets the active chat session so it can abort the current run.</li><li>**Slack:** <code>channels.slack.slashCommand</code> is still supported for a single <code>/openclaw</code>-style command. If you enable <code>commands.native</code>, you must create one Slack slash command per built-in command (same names as <code>/help</code>). Command argument menus for Slack are delivered as ephemeral Block Kit buttons.</li><li>Slack native exception: register <code>/agentstatus</code> (not <code>/status</code>) because Slack reserves <code>/status</code>. Text <code>/status</code> still works in Slack messages.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-12">
-          <div class="section-heading">
-            <p class="section-kicker">第 12 站</p>
-            <h2>BTW side questions</h2>
-            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>你理解的是能力边界，不只是功能名字。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“/btw is a quick **side question** about the current session. Unlike normal chat: That makes /btw useful when you want a…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“/btw is a quick **side question** about the current session.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p><code>/btw</code> is a quick **side question** about the current session.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Unlike normal chat:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Unlike normal chat:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“BTW side questions”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：it uses the current session as background…、it runs as a separate **工具小帮手-less** one-…、it does not change future session context,、it is not written to transcript history,。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>it uses the current session as background context,</li><li>it runs as a separate **tool-less** one-shot call,</li><li>it does not change future session context,</li><li>it is not written to transcript history,</li><li>it is delivered as a live side result instead of a normal assistant message.</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“That makes /btw useful when you want a temporary clarification while the main task keeps going.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>That makes <code>/btw</code> useful when you want a temporary clarification while the main task keeps going.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Example:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Example:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段像给机器人看的说明书，告诉它要按什么样子准备东西。</p>
-        <ul class="code-steps">
-          <li>这一行“/btw what are we doing right now?”是当前步骤要交给电脑的一小块提示。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-text">/btw what are we doing right now?</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“See BTW Side Questions for the full behavior and 来帮忙的小伙伴 UX details.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>See <a href="/tools/btw" target="_blank" rel="noreferrer">BTW Side Questions</a> for the full behavior and client UX details.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-    <section class="section-shell">
-      <div class="ad-placeholder">
-        <p>这里预留给未来的 Google AdSense 模块。</p>
-        <code>&lt;!-- ADSENSE_SNIPPET --&gt;</code>
-      </div>
-    </section>
-  
+      <section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>🪄 Slash Commands 不是聊天内容，它更像你对 OpenClaw 说的“舞台指令”</h2>
+      <p>平常聊天时，你是在告诉 OpenClaw“我想做什么”。但发斜杠命令时，你更像是在对后台喊：“切模型、停一下、给我看状态、去开个子代理、把这次回复改成快一点。”</p>
+      <p>所以这页不是普通对话指南，而是一张“遥控器说明书”。你不是在写作文，你是在按按钮。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合已经在用 OpenClaw 聊天，想开始用命令遥控它的人</span>
+      <span>这页最重要的是先分清 commands、directives、inline shortcuts 三种东西</span>
+      <a href="https://docs.openclaw.ai/tools/slash-commands" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一站</p>
+    <h2>🎛 遥控器上其实有三类按钮</h2>
+    <p>官方开头那段看着绕，其实只是想告诉你：虽然大家都长得像 <code>/...</code>，但它们做的事不完全一样。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">📣</span>
+      <h2>Commands</h2>
+      <p>像明确按下一个功能键，比如 <code>/status</code>、<code>/help</code>、<code>/config set</code>。它就是来办事的。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🧠</span>
+      <h2>Directives</h2>
+      <p>像给本轮或本会话贴一个小纸条：这次要快一点、思考深一点、改模型、改队列规则。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">✂️</span>
+      <h2>Inline shortcuts</h2>
+      <p>像在一句普通话里顺手插个快捷按钮。比如你说着说着夹一个 <code>/status</code>，系统先把状态拿出来，再继续处理剩下的话。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">⭐</span>
+      <h2>先记一句</h2>
+      <p>Slash command 更像遥控指令，不是普通聊天句子。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二站</p>
+    <h2>🧩 “单独发”和“夹在话里发”，结果真的不一样</h2>
+    <p>这页最容易让人看晕的地方就在这里。官方其实是在讲“这张纸条是贴在这一句话上，还是贴在整个会话上”。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">📄 指令单独发</div>
+      <p>如果消息里只有 <code>/think high</code> 这种 directive，它更像你站到后台说：“从现在开始，这个会话默认深想一点。”</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">📝 指令夹在句子里</div>
+      <p>如果你说“帮我看下这个 bug /think high”，那它更像这一次任务上的便签，只影响这次，不会把整间教室的规则改掉。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">✂️ 为什么说会被 stripped</div>
+      <p>因为这些 directive 更像后台标签，系统会先把它摘下来处理，再把真正要给模型看的话送进去。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🔐 还得先有权限</div>
+      <p>官方特地强调：这些遥控键不是谁都能按。没被授权的人发 directive，系统会把它当普通文本看，或者干脆忽略。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第三站</p>
+    <h2>⚙️ 配置那段别硬背，把它看成“遥控器哪些按钮开着”</h2>
+    <p>官方给的 <code>commands</code> 配置块看着多，其实每一项都只是在回答：“这个按钮要不要亮起来？”</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>commands.text: true</code></div>
+      <p>像决定聊天文字里的 <code>/...</code> 要不要当成命令读。开着就是认，关着就尽量少认。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>commands.native: \"auto\"</code></div>
+      <p>像让系统自己判断，要不要在 Telegram、Discord 这些地方把按钮直接注册成原生 slash command。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>commands.bash: false</code></div>
+      <p>像把“让机器人直接在宿主机上敲 shell”的大红按钮先盖上安全罩。不开时，别人不能随便用 <code>! &lt;cmd&gt;</code>。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>commands.allowFrom</code></div>
+      <p>像命令遥控器的白名单。这里一旦写了，谁能按按钮就只看这份名单，不再看普通 pairing 或通道 allowlist。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第四站</p>
+    <h2>🕹 常用命令其实可以按“它们在后台做什么”来记</h2>
+    <p>命令表很长，但别一条条死背。按动作分组，脑子会轻很多。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">🩺</span>
+      <h2>看状态</h2>
+      <p><code>/status</code>、<code>/tools</code>、<code>/whoami</code>，像抬头看仪表盘，确认现在是谁、能干什么、系统状态如何。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🎚</span>
+      <h2>改本轮风格</h2>
+      <p><code>/think</code>、<code>/fast</code>、<code>/verbose</code>、<code>/reasoning</code>、<code>/model</code>，像给当前这辆车切驾驶模式。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🧰</span>
+      <h2>动系统配置</h2>
+      <p><code>/config</code>、<code>/mcp</code>、<code>/plugins</code>、<code>/debug</code>，像去机房后面改控制面板。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🧵</span>
+      <h2>管会话和子代理</h2>
+      <p><code>/subagents</code>、<code>/focus</code>、<code>/session idle</code>、<code>/kill</code>，像在调度后台的小工队伍。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第五站</p>
+    <h2>🛠 把几条最常用的命令翻成“现场动作”</h2>
+    <p>这部分最值得你带走，因为它能直接改变你以后怎么读整张命令表。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>/tools</code></div>
+      <p>不是问“系统理论上有哪些工具”，而是在问“此时此地、这个代理、这场对话里，它手边现在到底能拿到哪些工具”。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>/status</code></div>
+      <p>像看仪表盘。会告诉你现在状态怎么样，甚至当前模型提供商还剩多少配额。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>/model openai/gpt-5.2</code></div>
+      <p>像让司机这次换一辆车。不是改历史记录，而是把后面这段会话切到另一种脑子上。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>/queue debounce:2s cap:25 drop:summarize</code></div>
+      <p>像告诉前台接待：消息很多时，先别一窝蜂全往里冲，等 2 秒再打包；最多堆 25 个；太多了就别原样全留，改成摘要。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第六站</p>
+    <h2>💣 <code>/bash</code> 和 <code>! &lt;cmd&gt;</code> 这种命令，要当成“开宿主机大门”来看</h2>
+    <p>官方把这块写得很谨慎，是对的。因为这不是普通聊天命令，而是让 OpenClaw 去宿主机上直接敲命令。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label"><code>! ls</code></div>
+      <p>像你没经过模型绕圈，直接冲后台说：“你去机器上给我看一下目录。”</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>/bash stop</code> / <code>!stop</code></div>
+      <p>像前台看见后台机器还在忙，赶紧冲进去喊停。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>commands.bashForegroundMs</code></div>
+      <p>像规定“如果这活一下子做不完，就别一直霸着前台，转去后台慢慢做”。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🔐 为什么默认关着</div>
+      <p>因为这已经不是“让模型多想一点”这种软操作了，而是直接让它碰宿主机。安全级别完全不同。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第七站</p>
+    <h2>🧵 子代理、聚焦线程、会话寿命这些命令，其实都在讲“后台有几个人在干活”</h2>
+    <p>官方这里列得很多，但主线很简单：一个主代理不够时，你可以再分派小工去做事，还能决定聊天线程之后跟谁绑定。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label"><code>/subagents spawn</code></div>
+      <p>像主工头又叫来一个小工，交给他一张任务单，让他去后台单独干。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>/focus</code> / <code>/unfocus</code></div>
+      <p>像把当前聊天线程绑到某个正在干活的小工上，或者把这根绳子解绑。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>/session idle</code> / <code>max-age</code></div>
+      <p>像规定这个小工如果太久没人理，或者活干太久，就自动下班、自动松绑。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">📌 为什么这类命令常被忽略</div>
+      <p>因为它们不像 <code>/help</code> 那么显眼，但一旦你开始多人、多线程、多代理协作，它们就是后台秩序本身。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">最后总结</p>
+    <h2>🎈 把 slash commands 这页压成一句话</h2>
+    <p>Slash commands 就是 OpenClaw 的后台遥控器。聊天是在说“做什么”，斜杠命令是在说“现在用什么模式做、谁来做、后台怎么配”。</p>
+  </div>
+  <div class="ad-placeholder">
+    <p>如果你接下来只想继续看一页，我建议看 <code>/tools/subagents</code>。因为一旦你开始用 <code>/subagents</code>、<code>/kill</code>、<code>/focus</code> 这些命令，整个后台调度逻辑就会一下子变清楚。</p>
+  </div>
+</section>
+
 
       <footer class="page-footer">
         <div>
