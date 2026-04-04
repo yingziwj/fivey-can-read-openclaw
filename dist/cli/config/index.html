@@ -3970,983 +3970,197 @@
   
       </div>
 
-      
-    <section class="section-shell">
-      <div class="overview-card">
-        <div>
-          <p class="section-kicker">先听这页的人话版</p>
-          <h2>config</h2>
-          <p>这一页像一本关于“设置说明书”的小绘本，它先告诉我们这位机器人朋友会做什么，再一步一步解释什么时候该这样做。 你可以先把它想成：openclaw 设置说明书。</p>
-          <p>如果把这页当成“给普通人看的版本”，你最应该带走的是：它到底在教你一件什么事、什么时候要这样做、以及哪里最容易踩坑。</p>
-        </div>
-        <div class="overview-meta">
-          <span>原始路径：/cli/config</span>
-          <span>章节数量：11</span>
-          <a href="https://docs.openclaw.ai/cli/config" target="_blank" rel="noreferrer">查看原文</a>
-        </div>
-      </div>
-    </section>
-    
-        <section class="section-shell" id="section-1">
-          <div class="section-heading">
-            <p class="section-kicker">第 1 站</p>
-            <h2>Start Here</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“openclaw 设置说明书 设置说明书 helpers for non-interactive edits in openclaw.json: get/set/unset/file/schema/validate values by p…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“openclaw 设置说明书”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p># <code>openclaw config</code></p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“设置说明书 helpers for non-interactive edits in openclaw.json: get/set/unset/file/schema/validate values by path and print t…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Config helpers for non-interactive edits in <code>openclaw.json</code>: get/set/unset/file/schema/validate values by path and print the active config file. Run without a subcommand to open the configure wizard (same as <code>openclaw configure</code>).</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-2">
-          <div class="section-heading">
-            <p class="section-kicker">第 2 站</p>
-            <h2>Examples</h2>
-            <p>这一节主要在解释“Examples”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“Examples”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一句直接对 OpenClaw 说的话，就像对小助手下达任务。</p>
-        <ul class="code-steps">
-          <li>这一句是在直接叫 OpenClaw 做事：“openclaw config file”。你可以把它想成对机器人说的完整命令。</li><li>这一句是在直接叫 OpenClaw 做事：“openclaw config schema”。你可以把它想成对机器人说的完整命令。</li><li>这一句是在直接叫 OpenClaw 做事：“openclaw config get browser.executablePath”。你可以把它想成对机器人说的完整命令。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">openclaw config file
-openclaw config schema
-openclaw config get browser.executablePath
-openclaw config set browser.executablePath &quot;/usr/bin/google-chrome&quot;
-openclaw config set agents.defaults.heartbeat.every &quot;2h&quot;
-openclaw config set agents.list[0].tools.exec.node &quot;node-id-or-name&quot;
-openclaw config set channels.discord.token --ref-provider default --ref-source env --ref-id DISCORD_BOT_TOKEN
-openclaw config set secrets.providers.vaultfile --provider-source file --provider-path /etc/openclaw/secrets.json --provider-mode json
-openclaw config unset plugins.entries.brave.config.webSearch.apiKey
-openclaw config set channels.discord.token --ref-provider default --ref-source env --ref-id DISCORD_BOT_TOKEN --dry-run
-openclaw config validate
-openclaw config validate --json</code></pre>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-3">
-          <div class="section-heading">
-            <p class="section-kicker">第 3 站</p>
-            <h2>`设置说明书 schema`</h2>
-            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>你理解的是能力边界，不只是功能名字。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Print the generated JSON schema for openclaw.json to stdout as plain text. Pipe it into a file when you want to inspect…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Print the generated JSON schema for openclaw.json to stdout as plain text.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Print the generated JSON schema for <code>openclaw.json</code> to stdout as plain text.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一句直接对 OpenClaw 说的话，就像对小助手下达任务。</p>
-        <ul class="code-steps">
-          <li>这一句是在直接叫 OpenClaw 做事：“openclaw config schema”。你可以把它想成对机器人说的完整命令。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">openclaw config schema</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Pipe it into a file when you want to inspect or validate it with other 工具小帮手s:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Pipe it into a file when you want to inspect or validate it with other tools:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一句直接对 OpenClaw 说的话，就像对小助手下达任务。</p>
-        <ul class="code-steps">
-          <li>这一句是在直接叫 OpenClaw 做事：“openclaw config schema &gt; openclaw.schema.json”。你可以把它想成对机器人说的完整命令。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">openclaw config schema &gt; openclaw.schema.json</code></pre>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-4">
-          <div class="section-heading">
-            <p class="section-kicker">第 4 站</p>
-            <h2>Paths</h2>
-            <p>这一节主要在解释“Paths”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“Paths”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Paths use dot or bracket notation: Use the 机器人朋友 list index to target a specific 机器人朋友:”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Paths use dot or bracket notation:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Paths use dot or bracket notation:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一句直接对 OpenClaw 说的话，就像对小助手下达任务。</p>
-        <ul class="code-steps">
-          <li>这一句是在直接叫 OpenClaw 做事：“openclaw config get agents.defaults.workspace”。你可以把它想成对机器人说的完整命令。</li><li>这一句是在直接叫 OpenClaw 做事：“openclaw config get agents.list[0].id”。你可以把它想成对机器人说的完整命令。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">openclaw config get agents.defaults.workspace
-openclaw config get agents.list[0].id</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Use the 机器人朋友 list index to target a specific 机器人朋友:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Use the agent list index to target a specific agent:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一句直接对 OpenClaw 说的话，就像对小助手下达任务。</p>
-        <ul class="code-steps">
-          <li>这一句是在直接叫 OpenClaw 做事：“openclaw config get agents.list”。你可以把它想成对机器人说的完整命令。</li><li>这一句是在直接叫 OpenClaw 做事：“openclaw config set agents.list[1].tools.exec.node &quot;node-id-or-name&quot;”。你可以把它想成对机器人说的完整命令。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">openclaw config get agents.list
-openclaw config set agents.list[1].tools.exec.node &quot;node-id-or-name&quot;</code></pre>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-5">
-          <div class="section-heading">
-            <p class="section-kicker">第 5 站</p>
-            <h2>Values</h2>
-            <p>这一节主要在解释“Values”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“Values”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Values are parsed as JSON5 when possible; otherwise they are treated as strings. Use --strict-json to require JSON5 par…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Values are parsed as JSON5 when possible; otherwise they are treated as strings. Use --strict-json to require JSON5 par…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Values are parsed as JSON5 when possible; otherwise they are treated as strings. Use <code>--strict-json</code> to require JSON5 parsing. <code>--json</code> remains supported as a legacy alias.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一句直接对 OpenClaw 说的话，就像对小助手下达任务。</p>
-        <ul class="code-steps">
-          <li>这一句是在直接叫 OpenClaw 做事：“openclaw config set agents.defaults.heartbeat.every &quot;0m&quot;”。你可以把它想成对机器人说的完整命令。</li><li>这一句是在直接叫 OpenClaw 做事：“openclaw config set gateway.port 19001 --strict-json”。你可以把它想成对机器人说的完整命令。</li><li>这一句是在直接叫 OpenClaw 做事：“openclaw config set channels.whatsapp.groups &#39;[&quot;*&quot;]&#39; --strict-json”。你可以把它想成对机器人说的完整命令。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">openclaw config set agents.defaults.heartbeat.every &quot;0m&quot;
-openclaw config set gateway.port 19001 --strict-json
-openclaw config set channels.whatsapp.groups &#39;[&quot;*&quot;]&#39; --strict-json</code></pre>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-6">
-          <div class="section-heading">
-            <p class="section-kicker">第 6 站</p>
-            <h2>`设置说明书 set` modes</h2>
-            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>你理解的是能力边界，不只是功能名字。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“openclaw 设置说明书 set supports four assignment styles: 1. Value mode: openclaw 设置说明书 set &lt;path&gt; &lt;value&gt; 2. SecretRef build…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“openclaw 设置说明书 set supports four assignment styles:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p><code>openclaw config set</code> supports four assignment styles:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“1. Value mode: openclaw 设置说明书 set &lt;path&gt; &lt;value&gt; 2. SecretRef builder mode:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>1. Value mode: <code>openclaw config set &lt;path&gt; &lt;value&gt;</code> 2. SecretRef builder mode:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一句直接对 OpenClaw 说的话，就像对小助手下达任务。</p>
-        <ul class="code-steps">
-          <li>这一句是在直接叫 OpenClaw 做事：“openclaw config set channels.discord.token \”。你可以把它想成对机器人说的完整命令。</li><li>这一行“--ref-provider default \”是当前步骤要交给电脑的一小块提示。</li><li>这一行“--ref-source env \”是当前步骤要交给电脑的一小块提示。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">openclaw config set channels.discord.token \
-  --ref-provider default \
-  --ref-source env \
-  --ref-id DISCORD_BOT_TOKEN</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“3. Provider builder mode (secrets.providers.&lt;alias&gt; path only):”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>3. Provider builder mode (<code>secrets.providers.&lt;alias&gt;</code> path only):</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一句直接对 OpenClaw 说的话，就像对小助手下达任务。</p>
-        <ul class="code-steps">
-          <li>这一句是在直接叫 OpenClaw 做事：“openclaw config set secrets.providers.vault \”。你可以把它想成对机器人说的完整命令。</li><li>这一行“--provider-source exec \”是当前步骤要交给电脑的一小块提示。</li><li>这一行“--provider-command /usr/local/bin/openclaw-vault \”是当前步骤要交给电脑的一小块提示。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">openclaw config set secrets.providers.vault \
-  --provider-source exec \
-  --provider-command /usr/local/bin/openclaw-vault \
-  --provider-arg read \
-  --provider-arg openai/api-key \
-  --provider-timeout-ms 5000</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“4. Batch mode (--batch-json or --batch-file):”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>4. Batch mode (<code>--batch-json</code> or <code>--batch-file</code>):</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一句直接对 OpenClaw 说的话，就像对小助手下达任务。</p>
-        <ul class="code-steps">
-          <li>这一句是在直接叫 OpenClaw 做事：“openclaw config set --batch-json &#39;[”。你可以把它想成对机器人说的完整命令。</li><li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“path”贴标签，意思是把它设置成“secrets.providers.default”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">openclaw config set --batch-json &#39;[
-  {
-    &quot;path&quot;: &quot;secrets.providers.default&quot;,
-    &quot;provider&quot;: { &quot;source&quot;: &quot;env&quot; }
-  },
-  {
-    &quot;path&quot;: &quot;channels.discord.token&quot;,
-    &quot;ref&quot;: { &quot;source&quot;: &quot;env&quot;, &quot;provider&quot;: &quot;default&quot;, &quot;id&quot;: &quot;DISCORD_BOT_TOKEN&quot; }
-  }
-]&#39;</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一句直接对 OpenClaw 说的话，就像对小助手下达任务。</p>
-        <ul class="code-steps">
-          <li>这一句是在直接叫 OpenClaw 做事：“openclaw config set --batch-file ./config-set.batch.json --dry-run”。你可以把它想成对机器人说的完整命令。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">openclaw config set --batch-file ./config-set.batch.json --dry-run</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Batch parsing always uses the batch payload (--batch-json/--batch-file) as the source of truth. --strict-json / --json…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Batch parsing always uses the batch payload (<code>--batch-json</code>/<code>--batch-file</code>) as the source of truth. <code>--strict-json</code> / <code>--json</code> do not change batch parsing behavior.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“JSON path/value mode remains supported for both SecretRefs and providers:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>JSON path/value mode remains supported for both SecretRefs and providers:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一句直接对 OpenClaw 说的话，就像对小助手下达任务。</p>
-        <ul class="code-steps">
-          <li>这一句是在直接叫 OpenClaw 做事：“openclaw config set channels.discord.token \”。你可以把它想成对机器人说的完整命令。</li><li>这里在给“{source”贴标签，意思是把它设置成“envprovider:defaultid:DISCORD_BOT_TOKEN}&#39; \”。</li><li>这一行“--strict-json”是当前步骤要交给电脑的一小块提示。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">openclaw config set channels.discord.token \
-  &#39;{&quot;source&quot;:&quot;env&quot;,&quot;provider&quot;:&quot;default&quot;,&quot;id&quot;:&quot;DISCORD_BOT_TOKEN&quot;}&#39; \
-  --strict-json
+      <section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>🔧 <code>openclaw config</code> 像“一把专门拧配置螺丝的小扳手”</h2>
+      <p>如果 <code>configure</code> 是装修向导，那 <code>config</code> 就是你自己下场动手时用的小扳手。它不陪你聊天，它直接对着 <code>openclaw.json</code> 的具体位置动手。</p>
+      <p>你可以把它想成“精确修改器”。想看某一颗螺丝在哪，想换一颗，想把一颗卸掉，想整体验证有没有拧歪，都是它的活。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合不想走向导、只想精确改某个配置点的人</span>
+      <span>这页最重要的是分清：<code>get/set/unset</code> 在动螺丝，<code>file/schema/validate</code> 在看图纸</span>
+      <a href="https://docs.openclaw.ai/cli/config" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
 
-openclaw config set secrets.providers.vaultfile \
-  &#39;{&quot;source&quot;:&quot;file&quot;,&quot;path&quot;:&quot;/etc/openclaw/secrets.json&quot;,&quot;mode&quot;:&quot;json&quot;}&#39; \
-  --strict-json</code></pre>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-7">
-          <div class="section-heading">
-            <p class="section-kicker">第 7 站</p>
-            <h2>Provider Builder Flags</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Provider builder targets must use secrets.providers.&lt;alias&gt; as the path. Common flags: Env provider (--provider-source…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Provider builder targets must use secrets.providers.&lt;alias&gt; as the path.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Provider builder targets must use <code>secrets.providers.&lt;alias&gt;</code> as the path.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Common flags:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Common flags:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Provider Builder Flags”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：--provider-source &lt;env file exec&gt;、--provider-timeout-ms &lt;ms&gt; (file, exec)。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>--provider-source &lt;env|file|exec&gt;</code></li><li><code>--provider-timeout-ms &lt;ms&gt;</code> (<code>file</code>, <code>exec</code>)</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Env provider (--provider-source env):”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Env provider (<code>--provider-source env</code>):</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Provider Builder Flags”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：--provider-allowlist &lt;ENV_VAR&gt; (repeatabl…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>--provider-allowlist &lt;ENV_VAR&gt;</code> (repeatable)</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“File provider (--provider-source file):”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>File provider (<code>--provider-source file</code>):</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Provider Builder Flags”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：--provider-path &lt;path&gt; (required)、--provider-mode &lt;singleValue json&gt;、--provider-max-bytes &lt;bytes&gt;。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>--provider-path &lt;path&gt;</code> (required)</li><li><code>--provider-mode &lt;singleValue|json&gt;</code></li><li><code>--provider-max-bytes &lt;bytes&gt;</code></li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Exec provider (--provider-source exec):”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Exec provider (<code>--provider-source exec</code>):</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Provider Builder Flags”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：--provider-魔法口令 &lt;path&gt; (required)、--provider-arg &lt;arg&gt; (repeatable)、--provider-no-output-timeout-ms &lt;ms&gt;、--provider-max-output-bytes &lt;bytes&gt;。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>--provider-command &lt;path&gt;</code> (required)</li><li><code>--provider-arg &lt;arg&gt;</code> (repeatable)</li><li><code>--provider-no-output-timeout-ms &lt;ms&gt;</code></li><li><code>--provider-max-output-bytes &lt;bytes&gt;</code></li><li><code>--provider-json-only</code></li><li><code>--provider-env &lt;KEY=VALUE&gt;</code> (repeatable)</li><li><code>--provider-pass-env &lt;ENV_VAR&gt;</code> (repeatable)</li><li><code>--provider-trusted-dir &lt;path&gt;</code> (repeatable)</li><li><code>--provider-allow-insecure-path</code></li><li><code>--provider-allow-symlink-command</code></li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Hardened exec provider example:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Hardened exec provider example:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一句直接对 OpenClaw 说的话，就像对小助手下达任务。</p>
-        <ul class="code-steps">
-          <li>这一句是在直接叫 OpenClaw 做事：“openclaw config set secrets.providers.vault \”。你可以把它想成对机器人说的完整命令。</li><li>这一行“--provider-source exec \”是当前步骤要交给电脑的一小块提示。</li><li>这一行“--provider-command /usr/local/bin/openclaw-vault \”是当前步骤要交给电脑的一小块提示。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">openclaw config set secrets.providers.vault \
-  --provider-source exec \
-  --provider-command /usr/local/bin/openclaw-vault \
-  --provider-arg read \
-  --provider-arg openai/api-key \
-  --provider-json-only \
-  --provider-pass-env VAULT_TOKEN \
-  --provider-trusted-dir /usr/local/bin \
-  --provider-timeout-ms 5000</code></pre>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-8">
-          <div class="section-heading">
-            <p class="section-kicker">第 8 站</p>
-            <h2>Dry run</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Use --dry-run to validate changes without writing openclaw.json. Dry-run behavior: --dry-run --json prints a machine-re…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Use --dry-run to validate changes without writing openclaw.json.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Use <code>--dry-run</code> to validate changes without writing <code>openclaw.json</code>.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一句直接对 OpenClaw 说的话，就像对小助手下达任务。</p>
-        <ul class="code-steps">
-          <li>这一句是在直接叫 OpenClaw 做事：“openclaw config set channels.discord.token \”。你可以把它想成对机器人说的完整命令。</li><li>这一行“--ref-provider default \”是当前步骤要交给电脑的一小块提示。</li><li>这一行“--ref-source env \”是当前步骤要交给电脑的一小块提示。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">openclaw config set channels.discord.token \
-  --ref-provider default \
-  --ref-source env \
-  --ref-id DISCORD_BOT_TOKEN \
-  --dry-run
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一站</p>
+    <h2>🧰 先把它分成两类动作：动配置，和看图纸</h2>
+    <p>这页命令很多，但其实很好分。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">🔍</span>
+      <h2><code>get</code></h2>
+      <p>像拿手电照一下某颗螺丝现在拧在哪。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🔩</span>
+      <h2><code>set</code></h2>
+      <p>像把某颗螺丝拧进新位置，或者换成另一种零件。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🪛</span>
+      <h2><code>unset</code></h2>
+      <p>像把某颗螺丝卸下来，让那里恢复成“没装这个”的状态。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">📐</span>
+      <h2><code>file</code> / <code>schema</code> / <code>validate</code></h2>
+      <p>像看图纸放在哪、标准长什么样、现在有没有装歪。</p>
+    </article>
+  </div>
+</section>
 
-openclaw config set channels.discord.token \
-  --ref-provider default \
-  --ref-source env \
-  --ref-id DISCORD_BOT_TOKEN \
-  --dry-run \
-  --json
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二站</p>
+    <h2>📍 路径就是“哪一颗螺丝”，值就是“你要拧成什么样”</h2>
+    <p>看起来像长长的点号路径，其实就是在说“具体改哪一处”。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw config get browser.executablePath</code></div>
+      <p>像先问：“浏览器可执行文件这颗螺丝，现在指向哪？”</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw config set gateway.port 19001</code></div>
+      <p>像直接把门牌号从一个数拧到另一个数。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>agents.list[0].tools.exec.node</code></div>
+      <p>像不只拧大厅螺丝，还能钻进第一个 agent 的小抽屉里拧里面那颗。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>unset ...apiKey</code></div>
+      <p>像把一颗凭证螺丝整个拆掉，不留假的空壳。</p>
+    </div>
+  </div>
+</section>
 
-openclaw config set channels.discord.token \
-  --ref-provider vault \
-  --ref-source exec \
-  --ref-id discord/token \
-  --dry-run \
-  --allow-exec</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Dry-run behavior:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Dry-run behavior:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Dry run”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Builder mode: runs SecretRef resolvabilit…、JSON mode (--strict-json, --json, or batc…、Exec SecretRef checks are skipped by defa…、Use --allow-exec with --dry-run to opt in…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Builder mode: runs SecretRef resolvability checks for changed refs/providers.</li><li>JSON mode (<code>--strict-json</code>, <code>--json</code>, or batch mode): runs schema validation plus SecretRef resolvability checks.</li><li>Exec SecretRef checks are skipped by default during dry-run to avoid command side effects.</li><li>Use <code>--allow-exec</code> with <code>--dry-run</code> to opt in to exec SecretRef checks (this may execute provider commands).</li><li><code>--allow-exec</code> is dry-run only and errors if used without <code>--dry-run</code>.</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“--dry-run --json prints a machine-readable report:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p><code>--dry-run --json</code> prints a machine-readable report:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Dry run”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：ok: whether dry-run passed、operations: number of assignments evaluat…、checks: whether schema/resolvability chec…、checks.resolvabilityComplete: whether res…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>ok</code>: whether dry-run passed</li><li><code>operations</code>: number of assignments evaluated</li><li><code>checks</code>: whether schema/resolvability checks ran</li><li><code>checks.resolvabilityComplete</code>: whether resolvability checks ran to completion (false when exec refs are skipped)</li><li><code>refsChecked</code>: number of refs actually resolved during dry-run</li><li><code>skippedExecRefs</code>: number of exec refs skipped because <code>--allow-exec</code> was not set</li><li><code>errors</code>: structured schema/resolvability failures when <code>ok=false</code></li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-9">
-          <div class="section-heading">
-            <p class="section-kicker">第 9 站</p>
-            <h2>JSON Output Shape</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Success example: Failure example: If dry-run fails:”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“ok”贴标签，意思是把它设置成“boolean”。</li><li>这里在给“operations”贴标签，意思是把它设置成“number”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json5">{
-  ok: boolean,
-  operations: number,
-  configPath: string,
-  inputModes: [&quot;value&quot; | &quot;json&quot; | &quot;builder&quot;, ...],
-  checks: {
-    schema: boolean,
-    resolvability: boolean,
-    resolvabilityComplete: boolean,
-  },
-  refsChecked: number,
-  skippedExecRefs: number,
-  errors?: [
-    {
-      kind: &quot;schema&quot; | &quot;resolvability&quot;,
-      message: string,
-      ref?: string, // present for resolvability errors
-    },
-  ],
-}</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Success example:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Success example:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“ok”贴标签，意思是把它设置成“true”。</li><li>这里在给“operations”贴标签，意思是把它设置成“1”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json">{
-  &quot;ok&quot;: true,
-  &quot;operations&quot;: 1,
-  &quot;configPath&quot;: &quot;~/.openclaw/openclaw.json&quot;,
-  &quot;inputModes&quot;: [&quot;builder&quot;],
-  &quot;checks&quot;: {
-    &quot;schema&quot;: false,
-    &quot;resolvability&quot;: true,
-    &quot;resolvabilityComplete&quot;: true
-  },
-  &quot;refsChecked&quot;: 1,
-  &quot;skippedExecRefs&quot;: 0
-}</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Failure example:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Failure example:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“ok”贴标签，意思是把它设置成“false”。</li><li>这里在给“operations”贴标签，意思是把它设置成“1”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json">{
-  &quot;ok&quot;: false,
-  &quot;operations&quot;: 1,
-  &quot;configPath&quot;: &quot;~/.openclaw/openclaw.json&quot;,
-  &quot;inputModes&quot;: [&quot;builder&quot;],
-  &quot;checks&quot;: {
-    &quot;schema&quot;: false,
-    &quot;resolvability&quot;: true,
-    &quot;resolvabilityComplete&quot;: true
-  },
-  &quot;refsChecked&quot;: 1,
-  &quot;skippedExecRefs&quot;: 0,
-  &quot;errors&quot;: [
-    {
-      &quot;kind&quot;: &quot;resolvability&quot;,
-      &quot;message&quot;: &quot;Error: Environment variable \&quot;MISSING_TEST_SECRET\&quot; is not set.&quot;,
-      &quot;ref&quot;: &quot;env:default:MISSING_TEST_SECRET&quot;
-    }
-  ]
-}</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“If dry-run fails:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>If dry-run fails:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“JSON Output Shape”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：设置说明书 schema validation failed: your post…、SecretRef assignment(s) could not be reso…、Dry run note: skipped &lt;n&gt; exec SecretRef…、For batch mode, fix failing entries and r…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>config schema validation failed</code>: your post-change config shape is invalid; fix path/value or provider/ref object shape.</li><li><code>SecretRef assignment(s) could not be resolved</code>: referenced provider/ref currently cannot resolve (missing env var, invalid file pointer, exec provider failure, or provider/source mismatch).</li><li><code>Dry run note: skipped &lt;n&gt; exec SecretRef resolvability check(s)</code>: dry-run skipped exec refs; rerun with <code>--allow-exec</code> if you need exec resolvability validation.</li><li>For batch mode, fix failing entries and rerun <code>--dry-run</code> before writing.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-10">
-          <div class="section-heading">
-            <p class="section-kicker">第 10 站</p>
-            <h2>Sub魔法口令s</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Restart the 门口的小门卫 after edits.”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Subcommands”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：设置说明书 file: Print the active 设置说明书 file p…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>config file</code>: Print the active config file path (resolved from <code>OPENCLAW_CONFIG_PATH</code> or default location).</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Restart the 门口的小门卫 after edits.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Restart the gateway after edits.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-11">
-          <div class="section-heading">
-            <p class="section-kicker">第 11 站</p>
-            <h2>Validate</h2>
-            <p>这一节主要在解释“Validate”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“Validate”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Validate the current 设置说明书 against the active schema without starting the 门口的小门卫.”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Validate the current 设置说明书 against the active schema without starting the 门口的小门卫.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Validate the current config against the active schema without starting the gateway.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一句直接对 OpenClaw 说的话，就像对小助手下达任务。</p>
-        <ul class="code-steps">
-          <li>这一句是在直接叫 OpenClaw 做事：“openclaw config validate”。你可以把它想成对机器人说的完整命令。</li><li>这一句是在直接叫 OpenClaw 做事：“openclaw config validate --json”。你可以把它想成对机器人说的完整命令。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">openclaw config validate
-openclaw config validate --json</code></pre>
-      </div>
-    
-          </div>
-        </section>
-      
-    <section class="section-shell">
-      <div class="ad-placeholder">
-        <p>这里预留给未来的 Google AdSense 模块。</p>
-        <code>&lt;!-- ADSENSE_SNIPPET --&gt;</code>
-      </div>
-    </section>
-  
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第三站</p>
+    <h2>🪪 SecretRef builder 和 provider builder，像“帮你装钥匙柜”和“帮你做取钥匙机器”</h2>
+    <p>这是这页最容易把人看晕的地方，但一旦换成画面就很好懂。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">🔐 SecretRef builder</div>
+      <p>像告诉系统：“这把钥匙不放明面上，它在某个钥匙柜里，去那里拿。”</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🏭 provider builder</div>
+      <p>像不只是指向钥匙柜，而是直接装一台“取钥匙机器”，比如从 env、文件、命令里拿。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>--ref-provider --ref-source --ref-id</code></div>
+      <p>像给钥匙柜写上“去哪拿、谁负责、编号几号”。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>--provider-command ...</code></div>
+      <p>像你不是从柜子拿，而是让一台取件机去执行一段命令，把钥匙取回来。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第四站</p>
+    <h2>📦 Batch mode 是“别一颗颗拧，直接拿一张施工单一起改”</h2>
+    <p>当你一次要改很多处时，batch 就像一张集中施工单。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">🧾</span>
+      <h2><code>--batch-json</code></h2>
+      <p>像你把一整张施工清单直接贴在命令后面。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">📄</span>
+      <h2><code>--batch-file</code></h2>
+      <p>像你把施工单另外写在一个文件里，再让它按单子施工。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">📌</span>
+      <h2>批处理以单子为准</h2>
+      <p>官方特地说 batch payload 才是唯一真相，不会再被别的解析模式扰乱。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🎈</span>
+      <h2>一句话</h2>
+      <p>改一堆时，别一颗颗拧，直接交施工单。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第五站</p>
+    <h2>🧪 <code>--dry-run</code> 很重要，它像“先拿样板比一下，不真下手”</h2>
+    <p>这页最稳的地方就是 dry run。尤其改 SecretRef、provider、批量配置时，先试演一遍特别值。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label"><code>--dry-run</code></div>
+      <p>像装修师傅先在墙上比划，不立刻打孔。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">schema checks</div>
+      <p>像先看你这颗零件形状对不对，别硬塞错口。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">resolvability checks</div>
+      <p>像再确认那把钥匙柜里真的有钥匙，不是写了编号却拿不到。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>--allow-exec</code></div>
+      <p>像你愿意让“取钥匙机器”也真的先跑一遍，看看它能不能把钥匙带回来。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第六站</p>
+    <h2>✅ <code>validate</code> 是“整屋巡一圈，看看有没有哪颗螺丝已经拧歪”</h2>
+    <p>这和 <code>set</code> 不一样。它不改，只检查。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw config validate</code></div>
+      <p>像叫验收员进屋，从头到尾看一遍现在的配置有没有违反图纸。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>--json</code></div>
+      <p>像验收报告不要口头念，直接给机器能抄走的结构化单子。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>config file</code> / <code>config schema</code></div>
+      <p>一个像告诉你图纸放在哪个抽屉，一个像把设计标准本身摊开给你看。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 一句话</div>
+      <p>改完配置后，拿它做一次整屋验收特别值。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">最后总结</p>
+    <h2>🎈 把 <code>openclaw config</code> 这页压成一句话</h2>
+    <p><code>openclaw config</code> 就是一把精细扳手：你可以点对点地看、拧、拆配置，也可以用施工单批量改，再用 dry run 和 validate 先试演、再验收。</p>
+  </div>
+  <div class="ad-placeholder">
+    <p>如果你下一页只想继续看一页，我建议看 <code>/cli/update</code>。因为房子装好以后，下一个常见问题就是：怎么安全升级，不把屋子搞塌。</p>
+  </div>
+</section>
+
 
       <footer class="page-footer">
         <div>
