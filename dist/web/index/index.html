@@ -3970,529 +3970,167 @@
   
       </div>
 
-      
-    <section class="section-shell">
-      <div class="overview-card">
-        <div>
-          <p class="section-kicker">先听这页的人话版</p>
-          <h2>Web</h2>
-          <p>这一页像一本关于“Web”的小绘本，它先告诉我们这位机器人朋友会做什么，再一步一步解释什么时候该这样做。 你可以先把它想成：Web (门口的小门卫)。</p>
-          <p>如果把这页当成“给普通人看的版本”，你最应该带走的是：它到底在教你一件什么事、什么时候要这样做、以及哪里最容易踩坑。</p>
-        </div>
-        <div class="overview-meta">
-          <span>原始路径：/web/index</span>
-          <span>章节数量：8</span>
-          <a href="https://docs.openclaw.ai/web/index" target="_blank" rel="noreferrer">查看原文</a>
-        </div>
-      </div>
-    </section>
-    
-        <section class="section-shell" id="section-1">
-          <div class="section-heading">
-            <p class="section-kicker">第 1 站</p>
-            <h2>Start Here</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Web (门口的小门卫) The 门口的小门卫 serves a small **browser Control UI** (Vite + Lit) from the same port as the 门口的小门卫 WebSocket:…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Web (门口的小门卫)”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p># Web (Gateway)</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“The 门口的小门卫 serves a small **browser Control UI** (Vite + Lit) from the same port as the 门口的小门卫 WebSocket:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>The Gateway serves a small **browser Control UI** (Vite + Lit) from the same port as the Gateway WebSocket:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Start Here”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：default: http://&lt;host&gt;:18789/、optional prefix: set 门口的小门卫.controlUi.bas…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>default: <code>http://&lt;host&gt;:18789/</code></li><li>optional prefix: set <code>gateway.controlUi.basePath</code> (e.g. <code>/openclaw</code>)</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Capabilities live in Control UI. This page focuses on bind modes, 安全守门员, and web-facing surfaces.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Capabilities live in <a href="/web/control-ui" target="_blank" rel="noreferrer">Control UI</a>. This page focuses on bind modes, security, and web-facing surfaces.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-2">
-          <div class="section-heading">
-            <p class="section-kicker">第 2 站</p>
-            <h2>小铃铛通知s</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“When hooks.enabled=true, the 门口的小门卫 also exposes a small 小铃铛通知 endpoint on the same HTTP 大房子服务器. See 门口的小门卫 设置说明书uratio…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“When hooks.enabled=true, the 门口的小门卫 also exposes a small 小铃铛通知 endpoint on the same HTTP 大房子服务器. See 门口的小门卫 设置说明书uratio…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>When <code>hooks.enabled=true</code>, the Gateway also exposes a small webhook endpoint on the same HTTP server. See <a href="/gateway/configuration" target="_blank" rel="noreferrer">Gateway configuration</a> → <code>hooks</code> for auth + payloads.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-3">
-          <div class="section-heading">
-            <p class="section-kicker">第 3 站</p>
-            <h2>设置说明书 (default-on)</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“The Control UI is **enabled by default** when assets are present (dist/control-ui). You can control it via 设置说明书:”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“The Control UI is **enabled by default** when assets are present (dist/control-ui). You can control it via 设置说明书:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>The Control UI is **enabled by default** when assets are present (<code>dist/control-ui</code>). You can control it via config:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“gateway”贴标签，意思是把它设置成“{”。</li><li>这里在给“controlUi”贴标签，意思是把它设置成“{ enabled: true basePath: /openclaw } // basePath optional”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json5">{
-  gateway: {
-    controlUi: { enabled: true, basePath: &quot;/openclaw&quot; }, // basePath optional
-  },
-}</code></pre>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-4">
-          <div class="section-heading">
-            <p class="section-kicker">第 4 站</p>
-            <h2>Integrated Serve (recommended)</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Keep the 门口的小门卫 on loopback and let Tailscale Serve proxy it: Then start the 门口的小门卫: Open:”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Keep the 门口的小门卫 on loopback and let Tailscale Serve proxy it:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Keep the Gateway on loopback and let Tailscale Serve proxy it:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“gateway”贴标签，意思是把它设置成“{”。</li><li>这里在给“bind”贴标签，意思是把它设置成“loopback”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json5">{
-  gateway: {
-    bind: &quot;loopback&quot;,
-    tailscale: { mode: &quot;serve&quot; },
-  },
-}</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Then start the 门口的小门卫:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Then start the gateway:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一句直接对 OpenClaw 说的话，就像对小助手下达任务。</p>
-        <ul class="code-steps">
-          <li>这一句是在直接叫 OpenClaw 做事：“openclaw gateway”。你可以把它想成对机器人说的完整命令。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">openclaw gateway</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Open:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Open:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Integrated Serve (recommended)”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：https://&lt;magicdns&gt;/ (or your 设置说明书ured 门口…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>https://&lt;magicdns&gt;/</code> (or your configured <code>gateway.controlUi.basePath</code>)</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-5">
-          <div class="section-heading">
-            <p class="section-kicker">第 5 站</p>
-            <h2>Tailnet bind + token</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Then start the 门口的小门卫 (token required for non-loopback binds): Open:”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“gateway”贴标签，意思是把它设置成“{”。</li><li>这里在给“bind”贴标签，意思是把它设置成“tailnet”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json5">{
-  gateway: {
-    bind: &quot;tailnet&quot;,
-    controlUi: { enabled: true },
-    auth: { mode: &quot;token&quot;, token: &quot;your-token&quot; },
-  },
-}</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Then start the 门口的小门卫 (token required for non-loopback binds):”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Then start the gateway (token required for non-loopback binds):</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一句直接对 OpenClaw 说的话，就像对小助手下达任务。</p>
-        <ul class="code-steps">
-          <li>这一句是在直接叫 OpenClaw 做事：“openclaw gateway”。你可以把它想成对机器人说的完整命令。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">openclaw gateway</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Open:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Open:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Tailnet bind + token”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：http://&lt;tailscale-ip&gt;:18789/ (or your 设置说…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>http://&lt;tailscale-ip&gt;:18789/</code> (or your configured <code>gateway.controlUi.basePath</code>)</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-6">
-          <div class="section-heading">
-            <p class="section-kicker">第 6 站</p>
-            <h2>Public internet (Funnel)</h2>
-            <p>这一节主要在解释“Public internet (Funnel)”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“Public internet (Funnel)”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“gateway”贴标签，意思是把它设置成“{”。</li><li>这里在给“bind”贴标签，意思是把它设置成“loopback”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json5">{
-  gateway: {
-    bind: &quot;loopback&quot;,
-    tailscale: { mode: &quot;funnel&quot; },
-    auth: { mode: &quot;password&quot; }, // or OPENCLAW_GATEWAY_PASSWORD
-  },
-}</code></pre>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-7">
-          <div class="section-heading">
-            <p class="section-kicker">第 7 站</p>
-            <h2>安全守门员 notes</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“explicitly (full origins). Without it, 门口的小门卫 startup is refused by default. Host-header origin fallback mode, but is a…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“explicitly (full origins). Without it, 门口的小门卫 startup is refused by default.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>explicitly (full origins). Without it, gateway startup is refused by default.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Host-header origin fallback mode, but is a dangerous 安全守门员 downgrade.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Host-header origin fallback mode, but is a dangerous security downgrade.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“when 门口的小门卫.auth.allowTailscale is true (no token/秘密口令 required). HTTP 对话接口 endpoints still require token/秘密口令. Set 门口的…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>when <code>gateway.auth.allowTailscale</code> is <code>true</code> (no token/password required). HTTP API endpoints still require token/password. Set <code>gateway.auth.allowTailscale: false</code> to require explicit credentials. See <a href="/gateway/tailscale" target="_blank" rel="noreferrer">Tailscale</a> and <a href="/gateway/security" target="_blank" rel="noreferrer">Security</a>. This tokenless flow assumes the gateway host is trusted.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Security notes”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：门口的小门卫 auth is required by default (token…、Non-loopback binds still **require** a sh…、The wizard generates a 门口的小门卫 token by de…、The UI sends connect.params.auth.token or…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Gateway auth is required by default (token/password or Tailscale identity headers).</li><li>Non-loopback binds still **require** a shared token/password (<code>gateway.auth</code> or env).</li><li>The wizard generates a gateway token by default (even on loopback).</li><li>The UI sends <code>connect.params.auth.token</code> or <code>connect.params.auth.password</code>.</li><li>For non-loopback Control UI deployments, set <code>gateway.controlUi.allowedOrigins</code></li><li><code>gateway.controlUi.dangerouslyAllowHostHeaderOriginFallback=true</code> enables</li><li>With Serve, Tailscale identity headers can satisfy Control UI/WebSocket auth</li><li><code>gateway.tailscale.mode: &quot;funnel&quot;</code> requires <code>gateway.auth.mode: &quot;password&quot;</code> (shared password).</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-8">
-          <div class="section-heading">
-            <p class="section-kicker">第 8 站</p>
-            <h2>Building the UI</h2>
-            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>你理解的是能力边界，不只是功能名字。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“The 门口的小门卫 serves static files from dist/control-ui. Build them with:”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“The 门口的小门卫 serves static files from dist/control-ui. Build them with:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>The Gateway serves static files from <code>dist/control-ui</code>. Build them with:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一串终端魔法口令，像按步骤按下几个按钮，让电脑开始干活。</p>
-        <ul class="code-steps">
-          <li>这里在给“pnpm ui”贴标签，意思是把它设置成“build # auto-installs UI deps on first run”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">pnpm ui:build # auto-installs UI deps on first run</code></pre>
-      </div>
-    
-          </div>
-        </section>
-      
-    <section class="section-shell">
-      <div class="ad-placeholder">
-        <p>这里预留给未来的 Google AdSense 模块。</p>
-        <code>&lt;!-- ADSENSE_SNIPPET --&gt;</code>
-      </div>
-    </section>
-  
+      <section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>🌐 Web 这页其实在讲：OpenClaw 这栋楼，门开在哪、谁能进、该走哪条安全走廊</h2>
+      <p>你已经知道 Dashboard 是总控室了。这一页不是再重复控制台按钮，而是在讲整栋楼怎么对外开门：默认门牌、basePath、Tailscale、Funnel、allowedOrigins，这些都属于“楼体规则”。</p>
+      <p>所以你可以把它当成建筑说明书。不是看房间里摆了什么，而是看大门朝哪开、哪条走廊是安全的、哪条开法太危险。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合要让 Control UI 对外可达，但又不想把安全做烂的人</span>
+      <span>这页最重要的是分清：loopback、tailnet、funnel 是三种完全不同的开门方式</span>
+      <a href="https://docs.openclaw.ai/web" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一站</p>
+    <h2>🏠 先记总图：Web 不是另起一栋楼，而是跟 Gateway 共用同一个门牌</h2>
+    <p>官方开头这句很关键：Control UI 和 Gateway WebSocket 共用同一个端口。意思就是，这不是额外再起一个网站服务，而是同一栋楼的不同房间。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">🚪 默认门牌</div>
+      <p><code>http://&lt;host&gt;:18789/</code> 像这栋楼的默认正门。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>basePath</code></div>
+      <p>像把总控室入口从一楼大厅改到“大厅里的某条走廊”，比如 <code>/openclaw</code>。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🪝 webhooks</div>
+      <p>像这栋楼同一扇大门旁边还挂着一个小投递口，专门收 hooks 的外部通知。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">⭐ 一句话先记住</div>
+      <p>Web 和 Gateway 不是两栋楼，是同一栋楼的不同门和房间。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二站</p>
+    <h2>🧭 这页最重要的，是三种开门方式</h2>
+    <p>如果你把这一页都压缩掉，真正还要记住的就这三种：loopback、tailnet、funnel。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">🏠</span>
+      <h2>loopback</h2>
+      <p>像门只朝自己家客厅开。最稳，也最默认。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🧵</span>
+      <h2>tailnet</h2>
+      <p>像给熟人内网开一条专用走廊。不是公开大街，但比纯本地多了一层外部可达。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🌍</span>
+      <h2>funnel</h2>
+      <p>像真的把门开到公网街面上。能这么做，不代表应该轻率这么做。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">📌</span>
+      <h2>一句话</h2>
+      <p>越往公网走，安全要求越高，随意度越低。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第三站</p>
+    <h2>🪄 Tailscale Serve 是“门继续朝家里开，但外面给你搭一条安全走廊”</h2>
+    <p>官方推荐 Serve，不是因为它时髦，而是因为它很好地保留了“服务留在 loopback”这件事。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>bind: "loopback"</code></div>
+      <p>像总大门继续只对本机开，不直接朝大街敞开。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>tailscale: { mode: "serve" }</code></div>
+      <p>像让 Tailscale 在楼外帮你搭一条受控通道，把可信流量引过来。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>https://&lt;magicdns&gt;/</code></div>
+      <p>像走这条专用走廊后的门牌号，不是直接裸露原来的本机端口。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 一句话</div>
+      <p>Serve 的味道是：楼还锁在家里，但给自己人修了安全通道。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第四站</p>
+    <h2>🔐 tailnet 和 funnel，都在提醒你“出门越远，门票越重要”</h2>
+    <p>官方这里写了很多 auth 细节，翻成人话都是一个意思：离开 loopback 以后，别想偷懒。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">🎟 token / password</div>
+      <p>像门票或口令。非 loopback 场景下，这些东西不是可选装饰，而是正门门禁。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>allowTailscale</code></div>
+      <p>像你选择要不要信任“穿着 Tailscale 制服来的人”。开了可以省共享 token，但前提是你真的信这条走廊。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>allowedOrigins</code></div>
+      <p>像在门口写明“只有这些来源的浏览器能合法进门”。如果不写，系统宁可直接拒绝开门。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>dangerouslyAllowHostHeaderOriginFallback</code></div>
+      <p>这个名字已经把意思写脸上了。像把门禁规则降级成“差不多像就算”，官方明确告诉你这很危险。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第五站</p>
+    <h2>🧱 Building the UI 这一句在讲“总控室装修材料要先备好”</h2>
+    <p>官方最后提 <code>pnpm ui:build</code>，不是前端开发者自嗨，而是在告诉你：Control UI 需要静态资源，没 build 好，楼里房间就搭不起来。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>dist/control-ui</code></div>
+      <p>像总控室真正装修好的房间。Gateway 只是负责把这间房端出来。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>pnpm ui:build</code></div>
+      <p>像把前台界面这部分材料先打包成能住人的样子。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">auto-installs UI deps</div>
+      <p>像第一次装修时，系统还会顺手帮你把基本建材搬来。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">📌 一句话</div>
+      <p>Gateway 是楼体，Control UI 是装修好的房间，少一个都住不顺。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">最后总结</p>
+    <h2>🎈 把 Web 这页压成一句话</h2>
+    <p>Web 这页讲的是 OpenClaw 这栋楼怎么开门：默认关在家里，Serve 是安全走廊，tailnet / funnel 是更外放的开法，而 token、password、allowedOrigins 就是门禁规则本身。</p>
+  </div>
+  <div class="ad-placeholder">
+    <p>如果你下一页只想继续看一页，我建议看 <code>/web/tui</code>。因为当你不想走浏览器总控室时，下一种最常见的入口就是终端里的这扇门。</p>
+  </div>
+</section>
+
 
       <footer class="page-footer">
         <div>

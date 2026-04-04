@@ -145,13 +145,16 @@ const handcraftedPageMap = new Map([
   ["/concepts/streaming", path.resolve("content/handcrafted/concepts.streaming.zh.html")],
   ["/concepts/features", path.resolve("content/handcrafted/concepts.features.zh.html")],
   ["/gateway/doctor", path.resolve("content/handcrafted/gateway.doctor.zh.html")],
+  ["/gateway/health", path.resolve("content/handcrafted/gateway.health.zh.html")],
   ["/providers/openai", path.resolve("content/handcrafted/providers.openai.zh.html")],
   ["/plugins/bundles", path.resolve("content/handcrafted/plugins.bundles.zh.html")],
   ["/plugins/building-plugins", path.resolve("content/handcrafted/plugins.building-plugins.zh.html")],
   ["/tools/browser", path.resolve("content/handcrafted/tools.browser.zh.html")],
   ["/tools/exec", path.resolve("content/handcrafted/tools.exec.zh.html")],
   ["/tools/plugin", path.resolve("content/handcrafted/tools.plugin.zh.html")],
-  ["/web/dashboard", path.resolve("content/handcrafted/web.dashboard.zh.html")]
+  ["/web/dashboard", path.resolve("content/handcrafted/web.dashboard.zh.html")],
+  ["/web/index", path.resolve("content/handcrafted/web.index.zh.html")],
+  ["/web/tui", path.resolve("content/handcrafted/web.tui.zh.html")]
 ]);
 
 function asset(fileName) {

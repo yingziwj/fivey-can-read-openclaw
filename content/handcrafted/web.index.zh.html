@@ -1,0 +1,160 @@
+<section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>🌐 Web 这页其实在讲：OpenClaw 这栋楼，门开在哪、谁能进、该走哪条安全走廊</h2>
+      <p>你已经知道 Dashboard 是总控室了。这一页不是再重复控制台按钮，而是在讲整栋楼怎么对外开门：默认门牌、basePath、Tailscale、Funnel、allowedOrigins，这些都属于“楼体规则”。</p>
+      <p>所以你可以把它当成建筑说明书。不是看房间里摆了什么，而是看大门朝哪开、哪条走廊是安全的、哪条开法太危险。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合要让 Control UI 对外可达，但又不想把安全做烂的人</span>
+      <span>这页最重要的是分清：loopback、tailnet、funnel 是三种完全不同的开门方式</span>
+      <a href="https://docs.openclaw.ai/web" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一站</p>
+    <h2>🏠 先记总图：Web 不是另起一栋楼，而是跟 Gateway 共用同一个门牌</h2>
+    <p>官方开头这句很关键：Control UI 和 Gateway WebSocket 共用同一个端口。意思就是，这不是额外再起一个网站服务，而是同一栋楼的不同房间。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">🚪 默认门牌</div>
+      <p><code>http://&lt;host&gt;:18789/</code> 像这栋楼的默认正门。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>basePath</code></div>
+      <p>像把总控室入口从一楼大厅改到“大厅里的某条走廊”，比如 <code>/openclaw</code>。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🪝 webhooks</div>
+      <p>像这栋楼同一扇大门旁边还挂着一个小投递口，专门收 hooks 的外部通知。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">⭐ 一句话先记住</div>
+      <p>Web 和 Gateway 不是两栋楼，是同一栋楼的不同门和房间。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二站</p>
+    <h2>🧭 这页最重要的，是三种开门方式</h2>
+    <p>如果你把这一页都压缩掉，真正还要记住的就这三种：loopback、tailnet、funnel。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">🏠</span>
+      <h2>loopback</h2>
+      <p>像门只朝自己家客厅开。最稳，也最默认。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🧵</span>
+      <h2>tailnet</h2>
+      <p>像给熟人内网开一条专用走廊。不是公开大街，但比纯本地多了一层外部可达。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🌍</span>
+      <h2>funnel</h2>
+      <p>像真的把门开到公网街面上。能这么做，不代表应该轻率这么做。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">📌</span>
+      <h2>一句话</h2>
+      <p>越往公网走，安全要求越高，随意度越低。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第三站</p>
+    <h2>🪄 Tailscale Serve 是“门继续朝家里开，但外面给你搭一条安全走廊”</h2>
+    <p>官方推荐 Serve，不是因为它时髦，而是因为它很好地保留了“服务留在 loopback”这件事。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>bind: "loopback"</code></div>
+      <p>像总大门继续只对本机开，不直接朝大街敞开。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>tailscale: { mode: "serve" }</code></div>
+      <p>像让 Tailscale 在楼外帮你搭一条受控通道，把可信流量引过来。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>https://&lt;magicdns&gt;/</code></div>
+      <p>像走这条专用走廊后的门牌号，不是直接裸露原来的本机端口。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 一句话</div>
+      <p>Serve 的味道是：楼还锁在家里，但给自己人修了安全通道。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第四站</p>
+    <h2>🔐 tailnet 和 funnel，都在提醒你“出门越远，门票越重要”</h2>
+    <p>官方这里写了很多 auth 细节，翻成人话都是一个意思：离开 loopback 以后，别想偷懒。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">🎟 token / password</div>
+      <p>像门票或口令。非 loopback 场景下，这些东西不是可选装饰，而是正门门禁。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>allowTailscale</code></div>
+      <p>像你选择要不要信任“穿着 Tailscale 制服来的人”。开了可以省共享 token，但前提是你真的信这条走廊。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>allowedOrigins</code></div>
+      <p>像在门口写明“只有这些来源的浏览器能合法进门”。如果不写，系统宁可直接拒绝开门。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>dangerouslyAllowHostHeaderOriginFallback</code></div>
+      <p>这个名字已经把意思写脸上了。像把门禁规则降级成“差不多像就算”，官方明确告诉你这很危险。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第五站</p>
+    <h2>🧱 Building the UI 这一句在讲“总控室装修材料要先备好”</h2>
+    <p>官方最后提 <code>pnpm ui:build</code>，不是前端开发者自嗨，而是在告诉你：Control UI 需要静态资源，没 build 好，楼里房间就搭不起来。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>dist/control-ui</code></div>
+      <p>像总控室真正装修好的房间。Gateway 只是负责把这间房端出来。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>pnpm ui:build</code></div>
+      <p>像把前台界面这部分材料先打包成能住人的样子。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">auto-installs UI deps</div>
+      <p>像第一次装修时，系统还会顺手帮你把基本建材搬来。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">📌 一句话</div>
+      <p>Gateway 是楼体，Control UI 是装修好的房间，少一个都住不顺。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">最后总结</p>
+    <h2>🎈 把 Web 这页压成一句话</h2>
+    <p>Web 这页讲的是 OpenClaw 这栋楼怎么开门：默认关在家里，Serve 是安全走廊，tailnet / funnel 是更外放的开法，而 token、password、allowedOrigins 就是门禁规则本身。</p>
+  </div>
+  <div class="ad-placeholder">
+    <p>如果你下一页只想继续看一页，我建议看 <code>/web/tui</code>。因为当你不想走浏览器总控室时，下一种最常见的入口就是终端里的这扇门。</p>
+  </div>
+</section>

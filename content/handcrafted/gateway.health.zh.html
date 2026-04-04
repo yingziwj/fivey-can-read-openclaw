@@ -1,0 +1,134 @@
+<section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>🩻 Health Checks 像“别靠猜，先去看生命体征”</h2>
+      <p>很多人一看到消息收不到、机器人不回话，就开始东猜西猜。官方这页最想纠正的，就是这种“盲猜排障”。</p>
+      <p>这页讲的核心很朴素：别先脑补，先去看体温、脉搏、呼吸。也就是 Gateway 在不在、通道连没连上、凭证新不新、日志里有没有明显红灯。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合遇到“怎么今天像没活着”的时候先排查</span>
+      <span>这页最重要的是先分清：本地状态、深度探测、网关健康快照，是三层不同力度的检查</span>
+      <a href="https://docs.openclaw.ai/gateway/health" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一站</p>
+    <h2>🩺 先记住三种体检：看一眼、照深一点、请医生出报告</h2>
+    <p>官方 quick checks 列的命令很多，其实可以压成三档体检强度。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">👀</span>
+      <h2><code>openclaw status</code></h2>
+      <p>像先看一眼总面板。网关能不能摸到、最近活跃不活跃，先有个全局感觉。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🔦</span>
+      <h2><code>openclaw status --deep</code></h2>
+      <p>像拿手电再往里照一层，不只是看门口亮不亮，还会更认真探通道状态。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🧾</span>
+      <h2><code>openclaw health --json</code></h2>
+      <p>像让值班医生出一份结构化体检单，方便你机器读、脚本接、自动化判断。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">📌</span>
+      <h2>一句话先记住</h2>
+      <p>先看 <code>status</code>，再上 <code>--deep</code>，还不够就拉 <code>health --json</code> 报告。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二站</p>
+    <h2>🛠 那几条命令，翻成人话就是“摸灯、看病历、盯监控”</h2>
+    <p>这页的价值不在于命令多，而在于它们各自负责看的地方不一样。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw status</code></div>
+      <p>像先抬头看控制室总灯牌，确认网关通不通、模式对不对、最近有没有活动痕迹。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw status --all</code></div>
+      <p>像把普通体检表展开成详细版，适合你准备把现场情况发给别人一起看。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw logs --follow</code></div>
+      <p>像站在监控屏前盯直播。它特别适合查“为什么刚才那条消息像掉地上了”。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw channels status --probe</code></div>
+      <p>像不是只看整栋楼活没活，而是逐个敲房门，看每条通道到底有没有人在值班。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第三站</p>
+    <h2>🔍 Deep diagnostics 在讲“往设备抽屉和状态仓库里翻”</h2>
+    <p>如果普通状态页看不出问题，官方就让你开始翻凭证时间、session store 和 relink 流程。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">🪪 creds.json 时间戳</div>
+      <p>像看通行证最近有没有被更新。如果文件很老，说明这条线可能很久没真正连上。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🗂 sessions.json</div>
+      <p>像看会话仓库里最近有没有真的进出货。它不活跃，很多聊天症状就会一起怪。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>openclaw channels logout</code> / <code>login --verbose</code></div>
+      <p>像把某扇门的旧门禁卡先注销，再认真重绑一遍。遇到 409 到 515 这类状态码时，这招很常见。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 一句话</div>
+      <p>看不出问题时，就别只盯前台，要去翻后面的凭证抽屉和会话仓库。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第四站</p>
+    <h2>⏰ health monitor 配置，像“多久量一次体温，多久没动静就叫醒一下”</h2>
+    <p>官方最后这一段其实在讲自动值班规则，不是单次检查命令。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>gateway.channelHealthCheckMinutes</code></div>
+      <p>像规定值班护士多久巡一轮。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>gateway.channelStaleEventThresholdMinutes</code></div>
+      <p>像规定“多久一点动静都没有，就把它判成可能发呆了”。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>gateway.channelMaxRestartsPerHour</code></div>
+      <p>像规定一小时最多抢救几次，别无限重启把现场折腾烂。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>channels.&lt;provider&gt;.healthMonitor.enabled</code></div>
+      <p>像给某一条特别娇气的通道单独说：“这条先别自动乱碰，让它自己安静待着。”</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">最后总结</p>
+    <h2>🎈 把 Health Checks 这页压成一句话</h2>
+    <p>Health Checks 就是在提醒你：OpenClaw 出问题时，先看生命体征，再看深度体检，再翻凭证和日志，不要一上来靠猜。</p>
+  </div>
+  <div class="ad-placeholder">
+    <p>如果你下一页只想继续看一页，我建议看 <code>/web/index</code>。因为很多“连不上”的问题，下一层就会落到“这栋楼到底怎么开门、绑在哪个地址、用了哪条路出去”。</p>
+  </div>
+</section>

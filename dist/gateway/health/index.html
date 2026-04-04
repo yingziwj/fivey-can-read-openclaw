@@ -3970,267 +3970,141 @@
   
       </div>
 
-      
-    <section class="section-shell">
-      <div class="overview-card">
-        <div>
-          <p class="section-kicker">先听这页的人话版</p>
-          <h2>Health Checks</h2>
-          <p>这一页像一本关于“Health Checks”的小绘本，它先告诉我们这位机器人朋友会做什么，再一步一步解释什么时候该这样做。 你可以先把它想成：Health Checks (CLI)。</p>
-          <p>如果把这页当成“给普通人看的版本”，你最应该带走的是：它到底在教你一件什么事、什么时候要这样做、以及哪里最容易踩坑。</p>
-        </div>
-        <div class="overview-meta">
-          <span>原始路径：/gateway/health</span>
-          <span>章节数量：6</span>
-          <a href="https://docs.openclaw.ai/gateway/health" target="_blank" rel="noreferrer">查看原文</a>
-        </div>
-      </div>
-    </section>
-    
-        <section class="section-shell" id="section-1">
-          <div class="section-heading">
-            <p class="section-kicker">第 1 站</p>
-            <h2>Start Here</h2>
-            <p>这一节主要在解释“Start Here”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“Start Here”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Health Checks (CLI) Short guide to verify 消息通道 connectivity without guessing.”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Health Checks (CLI)”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p># Health Checks (CLI)</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Short guide to verify 消息通道 connectivity without guessing.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Short guide to verify channel connectivity without guessing.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-2">
-          <div class="section-heading">
-            <p class="section-kicker">第 2 站</p>
-            <h2>Quick checks</h2>
-            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>你理解的是能力边界，不只是功能名字。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Quick checks”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：openclaw status — local summary: 门口的小门卫 r…、openclaw status --all — full local diagno…、openclaw status --deep — also probes the…、openclaw health --json — asks the running…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>openclaw status</code> — local summary: gateway reachability/mode, update hint, linked channel auth age, sessions + recent activity.</li><li><code>openclaw status --all</code> — full local diagnosis (read-only, color, safe to paste for debugging).</li><li><code>openclaw status --deep</code> — also probes the running Gateway (per-channel probes when supported).</li><li><code>openclaw health --json</code> — asks the running Gateway for a full health snapshot (WS-only; no direct Baileys socket).</li><li>Send <code>/status</code> as a standalone message in WhatsApp/WebChat to get a status reply without invoking the agent.</li><li>Logs: tail <code>/tmp/openclaw/openclaw-*.log</code> and filter for <code>web-heartbeat</code>, <code>web-reconnect</code>, <code>web-auto-reply</code>, <code>web-inbound</code>.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-3">
-          <div class="section-heading">
-            <p class="section-kicker">第 3 站</p>
-            <h2>Deep diagnostics</h2>
-            <p>这一节主要在解释“Deep diagnostics”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“Deep diagnostics”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Deep diagnostics”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Creds on disk: ls -l ~/.openclaw/credenti…、Session store: ls -l ~/.openclaw/机器人朋友s/&lt;…、Relink flow: openclaw 消息通道s logout &amp;&amp; ope…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Creds on disk: <code>ls -l ~/.openclaw/credentials/whatsapp/&lt;accountId&gt;/creds.json</code> (mtime should be recent).</li><li>Session store: <code>ls -l ~/.openclaw/agents/&lt;agentId&gt;/sessions/sessions.json</code> (path can be overridden in config). Count and recent recipients are surfaced via <code>status</code>.</li><li>Relink flow: <code>openclaw channels logout &amp;&amp; openclaw channels login --verbose</code> when status codes 409–515 or <code>loggedOut</code> appear in logs. (Note: the QR login flow auto-restarts once for status 515 after pairing.)</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-4">
-          <div class="section-heading">
-            <p class="section-kicker">第 4 站</p>
-            <h2>Health monitor 设置说明书</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Health monitor config”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：门口的小门卫.消息通道HealthCheckMinutes: how often…、门口的小门卫.消息通道StaleEventThresholdMinutes: ho…、门口的小门卫.消息通道MaxRestartsPerHour: rolling on…、消息通道s.&lt;provider&gt;.healthMonitor.enabled: d…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>gateway.channelHealthCheckMinutes</code>: how often the gateway checks channel health. Default: <code>5</code>. Set <code>0</code> to disable health-monitor restarts globally.</li><li><code>gateway.channelStaleEventThresholdMinutes</code>: how long a connected channel can stay idle before the health monitor treats it as stale and restarts it. Default: <code>30</code>. Keep this greater than or equal to <code>gateway.channelHealthCheckMinutes</code>.</li><li><code>gateway.channelMaxRestartsPerHour</code>: rolling one-hour cap for health-monitor restarts per channel/account. Default: <code>10</code>.</li><li><code>channels.&lt;provider&gt;.healthMonitor.enabled</code>: disable health-monitor restarts for a specific channel while leaving global monitoring enabled.</li><li><code>channels.&lt;provider&gt;.accounts.&lt;accountId&gt;.healthMonitor.enabled</code>: multi-account override that wins over the channel-level setting.</li><li>These per-channel overrides apply to the built-in channel monitors that expose them today: Discord, Google Chat, iMessage, Microsoft Teams, Signal, Slack, Telegram, and WhatsApp.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-5">
-          <div class="section-heading">
-            <p class="section-kicker">第 5 站</p>
-            <h2>When something fails</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“When something fails”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：logged out or status 409–515 → relink wit…、门口的小门卫 unreachable → start it: openclaw 门…、No inbound 小纸条消息s → confirm linked phone…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>logged out</code> or status 409–515 → relink with <code>openclaw channels logout</code> then <code>openclaw channels login</code>.</li><li>Gateway unreachable → start it: <code>openclaw gateway --port 18789</code> (use <code>--force</code> if the port is busy).</li><li>No inbound messages → confirm linked phone is online and the sender is allowed (<code>channels.whatsapp.allowFrom</code>); for group chats, ensure allowlist + mention rules match (<code>channels.whatsapp.groups</code>, <code>agents.list[].groupChat.mentionPatterns</code>).</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-6">
-          <div class="section-heading">
-            <p class="section-kicker">第 6 站</p>
-            <h2>Dedicated &quot;health&quot; 魔法口令</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“openclaw health --json asks the running 门口的小门卫 for its health snapshot (no direct 消息通道 sockets from the CLI). It report…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“openclaw health --json asks the running 门口的小门卫 for its health snapshot (no direct 消息通道 sockets from the CLI). It report…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p><code>openclaw health --json</code> asks the running Gateway for its health snapshot (no direct channel sockets from the CLI). It reports linked creds/auth age when available, per-channel probe summaries, session-store summary, and a probe duration. It exits non-zero if the Gateway is unreachable or the probe fails/timeouts. Use <code>--timeout &lt;ms&gt;</code> to override the 10s default.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-    <section class="section-shell">
-      <div class="ad-placeholder">
-        <p>这里预留给未来的 Google AdSense 模块。</p>
-        <code>&lt;!-- ADSENSE_SNIPPET --&gt;</code>
-      </div>
-    </section>
-  
+      <section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>🩻 Health Checks 像“别靠猜，先去看生命体征”</h2>
+      <p>很多人一看到消息收不到、机器人不回话，就开始东猜西猜。官方这页最想纠正的，就是这种“盲猜排障”。</p>
+      <p>这页讲的核心很朴素：别先脑补，先去看体温、脉搏、呼吸。也就是 Gateway 在不在、通道连没连上、凭证新不新、日志里有没有明显红灯。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合遇到“怎么今天像没活着”的时候先排查</span>
+      <span>这页最重要的是先分清：本地状态、深度探测、网关健康快照，是三层不同力度的检查</span>
+      <a href="https://docs.openclaw.ai/gateway/health" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一站</p>
+    <h2>🩺 先记住三种体检：看一眼、照深一点、请医生出报告</h2>
+    <p>官方 quick checks 列的命令很多，其实可以压成三档体检强度。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">👀</span>
+      <h2><code>openclaw status</code></h2>
+      <p>像先看一眼总面板。网关能不能摸到、最近活跃不活跃，先有个全局感觉。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🔦</span>
+      <h2><code>openclaw status --deep</code></h2>
+      <p>像拿手电再往里照一层，不只是看门口亮不亮，还会更认真探通道状态。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🧾</span>
+      <h2><code>openclaw health --json</code></h2>
+      <p>像让值班医生出一份结构化体检单，方便你机器读、脚本接、自动化判断。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">📌</span>
+      <h2>一句话先记住</h2>
+      <p>先看 <code>status</code>，再上 <code>--deep</code>，还不够就拉 <code>health --json</code> 报告。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二站</p>
+    <h2>🛠 那几条命令，翻成人话就是“摸灯、看病历、盯监控”</h2>
+    <p>这页的价值不在于命令多，而在于它们各自负责看的地方不一样。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw status</code></div>
+      <p>像先抬头看控制室总灯牌，确认网关通不通、模式对不对、最近有没有活动痕迹。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw status --all</code></div>
+      <p>像把普通体检表展开成详细版，适合你准备把现场情况发给别人一起看。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw logs --follow</code></div>
+      <p>像站在监控屏前盯直播。它特别适合查“为什么刚才那条消息像掉地上了”。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw channels status --probe</code></div>
+      <p>像不是只看整栋楼活没活，而是逐个敲房门，看每条通道到底有没有人在值班。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第三站</p>
+    <h2>🔍 Deep diagnostics 在讲“往设备抽屉和状态仓库里翻”</h2>
+    <p>如果普通状态页看不出问题，官方就让你开始翻凭证时间、session store 和 relink 流程。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">🪪 creds.json 时间戳</div>
+      <p>像看通行证最近有没有被更新。如果文件很老，说明这条线可能很久没真正连上。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🗂 sessions.json</div>
+      <p>像看会话仓库里最近有没有真的进出货。它不活跃，很多聊天症状就会一起怪。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>openclaw channels logout</code> / <code>login --verbose</code></div>
+      <p>像把某扇门的旧门禁卡先注销，再认真重绑一遍。遇到 409 到 515 这类状态码时，这招很常见。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 一句话</div>
+      <p>看不出问题时，就别只盯前台，要去翻后面的凭证抽屉和会话仓库。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第四站</p>
+    <h2>⏰ health monitor 配置，像“多久量一次体温，多久没动静就叫醒一下”</h2>
+    <p>官方最后这一段其实在讲自动值班规则，不是单次检查命令。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>gateway.channelHealthCheckMinutes</code></div>
+      <p>像规定值班护士多久巡一轮。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>gateway.channelStaleEventThresholdMinutes</code></div>
+      <p>像规定“多久一点动静都没有，就把它判成可能发呆了”。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>gateway.channelMaxRestartsPerHour</code></div>
+      <p>像规定一小时最多抢救几次，别无限重启把现场折腾烂。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>channels.&lt;provider&gt;.healthMonitor.enabled</code></div>
+      <p>像给某一条特别娇气的通道单独说：“这条先别自动乱碰，让它自己安静待着。”</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">最后总结</p>
+    <h2>🎈 把 Health Checks 这页压成一句话</h2>
+    <p>Health Checks 就是在提醒你：OpenClaw 出问题时，先看生命体征，再看深度体检，再翻凭证和日志，不要一上来靠猜。</p>
+  </div>
+  <div class="ad-placeholder">
+    <p>如果你下一页只想继续看一页，我建议看 <code>/web/index</code>。因为很多“连不上”的问题，下一层就会落到“这栋楼到底怎么开门、绑在哪个地址、用了哪条路出去”。</p>
+  </div>
+</section>
+
 
       <footer class="page-footer">
         <div>
