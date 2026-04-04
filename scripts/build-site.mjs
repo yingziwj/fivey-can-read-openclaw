@@ -112,6 +112,7 @@ const handcraftedPageMap = new Map([
   ["/cli/mcp", path.resolve("content/handcrafted/cli.mcp.zh.html")],
   ["/cli/node", path.resolve("content/handcrafted/cli.node.zh.html")],
   ["/cli/status", path.resolve("content/handcrafted/cli.status.zh.html")],
+  ["/cli/setup", path.resolve("content/handcrafted/cli.setup.zh.html")],
   ["/cli/tui", path.resolve("content/handcrafted/cli.tui.zh.html")],
   ["/cli/logs", path.resolve("content/handcrafted/cli.logs.zh.html")],
   ["/cli/doctor", path.resolve("content/handcrafted/cli.doctor.zh.html")],

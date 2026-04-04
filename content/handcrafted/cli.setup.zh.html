@@ -1,0 +1,168 @@
+<section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>🧰 `openclaw setup` 像“先把新家收拾好，再把小工人请进门”</h2>
+      <p>这页讲的是最开始的第一步。还没开始跑复杂功能前，先把 `~/.openclaw/openclaw.json` 和工作区准备好，像先把床铺、桌子和门牌都摆齐。</p>
+      <p>它不是在炫耀命令。它是在帮你把房间搭起来，让 OpenClaw 后面能住得稳、跑得顺。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合第一次安装、第一次起步、第一次把家当摆进来的人</span>
+      <span>这页最重要的是记住：setup 是“打地基”，不是“开始工作本身”</span>
+      <a href="https://docs.openclaw.ai/cli/setup" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一站</p>
+    <h2>🏠 先看它会做的两件事：放好配置，再摆好工作区</h2>
+    <p>官方第一句就把重点说了：它会初始化配置文件和 agent workspace。翻成人话就是，先把房子和院子都搭出来。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">1</span>
+      <h2><code>~/.openclaw/openclaw.json</code></h2>
+      <p>像家里的总账本。以后很多规则都从这里读。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">2</span>
+      <h2>agent workspace</h2>
+      <p>像给小工人们安排好的工作间。桌子、抽屉、工具都要先有地方放。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">3</span>
+      <h2>先打底再干活</h2>
+      <p>如果地基没打好，后面再厉害的功能也容易站不稳。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">📌</span>
+      <h2>一句话先记住</h2>
+      <p>setup 是先把家安好，不是直接开派对。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二站</p>
+    <h2>🚀 两个最常见的命令，其实就是“先默认铺好”，和“把院子放到别处”</h2>
+    <p>官方给的例子很短，但很实用。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label"><code>openclaw setup</code></div>
+      <p>像按默认方案把新家收拾好。门、桌子、账本都按标准来。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>openclaw setup --workspace ~/.openclaw/workspace</code></div>
+      <p>像告诉它：“院子别摆在默认位置，搬到这块地上。”</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">默认路径</div>
+      <p>没特别说明时，它会按习惯把东西放到标准位置，方便后续命令接着用。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 一句话</div>
+      <p>一个是按默认装修，一个是自己指定院子在哪。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第三站</p>
+    <h2>🪄 `--wizard` 像“把施工队喊来，边问边搭”</h2>
+    <p>官方把 `setup --wizard` 单独提出来，因为有些人不想自己脑补每一步，想要一位会带路的向导。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">🧙</span>
+      <h2><code>openclaw setup --wizard</code></h2>
+      <p>像请一位领路人，一边问你，一边把配置和工作区搭出来。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🚶</span>
+      <h2>比自己硬记更稳</h2>
+      <p>向导会带着你走，不用你一上来就背所有门牌号。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🧪</span>
+      <h2>更像第一次入住</h2>
+      <p>它适合第一次上手时，顺手把关键选项都问一遍。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">📌</span>
+      <h2>一句话</h2>
+      <p>wizard 就是把 setup 变成有向导的入住流程。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第四站</p>
+    <h2>🧳 为什么这一步重要？因为后面的好几个页面都默认你已经把家安好了</h2>
+    <p>你如果跳过 setup，后面 `status`、`gateway`、`tui` 这些命令会像在没铺地板的屋子里走路，容易踩空。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">配置先落地</div>
+      <p>后面所有命令才能知道去哪找家当。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">工作区先有</div>
+      <p>agent 的抽屉和工作台才有地方安放。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">后续更顺</div>
+      <p>很多排障、登录、浏览器、Gateway 的操作都能接着往下走。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🎈 一句话</div>
+      <p>setup 做的是地基，后面的命令才是家具和日常生活。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第五站</p>
+    <h2>🔗 这页和 `getting started` / `onboard` 的关系，像“先备材料，再正式入宅”</h2>
+    <p>官方把 related docs 写得很清楚。`setup` 不是唯一入口，但它是最底层的那一步。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">📚</span>
+      <h2><code>Getting started</code></h2>
+      <p>像带你看一整张入门地图。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🧭</span>
+      <h2><code>onboard</code></h2>
+      <p>像正式带你走一遍入住流程，问你要不要装服务、要不要继续下一步。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🧱</span>
+      <h2><code>setup</code></h2>
+      <p>像先搬砖铺地基，把最基础的东西摆稳。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">📌</span>
+      <h2>关系很简单</h2>
+      <p>getting started 讲方向，onboard 讲流程，setup 讲打底。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">最后总结</p>
+    <h2>🎈 把 <code>openclaw setup</code> 压成一句话</h2>
+    <p><code>openclaw setup</code> 就是先把 OpenClaw 的新家收拾好：配置文件放稳，工作区摆好，再决定要不要让向导陪你一步一步入住。</p>
+  </div>
+  <div class="ad-placeholder">
+    <p>如果你下一页只想继续看一页，我建议看 <code>/cli/onboard</code>。因为 setup 把地基铺好以后，onboard 就是正式带你进门的那一步。</p>
+  </div>
+</section>
