@@ -1,0 +1,243 @@
+<section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>🩺 <code>openclaw doctor</code> 像一位会巡逻、会修补、还会收拾残局的医生</h2>
+      <p>这不是那种只会说“你去重启试试”的医生。它会先看门口，再看屋里，再看看有没有东西卡在抽屉里没收好。</p>
+      <p>如果 Gateway 或 channel 出了点小毛病，它会尽量给你一条能继续走的路，而不是只把你丢在原地。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合遇到“好像坏了，但不知道坏在哪”的时候</span>
+      <span>这页最重要的是记住：doctor 不是聊天，它是巡检 + 修复 + 备份保护</span>
+      <a href="https://docs.openclaw.ai/cli/doctor" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一站</p>
+    <h2>🧭 先看它三种最常见的出诊方式</h2>
+    <p>官方只给了三个例子，但其实已经把这位医生的脾气说清楚了。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">👀</span>
+      <h2><code>openclaw doctor</code></h2>
+      <p>像先走一圈，看看哪里亮着红灯，哪里只是有点虚。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🩹</span>
+      <h2><code>openclaw doctor --repair</code></h2>
+      <p>像医生不仅检查，还会顺手给你贴创可贴、把歪掉的小零件扶正。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🔦</span>
+      <h2><code>openclaw doctor --deep</code></h2>
+      <p>像把手电筒开到最亮，不只看表面，还看抽屉、仓库、旧账本。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">📌</span>
+      <h2>一句话先记住</h2>
+      <p>先检查，必要时修，怀疑有深处问题时就往里照。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二站</p>
+    <h2>🔧 <code>--repair</code> 像“先把能救的救回来，但会先给你留底稿”</h2>
+    <p>这页最有价值的地方，是它不是乱修。它会先备份，再动手。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label"><code>--repair</code> / <code>--fix</code></div>
+      <p>像医生先把原始病历复印一份，再开始改方案。<code>--fix</code> 只是 <code>--repair</code> 的别名。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>~/.openclaw/openclaw.json.bak</code></div>
+      <p>像修东西前先把旧零件装进一个透明袋子里，万一要回头，还能找到。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">未知配置键</div>
+      <p>医生会把它们清掉，但不会悄悄吞掉。它会告诉你“我拿走了什么”。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 一句话</div>
+      <p>修复不是盲改，而是先留底，再修补。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第三站</p>
+    <h2>🕳 有些毛病不是表面裂了，而是抽屉里留了“孤儿文件”</h2>
+    <p>官方专门提到会检查 sessions 目录里的孤儿 transcript 文件。这个场景很像收拾房间时，发现角落里有几张没人认领的纸。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">📄</span>
+      <h2>孤儿 transcript</h2>
+      <p>像聊天记录没跟上主线，自己飘在那儿，占地方。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🗃</span>
+      <h2><code>.deleted.&lt;timestamp&gt;</code></h2>
+      <p>像把旧纸先贴上日期标签，再挪到回收盒里。不是直接乱扔。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🧹</span>
+      <h2>回收空间</h2>
+      <p>这个动作的目标很朴素：让仓库别被没用的碎纸慢慢塞满。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">📌</span>
+      <h2>一句话</h2>
+      <p>doctor 不只会看病，还会帮你打扫病房。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第四站</p>
+    <h2>🗓 它还会偷偷看看旧日历：cron jobs 长什么样</h2>
+    <p>有些问题不是今天才长出来的，是老日程表长歪了。doctor 会顺手扫一眼 `cron/jobs.json` 之类的旧格式。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label"><code>~/.openclaw/cron/jobs.json</code></div>
+      <p>像一本老排班表。格式如果太旧，它会帮你翻成新的写法。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">legacy cron shapes</div>
+      <p>像以前写成歪歪扭扭的小纸条，现在医生帮你改成能被新系统看懂的表格。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">scheduler auto-normalize</div>
+      <p>官方说它会在 scheduler 自己动手前先修正一轮，像医生先整理病历，免得挂号处乱套。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 一句话</div>
+      <p>旧日历不一定坏了，但格式歪了也会让后面的人看不懂。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第五站</p>
+    <h2>🧠 这位医生还会问一句：“你的脑袋够不够准备好做记忆搜索？”</h2>
+    <p>如果 embedding 之类的条件没配好，它会提醒你去把模型相关配置补上。它不是只盯着门口，也会看脑子能不能工作。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">memory-search readiness</div>
+      <p>像医生在问：“你这台机器是不是已经准备好去找记忆了？”</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>openclaw configure --section model</code></div>
+      <p>像医生告诉你：“先去把脑子的药方配齐，再来做搜索。”</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">embedding credentials</div>
+      <p>像负责记忆的小钥匙。如果缺了，搜索这扇门就不会顺。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">📌 一句话</div>
+      <p>doctor 不只看外伤，也会看看记忆系统有没有上脑力装备。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第六站</p>
+    <h2>🪵 有些门禁钥匙不是放桌上，而是藏在 SecretRef 里</h2>
+    <p>这页很细心的一点，是它知道有些钥匙不是明文放着的。找得到就修，找不到就别硬抄密码。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">🔐</span>
+      <h2>SecretRef 读得到时</h2>
+      <p>医生就照着修，但不会把钥匙直接塞成明文留在地上。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">👀</span>
+      <h2>读不到时</h2>
+      <p>它会改成只看不写，不会硬闯，也不会偷偷换成别的凭证。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🧩</span>
+      <h2>Telegram `allowFrom` 自动解析</h2>
+      <p>如果 token 能看见，它还会顺手把用户名解析一下；看不见就跳过，不装懂。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">📌</span>
+      <h2>一句话</h2>
+      <p>钥匙看得见就修，看不见就别乱猜。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第七站</p>
+    <h2>🧯 `--non-interactive` 这段很重要：不是每次都能叫醒人来点头</h2>
+    <p>如果你是在 cron、Telegram、没有终端的地方跑，医生不会傻等你来点按钮。它知道有些夜班不能开提问会。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label">TTY 才能弹问题</div>
+      <p>像只有你真的坐在桌前，医生才会问你要不要修这个、要不要登录那个。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">headless 跳过提问</div>
+      <p>像没有人的夜班室，医生不可能站着大喊“有人吗”。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>--deep</code></div>
+      <p>像把巡逻范围再扩大一点，去看更远的楼层和更隐蔽的角落。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 一句话</div>
+      <p>能问人的时候才问，不能问的时候就安静修。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第八站</p>
+    <h2>🍎 macOS 上还有一个小陷阱：`launchctl` 可能偷偷盖过你的配置</h2>
+    <p>这页最后讲了一个很实用的坑。你以为自己改了 config，但系统环境里旧钥匙还在，结果它继续把你带回老路。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label"><code>launchctl getenv OPENCLAW_GATEWAY_TOKEN</code></div>
+      <p>像去看看系统外套口袋里是不是还藏着旧门票。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>launchctl unsetenv ...</code></div>
+      <p>像把旧门票从外套里掏出来，免得它继续捣乱。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">老环境变量优先级</div>
+      <p>如果你没清掉，doctor 可能会被它误导，继续报“未经授权”。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 一句话</div>
+      <p>有时候不是配置错了，是老环境变量还在偷偷上班。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">最后总结</p>
+    <h2>🎈 把 <code>openclaw doctor</code> 压成一句话</h2>
+    <p><code>openclaw doctor</code> 像一位会巡检、会修补、会收拾孤儿文件、还会提醒你别被旧环境变量骗了的医生；你想快一点就先体检，想多一点就加上修复和深度检查。</p>
+  </div>
+</section>

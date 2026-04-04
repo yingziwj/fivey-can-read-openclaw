@@ -1,0 +1,138 @@
+<section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>🧾 `openclaw logs` 像趴在门缝边，听 Gateway 里的小声音</h2>
+      <p>这页不是在讲“怎么开日志开关”。它讲的是：当 Gateway 已经在远处跑着时，你怎么把那边的文件日志拉回来，一行一行看清楚。</p>
+      <p>你可以把它想成一条小传送带。日志在 Gateway 那头往前跑，你站在这头接住它，想看最新一口气，就用 `--follow`。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合想看 Gateway 远端日志、又不想手动去服务器翻文件的人</span>
+      <span>这页最重要的是记住：它走 RPC，所以远程模式也能看</span>
+      <a href="https://docs.openclaw.ai/cli/logs" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一站</p>
+    <h2>🧺 先想画面：你不是去翻仓库，而是在柜台前等快递</h2>
+    <p>官方一句话就点明了重点：`openclaw logs` 是把 Gateway 的文件日志“尾巴”拽出来看。不是全盘扫地，而是盯最近那一截。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">📡</span>
+      <h2>RPC 拉日志</h2>
+      <p>你不用自己登录远端机器。OpenClaw 会帮你把那头的日志接过来。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🕯</span>
+      <h2>看最后一截</h2>
+      <p>它像从绳子的尾巴开始摸，先看最近发生了什么。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🌍</span>
+      <h2>远程也行</h2>
+      <p>这不是只能看本机小纸条的命令，远程模式一样能用。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">📌</span>
+      <h2>一句话先记住</h2>
+      <p>这是一根“从 Gateway 那头把日志尾巴拽回来”的绳子。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二站</p>
+    <h2>👀 那几条命令，像四种看法</h2>
+    <p>它们都在看日志，但看法不一样。一个是安静看，一个是追着看，一个是让机器看，一个是换时区看。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label"><code>openclaw logs</code></div>
+      <p>像先把日志小本子翻到最后几页，看看最近在忙什么。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>openclaw logs --follow</code></div>
+      <p>像把耳朵贴在门上，后面又来了什么声音，就立刻听见。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>openclaw logs --json</code></div>
+      <p>像不要花哨排版，只要一盒彩色积木都摆成机器能读懂的方块。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>openclaw logs --limit 500</code></div>
+      <p>像说“我只要最近 500 行，别把整辆车都搬来”。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第三站</p>
+    <h2>🕰 `--local-time` 是在说：把钟表换成你自己墙上的那一只</h2>
+    <p>日志本来就有时间。只是远端机器的时间，常常不是你脑子里那条时间线。这个参数就是帮你把它换成本地时区。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">🕘</span>
+      <h2><code>--local-time</code></h2>
+      <p>像把日志时间改成你这边墙上的钟，让你一眼就知道“这是我这里几点发生的”。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🧭</span>
+      <h2>对齐脑子里的时间</h2>
+      <p>排障时最怕时区错位。这个参数就是来减少“明明是昨晚，其实是中午”的误会。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">📋</span>
+      <h2>适合转发给别人</h2>
+      <p>你把本地时间打开以后，发给同事看，大家更容易对齐同一段现场。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🎈</span>
+      <h2>一句话</h2>
+      <p>这个参数只是换钟，不是换内容。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第四站</p>
+    <h2>🧯 真正用它的时候，通常有三种小剧情</h2>
+    <p>官方虽然只给了几个例子，但每一个都很像实际排障里会发生的现场。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw logs</code></div>
+      <p>像你先随手翻一眼，看看最近有没有明显红灯。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw logs --follow</code></div>
+      <p>像你守在一条小水管前，新的水流一来就立刻看见。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw logs --follow --local-time</code></div>
+      <p>像你一边盯着水流，一边把时间牌换成自己看得懂的版本。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">📌 排障心法</div>
+      <p>当 Gateway 出怪事时，先看最近几行，再决定要不要继续追流。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">最后总结</p>
+    <h2>🎈 把 `openclaw logs` 压成一句话</h2>
+    <p>`openclaw logs` 就是一根把 Gateway 文件日志尾巴拽回来的绳子：你可以只看一眼，也可以追着看，还能把时间换成你自己的时区。</p>
+  </div>
+  <div class="ad-placeholder">
+    <p>如果你下一页只想继续看一页，我建议看 <code>/cli/status</code>。因为很多时候，先看状态，再追日志，会更快找到门到底卡在哪。</p>
+  </div>
+</section>

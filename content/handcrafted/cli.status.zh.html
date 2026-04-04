@@ -1,0 +1,164 @@
+<section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>🩺 <code>openclaw status</code> 像“先别猜，先看总体检单”</h2>
+      <p>这页最朴素，也最重要。很多人一出问题就先脑补。官方这页其实是在说：不要靠猜，先把总状态单拉出来。</p>
+      <p>它会帮你看通道、会话、Gateway、节点、更新信息。就像医生先给你量体温、听心跳、看有没有明显红灯，而不是一上来就开刀。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合任何“它今天是不是不太对劲”的时刻</span>
+      <span>这页最重要的是分清：普通看一眼、完整展开、深度探测，是三档不同力度</span>
+      <a href="https://docs.openclaw.ai/cli/status" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一站</p>
+    <h2>👀 四条最常用命令，其实就是四档看诊力度</h2>
+    <p>官方只给了四个例子，但这四个已经够你记住主线了。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">1</span>
+      <h2><code>openclaw status</code></h2>
+      <p>像先看一眼基础体检单，够快，适合第一反应。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">2</span>
+      <h2><code>openclaw status --all</code></h2>
+      <p>像把完整表格摊开，连诊断备注也一起看。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">3</span>
+      <h2><code>openclaw status --deep</code></h2>
+      <p>像不只看纸面数据，还现场再做几项活体探测。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">4</span>
+      <h2><code>openclaw status --usage</code></h2>
+      <p>像单独盯着“今天到底花了多少、用了多少”的账单角落看。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二站</p>
+    <h2>🏥 这张总状态单到底会看什么</h2>
+    <p>它不是只看一个地方，而是在给整栋楼做巡检。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">📮 channels</div>
+      <p>像看每一扇消息门还通不通，有没有哪扇门今天卡住了。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🗂 sessions</div>
+      <p>像看每个工位抽屉是不是都还在，最近有没有人在里面活动。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🏭 Gateway / node host</div>
+      <p>像看机房和值班小工人是不是都还在线。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🆕 update info / git SHA</div>
+      <p>像顺手看看这台机器是不是已经落后几个版本了，别把“老版本怪脾气”误会成新 bug。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第三站</p>
+    <h2>🔦 <code>--deep</code> 真正多做了什么？就是从“看表”变成“现场敲门”</h2>
+    <p>这就是为什么它更慢，但更值钱。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label">WhatsApp / Telegram / Discord ... probes</div>
+      <p>像不只是看值班名单，而是真的走到门口敲一敲，看里面有没有回应。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">多 agent 会话仓库</div>
+      <p>像把每个工位的抽屉仓库都打开看一下，不只盯主桌。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">Gateway + node host runtime</div>
+      <p>像把“楼还在不在”和“外派小工人还在不在”一起核一遍。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 一句话</div>
+      <p><code>--deep</code> 的味道是：别只看纸面，要去现场摸门把手。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第四站</p>
+    <h2>🔐 SecretRef 那一大段，其实是在说“票没拿到时，也别把体检台掀翻”</h2>
+    <p>这页官方写得挺成熟：哪怕某些密钥今天在这个命令路径里拿不到，`status` 也尽量继续给你一张可读的报告，而不是直接崩掉。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">🪪 能拿到票就正常查</div>
+      <p>如果 SecretRef 现在能解出来，`status` 就按正常完整路径看。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">⚠️ 拿不到票就降级报告</div>
+      <p>像门卫说“这几间房我今天没拿到钥匙”，但整张体检表不会因此撕掉。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>status --all</code> 会多写诊断摘要</div>
+      <p>像医生在报告最后再加一段：哪些钥匙今天没拿到，所以哪些检查只能看到半层。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">📌 一句话</div>
+      <p>这条命令优先“把情况说清楚”，而不是“因为一把钥匙没到就当场翻桌”。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第五站</p>
+    <h2>🧭 真正实用的看法是：先 <code>status</code>，再决定要不要去 <code>logs</code> 或 <code>doctor</code></h2>
+    <p>这页最像排障入口，不是排障终点。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">先</span>
+      <h2><code>status</code></h2>
+      <p>先拿总貌，别乱猜。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">再</span>
+      <h2><code>status --all</code></h2>
+      <p>需要分享给别人看时，把完整报告摊开。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">深</span>
+      <h2><code>status --deep</code></h2>
+      <p>怀疑是现场活体问题时，再去敲门。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">转</span>
+      <h2><code>logs</code> / <code>doctor</code></h2>
+      <p>要看监控就去 logs，要让修理工出手就去 doctor。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">最后总结</p>
+    <h2>🎈 把 <code>openclaw status</code> 这页压成一句话</h2>
+    <p><code>openclaw status</code> 就是 OpenClaw 的总状态体检单：先看一眼，再展开，再深探测，然后决定要不要继续去日志或修理工那边追。</p>
+  </div>
+  <div class="ad-placeholder">
+    <p>如果你下一页只想继续看一页，我建议看 <code>/cli/doctor</code>。因为看完体检单以后，下一步最自然就是叫修理工。</p>
+  </div>
+</section>
