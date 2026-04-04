@@ -3970,305 +3970,198 @@
   
       </div>
 
-      
-    <section class="section-shell">
-      <div class="overview-card">
-        <div>
-          <p class="section-kicker">先听这页的人话版</p>
-          <h2>security</h2>
-          <p>这一页像一本关于“安全守门员”的小绘本，它先告诉我们这位机器人朋友会做什么，再一步一步解释什么时候该这样做。 你可以先把它想成：openclaw 安全守门员。</p>
-          <p>如果把这页当成“给普通人看的版本”，你最应该带走的是：它到底在教你一件什么事、什么时候要这样做、以及哪里最容易踩坑。</p>
-        </div>
-        <div class="overview-meta">
-          <span>原始路径：/cli/security</span>
-          <span>章节数量：4</span>
-          <a href="https://docs.openclaw.ai/cli/security" target="_blank" rel="noreferrer">查看原文</a>
-        </div>
-      </div>
-    </section>
-    
-        <section class="section-shell" id="section-1">
-          <div class="section-heading">
-            <p class="section-kicker">第 1 站</p>
-            <h2>Start Here</h2>
-            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>你理解的是能力边界，不只是功能名字。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“openclaw 安全守门员 安全守门员 工具小帮手s (audit + optional fixes). Related:”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“openclaw 安全守门员”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p># <code>openclaw security</code></p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“安全守门员 工具小帮手s (audit + optional fixes).”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Security tools (audit + optional fixes).</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Related:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Related:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Start Here”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：安全守门员 guide: 安全守门员。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Security guide: <a href="/gateway/security" target="_blank" rel="noreferrer">Security</a></li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-2">
-          <div class="section-heading">
-            <p class="section-kicker">第 2 站</p>
-            <h2>Audit</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“The audit warns when multiple DM senders share the main session and recommends **secure DM mode**: session.dmScope=&quot;per…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一句直接对 OpenClaw 说的话，就像对小助手下达任务。</p>
-        <ul class="code-steps">
-          <li>这一句是在直接叫 OpenClaw 做事：“openclaw security audit”。你可以把它想成对机器人说的完整命令。</li><li>这一句是在直接叫 OpenClaw 做事：“openclaw security audit --deep”。你可以把它想成对机器人说的完整命令。</li><li>这一句是在直接叫 OpenClaw 做事：“openclaw security audit --deep --password &lt;password&gt;”。你可以把它想成对机器人说的完整命令。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">openclaw security audit
-openclaw security audit --deep
-openclaw security audit --deep --password &lt;password&gt;
-openclaw security audit --deep --token &lt;token&gt;
-openclaw security audit --fix
-openclaw security audit --json</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“The audit warns when multiple DM senders share the main session and recommends **secure DM mode**: session.dmScope=&quot;per…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>The audit warns when multiple DM senders share the main session and recommends **secure DM mode**: <code>session.dmScope=&quot;per-channel-peer&quot;</code> (or <code>per-account-channel-peer</code> for multi-account channels) for shared inboxes. This is for cooperative/shared inbox hardening. A single Gateway shared by mutually untrusted/adversarial operators is not a recommended setup; split trust boundaries with separate gateways (or separate OS users/hosts). It also emits <code>security.trust_model.multi_user_heuristic</code> when config suggests likely shared-user ingress (for example open DM/group policy, configured group targets, or wildcard sender rules), and reminds you that OpenClaw is a personal-assistant trust model by default. For intentional shared-user setups, the audit guidance is to sandbox all sessions, keep filesystem access workspace-scoped, and keep personal/private identities or credentials off that runtime. It also warns when small models (<code>&lt;=300B</code>) are used without sandboxing and with web/browser tools enabled. For webhook ingress, it warns when <code>hooks.token</code> reuses the Gateway token, when <code>hooks.defaultSessionKey</code> is unset, when <code>hooks.allowedAgentIds</code> is unrestricted, when request <code>sessionKey</code> overrides are enabled, and when overrides are enabled without <code>hooks.allowedSessionKeyPrefixes</code>. It also warns when sandbox Docker settings are configured while sandbox mode is off, when <code>gateway.nodes.denyCommands</code> uses ineffective pattern-like/unknown entries (exact node command-name matching only, not shell-text filtering), when <code>gateway.nodes.allowCommands</code> explicitly enables dangerous node commands, when global <code>tools.profile=&quot;minimal&quot;</code> is overridden by agent tool profiles, when open groups expose runtime/filesystem tools without sandbox/workspace guards, and when installed extension plugin tools may be reachable under permissive tool policy. It also flags <code>gateway.allowRealIpFallback=true</code> (header-spoofing risk if proxies are misconfigured) and <code>discovery.mdns.mode=&quot;full&quot;</code> (metadata leakage via mDNS TXT records). It also warns when sandbox browser uses Docker <code>bridge</code> network without <code>sandbox.browser.cdpSourceRange</code>. It also flags dangerous sandbox Docker network modes (including <code>host</code> and <code>container:*</code> namespace joins). It also warns when existing sandbox browser Docker containers have missing/stale hash labels (for example pre-migration containers missing <code>openclaw.browserConfigEpoch</code>) and recommends <code>openclaw sandbox recreate --browser --all</code>. It also warns when npm-based plugin/hook install records are unpinned, missing integrity metadata, or drift from currently installed package versions. It warns when channel allowlists rely on mutable names/emails/tags instead of stable IDs (Discord, Slack, Google Chat, Microsoft Teams, Mattermost, IRC scopes where applicable). It warns when <code>gateway.auth.mode=&quot;none&quot;</code> leaves Gateway HTTP APIs reachable without a shared secret (<code>/tools/invoke</code> plus any enabled <code>/v1/*</code> endpoint). Settings prefixed with <code>dangerous</code>/<code>dangerously</code> are explicit break-glass operator overrides; enabling one is not, by itself, a security vulnerability report. For the complete dangerous-parameter inventory, see the &quot;Insecure or dangerous flags summary&quot; section in <a href="/gateway/security" target="_blank" rel="noreferrer">Security</a>.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“SecretRef behavior:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>SecretRef behavior:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Audit”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：安全守门员 audit resolves supported SecretRefs…、If a SecretRef is unavailable in the curr…、--token and --秘密口令 only override deep-pro…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>security audit</code> resolves supported SecretRefs in read-only mode for its targeted paths.</li><li>If a SecretRef is unavailable in the current command path, audit continues and reports <code>secretDiagnostics</code> (instead of crashing).</li><li><code>--token</code> and <code>--password</code> only override deep-probe auth for that command invocation; they do not rewrite config or SecretRef mappings.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-3">
-          <div class="section-heading">
-            <p class="section-kicker">第 3 站</p>
-            <h2>JSON output</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Use --json for CI/policy checks: If --fix and --json are combined, output includes both fix actions and final report:”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Use --json for CI/policy checks:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Use <code>--json</code> for CI/policy checks:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一句直接对 OpenClaw 说的话，就像对小助手下达任务。</p>
-        <ul class="code-steps">
-          <li>这一句是在直接叫 OpenClaw 做事：“openclaw security audit --json | jq &#39;.summary&#39;”。你可以把它想成对机器人说的完整命令。</li><li>这一句是在直接叫 OpenClaw 做事：“openclaw security audit --deep --json | jq &#39;.findings[] | select(.severity==&quot;critical&quot;) | .checkId&#39;”。你可以把它想成对机器人说的完整命令。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">openclaw security audit --json | jq &#39;.summary&#39;
-openclaw security audit --deep --json | jq &#39;.findings[] | select(.severity==&quot;critical&quot;) | .checkId&#39;</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“If --fix and --json are combined, output includes both fix actions and final report:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>If <code>--fix</code> and <code>--json</code> are combined, output includes both fix actions and final report:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一句直接对 OpenClaw 说的话，就像对小助手下达任务。</p>
-        <ul class="code-steps">
-          <li>这里在给“openclaw security audit --fix --json | jq {fix”贴标签，意思是把它设置成“.fix.ok summary: .report.summary}&#39;”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">openclaw security audit --fix --json | jq &#39;{fix: .fix.ok, summary: .report.summary}&#39;</code></pre>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-4">
-          <div class="section-heading">
-            <p class="section-kicker">第 4 站</p>
-            <h2>What `--fix` changes</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“--fix applies safe, deterministic remediations: --fix does **not**:”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“--fix applies safe, deterministic remediations:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p><code>--fix</code> applies safe, deterministic remediations:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“What `--fix` changes”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：flips common 大家一起的房间Policy=&quot;open&quot; to 大家一起…、sets logging.redactSensitive from &quot;off&quot; t…、tightens permissions for state/设置说明书 and…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>flips common <code>groupPolicy=&quot;open&quot;</code> to <code>groupPolicy=&quot;allowlist&quot;</code> (including account variants in supported channels)</li><li>sets <code>logging.redactSensitive</code> from <code>&quot;off&quot;</code> to <code>&quot;tools&quot;</code></li><li>tightens permissions for state/config and common sensitive files (<code>credentials/*.json</code>, <code>auth-profiles.json</code>, <code>sessions.json</code>, session <code>*.jsonl</code>)</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“--fix does **not**:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p><code>--fix</code> does **not**:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“What `--fix` changes”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：rotate tokens/秘密口令s/对话接口 keys、disable 工具小帮手s (门口的小门卫, cron, exec, etc.)、change 门口的小门卫 bind/auth/network exposure…、remove or rewrite 新本领插件s/skills。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>rotate tokens/passwords/API keys</li><li>disable tools (<code>gateway</code>, <code>cron</code>, <code>exec</code>, etc.)</li><li>change gateway bind/auth/network exposure choices</li><li>remove or rewrite plugins/skills</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-    <section class="section-shell">
-      <div class="ad-placeholder">
-        <p>这里预留给未来的 Google AdSense 模块。</p>
-        <code>&lt;!-- ADSENSE_SNIPPET --&gt;</code>
-      </div>
-    </section>
-  
+      <section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>🛡️ <code>openclaw security</code> 像“给 OpenClaw 做体检，还顺手把危险的抽屉关好”</h2>
+      <p>这页不是在吓人，它是在帮你看哪里可能漏风。哪些消息门开得太大，哪些钥匙放得太松，哪些群组像敞着门的客厅，它都会提醒你。</p>
+      <p>你可以把它想成一位很认真、但不凶的安全医生：先检查，再提醒，再给你几个能马上修的动作。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合想先检查风险，再考虑修复的人</span>
+      <span>这页最重要的是记住：`audit` 是检查，`fix` 是收拾</span>
+      <a href="https://docs.openclaw.ai/cli/security" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一站</p>
+    <h2>🩺 先看最常用的几种体检动作</h2>
+    <p>官方把 `audit`、`--deep`、`--fix`、`--json` 放在最前面，是因为这就是安全页的主心骨。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">🔍</span>
+      <h2><code>audit</code></h2>
+      <p>像拿着手电筒巡视一圈，看看哪儿有风险。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🧠</span>
+      <h2><code>--deep</code></h2>
+      <p>像把手电筒再往里照一层，看得更细。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🧹</span>
+      <h2><code>--fix</code></h2>
+      <p>像医生检查完以后，顺手把能收拾的东西先收一收。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">📦</span>
+      <h2><code>--json</code></h2>
+      <p>像把体检单折好，方便机器继续看。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二站</p>
+    <h2>🚦 它最关心的，不只是“有没有坏”，还有“会不会被别人乱看”</h2>
+    <p>官方那一大段 warning，看上去很长，其实都在围绕同一件事：门不能开得太随便。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">共享收件箱</div>
+      <p>如果多个 DM 发件人共用主会话，官方建议用更细的 `session.dmScope`，像给每个人分小抽屉。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">个人助手模型</div>
+      <p>OpenClaw 默认更像个人助手，不是把所有人都塞进同一个大客厅。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">Webhook 入口</div>
+      <p>如果 `hooks.token` 复用了 Gateway token，或者 sessionKey 乱写，门口就容易被不该进的人摸到。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">沙箱和网络</div>
+      <p>小模型没沙箱、浏览器工具乱开、Docker 网络太松、mDNS 乱广播，这些都像把窗户全打开了。安全页就是来提醒你关窗的。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第三站</p>
+    <h2>🧪 `audit` 像“安全老师巡视全班”，不是来直接改作业的</h2>
+    <p>官方说明里很明确：`security audit` 会做只读检查，发现问题就报告，不会偷偷改你的配置。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">👀</span>
+      <h2>只看，不乱动</h2>
+      <p>它会读支持的 SecretRef，但不会把别人的秘密拿出来乱写。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">⚠️</span>
+      <h2>有问题就报</h2>
+      <p>如果 SecretRef 暂时拿不到，它会把 `secretDiagnostics` 记下来，而不是直接崩掉。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🎯</span>
+      <h2>deep 是更细的巡查</h2>
+      <p>像把桌子底下、抽屉后面、角落缝里也照一照。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">📌</span>
+      <h2>一句话</h2>
+      <p>`audit` 负责发现问题，不负责替你装作没看见。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第四站</p>
+    <h2>🧹 `fix` 像“把能收拾的先收好”，但它不会替你换掉整个家</h2>
+    <p>官方把 `--fix` 讲得很谨慎，因为它不是大扫除魔法，而是安全、确定、范围很小的修补。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">会做的事</div>
+      <p>像把常见的开放群规则收紧，把敏感内容红掉，把常见文件权限调严。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">不会做的事</div>
+      <p>不会帮你旋转 token、不会替你禁掉工具、不会乱改网络入口。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">先备份更稳</div>
+      <p>`fix` 像认真整理房间，但你最好先知道哪些东西要保留。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">最短记法</div>
+      <p>`audit` 找问题，`fix` 做小修，别把它当成一键重装家。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第五站</p>
+    <h2>🧾 JSON 输出像“把体检报告打印成表格”，适合给机器接着看</h2>
+    <p>官方给了好几个 `--json` 例子，因为这一页很适合接到 CI、脚本和自动化里。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">📊</span>
+      <h2><code>openclaw security audit --json</code></h2>
+      <p>像把检查结果做成标准表格，方便别的程序直接读。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🪄</span>
+      <h2><code>... | jq '.summary'</code></h2>
+      <p>像只看体检单最上面的总分，不被细项绕晕。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🧯</span>
+      <h2><code>--fix --json</code></h2>
+      <p>像一边整理，一边把整理结果也记录成表格。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">📌</span>
+      <h2>一句话</h2>
+      <p>给人看用故事，给机器看用 JSON。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第六站</p>
+    <h2>🔒 SecretRef 和“门牌号过于随便”的风险，都是这页要盯住的重点</h2>
+    <p>官方反复强调：安全不是一个开关，而是一堆容易松掉的小扣子。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">SecretRef</div>
+      <p>像秘密钥匙藏在抽屉里。找得到就用，找不到就报告，不胡编。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">共享信任边界</div>
+      <p>如果几个人互不信任，就别让他们共住一个大屋子。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">危险默认值</div>
+      <p>像门大开、密码共用、工具过多、告警静音，这些都需要你认真看一眼。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">一句话</div>
+      <p>安全页是在帮你把窗关上、把钥匙分开、把不该开的大门收紧。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">最后总结</p>
+    <h2>🎈 把 <code>openclaw security</code> 压成一句话</h2>
+    <p><code>openclaw security</code> 就像给 OpenClaw 做体检：先看哪儿漏风，再提醒你哪些门窗太开、哪些钥匙太乱、哪些共享场景要分隔，最后把能顺手修的小问题收拾掉。</p>
+  </div>
+</section>
+
 
       <footer class="page-footer">
         <div>

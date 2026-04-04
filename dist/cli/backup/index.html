@@ -3970,358 +3970,198 @@
   
       </div>
 
-      
-    <section class="section-shell">
-      <div class="overview-card">
-        <div>
-          <p class="section-kicker">先听这页的人话版</p>
-          <h2>backup</h2>
-          <p>这一页像一本关于“backup”的小绘本，它先告诉我们这位机器人朋友会做什么，再一步一步解释什么时候该这样做。 你可以先把它想成：openclaw backup。</p>
-          <p>如果把这页当成“给普通人看的版本”，你最应该带走的是：它到底在教你一件什么事、什么时候要这样做、以及哪里最容易踩坑。</p>
-        </div>
-        <div class="overview-meta">
-          <span>原始路径：/cli/backup</span>
-          <span>章节数量：5</span>
-          <a href="https://docs.openclaw.ai/cli/backup" target="_blank" rel="noreferrer">查看原文</a>
-        </div>
-      </div>
-    </section>
-    
-        <section class="section-shell" id="section-1">
-          <div class="section-heading">
-            <p class="section-kicker">第 1 站</p>
-            <h2>Start Here</h2>
-            <p>这一节主要在解释“Start Here”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“Start Here”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“openclaw backup Create a local backup archive for OpenClaw state, 设置说明书, credentials, sessions, and optionally workspac…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“openclaw backup”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p># <code>openclaw backup</code></p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Create a local backup archive for OpenClaw state, 设置说明书, credentials, sessions, and optionally workspaces.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Create a local backup archive for OpenClaw state, config, credentials, sessions, and optionally workspaces.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一句直接对 OpenClaw 说的话，就像对小助手下达任务。</p>
-        <ul class="code-steps">
-          <li>这一句是在直接叫 OpenClaw 做事：“openclaw backup create”。你可以把它想成对机器人说的完整命令。</li><li>这一句是在直接叫 OpenClaw 做事：“openclaw backup create --output ~/Backups”。你可以把它想成对机器人说的完整命令。</li><li>这一句是在直接叫 OpenClaw 做事：“openclaw backup create --dry-run --json”。你可以把它想成对机器人说的完整命令。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">openclaw backup create
-openclaw backup create --output ~/Backups
-openclaw backup create --dry-run --json
-openclaw backup create --verify
-openclaw backup create --no-include-workspace
-openclaw backup create --only-config
-openclaw backup verify ./2026-03-09T00-00-00.000Z-openclaw-backup.tar.gz</code></pre>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-2">
-          <div class="section-heading">
-            <p class="section-kicker">第 2 站</p>
-            <h2>Notes</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Notes”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：The archive includes a manifest.json file…、Default output is a timestamped .tar.gz a…、If the current working directory is insid…、Existing archive files are never overwrit…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>The archive includes a <code>manifest.json</code> file with the resolved source paths and archive layout.</li><li>Default output is a timestamped <code>.tar.gz</code> archive in the current working directory.</li><li>If the current working directory is inside a backed-up source tree, OpenClaw falls back to your home directory for the default archive location.</li><li>Existing archive files are never overwritten.</li><li>Output paths inside the source state/workspace trees are rejected to avoid self-inclusion.</li><li><code>openclaw backup verify &lt;archive&gt;</code> validates that the archive contains exactly one root manifest, rejects traversal-style archive paths, and checks that every manifest-declared payload exists in the tarball.</li><li><code>openclaw backup create --verify</code> runs that validation immediately after writing the archive.</li><li><code>openclaw backup create --only-config</code> backs up just the active JSON config file.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-3">
-          <div class="section-heading">
-            <p class="section-kicker">第 3 站</p>
-            <h2>What gets backed up</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“openclaw backup create plans backup sources from your local OpenClaw install: If you use --only-设置说明书, OpenClaw skips s…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“openclaw backup create plans backup sources from your local OpenClaw install:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p><code>openclaw backup create</code> plans backup sources from your local OpenClaw install:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“What gets backed up”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：The state directory returned by OpenClaw&#39;…、The active 设置说明书 file path、The OAuth / credentials directory、Workspace directories discovered from the…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>The state directory returned by OpenClaw&#39;s local state resolver, usually <code>~/.openclaw</code></li><li>The active config file path</li><li>The OAuth / credentials directory</li><li>Workspace directories discovered from the current config, unless you pass <code>--no-include-workspace</code></li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“If you use --only-设置说明书, OpenClaw skips state, credentials, and workspace discovery and archives only the active 设置说明书…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>If you use <code>--only-config</code>, OpenClaw skips state, credentials, and workspace discovery and archives only the active config file path.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“OpenClaw canonicalizes paths before building the archive. If 设置说明书, credentials, or a workspace already live inside the…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>OpenClaw canonicalizes paths before building the archive. If config, credentials, or a workspace already live inside the state directory, they are not duplicated as separate top-level backup sources. Missing paths are skipped.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“The archive payload stores file contents from those source trees, and the embedded manifest.json records the resolved a…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>The archive payload stores file contents from those source trees, and the embedded <code>manifest.json</code> records the resolved absolute source paths plus the archive layout used for each asset.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-4">
-          <div class="section-heading">
-            <p class="section-kicker">第 4 站</p>
-            <h2>Invalid 设置说明书 behavior</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“openclaw backup intentionally bypasses the normal 设置说明书 preflight so it can still help during recovery. Because workspa…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“openclaw backup intentionally bypasses the normal 设置说明书 preflight so it can still help during recovery. Because workspa…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p><code>openclaw backup</code> intentionally bypasses the normal config preflight so it can still help during recovery. Because workspace discovery depends on a valid config, <code>openclaw backup create</code> now fails fast when the config file exists but is invalid and workspace backup is still enabled.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“If you still want a partial backup in that situation, rerun:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>If you still want a partial backup in that situation, rerun:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一句直接对 OpenClaw 说的话，就像对小助手下达任务。</p>
-        <ul class="code-steps">
-          <li>这一句是在直接叫 OpenClaw 做事：“openclaw backup create --no-include-workspace”。你可以把它想成对机器人说的完整命令。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">openclaw backup create --no-include-workspace</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“That keeps state, 设置说明书, and credentials in scope while skipping workspace discovery entirely.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>That keeps state, config, and credentials in scope while skipping workspace discovery entirely.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“If you only need a copy of the 设置说明书 file itself, --only-设置说明书 also works when the 设置说明书 is malformed because it does n…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>If you only need a copy of the config file itself, <code>--only-config</code> also works when the config is malformed because it does not rely on parsing the config for workspace discovery.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-5">
-          <div class="section-heading">
-            <p class="section-kicker">第 5 站</p>
-            <h2>Size and performance</h2>
-            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>你理解的是能力边界，不只是功能名字。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“OpenClaw does not enforce a built-in maximum backup size or per-file size limit. Practical limits come from the local m…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“OpenClaw does not enforce a built-in maximum backup size or per-file size limit.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>OpenClaw does not enforce a built-in maximum backup size or per-file size limit.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Practical limits come from the local machine and destination filesystem:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Practical limits come from the local machine and destination filesystem:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Size and performance”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Available space for the temporary archive…、Time to walk large workspace trees and co…、Time to rescan the archive if you use ope…、Filesystem behavior at the destination pa…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Available space for the temporary archive write plus the final archive</li><li>Time to walk large workspace trees and compress them into a <code>.tar.gz</code></li><li>Time to rescan the archive if you use <code>openclaw backup create --verify</code> or run <code>openclaw backup verify</code></li><li>Filesystem behavior at the destination path. OpenClaw prefers a no-overwrite hard-link publish step and falls back to exclusive copy when hard links are unsupported</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Large workspaces are usually the main driver of archive size. If you want a smaller or faster backup, use --no-include-…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Large workspaces are usually the main driver of archive size. If you want a smaller or faster backup, use <code>--no-include-workspace</code>.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“For the smallest archive, use --only-设置说明书.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>For the smallest archive, use <code>--only-config</code>.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-    <section class="section-shell">
-      <div class="ad-placeholder">
-        <p>这里预留给未来的 Google AdSense 模块。</p>
-        <code>&lt;!-- ADSENSE_SNIPPET --&gt;</code>
-      </div>
-    </section>
-  
+      <section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>🧳 <code>openclaw backup</code> 像“把家里的重要东西装进一个防丢的大包”</h2>
+      <p>这页讲的是备份。不是把房子搬走，而是先把最重要的东西收进包里：配置、钥匙、会话、聊天记录，还有有时候连整个工作区也一起装进去。</p>
+      <p>它像出门前把证件、钥匙和相册都先放好。真出事了，你还能把家找回来。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合想先存一份“我现在这套 OpenClaw 长什么样”的人</span>
+      <span>这页最重要的是记住：backup 是“先留底”，不是“换新机器”</span>
+      <a href="https://docs.openclaw.ai/cli/backup" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一站</p>
+    <h2>🧺 它会装进去哪些东西？先把柜子里的几样宝贝一口气捆好</h2>
+    <p>官方一开始就说得很清楚：这不是只抄一个配置文件，而是把 OpenClaw 的几类重要家当一起打包。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">🧠</span>
+      <h2>state</h2>
+      <p>像家里的总记忆本，很多运行中的痕迹都在这里。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🧾</span>
+      <h2>config</h2>
+      <p>像房间墙上的总规则，告诉系统怎么住、怎么跑。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🔐</span>
+      <h2>credentials</h2>
+      <p>像门卡和小钥匙，丢了就进不了门。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">💬</span>
+      <h2>sessions</h2>
+      <p>像聊天抽屉里的小故事，很多现场上下文都在里面。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二站</p>
+    <h2>🌳 `workspace` 也可以一起装，但你也能说“先别装院子”</h2>
+    <p>默认情况下，备份会把工作区也找出来一起带走。这样最完整。可你要是只想先快一点，就能让它少装一点。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label"><code>openclaw backup create</code></div>
+      <p>像把整套家当先装箱。默认会把状态、配置、凭据、会话和工作区都考虑进去。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>--no-include-workspace</code></div>
+      <p>像对搬家师傅说：“院子先别搬，先把屋里这些最重要的东西打包。”</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>--only-config</code></div>
+      <p>像只带走一张最关键的地图，别的先不碰。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">一句话</div>
+      <p>想最全就一起装，想快一点就少装，想最轻就只拿配置。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第三站</p>
+    <h2>📦 `--output`、`--dry-run`、`--verify`，是在决定“包放哪、先不先开箱、装得对不对”</h2>
+    <p>命令参数看起来多，其实都在管搬箱子的流程。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">📍</span>
+      <h2><code>--output ~/Backups</code></h2>
+      <p>像告诉搬家车：“打包好的包，先放到这个仓库去。”</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🪞</span>
+      <h2><code>--dry-run</code></h2>
+      <p>像先把动作演一遍，不真的把箱子封起来。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🧪</span>
+      <h2><code>--verify</code></h2>
+      <p>像打包后再让验货员摸一遍，看看盒子里是不是少了东西。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">📌</span>
+      <h2>一句话</h2>
+      <p><code>output</code> 管放哪，<code>dry-run</code> 管先演练，<code>verify</code> 管查漏补缺。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第四站</p>
+    <h2>🗂️ 为什么它会带一个 `manifest.json`？因为箱子里要放清单</h2>
+    <p>官方特别提到清单文件。这个设计很像收纳盒外面贴一张标签纸，里面放了什么，一眼能看懂。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">清单本</div>
+      <p><code>manifest.json</code> 像箱盖上的总目录，告诉你里面每样东西原来从哪来。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">不乱装</div>
+      <p>它会先把路径整理好，避免把同一个东西重复装两次。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">不乱放</div>
+      <p>输出目录如果放进原来的家当堆里，它会拒绝，怕你把备份卷进备份里。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">像贴标签</div>
+      <p>备份不是黑箱。它是一个贴好标签的箱子，方便以后真要找回东西时不迷路。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第五站</p>
+    <h2>⚠️ 配置坏了也想先救命？它会先帮你拿到“能救多少救多少”</h2>
+    <p>官方这段很实用。它的意思是：备份这件事本来就是为了救急，所以不能太脆。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">🚑</span>
+      <h2>正常模式</h2>
+      <p>如果配置还健康，就按原计划把该备的都备上。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🧯</span>
+      <h2>坏配置时的退路</h2>
+      <p>如果 workspace 解析要依赖的配置已经坏了，<code>backup create</code> 会直接说不行。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🧺</span>
+      <h2><code>--no-include-workspace</code></h2>
+      <p>像把最麻烦的院子先跳过去，先保住屋里那些救命的东西。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">📌</span>
+      <h2>一句话</h2>
+      <p>备份这件事，宁可少一点，也别在救命时卡死。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第六站</p>
+    <h2>🧷 它的速度和大小，主要看房子有多大、路有多远、箱子会不会挤</h2>
+    <p>官方没有给硬上限。这个意思很朴素：文件多、工作区大、磁盘慢，打包自然就慢一些。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">空间</div>
+      <p>箱子要先有地方放，不然你连封口都封不上。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">时间</div>
+      <p>房子越大，搬完一圈越花时间。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">文件系统</div>
+      <p>有些地方能挂钩、有些地方只能整包拷走，速度和方式就不一样。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">最轻的包</div>
+      <p>如果你只想要最小的一包，就用 <code>--only-config</code>。像只拎最重要的地址本。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">最后总结</p>
+    <h2>🎈 把 <code>openclaw backup</code> 压成一句话</h2>
+    <p><code>openclaw backup</code> 就像给 OpenClaw 打一个贴着清单的大包：把状态、配置、钥匙、会话和工作区收好，存到安全地方，真出问题时还能把家找回来。</p>
+  </div>
+</section>
+
 
       <footer class="page-footer">
         <div>

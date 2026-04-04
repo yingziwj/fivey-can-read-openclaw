@@ -3970,101 +3970,172 @@
   
       </div>
 
-      
-    <section class="section-shell">
-      <div class="overview-card">
-        <div>
-          <p class="section-kicker">先听这页的人话版</p>
-          <h2>reset</h2>
-          <p>这一页像一本关于“reset”的小绘本，它先告诉我们这位机器人朋友会做什么，再一步一步解释什么时候该这样做。 你可以先把它想成：openclaw reset。</p>
-          <p>如果把这页当成“给普通人看的版本”，你最应该带走的是：它到底在教你一件什么事、什么时候要这样做、以及哪里最容易踩坑。</p>
-        </div>
-        <div class="overview-meta">
-          <span>原始路径：/cli/reset</span>
-          <span>章节数量：1</span>
-          <a href="https://docs.openclaw.ai/cli/reset" target="_blank" rel="noreferrer">查看原文</a>
-        </div>
-      </div>
-    </section>
-    
-        <section class="section-shell" id="section-1">
-          <div class="section-heading">
-            <p class="section-kicker">第 1 站</p>
-            <h2>Start Here</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“openclaw reset Reset local 设置说明书/state (keeps the CLI installed). Run openclaw backup create first if you want a restor…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“openclaw reset”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p># <code>openclaw reset</code></p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Reset local 设置说明书/state (keeps the CLI installed).”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Reset local config/state (keeps the CLI installed).</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一句直接对 OpenClaw 说的话，就像对小助手下达任务。</p>
-        <ul class="code-steps">
-          <li>这一句是在直接叫 OpenClaw 做事：“openclaw backup create”。你可以把它想成对机器人说的完整命令。</li><li>这一句是在直接叫 OpenClaw 做事：“openclaw reset”。你可以把它想成对机器人说的完整命令。</li><li>这一句是在直接叫 OpenClaw 做事：“openclaw reset --dry-run”。你可以把它想成对机器人说的完整命令。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">openclaw backup create
-openclaw reset
-openclaw reset --dry-run
-openclaw reset --scope config+creds+sessions --yes --non-interactive</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Run openclaw backup create first if you want a restorable snapshot before removing local state.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Run <code>openclaw backup create</code> first if you want a restorable snapshot before removing local state.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-    <section class="section-shell">
-      <div class="ad-placeholder">
-        <p>这里预留给未来的 Google AdSense 模块。</p>
-        <code>&lt;!-- ADSENSE_SNIPPET --&gt;</code>
-      </div>
-    </section>
-  
+      <section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>🧽 <code>openclaw reset</code> 像“把桌面清干净，但房子还留着”</h2>
+      <p>这页讲的是重置本地状态。它不是把 OpenClaw 卸掉，而是把本地配置、凭据、会话这些旧东西先清掉，让你从一个更干净的起点重新开始。</p>
+      <p>像把桌上的旧纸条、旧钥匙、旧草稿先收走。房子还在，人也还在，只是屋里清爽多了。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合想重新来一遍、排掉旧状态、或者准备换一套干净配置的人</span>
+      <span>这页最重要的是记住：reset 是“清本地状态”，不是“拆掉 CLI”</span>
+      <a href="https://docs.openclaw.ai/cli/reset" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一站</p>
+    <h2>🧹 它会清什么？像把桌上的三只抽屉重新归零</h2>
+    <p>官方的核心意思很短：重置本地 config 和 state，但 CLI 还留着。也就是说，它清的是里面的东西，不是把整栋楼推倒。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">🧾</span>
+      <h2>config</h2>
+      <p>像墙上的总规则表，reset 会把它带回干净状态。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🔐</span>
+      <h2>creds</h2>
+      <p>像抽屉里的门卡和钥匙，旧的先收走。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">💬</span>
+      <h2>sessions</h2>
+      <p>像聊天记录的小故事页，旧会话先清掉。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🧱</span>
+      <h2>CLI 还在</h2>
+      <p>房子不拆。工具箱还在。只是屋里的东西重新摆。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二站</p>
+    <h2>🎒 为什么官方先让你备份？因为清桌子前，先拍张照片最稳</h2>
+    <p>这就是官方那句“先 backup create”的真正意思。先留底，再动手。这样哪怕后面想反悔，也有机会把东西找回来。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label"><code>openclaw backup create</code></div>
+      <p>像先拍一张全家福，把现在这套家当留个底。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>openclaw reset</code></div>
+      <p>像把桌面清空，开始重新摆。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">先拍照再收拾</div>
+      <p>这样你不是盲目清理，而是带着退路清理。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">一句话</div>
+      <p>reset 前先 backup，像搬家前先拍照存档。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第三站</p>
+    <h2>🪞 `--dry-run`、`--scope`、`--yes`、`--non-interactive`，是在决定“先演一遍、擦哪几格、要不要再问你一句”</h2>
+    <p>这些参数看起来像墙上贴了很多标签，其实都在控制重置这把扫帚的力度。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">🎭</span>
+      <h2><code>--dry-run</code></h2>
+      <p>像先把清理动作走一遍，不真的把东西扔掉。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🧺</span>
+      <h2><code>--scope config+creds+sessions</code></h2>
+      <p>像告诉它：“这次只擦这三只抽屉，别碰别的地方。”</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">✅</span>
+      <h2><code>--yes</code></h2>
+      <p>像你提前点头，说“我确定要清”。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🤫</span>
+      <h2><code>--non-interactive</code></h2>
+      <p>像机器人默默干活，不再每一步都抬头问你。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第四站</p>
+    <h2>🧠 `scope` 这个词最像“清哪几层抽屉”</h2>
+    <p>官方示例把 scope 写得很明确。这里最关键的是不要误会成“把整个系统都推平”。它只是按范围收拾。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">config</div>
+      <p>像把墙上的规则表擦一遍，重新贴新的。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">creds</div>
+      <p>像把旧门卡和旧钥匙收回。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">sessions</div>
+      <p>像把旧聊天抽屉清空，避免旧内容一直拖着你走。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">重置不是拆家</div>
+      <p>你只是按范围清理。房子还在，工具也还在。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第五站</p>
+    <h2>🧯 它最适合什么时候用？像卡住了、乱了、想重开一局的时候</h2>
+    <p>重置不是日常动作，它更像“系统已经有点乱了，我们先把这桌清掉再来”的那一步。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">🔁</span>
+      <h2>重新开始</h2>
+      <p>你想从头再来，干净地重新配一次。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🧹</span>
+      <h2>排掉旧状态</h2>
+      <p>一些旧配置、旧凭据、旧会话一直在干扰你，就先清掉。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🧰</span>
+      <h2>准备修复</h2>
+      <p>有时候你不是要结束，而是要为下一轮修复腾空间。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">📌</span>
+      <h2>一句话</h2>
+      <p>reset 是“清理重来”的按钮，不是“永久删除工具”的按钮。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">最后总结</p>
+    <h2>🎈 把 <code>openclaw reset</code> 压成一句话</h2>
+    <p><code>openclaw reset</code> 就像把 OpenClaw 的桌面清干净：先备份，再按范围清掉本地配置、钥匙和会话，让你从一个更整洁的起点重新开始，而不是把整台工具拆掉。</p>
+  </div>
+</section>
+
 
       <footer class="page-footer">
         <div>

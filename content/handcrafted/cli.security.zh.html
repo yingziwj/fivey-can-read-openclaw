@@ -1,0 +1,191 @@
+<section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>🛡️ <code>openclaw security</code> 像“给 OpenClaw 做体检，还顺手把危险的抽屉关好”</h2>
+      <p>这页不是在吓人，它是在帮你看哪里可能漏风。哪些消息门开得太大，哪些钥匙放得太松，哪些群组像敞着门的客厅，它都会提醒你。</p>
+      <p>你可以把它想成一位很认真、但不凶的安全医生：先检查，再提醒，再给你几个能马上修的动作。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合想先检查风险，再考虑修复的人</span>
+      <span>这页最重要的是记住：`audit` 是检查，`fix` 是收拾</span>
+      <a href="https://docs.openclaw.ai/cli/security" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一站</p>
+    <h2>🩺 先看最常用的几种体检动作</h2>
+    <p>官方把 `audit`、`--deep`、`--fix`、`--json` 放在最前面，是因为这就是安全页的主心骨。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">🔍</span>
+      <h2><code>audit</code></h2>
+      <p>像拿着手电筒巡视一圈，看看哪儿有风险。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🧠</span>
+      <h2><code>--deep</code></h2>
+      <p>像把手电筒再往里照一层，看得更细。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🧹</span>
+      <h2><code>--fix</code></h2>
+      <p>像医生检查完以后，顺手把能收拾的东西先收一收。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">📦</span>
+      <h2><code>--json</code></h2>
+      <p>像把体检单折好，方便机器继续看。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二站</p>
+    <h2>🚦 它最关心的，不只是“有没有坏”，还有“会不会被别人乱看”</h2>
+    <p>官方那一大段 warning，看上去很长，其实都在围绕同一件事：门不能开得太随便。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">共享收件箱</div>
+      <p>如果多个 DM 发件人共用主会话，官方建议用更细的 `session.dmScope`，像给每个人分小抽屉。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">个人助手模型</div>
+      <p>OpenClaw 默认更像个人助手，不是把所有人都塞进同一个大客厅。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">Webhook 入口</div>
+      <p>如果 `hooks.token` 复用了 Gateway token，或者 sessionKey 乱写，门口就容易被不该进的人摸到。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">沙箱和网络</div>
+      <p>小模型没沙箱、浏览器工具乱开、Docker 网络太松、mDNS 乱广播，这些都像把窗户全打开了。安全页就是来提醒你关窗的。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第三站</p>
+    <h2>🧪 `audit` 像“安全老师巡视全班”，不是来直接改作业的</h2>
+    <p>官方说明里很明确：`security audit` 会做只读检查，发现问题就报告，不会偷偷改你的配置。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">👀</span>
+      <h2>只看，不乱动</h2>
+      <p>它会读支持的 SecretRef，但不会把别人的秘密拿出来乱写。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">⚠️</span>
+      <h2>有问题就报</h2>
+      <p>如果 SecretRef 暂时拿不到，它会把 `secretDiagnostics` 记下来，而不是直接崩掉。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🎯</span>
+      <h2>deep 是更细的巡查</h2>
+      <p>像把桌子底下、抽屉后面、角落缝里也照一照。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">📌</span>
+      <h2>一句话</h2>
+      <p>`audit` 负责发现问题，不负责替你装作没看见。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第四站</p>
+    <h2>🧹 `fix` 像“把能收拾的先收好”，但它不会替你换掉整个家</h2>
+    <p>官方把 `--fix` 讲得很谨慎，因为它不是大扫除魔法，而是安全、确定、范围很小的修补。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">会做的事</div>
+      <p>像把常见的开放群规则收紧，把敏感内容红掉，把常见文件权限调严。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">不会做的事</div>
+      <p>不会帮你旋转 token、不会替你禁掉工具、不会乱改网络入口。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">先备份更稳</div>
+      <p>`fix` 像认真整理房间，但你最好先知道哪些东西要保留。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">最短记法</div>
+      <p>`audit` 找问题，`fix` 做小修，别把它当成一键重装家。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第五站</p>
+    <h2>🧾 JSON 输出像“把体检报告打印成表格”，适合给机器接着看</h2>
+    <p>官方给了好几个 `--json` 例子，因为这一页很适合接到 CI、脚本和自动化里。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">📊</span>
+      <h2><code>openclaw security audit --json</code></h2>
+      <p>像把检查结果做成标准表格，方便别的程序直接读。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🪄</span>
+      <h2><code>... | jq '.summary'</code></h2>
+      <p>像只看体检单最上面的总分，不被细项绕晕。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🧯</span>
+      <h2><code>--fix --json</code></h2>
+      <p>像一边整理，一边把整理结果也记录成表格。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">📌</span>
+      <h2>一句话</h2>
+      <p>给人看用故事，给机器看用 JSON。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第六站</p>
+    <h2>🔒 SecretRef 和“门牌号过于随便”的风险，都是这页要盯住的重点</h2>
+    <p>官方反复强调：安全不是一个开关，而是一堆容易松掉的小扣子。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">SecretRef</div>
+      <p>像秘密钥匙藏在抽屉里。找得到就用，找不到就报告，不胡编。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">共享信任边界</div>
+      <p>如果几个人互不信任，就别让他们共住一个大屋子。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">危险默认值</div>
+      <p>像门大开、密码共用、工具过多、告警静音，这些都需要你认真看一眼。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">一句话</div>
+      <p>安全页是在帮你把窗关上、把钥匙分开、把不该开的大门收紧。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">最后总结</p>
+    <h2>🎈 把 <code>openclaw security</code> 压成一句话</h2>
+    <p><code>openclaw security</code> 就像给 OpenClaw 做体检：先看哪儿漏风，再提醒你哪些门窗太开、哪些钥匙太乱、哪些共享场景要分隔，最后把能顺手修的小问题收拾掉。</p>
+  </div>
+</section>

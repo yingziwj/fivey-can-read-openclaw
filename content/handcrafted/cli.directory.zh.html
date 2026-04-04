@@ -1,0 +1,138 @@
+<section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>🗺️ <code>openclaw directory</code> 像“一个专门帮你找门牌号的小地图盒”</h2>
+      <p>这页不是在聊天，也不是在发消息。它是在帮你找地址。你看到的是名字，OpenClaw 想要的是能直接投递的 ID。</p>
+      <p>所以它最像一张小地图：先把人、群、房间这些名字翻出来，再把真正能用的门牌抄给别的命令。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合想把昵称、群名、房间名变成可复制 ID 的人</span>
+      <span>这页最重要的是记住：它负责找路，不负责送信</span>
+      <a href="https://docs.openclaw.ai/cli/directory" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一站</p>
+    <h2>🧭 先认三个按钮：频道、账号、JSON</h2>
+    <p>官方把这个命令的常用参数写得很少，因为它本来就很像查字典。你只要先知道查谁、查哪本字典、要不要机器能看懂的格式就够了。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">📍</span>
+      <h2><code>--channel &lt;name&gt;</code></h2>
+      <p>告诉它你要查哪扇门里的目录，比如 Slack、Telegram、Discord。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">👤</span>
+      <h2><code>--account &lt;id&gt;</code></h2>
+      <p>同一扇门里可能有不同账号，就像同一栋楼里有不同房间。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">📦</span>
+      <h2><code>--json</code></h2>
+      <p>把答案装进一个整齐盒子里，方便别的程序接着拿去用。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">📌</span>
+      <h2>一句话</h2>
+      <p>channel 选门，account 选窗，json 选装盒子。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二站</p>
+    <h2>✍️ 这组命令像“先问路，再抄地址”</h2>
+    <p>官方说它能帮你找 contacts、peers、groups、甚至 “me”。我们把它想成一本会动的通讯录。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label"><code>openclaw directory self --channel zalouser</code></div>
+      <p>像先照镜子，看“我自己在这扇门里叫什么名字”。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>openclaw directory peers list --channel zalouser</code></div>
+      <p>像翻联系人小本子，看看旁边都坐着哪些人。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>openclaw directory groups list --channel zalouser</code></div>
+      <p>像翻群组名册，找找有哪些大房间。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw directory groups members --channel zalouser --group-id &lt;id&gt;</code></div>
+      <p>像打开某个房间的门牌，看看里面坐着哪些小伙伴。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第三站</p>
+    <h2>🪪 为什么它常常要配合 `message send`？因为它负责把昵称翻成真门牌</h2>
+    <p>官方很直白：directory 是为了让你能把 ID 复制到别的命令里，尤其是消息发送那类命令。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">🔎</span>
+      <h2>先找，再贴</h2>
+      <p>先查到 `user:U012ABCDEF` 这种真门牌，再贴进 `message send --target ...`。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🧠</span>
+      <h2>人名不等于机器名</h2>
+      <p>人会记 `#general`、`@jane`，机器更喜欢精确编号。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🧩</span>
+      <h2>很多通道是“配置出来的目录”</h2>
+      <p>不是所有目录都像活的电话簿，有些更像系统先登记好的名单。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">📌</span>
+      <h2>一句话</h2>
+      <p>directory 不是终点，它是给别的命令铺路。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第四站</p>
+    <h2>🏷️ 不同通道的门牌长得不一样，所以它才要先给你一张翻译表</h2>
+    <p>官方特地列了各个通道常见的 ID 形状。这个部分很像“不同学校的学生证格式不一样”。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">WhatsApp</div>
+      <p>像电话号码，或者群的门牌号。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">Telegram</div>
+      <p>像 `@username` 或数字 chat id，群还是数字门牌。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">Slack / Discord</div>
+      <p>像 `user:...`、`channel:...` 这种精确标签。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">Matrix / Teams / Zalo</div>
+      <p>每个通道都有自己的门牌形状。你要先认它的格式，门才找得到。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">最后总结</p>
+    <h2>🎈 把 <code>openclaw directory</code> 压成一句话</h2>
+    <p><code>openclaw directory</code> 就像一个小地图盒：把昵称、群名、房间名翻成真门牌，再把这些门牌交给 `message send` 之类的命令继续跑。</p>
+  </div>
+  <div class="ad-placeholder">
+    <p>如果你下一页只想继续看一页，我建议看 <code>/cli/security</code>。那页是“体检和报警器”，和这里的“找门牌”刚好相邻。</p>
+  </div>
+</section>
