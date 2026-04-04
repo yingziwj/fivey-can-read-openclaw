@@ -1,0 +1,160 @@
+<section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>📨 Agent Send 就像“你不走聊天窗口，直接从后台塞一张任务纸条给 OpenClaw”</h2>
+      <p>平时我们都是在 Telegram、Slack、TUI 这些地方跟 OpenClaw 说话。可有时候你根本不想打开聊天界面，只想在命令行里直接塞一句任务进去，让它回你结果，甚至顺手把结果送到某个通道。</p>
+      <p><code>openclaw agent</code> 干的就是这件事。它像后台快递口，你直接写纸条、指定收件人、选好要不要投递出去。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合脚本调用、自动化任务、命令行测试</span>
+      <span>这页最重要的是分清：这是“后台塞任务”，不是“打开一个新聊天界面”</span>
+      <a href="https://docs.openclaw.ai/tools/agent-send" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一站</p>
+    <h2>📬 先想画面：你站在后台，把一张任务单塞进总控室</h2>
+    <p>官方开头说它是 command line 里跑一个 agent turn。翻成人话就是：不用等别人从聊天通道发消息，你自己就能从后台发起一轮任务。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">🗣 普通聊天</div>
+      <p>像有人从前门敲门，说一句话，等 OpenClaw 回答。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">📨 <code>openclaw agent</code></div>
+      <p>像你从后台递进一张任务纸条，不用前门聊天流程也能让它干活。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🧪 特别适合测试</div>
+      <p>因为你可以直接在命令行里喂消息、看结果，不必每次都去打开聊天软件。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">⭐ 一句话先记住</div>
+      <p>Agent Send 是后台投递口，不是聊天窗本身。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二站</p>
+    <h2>🚀 Quick start 那几条命令，其实都在讲“这张纸条塞给谁”</h2>
+    <p>原文 quick start 列了三种最常见的投递方式：简单发一次、指定 agent / session、再决定要不要真的送去某个聊天通道。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw agent --message "What is the weather today?"</code></div>
+      <p>像最朴素地塞进去一张纸条：“帮我回答这个问题。”然后就在命令行里等它把回执吐出来。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>--agent ops</code></div>
+      <p>像不是随便塞给主前台，而是明确交给叫 <code>ops</code> 的那位专门负责人。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>--to +15555550123</code></div>
+      <p>像你按收件人地址去推导会话门牌，不是直接拿 session id，而是从目标号码猜“这纸条该放进哪个抽屉”。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>--session-id abc123</code></div>
+      <p>像你已经知道抽屉编号了，那就直接把纸条塞进那个旧抽屉里，继续上次那条线。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第三站</p>
+    <h2>📮 <code>--deliver</code> 最容易误会，它在讲“要不要把回信真的寄出去”</h2>
+    <p>很多人以为 `openclaw agent` 只是本地输出。其实加上 <code>--deliver</code> 后，它不只是在终端给你看，还会真的往通道里发。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">🖥 不加 <code>--deliver</code></div>
+      <p>像后台办事办完了，只把结果念给你听，不往外寄。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">📱 加 <code>--deliver</code></div>
+      <p>像事情办完后，真的把回信投递到某个聊天通道。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>--reply-channel slack --reply-to "#reports"</code></div>
+      <p>像你在投递单上明确写：回信别发回原来那儿了，改投到 Slack 的 <code>#reports</code> 这个信箱。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 一句话</div>
+      <p><code>--deliver</code> 决定结果是“只给你看”还是“真的寄出去”。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第四站</p>
+    <h2>🎛 那一长串 flags，翻成人话其实就是几类开关</h2>
+    <p>别硬背参数表。按“说什么、塞给谁、怎么想、回哪里、要什么格式”来记就行。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">📝</span>
+      <h2>说什么</h2>
+      <p><code>--message</code> 就是纸条正文，没有它，这张任务单根本没内容。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">📫</span>
+      <h2>塞给谁</h2>
+      <p><code>--to</code>、<code>--agent</code>、<code>--session-id</code> 都是在定收件抽屉。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🧠</span>
+      <h2>怎么想</h2>
+      <p><code>--thinking</code>、<code>--verbose</code>、<code>--timeout</code> 像给这张任务单贴上处理方式。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">📦</span>
+      <h2>回什么格式</h2>
+      <p><code>--json</code> 像要求回执别只用人话，而是按结构化表格吐回来，方便脚本接。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第五站</p>
+    <h2>🌉 默认会先走 Gateway，这像先去总控室，再决定要不要本地兜底</h2>
+    <p>官方 behavior 里这条很关键。因为很多人会以为 CLI 就一定是本地直接跑，其实默认不是。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">🏢 默认 through Gateway</div>
+      <p>像你先把任务单交给总控室，让它按正式路由去处理。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>--local</code></div>
+      <p>像你跳过总控室，直接在眼前这台机器上临时处理。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🔁 Gateway 不通时 fallback</div>
+      <p>官方说如果 Gateway 摸不到，CLI 会退回本地 embedded run。像总控室门锁了，那就先自己现场处理这张单子。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">📌 这节真正要记住</div>
+      <p>默认正式走网关，<code>--local</code> 才是明确改成“我自己在这台机器上就地办”。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">最后总结</p>
+    <h2>🎈 把 Agent Send 这页压成一句话</h2>
+    <p><code>openclaw agent</code> 就是一个后台投递口：你在命令行里直接塞任务纸条进去，决定塞给哪个 agent / session、要不要真的寄回某个聊天通道，再把结果拿回来。</p>
+  </div>
+  <div class="ad-placeholder">
+    <p>如果你下一页只想继续看一页，我建议看 <code>/gateway/doctor</code>。因为一旦你开始用命令行后台投递，下一件最常做的事就是排查“为什么这台总控室今天不对劲”。</p>
+  </div>
+</section>

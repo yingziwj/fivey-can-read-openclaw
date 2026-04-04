@@ -111,6 +111,7 @@ const handcraftedPageMap = new Map([
   ["/install/docker", path.resolve("content/handcrafted/install.docker.zh.html")],
   ["/install/docker-vm-runtime", path.resolve("content/handcrafted/install.docker-vm-runtime.zh.html")],
   ["/tools/index", path.resolve("content/handcrafted/tools.index.zh.html")],
+  ["/tools/agent-send", path.resolve("content/handcrafted/tools.agent-send.zh.html")],
   ["/tools/skills", path.resolve("content/handcrafted/tools.skills.zh.html")],
   ["/tools/btw", path.resolve("content/handcrafted/tools.btw.zh.html")],
   ["/tools/brave-search", path.resolve("content/handcrafted/tools.brave-search.zh.html")],
@@ -143,12 +144,14 @@ const handcraftedPageMap = new Map([
   ["/concepts/session", path.resolve("content/handcrafted/concepts.session.zh.html")],
   ["/concepts/streaming", path.resolve("content/handcrafted/concepts.streaming.zh.html")],
   ["/concepts/features", path.resolve("content/handcrafted/concepts.features.zh.html")],
+  ["/gateway/doctor", path.resolve("content/handcrafted/gateway.doctor.zh.html")],
   ["/providers/openai", path.resolve("content/handcrafted/providers.openai.zh.html")],
   ["/plugins/bundles", path.resolve("content/handcrafted/plugins.bundles.zh.html")],
   ["/plugins/building-plugins", path.resolve("content/handcrafted/plugins.building-plugins.zh.html")],
   ["/tools/browser", path.resolve("content/handcrafted/tools.browser.zh.html")],
   ["/tools/exec", path.resolve("content/handcrafted/tools.exec.zh.html")],
-  ["/tools/plugin", path.resolve("content/handcrafted/tools.plugin.zh.html")]
+  ["/tools/plugin", path.resolve("content/handcrafted/tools.plugin.zh.html")],
+  ["/web/dashboard", path.resolve("content/handcrafted/web.dashboard.zh.html")]
 ]);
 
 function asset(fileName) {

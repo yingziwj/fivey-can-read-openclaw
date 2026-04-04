@@ -1,0 +1,190 @@
+<section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>🩺 Doctor 就像 OpenClaw 的“总维修师 + 搬家师傅 + 体检医生”</h2>
+      <p>这页看起来特别长，不是因为它故意吓人，而是因为 <code>openclaw doctor</code> 干的活真的很多。它不只是“看一眼健康”，还会顺手修老配置、搬旧目录、提醒权限问题、检查服务有没有跑歪。</p>
+      <p>所以你别把它想成一把小螺丝刀。它更像一位总维修师，走进机房先巡一圈，再决定哪里该修、哪里该搬、哪里该重启。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合遇到“怎么今天哪里都不太对”的时候先跑一遍</span>
+      <span>这页最重要的是分清：<code>doctor</code> 不只是检查，它很多时候真的会修</span>
+      <a href="https://docs.openclaw.ai/gateway/doctor" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一站</p>
+    <h2>🏥 先别被大段文字吓住，先想它到底在做哪三类事</h2>
+    <p>整页虽然很长，但主线其实很清楚：检查、迁移、修理。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">🩺</span>
+      <h2>检查</h2>
+      <p>像体检：看配置、看权限、看服务、看 token、看技能、看通道有没有异常。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🚚</span>
+      <h2>迁移</h2>
+      <p>像搬家：旧配置键名、旧目录结构、旧 cron 存储、旧浏览器接法，它都可能帮你搬到新位置。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🔧</span>
+      <h2>修理</h2>
+      <p>像现场维修：该 chmod、该重建 UI、该修服务配置、该补 sandbox 镜像时，它会告诉你甚至直接动手。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">⭐</span>
+      <h2>一句话先记住</h2>
+      <p><code>doctor</code> 不是只看病，它很多时候还顺手开药、做手术、搬家。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二站</p>
+    <h2>🚀 Quick start 那几条命令，其实是在选“修到哪一步、修得多猛”</h2>
+    <p>官方一开始列的几个模式非常重要。它们不是同一把锤子，而是几种不同力度的维修方式。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw doctor</code></div>
+      <p>像请医生先来全面体检，再边看边问你要不要修。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw doctor --yes</code></div>
+      <p>像你提前说：“常规修法你直接照默认来，别每一步都停下来问我。”</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw doctor --repair</code></div>
+      <p>像告诉维修师：“推荐修法你直接做。”它不只是检查，而是会开始落手。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw doctor --repair --force</code></div>
+      <p>像你把“保守修理”切成“重手修理”。连自定义 supervisor 配置这种地方也可能被重写。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第三站</p>
+    <h2>🤫 <code>--non-interactive</code> 和 <code>--deep</code>，一个像安静巡检，一个像翻机房角落</h2>
+    <p>这两个开关很容易被忽略，但实际很有用。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label"><code>--non-interactive</code></div>
+      <p>像在自动化环境里让维修师别敲你门，只做那些安全、不会引发大动作的修整。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>--deep</code></div>
+      <p>像不只看眼前这台，还往系统服务角落里钻，去找额外的 gateway 安装、旧服务残留这些藏得深的问题。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>cat ~/.openclaw/openclaw.json</code></div>
+      <p>官方提这句，是像提醒你：要是你想先看病历再决定要不要动刀，就先把配置文件翻出来看看。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 一句话</div>
+      <p><code>--non-interactive</code> 偏静默巡检，<code>--deep</code> 偏深翻暗角。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第四站</p>
+    <h2>🧹 Config normalization 和 legacy migrations，在讲“把老房子的东西搬到新房间”</h2>
+    <p>这部分看起来最技术，但翻成人话其实很顺。很多老键名、老目录、老结构，doctor 都会帮你重排。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">🗂 老键名迁移</div>
+      <p>像以前抽屉上贴着旧标签，现在系统认新标签了。doctor 会帮你把标签换过来。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">📁 旧目录搬家</div>
+      <p>旧的 sessions、agent 目录、WhatsApp auth 状态这些，会被搬到新住处。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">⏰ 旧 cron 迁移</div>
+      <p>像老闹钟的纸条格式变了，doctor 会帮你把旧提醒卡改成现在 scheduler 认得的样子。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">📌 这节一句话</div>
+      <p>很多“以前能跑、现在突然不让跑”的问题，本质上就是老家具还摆在旧房间里。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第五站</p>
+    <h2>🔐 权限、状态目录、token、服务，这些都是“机房基础设施检查”</h2>
+    <p>官方后半段不断回到这些东西，是因为真正让 OpenClaw 崩得难看的，往往不是模型本身，而是基础设施歪了。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">📁</span>
+      <h2>状态目录</h2>
+      <p>像大脑储物柜。它不见了、权限不对了、路径跑偏了，history、credentials、日志都会一起乱。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🔑</span>
+      <h2>token / auth</h2>
+      <p>像总控室门票。没有它、漂移了、SecretRef 解不出来，Control UI 和本地网关都会开始闹脾气。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🛠</span>
+      <h2>服务配置</h2>
+      <p>像门卫排班表。launchd / systemd / schtasks 配错了，服务可能看着装了，实际上根本没好好值班。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🏖</span>
+      <h2>sandbox 镜像</h2>
+      <p>像围栏和备用工房。开了 sandbox 却没镜像，就像你说要把活放进隔离间，结果隔离间压根没搭好。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第六站</p>
+    <h2>🚨 它为什么还会提醒安全问题和开放 DM</h2>
+    <p>因为 doctor 不是只看“能不能跑”，它也看“是不是跑得太危险”。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">🚪 open DM policy</div>
+      <p>像你把门口大门长期开着。doctor 会提醒你：能跑不等于这样安全。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🌐 non-loopback / origins</div>
+      <p>像总控室不该随便朝全世界敞开。Control UI 的 allowed origins、tailscale、password/token 这些都会被检查。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🧠 Browser migration</div>
+      <p>旧 Chrome extension 路子已经退场了，doctor 会提醒你换到现在的 Chrome MCP attach 思路。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 这节一句话</div>
+      <p>Doctor 不是只修“坏了”，也修“虽然能跑但明显太冒险”。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">最后总结</p>
+    <h2>🎈 把 Doctor 这页压成一句话</h2>
+    <p><code>openclaw doctor</code> 就像总维修师：它会检查、搬家、修理、重启、提醒风险，帮你把“这套系统怎么今天哪都不太对”拉回到可用状态。</p>
+  </div>
+  <div class="ad-placeholder">
+    <p>如果你下一页只想继续看一页，我建议看 <code>/web/dashboard</code>。因为很多人跑完 doctor 之后，下一步最常做的就是打开总控室，看现在到底连上没有、哪里恢复了、哪里还在红灯。</p>
+  </div>
+</section>

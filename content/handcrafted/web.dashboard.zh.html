@@ -1,0 +1,156 @@
+<section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>🖥 Dashboard 就是 OpenClaw 的“总控室”</h2>
+      <p>这页讲的不是普通网页首页，而是 OpenClaw 的控制台。你可以把它想成整个系统的总控室：聊天、配置、设备批准、exec approvals，这些后台动作很多都在这里看得见、点得到。</p>
+      <p>也正因为它是总控室，所以官方一直在强调一件事：别把它当公开展示页。它不是给路人看的，它是管理员面板。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合已经把 Gateway 跑起来，想进入控制台的人</span>
+      <span>这页最重要的是分清：这是 admin surface，不该直接裸露在公网</span>
+      <a href="https://docs.openclaw.ai/web/dashboard" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一站</p>
+    <h2>🏠 先想画面：这不是聊天窗，这是总控室门口</h2>
+    <p>官方开头的“Control UI served at /”一句，其实已经把定位说死了。这里不是让人闲聊的普通网页，而是系统管理面板。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">💬 能聊天</div>
+      <p>是的，它里面也能聊，但那只是总控室里的一块屏幕，不是它全部身份。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">⚙️ 能改配置</div>
+      <p>很多配置、批准、工具状态都能从这里看和调。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🔐 权限非常高</div>
+      <p>因为它本来就能碰敏感东西，所以官方才会一再提醒不要把它公开裸奔。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">⭐ 一句话先记住</div>
+      <p>Dashboard 不是站点首页，它是管理员总控室。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二站</p>
+    <h2>🚪 最快进门的方法，其实就两条：本地开门，或者用 <code>openclaw dashboard</code> 带路</h2>
+    <p>官方的 fast path 很实用，因为第一次最常卡住的就是“门在哪、票在哪、要不要带 token”。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>http://127.0.0.1:18789/</code></div>
+      <p>像默认总控室门牌号。Gateway 跑起来以后，本地最常见就是这个门口。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw dashboard</code></div>
+      <p>像让系统当引导员，帮你把门牌号和该怎么进去都准备好，顺手还能帮你开浏览器。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">onboarding 自动打开</div>
+      <p>像安装结束后，带你第一次走进总控室，不用你自己满楼找门。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 一句话</div>
+      <p>第一次进 Dashboard，最稳的办法不是手敲复杂 URL，而是直接让 <code>openclaw dashboard</code> 带路。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第三站</p>
+    <h2>🎟 token 这件事，翻成人话就是“进总控室要门票，而且别把门票乱贴”</h2>
+    <p>这页花了不少篇幅讲 token，不是小题大做。因为总控室不是谁路过都该能进。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">🔑 token source</div>
+      <p>像总控室门票来源，通常来自 <code>gateway.auth.token</code> 或 <code>OPENCLAW_GATEWAY_TOKEN</code>。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🧼 为什么会 strip 掉 URL 里的 token</div>
+      <p>像引导员暂时拿着门票把你送进门，进门后立刻把票从走廊上擦掉，别让别人顺手捡走。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">📦 sessionStorage</div>
+      <p>像把这张票暂时放在你当前这个浏览器标签页的小抽屉里，而不是贴到整台机器都能轻易翻到的地方。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🔐 SecretRef-managed token</div>
+      <p>如果门票本来就锁在外部保险柜里，<code>openclaw dashboard</code> 会故意只给你一个不带票的干净地址，避免它把门票抖到终端、剪贴板和浏览器启动参数里。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第四站</p>
+    <h2>🚨 “unauthorized / 1008” 不是玄学，就是“门票不对或者路没通”</h2>
+    <p>官方这段其实写得很实在。别一看到 1008 就慌，大多数情况就几类。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw status</code></div>
+      <p>像先站在门外看总控室大楼有没有亮灯。Gateway 要是根本没起来，别先怀疑 token。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>ssh -N -L 18789:127.0.0.1:18789 user@host</code></div>
+      <p>像给远处的总控室拉一条临时专线过来，让你在本地门口也能敲到它。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw config get gateway.auth.token</code></div>
+      <p>像回头去查管理员手册里现在这张门票到底写了什么。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw doctor --generate-gateway-token</code></div>
+      <p>像发现大楼压根没给你准备门票，那就现场补发一张。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第五站</p>
+    <h2>🌐 这页一直在说“别公开暴露”，因为这真的不是给路人逛的页面</h2>
+    <p>安全提醒不是客气话。Dashboard 能碰很多高权限动作，所以公开暴露的风险很真。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">🏠 localhost 最稳</div>
+      <p>像总控室只在你家里开门，默认安全感最高。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🧵 SSH tunnel / Tailscale</div>
+      <p>像给自己和总控室之间拉私人走廊，而不是把大门直接开到大街上。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🚫 不要直接裸露公网</div>
+      <p>因为这里不只是看面板，还能批准设备、看聊天、处理 exec approvals。让路人摸到，代价太高。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 这节一句话</div>
+      <p>Dashboard 该像管理员后台，不该像公开宣传页。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">最后总结</p>
+    <h2>🎈 把 Dashboard 这页压成一句话</h2>
+    <p>Dashboard 就是 OpenClaw 的总控室：本地开门最稳，token 是门票，SSH / Tailscale 是私人走廊，而“不要公开裸露”是这页最重要的安全底线。</p>
+  </div>
+  <div class="ad-placeholder">
+    <p>如果你下一页只想继续看一页，我建议看 <code>/web</code> 或 <code>/gateway/doctor</code>。前者会告诉你总控室这栋楼怎么对外开门，后者会告诉你楼里哪里坏了该怎么修。</p>
+  </div>
+</section>

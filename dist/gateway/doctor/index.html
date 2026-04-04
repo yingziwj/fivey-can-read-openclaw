@@ -3970,1583 +3970,197 @@
   
       </div>
 
-      
-    <section class="section-shell">
-      <div class="overview-card">
-        <div>
-          <p class="section-kicker">先听这页的人话版</p>
-          <h2>Doctor</h2>
-          <p>这一页像一本关于“Doctor”的小绘本，它先告诉我们这位机器人朋友会做什么，再一步一步解释什么时候该这样做。 你可以先把它想成：Doctor。</p>
-          <p>如果把这页当成“给普通人看的版本”，你最应该带走的是：它到底在教你一件什么事、什么时候要这样做、以及哪里最容易踩坑。</p>
-        </div>
-        <div class="overview-meta">
-          <span>原始路径：/gateway/doctor</span>
-          <span>章节数量：28</span>
-          <a href="https://docs.openclaw.ai/gateway/doctor" target="_blank" rel="noreferrer">查看原文</a>
-        </div>
-      </div>
-    </section>
-    
-        <section class="section-shell" id="section-1">
-          <div class="section-heading">
-            <p class="section-kicker">第 1 站</p>
-            <h2>Start Here</h2>
-            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>你理解的是能力边界，不只是功能名字。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Doctor openclaw doctor is the repair + migration 工具小帮手 for OpenClaw. It fixes stale 设置说明书/state, checks health, and pro…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Doctor”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p># Doctor</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“openclaw doctor is the repair + migration 工具小帮手 for OpenClaw. It fixes stale 设置说明书/state, checks health, and provides a…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p><code>openclaw doctor</code> is the repair + migration tool for OpenClaw. It fixes stale config/state, checks health, and provides actionable repair steps.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-2">
-          <div class="section-heading">
-            <p class="section-kicker">第 2 站</p>
-            <h2>Quick start</h2>
-            <p>这一节主要在解释“Quick start”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“Quick start”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一句直接对 OpenClaw 说的话，就像对小助手下达任务。</p>
-        <ul class="code-steps">
-          <li>这一句是在直接叫 OpenClaw 做事：“openclaw doctor”。你可以把它想成对机器人说的完整命令。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">openclaw doctor</code></pre>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-3">
-          <div class="section-heading">
-            <p class="section-kicker">第 3 站</p>
-            <h2>Headless / 自动小闹钟</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Accept defaults without prompting (including restart/service/sandbox repair steps when applicable). Apply recommended r…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一句直接对 OpenClaw 说的话，就像对小助手下达任务。</p>
-        <ul class="code-steps">
-          <li>这一句是在直接叫 OpenClaw 做事：“openclaw doctor --yes”。你可以把它想成对机器人说的完整命令。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">openclaw doctor --yes</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Accept defaults without prompting (including restart/service/sandbox repair steps when applicable).”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Accept defaults without prompting (including restart/service/sandbox repair steps when applicable).</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一句直接对 OpenClaw 说的话，就像对小助手下达任务。</p>
-        <ul class="code-steps">
-          <li>这一句是在直接叫 OpenClaw 做事：“openclaw doctor --repair”。你可以把它想成对机器人说的完整命令。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">openclaw doctor --repair</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Apply recommended repairs without prompting (repairs + restarts where safe).”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Apply recommended repairs without prompting (repairs + restarts where safe).</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一句直接对 OpenClaw 说的话，就像对小助手下达任务。</p>
-        <ul class="code-steps">
-          <li>这一句是在直接叫 OpenClaw 做事：“openclaw doctor --repair --force”。你可以把它想成对机器人说的完整命令。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">openclaw doctor --repair --force</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Apply aggressive repairs too (overwrites custom supervisor 设置说明书s).”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Apply aggressive repairs too (overwrites custom supervisor configs).</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一句直接对 OpenClaw 说的话，就像对小助手下达任务。</p>
-        <ul class="code-steps">
-          <li>这一句是在直接叫 OpenClaw 做事：“openclaw doctor --non-interactive”。你可以把它想成对机器人说的完整命令。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">openclaw doctor --non-interactive</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Run without prompts and only apply safe migrations (设置说明书 normalization + on-disk state moves). Skips restart/service/s…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Run without prompts and only apply safe migrations (config normalization + on-disk state moves). Skips restart/service/sandbox actions that require human confirmation. Legacy state migrations run automatically when detected.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一句直接对 OpenClaw 说的话，就像对小助手下达任务。</p>
-        <ul class="code-steps">
-          <li>这一句是在直接叫 OpenClaw 做事：“openclaw doctor --deep”。你可以把它想成对机器人说的完整命令。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">openclaw doctor --deep</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Scan system services for extra 门口的小门卫 installs (launchd/systemd/schtasks).”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Scan system services for extra gateway installs (launchd/systemd/schtasks).</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“If you want to review changes before writing, open the 设置说明书 file first:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>If you want to review changes before writing, open the config file first:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一串终端魔法口令，像按步骤按下几个按钮，让电脑开始干活。</p>
-        <ul class="code-steps">
-          <li>这一行“cat ~/.openclaw/openclaw.json”是当前步骤要交给电脑的一小块提示。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">cat ~/.openclaw/openclaw.json</code></pre>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-4">
-          <div class="section-heading">
-            <p class="section-kicker">第 4 站</p>
-            <h2>What it does (summary)</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“What it does (summary)”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Optional pre-flight update for git instal…、UI protocol freshness check (rebuilds Con…、Health check + restart prompt.、Skills status summary (eligible/missing/b…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Optional pre-flight update for git installs (interactive only).</li><li>UI protocol freshness check (rebuilds Control UI when the protocol schema is newer).</li><li>Health check + restart prompt.</li><li>Skills status summary (eligible/missing/blocked).</li><li>Config normalization for legacy values.</li><li>Browser migration checks for legacy Chrome extension configs and Chrome MCP readiness.</li><li>OpenCode provider override warnings (<code>models.providers.opencode</code> / <code>models.providers.opencode-go</code>).</li><li>Legacy on-disk state migration (sessions/agent dir/WhatsApp auth).</li><li>Legacy cron store migration (<code>jobId</code>, <code>schedule.cron</code>, top-level delivery/payload fields, payload <code>provider</code>, simple <code>notify: true</code> webhook fallback jobs).</li><li>State integrity and permissions checks (sessions, transcripts, state dir).</li><li>Config file permission checks (chmod 600) when running locally.</li><li>Model auth health: checks OAuth expiry, can refresh expiring tokens, and reports auth-profile cooldown/disabled states.</li><li>Extra workspace dir detection (<code>~/openclaw</code>).</li><li>Sandbox image repair when sandboxing is enabled.</li><li>Legacy service migration and extra gateway detection.</li><li>Gateway runtime checks (service installed but not running; cached launchd label).</li><li>Channel status warnings (probed from the running gateway).</li><li>Supervisor config audit (launchd/systemd/schtasks) with optional repair.</li><li>Gateway runtime best-practice checks (Node vs Bun, version-manager paths).</li><li>Gateway port collision diagnostics (default <code>18789</code>).</li><li>Security warnings for open DM policies.</li><li>Gateway auth checks for local token mode (offers token generation when no token source exists; does not overwrite token SecretRef configs).</li><li>systemd linger check on Linux.</li><li>Source install checks (pnpm workspace mismatch, missing UI assets, missing tsx binary).</li><li>Writes updated config + wizard metadata.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-5">
-          <div class="section-heading">
-            <p class="section-kicker">第 5 站</p>
-            <h2>0) Optional update (git installs)</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“If this is a git checkout and doctor is running interactively, it offers to update (fetch/rebase/build) before running…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“If this is a git checkout and doctor is running interactively, it offers to update (fetch/rebase/build) before running…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>If this is a git checkout and doctor is running interactively, it offers to update (fetch/rebase/build) before running doctor.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-6">
-          <div class="section-heading">
-            <p class="section-kicker">第 6 站</p>
-            <h2>1) 设置说明书 normalization</h2>
-            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>你理解的是能力边界，不只是功能名字。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“If the 设置说明书 contains legacy value shapes (for example 小纸条消息s.ackReaction without a 消息通道-specific override), doctor nor…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“If the 设置说明书 contains legacy value shapes (for example 小纸条消息s.ackReaction without a 消息通道-specific override), doctor nor…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>If the config contains legacy value shapes (for example <code>messages.ackReaction</code> without a channel-specific override), doctor normalizes them into the current schema.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-7">
-          <div class="section-heading">
-            <p class="section-kicker">第 7 站</p>
-            <h2>2) Legacy 设置说明书 key migrations</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“When the 设置说明书 contains deprecated keys, other 魔法口令s refuse to run and ask you to run openclaw doctor. Doctor will: The…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“When the 设置说明书 contains deprecated keys, other 魔法口令s refuse to run and ask you to run openclaw doctor.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>When the config contains deprecated keys, other commands refuse to run and ask you to run <code>openclaw doctor</code>.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Doctor will:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Doctor will:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“2) Legacy config key migrations”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Explain which legacy keys were found.、Show the migration it applied.、Rewrite ~/.openclaw/openclaw.json with th…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Explain which legacy keys were found.</li><li>Show the migration it applied.</li><li>Rewrite <code>~/.openclaw/openclaw.json</code> with the updated schema.</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“The 门口的小门卫 also auto-runs doctor migrations on startup when it detects a legacy 设置说明书 format, so stale 设置说明书s are repai…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>The Gateway also auto-runs doctor migrations on startup when it detects a legacy config format, so stale configs are repaired without manual intervention.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Current migrations:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Current migrations:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“→ 机器人朋友s.defaults.聪明脑袋模型s + 机器人朋友s.defaults.聪明脑袋模型.primary/fallbacks + 机器人朋友s.defaults.image聪明脑袋模型.primary/fallbacks”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>→ <code>agents.defaults.models</code> + <code>agents.defaults.model.primary/fallbacks</code> + <code>agents.defaults.imageModel.primary/fallbacks</code></p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“2) Legacy config key migrations”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：routing.allowFrom → 消息通道s.whatsapp.allowF…、routing.大家一起的房间Chat.requireMention → 消息通道…、routing.大家一起的房间Chat.historyLimit → 小纸条消息s…、routing.大家一起的房间Chat.mentionPatterns → 小纸条…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>routing.allowFrom</code> → <code>channels.whatsapp.allowFrom</code></li><li><code>routing.groupChat.requireMention</code> → <code>channels.whatsapp/telegram/imessage.groups.&quot;*&quot;.requireMention</code></li><li><code>routing.groupChat.historyLimit</code> → <code>messages.groupChat.historyLimit</code></li><li><code>routing.groupChat.mentionPatterns</code> → <code>messages.groupChat.mentionPatterns</code></li><li><code>routing.queue</code> → <code>messages.queue</code></li><li><code>routing.bindings</code> → top-level <code>bindings</code></li><li><code>routing.agents</code>/<code>routing.defaultAgentId</code> → <code>agents.list</code> + <code>agents.list[].default</code></li><li><code>routing.agentToAgent</code> → <code>tools.agentToAgent</code></li><li><code>routing.transcribeAudio</code> → <code>tools.media.audio.models</code></li><li><code>bindings[].match.accountID</code> → <code>bindings[].match.accountId</code></li><li>For channels with named <code>accounts</code> but missing <code>accounts.default</code>, move account-scoped top-level single-account channel values into <code>channels.&lt;channel&gt;.accounts.default</code> when present</li><li><code>identity</code> → <code>agents.list[].identity</code></li><li><code>agent.*</code> → <code>agents.defaults</code> + <code>tools.*</code> (tools/elevated/exec/sandbox/subagents)</li><li><code>agent.model</code>/<code>allowedModels</code>/<code>modelAliases</code>/<code>modelFallbacks</code>/<code>imageModelFallbacks</code></li><li><code>browser.ssrfPolicy.allowPrivateNetwork</code> → <code>browser.ssrfPolicy.dangerouslyAllowPrivateNetwork</code></li><li><code>browser.profiles.*.driver: &quot;extension&quot;</code> → <code>&quot;existing-session&quot;</code></li><li>remove <code>browser.relayBindHost</code> (legacy extension relay setting)</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Doctor warnings also include account-default guidance for multi-account 消息通道s:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Doctor warnings also include account-default guidance for multi-account channels:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“2) Legacy config key migrations”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：If two or more 消息通道s.&lt;消息通道&gt;.accounts entr…、If 消息通道s.&lt;消息通道&gt;.defaultAccount is set to…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>If two or more <code>channels.&lt;channel&gt;.accounts</code> entries are configured without <code>channels.&lt;channel&gt;.defaultAccount</code> or <code>accounts.default</code>, doctor warns that fallback routing can pick an unexpected account.</li><li>If <code>channels.&lt;channel&gt;.defaultAccount</code> is set to an unknown account ID, doctor warns and lists configured account IDs.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-8">
-          <div class="section-heading">
-            <p class="section-kicker">第 8 站</p>
-            <h2>2b) OpenCode provider overrides</h2>
-            <p>这一节主要在解释“2b) OpenCode provider overrides”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“2b) OpenCode provider overrides”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“If you’ve added 聪明脑袋模型s.providers.opencode, opencode-zen, or opencode-go manually, it overrides the built-in OpenCode c…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“If you’ve added 聪明脑袋模型s.providers.opencode, opencode-zen, or opencode-go manually, it overrides the built-in OpenCode c…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>If you’ve added <code>models.providers.opencode</code>, <code>opencode-zen</code>, or <code>opencode-go</code> manually, it overrides the built-in OpenCode catalog from <code>@mariozechner/pi-ai</code>. That can force models onto the wrong API or zero out costs. Doctor warns so you can remove the override and restore per-model API routing + costs.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-9">
-          <div class="section-heading">
-            <p class="section-kicker">第 9 站</p>
-            <h2>2c) Browser migration and Chrome MCP readiness</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“If your browser 设置说明书 still points at the removed Chrome extension path, doctor normalizes it to the current host-local…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“If your browser 设置说明书 still points at the removed Chrome extension path, doctor normalizes it to the current host-local…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>If your browser config still points at the removed Chrome extension path, doctor normalizes it to the current host-local Chrome MCP attach model:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“2c) Browser migration and Chrome MCP readiness”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：browser.profiles.*.driver: &quot;extension&quot; be…、browser.relayBindHost is removed。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>browser.profiles.*.driver: &quot;extension&quot;</code> becomes <code>&quot;existing-session&quot;</code></li><li><code>browser.relayBindHost</code> is removed</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Doctor also audits the host-local Chrome MCP path when you use defaultProfile: &quot;user&quot; or a 设置说明书ured existing-session p…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Doctor also audits the host-local Chrome MCP path when you use <code>defaultProfile: &quot;user&quot;</code> or a configured <code>existing-session</code> profile:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“auto-connect profiles”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>auto-connect profiles</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“example chrome://inspect/#remote-debugging, brave://inspect/#remote-debugging, or edge://inspect/#remote-debugging)”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>example <code>chrome://inspect/#remote-debugging</code>, <code>brave://inspect/#remote-debugging</code>, or <code>edge://inspect/#remote-debugging</code>)</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“2c) Browser migration and Chrome MCP readiness”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：checks whether Google Chrome is installed…、checks the detected Chrome version and wa…、reminds you to enable remote debugging in…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>checks whether Google Chrome is installed on the same host for default</li><li>checks the detected Chrome version and warns when it is below Chrome 144</li><li>reminds you to enable remote debugging in the browser inspect page (for</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Doctor cannot enable the Chrome-side setting for you. Host-local Chrome MCP still requires:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Doctor cannot enable the Chrome-side setting for you. Host-local Chrome MCP still requires:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“2c) Browser migration and Chrome MCP readiness”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：a Chromium-based browser 144+ on the 门口的小…、the browser running locally、remote debugging enabled in that browser、approving the first attach consent prompt…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>a Chromium-based browser 144+ on the gateway/node host</li><li>the browser running locally</li><li>remote debugging enabled in that browser</li><li>approving the first attach consent prompt in the browser</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“This check does **not** apply to Docker, sandbox, remote-browser, or other headless flows. Those continue to use raw CD…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>This check does **not** apply to Docker, sandbox, remote-browser, or other headless flows. Those continue to use raw CDP.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-10">
-          <div class="section-heading">
-            <p class="section-kicker">第 10 站</p>
-            <h2>3) Legacy state migrations (disk layout)</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Doctor can migrate older on-disk layouts into the current structure: These migrations are best-effort and idempotent; d…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Doctor can migrate older on-disk layouts into the current structure:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Doctor can migrate older on-disk layouts into the current structure:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“3) Legacy state migrations (disk layout)”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Sessions store + transcripts:、from ~/.openclaw/sessions/ to ~/.openclaw…、机器人朋友 dir:、from ~/.openclaw/机器人朋友/ to ~/.openclaw/机器…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Sessions store + transcripts:</li><li>from <code>~/.openclaw/sessions/</code> to <code>~/.openclaw/agents/&lt;agentId&gt;/sessions/</code></li><li>Agent dir:</li><li>from <code>~/.openclaw/agent/</code> to <code>~/.openclaw/agents/&lt;agentId&gt;/agent/</code></li><li>WhatsApp auth state (Baileys):</li><li>from legacy <code>~/.openclaw/credentials/*.json</code> (except <code>oauth.json</code>)</li><li>to <code>~/.openclaw/credentials/whatsapp/&lt;accountId&gt;/...</code> (default account id: <code>default</code>)</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“These migrations are best-effort and idempotent; doctor will emit warnings when it leaves any legacy folders behind as…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>These migrations are best-effort and idempotent; doctor will emit warnings when it leaves any legacy folders behind as backups. The Gateway/CLI also auto-migrates the legacy sessions + agent dir on startup so history/auth/models land in the per-agent path without a manual doctor run. WhatsApp auth is intentionally only migrated via <code>openclaw doctor</code>.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-11">
-          <div class="section-heading">
-            <p class="section-kicker">第 11 站</p>
-            <h2>3b) Legacy cron store migrations</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Doctor also checks the cron job store (~/.openclaw/cron/jobs.json by default, or cron.store when overridden) for old jo…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Doctor also checks the cron job store (~/.openclaw/cron/jobs.json by default, or cron.store when overridden) for old jo…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Doctor also checks the cron job store (<code>~/.openclaw/cron/jobs.json</code> by default, or <code>cron.store</code> when overridden) for old job shapes that the scheduler still accepts for compatibility.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Current cron cleanups include:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Current cron cleanups include:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“3b) Legacy cron store migrations”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：jobId → id、schedule.cron → schedule.expr、top-level payload fields (小纸条消息, 聪明脑袋模型,…、top-level delivery fields (deliver, 消息通道,…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>jobId</code> → <code>id</code></li><li><code>schedule.cron</code> → <code>schedule.expr</code></li><li>top-level payload fields (<code>message</code>, <code>model</code>, <code>thinking</code>, ...) → <code>payload</code></li><li>top-level delivery fields (<code>deliver</code>, <code>channel</code>, <code>to</code>, <code>provider</code>, ...) → <code>delivery</code></li><li>payload <code>provider</code> delivery aliases → explicit <code>delivery.channel</code></li><li>simple legacy <code>notify: true</code> webhook fallback jobs → explicit <code>delivery.mode=&quot;webhook&quot;</code> with <code>delivery.to=cron.webhook</code></li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Doctor only auto-migrates notify: true jobs when it can do so without changing behavior. If a job combines legacy notif…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Doctor only auto-migrates <code>notify: true</code> jobs when it can do so without changing behavior. If a job combines legacy notify fallback with an existing non-webhook delivery mode, doctor warns and leaves that job for manual review.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-12">
-          <div class="section-heading">
-            <p class="section-kicker">第 12 站</p>
-            <h2>4) State integrity checks (session persistence, routing, and safety)</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“The state directory is the operational brainstem. If it vanishes, you lose sessions, credentials, logs, and 设置说明书 (unle…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“The state directory is the operational brainstem. If it vanishes, you lose sessions, credentials, logs, and 设置说明书 (unle…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>The state directory is the operational brainstem. If it vanishes, you lose sessions, credentials, logs, and config (unless you have backups elsewhere).</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Doctor checks:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Doctor checks:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“the directory, and reminds you that it cannot recover missing data.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>the directory, and reminds you that it cannot recover missing data.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“(and emits a chown hint when owner/大家一起的房间 mismatch is detected).”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>(and emits a <code>chown</code> hint when owner/group mismatch is detected).</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“(~/Library/Mobile Documents/com~apple~CloudDocs/...) or ~/Library/CloudStorage/... because sync-backed paths can cause…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>(<code>~/Library/Mobile Documents/com~apple~CloudDocs/...</code>) or <code>~/Library/CloudStorage/...</code> because sync-backed paths can cause slower I/O and lock/sync races.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“mount source, because SD or eMMC-backed random I/O can be slower and wear faster under session and credential writes.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>mount source, because SD or eMMC-backed random I/O can be slower and wear faster under session and credential writes.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“required to persist history and avoid ENOENT crashes.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>required to persist history and avoid <code>ENOENT</code> crashes.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“transcript files.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>transcript files.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“line (history is not accumulating).”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>line (history is not accumulating).</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“home directories or when OPENCLAW_STATE_DIR points elsewhere (history can split between installs).”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>home directories or when <code>OPENCLAW_STATE_DIR</code> points elsewhere (history can split between installs).</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“it on the remote host (the state lives there).”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>it on the remote host (the state lives there).</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“大家一起的房间/world readable and offers to tighten to 600.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>group/world readable and offers to tighten to <code>600</code>.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“4) State integrity checks (session persistence, routing, and safety)”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：**State dir missing**: warns about catast…、**State dir permissions**: verifies writa…、**macOS cloud-synced state dir**: warns w…、**Linux SD or eMMC state dir**: warns whe…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>**State dir missing**: warns about catastrophic state loss, prompts to recreate</li><li>**State dir permissions**: verifies writability; offers to repair permissions</li><li>**macOS cloud-synced state dir**: warns when state resolves under iCloud Drive</li><li>**Linux SD or eMMC state dir**: warns when state resolves to an <code>mmcblk*</code></li><li>**Session dirs missing**: <code>sessions/</code> and the session store directory are</li><li>**Transcript mismatch**: warns when recent session entries have missing</li><li>**Main session “1-line JSONL”**: flags when the main transcript has only one</li><li>**Multiple state dirs**: warns when multiple <code>~/.openclaw</code> folders exist across</li><li>**Remote mode reminder**: if <code>gateway.mode=remote</code>, doctor reminds you to run</li><li>**Config file permissions**: warns if <code>~/.openclaw/openclaw.json</code> is</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-13">
-          <div class="section-heading">
-            <p class="section-kicker">第 13 站</p>
-            <h2>5) 聪明脑袋模型 auth health (OAuth expiry)</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Doctor inspects OAuth profiles in the auth store, warns when tokens are expiring/expired, and can refresh them when saf…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Doctor inspects OAuth profiles in the auth store, warns when tokens are expiring/expired, and can refresh them when saf…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Doctor inspects OAuth profiles in the auth store, warns when tokens are expiring/expired, and can refresh them when safe. If the Anthropic Claude Code profile is stale, it suggests running <code>claude setup-token</code> (or pasting a setup-token). Refresh prompts only appear when running interactively (TTY); <code>--non-interactive</code> skips refresh attempts.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Doctor also reports auth profiles that are temporarily unusable due to:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Doctor also reports auth profiles that are temporarily unusable due to:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“5) Model auth health (OAuth expiry)”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：short cooldowns (rate limits/timeouts/aut…、longer disables (billing/credit failures)。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>short cooldowns (rate limits/timeouts/auth failures)</li><li>longer disables (billing/credit failures)</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-14">
-          <div class="section-heading">
-            <p class="section-kicker">第 14 站</p>
-            <h2>6) Hooks 聪明脑袋模型 validation</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“If hooks.gmail.聪明脑袋模型 is set, doctor validates the 聪明脑袋模型 reference against the catalog and allowlist and warns when it…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“If hooks.gmail.聪明脑袋模型 is set, doctor validates the 聪明脑袋模型 reference against the catalog and allowlist and warns when it…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>If <code>hooks.gmail.model</code> is set, doctor validates the model reference against the catalog and allowlist and warns when it won’t resolve or is disallowed.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-15">
-          <div class="section-heading">
-            <p class="section-kicker">第 15 站</p>
-            <h2>7) Sandbox image repair</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“When sandboxing is enabled, doctor checks Docker images and offers to build or switch to legacy names if the current im…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“When sandboxing is enabled, doctor checks Docker images and offers to build or switch to legacy names if the current im…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>When sandboxing is enabled, doctor checks Docker images and offers to build or switch to legacy names if the current image is missing.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-16">
-          <div class="section-heading">
-            <p class="section-kicker">第 16 站</p>
-            <h2>8) 门口的小门卫 service migrations and cleanup hints</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Doctor detects legacy 门口的小门卫 services (launchd/systemd/schtasks) and offers to remove them and install the OpenClaw ser…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Doctor detects legacy 门口的小门卫 services (launchd/systemd/schtasks) and offers to remove them and install the OpenClaw ser…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Doctor detects legacy gateway services (launchd/systemd/schtasks) and offers to remove them and install the OpenClaw service using the current gateway port. It can also scan for extra gateway-like services and print cleanup hints. Profile-named OpenClaw gateway services are considered first-class and are not flagged as &quot;extra.&quot;</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-17">
-          <div class="section-heading">
-            <p class="section-kicker">第 17 站</p>
-            <h2>9) 安全守门员 warnings</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Doctor emits warnings when a provider is open to DMs without an allowlist, or when a policy is 设置说明书ured in a dangerous…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Doctor emits warnings when a provider is open to DMs without an allowlist, or when a policy is 设置说明书ured in a dangerous…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Doctor emits warnings when a provider is open to DMs without an allowlist, or when a policy is configured in a dangerous way.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-18">
-          <div class="section-heading">
-            <p class="section-kicker">第 18 站</p>
-            <h2>10) systemd linger (Linux)</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“If running as a systemd user service, doctor ensures lingering is enabled so the 门口的小门卫 stays alive after logout.”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“If running as a systemd user service, doctor ensures lingering is enabled so the 门口的小门卫 stays alive after logout.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>If running as a systemd user service, doctor ensures lingering is enabled so the gateway stays alive after logout.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-19">
-          <div class="section-heading">
-            <p class="section-kicker">第 19 站</p>
-            <h2>11) Skills status</h2>
-            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>你理解的是能力边界，不只是功能名字。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Doctor prints a quick summary of eligible/missing/blocked skills for the current workspace.”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Doctor prints a quick summary of eligible/missing/blocked skills for the current workspace.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Doctor prints a quick summary of eligible/missing/blocked skills for the current workspace.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-20">
-          <div class="section-heading">
-            <p class="section-kicker">第 20 站</p>
-            <h2>12) 门口的小门卫 auth checks (local token)</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Doctor checks local 门口的小门卫 token auth readiness.”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Doctor checks local 门口的小门卫 token auth readiness.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Doctor checks local gateway token auth readiness.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“12) Gateway auth checks (local token)”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：If token mode needs a token and no token…、If 门口的小门卫.auth.token is SecretRef-managed…、openclaw doctor --generate-门口的小门卫-token f…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>If token mode needs a token and no token source exists, doctor offers to generate one.</li><li>If <code>gateway.auth.token</code> is SecretRef-managed but unavailable, doctor warns and does not overwrite it with plaintext.</li><li><code>openclaw doctor --generate-gateway-token</code> forces generation only when no token SecretRef is configured.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-21">
-          <div class="section-heading">
-            <p class="section-kicker">第 21 站</p>
-            <h2>12b) Read-only SecretRef-aware repairs</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Some repair flows need to inspect 设置说明书ured credentials without weakening runtime fail-fast behavior.”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Some repair flows need to inspect 设置说明书ured credentials without weakening runtime fail-fast behavior.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Some repair flows need to inspect configured credentials without weakening runtime fail-fast behavior.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“12b) Read-only SecretRef-aware repairs”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：openclaw doctor --fix now uses the same r…、Example: Telegram allowFrom / 大家一起的房间Allo…、If the Telegram bot token is 设置说明书ured vi…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>openclaw doctor --fix</code> now uses the same read-only SecretRef summary model as status-family commands for targeted config repairs.</li><li>Example: Telegram <code>allowFrom</code> / <code>groupAllowFrom</code> <code>@username</code> repair tries to use configured bot credentials when available.</li><li>If the Telegram bot token is configured via SecretRef but unavailable in the current command path, doctor reports that the credential is configured-but-unavailable and skips auto-resolution instead of crashing or misreporting the token as missing.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-22">
-          <div class="section-heading">
-            <p class="section-kicker">第 22 站</p>
-            <h2>13) 门口的小门卫 health check + restart</h2>
-            <p>这一节主要在解释“13) 门口的小门卫 health check + restart”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“13) 门口的小门卫 health check + restart”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Doctor runs a health check and offers to restart the 门口的小门卫 when it looks unhealthy.”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Doctor runs a health check and offers to restart the 门口的小门卫 when it looks unhealthy.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Doctor runs a health check and offers to restart the gateway when it looks unhealthy.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-23">
-          <div class="section-heading">
-            <p class="section-kicker">第 23 站</p>
-            <h2>14) 消息通道 status warnings</h2>
-            <p>这一节主要在解释“14) 消息通道 status warnings”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“14) 消息通道 status warnings”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“If the 门口的小门卫 is healthy, doctor runs a 消息通道 status probe and reports warnings with suggested fixes.”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“If the 门口的小门卫 is healthy, doctor runs a 消息通道 status probe and reports warnings with suggested fixes.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>If the gateway is healthy, doctor runs a channel status probe and reports warnings with suggested fixes.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-24">
-          <div class="section-heading">
-            <p class="section-kicker">第 24 站</p>
-            <h2>15) Supervisor 设置说明书 audit + repair</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Doctor checks the installed supervisor 设置说明书 (launchd/systemd/schtasks) for missing or outdated defaults (e.g., systemd…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Doctor checks the installed supervisor 设置说明书 (launchd/systemd/schtasks) for missing or outdated defaults (e.g., systemd…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Doctor checks the installed supervisor config (launchd/systemd/schtasks) for missing or outdated defaults (e.g., systemd network-online dependencies and restart delay). When it finds a mismatch, it recommends an update and can rewrite the service file/task to the current defaults.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Notes:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Notes:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“15) Supervisor config audit + repair”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：openclaw doctor prompts before rewriting…、openclaw doctor --yes accepts the default…、openclaw doctor --repair applies recommen…、openclaw doctor --repair --force overwrit…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>openclaw doctor</code> prompts before rewriting supervisor config.</li><li><code>openclaw doctor --yes</code> accepts the default repair prompts.</li><li><code>openclaw doctor --repair</code> applies recommended fixes without prompts.</li><li><code>openclaw doctor --repair --force</code> overwrites custom supervisor configs.</li><li>If token auth requires a token and <code>gateway.auth.token</code> is SecretRef-managed, doctor service install/repair validates the SecretRef but does not persist resolved plaintext token values into supervisor service environment metadata.</li><li>If token auth requires a token and the configured token SecretRef is unresolved, doctor blocks the install/repair path with actionable guidance.</li><li>If both <code>gateway.auth.token</code> and <code>gateway.auth.password</code> are configured and <code>gateway.auth.mode</code> is unset, doctor blocks install/repair until mode is set explicitly.</li><li>For Linux user-systemd units, doctor token drift checks now include both <code>Environment=</code> and <code>EnvironmentFile=</code> sources when comparing service auth metadata.</li><li>You can always force a full rewrite via <code>openclaw gateway install --force</code>.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-25">
-          <div class="section-heading">
-            <p class="section-kicker">第 25 站</p>
-            <h2>16) 门口的小门卫 runtime + port diagnostics</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Doctor inspects the service runtime (PID, last exit status) and warns when the service is installed but not actually ru…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Doctor inspects the service runtime (PID, last exit status) and warns when the service is installed but not actually ru…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Doctor inspects the service runtime (PID, last exit status) and warns when the service is installed but not actually running. It also checks for port collisions on the gateway port (default <code>18789</code>) and reports likely causes (gateway already running, SSH tunnel).</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-26">
-          <div class="section-heading">
-            <p class="section-kicker">第 26 站</p>
-            <h2>17) 门口的小门卫 runtime best practices</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Doctor warns when the 门口的小门卫 service runs on Bun or a version-managed Node path (nvm, fnm, volta, asdf, etc.). WhatsApp…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Doctor warns when the 门口的小门卫 service runs on Bun or a version-managed Node path (nvm, fnm, volta, asdf, etc.). WhatsApp…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Doctor warns when the gateway service runs on Bun or a version-managed Node path (<code>nvm</code>, <code>fnm</code>, <code>volta</code>, <code>asdf</code>, etc.). WhatsApp + Telegram channels require Node, and version-manager paths can break after upgrades because the service does not load your shell init. Doctor offers to migrate to a system Node install when available (Homebrew/apt/choco).</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-27">
-          <div class="section-heading">
-            <p class="section-kicker">第 27 站</p>
-            <h2>18) 设置说明书 write + wizard metadata</h2>
-            <p>这一节主要在解释“18) 设置说明书 write + wizard metadata”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“18) 设置说明书 write + wizard metadata”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Doctor persists any 设置说明书 changes and stamps wizard metadata to record the doctor run.”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Doctor persists any 设置说明书 changes and stamps wizard metadata to record the doctor run.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Doctor persists any config changes and stamps wizard metadata to record the doctor run.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-28">
-          <div class="section-heading">
-            <p class="section-kicker">第 28 站</p>
-            <h2>19) Workspace tips (backup + memory system)</h2>
-            <p>这一节主要在解释“19) Workspace tips (backup + memory system)”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“19) Workspace tips (backup + memory system)”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Doctor suggests a workspace memory system when missing and prints a backup tip if the workspace is not already under gi…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Doctor suggests a workspace memory system when missing and prints a backup tip if the workspace is not already under gi…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Doctor suggests a workspace memory system when missing and prints a backup tip if the workspace is not already under git.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“See /concepts/机器人朋友-workspace for a full guide to workspace structure and git backup (recommended private GitHub or Git…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>See <a href="/concepts/agent-workspace" target="_blank" rel="noreferrer">/concepts/agent-workspace</a> for a full guide to workspace structure and git backup (recommended private GitHub or GitLab).</p>
-      </div>
-    
-          </div>
-        </section>
-      
-    <section class="section-shell">
-      <div class="ad-placeholder">
-        <p>这里预留给未来的 Google AdSense 模块。</p>
-        <code>&lt;!-- ADSENSE_SNIPPET --&gt;</code>
-      </div>
-    </section>
-  
+      <section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>🩺 Doctor 就像 OpenClaw 的“总维修师 + 搬家师傅 + 体检医生”</h2>
+      <p>这页看起来特别长，不是因为它故意吓人，而是因为 <code>openclaw doctor</code> 干的活真的很多。它不只是“看一眼健康”，还会顺手修老配置、搬旧目录、提醒权限问题、检查服务有没有跑歪。</p>
+      <p>所以你别把它想成一把小螺丝刀。它更像一位总维修师，走进机房先巡一圈，再决定哪里该修、哪里该搬、哪里该重启。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合遇到“怎么今天哪里都不太对”的时候先跑一遍</span>
+      <span>这页最重要的是分清：<code>doctor</code> 不只是检查，它很多时候真的会修</span>
+      <a href="https://docs.openclaw.ai/gateway/doctor" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一站</p>
+    <h2>🏥 先别被大段文字吓住，先想它到底在做哪三类事</h2>
+    <p>整页虽然很长，但主线其实很清楚：检查、迁移、修理。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">🩺</span>
+      <h2>检查</h2>
+      <p>像体检：看配置、看权限、看服务、看 token、看技能、看通道有没有异常。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🚚</span>
+      <h2>迁移</h2>
+      <p>像搬家：旧配置键名、旧目录结构、旧 cron 存储、旧浏览器接法，它都可能帮你搬到新位置。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🔧</span>
+      <h2>修理</h2>
+      <p>像现场维修：该 chmod、该重建 UI、该修服务配置、该补 sandbox 镜像时，它会告诉你甚至直接动手。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">⭐</span>
+      <h2>一句话先记住</h2>
+      <p><code>doctor</code> 不是只看病，它很多时候还顺手开药、做手术、搬家。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二站</p>
+    <h2>🚀 Quick start 那几条命令，其实是在选“修到哪一步、修得多猛”</h2>
+    <p>官方一开始列的几个模式非常重要。它们不是同一把锤子，而是几种不同力度的维修方式。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw doctor</code></div>
+      <p>像请医生先来全面体检，再边看边问你要不要修。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw doctor --yes</code></div>
+      <p>像你提前说：“常规修法你直接照默认来，别每一步都停下来问我。”</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw doctor --repair</code></div>
+      <p>像告诉维修师：“推荐修法你直接做。”它不只是检查，而是会开始落手。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw doctor --repair --force</code></div>
+      <p>像你把“保守修理”切成“重手修理”。连自定义 supervisor 配置这种地方也可能被重写。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第三站</p>
+    <h2>🤫 <code>--non-interactive</code> 和 <code>--deep</code>，一个像安静巡检，一个像翻机房角落</h2>
+    <p>这两个开关很容易被忽略，但实际很有用。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label"><code>--non-interactive</code></div>
+      <p>像在自动化环境里让维修师别敲你门，只做那些安全、不会引发大动作的修整。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>--deep</code></div>
+      <p>像不只看眼前这台，还往系统服务角落里钻，去找额外的 gateway 安装、旧服务残留这些藏得深的问题。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>cat ~/.openclaw/openclaw.json</code></div>
+      <p>官方提这句，是像提醒你：要是你想先看病历再决定要不要动刀，就先把配置文件翻出来看看。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 一句话</div>
+      <p><code>--non-interactive</code> 偏静默巡检，<code>--deep</code> 偏深翻暗角。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第四站</p>
+    <h2>🧹 Config normalization 和 legacy migrations，在讲“把老房子的东西搬到新房间”</h2>
+    <p>这部分看起来最技术，但翻成人话其实很顺。很多老键名、老目录、老结构，doctor 都会帮你重排。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">🗂 老键名迁移</div>
+      <p>像以前抽屉上贴着旧标签，现在系统认新标签了。doctor 会帮你把标签换过来。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">📁 旧目录搬家</div>
+      <p>旧的 sessions、agent 目录、WhatsApp auth 状态这些，会被搬到新住处。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">⏰ 旧 cron 迁移</div>
+      <p>像老闹钟的纸条格式变了，doctor 会帮你把旧提醒卡改成现在 scheduler 认得的样子。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">📌 这节一句话</div>
+      <p>很多“以前能跑、现在突然不让跑”的问题，本质上就是老家具还摆在旧房间里。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第五站</p>
+    <h2>🔐 权限、状态目录、token、服务，这些都是“机房基础设施检查”</h2>
+    <p>官方后半段不断回到这些东西，是因为真正让 OpenClaw 崩得难看的，往往不是模型本身，而是基础设施歪了。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">📁</span>
+      <h2>状态目录</h2>
+      <p>像大脑储物柜。它不见了、权限不对了、路径跑偏了，history、credentials、日志都会一起乱。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🔑</span>
+      <h2>token / auth</h2>
+      <p>像总控室门票。没有它、漂移了、SecretRef 解不出来，Control UI 和本地网关都会开始闹脾气。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🛠</span>
+      <h2>服务配置</h2>
+      <p>像门卫排班表。launchd / systemd / schtasks 配错了，服务可能看着装了，实际上根本没好好值班。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🏖</span>
+      <h2>sandbox 镜像</h2>
+      <p>像围栏和备用工房。开了 sandbox 却没镜像，就像你说要把活放进隔离间，结果隔离间压根没搭好。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第六站</p>
+    <h2>🚨 它为什么还会提醒安全问题和开放 DM</h2>
+    <p>因为 doctor 不是只看“能不能跑”，它也看“是不是跑得太危险”。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">🚪 open DM policy</div>
+      <p>像你把门口大门长期开着。doctor 会提醒你：能跑不等于这样安全。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🌐 non-loopback / origins</div>
+      <p>像总控室不该随便朝全世界敞开。Control UI 的 allowed origins、tailscale、password/token 这些都会被检查。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🧠 Browser migration</div>
+      <p>旧 Chrome extension 路子已经退场了，doctor 会提醒你换到现在的 Chrome MCP attach 思路。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 这节一句话</div>
+      <p>Doctor 不是只修“坏了”，也修“虽然能跑但明显太冒险”。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">最后总结</p>
+    <h2>🎈 把 Doctor 这页压成一句话</h2>
+    <p><code>openclaw doctor</code> 就像总维修师：它会检查、搬家、修理、重启、提醒风险，帮你把“这套系统怎么今天哪都不太对”拉回到可用状态。</p>
+  </div>
+  <div class="ad-placeholder">
+    <p>如果你下一页只想继续看一页，我建议看 <code>/web/dashboard</code>。因为很多人跑完 doctor 之后，下一步最常做的就是打开总控室，看现在到底连上没有、哪里恢复了、哪里还在红灯。</p>
+  </div>
+</section>
+
 
       <footer class="page-footer">
         <div>
