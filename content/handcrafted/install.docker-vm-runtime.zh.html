@@ -1,0 +1,186 @@
+<section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>🧳 Docker VM Runtime 就是在说：如果 OpenClaw 跑在云主机里，哪些东西要提前塞进箱子，哪些东西要一直留在箱子外面</h2>
+      <p>这页不是在讲普通 Docker 入门，它讲的是 VM 上那种更像“长期住家”的 Docker：比如 GCP、Hetzner、其他 VPS。重点不在于能不能启动，而在于重启以后东西还在不在。</p>
+      <p>你可以把它想成一辆会开很久的车。工具要在出发前装好，家当要放对位置，车熄火重启以后，重要东西不能丢。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合要把 OpenClaw 长期跑在云 VM 上的人</span>
+      <span>这页最重要的是“镜像里装工具，卷里放家当”</span>
+      <a href="https://docs.openclaw.ai/install/docker-vm-runtime" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一站</p>
+    <h2>🔧 先把这件事想成“工具要在出门前装进车里”</h2>
+    <p>官方开头非常直白：不要把必须的二进制工具放到运行时再装。因为那样重启一次就容易忘。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">🚫 运行中再装，是个坑</div>
+      <p>像你路上才想起要去买轮子。车已经开了，装不进去，还可能一重启就没了。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🏗 要在 build 阶段装</div>
+      <p>像先把工具放进车厢，再让车上路。这样以后重启，工具还在。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🧰 三个例子</div>
+      <p><code>gog</code>、<code>goplaces</code>、<code>wacli</code> 只是三个样本。官方意思是：凡是 skills 需要的外部工具，都该用同样方式提前 bake 进去。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">⭐ 先记一句</div>
+      <p>必须的工具，别放到运行时补；要在镜像构建时就焊好。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二站</p>
+    <h2>🍳 示例 Dockerfile，其实是在讲“先把厨房备齐，再开始做饭”</h2>
+    <p>官方给的 Dockerfile 并不是要你死记，而是想让你看到一个稳定顺序：先装基础工具，再装外部二进制，再装依赖，最后才 build 整个项目。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>FROM node:24-bookworm</code></div>
+      <p>像先选一辆底盘合适的车。整个箱子得有一个稳定起点。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>apt-get install -y socat</code></div>
+      <p>像先把常用小扳手放进工具箱。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>curl ... | tar -xz -C /usr/local/bin</code></div>
+      <p>像把外部 CLI 直接搬进车厢里的固定工具位。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>pnpm install --frozen-lockfile</code></div>
+      <p>像按着锁定的菜单准备材料。锁文件不变，就不要随便乱换菜谱。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第三站</p>
+    <h2>🚚 Build and launch，就是“先装好，再把车开出去”</h2>
+    <p>这一段最朴素，也最重要。官方就是想让你把镜像 build 出来，然后把网关容器跑起来。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>docker compose build</code></div>
+      <p>像先把整辆车组装完，确认轮子、引擎、座椅都在。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>docker compose up -d openclaw-gateway</code></div>
+      <p>像把车推到路上，让 OpenClaw 真正开始上班。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🧠 为什么会提 137</div>
+      <p>如果构建时被杀掉、退出码 137，通常不是命令写错，而是 VM 内存太小，像车还没开出去就先卡死了。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🔎 怎么确认真的跑起来</div>
+      <p>官方让你看 <code>which gog</code> 这类命令，意思就是先确认工具到底有没有被装进车里，再看 gateway 日志里有没有“我正在听”的那句。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第四站</p>
+    <h2>💾 持久化这一块，讲的是“车里的抽屉和后备箱要固定住”</h2>
+    <p>Docker 版最容易误会的地方，是以为容器就是家。其实容器更像车，真正应该留下来的东西，要挂到稳定的卷上。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">🏠</span>
+      <h2><code>/home/node/.openclaw</code></h2>
+      <p>像家里的文件柜。配置、token、账号资料都应该放这里，并挂到宿主机卷上。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🗂</span>
+      <h2><code>/home/node/.openclaw/workspace</code></h2>
+      <p>像工作台。代码和临时产物都应该留在这里，不要塞进易失的容器层里。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🔨</span>
+      <h2>镜像里放什么</h2>
+      <p>Node 运行时、系统包、外部 binaries 这些，像焊在车身上的零件。要改，就得重建镜像。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">📦</span>
+      <h2>容器里放什么</h2>
+      <p>容器本身是会换的。真正不能丢的，是那些挂到卷里的长久状态。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第五站</p>
+    <h2>🧾 表格那一页，其实是在帮你分清“谁住车里，谁住仓库”</h2>
+    <p>官方用一张表把持久化说得很明白。你只要记住：有些东西要跟着卷走，有些东西只存在于镜像里。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">📁 Host volume mount</div>
+      <p>像把抽屉固定在车外。配置、模型账号、workspace、session 数据都属于这类。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🧱 Docker image</div>
+      <p>像车体本身。系统包、Node runtime、外部 binary 都应该 bake 进去，而不是每次上路前再去买。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🪵 容易长胖的地方</div>
+      <p>media、日志、workspace 这些地方会慢慢堆东西。官方特地提醒你，是怕磁盘悄悄被吃满。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 这节一句话</div>
+      <p>长期状态挂卷，短期运行放镜像。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第六站</p>
+    <h2>🔁 更新的时候，别只想着“拉代码”，还要想“重建车身”</h2>
+    <p>这页最后的更新部分也很朴素：你不是只改源码，还要让 Docker 重新把车装一遍。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>git pull</code></div>
+      <p>像先把最新的设计图拿回来。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>docker compose build</code></div>
+      <p>像按新设计图重新造一遍车身。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>docker compose up -d</code></div>
+      <p>像把重建好的车重新开上路。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">📌 为什么这一步很重要</div>
+      <p>因为 VM 里的 Docker 不是“改了文件就自动变新”。你得明确让镜像和容器跟上更新。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">最后总结</p>
+    <h2>🎈 把 Docker VM Runtime 压成一句话</h2>
+    <p>这页就是在教你：在云主机上的 Docker 里，哪些东西必须提前焊进镜像，哪些状态必须挂到卷上，才能让 OpenClaw 重启后还认得自己。</p>
+  </div>
+  <div class="ad-placeholder">
+    <p>如果你下一页只想继续看一页，我建议看 <code>/install/fly</code> 或 <code>/install/hetzner</code> 这种真正部署页。因为这页讲的是 VM 里的通用规则，不是某一家云厂商的按钮。</p>
+  </div>
+</section>

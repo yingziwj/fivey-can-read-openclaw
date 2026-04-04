@@ -3970,340 +3970,247 @@
   
       </div>
 
-      
       <section class="section-shell">
-        <div class="overview-card">
-          <div>
-            <p class="section-kicker">AI 绘本解读版</p>
-            <h2>🤖 给机器人一个Signal号码</h2>
-            <p>让机器人也能用Signal聊天。就像给机器人配一部专属手机。需要先准备好一个号码和一个小帮手程序。</p>
-          </div>
-          <div class="overview-meta">
-            <span>原始路径：/channels/signal</span>
-            <span>故事卡片：12 张</span>
-            <a href="https://docs.openclaw.ai/channels/signal" target="_blank" rel="noreferrer">查看官方原文</a>
-          </div>
-        </div>
-      </section>
-      
-          <section class="section-shell" id="section-1">
-            <div class="section-heading">
-              <p class="section-kicker">第 1 站</p>
-              <h2>📦 准备你的工具箱</h2>
-              <p>在开始之前，你需要准备好几样东西。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>没有它们，机器人就没法在Signal上安家。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>一台已经装好OpenClaw的服务器。</li><li>一个叫`signal-cli`的小帮手程序。</li><li>一个能接收短信的手机号码。</li><li>一个能上网的浏览器，用来通过验证码。</li></ul>
-              </div>
-              
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>万事俱备，才能开工。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-2">
-            <div class="section-heading">
-              <p class="section-kicker">第 2 站</p>
-              <h2>🚀 快速上手</h2>
-              <p>给机器人一个专属的Signal号码，然后连接起来。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>这是让机器人开始工作的最快方法。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>最好给机器人一个单独的号码，别用你自己的。</li><li>安装好`signal-cli`这个小帮手。</li><li>你有两条路可以选：A路是扫码连接，B路是用新号码注册。</li><li>然后告诉OpenClaw机器人的号码，再重启一下。</li><li>第一次有人发消息，需要你批准一下配对。</li></ul>
-              </div>
-              
-            <div class="source-card">
-              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
-              <ul><li>`openclaw pairing approve signal &lt;CODE&gt;` 这行命令就像在说：&#39;我认识这个人，让他进来吧。&#39;</li></ul>
-            </div>
-          
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>选条路，配好号码，机器人就能上线了。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-3">
-            <div class="section-heading">
-              <p class="section-kicker">第 3 站</p>
-              <h2>🔑 机器人怎么用Signal</h2>
-              <p>机器人不是直接和Signal说话，它有个小帮手。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>了解这个，你就知道消息是怎么跑来跑去的了。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>机器人通过`signal-cli`这个小帮手和Signal联系。</li><li>就像派信使去送信和收信。</li><li>机器人回复消息时，信一定会原路返回。</li><li>私聊时，机器人用它的主身份。</li><li>群聊时，每个群就像一个小隔间，是分开的。</li></ul>
-              </div>
-              
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>机器人有个信使，专门负责跑腿送信。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-4">
-            <div class="section-heading">
-              <p class="section-kicker">第 4 站</p>
-              <h2>📝 机器人能改规则吗？</h2>
-              <p>默认情况下，机器人可以从Signal收到命令来修改一些设置。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>这样你就能远程调整机器人了，但也可以关掉这个功能。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>机器人默认允许通过Signal消息来修改配置。</li><li>这需要先打开一个叫`commands.config`的总开关。</li><li>如果你不想让机器人被这样遥控，可以关掉这个功能。</li></ul>
-              </div>
-              
-            <div class="source-card">
-              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
-              <ul><li>在配置里写上 `configWrites: false`，就像给这个遥控功能上了把锁。</li></ul>
-            </div>
-          
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>机器人可以被遥控，但钥匙在你手里。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-5">
-            <div class="section-heading">
-              <p class="section-kicker">第 5 站</p>
-              <h2>📱 号码很重要！</h2>
-              <p>机器人连接的是一个Signal设备，不是你的个人账户。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>用错号码，机器人可能不理你，或者出乱子。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>机器人连接的是`signal-cli`这个设备账户。</li><li>如果你用自己的个人号码，机器人可能会忽略你自己的消息，这是为了防止它自己跟自己说话。</li><li>想让机器人回复你？最好给它一个单独的号码。</li></ul>
-              </div>
-              
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>给机器人一个它自己的专属号码。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-6">
-            <div class="section-heading">
-              <p class="section-kicker">第 6 站</p>
-              <h2>🅰️ 上路A：扫码连接</h2>
-              <p>如果你已经有一个Signal账户，可以用扫码的方式让机器人加入。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>就像给机器人配一把你家的钥匙。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>先安装好`signal-cli`小帮手。</li><li>运行一个命令，它会显示一个二维码。</li><li>用你手机上的Signal App扫这个码。</li><li>然后告诉OpenClaw机器人的号码，再启动它。</li></ul>
-              </div>
-              
-            <div class="source-card">
-              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
-              <ul><li>`signal-cli link -n &quot;OpenClaw&quot;` 这行命令就像在说：&#39;生成一把新钥匙，名字叫OpenClaw。&#39;</li><li>用手机扫码，就像把钥匙复制到机器人的信使手里。</li></ul>
-            </div>
-          
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>扫个码，机器人就能用你现有的Signal账户了。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-7">
-            <div class="section-heading">
-              <p class="section-kicker">第 7 站</p>
-              <h2>🅱️ 上路B：注册新号码</h2>
-              <p>给机器人申请一个全新的、只属于它的Signal号码。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>这样最干净，不会和你自己的聊天混在一起。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>找一个能收短信的手机号码（或者能接验证电话的座机号）。</li><li>在服务器上安装`signal-cli`小帮手。</li><li>运行注册命令，输入号码，完成验证码和短信验证。</li><li>这个号码就专属于机器人了。</li></ul>
-              </div>
-              
-            <div class="source-card">
-              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
-              <ul><li>`signal-cli -a +&lt;号码&gt; register` 这行命令就像在说：&#39;去Signal那里，用这个号码开个新户头。&#39;</li><li>你会收到验证码和短信，就像去银行开户要填表一样。</li></ul>
-            </div>
-          
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>给机器人办个全新的Signal手机号。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-8">
-            <div class="section-heading">
-              <p class="section-kicker">第 8 站</p>
-              <h2>👮 谁可以和机器人聊天？</h2>
-              <p>你可以设定规则，决定谁能私聊机器人，谁能@机器人。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>就像给机器人的家门和微信群设门卫。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>私聊默认是&#39;配对模式&#39;：陌生人发消息会得到一个配对码，等你批准后才能聊天。</li><li>你可以设置一个&#39;允许名单&#39;，只让名单上的人直接私聊。</li><li>也可以完全&#39;打开&#39;或&#39;关闭&#39;私聊。</li><li>群聊里，可以设定是否需要@机器人它才理你。</li><li>也可以为每个群单独定规则。</li></ul>
-              </div>
-              
-            <div class="source-card">
-              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
-              <ul><li>`openclaw pairing approve signal &lt;CODE&gt;` 这行命令就像门卫在说：&#39;这个配对码的人我认识，放行！&#39;</li><li>在配置里写`allowFrom: [&quot;+123...&quot;]`，就像在门卫的名单上加名字。</li></ul>
-            </div>
-          
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>私聊要批准，群聊可设@规则。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-9">
-            <div class="section-heading">
-              <p class="section-kicker">第 9 站</p>
-              <h2>🔧 高级设置：自己管信使</h2>
-              <p>如果你不想让OpenClaw自动启动`signal-cli`，可以自己管理它。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>这样启动更快，或者更方便你在容器里运行。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>你可以自己把`signal-cli`当成一个常驻服务运行起来。</li><li>然后告诉OpenClaw这个服务在哪。</li><li>OpenClaw就不会自己再去启动它了。</li></ul>
-              </div>
-              
-            <div class="source-card">
-              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
-              <ul><li>在配置里写上 `httpUrl: &quot;http://127.0.0.1:8080&quot;` 和 `autoStart: false`，就像告诉OpenClaw：&#39;信使已经在8080港口待命了，你不用再叫它。&#39;</li></ul>
-            </div>
-          
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>自己养信使，告诉机器人去哪找它。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-10">
-            <div class="section-heading">
-              <p class="section-kicker">第 10 站</p>
-              <h2>📨 消息怎么送？</h2>
-              <p>告诉机器人，把消息送到哪个号码、哪个群。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>这样你就能指挥机器人给特定的人或群发消息了。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>给个人发私聊：就用手机号码，比如`signal:+15551234567`。</li><li>如果只知道对方的UUID（一种内部ID），就用`uuid:&lt;id&gt;`。</li><li>给群发消息：用`signal:group:&lt;群ID&gt;`。</li><li>如果对方有用户名（不一定支持），也可以用`username:&lt;名字&gt;`。</li></ul>
-              </div>
-              
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>发消息时，要写清楚收信人的&#39;门牌号&#39;。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-11">
-            <div class="section-heading">
-              <p class="section-kicker">第 11 站</p>
-              <h2>🚨 出问题了怎么办？</h2>
-              <p>机器人不工作了？按顺序检查这几步。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>一步步来，最容易找到问题在哪。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>先看看OpenClaw和各个部分的状态是否正常。</li><li>看看日志里有没有报错信息。</li><li>运行一下&#39;医生&#39;命令，它能自动检查并修复一些常见问题。</li><li>检查一下Signal通道的状态。</li><li>看看是不是有私聊在等待配对批准。</li></ul>
-              </div>
-              
-            <div class="source-card">
-              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
-              <ul><li>`openclaw doctor` 这行命令就像叫来一个机器人医生，给它做个体检。</li><li>`openclaw pairing list signal` 这行命令就像查看&#39;等待批准访客&#39;的名单。</li></ul>
-            </div>
-          
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>先看状态和日志，再用&#39;医生&#39;查查。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-12">
-            <div class="section-heading">
-              <p class="section-kicker">第 12 站</p>
-              <h2>🔒 安全小贴士</h2>
-              <p>保护好机器人的Signal账户和你的服务器。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>安全第一，别让机器人丢了钥匙。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>`signal-cli`会把账户的钥匙存在本地电脑上。</li><li>搬家或重装服务器前，记得备份这些钥匙。</li><li>尽量保持私聊为&#39;配对模式&#39;，这样更安全。</li><li>保管好注册用的手机号，丢了会有点麻烦。</li></ul>
-              </div>
-              
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>备份钥匙，用好配对模式。</p>
-              </div>
-            </div>
-          </section>
-        
-      <section class="section-shell">
-        <div class="ad-placeholder">
-          <p>这里预留给未来的 Google AdSense 模块。</p>
-          <code>&lt;!-- ADSENSE_SNIPPET --&gt;</code>
-        </div>
-      </section>
-    
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>📡 Signal 通道，就是给 OpenClaw 配一根“会收信也会回信”的专线</h2>
+      <p>这页看起来很长，其实只是在讲一件事：怎么让 OpenClaw 通过 signal-cli 收到 Signal 的消息，再把回复原路送回去。</p>
+      <p>你可以把它想成一条专线电话。线路通了，机器人才能听见；门禁开对了，它才知道该听谁的话。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合第一次把 OpenClaw 接到 Signal 的人</span>
+      <span>这页最容易踩坑的是账号、配对、群规则和 daemon 模式</span>
+      <a href="https://docs.openclaw.ai/channels/signal" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一站</p>
+    <h2>🧠 先别背配置，先想画面</h2>
+    <p>Signal 这条线不是“装上就能聊”，而是“先把门口、线路、号码、权限都摆对”。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">📱 Signal 账号像工牌</div>
+      <p>OpenClaw 不是拿一个通用入口去混 Signal，而是要绑定一个具体账号。这个账号就是它上班时戴的工牌。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🛰 signal-cli 像收发台</div>
+      <p>Signal 不是直接进 OpenClaw，而是先进 signal-cli，再由 OpenClaw 去读它吐出来的事件。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🚪 pairing 像门口名单</div>
+      <p>陌生人第一次来私聊，不是直接放进来，而是先排队等你批准。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">⭐ 先记一句</div>
+      <p>Signal 这页的主线就是：号码、daemon、配对、群规则，四件事要一起对上。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二站</p>
+    <h2>🚀 先把这条线接通，再谈高级功能</h2>
+    <p>官方的 quick setup 很像“先跑通，再优化”。别一上来就盯着 reaction、history、group override，那是后面的戏。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label">1. 先准备一个号</div>
+      <p>最好用专门的 Signal 号。把它想成机器人专属电话号码，别和你自己的日常号混在一起。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">2. 让 signal-cli 上班</div>
+      <p><code>signal-cli</code> 像门口收发台。OpenClaw 会等它把消息送过来，再把回复交回去。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">3. 先连一种方式</div>
+      <p>官方给了两条路：QR link，或者 SMS 注册。一个像扫码进门，一个像先拿短信验证码办证。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">4. 再做第一次批准</div>
+      <p>第一条私聊来了以后，先拿配对码批准，再让它正式进来。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第三站</p>
+    <h2>🔧 配置里那几行，翻成人话就是“这条专线怎么接”</h2>
+    <p>Signal 的配置看着密，其实大部分只是在回答三个问题：号是谁、daemon 在哪、谁能进来。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label"><code>account</code></div>
+      <p>像写上机器人自己的电话号码。它不是普通备注，而是收发都要认的身份。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>cliPath</code></div>
+      <p>像告诉 OpenClaw 去哪里找 signal-cli 这位收发员。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>httpUrl</code></div>
+      <p>像告诉 OpenClaw：“别自己起 daemon 了，直接连那台已经站好的收发台。”</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>dmPolicy: "pairing"</code></div>
+      <p>像门口先拦一下。陌生人来敲门时，先给他一张临时票，不是直接开门。</p>
+    </div>
+  </div>
+  <div class="source-card">
+    <div class="story-card-label">💡 命令 / 配置怎么理解</div>
+    <ul>
+      <li><code>signal-cli link -n "OpenClaw"</code>：像给机器人号办一张“我愿意连上去”的绑定卡，然后拿手机去扫它。</li>
+      <li><code>signal-cli -a +&lt;BOT_PHONE_NUMBER&gt; register</code>：像拿一个新号码去办理入场手续。</li>
+      <li><code>signal-cli -a +&lt;BOT_PHONE_NUMBER&gt; register --captcha '...'</code>：像先过验证码关卡，再继续办证。</li>
+      <li><code>signal-cli -a +&lt;BOT_PHONE_NUMBER&gt; verify &lt;VERIFICATION_CODE&gt;</code>：像把短信验证码交给前台，证明这个号码真是你的。</li>
+      <li><code>openclaw pairing approve signal &lt;CODE&gt;</code>：像把某个敲门的人领进门，告诉系统“这个人可以聊了”。</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第四站</p>
+    <h2>💬 私聊和群聊，像两扇完全不同的门</h2>
+    <p>Signal 的 DM 规则和 group 规则是分开的。这个分开很重要，不然你会把“谁能私聊”误当成“谁能在群里说话”。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">🚪</span>
+      <h2>DM 门</h2>
+      <p><code>dmPolicy</code> 决定陌生人能不能先敲私聊门。默认是 <code>pairing</code>，先审批，再说话。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🏠</span>
+      <h2>群门</h2>
+      <p><code>groupPolicy</code> 决定群里是开放、名单制，还是直接关闭。它和私聊不是一套规则。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">👤</span>
+      <h2><code>allowFrom</code></h2>
+      <p>像在门卫手里写上“这些号码可以进来”。Signal 没有用户名，主要看电话号码或 UUID。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🧲</span>
+      <h2><code>groupAllowFrom</code></h2>
+      <p>像在群门口再加一层名单，只有指定的人能把机器人叫出来。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第五站</p>
+    <h2>🧵 signal-cli 的工作方式，像一个一直站着收消息的人</h2>
+    <p>官方这段是在告诉你：signal-cli 不是一次性工具，它更像一个一直开着的收发台。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">🏃 它一直跑着</div>
+      <p><code>signal-cli</code> 像站岗的收发员，消息一来就往外吐事件。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🛰 OpenClaw 去听事件</div>
+      <p>OpenClaw 不是去抓网页，而是去听 SSE 事件流。像隔着玻璃听收发台报到。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🔁 回复会原路送回</div>
+      <p>机器人回话时，不会乱串门，而是回到同一个号码或同一个群里。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">📌 这节真正要记住的点</div>
+      <p>Signal 这条线不是“拉个插件就完事”，而是“信使一直在线，OpenClaw 盯着它收发”。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第六站</p>
+    <h2>📎 限制和小细节，都是为了不让这条线太吵</h2>
+    <p>官方后面列的 chunk、media、typing、receipt，其实都在讲：别把一条消息链弄得太满太乱。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">✂️ <code>textChunkLimit</code></div>
+      <p>像规定每次别塞太长的回复，太长就分成几小段寄出去。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🖼 <code>mediaMaxMb</code></div>
+      <p>像给包裹大小设上限。太大的东西别一股脑往里扔。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">⌨️ typing indicators</div>
+      <p>像机器人在打字时先亮个灯，让你知道它没失踪，还在认真回你。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">👍 <code>sendReadReceipts</code></div>
+      <p>像收到消息后替允许的私聊把“已读”也送回去。群里就没这么直接了。</p>
+    </div>
+  </div>
+  <div class="source-card">
+    <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
+    <ul>
+      <li><code>chunkMode: "newline"</code>：像先按段落拆，再按长度拆，避免一整坨消息硬塞。</li>
+      <li><code>message action=react channel=signal ...</code>：像给某条消息贴一个小表情回执。</li>
+      <li><code>target=uuid:&lt;id&gt;</code> / <code>signal:group:&lt;groupId&gt;</code>：像把回执贴到具体的人或具体的群门牌上。</li>
+      <li><code>remove=true</code>：像把刚贴上的表情再拿掉。</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第七站</p>
+    <h2>🩺 出问题时，先按“信号灯梯子”往上爬</h2>
+    <p>官方给的 troubleshooting 很实在。别一来就怀疑世界，先从最基础的几步查。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw status</code></div>
+      <p>像先看全局灯是不是亮着。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw gateway status</code></div>
+      <p>像再看总控台是否在线。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw logs --follow</code></div>
+      <p>像蹲在后台窗户外面，看消息到底卡在哪一步。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw doctor</code></div>
+      <p>像请医生给整套配置做一次体检。</p>
+    </div>
+  </div>
+  <div class="source-card">
+    <div class="story-card-label">🔐 常见翻车点</div>
+    <ul>
+      <li>daemon 活着但没回话，常常是账号或 receive mode 没对上。</li>
+      <li>DM 不理人，多半是对方还在 pairing 等待区。</li>
+      <li>群里没响应，常常是群规则或 mention 门槛拦住了。</li>
+      <li>如果 Signal 在诊断里都没出现，先确认 <code>channels.signal.enabled: true</code>。</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">最后总结</p>
+    <h2>🎈 把 Signal 这页压成一句最好记的话</h2>
+    <p>Signal 通道就是把 OpenClaw 接到一条长期在线的收发线，再用 pairing、allowlist、group policy 把门口管稳。</p>
+  </div>
+  <div class="ad-placeholder">
+    <p>如果你下一页只继续看一页，我建议看 <code>/channels/pairing</code>，因为 Signal 最核心的私聊门禁就是 pairing。</p>
+  </div>
+</section>
+
 
       <footer class="page-footer">
         <div>

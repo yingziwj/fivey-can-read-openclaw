@@ -1,0 +1,205 @@
+<section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>🎁 Bundles 不是 OpenClaw 自己做的插件，它更像别人送来的一盒“现成能力礼物”</h2>
+      <p>这页讲的是：OpenClaw 不只会认自己家的 native plugin，还能认 Codex、Claude、Cursor 这些外面世界里的“能力包”。</p>
+      <p>你可以把 bundle 想成别人打包好的小盒子。OpenClaw 拆开以后，不会把所有东西都照单全收，而是只把能安全映射的那部分接进来。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合第一次接触外部 bundle 的人</span>
+      <span>这页最重要的是先分清 bundle 和 native plugin 不是同一种东西</span>
+      <a href="https://docs.openclaw.ai/plugins/bundles" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一站</p>
+    <h2>📦 先把 bundle 想成“外面寄来的能力盒”</h2>
+    <p>官方最先要你分清楚的一件事，就是：bundle 和 native plugin 长得像，但不是一回事。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">🧩</span>
+      <h2>Native plugin</h2>
+      <p>像自己家里做的积木，能更深地接进 OpenClaw，权限也更大。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🎁</span>
+      <h2>Bundle</h2>
+      <p>像外面寄来的礼盒。它更像内容包，不是完整的系统内部插件。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🧰</span>
+      <h2>会被映射的部分</h2>
+      <p>skill、commands、hooks、MCP tools、settings 这些，OpenClaw 能认一部分，就先认一部分。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">⚠️</span>
+      <h2>不会执行的部分</h2>
+      <p>有些 bundle 内容只会被识别，不会真的跑起来。这是为了让系统别乱接未知行为。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二站</p>
+    <h2>🚚 安装 bundle 的动作，其实就是“先搬进来，再看看它是什么”</h2>
+    <p>官方的安装流程很简单，核心是让你先把 bundle 拿进来，然后确认它是不是 OpenClaw 能识别的那一类。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw plugins install ./my-bundle</code></div>
+      <p>像把本地一个小盒子抬进仓库，让 OpenClaw 去拆封。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw plugins install ./my-bundle.tgz</code></div>
+      <p>像把打包过的礼盒直接送来，先拆封再检查。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw plugins marketplace list &lt;marketplace-name&gt;</code></div>
+      <p>像先去商店货架看一眼，再决定买哪个。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw gateway restart</code></div>
+      <p>像把新的盒子装好后，按一下重启，让系统重新把它们认一遍。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第三站</p>
+    <h2>🧭 Bundle 会被拆成什么，官方分成“现在能用”和“看得见但没跑”两类</h2>
+    <p>这一页很重要，因为它不是简单说“能不能装”，而是说“装进来以后，哪些东西会真的变成 OpenClaw 功能”。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">✅ 现在就能用</div>
+      <p>skill roots、commands、Hook packs、MCP tools、Claude settings 这些，OpenClaw 可以映射到自己的能力里。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">👀 看见了，但不跑</div>
+      <p>像 Claude 的 agents、hooks.json、Cursor 的 rules、Codex 的某些附加元信息，OpenClaw 会识别出来，但不执行。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">📌 为什么要这样做</div>
+      <p>因为不是所有 bundle 内容都适合直接照搬。OpenClaw 先选择能安全落地的那部分，再慢慢扩展。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">⭐ 一句话</div>
+      <p>Bundle 不是“全盘接收”，而是“能接的先接，不能跑的先记住”。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第四站</p>
+    <h2>🧩 三种 bundle，像三种不同风格的礼盒</h2>
+    <p>官方把 Codex、Claude、Cursor 分开讲，是因为它们的盒子外观不一样，里头能被认出来的东西也不一样。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">⌘</span>
+      <h2>Codex bundle</h2>
+      <p>像带着 <code>.codex-plugin/plugin.json</code> 标记的盒子，里面可能还有 skill、hooks、MCP 配置。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">📝</span>
+      <h2>Claude bundle</h2>
+      <p>既可以有 <code>.claude-plugin/plugin.json</code>，也可以走默认目录风格。它的 commands 常常会被当成 skill 内容来读。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🟠</span>
+      <h2>Cursor bundle</h2>
+      <p>像带着 <code>.cursor-plugin/plugin.json</code> 的盒子，<code>.cursor/commands</code> 和一些规则文件会被识别，但不一定执行。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🏷</span>
+      <h2>共同点</h2>
+      <p>它们都不是 native plugin，但都能把一部分现成内容送进 OpenClaw。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第五站</p>
+    <h2>🔍 检测顺序很关键，先认“自己家的盒子”，再认“外面的盒子”</h2>
+    <p>官方明确写了 precedence，这很重要，因为同一个目录里可能又像 native plugin，又像 bundle。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label">1. 先看 native plugin</div>
+      <p>如果目录里有 <code>openclaw.plugin.json</code> 或者带 <code>openclaw.extensions</code> 的 <code>package.json</code>，OpenClaw 会优先把它当 native plugin。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">2. 再看 bundle 标记</div>
+      <p>如果没被认成 native plugin，才继续看 Codex、Claude、Cursor 这些 bundle 线索。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">⚠️ 为什么要先看 native</div>
+      <p>因为 native 插件的权限和行为更完整。先认这个，避免一个目录被半当成 bundle、半当成 plugin，结果装歪。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 最后记一句</div>
+      <p>同一盒东西如果既像插件又像 bundle，OpenClaw 会先按插件处理。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第六站</p>
+    <h2>🧷 各种清单和目录，翻成“盒子里哪张纸会被看见”就容易多了</h2>
+    <p>官方后面列的那些目录，其实是在告诉你：哪些内容能被读成 skill、commands、hooks，哪些只是被记下来。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">🧰 skill roots</div>
+      <p>像盒子里最先打开的那摞说明书。OpenClaw 会把它们当成普通 skill。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">📁 commands/</div>
+      <p>对 Claude 和 Cursor 来说，commands 目录会被当成 skill 内容来读。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🪝 HOOK.md + handler.ts</div>
+      <p>Codex 那边的 hook pack 结构，像一张“有事件就出来”的小哨兵卡片。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🧠 settings.json</div>
+      <p>Claude 的 settings 会被导入到嵌入式 Pi 默认设置里，但像 shell override 那类内容会被清理掉，免得带进来不该带的东西。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第七站</p>
+    <h2>🧯 为什么有些东西只是“看见”，不是真的“上岗”</h2>
+    <p>这页最像安全说明书的地方，就在这里。OpenClaw 不是说看见了就全执行，它会留一层缓冲。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">👀 只检测不执行</div>
+      <p>像把一张陌生纸条先贴到墙上，不代表立刻照着做。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🧱 为什么要这样</div>
+      <p>因为有些 bundle 带的是上层平台专属行为，直接跑进 OpenClaw 反而可能出问题。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🔐 信任边界更窄</div>
+      <p>Bundle 和 native plugin 的差别，不只是“名字不同”，而是“OpenClaw 能放心接多少”不同。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 一句话收住</div>
+      <p>Bundle 像别人寄来的礼物，先拆标签，再决定哪一部分真的搬进屋里。</p>
+    </div>
+  </div>
+</section>

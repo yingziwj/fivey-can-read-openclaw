@@ -3970,664 +3970,186 @@
   
       </div>
 
-      
-    <section class="section-shell">
-      <div class="overview-card">
-        <div>
-          <p class="section-kicker">先听这页的人话版</p>
-          <h2>BTW Side Questions</h2>
-          <p>这一页像一本关于“BTW Side Questions”的小绘本，它先告诉我们这位机器人朋友会做什么，再一步一步解释什么时候该这样做。 你可以先把它想成：BTW Side Questions。</p>
-          <p>如果把这页当成“给普通人看的版本”，你最应该带走的是：它到底在教你一件什么事、什么时候要这样做、以及哪里最容易踩坑。</p>
-        </div>
-        <div class="overview-meta">
-          <span>原始路径：/tools/btw</span>
-          <span>章节数量：11</span>
-          <a href="https://docs.openclaw.ai/tools/btw" target="_blank" rel="noreferrer">查看原文</a>
-        </div>
-      </div>
-    </section>
-    
-        <section class="section-shell" id="section-1">
-          <div class="section-heading">
-            <p class="section-kicker">第 1 站</p>
-            <h2>Start Here</h2>
-            <p>这一节主要在解释“Start Here”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“Start Here”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“BTW Side Questions /btw lets you ask a quick side question about the **current session** without turning that question…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“BTW Side Questions”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p># BTW Side Questions</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“/btw lets you ask a quick side question about the **current session** without turning that question into normal convers…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p><code>/btw</code> lets you ask a quick side question about the **current session** without turning that question into normal conversation history.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“It is 聪明脑袋模型ed after Claude Code&#39;s /btw behavior, but adapted to OpenClaw&#39;s 门口的小门卫 and multi-消息通道 architecture.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>It is modeled after Claude Code&#39;s <code>/btw</code> behavior, but adapted to OpenClaw&#39;s Gateway and multi-channel architecture.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-2">
-          <div class="section-heading">
-            <p class="section-kicker">第 2 站</p>
-            <h2>What it does</h2>
-            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>你理解的是能力边界，不只是功能名字。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“When you send: OpenClaw: 1. snapshots the current session context, 2. runs a separate **工具小帮手-less** 聪明脑袋模型 call, 3. an…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“When you send:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>When you send:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段像给机器人看的说明书，告诉它要按什么样子准备东西。</p>
-        <ul class="code-steps">
-          <li>这一行“/btw what changed?”是当前步骤要交给电脑的一小块提示。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-text">/btw what changed?</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“OpenClaw:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>OpenClaw:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“1. snapshots the current session context, 2. runs a separate **工具小帮手-less** 聪明脑袋模型 call, 3. answers only the side quest…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>1. snapshots the current session context, 2. runs a separate **tool-less** model call, 3. answers only the side question, 4. leaves the main run alone, 5. does **not** write the BTW question or answer to session history, 6. emits the answer as a **live side result** rather than a normal assistant message.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“The important mental 聪明脑袋模型 is:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>The important mental model is:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“What it does”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：same session context、separate one-shot side query、no 工具小帮手 calls、no future context pollution。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>same session context</li><li>separate one-shot side query</li><li>no tool calls</li><li>no future context pollution</li><li>no transcript persistence</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-3">
-          <div class="section-heading">
-            <p class="section-kicker">第 3 站</p>
-            <h2>What it does not do</h2>
-            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>你理解的是能力边界，不只是功能名字。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“/btw does **not**: It is intentionally **ephemeral**.”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“/btw does **not**:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p><code>/btw</code> does **not**:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“What it does not do”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：create a new durable session,、continue the unfinished main task,、run 工具小帮手s or 机器人朋友 工具小帮手 loops,、write BTW question/answer data to transcr…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>create a new durable session,</li><li>continue the unfinished main task,</li><li>run tools or agent tool loops,</li><li>write BTW question/answer data to transcript history,</li><li>appear in <code>chat.history</code>,</li><li>survive a reload.</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“It is intentionally **ephemeral**.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>It is intentionally **ephemeral**.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-4">
-          <div class="section-heading">
-            <p class="section-kicker">第 4 站</p>
-            <h2>How context works</h2>
-            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>你理解的是能力边界，不只是功能名字。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“BTW uses the current session as **background context only**. If the main run is currently active, OpenClaw snapshots th…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“BTW uses the current session as **background context only**.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>BTW uses the current session as **background context only**.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“If the main run is currently active, OpenClaw snapshots the current 小纸条消息 state and includes the in-flight main prompt…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>If the main run is currently active, OpenClaw snapshots the current message state and includes the in-flight main prompt as background context, while explicitly telling the model:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“How context works”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：answer only the side question,、do not resume or complete the unfinished…、do not emit 工具小帮手 calls or pseudo-工具小帮手 c…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>answer only the side question,</li><li>do not resume or complete the unfinished main task,</li><li>do not emit tool calls or pseudo-tool calls.</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“That keeps BTW isolated from the main run while still making it aware of what the session is about.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>That keeps BTW isolated from the main run while still making it aware of what the session is about.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-5">
-          <div class="section-heading">
-            <p class="section-kicker">第 5 站</p>
-            <h2>Delivery 聪明脑袋模型</h2>
-            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>你理解的是能力边界，不只是功能名字。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“BTW is **not** delivered as a normal assistant transcript 小纸条消息. At the 门口的小门卫 protocol level: This separation is inten…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“BTW is **not** delivered as a normal assistant transcript 小纸条消息.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>BTW is **not** delivered as a normal assistant transcript message.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“At the 门口的小门卫 protocol level:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>At the Gateway protocol level:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Delivery model”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：normal assistant chat uses the chat event、BTW uses the chat.side_result event。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>normal assistant chat uses the <code>chat</code> event</li><li>BTW uses the <code>chat.side_result</code> event</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“This separation is intentional. If BTW reused the normal chat event path, 来帮忙的小伙伴s would treat it like regular conversa…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>This separation is intentional. If BTW reused the normal <code>chat</code> event path, clients would treat it like regular conversation history.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Because BTW uses a separate live event and is not replayed from chat.history, it disappears after reload.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Because BTW uses a separate live event and is not replayed from <code>chat.history</code>, it disappears after reload.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-6">
-          <div class="section-heading">
-            <p class="section-kicker">第 6 站</p>
-            <h2>TUI</h2>
-            <p>这一节主要在解释“TUI”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“TUI”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“In TUI, BTW is rendered inline in the current session view, but it remains ephemeral:”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“In TUI, BTW is rendered inline in the current session view, but it remains ephemeral:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>In TUI, BTW is rendered inline in the current session view, but it remains ephemeral:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“TUI”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：visibly distinct from a normal assistant…、dismissible with Enter or Esc、not replayed on reload。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>visibly distinct from a normal assistant reply</li><li>dismissible with <code>Enter</code> or <code>Esc</code></li><li>not replayed on reload</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-7">
-          <div class="section-heading">
-            <p class="section-kicker">第 7 站</p>
-            <h2>External 消息通道s</h2>
-            <p>这一节主要在解释“External 消息通道s”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“External 消息通道s”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“On 消息通道s like Telegram, WhatsApp, and Discord, BTW is delivered as a clearly labeled one-off reply because those surfac…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“On 消息通道s like Telegram, WhatsApp, and Discord, BTW is delivered as a clearly labeled one-off reply because those surfac…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>On channels like Telegram, WhatsApp, and Discord, BTW is delivered as a clearly labeled one-off reply because those surfaces do not have a local ephemeral overlay concept.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“The answer is still treated as a side result, not normal session history.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>The answer is still treated as a side result, not normal session history.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-8">
-          <div class="section-heading">
-            <p class="section-kicker">第 8 站</p>
-            <h2>Control UI / web</h2>
-            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>你理解的是能力边界，不只是功能名字。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“The 门口的小门卫 emits BTW correctly as chat.side_result, and BTW is not included in chat.history, so the persistence contrac…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“The 门口的小门卫 emits BTW correctly as chat.side_result, and BTW is not included in chat.history, so the persistence contrac…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>The Gateway emits BTW correctly as <code>chat.side_result</code>, and BTW is not included in <code>chat.history</code>, so the persistence contract is already correct for web.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“The current Control UI still needs a dedicated chat.side_result consumer to render BTW live in the browser. Until that…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>The current Control UI still needs a dedicated <code>chat.side_result</code> consumer to render BTW live in the browser. Until that client-side support lands, BTW is a Gateway-level feature with full TUI and external-channel behavior, but not yet a complete browser UX.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-9">
-          <div class="section-heading">
-            <p class="section-kicker">第 9 站</p>
-            <h2>When to use BTW</h2>
-            <p>这一节主要在解释“When to use BTW”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“When to use BTW”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Use /btw when you want: Examples:”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Use /btw when you want:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Use <code>/btw</code> when you want:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“When to use BTW”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：a quick clarification about the current w…、a factual side answer while a long run is…、a temporary answer that should not become…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>a quick clarification about the current work,</li><li>a factual side answer while a long run is still in progress,</li><li>a temporary answer that should not become part of future session context.</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Examples:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Examples:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段像给机器人看的说明书，告诉它要按什么样子准备东西。</p>
-        <ul class="code-steps">
-          <li>这一行“/btw what file are we editing?”是当前步骤要交给电脑的一小块提示。</li><li>这一行“/btw what does this error mean?”是当前步骤要交给电脑的一小块提示。</li><li>这一行“/btw summarize the current task in one sentence”是当前步骤要交给电脑的一小块提示。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-text">/btw what file are we editing?
-/btw what does this error mean?
-/btw summarize the current task in one sentence
-/btw what is 17 * 19?</code></pre>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-10">
-          <div class="section-heading">
-            <p class="section-kicker">第 10 站</p>
-            <h2>When not to use BTW</h2>
-            <p>这一节主要在解释“When not to use BTW”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“When not to use BTW”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Do not use /btw when you want the answer to become part of the session&#39;s future working context. In that case, ask norm…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Do not use /btw when you want the answer to become part of the session&#39;s future working context.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Do not use <code>/btw</code> when you want the answer to become part of the session&#39;s future working context.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“In that case, ask normally in the main session instead of using BTW.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>In that case, ask normally in the main session instead of using BTW.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-11">
-          <div class="section-heading">
-            <p class="section-kicker">第 11 站</p>
-            <h2>Related</h2>
-            <p>这一节主要在解释“Related”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“Related”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Related”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Slash 魔法口令s、Thinking Levels、Session。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><a href="/tools/slash-commands" target="_blank" rel="noreferrer">Slash commands</a></li><li><a href="/tools/thinking" target="_blank" rel="noreferrer">Thinking Levels</a></li><li><a href="/concepts/session" target="_blank" rel="noreferrer">Session</a></li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-    <section class="section-shell">
-      <div class="ad-placeholder">
-        <p>这里预留给未来的 Google AdSense 模块。</p>
-        <code>&lt;!-- ADSENSE_SNIPPET --&gt;</code>
-      </div>
-    </section>
-  
+      <section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>💭 <code>/btw</code> 像你在主任务旁边悄悄问一句“顺便问下，现在到底啥情况？”</h2>
+      <p>这页讲的不是新会话，也不是插队抢活，而是一种很轻的“侧边提问”。主任务还在跑，你突然想问一句小问题，但又不想把主线聊天搞乱，这时候 <code>/btw</code> 就特别顺手。</p>
+      <p>它像你在老师正写黑板时，小声举手问一句：“那我们现在在改哪个文件呀？”老师回答完，主课继续，不会把这句插曲写进正式课堂笔记里。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合长任务进行中，临时想插一句小问题的人</span>
+      <span>这页最重要的是看懂：<code>/btw</code> 用的是当前上下文，但不会污染后面的正式会话</span>
+      <a href="https://docs.openclaw.ai/tools/btw" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一站</p>
+    <h2>🧵 先想画面：主线在走，你从旁边插一句小问号</h2>
+    <p>官方开头写得很技术，但翻成人话其实很简单：<code>/btw</code> 会借用当前会话的背景，但把这次提问当成一次“路边小插曲”。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">🪄 用的是同一份背景</div>
+      <p>它不是失忆状态发问，所以会知道你们前面一直在聊什么、正在做什么。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">✂️ 但它是单独的一小次问答</div>
+      <p>它不是把主任务改道，而是从旁边开一个小窗问完就关。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🧼 不把地板弄脏</div>
+      <p>问完不会把这次旁支对话写进正式聊天历史，所以后面主任务不会背着这句小插曲继续跑。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">⭐ 一句话先记住</div>
+      <p><code>/btw</code> 是“借背景、问小题、答完就散”的临时侧问。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二站</p>
+    <h2>🛠 那条命令在现场到底做了什么</h2>
+    <p>原文把流程拆成 6 点，听起来像协议文。其实你把它想成后台小动作就顺了。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>/btw what changed?</code></div>
+      <p>像你突然从主线旁边探个头问：“顺便说一句，刚刚到底改了啥？”</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">1. snapshot 当前上下文</div>
+      <p>像先给现在的课桌拍一张快照，看看黑板写到哪儿、桌上摊着哪些纸。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">2. 单独跑一次无工具问答</div>
+      <p>像老师只靠脑子回答你这一句，不会再临时起身去翻抽屉、开浏览器、跑工具。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">3. 主线不改道</div>
+      <p>主任务该跑还继续跑，不会因为你顺嘴问了一句，小火车就整个拐弯。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第三站</p>
+    <h2>🚫 <code>/btw</code> 不会做什么，这比它会做什么还重要</h2>
+    <p>这页最容易误会的地方，就是把 <code>/btw</code> 当成“小号会话”或者“轻量代理”。官方专门列一串“不会做”，就是为了防这个误会。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">🪵</span>
+      <h2>不会变成长久会话</h2>
+      <p>它不是新开一个能一直聊下去的小房间。问完就没了。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🛠</span>
+      <h2>不会跑工具</h2>
+      <p>别指望它顺便读文件、开浏览器、敲命令。官方明确说了，它是 tool-less。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">📜</span>
+      <h2>不会写进 transcript</h2>
+      <p>你的问题和它的回答，都不会进入正式会话历史。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">♻️</span>
+      <h2>刷新后不会回来</h2>
+      <p>它就是临时浮一下，页面重载后也不会像正式消息那样被重播出来。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第四站</p>
+    <h2>📦 为什么它“知道背景”，却又“不污染未来”</h2>
+    <p>这正是 <code>/btw</code> 最聪明的地方。它像借了主会话的空气，但没把自己留在房间里。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">🧠 背景上下文</div>
+      <p>如果主任务正在跑，OpenClaw 会先拍下这一刻的上下文，连同正在进行中的提示一起当背景塞给 <code>/btw</code>。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🚧 明确告诉模型别越界</div>
+      <p>系统会明确交代它：只答侧问题，不要顺手接管主任务，也不要假装在跑工具。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 这节一句话</div>
+      <p>它像“借主线的脑海画面回答一嘴”，但不会把这句插话写进后面的故事里。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">📌 所以什么时候特别好用</div>
+      <p>当你在长任务中只想确认一个小事实，比如“我们现在在改哪个文件”“刚刚那个报错啥意思”，它就非常顺手。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第五站</p>
+    <h2>📨 BTW 的回答为什么像“飘出来的一张小纸条”</h2>
+    <p>官方用了很多事件名来解释它的投递方式。翻成人话，就是：它故意不走正式聊天消息那条管道。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>chat.side_result</code></div>
+      <p>像一张从边上滑出来的小纸条，不是正式聊天记录里的标准气泡。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">为什么不走 <code>chat</code></div>
+      <p>因为一旦走普通聊天消息那条路，很多客户端就会把它当成“正式会话内容”收进历史里，这和 BTW 的设计初衷正好相反。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🖥 TUI 里像什么</div>
+      <p>像当前界面里飘出一条明显不同的小提示，你按一下就能收起来。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">📱 外部聊天通道里像什么</div>
+      <p>Telegram、Discord 这种地方没有本地临时浮层，所以它会看起来像一条特别标记过的一次性回复。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第六站</p>
+    <h2>🎯 什么时候该用，什么时候别用</h2>
+    <p>这页最后最实用的，其实就是用法边界。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">✅ 适合用 BTW</div>
+      <p>你只想问一个小问题，而且不希望它影响后面正式会话的工作节奏和记忆。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">❌ 不适合用 BTW</div>
+      <p>你希望这句问答成为后面继续做事的正式背景。那就别走 <code>/btw</code>，直接在主会话里正常问。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🧪 官方例子翻成人话</div>
+      <ul>
+        <li><code>/btw what file are we editing?</code>：像抬头问一句“我们现在桌上摊开的到底是哪张纸？”</li>
+        <li><code>/btw what does this error mean?</code>：像顺手问“刚刚那声报警到底在说啥？”</li>
+        <li><code>/btw summarize the current task in one sentence</code>：像请人用一句话给你重新扶正思路。</li>
+      </ul>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 一句话收住</div>
+      <p><code>/btw</code> 就是边上那句“顺便问下”，问完不留痕，不改主线。</p>
+    </div>
+  </div>
+</section>
+
 
       <footer class="page-footer">
         <div>

@@ -3970,455 +3970,197 @@
   
       </div>
 
-      
-    <section class="section-shell">
-      <div class="overview-card">
-        <div>
-          <p class="section-kicker">先听这页的人话版</p>
-          <h2>Tavily</h2>
-          <p>这一页像一本关于“Tavily”的小绘本，它先告诉我们这位机器人朋友会做什么，再一步一步解释什么时候该这样做。 你可以先把它想成：Tavily。</p>
-          <p>如果把这页当成“给普通人看的版本”，你最应该带走的是：它到底在教你一件什么事、什么时候要这样做、以及哪里最容易踩坑。</p>
-        </div>
-        <div class="overview-meta">
-          <span>原始路径：/tools/tavily</span>
-          <span>章节数量：7</span>
-          <a href="https://docs.openclaw.ai/tools/tavily" target="_blank" rel="noreferrer">查看原文</a>
-        </div>
-      </div>
-    </section>
-    
-        <section class="section-shell" id="section-1">
-          <div class="section-heading">
-            <p class="section-kicker">第 1 站</p>
-            <h2>Start Here</h2>
-            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>你理解的是能力边界，不只是功能名字。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Tavily OpenClaw can use **Tavily** in two ways: Tavily is a search 对话接口 designed for AI applications, returning structu…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Tavily”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p># Tavily</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“OpenClaw can use **Tavily** in two ways:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>OpenClaw can use **Tavily** in two ways:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Start Here”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：as the web_search provider、as explicit 新本领插件 工具小帮手s: tavily_search a…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>as the <code>web_search</code> provider</li><li>as explicit plugin tools: <code>tavily_search</code> and <code>tavily_extract</code></li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Tavily is a search 对话接口 designed for AI applications, returning structured results optimized for LLM consumption. It su…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Tavily is a search API designed for AI applications, returning structured results optimized for LLM consumption. It supports configurable search depth, topic filtering, domain filters, AI-generated answer summaries, and content extraction from URLs (including JavaScript-rendered pages).</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-2">
-          <div class="section-heading">
-            <p class="section-kicker">第 2 站</p>
-            <h2>Get an 对话接口 key</h2>
-            <p>这一节主要在解释“Get an 对话接口 key”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“Get an 对话接口 key”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“1. Create a Tavily account at tavily.com. 2. Generate an 对话接口 key in the dashboard. 3. Store it in 设置说明书 or set TAVILY_…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“1. Create a Tavily account at tavily.com. 2. Generate an 对话接口 key in the dashboard. 3. Store it in 设置说明书 or set TAVILY_…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>1. Create a Tavily account at <a href="https://tavily.com/" target="_blank" rel="noreferrer">tavily.com</a>. 2. Generate an API key in the dashboard. 3. Store it in config or set <code>TAVILY_API_KEY</code> in the gateway environment.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-3">
-          <div class="section-heading">
-            <p class="section-kicker">第 3 站</p>
-            <h2>设置说明书ure Tavily search</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Notes: the bundled Tavily 新本领插件 automatically. or domain filters, use tavily_search.”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“plugins”贴标签，意思是把它设置成“{”。</li><li>这里在给“entries”贴标签，意思是把它设置成“{”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json5">{
-  plugins: {
-    entries: {
-      tavily: {
-        enabled: true,
-        config: {
-          webSearch: {
-            apiKey: &quot;tvly-...&quot;, // optional if TAVILY_API_KEY is set
-            baseUrl: &quot;https://api.tavily.com&quot;,
-          },
-        },
-      },
-    },
-  },
-  tools: {
-    web: {
-      search: {
-        provider: &quot;tavily&quot;,
-      },
-    },
-  },
-}</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Notes:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Notes:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“the bundled Tavily 新本领插件 automatically.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>the bundled Tavily plugin automatically.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“or domain filters, use tavily_search.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>or domain filters, use <code>tavily_search</code>.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Configure Tavily search”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Choosing Tavily in onboarding or openclaw…、Store Tavily 设置说明书 under 新本领插件s.entries.t…、web_search with Tavily supports query and…、For Tavily-specific controls like search_…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Choosing Tavily in onboarding or <code>openclaw configure --section web</code> enables</li><li>Store Tavily config under <code>plugins.entries.tavily.config.webSearch.*</code>.</li><li><code>web_search</code> with Tavily supports <code>query</code> and <code>count</code> (up to 20 results).</li><li>For Tavily-specific controls like <code>search_depth</code>, <code>topic</code>, <code>include_answer</code>,</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-4">
-          <div class="section-heading">
-            <p class="section-kicker">第 4 站</p>
-            <h2>`tavily_search`</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Use this when you want Tavily-specific search controls instead of generic web_search. Parameter Description -----------…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Use this when you want Tavily-specific search controls instead of generic web_search.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Use this when you want Tavily-specific search controls instead of generic <code>web_search</code>.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Parameter Description ----------------- --------------------------------------------------------------------- query Sea…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>| Parameter | Description | | ----------------- | --------------------------------------------------------------------- | | <code>query</code> | Search query string (keep under 400 characters) | | <code>search_depth</code> | <code>basic</code> (default, balanced) or <code>advanced</code> (highest relevance, slower) | | <code>topic</code> | <code>general</code> (default), <code>news</code> (real-time updates), or <code>finance</code> | | <code>max_results</code> | Number of results, 1-20 (default: 5) | | <code>include_answer</code> | Include an AI-generated answer summary (default: false) | | <code>time_range</code> | Filter by recency: <code>day</code>, <code>week</code>, <code>month</code>, or <code>year</code> | | <code>include_domains</code> | Array of domains to restrict results to | | <code>exclude_domains</code> | Array of domains to exclude from results |</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“**Search depth:**”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>**Search depth:**</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Depth Speed Relevance Best for ---------- ------ --------- ----------------------------------- basic Faster High Genera…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>| Depth | Speed | Relevance | Best for | | ---------- | ------ | --------- | ----------------------------------- | | <code>basic</code> | Faster | High | General-purpose queries (default) | | <code>advanced</code> | Slower | Highest | Precision, specific facts, research |</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-5">
-          <div class="section-heading">
-            <p class="section-kicker">第 5 站</p>
-            <h2>`tavily_extract`</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Use this to extract clean content from one or more URLs. Handles JavaScript-rendered pages and supports query-focused c…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Use this to extract clean content from one or more URLs. Handles JavaScript-rendered pages and supports query-focused c…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Use this to extract clean content from one or more URLs. Handles JavaScript-rendered pages and supports query-focused chunking for targeted extraction.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Parameter Description ------------------- ---------------------------------------------------------- urls Array of URLs…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>| Parameter | Description | | ------------------- | ---------------------------------------------------------- | | <code>urls</code> | Array of URLs to extract (1-20 per request) | | <code>query</code> | Rerank extracted chunks by relevance to this query | | <code>extract_depth</code> | <code>basic</code> (default, fast) or <code>advanced</code> (for JS-heavy pages) | | <code>chunks_per_source</code> | Chunks per URL, 1-5 (requires <code>query</code>) | | <code>include_images</code> | Include image URLs in results (default: false) |</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“**Extract depth:**”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>**Extract depth:**</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Depth When to use ---------- ----------------------------------------- basic Simple pages - try this first advanced JS-…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>| Depth | When to use | | ---------- | ----------------------------------------- | | <code>basic</code> | Simple pages - try this first | | <code>advanced</code> | JS-rendered SPAs, dynamic content, tables |</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Tips:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Tips:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“`tavily_extract`”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Max 20 URLs per request. Batch larger lis…、Use query + chunks_per_source to get only…、Try basic first; fall back to advanced if…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Max 20 URLs per request. Batch larger lists into multiple calls.</li><li>Use <code>query</code> + <code>chunks_per_source</code> to get only relevant content instead of full pages.</li><li>Try <code>basic</code> first; fall back to <code>advanced</code> if content is missing or incomplete.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-6">
-          <div class="section-heading">
-            <p class="section-kicker">第 6 站</p>
-            <h2>Choosing the right 工具小帮手</h2>
-            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>你理解的是能力边界，不只是功能名字。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Need 工具小帮手 ------------------------------------ ---------------- Quick web search, no special options web_search Search…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Need 工具小帮手 ------------------------------------ ---------------- Quick web search, no special options web_search Search…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>| Need | Tool | | ------------------------------------ | ---------------- | | Quick web search, no special options | <code>web_search</code> | | Search with depth, topic, AI answers | <code>tavily_search</code> | | Extract content from specific URLs | <code>tavily_extract</code> |</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-7">
-          <div class="section-heading">
-            <p class="section-kicker">第 7 站</p>
-            <h2>Related</h2>
-            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>你理解的是能力边界，不只是功能名字。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Related”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Web Search overview -- all providers and…、Firecrawl -- search + scr对话接口ng with cont…、Exa Search -- neural search with content…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><a href="/tools/web" target="_blank" rel="noreferrer">Web Search overview</a> -- all providers and auto-detection</li><li><a href="/tools/firecrawl" target="_blank" rel="noreferrer">Firecrawl</a> -- search + scraping with content extraction</li><li><a href="/tools/exa-search" target="_blank" rel="noreferrer">Exa Search</a> -- neural search with content extraction</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-    <section class="section-shell">
-      <div class="ad-placeholder">
-        <p>这里预留给未来的 Google AdSense 模块。</p>
-        <code>&lt;!-- ADSENSE_SNIPPET --&gt;</code>
-      </div>
-    </section>
-  
+      <section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>🔎 Tavily 像一个“专门替 AI 找资料和拆网页的侦察员”</h2>
+      <p>普通网页搜索像你把问题丢给搜索引擎，然后自己一条条翻结果。Tavily 更像一个已经知道 AI 需要什么的侦察员：它不只帮你找，还会尽量把结果整理成更适合模型吃的样子。</p>
+      <p>所以这页真正讲的是：你是要它“帮你找”，还是“帮你把某几个页面拆开抄重点”。前者偏搜索，后者偏抽取。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合准备给 OpenClaw 配网页搜索，或者想要更强网页抽取的人</span>
+      <span>这页最重要的是分清：<code>web_search</code>、<code>tavily_search</code>、<code>tavily_extract</code> 不是一回事</span>
+      <a href="https://docs.openclaw.ai/tools/tavily" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一站</p>
+    <h2>🧭 Tavily 在 OpenClaw 里有两种上岗方式</h2>
+    <p>官方一开头就把这件事说清楚了。别跳，因为这会直接决定你后面怎么配、怎么用。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">🌐</span>
+      <h2>当 <code>web_search</code> 提供商</h2>
+      <p>像把 Tavily 安排成 OpenClaw 默认的“上网找资料同学”。以后模型要搜网页时，就优先叫它。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🧰</span>
+      <h2>当显式工具</h2>
+      <p>也可以直接点名用 <code>tavily_search</code> 和 <code>tavily_extract</code>。这像不是让侦察员自由发挥，而是明确下达不同任务。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">⭐</span>
+      <h2>先记一句</h2>
+      <p>一个是“默认搜索员”，一个是“手动点名执行专门动作”。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🧠</span>
+      <h2>为什么 Tavily 特别适合 AI</h2>
+      <p>因为它返回的结果本来就更偏向让模型读，不只是扔你一堆蓝色链接。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二站</p>
+    <h2>🔑 配置那段 JSON，翻成人话就是“给侦察员发工牌，再把总搜索台指向它”</h2>
+    <p>配置块看起来像参数堆，但真正主线只有两件事：先把 Tavily 插件开起来，再告诉网页搜索以后优先找它。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>plugins.entries.tavily.enabled: true</code></div>
+      <p>像先让 Tavily 这个侦察员正式上岗。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>apiKey: \"tvly-...\"</code></div>
+      <p>像给它发工牌。没有这个 key，它就算站在门口也进不了系统。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>baseUrl: \"https://api.tavily.com\"</code></div>
+      <p>像告诉它要去哪个服务台报到。大多数人直接用默认官方地址就够了。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>tools.web.search.provider: \"tavily\"</code></div>
+      <p>像在总搜索台挂牌：“以后默认网页搜索，先叫 Tavily 出动。”</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第三站</p>
+    <h2>🔎 <code>web_search</code>、<code>tavily_search</code>、<code>tavily_extract</code> 三兄弟各干嘛</h2>
+    <p>这一页如果只带走一个东西，我希望你带走这个分工表。因为绝大多数困惑都卡在“到底该叫哪一个”。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">⚡</span>
+      <h2><code>web_search</code></h2>
+      <p>像一句“帮我搜一下”。快速、通用、选项少。你只想查资料，不想微操的时候，用它。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🎛</span>
+      <h2><code>tavily_search</code></h2>
+      <p>像对侦察员说：“给我搜，但这次搜深一点、只看新闻、顺手给我一段总结。”你要更多旋钮时，用它。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">📄</span>
+      <h2><code>tavily_extract</code></h2>
+      <p>像不是去满大街找，而是已经拿到几个网址，要求侦察员回去把这些页面拆开、抄重点。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">⭐</span>
+      <h2>一句话判断</h2>
+      <p>想“找”就搜，想“拆”就 extract。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第四站</p>
+    <h2>🎚 <code>tavily_search</code> 的参数，像你对侦察员下的详细口令</h2>
+    <p>这里别死背表格。你只要把每个参数都想成一句命令口吻，就很好记。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>query</code></div>
+      <p>像你真正要问的问题本身。别太长，别绕弯。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>search_depth: basic | advanced</code></div>
+      <p><code>basic</code> 像“先快速扫一圈”，<code>advanced</code> 像“别急，给我翻深一点、找准一点”。后者更慢，但更像认真查档案。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>topic: general | news | finance</code></div>
+      <p>像告诉侦察员这次是一般资料、新闻快讯，还是金融情报。不同场景，找的路数不一样。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>include_answer</code></div>
+      <p>像让它别只带回链接，还顺手给你念一段“我先帮你看完的摘要”。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第五站</p>
+    <h2>📄 <code>tavily_extract</code> 像“拿着指定网址回去抄重点”</h2>
+    <p>这是 Tavily 和普通搜索很不一样的地方。你不是让它满街找，而是拿着明确门牌号，让它回去拆内容。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label"><code>urls</code></div>
+      <p>像直接把要查的门牌号交给它。一次最多 20 个，别一口气塞太多。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>query</code> + <code>chunks_per_source</code></div>
+      <p>像不是要它整本书都抄回来，而是说：“按这个问题去挑最相关的几段给我。”</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>extract_depth: basic | advanced</code></div>
+      <p><code>basic</code> 像普通抄书，<code>advanced</code> 更像连那些 JavaScript 动态页面、复杂表格也尽量帮你拆出来。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>include_images</code></div>
+      <p>像除了文字，也把页面里的图片线索顺手带回来。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第六站</p>
+    <h2>🧠 官方那些 tips，其实都是“先走轻一点，不够再加重”</h2>
+    <p>这套思路很实用。别一开始就把每个旋钮拧到最重。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">🚶 先用 <code>basic</code></div>
+      <p>像先普通走一圈。够用就别一上来就开最重模式。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🔁 不够再切 <code>advanced</code></div>
+      <p>像发现这栋楼结构太复杂，普通巡查看不明白，再派更细的侦察。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">✂️ 用 <code>query</code> 限定目标</div>
+      <p>像告诉它“别整篇都搬，帮我挑和这个问题最相关的几段”。这样比抱一堆原文回来更省脑子。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 一句话</div>
+      <p>先轻搜、再深搜；先少搬、再多搬。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">最后总结</p>
+    <h2>🎈 把 Tavily 这页压成一句最好记的话</h2>
+    <p>Tavily 就是一个既会帮 OpenClaw 找资料、又会帮它拆网页重点的侦察员。想快搜就用 <code>web_search</code>，想细控就用 <code>tavily_search</code>，想拆指定页面就用 <code>tavily_extract</code>。</p>
+  </div>
+  <div class="ad-placeholder">
+    <p>如果你下一页只想继续看一页，我建议接着看通用的 <code>/tools/web</code> 或别的搜索提供商页。这样你会更容易比较“默认搜一下”和“专门叫 Tavily 出手”到底差在哪。</p>
+  </div>
+</section>
+
 
       <footer class="page-footer">
         <div>
