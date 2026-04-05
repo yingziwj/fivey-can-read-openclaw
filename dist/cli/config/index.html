@@ -3974,13 +3974,13 @@
   <div class="overview-card">
     <div>
       <p class="section-kicker">先讲人话版</p>
-      <h2>🔧 <code>openclaw config</code> 像“一把专门拧配置螺丝的小扳手”</h2>
-      <p>如果 <code>configure</code> 是装修向导，那 <code>config</code> 就是你自己下场动手时用的小扳手。它不陪你聊天，它直接对着 <code>openclaw.json</code> 的具体位置动手。</p>
-      <p>你可以把它想成“精确修改器”。想看某一颗螺丝在哪，想换一颗，想把一颗卸掉，想整体验证有没有拧歪，都是它的活。</p>
+      <h2>🧰 <code>openclaw config</code> 就像“拿着小镊子改总账本”</h2>
+      <p>如果 <code>openclaw configure</code> 像一位带路老师，<code>openclaw config</code> 就像你自己坐到桌前，翻开 <code>openclaw.json</code> 这本总账本，一格一格地改。</p>
+      <p>它不陪你闲聊，也不带你逛全屋。它只做一件事：你指哪里，它就改哪里。</p>
     </div>
     <div class="overview-meta">
-      <span>适合不想走向导、只想精确改某个配置点的人</span>
-      <span>这页最重要的是分清：<code>get/set/unset</code> 在动螺丝，<code>file/schema/validate</code> 在看图纸</span>
+      <span>适合已经知道自己要改哪一格的人</span>
+      <span>这页最要紧的是看懂：路径是门牌，值是你要放进去的新东西</span>
       <a href="https://docs.openclaw.ai/cli/config" target="_blank" rel="noreferrer">查看官方原文</a>
     </div>
   </div>
@@ -3988,164 +3988,220 @@
 
 <section class="section-shell">
   <div class="section-heading">
-    <p class="section-kicker">第一站</p>
-    <h2>🧰 先把它分成两类动作：动配置，和看图纸</h2>
-    <p>这页命令很多，但其实很好分。</p>
+    <p class="section-kicker">第一步</p>
+    <h2>🗂 先别被命令吓到，它其实就分两拨人</h2>
+    <p>一拨人在“动总账本”，一拨人在“看总账本和规则书”。先分组，脑子就不乱了。</p>
   </div>
   <div class="home-grid">
     <article class="home-card">
-      <span class="home-card-index">🔍</span>
+      <span class="home-card-index">👀</span>
       <h2><code>get</code></h2>
-      <p>像拿手电照一下某颗螺丝现在拧在哪。</p>
+      <p>只是看，不下手。像把账本翻到某一页，看现在写了什么。</p>
     </article>
     <article class="home-card">
-      <span class="home-card-index">🔩</span>
+      <span class="home-card-index">✍️</span>
       <h2><code>set</code></h2>
-      <p>像把某颗螺丝拧进新位置，或者换成另一种零件。</p>
+      <p>真的改。像把某一格重新写上新的值。</p>
     </article>
     <article class="home-card">
-      <span class="home-card-index">🪛</span>
+      <span class="home-card-index">🧹</span>
       <h2><code>unset</code></h2>
-      <p>像把某颗螺丝卸下来，让那里恢复成“没装这个”的状态。</p>
+      <p>把那一格擦掉。不是改成“空字符串”，而是把这项配置拿掉。</p>
     </article>
     <article class="home-card">
-      <span class="home-card-index">📐</span>
+      <span class="home-card-index">📘</span>
       <h2><code>file</code> / <code>schema</code> / <code>validate</code></h2>
-      <p>像看图纸放在哪、标准长什么样、现在有没有装歪。</p>
+      <p>一个看账本放哪，一个看规则长什么样，一个做整本检查。</p>
     </article>
   </div>
 </section>
 
 <section class="section-shell">
   <div class="section-heading">
-    <p class="section-kicker">第二站</p>
-    <h2>📍 路径就是“哪一颗螺丝”，值就是“你要拧成什么样”</h2>
-    <p>看起来像长长的点号路径，其实就是在说“具体改哪一处”。</p>
+    <p class="section-kicker">第二步</p>
+    <h2>🚪 路径像门牌号，越长就表示你走得越里面</h2>
+    <p>点号和方括号看起来很工程，其实只是“沿着门牌往里走”。</p>
   </div>
   <div class="story-grid">
     <div class="source-card">
       <div class="story-card-label"><code>openclaw config get browser.executablePath</code></div>
-      <p>像先问：“浏览器可执行文件这颗螺丝，现在指向哪？”</p>
+      <p>像问：“浏览器那间房里，真正开门的程序现在写的是谁？”</p>
     </div>
     <div class="source-card">
-      <div class="story-card-label"><code>openclaw config set gateway.port 19001</code></div>
-      <p>像直接把门牌号从一个数拧到另一个数。</p>
+      <div class="story-card-label"><code>openclaw config set agents.defaults.heartbeat.every "2h"</code></div>
+      <p>像走进 agent 默认设置那间房，把“多久报一次平安”改成两小时。</p>
     </div>
     <div class="source-card">
       <div class="story-card-label"><code>agents.list[0].tools.exec.node</code></div>
-      <p>像不只拧大厅螺丝，还能钻进第一个 agent 的小抽屉里拧里面那颗。</p>
+      <p>方括号里的 <code>[0]</code> 像“先打开第 1 个抽屉”，再继续往里面找小盒子。</p>
     </div>
     <div class="source-card">
-      <div class="story-card-label"><code>unset ...apiKey</code></div>
-      <p>像把一颗凭证螺丝整个拆掉，不留假的空壳。</p>
+      <div class="story-card-label"><code>openclaw config unset plugins.entries.brave.config.webSearch.apiKey</code></div>
+      <p>像沿着一串门牌走到底，把 Brave 搜索那把钥匙整把拿掉。</p>
     </div>
   </div>
 </section>
 
 <section class="section-shell">
   <div class="section-heading">
-    <p class="section-kicker">第三站</p>
-    <h2>🪪 SecretRef builder 和 provider builder，像“帮你装钥匙柜”和“帮你做取钥匙机器”</h2>
-    <p>这是这页最容易把人看晕的地方，但一旦换成画面就很好懂。</p>
-  </div>
-  <div class="story-grid">
-    <div class="story-card">
-      <div class="story-card-label">🔐 SecretRef builder</div>
-      <p>像告诉系统：“这把钥匙不放明面上，它在某个钥匙柜里，去那里拿。”</p>
-    </div>
-    <div class="story-card">
-      <div class="story-card-label">🏭 provider builder</div>
-      <p>像不只是指向钥匙柜，而是直接装一台“取钥匙机器”，比如从 env、文件、命令里拿。</p>
-    </div>
-    <div class="story-card">
-      <div class="story-card-label"><code>--ref-provider --ref-source --ref-id</code></div>
-      <p>像给钥匙柜写上“去哪拿、谁负责、编号几号”。</p>
-    </div>
-    <div class="source-card">
-      <div class="story-card-label"><code>--provider-command ...</code></div>
-      <p>像你不是从柜子拿，而是让一台取件机去执行一段命令，把钥匙取回来。</p>
-    </div>
-  </div>
-</section>
-
-<section class="section-shell">
-  <div class="section-heading">
-    <p class="section-kicker">第四站</p>
-    <h2>📦 Batch mode 是“别一颗颗拧，直接拿一张施工单一起改”</h2>
-    <p>当你一次要改很多处时，batch 就像一张集中施工单。</p>
+    <p class="section-kicker">第三步</p>
+    <h2>🪄 <code>set</code> 不止一种改法，它有四种手势</h2>
+    <p>这是这页最值钱的地方。别只记“set 能改值”，要记住它有四种改东西的方式。</p>
   </div>
   <div class="home-grid">
     <article class="home-card">
-      <span class="home-card-index">🧾</span>
-      <h2><code>--batch-json</code></h2>
-      <p>像你把一整张施工清单直接贴在命令后面。</p>
+      <span class="home-card-index">1</span>
+      <h2>普通写值</h2>
+      <p>最直接。像把门牌号改成 <code>19001</code>，把路径改成另一个文件位置。</p>
     </article>
     <article class="home-card">
-      <span class="home-card-index">📄</span>
-      <h2><code>--batch-file</code></h2>
-      <p>像你把施工单另外写在一个文件里，再让它按单子施工。</p>
+      <span class="home-card-index">2</span>
+      <h2>SecretRef builder</h2>
+      <p>不是把秘密写进账本，而是写一张“去哪里拿秘密”的取件单。</p>
     </article>
     <article class="home-card">
-      <span class="home-card-index">📌</span>
-      <h2>批处理以单子为准</h2>
-      <p>官方特地说 batch payload 才是唯一真相，不会再被别的解析模式扰乱。</p>
+      <span class="home-card-index">3</span>
+      <h2>Provider builder</h2>
+      <p>更进一步，直接把“取秘密的机器”装进系统里。</p>
     </article>
     <article class="home-card">
-      <span class="home-card-index">🎈</span>
-      <h2>一句话</h2>
-      <p>改一堆时，别一颗颗拧，直接交施工单。</p>
+      <span class="home-card-index">4</span>
+      <h2>Batch mode</h2>
+      <p>一次改很多格，不一条条敲，直接递一张施工总单。</p>
     </article>
   </div>
 </section>
 
 <section class="section-shell">
   <div class="section-heading">
-    <p class="section-kicker">第五站</p>
-    <h2>🧪 <code>--dry-run</code> 很重要，它像“先拿样板比一下，不真下手”</h2>
-    <p>这页最稳的地方就是 dry run。尤其改 SecretRef、provider、批量配置时，先试演一遍特别值。</p>
+    <p class="section-kicker">命令翻译</p>
+    <h2>🔐 SecretRef builder 这段，其实是在写“藏宝图”</h2>
+    <p>官方命令看着长，是因为它不是在写秘密本身，而是在写“秘密藏在哪”。</p>
   </div>
   <div class="story-grid">
-    <div class="story-card">
-      <div class="story-card-label"><code>--dry-run</code></div>
-      <p>像装修师傅先在墙上比划，不立刻打孔。</p>
-    </div>
-    <div class="story-card">
-      <div class="story-card-label">schema checks</div>
-      <p>像先看你这颗零件形状对不对，别硬塞错口。</p>
-    </div>
-    <div class="story-card">
-      <div class="story-card-label">resolvability checks</div>
-      <p>像再确认那把钥匙柜里真的有钥匙，不是写了编号却拿不到。</p>
-    </div>
     <div class="source-card">
-      <div class="story-card-label"><code>--allow-exec</code></div>
-      <p>像你愿意让“取钥匙机器”也真的先跑一遍，看看它能不能把钥匙带回来。</p>
+      <div class="story-card-label"><code>openclaw config set channels.discord.token --ref-provider default --ref-source env --ref-id DISCORD_BOT_TOKEN</code></div>
+      <p>这整句翻成人话就是：“Discord 机器人门卡不直接写在账本里。去默认秘密仓库里，从环境变量那一排，找编号叫 <code>DISCORD_BOT_TOKEN</code> 的那张卡。”</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>--ref-provider</code></div>
+      <p>像在说“去哪个仓库拿”。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>--ref-source</code></div>
+      <p>像在说“仓库里是从哪一类架子拿”。这里是环境变量那一架。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>--ref-id</code></div>
+      <p>像那张卡的具体编号。没有编号，仓库管理员也不知道该递哪张。</p>
     </div>
   </div>
 </section>
 
 <section class="section-shell">
   <div class="section-heading">
-    <p class="section-kicker">第六站</p>
-    <h2>✅ <code>validate</code> 是“整屋巡一圈，看看有没有哪颗螺丝已经拧歪”</h2>
-    <p>这和 <code>set</code> 不一样。它不改，只检查。</p>
+    <p class="section-kicker">命令翻译</p>
+    <h2>🏭 Provider builder 是“把取件机器先装好”</h2>
+    <p>如果 SecretRef 像取件单，那 provider 就像取件柜本身。尤其 <code>exec</code> 模式，画面感最强。</p>
   </div>
   <div class="story-grid">
     <div class="source-card">
-      <div class="story-card-label"><code>openclaw config validate</code></div>
-      <p>像叫验收员进屋，从头到尾看一遍现在的配置有没有违反图纸。</p>
+      <div class="story-card-label"><code>openclaw config set secrets.providers.vault --provider-source exec --provider-command /usr/local/bin/openclaw-vault --provider-arg read --provider-arg openai/api-key --provider-timeout-ms 5000</code></div>
+      <p>这句像在说：“装一台叫 <code>vault</code> 的取件机。它的工作方法是运行 <code>openclaw-vault</code>，对它说 <code>read openai/api-key</code>，最多等 5 秒。”</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>--provider-command</code></div>
+      <p>像告诉工人：“机器本体就放这儿，按这个按钮启动。”</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>--provider-arg</code></div>
+      <p>像塞给机器一张小纸条，告诉它这次去取什么。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>--provider-json-only</code> / trusted-dir</div>
+      <p>这些像给机器加护栏：只能交规定格式的东西，只能在可信角落里开工。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">命令翻译</p>
+    <h2>📦 Batch mode 是“拿总施工单进场”</h2>
+    <p>当你一次要改很多处，官方建议用 <code>--batch-json</code> 或 <code>--batch-file</code>。这会比你一条条敲稳得多。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw config set --batch-json '[...]'</code></div>
+      <p>像施工队进场前先拿到一张总单：第一项装默认秘密仓库，第二项把 Discord token 指过去。不是现场边想边改。</p>
     </div>
     <div class="source-card">
-      <div class="story-card-label"><code>--json</code></div>
-      <p>像验收报告不要口头念，直接给机器能抄走的结构化单子。</p>
+      <div class="story-card-label"><code>openclaw config set --batch-file ./config-set.batch.json --dry-run</code></div>
+      <p>像先把施工单写进文件，再叫师傅照单演练一遍，但先不真的动墙。</p>
     </div>
-    <div class="source-card">
-      <div class="story-card-label"><code>config file</code> / <code>config schema</code></div>
-      <p>一个像告诉你图纸放在哪个抽屉，一个像把设计标准本身摊开给你看。</p>
+    <div class="story-card">
+      <div class="story-card-label">批处理以施工单为准</div>
+      <p>官方特地强调：在 batch 模式里，真正算数的是那张整单，不是别的零碎参数。</p>
     </div>
-    <div class="source-card">
+    <div class="story-card">
       <div class="story-card-label">🎈 一句话</div>
-      <p>改完配置后，拿它做一次整屋验收特别值。</p>
+      <p>零改动用镊子，一大串改动用施工单。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">最重要的保险</p>
+    <h2>🧪 <code>--dry-run</code> 就像“先彩排，不真动工”</h2>
+    <p>这部分真的要记住。因为它能帮你在写坏账本之前，先看一遍这次操作会不会撞墙。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">🎭</span>
+      <h2><code>--dry-run</code></h2>
+      <p>先演一遍，不落笔，不写入 <code>openclaw.json</code>。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">📏</span>
+      <h2>Schema 检查</h2>
+      <p>像看零件形状对不对，别把圆钉往方孔里塞。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🔎</span>
+      <h2>Resolvability 检查</h2>
+      <p>像确认藏宝图指向的地方，真的能拿到那把钥匙。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">⚠️</span>
+      <h2><code>--allow-exec</code></h2>
+      <p>默认不会真的跑取件命令，免得副作用乱飞。你愿意时，再显式让它试跑。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">最后一圈</p>
+    <h2>✅ <code>validate</code> 是“全屋总验收”，<code>schema</code> 是“把规则本摊开”</h2>
+    <p>这几个小命令看起来不起眼，但很实用。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw config file</code></div>
+      <p>像问：“我现在改的，到底是桌上哪一本账本？”</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw config schema</code></div>
+      <p>像把空白标准表整本摊开，让你看每个格子该长什么样。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw config validate --json</code></div>
+      <p>像请验收员巡完一圈后，顺手给你一份机器也能读懂的验收单。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">📌 记一句</div>
+      <p><code>config</code> 最稳的用法不是“闷头硬改”，而是“先看路径，再彩排，最后验收”。</p>
     </div>
   </div>
 </section>
@@ -4153,11 +4209,11 @@
 <section class="section-shell">
   <div class="section-heading">
     <p class="section-kicker">最后总结</p>
-    <h2>🎈 把 <code>openclaw config</code> 这页压成一句话</h2>
-    <p><code>openclaw config</code> 就是一把精细扳手：你可以点对点地看、拧、拆配置，也可以用施工单批量改，再用 dry run 和 validate 先试演、再验收。</p>
+    <h2>🎈 把这页压成一句最短的话</h2>
+    <p><code>openclaw config</code> 就是你拿着小镊子改总账本：门牌要找准，秘密别明写，大改动递施工单，真下手前先彩排，改完再整体验收。</p>
   </div>
   <div class="ad-placeholder">
-    <p>如果你下一页只想继续看一页，我建议看 <code>/cli/update</code>。因为房子装好以后，下一个常见问题就是：怎么安全升级，不把屋子搞塌。</p>
+    <p>如果你想看“有人带着你一步步改”，下一页就去 <code>/cli/configure</code>。它是同一栋楼里的带路老师版。</p>
   </div>
 </section>
 

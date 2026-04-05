@@ -3974,13 +3974,13 @@
   <div class="overview-card">
     <div>
       <p class="section-kicker">先讲人话版</p>
-      <h2>🧷 <code>openclaw mcp</code> 其实有两张脸：一张当柜台，一张当通讯录</h2>
-      <p>这页最容易看晕，因为官方把两件不同的事放在了一页里。第一件事，是让 OpenClaw 自己变成一个 MCP server。第二件事，是让 OpenClaw 记住别人的 MCP server 地址簿。</p>
-      <p>所以读这页时，先别急着看命令。先记住：`serve` 是“我来当柜台”，`list/show/set/unset` 是“我来管通讯录”。</p>
+      <h2>🌉 <code>openclaw mcp</code> 像一座“双面桥”</h2>
+      <p>这页最容易把人看晕，不是因为它难，而是因为官方把两件不同工作塞在了一页里。</p>
+      <p>一面，是让 OpenClaw 自己站到桥头，当 MCP 服务员。另一面，是让 OpenClaw 记住别家的桥头地址，等以后要用时再去找。</p>
     </div>
     <div class="overview-meta">
       <span>适合要把 OpenClaw 接进 MCP 世界的人</span>
-      <span>这页最重要的是分清：`serve` 在接客，`set/list/show/unset` 在记地址</span>
+      <span>这页最重要的是先分清：<code>serve</code> 在开桥，<code>list/show/set/unset</code> 在管地址簿</span>
       <a href="https://docs.openclaw.ai/cli/mcp" target="_blank" rel="noreferrer">查看官方原文</a>
     </div>
   </div>
@@ -3988,164 +3988,194 @@
 
 <section class="section-shell">
   <div class="section-heading">
-    <p class="section-kicker">第一站</p>
-    <h2>🎭 先把两张脸分开，不然整页会越看越像一锅粥</h2>
-    <p>官方开头其实已经说了答案，只是写得像工程笔记。翻成人话会更好记。</p>
+    <p class="section-kicker">第一眼</p>
+    <h2>🎭 先把这两张脸拆开，不然后面每一段都会像搅在一起的面糊</h2>
+    <p>真的只要记住这一句，整页就会瞬间顺很多。</p>
   </div>
   <div class="home-grid">
     <article class="home-card">
-      <span class="home-card-index">🪑</span>
+      <span class="home-card-index">🛎</span>
       <h2><code>openclaw mcp serve</code></h2>
-      <p>像 OpenClaw 自己坐到柜台后面，开始接待 MCP 客户端。</p>
+      <p>OpenClaw 自己站到桥头，开始接待 Codex、Claude Code 这类 MCP 客户端。</p>
     </article>
     <article class="home-card">
       <span class="home-card-index">📒</span>
       <h2><code>list / show / set / unset</code></h2>
-      <p>像维护一本通讯录，记住以后要联系的其他 MCP 服务器。</p>
+      <p>维护一本“别家 MCP 服务器通讯录”。先记住，不代表现在就真的去连。</p>
     </article>
     <article class="home-card">
-      <span class="home-card-index">🌉</span>
-      <h2>跟 ACP 不一样</h2>
-      <p>ACP 更像把 IDE 会话桥接进来；MCP 这页讲的是工具协议柜台和地址簿。</p>
+      <span class="home-card-index">🧰</span>
+      <h2>和 <code>openclaw acp</code> 不一样</h2>
+      <p><code>acp</code> 更像让 OpenClaw 自己托管 coding runtime。这里讲的是 MCP 桥头和地址簿。</p>
     </article>
     <article class="home-card">
       <span class="home-card-index">📌</span>
       <h2>一句话</h2>
-      <p>一半是“我来接客”，一半是“我来记别人地址”。</p>
+      <p>一半是“我来接客”，一半是“我先把别人门牌记下来”。</p>
     </article>
   </div>
 </section>
 
 <section class="section-shell">
   <div class="section-heading">
-    <p class="section-kicker">第二站</p>
-    <h2>🚪 <code>mcp serve</code> 是怎么开张的？像先把柜台支起来，再接到 Gateway 楼里</h2>
-    <p>官方把 lifecycle 列成了 1 到 5 步。其实就是一个开张过程。</p>
+    <p class="section-kicker">开桥过程</p>
+    <h2>🚪 <code>mcp serve</code> 开张时，现场会发生什么？</h2>
+    <p>官方列了 1 到 5 步。翻成人话，就是一个桥头岗亭开始营业的过程。</p>
   </div>
   <div class="story-grid">
     <div class="source-card">
-      <div class="story-card-label">1. MCP 客户端启动它</div>
-      <p>像有客人先把柜台叫出来，不是 OpenClaw 自己平白在街上摆摊。</p>
+      <div class="story-card-label">1. 客户端先把它叫起来</div>
+      <p>不是 OpenClaw 自己在街边摆摊，而是某个 MCP 客户端先启动 <code>openclaw mcp serve</code>，像把岗亭灯先打开。</p>
     </div>
     <div class="source-card">
-      <div class="story-card-label">2. 柜台去连 Gateway</div>
-      <p>像前台一摆好，就马上给楼里的总机房接一根线。</p>
+      <div class="story-card-label">2. 岗亭去连 Gateway</div>
+      <p>桥头岗亭亮起来后，会立刻往本地或远端 Gateway 拉一根线，像接上楼里的总机房。</p>
     </div>
     <div class="source-card">
-      <div class="story-card-label">3. 已有会话变成可见会话</div>
-      <p>像楼里本来就有记录的聊天抽屉，被搬到柜台上供客人翻看。</p>
+      <div class="story-card-label">3. 已有会话被搬上柜台</div>
+      <p>OpenClaw 里那些已经带路由信息的会话，会被整理成 MCP 可见的对话和工具入口。</p>
     </div>
     <div class="source-card">
-      <div class="story-card-label">4. 实时事件只在营业时积累</div>
-      <p>像柜台营业时才会记门口来人。打烊以后，门外那点新动静不会被这班柜台记住。</p>
+      <div class="story-card-label">4. 只在营业时记新动静</div>
+      <p>这个岗亭只会记它上班期间的新消息。它没开门的时候，不会替你偷偷补旧流水。</p>
     </div>
   </div>
 </section>
 
 <section class="section-shell">
   <div class="section-heading">
-    <p class="section-kicker">第三站</p>
-    <h2>🧰 那些工具名翻成人话，就是“翻本子、等新消息、回纸条、管审批”</h2>
-    <p>工具列表很多，但每个其实都能想成柜台动作。</p>
+    <p class="section-kicker">命令翻译</p>
+    <h2>🧳 官方那几条 <code>serve</code> 示例命令，分别在做什么？</h2>
+    <p>把这些命令翻成人话，就不会再觉得它们只是“参数拼盘”。</p>
   </div>
   <div class="story-grid">
-    <div class="story-card">
-      <div class="story-card-label"><code>conversations_list</code> / <code>conversation_get</code></div>
-      <p>像先看最近有哪些聊天本，再抽出其中一本细看。</p>
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw mcp serve</code></div>
+      <p>像说：“桥头岗亭就在本地开张，直接去连我眼前这栋楼里的 Gateway。”</p>
     </div>
-    <div class="story-card">
-      <div class="story-card-label"><code>messages_read</code></div>
-      <p>像翻聊天记录本，读最近写过什么。</p>
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw mcp serve --url wss://gateway-host:18789 --token-file ~/.openclaw/gateway.token</code></div>
+      <p>像说：“岗亭别连本地，去远处那栋楼。门口通行证别写在命令里，去这个文件里拿。”</p>
     </div>
-    <div class="story-card">
-      <div class="story-card-label"><code>events_poll</code> / <code>events_wait</code></div>
-      <p>一个像隔一会儿探头看门口，一个像干脆蹲在门口等下一位进来。</p>
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw mcp serve --url wss://gateway-host:18789 --password-file ~/.openclaw/gateway.password</code></div>
+      <p>这次不是拿令牌通行，而是从密码卡夹里拿一张密码卡，再去远端桥头敲门。</p>
     </div>
-    <div class="story-card">
-      <div class="story-card-label"><code>messages_send</code> / <code>permissions_respond</code></div>
-      <p>一个像顺着原路把回信递回去，一个像替审批单盖“这次准”“一直准”或“不准”的章。</p>
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw mcp serve --verbose</code> / <code>--claude-channel-mode off</code></div>
+      <p>前者像让岗亭值班员把日志念得更细，后者像关掉 Claude 那套专用传呼方式，只保留普通 MCP 说话方式。</p>
     </div>
   </div>
 </section>
 
 <section class="section-shell">
   <div class="section-heading">
-    <p class="section-kicker">第四站</p>
-    <h2>⏰ Event queue 这段最想提醒你：这是“营业期记事本”，不是全宇宙历史档案馆</h2>
-    <p>很多人会误会 `events_poll` 能倒着看到很久以前的消息。官方专门提醒不是这样。</p>
+    <p class="section-kicker">桥上工具</p>
+    <h2>🧰 这些工具名别死记，把它们想成桥头服务动作就行</h2>
+    <p>官方工具列表不少，但其实都很生活化。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">📚</span>
+      <h2><code>conversations_list</code> / <code>conversation_get</code></h2>
+      <p>像先看柜台上有哪些聊天本，再抽出其中一本翻封面和目录。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">📖</span>
+      <h2><code>messages_read</code> / <code>attachments_fetch</code></h2>
+      <p>一个是读聊天内容，一个是把里面夹着的图片、附件小纸片单独抽出来看。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🚪</span>
+      <h2><code>events_poll</code> / <code>events_wait</code></h2>
+      <p>一个像过一会儿探头看门口，一个像干脆守在门口等下一个人进来。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">✉️</span>
+      <h2><code>messages_send</code> / <code>permissions_respond</code></h2>
+      <p>一个是顺原路回信，一个是给审批单盖章：这次准、以后都准、还是不准。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">最容易误会</p>
+    <h2>⏰ 事件队列只是“营业期记事本”，不是古代到今天的总史书</h2>
+    <p>官方这里特别强调，是因为很多人会误会 <code>events_poll</code> 和 <code>events_wait</code> 能把很久以前的消息也倒出来。</p>
   </div>
   <div class="story-grid">
-    <div class="source-card">
-      <div class="story-card-label">📝 live-only queue</div>
-      <p>像柜台开门后才开始记流水账。开门前发生的事，不会自动补进来。</p>
+    <div class="story-card">
+      <div class="story-card-label">live-only</div>
+      <p>岗亭什么时候开门，记事本就从什么时候开始写。</p>
     </div>
-    <div class="source-card">
+    <div class="story-card">
       <div class="story-card-label"><code>events_wait</code></div>
-      <p>像坐在门口等下一声敲门，而不是翻旧账本。</p>
+      <p>像搬个小凳子守在门口等下一次敲门，盯的是“马上要来的动静”。</p>
     </div>
-    <div class="source-card">
+    <div class="story-card">
       <div class="story-card-label"><code>messages_read</code></div>
-      <p>你真要看旧历史，还是得回到聊天记录本里翻。</p>
+      <p>如果你想翻旧账，还是回聊天记录本里看，不要指望门口值班本替你补历史。</p>
     </div>
     <div class="source-card">
-      <div class="story-card-label">🎈 一句话</div>
-      <p>事件队列看新动静，聊天记录看旧故事。</p>
+      <div class="story-card-label">🎈 记一句</div>
+      <p>新动静看事件队列，旧故事看聊天记录。</p>
     </div>
   </div>
 </section>
 
 <section class="section-shell">
   <div class="section-heading">
-    <p class="section-kicker">第五站</p>
-    <h2>🧠 Claude mode 不是另一套桥，只是“同一个柜台，额外会一种客人方言”</h2>
-    <p>官方这里最容易让人以为又多了一层系统。其实不是，只是同一个 MCP 柜台多会一种 Claude 风格通知。</p>
+    <p class="section-kicker">Claude 那扇侧门</p>
+    <h2>🗣 <code>--claude-channel-mode</code> 只是“同一个岗亭会不会说 Claude 的方言”</h2>
+    <p>别把它想成又多了一座桥。桥还是同一座，只是通知方式多了一种口音。</p>
   </div>
   <div class="home-grid">
     <article class="home-card">
       <span class="home-card-index">off</span>
-      <h2><code>--claude-channel-mode off</code></h2>
-      <p>像今天只说标准普通话，不说 Claude 方言。</p>
+      <h2><code>off</code></h2>
+      <p>岗亭只说标准 MCP 普通话，不发 Claude 专属通知。</p>
     </article>
     <article class="home-card">
       <span class="home-card-index">on</span>
-      <h2><code>--claude-channel-mode on</code></h2>
-      <p>像除了普通话，还能把实时消息改成 Claude 听得懂的特别通知方式。</p>
+      <h2><code>on</code></h2>
+      <p>岗亭除了普通 MCP 工具，还会把实时消息换成 Claude 更熟悉的通知方式。</p>
     </article>
     <article class="home-card">
       <span class="home-card-index">auto</span>
       <h2><code>auto</code></h2>
-      <p>目前其实和 <code>on</code> 一样。官方明说现在还不会智能识别客人能力。</p>
+      <p>官方现在说得很实在：目前它的行为基本等于 <code>on</code>，还不会聪明地自己猜。</p>
     </article>
     <article class="home-card">
-      <span class="home-card-index">⚠️</span>
-      <h2>别把它当通用模式</h2>
-      <p>普通 MCP 客户端还是更应该用标准工具，不要硬吃 Claude 专属通知。</p>
+      <span class="home-card-index">📌</span>
+      <h2>一句话</h2>
+      <p>这不是第二套系统，只是同一个桥头多会一种通报方式。</p>
     </article>
   </div>
 </section>
 
 <section class="section-shell">
   <div class="section-heading">
-    <p class="section-kicker">第六站</p>
-    <h2>📒 `list/show/set/unset` 这半边，其实就是在管“以后可能要联系谁”</h2>
-    <p>这里不是开柜台，而是维护 OpenClaw 自己保存的 MCP 服务器清单。</p>
+    <p class="section-kicker">另一张脸</p>
+    <h2>📒 <code>list/show/set/unset</code> 这半边，只是在整理“以后可能会去拜访谁”</h2>
+    <p>官方专门说了，这几条命令只管理 <code>mcp.servers</code> 配置，不会真的连过去试试对方活没活。</p>
   </div>
   <div class="story-grid">
-    <div class="story-card">
+    <div class="source-card">
       <div class="story-card-label"><code>openclaw mcp list</code></div>
-      <p>像把通讯录翻开，看现在记了哪些服务器名字。</p>
+      <p>像把地址簿翻开，看里面已经记了哪些服务器名片。</p>
     </div>
-    <div class="story-card">
+    <div class="source-card">
       <div class="story-card-label"><code>openclaw mcp show &lt;name&gt;</code></div>
-      <p>像看其中某个联系人的完整名片。</p>
+      <p>像把某一张名片抽出来，看它的启动命令、参数、环境变量和工作目录。</p>
     </div>
-    <div class="story-card">
-      <div class="story-card-label"><code>openclaw mcp set &lt;name&gt; &lt;json&gt;</code></div>
-      <p>像把一张新名片夹进通讯录，记住它的命令、参数、地址和环境变量。</p>
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw mcp set ...</code></div>
+      <p>像往地址簿里夹入一张新名片，写明以后该怎么敲这扇门。</p>
     </div>
-    <div class="story-card">
-      <div class="story-card-label"><code>openclaw mcp unset &lt;name&gt;</code></div>
-      <p>像把那张名片从通讯录里抽掉。但注意，这不是去现场检查对方服务器活没活。</p>
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw mcp unset ...</code></div>
+      <p>像把名片抽走。只是从你的本子里删掉，不是跑去把别人家门拆了。</p>
     </div>
   </div>
 </section>
@@ -4153,11 +4183,11 @@
 <section class="section-shell">
   <div class="section-heading">
     <p class="section-kicker">最后总结</p>
-    <h2>🎈 把 <code>openclaw mcp</code> 这页压成一句话</h2>
-    <p><code>openclaw mcp</code> 有两件事：`serve` 让 OpenClaw 坐上 MCP 柜台接客，`list/show/set/unset` 让它维护一本文档式通讯录，记住别的 MCP 服务器以后怎么联系。</p>
+    <h2>🎈 把这页压成一句最短的话</h2>
+    <p><code>openclaw mcp</code> 是一座双面桥：<code>serve</code> 让 OpenClaw 站上桥头接客，事件队列只记营业期的新动静；<code>list/show/set/unset</code> 则让它先把别家桥头名片收进地址簿。</p>
   </div>
   <div class="ad-placeholder">
-    <p>如果你下一页只想继续看一页，我建议看 <code>/cli/node</code>。因为当 OpenClaw 开始接更多外部世界时，下一步很自然就是让它把手伸到别的机器上去干活。</p>
+    <p>如果你想看“OpenClaw 自己托管 coding runtime”那条路，下一页去 <code>/cli/acp</code>。它和这页是两种不同的桥法。</p>
   </div>
 </section>
 
