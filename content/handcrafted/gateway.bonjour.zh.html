@@ -1,0 +1,194 @@
+<section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>📡 <code>Bonjour / mDNS discovery</code> 像“小区门口的小广播”</h2>
+      <p>这页讲的是：在同一个局域网里，OpenClaw 怎么把 Gateway 找出来。它像门口广播牌，方便，但不是万能钥匙。</p>
+      <p>如果网络隔得远，官方更推荐走 Tailscale 的宽域 Bonjour，像把广播牌搬到更远的街区里继续用。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合想让本地设备自动发现 Gateway 的人</span>
+      <span>这页最重要的是先分清：Bonjour 是便利发现，不是安全连接本身</span>
+      <a href="https://docs.openclaw.ai/gateway/bonjour" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一眼</p>
+    <h2>🏘 它只管同一片小区里的找路，不负责跨城跑腿</h2>
+    <p>官方说得很明确：Bonjour 是 LAN-only convenience。意思就是，它像楼门口的临时指示牌，只在附近好使。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">📣</span>
+      <h2>Bonjour / mDNS</h2>
+      <p>像在小区门口立一块广播牌：“Gateway 在这里。”</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🏡</span>
+      <h2>LAN-only</h2>
+      <p>只在同一片小区里有用。离得太远，广播就听不见了。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🧭</span>
+      <h2>Best effort</h2>
+      <p>它会尽量帮你找，但不保证每次都一定成功。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">📌</span>
+      <h2>一句话</h2>
+      <p>这是“方便找门”，不是“保证连门”。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">跨网络</p>
+    <h2>🌍 如果不在同一片小区，就把广播改成宽域版</h2>
+    <p>官方给的方案很像：“门口广播牌跨不过马路？那就用 Tailscale 把它接到另一边。”</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label">Wide-area Bonjour</div>
+      <p>像把同一块门牌广告，改成能沿着专线送到远处的版本。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">Split DNS</div>
+      <p>像给不同街区配不同的指路员，让大家都能朝同一个广播源去找。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw dns setup --apply</code></div>
+      <p>像在门口装一台正式的广播机，把 CoreDNS 和记录都准备好。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw.internal.</code></div>
+      <p>这只是官方举的例子，不是唯一答案。你自己的发现域名也可以换。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">命令翻译</p>
+    <h2>🛠 这几条命令，就是在给小区广播牌和收音机做配套</h2>
+    <p>从安装到验证，官方给的是一整套“先建广播台，再去听广播”的动作。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">⚙️</span>
+      <h2><code>openclaw dns setup --apply</code></h2>
+      <p>像把广播机真正装上去，不只是看说明书。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🎧</span>
+      <h2><code>dns-sd -B _openclaw-gw._tcp openclaw.internal.</code></h2>
+      <p>像站在收音机前问：“附近有没有 Gateway 的广播？”</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🧾</span>
+      <h2><code>dig @&lt;TAILNET_IPV4&gt; -p 53 ... PTR +short</code></h2>
+      <p>像把广播信号拆成一张清单，看看记录到底有没有发出来。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">📌</span>
+      <h2>一句话</h2>
+      <p>先装广播台，再确认收音机真的能听到。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">广播内容</p>
+    <h2>📦 广播牌上只放“提示”，不会把秘密也贴出去</h2>
+    <p>官方特意提醒：TXT 记录是非秘密提示，不是安全凭证。它只是帮你更快找门。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>role=gateway</code></div>
+      <p>像牌子上写着：“我是 Gateway，不是别的机器。”</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>displayName</code> / <code>lanHost</code></div>
+      <p>像门口贴了个好认的名字和本地门牌。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>gatewayPort</code> / <code>gatewayTlsSha256</code></div>
+      <p>像告诉你大概该往哪个窗口去，但不能把这些提示当成最终认证。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">安全提醒</div>
+      <p>广播牌不是身份证。真正连上去时，还是要走明确的 endpoint 和用户确认。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">调试</p>
+    <h2>🧰 找不到门时，先查广播，再查日志，再查名字</h2>
+    <p>官方给了 macOS、Gateway 日志、iOS 节点三种方向。像排队找不到人，就从广播、记录本、终端消息三处一起看。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">🪟</span>
+      <h2>macOS 上的 <code>dns-sd</code></h2>
+      <p>像站在小区广播牌前，看看列表里有没有那盏灯。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🧾</span>
+      <h2>Gateway 日志里的 <code>bonjour:</code></h2>
+      <p>像翻广播台值班记录，看是不是广告没发出去、名字冲突了、或者服务没被成功宣布。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">📱</span>
+      <h2>iOS 的 Discovery Logs</h2>
+      <p>像在手机里看收音机到底有没有扫到那条频道。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">⚠️</span>
+      <h2>常见失败</h2>
+      <p>跨网络、Wi‑Fi 禁 mDNS、睡眠唤醒、名字太花哨，都是最常见的卡点。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">配置开关</p>
+    <h2>🔕 想关广播，也有现成开关</h2>
+    <p>官方把关广播的办法写得很直接：你可以让它不播，也可以改广播里贴的提示。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>OPENCLAW_DISABLE_BONJOUR=1</code></div>
+      <p>像直接把小区广播机的电源关掉。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>gateway.bind</code></div>
+      <p>像决定这台门口广播机到底往哪面墙开口。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>OPENCLAW_SSH_PORT</code> / <code>OPENCLAW_TAILNET_DNS</code></div>
+      <p>像广播牌上还顺手贴了 SSH 门牌和 MagicDNS 提示。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">📌 记一句</div>
+      <p>Bonjour 负责“让你更快找到门”，不是“让门自动变安全”。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">最后总结</p>
+    <h2>🎈 把这页压成一句最短的话</h2>
+    <p><code>Bonjour / mDNS</code> 就像小区门口的小广播：同一片网里帮你找到 Gateway，跨网就改用宽域 Bonjour 和 Tailscale，真正连接时还是要看 endpoint 和证书，不要把广播牌当身份证。</p>
+  </div>
+  <div class="ad-placeholder">
+    <p>如果你下一页想继续看“Gateway 起来以后，后台是怎么跑的”，就去 <code>/gateway/background-process</code>。</p>
+  </div>
+</section>

@@ -3970,864 +3970,257 @@
   
       </div>
 
-      
-    <section class="section-shell">
-      <div class="overview-card">
-        <div>
-          <p class="section-kicker">先听这页的人话版</p>
-          <h2>Setup</h2>
-          <p>这一页像一本关于“Setup”的小绘本，它先告诉我们这位机器人朋友会做什么，再一步一步解释什么时候该这样做。 你可以先把它想成：Setup。</p>
-          <p>如果把这页当成“给普通人看的版本”，你最应该带走的是：它到底在教你一件什么事、什么时候要这样做、以及哪里最容易踩坑。</p>
-        </div>
-        <div class="overview-meta">
-          <span>原始路径：/start/setup</span>
-          <span>章节数量：16</span>
-          <a href="https://docs.openclaw.ai/start/setup" target="_blank" rel="noreferrer">查看原文</a>
-        </div>
-      </div>
-    </section>
-    
-        <section class="section-shell" id="section-1">
-          <div class="section-heading">
-            <p class="section-kicker">第 1 站</p>
-            <h2>Start Here</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Setup &lt;Note&gt; If you are setting up for the first time, start with Getting Started. For onboarding details, see Onboardi…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Setup”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p># Setup</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Note&gt; If you are setting up for the first time, start with Getting Started. For onboarding details, see Onboarding (CL…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>&lt;Note&gt; If you are setting up for the first time, start with <a href="/start/getting-started" target="_blank" rel="noreferrer">Getting Started</a>. For onboarding details, see <a href="/start/wizard" target="_blank" rel="noreferrer">Onboarding (CLI)</a>. &lt;/Note&gt;</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-2">
-          <div class="section-heading">
-            <p class="section-kicker">第 2 站</p>
-            <h2>TL;DR</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“TL;DR”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：**Tailoring lives outside the repo:** ~/.…、**Stable workflow:** install the macOS ap…、**Bleeding edge workflow:** run the 门口的小门…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>**Tailoring lives outside the repo:** <code>~/.openclaw/workspace</code> (workspace) + <code>~/.openclaw/openclaw.json</code> (config).</li><li>**Stable workflow:** install the macOS app; let it run the bundled Gateway.</li><li>**Bleeding edge workflow:** run the Gateway yourself via <code>pnpm gateway:watch</code>, then let the macOS app attach in Local mode.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-3">
-          <div class="section-heading">
-            <p class="section-kicker">第 3 站</p>
-            <h2>Prereqs (from source)</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Prereqs (from source)”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Node 24 recommended (Node 22 LTS, current…、pnpm、Docker (optional; only for containerized…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Node 24 recommended (Node 22 LTS, currently <code>22.14+</code>, still supported)</li><li><code>pnpm</code></li><li>Docker (optional; only for containerized setup/e2e — see <a href="/install/docker" target="_blank" rel="noreferrer">Docker</a>)</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-4">
-          <div class="section-heading">
-            <p class="section-kicker">第 4 站</p>
-            <h2>Tailoring strategy (so updates do not hurt)</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“If you want “100% tailored to me” *and* easy updates, keep your customization in: Bootstrap once: From inside this repo…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“If you want “100% tailored to me” *and* easy updates, keep your customization in:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>If you want “100% tailored to me” *and* easy updates, keep your customization in:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Tailoring strategy (so updates do not hurt)”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：**设置说明书:** ~/.openclaw/openclaw.json (JSO…、**Workspace:** ~/.openclaw/workspace (ski…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>**Config:** <code>~/.openclaw/openclaw.json</code> (JSON/JSON5-ish)</li><li>**Workspace:** <code>~/.openclaw/workspace</code> (skills, prompts, memories; make it a private git repo)</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Bootstrap once:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Bootstrap once:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一句直接对 OpenClaw 说的话，就像对小助手下达任务。</p>
-        <ul class="code-steps">
-          <li>这一句是在直接叫 OpenClaw 做事：“openclaw setup”。你可以把它想成对机器人说的完整命令。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">openclaw setup</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“From inside this repo, use the local CLI entry:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>From inside this repo, use the local CLI entry:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一句直接对 OpenClaw 说的话，就像对小助手下达任务。</p>
-        <ul class="code-steps">
-          <li>这一句是在直接叫 OpenClaw 做事：“openclaw setup”。你可以把它想成对机器人说的完整命令。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">openclaw setup</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“If you don’t have a global install yet, run it via pnpm openclaw setup.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>If you don’t have a global install yet, run it via <code>pnpm openclaw setup</code>.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-5">
-          <div class="section-heading">
-            <p class="section-kicker">第 5 站</p>
-            <h2>Run the 门口的小门卫 from this repo</h2>
-            <p>这一节主要在解释“Run the 门口的小门卫 from this repo”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“Run the 门口的小门卫 from this repo”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“After pnpm build, you can run the packaged CLI directly:”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“After pnpm build, you can run the packaged CLI directly:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>After <code>pnpm build</code>, you can run the packaged CLI directly:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一串终端魔法口令，像按步骤按下几个按钮，让电脑开始干活。</p>
-        <ul class="code-steps">
-          <li>这一行“node openclaw.mjs gateway --port 18789 --verbose”是当前步骤要交给电脑的一小块提示。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">node openclaw.mjs gateway --port 18789 --verbose</code></pre>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-6">
-          <div class="section-heading">
-            <p class="section-kicker">第 6 站</p>
-            <h2>Stable workflow (macOS app first)</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“1. Install + launch **OpenClaw\.app** (menu bar). 2. Complete the onboarding/permissions checklist (TCC prompts). 3. En…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“1. Install + launch **OpenClaw\.app** (menu bar). 2. Complete the onboarding/permissions checklist (TCC prompts). 3. En…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>1. Install + launch **OpenClaw\.app** (menu bar). 2. Complete the onboarding/permissions checklist (TCC prompts). 3. Ensure Gateway is **Local** and running (the app manages it). 4. Link surfaces (example: WhatsApp):</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一句直接对 OpenClaw 说的话，就像对小助手下达任务。</p>
-        <ul class="code-steps">
-          <li>这一句是在直接叫 OpenClaw 做事：“openclaw channels login”。你可以把它想成对机器人说的完整命令。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">openclaw channels login</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“5. Sanity check:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>5. Sanity check:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一句直接对 OpenClaw 说的话，就像对小助手下达任务。</p>
-        <ul class="code-steps">
-          <li>这一句是在直接叫 OpenClaw 做事：“openclaw health”。你可以把它想成对机器人说的完整命令。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">openclaw health</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“If onboarding is not available in your build:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>If onboarding is not available in your build:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Stable workflow (macOS app first)”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Run openclaw setup, then openclaw 消息通道s l…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Run <code>openclaw setup</code>, then <code>openclaw channels login</code>, then start the Gateway manually (<code>openclaw gateway</code>).</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-7">
-          <div class="section-heading">
-            <p class="section-kicker">第 7 站</p>
-            <h2>Bleeding edge workflow (门口的小门卫 in a terminal)</h2>
-            <p>这一节主要在解释“Bleeding edge workflow (门口的小门卫 in a terminal)”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“Bleeding edge workflow (门口的小门卫 in a terminal)”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Goal: work on the TypeScript 门口的小门卫, get hot reload, keep the macOS app UI attached.”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Goal: work on the TypeScript 门口的小门卫, get hot reload, keep the macOS app UI attached.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Goal: work on the TypeScript Gateway, get hot reload, keep the macOS app UI attached.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-8">
-          <div class="section-heading">
-            <p class="section-kicker">第 8 站</p>
-            <h2>0) (Optional) Run the macOS app from source too</h2>
-            <p>这一节主要在解释“0) (Optional) Run the macOS app from source too”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“0) (Optional) Run the macOS app from source too”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“If you also want the macOS app on the bleeding edge:”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“If you also want the macOS app on the bleeding edge:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>If you also want the macOS app on the bleeding edge:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一串终端魔法口令，像按步骤按下几个按钮，让电脑开始干活。</p>
-        <ul class="code-steps">
-          <li>这一行“./scripts/restart-mac.sh”是当前步骤要交给电脑的一小块提示。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">./scripts/restart-mac.sh</code></pre>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-9">
-          <div class="section-heading">
-            <p class="section-kicker">第 9 站</p>
-            <h2>1) Start the dev 门口的小门卫</h2>
-            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>你理解的是能力边界，不只是功能名字。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“门口的小门卫:watch runs the 门口的小门卫 in watch mode and reloads on relevant source, 设置说明书, and bundled-新本领插件 metadata changes.”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一串终端魔法口令，像按步骤按下几个按钮，让电脑开始干活。</p>
-        <ul class="code-steps">
-          <li>这一句是在终端里按下开始按钮：“pnpm install”。它会让电脑去请求、安装或构建东西。</li><li>这里在给“pnpm gateway”贴标签，意思是把它设置成“watch”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">pnpm install
-pnpm gateway:watch</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“门口的小门卫:watch runs the 门口的小门卫 in watch mode and reloads on relevant source, 设置说明书, and bundled-新本领插件 metadata changes.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p><code>gateway:watch</code> runs the gateway in watch mode and reloads on relevant source, config, and bundled-plugin metadata changes.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-10">
-          <div class="section-heading">
-            <p class="section-kicker">第 10 站</p>
-            <h2>2) Point the macOS app at your running 门口的小门卫</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“In **OpenClaw\.app**: The app will attach to the running 门口的小门卫 on the 设置说明书ured port.”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“In **OpenClaw\.app**:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>In **OpenClaw\.app**:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“The app will attach to the running 门口的小门卫 on the 设置说明书ured port.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>The app will attach to the running gateway on the configured port.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“2) Point the macOS app at your running Gateway”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Connection Mode: **Local**。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Connection Mode: **Local**</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-11">
-          <div class="section-heading">
-            <p class="section-kicker">第 11 站</p>
-            <h2>3) Verify</h2>
-            <p>这一节主要在解释“3) Verify”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“3) Verify”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“3) Verify”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：In-app 门口的小门卫 status should read **“Using…、Or via CLI:。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>In-app Gateway status should read **“Using existing gateway …”**</li><li>Or via CLI:</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一句直接对 OpenClaw 说的话，就像对小助手下达任务。</p>
-        <ul class="code-steps">
-          <li>这一句是在直接叫 OpenClaw 做事：“openclaw health”。你可以把它想成对机器人说的完整命令。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">openclaw health</code></pre>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-12">
-          <div class="section-heading">
-            <p class="section-kicker">第 12 站</p>
-            <h2>Common footguns</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Common footguns”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：**Wrong port:** 门口的小门卫 WS defaults to ws:…、**Where state lives:**、Credentials: ~/.openclaw/credentials/、Sessions: ~/.openclaw/机器人朋友s/&lt;机器人朋友Id&gt;/se…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>**Wrong port:** Gateway WS defaults to <code>ws://127.0.0.1:18789</code>; keep app + CLI on the same port.</li><li>**Where state lives:**</li><li>Credentials: <code>~/.openclaw/credentials/</code></li><li>Sessions: <code>~/.openclaw/agents/&lt;agentId&gt;/sessions/</code></li><li>Logs: <code>/tmp/openclaw/</code></li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-13">
-          <div class="section-heading">
-            <p class="section-kicker">第 13 站</p>
-            <h2>Credential storage map</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Use this when debugging auth or deciding what to back up: More detail: 安全守门员.”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Use this when debugging auth or deciding what to back up:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Use this when debugging auth or deciding what to back up:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“More detail: 安全守门员.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>More detail: <a href="/gateway/security#credential-storage-map" target="_blank" rel="noreferrer">Security</a>.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Credential storage map”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：**WhatsApp**: ~/.openclaw/credentials/wha…、**Telegram bot token**: 设置说明书/env or 消息通道…、**Discord bot token**: 设置说明书/env or Secre…、**Slack tokens**: 设置说明书/env (消息通道s.slack.…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>**WhatsApp**: <code>~/.openclaw/credentials/whatsapp/&lt;accountId&gt;/creds.json</code></li><li>**Telegram bot token**: config/env or <code>channels.telegram.tokenFile</code> (regular file only; symlinks rejected)</li><li>**Discord bot token**: config/env or SecretRef (env/file/exec providers)</li><li>**Slack tokens**: config/env (<code>channels.slack.*</code>)</li><li>**Pairing allowlists**:</li><li><code>~/.openclaw/credentials/&lt;channel&gt;-allowFrom.json</code> (default account)</li><li><code>~/.openclaw/credentials/&lt;channel&gt;-&lt;accountId&gt;-allowFrom.json</code> (non-default accounts)</li><li>**Model auth profiles**: <code>~/.openclaw/agents/&lt;agentId&gt;/agent/auth-profiles.json</code></li><li>**File-backed secrets payload (optional)**: <code>~/.openclaw/secrets.json</code></li><li>**Legacy OAuth import**: <code>~/.openclaw/credentials/oauth.json</code></li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-14">
-          <div class="section-heading">
-            <p class="section-kicker">第 14 站</p>
-            <h2>Updating (without wrecking your setup)</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Updating (without wrecking your setup)”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Keep ~/.openclaw/workspace and ~/.opencla…、Updating source: git pull + pnpm install…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Keep <code>~/.openclaw/workspace</code> and <code>~/.openclaw/</code> as “your stuff”; don’t put personal prompts/config into the <code>openclaw</code> repo.</li><li>Updating source: <code>git pull</code> + <code>pnpm install</code> (when lockfile changed) + keep using <code>pnpm gateway:watch</code>.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-15">
-          <div class="section-heading">
-            <p class="section-kicker">第 15 站</p>
-            <h2>Linux (systemd user service)</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Linux installs use a systemd **user** service. By default, systemd stops user services on logout/idle, which kills the…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Linux installs use a systemd **user** service. By default, systemd stops user services on logout/idle, which kills the…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Linux installs use a systemd **user** service. By default, systemd stops user services on logout/idle, which kills the Gateway. Onboarding attempts to enable lingering for you (may prompt for sudo). If it’s still off, run:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一串终端魔法口令，像按步骤按下几个按钮，让电脑开始干活。</p>
-        <ul class="code-steps">
-          <li>这一行“sudo loginctl enable-linger $USER”是当前步骤要交给电脑的一小块提示。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">sudo loginctl enable-linger $USER</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“For always-on or multi-user 大房子服务器s, consider a **system** service instead of a user service (no lingering needed). See…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>For always-on or multi-user servers, consider a **system** service instead of a user service (no lingering needed). See <a href="/gateway" target="_blank" rel="noreferrer">Gateway runbook</a> for the systemd notes.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-16">
-          <div class="section-heading">
-            <p class="section-kicker">第 16 站</p>
-            <h2>Related docs</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Related docs”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：门口的小门卫 runbook (flags, supervision, ports)、门口的小门卫 设置说明书uration (设置说明书 schema + examp…、Discord and Telegram (reply tags + replyT…、OpenClaw assistant setup。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><a href="/gateway" target="_blank" rel="noreferrer">Gateway runbook</a> (flags, supervision, ports)</li><li><a href="/gateway/configuration" target="_blank" rel="noreferrer">Gateway configuration</a> (config schema + examples)</li><li><a href="/channels/discord" target="_blank" rel="noreferrer">Discord</a> and <a href="/channels/telegram" target="_blank" rel="noreferrer">Telegram</a> (reply tags + replyToMode settings)</li><li><a href="/start/openclaw" target="_blank" rel="noreferrer">OpenClaw assistant setup</a></li><li><a href="/platforms/macos" target="_blank" rel="noreferrer">macOS app</a> (gateway lifecycle)</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-    <section class="section-shell">
-      <div class="ad-placeholder">
-        <p>这里预留给未来的 Google AdSense 模块。</p>
-        <code>&lt;!-- ADSENSE_SNIPPET --&gt;</code>
-      </div>
-    </section>
-  
+      <section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>🏡 <code>Setup</code> 像“把新家先安稳落地”</h2>
+      <p>这页不是在讲一堆艰深名词。它只是在说：先把房子摆好，再让 OpenClaw 真正住进去。</p>
+      <p>你可以把它想成安家手册。哪些东西放在家外面，哪些东西放在门口，哪些东西先用官方稳稳的方式跑起来，这页都帮你定好。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合第一次真正把 OpenClaw 放进电脑的人</span>
+      <span>这页最重要的不是“快”，而是“稳”</span>
+      <a href="https://docs.openclaw.ai/start/setup" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一步</p>
+    <h2>🧳 开家门前，先记住两件最要紧的事</h2>
+    <p>官方一开头就把边界讲得很清楚：有些东西放在仓库外面，有些东西放在家里门口。这样以后改起来不会互相踩脚。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">📦</span>
+      <h2>配置放家外</h2>
+      <p><code>~/.openclaw/openclaw.json</code> 像你的私人收纳盒，别塞进仓库里。这样你更新代码的时候，不会顺手把自己的习惯一起冲掉。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🪴</span>
+      <h2>工作区也放家外</h2>
+      <p><code>~/.openclaw/workspace</code> 像助理自己的小房间，里面放技能、提示词、记忆。它最好是你自己的私有小仓库。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🛡</span>
+      <h2>不要把“你的东西”塞回主仓库</h2>
+      <p>官方特地提醒：个人配置、工作区和代码仓库最好分开。这样升级时，房子不会把你的家具一起搬丢。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🎈</span>
+      <h2>一句话</h2>
+      <p>先把家和行李分开，后面改起来才不会乱。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">门槛</p>
+    <h2>🔧 这页先告诉你，开门前要带哪几样工具</h2>
+    <p>不是很多，但每样都很实在。少一样，后面就会卡。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">🟢 Node</div>
+      <p>像发动机。官方推荐 Node 24，Node 22.14 以上也还能开。没有发动机，车就不会走。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">📦 pnpm</div>
+      <p>像一只靠谱的小搬运车。它把依赖和脚本一件件拉进来。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🐳 Docker</div>
+      <p>它是可选工具。只有你想走容器化路线，或者要做某些测试时，才需要把它搬上来。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🔑 凭证</div>
+      <p>这页虽然不是专讲钥匙，但它默认你后面会接模型和通道，所以钥匙和登录最终都躲不开。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">先搭骨架</p>
+    <h2>🛠 <code>openclaw setup</code> 像“一键把抽屉架搭好”</h2>
+    <p>这是整页最像“开荒”的那一步。它不替你决定一切，但会把最容易漏掉的骨架先立住。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw setup</code></div>
+      <p>像叫来一位收纳老师，把助理的大抽屉、小抽屉、身份卡和工具格先排好。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">为什么先跑它</div>
+      <p>因为它会把“该有的基础结构”先放稳，后面你再接聊天通道、模型、技能时，就不会从空地开始搭。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">从仓库里跑一次也行</div>
+      <p>如果你还没全局安装，也可以用 <code>pnpm openclaw setup</code>。意思就是先借搬运车，把这位老师请进来干活。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 记一句</div>
+      <p>Setup 的任务不是炫技，是先把能住人的骨架搭好。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">两种住法</p>
+    <h2>🏠 官方其实给了你两条很清楚的路</h2>
+    <p>一条稳，一条新。两条都能走，但它们的性格不一样。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">稳</span>
+      <h2>macOS app + bundled Gateway</h2>
+      <p>像住进官方替你打包好的大屋子。门窗、电线、值班表都先给你配齐了，最省心。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">新</span>
+      <h2>自己跑 Gateway</h2>
+      <p>像你亲自接管总机房。自由度更高，也更适合开发和调试。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🧭</span>
+      <h2>Stable workflow</h2>
+      <p>先装 macOS app，再让它带着 bundled Gateway 跑。这是最像“拿来就住”的方式。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🧪</span>
+      <h2>Bleeding edge workflow</h2>
+      <p>你自己在终端里跑 Gateway，app 只是贴上来。更像自己修房子，动得也更深。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">稳定路线</p>
+    <h2>📱 稳定路线像“先把门牌挂好，再让 app 帮你守门”</h2>
+    <p>官方这条路很实用，适合第一次真正上手。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label">1. 装并打开 OpenClaw.app</div>
+      <p>像把现成的门卫房打开。菜单栏里那个小入口，是它的前台。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">2. 走完 onboarding 和权限</div>
+      <p>像让老师带你去把所有需要的钥匙和许可都签好。TCC 提示出现时，别慌，那是在让系统知道你真的同意它去做事。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">3. 确认 Gateway 是 Local</div>
+      <p>像确认总机房就在家里， app 正在接管它的值班。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">4. 登录通道，再检查健康</div>
+      <p><code>openclaw channels login</code> 像去门口扫一次通行证，<code>openclaw health</code> 像摸摸门卫额头，看看它是不是精神。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">命令翻译</p>
+    <h2>🛠 这几个命令，在现场到底像什么动作？</h2>
+    <p>不要把它们当成口令，想成动作会更顺。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">🚪</span>
+      <h2><code>openclaw setup</code></h2>
+      <p>像把抽屉架先搭好，告诉系统“我准备住进来了”。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">📶</span>
+      <h2><code>openclaw channels login</code></h2>
+      <p>像给助理去门口领一张正式通行证，让它开始连聊天通道。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🩺</span>
+      <h2><code>openclaw health</code></h2>
+      <p>像对着房子做一次体检，看看有没有哪盏灯没亮。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">💻</span>
+      <h2><code>node openclaw.mjs gateway --port 18789 --verbose</code></h2>
+      <p>像自己在终端里把总机房叫醒，还特地打开“多说几句”模式，好观察它每一步在做什么。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">开发路线</p>
+    <h2>🧪 Bleeding edge 像“自己站到机房里修电路”</h2>
+    <p>这条路更自由，也更像开发者的工作方式。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>pnpm install</code></div>
+      <p>像先把所有零件搬进来，免得你修到一半发现少了一颗螺丝。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>pnpm gateway:watch</code></div>
+      <p>像让总机房装上眼睛。代码、配置、插件元数据一变，它就会自己刷新。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>./scripts/restart-mac.sh</code></div>
+      <p>像把 macOS app 也拉进同一条新鲜轨道上，方便一起追最新代码。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">✅ 验证方式</div>
+      <p>app 里看到 “Using existing gateway …”，或者跑 <code>openclaw health</code>。这说明它真的连上了你手里的那台总机房。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">常见坑</p>
+    <h2>⚠️ 这页最后那几条提醒，都是在帮你少踩坑</h2>
+    <p>看起来像小字，实际都是血泪提醒。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">1</span>
+      <h2>端口要一致</h2>
+      <p>app 和 CLI 如果盯着不同门牌号，就像你站在 18789 门口，而门卫却在 18790 值班。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">2</span>
+      <h2>状态放哪要分清</h2>
+      <p>凭证、会话、日志各自有家。知道它们住哪，排查问题才不乱翻。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">3</span>
+      <h2>Linux 要考虑 lingering</h2>
+      <p>不然你一登出，系统就把守门人叫走了。官方这句是在提醒：别让值班服务下班太早。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">4</span>
+      <h2>更新时别把“你的东西”带坏</h2>
+      <p>仓库更新了，别把家里的收纳盒也一起打翻。官方反复强调的就是这件事。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">最后总结</p>
+    <h2>🎈 把这页压成一句最好记的话</h2>
+    <p><code>Setup</code> 就是在教你怎么把 OpenClaw 安稳地安进家里：配置和工作区放家外，先搭骨架，再选稳定住法或开发住法，最后让它真正开始值班。</p>
+  </div>
+  <div class="ad-placeholder">
+    <p>如果你下一页只想继续看一页，我建议先看 <code>/start/docs-directory</code>。因为家已经搭好了，下一步最需要的就是找路图。</p>
+  </div>
+</section>
+
 
       <footer class="page-footer">
         <div>

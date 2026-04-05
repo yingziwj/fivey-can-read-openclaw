@@ -1,0 +1,168 @@
+<section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>🚂 <code>Background Exec + Process Tool</code> 像“后台小火车和它的站台”</h2>
+      <p>这页讲的是：命令怎么跑、什么时候会自己躲到后台、后台的活儿怎么被看见、又怎么被叫停。</p>
+      <p>可以把 <code>exec</code> 想成开火车，<code>process</code> 想成站台上的调度员。一个负责跑，一个负责看、等、写、停、清理。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合想理解长任务、后台会话和输出缓存的人</span>
+      <span>这页最重要的是先分清：exec 在开车，process 在照看车次</span>
+      <a href="https://docs.openclaw.ai/gateway/background-process" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一步</p>
+    <h2>🏃 <code>exec</code> 先像“让火车跑起来”，跑久了就可能自己进后台</h2>
+    <p>官方把这个工具的参数写得很细，但核心就一件事：命令先跑，太久了就让它自己去后台待着。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">🛤</span>
+      <h2><code>command</code></h2>
+      <p>火车要去哪里，必须先写清楚。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">⏱</span>
+      <h2><code>yieldMs</code></h2>
+      <p>像给火车一小段候车时间。超过这个点，它就会被放进后台车厢。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🌙</span>
+      <h2><code>background</code></h2>
+      <p>如果你一开始就知道它会跑很久，可以直接让它进后台，不用前台傻等。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">⏰</span>
+      <h2><code>timeout</code></h2>
+      <p>像给这趟车设一个最晚回站时间，超时就停。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">命令翻译</p>
+    <h2>🧳 这些参数不是“高级设置”，而是在安排火车怎么上路</h2>
+    <p>看成动作后，参数就没那么吓人了。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label"><code>workdir</code> / <code>env</code></div>
+      <p>像告诉火车从哪座站台出发，车厢里顺手装什么物品。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>pty: true</code></div>
+      <p>像你需要真火车头，不是纸板模型。需要真正的终端时就把它打开。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>elevated</code></div>
+      <p>像把火车开上高架通道。只有在允许的时候，它才会走这条路。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>OPENCLAW_SHELL=exec</code></div>
+      <p>每趟车出发时都会带一个小纸条，告诉后面的壳子“我是 exec 车次”。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">后台车厢</p>
+    <h2>🧠 一旦进后台，输出就先放在记忆箱里，等你来站台看</h2>
+    <p>官方这里最关键的词是“in memory”。意思很直白：先放内存，不落地。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">📥</span>
+      <h2>前台跑完就直接出结果</h2>
+      <p>像短途车，到了站就把人和行李一起交出去。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🚉</span>
+      <h2>后台跑会返回 <code>sessionId</code></h2>
+      <p>像给你一个车次号码，告诉你这趟车还在站里。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🧺</span>
+      <h2>输出暂存在记忆里</h2>
+      <p>像把乘客的行李先放站台柜台里，等你之后来取。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🚫</span>
+      <h2>如果 process 不可用</h2>
+      <p>那火车就只能一直前台跑，<code>yieldMs</code> 和 <code>background</code> 也会失去效果。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">process 工具</p>
+    <h2>🛎 <code>process</code> 像站台调度员：看车次、等消息、喂 stdin、停火车</h2>
+    <p>这个工具不是新的火车，它是负责照看后台会话的站台人。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>list</code></div>
+      <p>像看站台牌子：现在有哪些车正在跑，哪些已经到站。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>poll</code></div>
+      <p>像过来扫一眼车厢，顺手把新输出带走，还能告诉你车停没停。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>log</code></div>
+      <p>像翻整段列车日记。可以按偏移量和长度慢慢看。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>write</code> / <code>kill</code> / <code>clear</code></div>
+      <p>一个是给车厢塞纸条，一个是把车停掉，一个是把到站后的记录从站台抹掉。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">命令翻译</p>
+    <h2>🧪 官方例子其实都很像“先发车，再回来查票”</h2>
+    <p>这几条命令组合起来看，就像后台工作的一条完整小故事。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">🚆</span>
+      <h2><code>{ "tool": "exec", "command": "sleep 5 && echo done", "yieldMs": 1000 }</code></h2>
+      <p>像让火车先跑 5 秒，如果还没回来，就把它转进后台车厢。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🔎</span>
+      <h2><code>{ "tool": "process", "action": "poll", "sessionId": "&lt;id&gt;" }</code></h2>
+      <p>像之后再去站台问一句：“那趟车现在到哪了？”</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">📨</span>
+      <h2><code>{ "tool": "process", "action": "write", "sessionId": "&lt;id&gt;", "data": "y\\n" }</code></h2>
+      <p>像往后台车厢里塞一张“继续吧”的小纸条。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🧯</span>
+      <h2>记住一个限制</h2>
+      <p>只有后台车厢才会被 <code>process</code> 记住。系统重启后，车次也会跟着消失。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">最后总结</p>
+    <h2>🎈 把这页压成一句最短的话</h2>
+    <p><code>exec</code> 像火车，<code>process</code> 像站台调度员。前者负责把活跑起来，后者负责把后台会话看住、查到、叫停、清掉。</p>
+  </div>
+  <div class="ad-placeholder">
+    <p>下一页如果你想看“门口怎么找到 Gateway”，就去 <code>/gateway/bonjour</code>。那页像小区广播和门牌灯。</p>
+  </div>
+</section>

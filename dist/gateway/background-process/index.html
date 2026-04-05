@@ -3970,385 +3970,175 @@
   
       </div>
 
-      
-    <section class="section-shell">
-      <div class="overview-card">
-        <div>
-          <p class="section-kicker">先听这页的人话版</p>
-          <h2>Background Exec and Process Tool</h2>
-          <p>这一页像一本关于“Background Exec and Process 工具小帮手”的小绘本，它先告诉我们这位机器人朋友会做什么，再一步一步解释什么时候该这样做。 你可以先把它想成：Background Exec + Process 工具小帮手。</p>
-          <p>如果把这页当成“给普通人看的版本”，你最应该带走的是：它到底在教你一件什么事、什么时候要这样做、以及哪里最容易踩坑。</p>
-        </div>
-        <div class="overview-meta">
-          <span>原始路径：/gateway/background-process</span>
-          <span>章节数量：5</span>
-          <a href="https://docs.openclaw.ai/gateway/background-process" target="_blank" rel="noreferrer">查看原文</a>
-        </div>
-      </div>
-    </section>
-    
-        <section class="section-shell" id="section-1">
-          <div class="section-heading">
-            <p class="section-kicker">第 1 站</p>
-            <h2>Start Here</h2>
-            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>你理解的是能力边界，不只是功能名字。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Background Exec + Process 工具小帮手 OpenClaw runs shell 魔法口令s through the exec 工具小帮手 and keeps long‑running tasks in memory…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Background Exec + Process 工具小帮手”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p># Background Exec + Process Tool</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“OpenClaw runs shell 魔法口令s through the exec 工具小帮手 and keeps long‑running tasks in memory. The process 工具小帮手 manages thos…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>OpenClaw runs shell commands through the <code>exec</code> tool and keeps long‑running tasks in memory. The <code>process</code> tool manages those background sessions.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-2">
-          <div class="section-heading">
-            <p class="section-kicker">第 2 站</p>
-            <h2>exec 工具小帮手</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Key parameters: Behavior:”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Key parameters:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Key parameters:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“exec tool”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：魔法口令 (required)、yieldMs (default 10000): auto‑background…、background (bool): background immediately、timeout (seconds, default 1800): kill the…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>command</code> (required)</li><li><code>yieldMs</code> (default 10000): auto‑background after this delay</li><li><code>background</code> (bool): background immediately</li><li><code>timeout</code> (seconds, default 1800): kill the process after this timeout</li><li><code>elevated</code> (bool): run on host if elevated mode is enabled/allowed</li><li>Need a real TTY? Set <code>pty: true</code>.</li><li><code>workdir</code>, <code>env</code></li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Behavior:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Behavior:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“exec tool”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Foreground runs return output directly.、When backgrounded (explicit or timeout),…、Output is kept in memory until the sessio…、If the process 工具小帮手 is disallowed, exec…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Foreground runs return output directly.</li><li>When backgrounded (explicit or timeout), the tool returns <code>status: &quot;running&quot;</code> + <code>sessionId</code> and a short tail.</li><li>Output is kept in memory until the session is polled or cleared.</li><li>If the <code>process</code> tool is disallowed, <code>exec</code> runs synchronously and ignores <code>yieldMs</code>/<code>background</code>.</li><li>Spawned exec commands receive <code>OPENCLAW_SHELL=exec</code> for context-aware shell/profile rules.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-3">
-          <div class="section-heading">
-            <p class="section-kicker">第 3 站</p>
-            <h2>Child process bridging</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“When spawning long-running child processes outside the exec/process 工具小帮手s (for example, CLI respawns or 门口的小门卫 helpers…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“When spawning long-running child processes outside the exec/process 工具小帮手s (for example, CLI respawns or 门口的小门卫 helpers…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>When spawning long-running child processes outside the exec/process tools (for example, CLI respawns or gateway helpers), attach the child-process bridge helper so termination signals are forwarded and listeners are detached on exit/error. This avoids orphaned processes on systemd and keeps shutdown behavior consistent across platforms.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Environment overrides:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Environment overrides:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Child process bridging”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：PI_BASH_YIELD_MS: default yield (ms)、PI_BASH_MAX_OUTPUT_CHARS: in‑memory outpu…、OPENCLAW_BASH_PENDING_MAX_OUTPUT_CHARS: p…、PI_BASH_JOB_TTL_MS: TTL for finished sess…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>PI_BASH_YIELD_MS</code>: default yield (ms)</li><li><code>PI_BASH_MAX_OUTPUT_CHARS</code>: in‑memory output cap (chars)</li><li><code>OPENCLAW_BASH_PENDING_MAX_OUTPUT_CHARS</code>: pending stdout/stderr cap per stream (chars)</li><li><code>PI_BASH_JOB_TTL_MS</code>: TTL for finished sessions (ms, bounded to 1m–3h)</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“设置说明书 (preferred):”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Config (preferred):</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Child process bridging”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：工具小帮手s.exec.backgroundMs (default 10000)、工具小帮手s.exec.timeoutSec (default 1800)、工具小帮手s.exec.cleanupMs (default 1800000)、工具小帮手s.exec.notifyOnExit (default true):…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>tools.exec.backgroundMs</code> (default 10000)</li><li><code>tools.exec.timeoutSec</code> (default 1800)</li><li><code>tools.exec.cleanupMs</code> (default 1800000)</li><li><code>tools.exec.notifyOnExit</code> (default true): enqueue a system event + request heartbeat when a backgrounded exec exits.</li><li><code>tools.exec.notifyOnExitEmptySuccess</code> (default false): when true, also enqueue completion events for successful backgrounded runs that produced no output.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-4">
-          <div class="section-heading">
-            <p class="section-kicker">第 4 站</p>
-            <h2>process 工具小帮手</h2>
-            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>你理解的是能力边界，不只是功能名字。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Actions: Notes:”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Actions:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Actions:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“process tool”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：list: running + finished sessions、poll: drain new output for a session (als…、log: read the aggregated output (supports…、write: send stdin (data, optional eof)。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>list</code>: running + finished sessions</li><li><code>poll</code>: drain new output for a session (also reports exit status)</li><li><code>log</code>: read the aggregated output (supports <code>offset</code> + <code>limit</code>)</li><li><code>write</code>: send stdin (<code>data</code>, optional <code>eof</code>)</li><li><code>kill</code>: terminate a background session</li><li><code>clear</code>: remove a finished session from memory</li><li><code>remove</code>: kill if running, otherwise clear if finished</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Notes:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Notes:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“process tool”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Only backgrounded sessions are listed/per…、Sessions are lost on process restart (no…、Session logs are only saved to chat histo…、process is scoped per 机器人朋友; it only sees…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Only backgrounded sessions are listed/persisted in memory.</li><li>Sessions are lost on process restart (no disk persistence).</li><li>Session logs are only saved to chat history if you run <code>process poll/log</code> and the tool result is recorded.</li><li><code>process</code> is scoped per agent; it only sees sessions started by that agent.</li><li><code>process list</code> includes a derived <code>name</code> (command verb + target) for quick scans.</li><li><code>process log</code> uses line-based <code>offset</code>/<code>limit</code>.</li><li>When both <code>offset</code> and <code>limit</code> are omitted, it returns the last 200 lines and includes a paging hint.</li><li>When <code>offset</code> is provided and <code>limit</code> is omitted, it returns from <code>offset</code> to the end (not capped to 200).</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-5">
-          <div class="section-heading">
-            <p class="section-kicker">第 5 站</p>
-            <h2>Examples</h2>
-            <p>这一节主要在解释“Examples”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“Examples”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Run a long task and poll later: Start immediately in background: Send stdin:”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Run a long task and poll later:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Run a long task and poll later:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json">{ &quot;tool&quot;: &quot;exec&quot;, &quot;command&quot;: &quot;sleep 5 &amp;&amp; echo done&quot;, &quot;yieldMs&quot;: 1000 }</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json">{ &quot;tool&quot;: &quot;process&quot;, &quot;action&quot;: &quot;poll&quot;, &quot;sessionId&quot;: &quot;&lt;id&gt;&quot; }</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Start immediately in background:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Start immediately in background:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json">{ &quot;tool&quot;: &quot;exec&quot;, &quot;command&quot;: &quot;npm run build&quot;, &quot;background&quot;: true }</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Send stdin:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Send stdin:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json">{ &quot;tool&quot;: &quot;process&quot;, &quot;action&quot;: &quot;write&quot;, &quot;sessionId&quot;: &quot;&lt;id&gt;&quot;, &quot;data&quot;: &quot;y\n&quot; }</code></pre>
-      </div>
-    
-          </div>
-        </section>
-      
-    <section class="section-shell">
-      <div class="ad-placeholder">
-        <p>这里预留给未来的 Google AdSense 模块。</p>
-        <code>&lt;!-- ADSENSE_SNIPPET --&gt;</code>
-      </div>
-    </section>
-  
+      <section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>🚂 <code>Background Exec + Process Tool</code> 像“后台小火车和它的站台”</h2>
+      <p>这页讲的是：命令怎么跑、什么时候会自己躲到后台、后台的活儿怎么被看见、又怎么被叫停。</p>
+      <p>可以把 <code>exec</code> 想成开火车，<code>process</code> 想成站台上的调度员。一个负责跑，一个负责看、等、写、停、清理。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合想理解长任务、后台会话和输出缓存的人</span>
+      <span>这页最重要的是先分清：exec 在开车，process 在照看车次</span>
+      <a href="https://docs.openclaw.ai/gateway/background-process" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一步</p>
+    <h2>🏃 <code>exec</code> 先像“让火车跑起来”，跑久了就可能自己进后台</h2>
+    <p>官方把这个工具的参数写得很细，但核心就一件事：命令先跑，太久了就让它自己去后台待着。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">🛤</span>
+      <h2><code>command</code></h2>
+      <p>火车要去哪里，必须先写清楚。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">⏱</span>
+      <h2><code>yieldMs</code></h2>
+      <p>像给火车一小段候车时间。超过这个点，它就会被放进后台车厢。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🌙</span>
+      <h2><code>background</code></h2>
+      <p>如果你一开始就知道它会跑很久，可以直接让它进后台，不用前台傻等。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">⏰</span>
+      <h2><code>timeout</code></h2>
+      <p>像给这趟车设一个最晚回站时间，超时就停。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">命令翻译</p>
+    <h2>🧳 这些参数不是“高级设置”，而是在安排火车怎么上路</h2>
+    <p>看成动作后，参数就没那么吓人了。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label"><code>workdir</code> / <code>env</code></div>
+      <p>像告诉火车从哪座站台出发，车厢里顺手装什么物品。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>pty: true</code></div>
+      <p>像你需要真火车头，不是纸板模型。需要真正的终端时就把它打开。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>elevated</code></div>
+      <p>像把火车开上高架通道。只有在允许的时候，它才会走这条路。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>OPENCLAW_SHELL=exec</code></div>
+      <p>每趟车出发时都会带一个小纸条，告诉后面的壳子“我是 exec 车次”。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">后台车厢</p>
+    <h2>🧠 一旦进后台，输出就先放在记忆箱里，等你来站台看</h2>
+    <p>官方这里最关键的词是“in memory”。意思很直白：先放内存，不落地。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">📥</span>
+      <h2>前台跑完就直接出结果</h2>
+      <p>像短途车，到了站就把人和行李一起交出去。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🚉</span>
+      <h2>后台跑会返回 <code>sessionId</code></h2>
+      <p>像给你一个车次号码，告诉你这趟车还在站里。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🧺</span>
+      <h2>输出暂存在记忆里</h2>
+      <p>像把乘客的行李先放站台柜台里，等你之后来取。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🚫</span>
+      <h2>如果 process 不可用</h2>
+      <p>那火车就只能一直前台跑，<code>yieldMs</code> 和 <code>background</code> 也会失去效果。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">process 工具</p>
+    <h2>🛎 <code>process</code> 像站台调度员：看车次、等消息、喂 stdin、停火车</h2>
+    <p>这个工具不是新的火车，它是负责照看后台会话的站台人。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>list</code></div>
+      <p>像看站台牌子：现在有哪些车正在跑，哪些已经到站。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>poll</code></div>
+      <p>像过来扫一眼车厢，顺手把新输出带走，还能告诉你车停没停。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>log</code></div>
+      <p>像翻整段列车日记。可以按偏移量和长度慢慢看。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>write</code> / <code>kill</code> / <code>clear</code></div>
+      <p>一个是给车厢塞纸条，一个是把车停掉，一个是把到站后的记录从站台抹掉。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">命令翻译</p>
+    <h2>🧪 官方例子其实都很像“先发车，再回来查票”</h2>
+    <p>这几条命令组合起来看，就像后台工作的一条完整小故事。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">🚆</span>
+      <h2><code>{ "tool": "exec", "command": "sleep 5 && echo done", "yieldMs": 1000 }</code></h2>
+      <p>像让火车先跑 5 秒，如果还没回来，就把它转进后台车厢。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🔎</span>
+      <h2><code>{ "tool": "process", "action": "poll", "sessionId": "&lt;id&gt;" }</code></h2>
+      <p>像之后再去站台问一句：“那趟车现在到哪了？”</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">📨</span>
+      <h2><code>{ "tool": "process", "action": "write", "sessionId": "&lt;id&gt;", "data": "y\\n" }</code></h2>
+      <p>像往后台车厢里塞一张“继续吧”的小纸条。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🧯</span>
+      <h2>记住一个限制</h2>
+      <p>只有后台车厢才会被 <code>process</code> 记住。系统重启后，车次也会跟着消失。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">最后总结</p>
+    <h2>🎈 把这页压成一句最短的话</h2>
+    <p><code>exec</code> 像火车，<code>process</code> 像站台调度员。前者负责把活跑起来，后者负责把后台会话看住、查到、叫停、清掉。</p>
+  </div>
+  <div class="ad-placeholder">
+    <p>下一页如果你想看“门口怎么找到 Gateway”，就去 <code>/gateway/bonjour</code>。那页像小区广播和门牌灯。</p>
+  </div>
+</section>
+
 
       <footer class="page-footer">
         <div>

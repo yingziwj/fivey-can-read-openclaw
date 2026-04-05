@@ -1,0 +1,168 @@
+<section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>🔐 <code>Authentication</code> 像“给总机房配门卡和钥匙”</h2>
+      <p>这页讲的是：OpenClaw 的 Gateway 想去找模型提供商时，门卡该怎么放，钥匙该怎么拿，才最稳。</p>
+      <p>最简单的想法是：长期值班的门卫，最好拿一把稳定的 API key。OAuth 像一种更正式的入场流程。订阅票和 setup-token 也能用，但要看供应商规则。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合想把模型认证放稳的人</span>
+      <span>这页最重要的是先分清：API key 是钥匙，OAuth 是走流程，setup-token 是特殊门票</span>
+      <a href="https://docs.openclaw.ai/gateway/authentication" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一步</p>
+    <h2>🏠 先记住一个大原则：Gateway 长住时，API key 往往最省心</h2>
+    <p>官方这里一上来就说得很实在。长期跑的 Gateway，最可预测的通常就是 API key。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">🗝</span>
+      <h2>API key</h2>
+      <p>像一把固定的门卡，放在 gateway host 上，比较直来直去，也最容易保持稳定。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🧾</span>
+      <h2>OAuth</h2>
+      <p>像按正规流程办入场手续。不是不好，而是要和供应商的账号体系对得上。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🎟</span>
+      <h2>setup-token</h2>
+      <p>像 Claude 订阅票那一类门票。能用，但要看规则和风险提示。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">📌</span>
+      <h2>一句话</h2>
+      <p>能拿 API key，就先把门卡放稳。别一开始就让系统去猜复杂门禁。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">最稳的做法</p>
+    <h2>🔑 把钥匙放在 gateway host 上，而不是把它记在嘴上</h2>
+    <p>官方给的第一套推荐流程很像“先把钥匙放到房间里，再让值班员自己取”。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">1. 在供应商控制台申请 key</div>
+      <p>像先去办一张新门卡，再带回家。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">2. 放到 gateway host</div>
+      <p>门卡要放在真正跑 <code>openclaw gateway</code> 的那台机器上，不是放在别人的包里。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>export &lt;PROVIDER&gt;_API_KEY="..."</code></div>
+      <p>这像临时把门卡挂在墙上，方便当前这一趟先用。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>~/.openclaw/.env</code></div>
+      <p>如果 Gateway 是长期值班的，官方更建议把钥匙放进这本固定的小抽屉里。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">命令翻译</p>
+    <h2>🧪 这些检查命令，像值班员先试试门卡好不好使</h2>
+    <p>别把它们看成纯命令。它们其实是在确认“这把钥匙真的能开门”。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">🔍</span>
+      <h2><code>openclaw models status</code></h2>
+      <p>像值班员先看一眼：“门卡在不在？有没有快过期？”</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🩺</span>
+      <h2><code>openclaw doctor</code></h2>
+      <p>像请体检医生再扫一遍整套门禁和房间状态。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">📎</span>
+      <h2>onboarding 也能存 key</h2>
+      <p>如果你不想自己手动摆抽屉，<code>openclaw onboard</code> 也能帮你把钥匙收好。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">📌</span>
+      <h2>一句话</h2>
+      <p>先放钥匙，再验门卡，再让系统值班。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">特殊门票</p>
+    <h2>🎫 setup-token 像“Claude 订阅票”，但官方提醒你别把它当万能钥匙</h2>
+    <p>这部分要看得很清楚。能用，不代表每次都适合用。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>claude setup-token</code></div>
+      <p>像在 Claude 那边先拿一张订阅票，准备带回来给 OpenClaw 用。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw models auth setup-token --provider anthropic</code></div>
+      <p>像把那张票轻轻塞进 OpenClaw 的门禁夹里。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw models auth paste-token --provider anthropic</code></div>
+      <p>如果票是在别的机器上拿的，就手动抄回来，再贴到对应位置。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">警告</div>
+      <p>官方特别提醒：这是兼容路线，不是无条件推荐路线。政策风险要自己确认。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">命令翻译</p>
+    <h2>🏁 Claude CLI 迁移，像“把老门卡换到新门卫体系里”</h2>
+    <p>如果机器上已经有 Claude CLI，还能把现成登录状态迁过去，不必重新从头贴票。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">🚚</span>
+      <h2><code>openclaw models auth login --provider anthropic --method cli --set-default</code></h2>
+      <p>像把旧门卡搬进 OpenClaw 的新门禁柜里，还顺手把默认通道改好。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">✉️</span>
+      <h2><code>openclaw onboard --auth-choice anthropic-cli</code></h2>
+      <p>像新手引导直接问：“你是想沿着 Claude CLI 这条路走吗？”</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🧭</span>
+      <h2>默认模型也会跟着变</h2>
+      <p>官方说明会把默认模型切到 <code>claude-cli/...</code>，并把相关 allowlist 也补上。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">📌</span>
+      <h2>一句话</h2>
+      <p>能搬就搬，但搬完要记得把默认路也一起改好。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">最后总结</p>
+    <h2>🎈 把这页压成一句最短的话</h2>
+    <p><code>Authentication</code> 就是在给 Gateway 配门卡：长住时先用 API key，复杂门票像 setup-token 要谨慎，检查命令则是在提醒你钥匙有没有真的放对、拿对。</p>
+  </div>
+  <div class="ad-placeholder">
+    <p>下一页如果你想看“系统开机后，后台小火车怎么跑”，就去 <code>/gateway/background-process</code>。</p>
+  </div>
+</section>

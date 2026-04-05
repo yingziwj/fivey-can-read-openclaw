@@ -3970,811 +3970,227 @@
   
       </div>
 
-      
-    <section class="section-shell">
-      <div class="overview-card">
-        <div>
-          <p class="section-kicker">先听这页的人话版</p>
-          <h2>Agent Loop</h2>
-          <p>这一页像一本关于“机器人朋友 Loop”的小绘本，它先告诉我们这位机器人朋友会做什么，再一步一步解释什么时候该这样做。 你可以先把它想成：机器人朋友 Loop (OpenClaw)。</p>
-          <p>如果把这页当成“给普通人看的版本”，你最应该带走的是：它到底在教你一件什么事、什么时候要这样做、以及哪里最容易踩坑。</p>
-        </div>
-        <div class="overview-meta">
-          <span>原始路径：/concepts/agent-loop</span>
-          <span>章节数量：17</span>
-          <a href="https://docs.openclaw.ai/concepts/agent-loop" target="_blank" rel="noreferrer">查看原文</a>
-        </div>
-      </div>
-    </section>
-    
-        <section class="section-shell" id="section-1">
-          <div class="section-heading">
-            <p class="section-kicker">第 1 站</p>
-            <h2>Start Here</h2>
-            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>你理解的是能力边界，不只是功能名字。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“机器人朋友 Loop (OpenClaw) An 机器人朋友ic loop is the full “real” run of an 机器人朋友: intake → context assembly → 聪明脑袋模型 inference…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“机器人朋友 Loop (OpenClaw)”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p># Agent Loop (OpenClaw)</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“An 机器人朋友ic loop is the full “real” run of an 机器人朋友: intake → context assembly → 聪明脑袋模型 inference → 工具小帮手 execution → 一边…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>An agentic loop is the full “real” run of an agent: intake → context assembly → model inference → tool execution → streaming replies → persistence. It’s the authoritative path that turns a message into actions and a final reply, while keeping session state consistent.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“In OpenClaw, a loop is a single, serialized run per session that emits lifecycle and 一边说一边送 events as the 聪明脑袋模型 thinks…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>In OpenClaw, a loop is a single, serialized run per session that emits lifecycle and stream events as the model thinks, calls tools, and streams output. This doc explains how that authentic loop is wired end-to-end.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-2">
-          <div class="section-heading">
-            <p class="section-kicker">第 2 站</p>
-            <h2>Entry points</h2>
-            <p>这一节主要在解释“Entry points”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“Entry points”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Entry points”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：门口的小门卫 RPC: 机器人朋友 and 机器人朋友.wait.、CLI: 机器人朋友 魔法口令.</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Gateway RPC: <code>agent</code> and <code>agent.wait</code>.</li><li>CLI: <code>agent</code> command.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-3">
-          <div class="section-heading">
-            <p class="section-kicker">第 3 站</p>
-            <h2>How it works (high-level)</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“1. 机器人朋友 RPC validates params, resolves session (sessionKey/sessionId), persists session metadata, returns { runId, acc…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“1. 机器人朋友 RPC validates params, resolves session (sessionKey/sessionId), persists session metadata, returns { runId, acc…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>1. <code>agent</code> RPC validates params, resolves session (sessionKey/sessionId), persists session metadata, returns <code>{ runId, acceptedAt }</code> immediately. 2. <code>agentCommand</code> runs the agent:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“3. runEmbeddedPi机器人朋友:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>3. <code>runEmbeddedPiAgent</code>:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“4. subscribeEmbeddedPiSession bridges pi-机器人朋友-core events to OpenClaw 机器人朋友 一边说一边送:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>4. <code>subscribeEmbeddedPiSession</code> bridges pi-agent-core events to OpenClaw <code>agent</code> stream:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“5. 机器人朋友.wait uses waitFor机器人朋友Job:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>5. <code>agent.wait</code> uses <code>waitForAgentJob</code>:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“How it works (high-level)”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：resolves 聪明脑袋模型 + thinking/verbose defaul…、loads skills snapshot、calls runEmbeddedPi机器人朋友 (pi-机器人朋友-core r…、emits **lifecycle end/error** if the embe…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>resolves model + thinking/verbose defaults</li><li>loads skills snapshot</li><li>calls <code>runEmbeddedPiAgent</code> (pi-agent-core runtime)</li><li>emits **lifecycle end/error** if the embedded loop does not emit one</li><li>serializes runs via per-session + global queues</li><li>resolves model + auth profile and builds the pi session</li><li>subscribes to pi events and streams assistant/tool deltas</li><li>enforces timeout -&gt; aborts run if exceeded</li><li>returns payloads + usage metadata</li><li>tool events =&gt; <code>stream: &quot;tool&quot;</code></li><li>assistant deltas =&gt; <code>stream: &quot;assistant&quot;</code></li><li>lifecycle events =&gt; <code>stream: &quot;lifecycle&quot;</code> (<code>phase: &quot;start&quot; | &quot;end&quot; | &quot;error&quot;</code>)</li><li>waits for **lifecycle end/error** for <code>runId</code></li><li>returns <code>{ status: ok|error|timeout, startedAt, endedAt, error? }</code></li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-4">
-          <div class="section-heading">
-            <p class="section-kicker">第 4 站</p>
-            <h2>Queueing + concurrency</h2>
-            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>你理解的是能力边界，不只是功能名字。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“See 魔法口令 Queue.”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“See 魔法口令 Queue.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>See <a href="/concepts/queue" target="_blank" rel="noreferrer">Command Queue</a>.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Queueing + concurrency”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Runs are serialized per session key (sess…、This prevents 工具小帮手/session races and kee…、Messaging 消息通道s can choose queue modes (c…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Runs are serialized per session key (session lane) and optionally through a global lane.</li><li>This prevents tool/session races and keeps session history consistent.</li><li>Messaging channels can choose queue modes (collect/steer/followup) that feed this lane system.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-5">
-          <div class="section-heading">
-            <p class="section-kicker">第 5 站</p>
-            <h2>Session + workspace preparation</h2>
-            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>你理解的是能力边界，不只是功能名字。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Session + workspace preparation”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Workspace is resolved and created; sandbo…、Skills are loaded (or reused from a snaps…、Bootstrap/context files are resolved and…、A session write lock is acquired; Session…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Workspace is resolved and created; sandboxed runs may redirect to a sandbox workspace root.</li><li>Skills are loaded (or reused from a snapshot) and injected into env and prompt.</li><li>Bootstrap/context files are resolved and injected into the system prompt report.</li><li>A session write lock is acquired; <code>SessionManager</code> is opened and prepared before streaming.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-6">
-          <div class="section-heading">
-            <p class="section-kicker">第 6 站</p>
-            <h2>Prompt assembly + system prompt</h2>
-            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>你理解的是能力边界，不只是功能名字。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Prompt assembly + system prompt”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：System prompt is built from OpenClaw’s ba…、聪明脑袋模型-specific limits and compaction res…、See System prompt for what the 聪明脑袋模型 see…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>System prompt is built from OpenClaw’s base prompt, skills prompt, bootstrap context, and per-run overrides.</li><li>Model-specific limits and compaction reserve tokens are enforced.</li><li>See <a href="/concepts/system-prompt" target="_blank" rel="noreferrer">System prompt</a> for what the model sees.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-7">
-          <div class="section-heading">
-            <p class="section-kicker">第 7 站</p>
-            <h2>Hook points (where you can intercept)</h2>
-            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>你理解的是能力边界，不只是功能名字。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“OpenClaw has two hook systems:”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“OpenClaw has two hook systems:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>OpenClaw has two hook systems:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Hook points (where you can intercept)”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：**Internal hooks** (门口的小门卫 hooks): event-…、**新本领插件 hooks**: extension points inside…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>**Internal hooks** (Gateway hooks): event-driven scripts for commands and lifecycle events.</li><li>**Plugin hooks**: extension points inside the agent/tool lifecycle and gateway pipeline.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-8">
-          <div class="section-heading">
-            <p class="section-kicker">第 8 站</p>
-            <h2>Internal hooks (门口的小门卫 hooks)</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Use this to add/remove bootstrap context files. See Hooks for setup and examples.”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Use this to add/remove bootstrap context files.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Use this to add/remove bootstrap context files.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Internal hooks (Gateway hooks)”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：**机器人朋友:bootstrap**: runs while building…、**魔法口令 hooks**: /new, /reset, /stop, and…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>**<code>agent:bootstrap</code>**: runs while building bootstrap files before the system prompt is finalized.</li><li>**Command hooks**: <code>/new</code>, <code>/reset</code>, <code>/stop</code>, and other command events (see Hooks doc).</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“See Hooks for setup and examples.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>See <a href="/automation/hooks" target="_blank" rel="noreferrer">Hooks</a> for setup and examples.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-9">
-          <div class="section-heading">
-            <p class="section-kicker">第 9 站</p>
-            <h2>新本领插件 hooks (机器人朋友 + 门口的小门卫 lifecycle)</h2>
-            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>你理解的是能力边界，不只是功能名字。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“These run inside the 机器人朋友 loop or 门口的小门卫 pipeline: Hook decision rules for outbound/工具小帮手 guards: See 新本领插件 hooks for…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“These run inside the 机器人朋友 loop or 门口的小门卫 pipeline:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>These run inside the agent loop or gateway pipeline:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Plugin hooks (agent + gateway lifecycle)”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：**before_聪明脑袋模型_resolve**: runs pre-sessi…、**before_prompt_build**: runs after sessi…、**before_机器人朋友_start**: legacy compatibil…、**机器人朋友_end**: inspect the final 小纸条消息 li…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>**<code>before_model_resolve</code>**: runs pre-session (no <code>messages</code>) to deterministically override provider/model before model resolution.</li><li>**<code>before_prompt_build</code>**: runs after session load (with <code>messages</code>) to inject <code>prependContext</code>, <code>systemPrompt</code>, <code>prependSystemContext</code>, or <code>appendSystemContext</code> before prompt submission. Use <code>prependContext</code> for per-turn dynamic text and system-context fields for stable guidance that should sit in system prompt space.</li><li>**<code>before_agent_start</code>**: legacy compatibility hook that may run in either phase; prefer the explicit hooks above.</li><li>**<code>agent_end</code>**: inspect the final message list and run metadata after completion.</li><li>**<code>before_compaction</code> / <code>after_compaction</code>**: observe or annotate compaction cycles.</li><li>**<code>before_tool_call</code> / <code>after_tool_call</code>**: intercept tool params/results.</li><li>**<code>tool_result_persist</code>**: synchronously transform tool results before they are written to the session transcript.</li><li>**<code>message_received</code> / <code>message_sending</code> / <code>message_sent</code>**: inbound + outbound message hooks.</li><li>**<code>session_start</code> / <code>session_end</code>**: session lifecycle boundaries.</li><li>**<code>gateway_start</code> / <code>gateway_stop</code>**: gateway lifecycle events.</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Hook decision rules for outbound/工具小帮手 guards:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Hook decision rules for outbound/tool guards:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Plugin hooks (agent + gateway lifecycle)”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：before_工具小帮手_call: { block: true } is ter…、before_工具小帮手_call: { block: false } is a…、小纸条消息_sending: { cancel: true } is termin…、小纸条消息_sending: { cancel: false } is a no-…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>before_tool_call</code>: <code>{ block: true }</code> is terminal and stops lower-priority handlers.</li><li><code>before_tool_call</code>: <code>{ block: false }</code> is a no-op and does not clear a prior block.</li><li><code>message_sending</code>: <code>{ cancel: true }</code> is terminal and stops lower-priority handlers.</li><li><code>message_sending</code>: <code>{ cancel: false }</code> is a no-op and does not clear a prior cancel.</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“See 新本领插件 hooks for the hook 对话接口 and registration details.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>See <a href="/plugins/architecture#provider-runtime-hooks" target="_blank" rel="noreferrer">Plugin hooks</a> for the hook API and registration details.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-10">
-          <div class="section-heading">
-            <p class="section-kicker">第 10 站</p>
-            <h2>一边说一边送ing + partial replies</h2>
-            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>你理解的是能力边界，不只是功能名字。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Streaming + partial replies”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Assistant deltas are 一边说一边送ed from pi-机器人…、Block 一边说一边送ing can emit partial replies…、Reasoning 一边说一边送ing can be emitted as a s…、See 一边说一边送ing for chunking and block repl…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Assistant deltas are streamed from pi-agent-core and emitted as <code>assistant</code> events.</li><li>Block streaming can emit partial replies either on <code>text_end</code> or <code>message_end</code>.</li><li>Reasoning streaming can be emitted as a separate stream or as block replies.</li><li>See <a href="/concepts/streaming" target="_blank" rel="noreferrer">Streaming</a> for chunking and block reply behavior.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-11">
-          <div class="section-heading">
-            <p class="section-kicker">第 11 站</p>
-            <h2>工具小帮手 execution + messaging 工具小帮手s</h2>
-            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>你理解的是能力边界，不只是功能名字。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Tool execution + messaging tools”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：工具小帮手 start/update/end events are emitted…、工具小帮手 results are sanitized for size and…、Messaging 工具小帮手 sends are tracked to supp…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Tool start/update/end events are emitted on the <code>tool</code> stream.</li><li>Tool results are sanitized for size and image payloads before logging/emitting.</li><li>Messaging tool sends are tracked to suppress duplicate assistant confirmations.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-12">
-          <div class="section-heading">
-            <p class="section-kicker">第 12 站</p>
-            <h2>Reply sh对话接口ng + suppression</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“(unless a messaging 工具小帮手 already sent a user-visible reply).”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“(unless a messaging 工具小帮手 already sent a user-visible reply).”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>(unless a messaging tool already sent a user-visible reply).</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Reply shaping + suppression”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Final payloads are assembled from:、assistant text (and optional reasoning)、inline 工具小帮手 summaries (when verbose + al…、assistant error text when the 聪明脑袋模型 erro…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Final payloads are assembled from:</li><li>assistant text (and optional reasoning)</li><li>inline tool summaries (when verbose + allowed)</li><li>assistant error text when the model errors</li><li><code>NO_REPLY</code> is treated as a silent token and filtered from outgoing payloads.</li><li>Messaging tool duplicates are removed from the final payload list.</li><li>If no renderable payloads remain and a tool errored, a fallback tool error reply is emitted</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-13">
-          <div class="section-heading">
-            <p class="section-kicker">第 13 站</p>
-            <h2>Compaction + retries</h2>
-            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>你理解的是能力边界，不只是功能名字。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Compaction + retries”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Auto-compaction emits compaction 一边说一边送 e…、On retry, in-memory buffers and 工具小帮手 sum…、See Compaction for the compaction pipelin…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Auto-compaction emits <code>compaction</code> stream events and can trigger a retry.</li><li>On retry, in-memory buffers and tool summaries are reset to avoid duplicate output.</li><li>See <a href="/concepts/compaction" target="_blank" rel="noreferrer">Compaction</a> for the compaction pipeline.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-14">
-          <div class="section-heading">
-            <p class="section-kicker">第 14 站</p>
-            <h2>Event 一边说一边送s (today)</h2>
-            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>你理解的是能力边界，不只是功能名字。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Event streams (today)”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：lifecycle: emitted by subscribeEmbeddedPi…、assistant: 一边说一边送ed deltas from pi-机器人朋友-…、工具小帮手: 一边说一边送ed 工具小帮手 events from pi-机器人朋…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>lifecycle</code>: emitted by <code>subscribeEmbeddedPiSession</code> (and as a fallback by <code>agentCommand</code>)</li><li><code>assistant</code>: streamed deltas from pi-agent-core</li><li><code>tool</code>: streamed tool events from pi-agent-core</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-15">
-          <div class="section-heading">
-            <p class="section-kicker">第 15 站</p>
-            <h2>Chat 消息通道 handling</h2>
-            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>你理解的是能力边界，不只是功能名字。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Chat channel handling”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Assistant deltas are buffered into chat d…、A chat final is emitted on **lifecycle en…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Assistant deltas are buffered into chat <code>delta</code> messages.</li><li>A chat <code>final</code> is emitted on **lifecycle end/error**.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-16">
-          <div class="section-heading">
-            <p class="section-kicker">第 16 站</p>
-            <h2>Timeouts</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Timeouts”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：机器人朋友.wait default: 30s (just the wait).…、机器人朋友 runtime: 机器人朋友s.defaults.timeoutSec…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>agent.wait</code> default: 30s (just the wait). <code>timeoutMs</code> param overrides.</li><li>Agent runtime: <code>agents.defaults.timeoutSeconds</code> default 172800s (48 hours); enforced in <code>runEmbeddedPiAgent</code> abort timer.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-17">
-          <div class="section-heading">
-            <p class="section-kicker">第 17 站</p>
-            <h2>Where things can end early</h2>
-            <p>这一节主要在解释“Where things can end early”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“Where things can end early”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Where things can end early”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：机器人朋友 timeout (abort)、AbortSignal (cancel)、门口的小门卫 disconnect or RPC timeout、机器人朋友.wait timeout (wait-only, does not s…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Agent timeout (abort)</li><li>AbortSignal (cancel)</li><li>Gateway disconnect or RPC timeout</li><li><code>agent.wait</code> timeout (wait-only, does not stop agent)</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-    <section class="section-shell">
-      <div class="ad-placeholder">
-        <p>这里预留给未来的 Google AdSense 模块。</p>
-        <code>&lt;!-- ADSENSE_SNIPPET --&gt;</code>
-      </div>
-    </section>
-  
+      <section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>🎬 Agent Loop，就是“一条消息从敲门到回话”的整场小电影</h2>
+      <p>用户发来一句话，不是一下子就变成答案的。中间要经过收件、拼上下文、想一想、调工具、边输出边记账、最后把结果存好。</p>
+      <p>这页讲的，就是这整场小电影怎么一幕一幕往前走。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合想看懂一轮 agent 运行全流程的人</span>
+      <span>这页最重要的是记住：一轮 loop 是串行的，一次只稳稳地跑一条</span>
+      <a href="https://docs.openclaw.ai/concepts/agent-loop" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一幕</p>
+    <h2>📩 入口像前台收件，不是直接把消息扔给模型</h2>
+    <p>官方一开头就把入口点点出来了：Gateway RPC 的 <code>agent</code> / <code>agent.wait</code>，还有 CLI 的 <code>agent</code> 命令。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label"><code>agent</code></div>
+      <p>像前台收下任务，先登记 runId 和时间，再把任务送去后场排队。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>agent.wait</code></div>
+      <p>像有人站在前台问：“那张工单现在做完没？”它负责等结果，不负责替你干活。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">CLI 的 <code>agent</code></div>
+      <p>像你不是从网页前台递单，而是从命令行窗口直接敲门。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">📌 一句话</div>
+      <p>入口的工作是收件、编号、排队，不是立刻神奇地产生答案。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二幕</p>
+    <h2>🎞 高层 5 步，其实就是一条工单在车间里的流转</h2>
+    <p>官方列了 5 步。翻成人话后，会非常顺。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label">1. 收件登记</div>
+      <p><code>agent</code> RPC 先验一下参数、找对会话、把元数据存好，然后立刻回你一个 <code>{ runId, acceptedAt }</code>。像前台先给你领号单。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">2. 把工单送进后场</div>
+      <p><code>agentCommand</code> 开始真正干活：挑模型、带上默认 thinking/verbose、加载技能快照，再把工单交给嵌入式 agent runtime。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">3. 真工人开始跑</div>
+      <p><code>runEmbeddedPiAgent</code> 负责排队、建会话、订阅事件、超时中止。像车间主管在盯整条流水线。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">4. 边干边对外播报</div>
+      <p><code>subscribeEmbeddedPiSession</code> 会把工具事件、assistant 文本、生命周期状态一路翻成 OpenClaw 自己的流事件。</p>
+    </div>
+  </div>
+  <div class="source-card">
+    <div class="story-card-label">5. <code>agent.wait</code> 只等“结束铃声”</div>
+    <p>它等的是 lifecycle 里的 <code>end</code> 或 <code>error</code>。所以它像前台屏幕上的“已完成 / 出错 / 超时”，不是替车间再造一遍产品。</p>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">最关键的规矩</p>
+    <h2>🚦 为什么官方一直强调 serialized？因为同一本会话本子不能同时被两个人乱写</h2>
+    <p>这部分特别重要。OpenClaw 会按 session key 串行跑，同一会话一次只跑一条真实 loop。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">🛤</span>
+      <h2>Per-session lane</h2>
+      <p>像每个会话都有自己的单行轨道，同一时间只能让一辆车过去。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🚉</span>
+      <h2>Global lane</h2>
+      <p>必要时还会再经过总闸口，避免整座站台同时挤爆。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">📓</span>
+      <h2>为什么要这样</h2>
+      <p>不然工具调用和会话写入会互相踩脚，最后聊天记录像两支笔同时在同一页乱画。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🎈</span>
+      <h2>一句话</h2>
+      <p>一次一轮，慢一点，但账本不乱。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">开跑前</p>
+    <h2>🧳 真正开跑前，它会先收拾书包</h2>
+    <p>模型还没开始想之前，官方会先准备工作区、skills、bootstrap 文件和 session lock。这很像小工人出门前先把装备装包。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">工作区准备</div>
+      <p>像确认今天到底在哪张桌子上工作。沙箱模式时，可能换到另一张受控桌子。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">Skills snapshot</div>
+      <p>像把今天可能要翻的小册子先放进包里，别到一半临时乱找。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">Bootstrap/context 注入</div>
+      <p>像把桌上的身份卡、规则卡、用户卡、工具卡先扫一遍。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">Session write lock</div>
+      <p>像先把这本会话工作本锁在自己手边，别让别的工人同时来抢笔。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">命令与事件</p>
+    <h2>📣 streaming 不是装饰，它像“边做边报进度”</h2>
+    <p>很多人以为 streaming 只是打字机效果。其实它更像车间在不停往外喊：“我开始了，我在调工具，我这里有中间结果，我结束了。”</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label"><code>stream: "assistant"</code></div>
+      <p>像工人边想边把能展示的文字片段往外递。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>stream: "tool"</code></div>
+      <p>像工人一边拿工具干活，一边告诉你“我正在敲哪颗钉子”。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>stream: "lifecycle"</code></div>
+      <p>像值班牌从“开始”翻到“结束”或“出错”。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">聊天通道里的 <code>delta</code> / <code>final</code></div>
+      <p>像先不断收到草稿纸条，最后再收到一张正式盖章版。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">插手点</p>
+    <h2>🪝 Hooks 像流水线旁边的一排插手按钮</h2>
+    <p>官方列了很多 hook。别硬背名字，先记住它们是在不同环节给你“插手一下”的机会。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label"><code>before_model_resolve</code></div>
+      <p>像在工人开工前，先把今天要用的脑子换掉。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>before_prompt_build</code></div>
+      <p>像在工人真正读题前，再塞一张额外说明卡进它手里。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>before_tool_call</code> / <code>after_tool_call</code></div>
+      <p>像工具拿起来前先查一下，放下后再验一下。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>message_sending</code></div>
+      <p>像回信要出门前，门口最后再看一眼：这封信到底让不让寄。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">结束方式</p>
+    <h2>⏳ 提前结束，不只一种死法</h2>
+    <p>官方最后把“哪里会提前结束”写得很实在。这种地方最适合翻成人话。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">⏰</span>
+      <h2>Agent timeout</h2>
+      <p>像车间闹钟响了，时间到了，必须停工。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">✋</span>
+      <h2>AbortSignal</h2>
+      <p>像外面有人举手喊停，这一轮就收住。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🌉</span>
+      <h2>Gateway disconnect</h2>
+      <p>像桥断了，前台和后场暂时说不上话。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">⌛</span>
+      <h2><code>agent.wait</code> timeout</h2>
+      <p>只是等的人等烦了，不等了。并不代表后场那位工人一定已经停工。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">最后总结</p>
+    <h2>🎈 把这页压成一句最短的话</h2>
+    <p>Agent Loop 就是一张工单完整跑过一条流水线：先收件编号，再串行排队，带上书包开工，边调工具边播报，最后把结果、日志和状态稳稳收尾。</p>
+  </div>
+  <div class="ad-placeholder">
+    <p>如果你想看“开工前到底塞了哪些固定提示给模型”，下一页就去 <code>/concepts/system-prompt</code>。</p>
+  </div>
+</section>
+
 
       <footer class="page-footer">
         <div>

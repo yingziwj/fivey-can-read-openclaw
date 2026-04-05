@@ -1,0 +1,250 @@
+<section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>🏡 <code>Setup</code> 像“把新家先安稳落地”</h2>
+      <p>这页不是在讲一堆艰深名词。它只是在说：先把房子摆好，再让 OpenClaw 真正住进去。</p>
+      <p>你可以把它想成安家手册。哪些东西放在家外面，哪些东西放在门口，哪些东西先用官方稳稳的方式跑起来，这页都帮你定好。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合第一次真正把 OpenClaw 放进电脑的人</span>
+      <span>这页最重要的不是“快”，而是“稳”</span>
+      <a href="https://docs.openclaw.ai/start/setup" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一步</p>
+    <h2>🧳 开家门前，先记住两件最要紧的事</h2>
+    <p>官方一开头就把边界讲得很清楚：有些东西放在仓库外面，有些东西放在家里门口。这样以后改起来不会互相踩脚。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">📦</span>
+      <h2>配置放家外</h2>
+      <p><code>~/.openclaw/openclaw.json</code> 像你的私人收纳盒，别塞进仓库里。这样你更新代码的时候，不会顺手把自己的习惯一起冲掉。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🪴</span>
+      <h2>工作区也放家外</h2>
+      <p><code>~/.openclaw/workspace</code> 像助理自己的小房间，里面放技能、提示词、记忆。它最好是你自己的私有小仓库。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🛡</span>
+      <h2>不要把“你的东西”塞回主仓库</h2>
+      <p>官方特地提醒：个人配置、工作区和代码仓库最好分开。这样升级时，房子不会把你的家具一起搬丢。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🎈</span>
+      <h2>一句话</h2>
+      <p>先把家和行李分开，后面改起来才不会乱。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">门槛</p>
+    <h2>🔧 这页先告诉你，开门前要带哪几样工具</h2>
+    <p>不是很多，但每样都很实在。少一样，后面就会卡。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">🟢 Node</div>
+      <p>像发动机。官方推荐 Node 24，Node 22.14 以上也还能开。没有发动机，车就不会走。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">📦 pnpm</div>
+      <p>像一只靠谱的小搬运车。它把依赖和脚本一件件拉进来。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🐳 Docker</div>
+      <p>它是可选工具。只有你想走容器化路线，或者要做某些测试时，才需要把它搬上来。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🔑 凭证</div>
+      <p>这页虽然不是专讲钥匙，但它默认你后面会接模型和通道，所以钥匙和登录最终都躲不开。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">先搭骨架</p>
+    <h2>🛠 <code>openclaw setup</code> 像“一键把抽屉架搭好”</h2>
+    <p>这是整页最像“开荒”的那一步。它不替你决定一切，但会把最容易漏掉的骨架先立住。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw setup</code></div>
+      <p>像叫来一位收纳老师，把助理的大抽屉、小抽屉、身份卡和工具格先排好。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">为什么先跑它</div>
+      <p>因为它会把“该有的基础结构”先放稳，后面你再接聊天通道、模型、技能时，就不会从空地开始搭。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">从仓库里跑一次也行</div>
+      <p>如果你还没全局安装，也可以用 <code>pnpm openclaw setup</code>。意思就是先借搬运车，把这位老师请进来干活。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 记一句</div>
+      <p>Setup 的任务不是炫技，是先把能住人的骨架搭好。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">两种住法</p>
+    <h2>🏠 官方其实给了你两条很清楚的路</h2>
+    <p>一条稳，一条新。两条都能走，但它们的性格不一样。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">稳</span>
+      <h2>macOS app + bundled Gateway</h2>
+      <p>像住进官方替你打包好的大屋子。门窗、电线、值班表都先给你配齐了，最省心。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">新</span>
+      <h2>自己跑 Gateway</h2>
+      <p>像你亲自接管总机房。自由度更高，也更适合开发和调试。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🧭</span>
+      <h2>Stable workflow</h2>
+      <p>先装 macOS app，再让它带着 bundled Gateway 跑。这是最像“拿来就住”的方式。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🧪</span>
+      <h2>Bleeding edge workflow</h2>
+      <p>你自己在终端里跑 Gateway，app 只是贴上来。更像自己修房子，动得也更深。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">稳定路线</p>
+    <h2>📱 稳定路线像“先把门牌挂好，再让 app 帮你守门”</h2>
+    <p>官方这条路很实用，适合第一次真正上手。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label">1. 装并打开 OpenClaw.app</div>
+      <p>像把现成的门卫房打开。菜单栏里那个小入口，是它的前台。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">2. 走完 onboarding 和权限</div>
+      <p>像让老师带你去把所有需要的钥匙和许可都签好。TCC 提示出现时，别慌，那是在让系统知道你真的同意它去做事。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">3. 确认 Gateway 是 Local</div>
+      <p>像确认总机房就在家里， app 正在接管它的值班。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">4. 登录通道，再检查健康</div>
+      <p><code>openclaw channels login</code> 像去门口扫一次通行证，<code>openclaw health</code> 像摸摸门卫额头，看看它是不是精神。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">命令翻译</p>
+    <h2>🛠 这几个命令，在现场到底像什么动作？</h2>
+    <p>不要把它们当成口令，想成动作会更顺。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">🚪</span>
+      <h2><code>openclaw setup</code></h2>
+      <p>像把抽屉架先搭好，告诉系统“我准备住进来了”。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">📶</span>
+      <h2><code>openclaw channels login</code></h2>
+      <p>像给助理去门口领一张正式通行证，让它开始连聊天通道。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🩺</span>
+      <h2><code>openclaw health</code></h2>
+      <p>像对着房子做一次体检，看看有没有哪盏灯没亮。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">💻</span>
+      <h2><code>node openclaw.mjs gateway --port 18789 --verbose</code></h2>
+      <p>像自己在终端里把总机房叫醒，还特地打开“多说几句”模式，好观察它每一步在做什么。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">开发路线</p>
+    <h2>🧪 Bleeding edge 像“自己站到机房里修电路”</h2>
+    <p>这条路更自由，也更像开发者的工作方式。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>pnpm install</code></div>
+      <p>像先把所有零件搬进来，免得你修到一半发现少了一颗螺丝。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>pnpm gateway:watch</code></div>
+      <p>像让总机房装上眼睛。代码、配置、插件元数据一变，它就会自己刷新。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>./scripts/restart-mac.sh</code></div>
+      <p>像把 macOS app 也拉进同一条新鲜轨道上，方便一起追最新代码。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">✅ 验证方式</div>
+      <p>app 里看到 “Using existing gateway …”，或者跑 <code>openclaw health</code>。这说明它真的连上了你手里的那台总机房。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">常见坑</p>
+    <h2>⚠️ 这页最后那几条提醒，都是在帮你少踩坑</h2>
+    <p>看起来像小字，实际都是血泪提醒。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">1</span>
+      <h2>端口要一致</h2>
+      <p>app 和 CLI 如果盯着不同门牌号，就像你站在 18789 门口，而门卫却在 18790 值班。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">2</span>
+      <h2>状态放哪要分清</h2>
+      <p>凭证、会话、日志各自有家。知道它们住哪，排查问题才不乱翻。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">3</span>
+      <h2>Linux 要考虑 lingering</h2>
+      <p>不然你一登出，系统就把守门人叫走了。官方这句是在提醒：别让值班服务下班太早。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">4</span>
+      <h2>更新时别把“你的东西”带坏</h2>
+      <p>仓库更新了，别把家里的收纳盒也一起打翻。官方反复强调的就是这件事。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">最后总结</p>
+    <h2>🎈 把这页压成一句最好记的话</h2>
+    <p><code>Setup</code> 就是在教你怎么把 OpenClaw 安稳地安进家里：配置和工作区放家外，先搭骨架，再选稳定住法或开发住法，最后让它真正开始值班。</p>
+  </div>
+  <div class="ad-placeholder">
+    <p>如果你下一页只想继续看一页，我建议先看 <code>/start/docs-directory</code>。因为家已经搭好了，下一步最需要的就是找路图。</p>
+  </div>
+</section>
