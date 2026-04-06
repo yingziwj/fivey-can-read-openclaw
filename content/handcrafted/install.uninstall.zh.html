@@ -1,0 +1,123 @@
+<section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>🧹 Uninstall 这页，其实是在教你“怎么把 OpenClaw 搬走，而且别留值班员和旧钥匙在屋里继续上班”</h2>
+      <p>卸载最容易假完成。很多人删了 CLI，以为结束了，但后台服务还在跑，状态目录还在，工作区还在，甚至启动项还在。</p>
+      <p>所以官方把卸载分成两条路：有 CLI 时走简单路；CLI 没了时，再手工去拆后台值班系统。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合彻底移除 OpenClaw</span>
+      <span>重点是停服务、删状态、删工作区、删全局 CLI</span>
+      <a href="https://docs.openclaw.ai/install/uninstall" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一站</p>
+    <h2>🛣️ 能走简单路时，就别自己拿锤子满屋拆</h2>
+    <p>如果 CLI 还在，官方最推荐直接用自带卸载器。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw uninstall</code></div>
+      <p>像直接叫原装修队回来拆场，最知道自己当初把什么装到了哪。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw uninstall --all --yes --non-interactive</code></div>
+      <p>像在自动化脚本里说：“别再问我确认，整套按单子全拆。”</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>npx -y openclaw uninstall ...</code></div>
+      <p>像本地 CLI 已经半残时，临时叫一位一次性维修工进来完成最后拆除。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 一句话</div>
+      <p>能让 OpenClaw 自己收拾，就先让它自己收拾。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二站</p>
+    <h2>🧰 手工卸载那套动作，其实就是“五件事：停班、拆值班、扔状态、扔工作区、卸工具架”</h2>
+    <p>这五件缺一件，都可能留下尾巴。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">🛑</span>
+      <h2><code>openclaw gateway stop</code></h2>
+      <p>先让值班员下班，别边跑边拆。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🔧</span>
+      <h2><code>openclaw gateway uninstall</code></h2>
+      <p>拆掉 launchd / systemd / schtasks 这些后台值班制度。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🗑️</span>
+      <h2><code>rm -rf ~/.openclaw</code></h2>
+      <p>扔掉状态目录，连钥匙、配置、缓存一起清走。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🗂️</span>
+      <h2><code>rm -rf ~/.openclaw/workspace</code></h2>
+      <p>如果你连工作台和 agent 文件也不想留，就把这间屋子也清空。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第三站</p>
+    <h2>🪟🍎🐧 CLI 没了但后台还在跑时，就得按系统分别去拆“开机值班表”</h2>
+    <p>这就是 manual service removal 那几段的本意。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label">macOS: <code>launchctl bootout ...</code></div>
+      <p>像把 launchd 的值班表从前台告示板上撕下来。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">Linux: <code>systemctl --user disable --now ...</code></div>
+      <p>像告诉 systemd：“这位值班员马上停班，以后也别再自动排班。”</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">Windows: <code>schtasks /Delete /F /TN ...</code></div>
+      <p>像去任务计划表里把那条自动值班安排彻底擦掉。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">📌 为什么要分系统</div>
+      <p>因为后台值班制度在不同系统里挂的地方根本不是同一块墙。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第四站</p>
+    <h2>📦 别忘了最后还要卸全局 CLI 或删源码仓库，不然工具架上还是留着旧扳手</h2>
+    <p>这也是很多“卸载完还能敲出 openclaw”的来源。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>npm rm -g openclaw</code></div>
+      <p>像把全局工具架上的 OpenClaw 扳手摘下来。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>pnpm remove -g openclaw</code> / <code>bun remove -g openclaw</code></div>
+      <p>同样是摘工具，只是你原来用的工具架系统不同。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">📁 如果是 git clone 路线</div>
+      <p>别先删仓库，再想起后台服务还绑着它。顺序还是先拆值班，再删源码房间。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 收尾一句</div>
+      <p>真正的卸载，不是删一个命令，而是把“值班员、房间、钥匙和工具架”一起收干净。</p>
+    </div>
+  </div>
+</section>

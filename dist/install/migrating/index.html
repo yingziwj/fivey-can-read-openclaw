@@ -3970,364 +3970,130 @@
   
       </div>
 
-      
-    <section class="section-shell">
-      <div class="overview-card">
-        <div>
-          <p class="section-kicker">先听这页的人话版</p>
-          <h2>Migration Guide</h2>
-          <p>这一页像一本关于“Migration Guide”的小绘本，它先告诉我们这位机器人朋友会做什么，再一步一步解释什么时候该这样做。 你可以先把它想成：Migrating OpenClaw to a New Machine。</p>
-          <p>如果把这页当成“给普通人看的版本”，你最应该带走的是：它到底在教你一件什么事、什么时候要这样做、以及哪里最容易踩坑。</p>
-        </div>
-        <div class="overview-meta">
-          <span>原始路径：/install/migrating</span>
-          <span>章节数量：5</span>
-          <a href="https://docs.openclaw.ai/install/migrating" target="_blank" rel="noreferrer">查看原文</a>
-        </div>
-      </div>
-    </section>
-    
-        <section class="section-shell" id="section-1">
-          <div class="section-heading">
-            <p class="section-kicker">第 1 站</p>
-            <h2>Start Here</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Migrating OpenClaw to a New Machine This guide moves an OpenClaw 门口的小门卫 to a new machine without redoing onboarding.”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Migrating OpenClaw to a New Machine”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p># Migrating OpenClaw to a New Machine</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“This guide moves an OpenClaw 门口的小门卫 to a new machine without redoing onboarding.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>This guide moves an OpenClaw gateway to a new machine without redoing onboarding.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-2">
-          <div class="section-heading">
-            <p class="section-kicker">第 2 站</p>
-            <h2>What Gets Migrated</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“When you copy the **state directory** (~/.openclaw/ by default) and your **workspace**, you preserve: &lt;Tip&gt; Run opencla…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“When you copy the **state directory** (~/.openclaw/ by default) and your **workspace**, you preserve:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>When you copy the **state directory** (<code>~/.openclaw/</code> by default) and your **workspace**, you preserve:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“What Gets Migrated”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：**设置说明书** -- openclaw.json and all 门口的小门卫…、**Auth** -- 对话接口 keys, OAuth tokens, cred…、**Sessions** -- conversation history and…、**消息通道 state** -- WhatsApp login, Telegra…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>**Config** -- <code>openclaw.json</code> and all gateway settings</li><li>**Auth** -- API keys, OAuth tokens, credential profiles</li><li>**Sessions** -- conversation history and agent state</li><li>**Channel state** -- WhatsApp login, Telegram session, etc.</li><li>**Workspace files** -- <code>MEMORY.md</code>, <code>USER.md</code>, skills, and prompts</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Tip&gt; Run openclaw status on the old machine to confirm your state directory path. Custom profiles use ~/.openclaw-&lt;pro…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>&lt;Tip&gt; Run <code>openclaw status</code> on the old machine to confirm your state directory path. Custom profiles use <code>~/.openclaw-&lt;profile&gt;/</code> or a path set via <code>OPENCLAW_STATE_DIR</code>. &lt;/Tip&gt;</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-3">
-          <div class="section-heading">
-            <p class="section-kicker">第 3 站</p>
-            <h2>Migration Steps</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Steps&gt; &lt;Step title=&quot;Stop the 门口的小门卫 and back up&quot;&gt; On the **old** machine, stop the 门口的小门卫 so files are not changing mi…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Steps&gt; &lt;Step title=&quot;Stop the 门口的小门卫 and back up&quot;&gt; On the **old** machine, stop the 门口的小门卫 so files are not changing mi…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>&lt;Steps&gt; &lt;Step title=&quot;Stop the gateway and back up&quot;&gt; On the **old** machine, stop the gateway so files are not changing mid-copy, then archive:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>``<code>bash theme={&quot;theme&quot;:{&quot;light&quot;:&quot;min-light&quot;,&quot;dark&quot;:&quot;min-dark&quot;}} openclaw gateway stop cd ~ tar -czf openclaw-state.tgz .openclaw </code>``</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“If you use multiple profiles (e.g. ~/.openclaw-work), archive each separately. &lt;/Step&gt;”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>If you use multiple profiles (e.g. <code>~/.openclaw-work</code>), archive each separately. &lt;/Step&gt;</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Step title=&quot;Install OpenClaw on the new machine&quot;&gt; Install the CLI (and Node if needed) on the new machine. It is fine…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>&lt;Step title=&quot;Install OpenClaw on the new machine&quot;&gt; <a href="/install" target="_blank" rel="noreferrer">Install</a> the CLI (and Node if needed) on the new machine. It is fine if onboarding creates a fresh <code>~/.openclaw/</code> -- you will overwrite it next. &lt;/Step&gt;</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Step title=&quot;Copy state directory and workspace&quot;&gt; Transfer the archive via scp, rsync -a, or an external drive, then ex…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>&lt;Step title=&quot;Copy state directory and workspace&quot;&gt; Transfer the archive via <code>scp</code>, <code>rsync -a</code>, or an external drive, then extract:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>``<code>bash theme={&quot;theme&quot;:{&quot;light&quot;:&quot;min-light&quot;,&quot;dark&quot;:&quot;min-dark&quot;}} cd ~ tar -xzf openclaw-state.tgz </code>``</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Ensure hidden directories were included and file ownership matches the user that will run the 门口的小门卫. &lt;/Step&gt;”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Ensure hidden directories were included and file ownership matches the user that will run the gateway. &lt;/Step&gt;</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Step title=&quot;Run doctor and verify&quot;&gt; On the new machine, run Doctor to apply 设置说明书 migrations and repair services:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>&lt;Step title=&quot;Run doctor and verify&quot;&gt; On the new machine, run <a href="/gateway/doctor" target="_blank" rel="noreferrer">Doctor</a> to apply config migrations and repair services:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;/Step&gt; &lt;/Steps&gt;”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>``<code>bash theme={&quot;theme&quot;:{&quot;light&quot;:&quot;min-light&quot;,&quot;dark&quot;:&quot;min-dark&quot;}} openclaw doctor openclaw gateway restart openclaw status </code>`` &lt;/Step&gt; &lt;/Steps&gt;</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-4">
-          <div class="section-heading">
-            <p class="section-kicker">第 4 站</p>
-            <h2>Common Pitfalls</h2>
-            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>你理解的是能力边界，不只是功能名字。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Accordion大家一起的房间&gt; &lt;Accordion title=&quot;Profile or state-dir mismatch&quot;&gt; If the old 门口的小门卫 used --profile or OPENCLAW_STATE…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Accordion大家一起的房间&gt; &lt;Accordion title=&quot;Profile or state-dir mismatch&quot;&gt; If the old 门口的小门卫 used --profile or OPENCLAW_STATE…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>&lt;AccordionGroup&gt; &lt;Accordion title=&quot;Profile or state-dir mismatch&quot;&gt; If the old gateway used <code>--profile</code> or <code>OPENCLAW_STATE_DIR</code> and the new one does not, channels will appear logged out and sessions will be empty. Launch the gateway with the **same** profile or state-dir you migrated, then rerun <code>openclaw doctor</code>. &lt;/Accordion&gt;</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Accordion title=&quot;Copying only openclaw.json&quot;&gt; The 设置说明书 file alone is not enough. Credentials live under credentials/,…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>&lt;Accordion title=&quot;Copying only openclaw.json&quot;&gt; The config file alone is not enough. Credentials live under <code>credentials/</code>, and agent state lives under <code>agents/</code>. Always migrate the **entire** state directory. &lt;/Accordion&gt;</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Accordion title=&quot;Permissions and ownership&quot;&gt; If you copied as root or switched users, the 门口的小门卫 may fail to read cred…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>&lt;Accordion title=&quot;Permissions and ownership&quot;&gt; If you copied as root or switched users, the gateway may fail to read credentials. Ensure the state directory and workspace are owned by the user running the gateway. &lt;/Accordion&gt;</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Accordion title=&quot;Remote mode&quot;&gt; If your UI points at a **remote** 门口的小门卫, the remote host owns sessions and workspace.…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>&lt;Accordion title=&quot;Remote mode&quot;&gt; If your UI points at a **remote** gateway, the remote host owns sessions and workspace. Migrate the gateway host itself, not your local laptop. See <a href="/help/faq#where-things-live-on-disk" target="_blank" rel="noreferrer">FAQ</a>. &lt;/Accordion&gt;</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Accordion title=&quot;Secrets in backups&quot;&gt; The state directory contains 对话接口 keys, OAuth tokens, and 消息通道 credentials. Stor…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>&lt;Accordion title=&quot;Secrets in backups&quot;&gt; The state directory contains API keys, OAuth tokens, and channel credentials. Store backups encrypted, avoid insecure transfer channels, and rotate keys if you suspect exposure. &lt;/Accordion&gt; &lt;/AccordionGroup&gt;</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-5">
-          <div class="section-heading">
-            <p class="section-kicker">第 5 站</p>
-            <h2>Verification Checklist</h2>
-            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>你理解的是能力边界，不只是功能名字。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“On the new machine, confirm:”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“On the new machine, confirm:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>On the new machine, confirm:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Verification Checklist”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：[ ] openclaw status shows the 门口的小门卫 runn…、[ ] 消息通道s are still connected (no re-pair…、[ ] The dashboard opens and shows existin…、[ ] Workspace files (memory, 设置说明书s) are…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>[ ] <code>openclaw status</code> shows the gateway running</li><li>[ ] Channels are still connected (no re-pairing needed)</li><li>[ ] The dashboard opens and shows existing sessions</li><li>[ ] Workspace files (memory, configs) are present</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-    <section class="section-shell">
-      <div class="ad-placeholder">
-        <p>这里预留给未来的 Google AdSense 模块。</p>
-        <code>&lt;!-- ADSENSE_SNIPPET --&gt;</code>
-      </div>
-    </section>
-  
+      <section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>🚚 Migration Guide 这页，其实是在教你“给 OpenClaw 搬家，但别把记忆、钥匙和门牌落在旧房子里”</h2>
+      <p>这页最重要的观念只有一个：不是只搬一个 <code>openclaw.json</code> 文件，而是把整个状态目录和工作区完整搬走。</p>
+      <p>如果你只拿走表面那张配置纸，很多真正重要的东西，比如凭据、通道登录、会话状态，都会留在旧房子里。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合迁移到新机器</span>
+      <span>重点是状态目录、workspace、doctor、同 profile</span>
+      <a href="https://docs.openclaw.ai/install/migrating" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一站</p>
+    <h2>📦 真正要搬走的，不是一张配置纸，而是一整箱生活用品</h2>
+    <p>官方列的 “What Gets Migrated” 很值得直接压成画面感。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">⚙️</span>
+      <h2>配置</h2>
+      <p>像房子的规则表，告诉 Gateway 怎么工作。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🔑</span>
+      <h2>凭据和授权</h2>
+      <p>像各种门卡、钥匙、OAuth 通行证。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">💬</span>
+      <h2>会话和通道状态</h2>
+      <p>像聊天记录和“这扇门已经登录好了”的现场状态。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🗂️</span>
+      <h2>工作区</h2>
+      <p>像记事本、技能卡、提示词文件，全都在这里。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二站</p>
+    <h2>🛑 搬家第一步不是复制，而是“先让旧房子里的值班员停下来”</h2>
+    <p>不然边搬边改文件，很容易搬出半旧半新的怪状态。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw gateway stop</code></div>
+      <p>像先让旧房子的值班员下班，别在你打包时还一直改抽屉里的东西。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>tar -czf openclaw-state.tgz .openclaw</code></div>
+      <p>像把整个状态箱打成一个搬家包，而不是零零散散抓几个文件。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">📌 多 profile 怎么办</div>
+      <p>如果你有 <code>.openclaw-work</code> 这类多个房间，就每个房间各打一包，别混成一团。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 一句话</div>
+      <p>先停，再打包，别边跑边搬。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第三站</p>
+    <h2>📥 新机器那边的动作，其实是“先铺一层新地板，再把旧家当整个盖上去”</h2>
+    <p>官方说 onboarding 生成了新目录也没关系，就是这个意思。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">🆕 先装 CLI</div>
+      <p>像先让新房子具备基本用电和开门能力。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>scp</code> / <code>rsync -a</code></div>
+      <p>像把搬家箱从旧房子送到新房子。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>tar -xzf openclaw-state.tgz</code></div>
+      <p>像在新房里把整箱家当打开，按原样摆回去。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">📌 隐藏目录别漏</div>
+      <p>这也是为什么官方特别提醒“确保 hidden directories 也被带上”。很多关键东西就藏在那里。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第四站</p>
+    <h2>🩺 最后一定要 doctor，因为它像搬家后的总验收师</h2>
+    <p>它不只是“看有没有活着”，还会顺手补迁移和修细节。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw doctor</code></div>
+      <p>像请总验收师来检查：配置迁移好了没，路径修对了没，服务状态顺不顺。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw gateway restart</code></div>
+      <p>像让值班室在新房里正式重启上岗。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw status</code></div>
+      <p>最后看灯牌是不是亮了，别以为搬完箱子就算入住成功。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 收尾一句</div>
+      <p>这页最重要的提醒是：搬家要搬整箱，不要只拿封面那张配置纸。</p>
+    </div>
+  </div>
+</section>
+
 
       <footer class="page-footer">
         <div>

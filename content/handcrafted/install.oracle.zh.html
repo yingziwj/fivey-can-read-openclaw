@@ -1,0 +1,123 @@
+<section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>🧿 Oracle Cloud 这页，其实是在教你“怎么把 OpenClaw 养在 Oracle 免费 ARM 大房子里，再用 Tailscale 把门锁好”</h2>
+      <p>这条路线最大的吸引力就是免费额度很大，但官方整页的安全重点非常明确：不要把控制台和 SSH 长期开在大街上，尽量改成只走 Tailscale。</p>
+      <p>所以这页本质上是“免费大房子 + 私人小路”的组合玩法。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合 Oracle Always Free ARM</span>
+      <span>重点是 Tailscale、token auth、VCN 收口</span>
+      <a href="https://docs.openclaw.ai/install/oracle" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一站</p>
+    <h2>🏠 这间免费大房子很香，但你得先抢到位置</h2>
+    <p>Oracle 这条路最现实的坑，官方也没藏着掖着。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">🆓</span>
+      <h2>Always Free ARM</h2>
+      <p>像一间面积挺大的免费房子，CPU、内存和存储额度都比很多免费层大方。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">⚠️</span>
+      <h2>可能没空位</h2>
+      <p>“Out of capacity” 就像这栋楼当前没空房，不是你命令写错了。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🔑</span>
+      <h2>SSH key + Tailscale</h2>
+      <p>一个是进楼钥匙，一个是后面真正长期走的私人小路。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🧱</span>
+      <h2>Ubuntu 24.04 aarch64</h2>
+      <p>像官方推荐的合适房型和地板规格，别乱换。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二站</p>
+    <h2>🛠️ 安装过程其实是“先把 ARM 房子打扫好，再把 Tailscale 小路铺起来”</h2>
+    <p>顺序比平台名词更重要。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>ssh ubuntu@YOUR_PUBLIC_IP</code></div>
+      <p>像先从临时大门走进房子。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>sudo apt install -y build-essential</code></div>
+      <p>像先把 ARM 环境需要的基础工具箱搬进来，给后面编译原生依赖做准备。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>sudo tailscale up --ssh --hostname=openclaw</code></div>
+      <p>像正式铺好私人小路，从这之后你最好别再主要依赖公网门。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>curl -fsSL https://openclaw.ai/install.sh | bash</code></div>
+      <p>再把官方安装车开进屋里，开始装 OpenClaw 本体。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第三站</p>
+    <h2>🔐 Gateway 配置那段，翻成人话就是“门留在屋里，只让 Tailscale 前台代你接待”</h2>
+    <p>这是这页最值得记住的安全设计。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw config set gateway.bind loopback</code></div>
+      <p>像告诉控制室：“你先只在屋内开门，不直接对大街开。”</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>gateway.auth.mode token</code></div>
+      <p>像给控制室再补一张管理员门票制度，不是光靠地址就能进。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>gateway.tailscale.mode serve</code></div>
+      <p>像让 Tailscale 这位前台接待员在外面替你开门迎客。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>gateway.trustedProxies '[\"127.0.0.1\"]'</code></div>
+      <p>像明确写明“我信任的是屋里这位代理，不是全世界的路人”。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第四站</p>
+    <h2>🚧 VCN 收口那一步，就是“把临时大门焊死，只留 Tailscale 私路”</h2>
+    <p>这页后半段的安全味道非常重，但值得。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">⛔ 删掉大部分 ingress</div>
+      <p>像把公网能直接敲到的门一个个关掉。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">✅ 只留 UDP 41641</div>
+      <p>像只给 Tailscale 那条私路留通行证。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>ssh -L 18789:127.0.0.1:18789 ubuntu@openclaw</code></div>
+      <p>如果 Tailscale Serve 临时不顺，SSH 隧道就是备用电话线。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 收尾一句</div>
+      <p>Oracle 这条路的关键，不是“免费 ARM 很大”，而是“免费房子也得把门锁好”。</p>
+    </div>
+  </div>
+</section>

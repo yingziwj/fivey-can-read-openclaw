@@ -1,0 +1,119 @@
+<section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>❄️ Nix 这页，其实是在教你“按一张非常严格的配方卡，把 OpenClaw 连同配套工具一起摆好”</h2>
+      <p>Nix 路线和普通安装最大的不同，不是命令，而是心态。普通安装像现场装配，Nix 更像照着一张写死的食谱做，每样材料和版本都尽量钉住。</p>
+      <p>所以官方才会说它是 declarative installation，还强调 rollback。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合喜欢声明式配置的人</span>
+      <span>重点是 nix-openclaw、Home Manager、Nix mode</span>
+      <a href="https://docs.openclaw.ai/install/nix" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一站</p>
+    <h2>📋 这条路卖的不是“更快”，而是“更像配方卡，能回退”</h2>
+    <p>官方列的优势，都可以翻成很具体的画面。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">📌</span>
+      <h2>版本都钉住</h2>
+      <p>像配方卡上写死“要哪一包材料”，不会今天明天忽然换口味。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🔁</span>
+      <h2><code>home-manager switch --rollback</code></h2>
+      <p>像料理翻车时能直接退回上一次能吃的版本。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🧩</span>
+      <h2>插件和配置也声明式</h2>
+      <p>不只是装本体，连周边工具和规则也能写进配方卡。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🎈</span>
+      <h2>一句话</h2>
+      <p>Nix 路线主打“照方抓药”，不是“现场边装边想”。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二站</p>
+    <h2>🛠️ Quick start 那几步，其实就是“先装厨房，再把配方卡抄回家”</h2>
+    <p>把流程压成人话以后很直白。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">🧱 先装 Nix</div>
+      <p>像先把这整套声明式厨房搭起来，不然配方卡没有地方执行。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">📄 建本地 flake</div>
+      <p>像把官方 agent-first 配方卡抄到你自己的厨房笔记本里。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🔐 配 secrets</div>
+      <p>像把 bot token 和模型 API key 放进专门的秘密抽屉里。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>home-manager switch</code></div>
+      <p>像让厨房照配方卡一次把菜全部摆上桌。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第三站</p>
+    <h2>🚫 Nix mode 的真正意思，是“既然你走的是严格配方路线，就别让程序自己偷偷改菜谱”</h2>
+    <p>这就是自动安装、自我修改被关掉的原因。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label"><code>OPENCLAW_NIX_MODE=1</code></div>
+      <p>像给 OpenClaw 贴一张标签：“你现在住在严格配方厨房里，别自己乱买材料。”</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🚫 关掉 auto-install</div>
+      <p>程序不会再自作主张帮你装依赖，因为这会破坏配方的一致性。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🪟 macOS app 那句提醒</div>
+      <p>GUI app 不会天然继承你 shell 里的环境变量，所以要用 <code>defaults write</code> 单独告诉它。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 一句话</div>
+      <p>Nix mode 就是在说：以后按配方来，不准临场加料。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第四站</p>
+    <h2>📁 Config 和 state path 那段，是“哪些东西写进配方，哪些东西还是会在日常生活里变动”</h2>
+    <p>这也是 Nix 路线容易误会的地方。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label"><code>OPENCLAW_CONFIG_PATH</code></div>
+      <p>像告诉 OpenClaw：“你该去哪里读那张声明式配方卡。”</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>OPENCLAW_STATE_DIR</code></div>
+      <p>像日常生活抽屉，运行时会变的状态还是得住这里，不能塞进不可变仓库。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 收尾一句</div>
+      <p>Nix 这页的精髓是：配方要固定，生活抽屉要留出来。</p>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,123 @@
+<section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>🧩 Matrix migration 这页，其实是在教你“旧 Matrix 房间怎么搬到新房型里，尽量别把加密钥匙弄丢”</h2>
+      <p>这页很长，不是因为官方爱啰嗦，而是因为 Matrix 的旧状态里有两种很麻烦的东西：账户布局和加密房间钥匙。</p>
+      <p>最重要的结论先说：大多数人是原地升级，不需要重命名插件和配置；真正麻烦的是旧加密状态的恢复边界。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合旧 Matrix 用户升级</span>
+      <span>重点是自动迁移、快照、恢复钥匙、医生修复</span>
+      <a href="https://docs.openclaw.ai/install/migrating-matrix" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一站</p>
+    <h2>📦 对大多数人来说，这不是“换插件重装”，而是“原地整理旧房间”</h2>
+    <p>官方一开始先安抚你，这点很重要。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">✅</span>
+      <h2>插件名字不变</h2>
+      <p><code>@openclaw/matrix</code> 还是它，不用大改名。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">✅</span>
+      <h2>channel 名字不变</h2>
+      <p>还是 <code>matrix</code>，不用改成奇怪新键名。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">✅</span>
+      <h2>凭据和运行目录也尽量沿用</h2>
+      <p>旧凭据、旧 state 会尽量被接到新布局里。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">⚠️</span>
+      <h2>真正难点在加密状态</h2>
+      <p>尤其是那些只存在本地、没备份过的房间钥匙。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二站</p>
+    <h2>📸 自动迁移最关键的一步，其实是“先拍一张事故前快照”</h2>
+    <p>这就是官方反复强调 pre-migration snapshot 的原因。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">📦 为什么先快照</div>
+      <p>像在动旧房间结构前，先把现场拍照存档。万一出事，至少还能回头看。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🧠 什么时候会自动做</div>
+      <p>Gateway 启动和 <code>openclaw doctor --fix</code> 发现有可执行迁移时，会先做或复用这张快照。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🚫 做不了快照时会怎样</div>
+      <p>官方宁可暂时不迁移，也不愿意在没有回头路时乱改状态。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 一句话</div>
+      <p>Matrix 迁移的第一原则不是快，而是“先留后路”。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第三站</p>
+    <h2>🔐 自动迁移能救很多东西，但救不了“从没备份过、只躺在旧本地里的加密钥匙”</h2>
+    <p>这就是这页最需要讲清的人话版边界。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">✅ 能自动做的</div>
+      <p>接旧凭据、搬旧同步存储、尽量把旧账户布局挂到新位置、找到已有的恢复线索。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">❌ 自动做不了的</div>
+      <p>那些从没上传过备份、只活在旧本地加密仓里的房间钥匙，系统没法凭空变出来。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🧭 多账户也会卡</div>
+      <p>如果旧共享平面存储遇上多个新账户，而你又没指定默认账户，系统不会胡猜“该搬给谁”。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 最好记的话</div>
+      <p>Matrix 迁移能整理房子，但不能凭空造出你从没备份过的钥匙。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第四站</p>
+    <h2>🩺 推荐升级流程，说白了就是“正常更新、医生修复、重启、看密钥状态，再按需手动补钥匙”</h2>
+    <p>把长流程压成动作，读起来就清楚很多。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw update</code></div>
+      <p>像先走正常升级主路，让系统自动触发该做的前置迁移。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw doctor --fix</code></div>
+      <p>像请医生和搬家师傅一起做修补，把还能自动修的都先修完。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw matrix verify backup restore --recovery-key \"...\"</code></div>
+      <p>如果系统提醒需要恢复钥匙，这条命令就是你把真正的保险箱钥匙交给它。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw matrix verify bootstrap</code></div>
+      <p>像在整理完旧房间以后，再为未来建立一套新的官方备份保险柜。</p>
+    </div>
+  </div>
+</section>

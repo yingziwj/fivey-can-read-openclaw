@@ -1,0 +1,123 @@
+<section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>⚡ exe.dev 这页，其实是在教你“让一位云上小助理先帮你把 OpenClaw 房子搭好，再去验收”</h2>
+      <p>这条路很特别，因为官方把一个外部代理助手 Shelley 直接写进流程里。你不是完全手动搭，而是先让它帮你铺好地，再自己去检查门票、代理和配对。</p>
+      <p>所以这页最不像传统安装文档，更像“半自动装修 + 人工验房”。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合 exe.dev 云机路线</span>
+      <span>重点是 Shelley、nginx 代理、pairing 审批</span>
+      <a href="https://docs.openclaw.ai/install/exe-dev" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一站</p>
+    <h2>🤖 Shelley 在这里像什么？像一位先帮你装修的云上包工头</h2>
+    <p>官方给了一大段 prompt，不是在炫 prompt，而是在把装修要求一次讲清楚。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">🏗️</span>
+      <h2>先帮你装 OpenClaw</h2>
+      <p>像包工头先把主框架立起来，不用你一条条敲完整命令。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🚪</span>
+      <h2>顺手配 nginx</h2>
+      <p>像给门口加前台，把 18789 后台窗口转发成外面更顺手的入口。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🪪</span>
+      <h2>最后还得你审批</h2>
+      <p>设备 pairing 不会自动帮你拍板，最后还是要你自己放行。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🎈</span>
+      <h2>一句话</h2>
+      <p>exe.dev 这条路是“别人先搭，你再验收”。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二站</p>
+    <h2>🏠 手工建 VM 的那几步，翻成人话就是“先领一间新房，再把基础工具搬进去”</h2>
+    <p>即使你不用 Shelley，全手动路线也很直接。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>ssh exe.dev new</code></div>
+      <p>像先跟 exe.dev 前台说：“给我开一间新房。”</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>ssh &lt;vm-name&gt;.exe.xyz</code></div>
+      <p>像正式走进你自己的云房子。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>sudo apt-get install -y git curl jq ca-certificates openssl</code></div>
+      <p>像先把常用扳手、胶带、钥匙胚都摆进工具间。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>curl -fsSL https://openclaw.ai/install.sh | bash</code></div>
+      <p>然后把 OpenClaw 官方安装车开进来。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第三站</p>
+    <h2>🚪 nginx 那段配置，其实是在搭“前台接待台 + WebSocket 通道”</h2>
+    <p>很多人看到 nginx 就头疼，其实这段只在做一件事：把外面的请求转给本地 18789。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label"><code>proxy_pass http://127.0.0.1:18789</code></div>
+      <p>像前台收到访客后，把人引到后台真正的控制室。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">WebSocket headers</div>
+      <p>像告诉前台：“这不是普通短对话，有些连接要保持长通话，别半路挂掉。”</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>listen 8000;</code></div>
+      <p>像额外给前台开一个对外接待窗口。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 一句话</div>
+      <p>nginx 在这里不是主角，它只是门口接待员。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第四站</p>
+    <h2>✅ 最后一步不是“能打开网页就完了”，而是要把浏览器设备真的批准进门</h2>
+    <p>这就是官方在 quick path 里专门提到 pairing 的原因。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw devices list</code></div>
+      <p>像翻门卫登记簿，看现在谁在门口排队等进来。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw devices approve &lt;requestId&gt;</code></div>
+      <p>像对着登记簿说：“这位浏览器访客可以放行。”</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>https://&lt;vm-name&gt;.exe.xyz/</code></div>
+      <p>像你最终对外看到的正式门牌，但进去前还得有 token 和审批。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 收尾一句</div>
+      <p>exe.dev 这条路最容易漏的，不是安装，而是最后那一步设备放行。</p>
+    </div>
+  </div>
+</section>

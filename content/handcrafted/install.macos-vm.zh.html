@@ -1,0 +1,119 @@
+<section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>🍎 macOS VMs 这页，其实是在教你“什么时候值得专门养一台隔离的 Mac 小世界给 OpenClaw 用”</h2>
+      <p>官方一开头先说“多数人不用走这条路”，这很诚实。因为最省钱、最省心的默认解，多半还是 Linux VPS 或者一台常驻硬件。</p>
+      <p>macOS VM 真正的价值，在于你需要 macOS 独有能力，比如 iMessage / BlueBubbles，或者你想把 OpenClaw 和你日常 Mac 严格隔开。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合 macOS 专属能力或严格隔离</span>
+      <span>重点是 Lume、本地 VM、云上 Mac、SSH</span>
+      <a href="https://docs.openclaw.ai/install/macos-vm" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一站</p>
+    <h2>🧭 官方先给你的其实是“路线选择题”</h2>
+    <p>别一看到 macOS VM 就以为这是终极方案，它只是某些场景最合适。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">💸</span>
+      <h2>小 Linux VPS</h2>
+      <p>默认更省钱，适合一直在线的 Gateway。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🏠</span>
+      <h2>专门硬件</h2>
+      <p>像自己买一台常驻小机器，更适合需要住宅 IP 的浏览器自动化。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🔀</span>
+      <h2>Hybrid</h2>
+      <p>Gateway 放 VPS，Mac 只在需要 UI / 浏览器时接成 node，像分工协作。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🍎</span>
+      <h2>macOS VM</h2>
+      <p>适合真的需要 macOS 能力，或者想把日常主机和 OpenClaw 隔离开。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二站</p>
+    <h2>🪟 Lume 路线，翻成人话就是“在你自己的 Apple Silicon Mac 里再养一只隔离的小 Mac”</h2>
+    <p>这条路最像“我不买新机器，但我要一个干净分身”。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">🧼 为什么干净</div>
+      <p>OpenClaw 和通道登录都放在 VM 里，宿主机自己保持清爽。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">💬 为什么适合 iMessage</div>
+      <p>因为这确实是一整套 macOS 环境，BlueBubbles 这种能力在这里才有戏。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">♻️ 为什么容易重置</div>
+      <p>VM 像可复制的分身，出问题时比真机更容易整只重来。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 一句话</div>
+      <p>Lume 路线的魅力，是“用现有 Mac 养出一台隔离小世界”。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第三站</p>
+    <h2>🛠️ 建 VM 的命令，其实就是“先装造梦机，再让它生成一只新的小 Mac”</h2>
+    <p>这几条命令读成动作就顺了。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>/bin/bash -c \"$(curl -fsSL ... lume ... install.sh)\"</code></div>
+      <p>像先把造 VM 的机器 Lume 装到宿主机上。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>lume create openclaw --os macos --ipsw latest</code></div>
+      <p>像正式孵一只名叫 <code>openclaw</code> 的新 macOS 分身。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>lume run openclaw --no-display</code></div>
+      <p>像让这只小 Mac 在后台静静上班，不需要你一直盯着窗口。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">Enable Remote Login</div>
+      <p>像给这只小 Mac 开远程门铃，不然后面 SSH 根本进不去。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第四站</p>
+    <h2>☁️ Hosted Mac providers 那段，就是“如果你不想在自己机器里养，就去云上租一台真 Mac”</h2>
+    <p>MacStadium 这些服务，本质上只是把“远程 SSH 进 Mac”这件事搬到云端。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">🏢 云上 Mac</div>
+      <p>像租一台别人机房里的 Mac，然后你通过 SSH 进去干活。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">📌 核心没变</div>
+      <p>不管是本地 VM 还是云上 Mac，后面真正重要的还是“能 SSH 进去、能跑 OpenClaw、能接通道”。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 收尾一句</div>
+      <p>macOS VM 这页不是教你“怎么更高级”，而是教你“什么时候值得为 macOS 能力单独养一间隔离房”。</p>
+    </div>
+  </div>
+</section>

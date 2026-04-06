@@ -1,0 +1,123 @@
+<section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>🚚 Migration Guide 这页，其实是在教你“给 OpenClaw 搬家，但别把记忆、钥匙和门牌落在旧房子里”</h2>
+      <p>这页最重要的观念只有一个：不是只搬一个 <code>openclaw.json</code> 文件，而是把整个状态目录和工作区完整搬走。</p>
+      <p>如果你只拿走表面那张配置纸，很多真正重要的东西，比如凭据、通道登录、会话状态，都会留在旧房子里。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合迁移到新机器</span>
+      <span>重点是状态目录、workspace、doctor、同 profile</span>
+      <a href="https://docs.openclaw.ai/install/migrating" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一站</p>
+    <h2>📦 真正要搬走的，不是一张配置纸，而是一整箱生活用品</h2>
+    <p>官方列的 “What Gets Migrated” 很值得直接压成画面感。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">⚙️</span>
+      <h2>配置</h2>
+      <p>像房子的规则表，告诉 Gateway 怎么工作。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🔑</span>
+      <h2>凭据和授权</h2>
+      <p>像各种门卡、钥匙、OAuth 通行证。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">💬</span>
+      <h2>会话和通道状态</h2>
+      <p>像聊天记录和“这扇门已经登录好了”的现场状态。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🗂️</span>
+      <h2>工作区</h2>
+      <p>像记事本、技能卡、提示词文件，全都在这里。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二站</p>
+    <h2>🛑 搬家第一步不是复制，而是“先让旧房子里的值班员停下来”</h2>
+    <p>不然边搬边改文件，很容易搬出半旧半新的怪状态。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw gateway stop</code></div>
+      <p>像先让旧房子的值班员下班，别在你打包时还一直改抽屉里的东西。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>tar -czf openclaw-state.tgz .openclaw</code></div>
+      <p>像把整个状态箱打成一个搬家包，而不是零零散散抓几个文件。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">📌 多 profile 怎么办</div>
+      <p>如果你有 <code>.openclaw-work</code> 这类多个房间，就每个房间各打一包，别混成一团。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 一句话</div>
+      <p>先停，再打包，别边跑边搬。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第三站</p>
+    <h2>📥 新机器那边的动作，其实是“先铺一层新地板，再把旧家当整个盖上去”</h2>
+    <p>官方说 onboarding 生成了新目录也没关系，就是这个意思。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">🆕 先装 CLI</div>
+      <p>像先让新房子具备基本用电和开门能力。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>scp</code> / <code>rsync -a</code></div>
+      <p>像把搬家箱从旧房子送到新房子。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>tar -xzf openclaw-state.tgz</code></div>
+      <p>像在新房里把整箱家当打开，按原样摆回去。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">📌 隐藏目录别漏</div>
+      <p>这也是为什么官方特别提醒“确保 hidden directories 也被带上”。很多关键东西就藏在那里。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第四站</p>
+    <h2>🩺 最后一定要 doctor，因为它像搬家后的总验收师</h2>
+    <p>它不只是“看有没有活着”，还会顺手补迁移和修细节。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw doctor</code></div>
+      <p>像请总验收师来检查：配置迁移好了没，路径修对了没，服务状态顺不顺。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw gateway restart</code></div>
+      <p>像让值班室在新房里正式重启上岗。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw status</code></div>
+      <p>最后看灯牌是不是亮了，别以为搬完箱子就算入住成功。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 收尾一句</div>
+      <p>这页最重要的提醒是：搬家要搬整箱，不要只拿封面那张配置纸。</p>
+    </div>
+  </div>
+</section>
