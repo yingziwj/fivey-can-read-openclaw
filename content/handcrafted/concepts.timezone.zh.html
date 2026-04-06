@@ -1,0 +1,57 @@
+<section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>🕰️ Timezones 这页，其实是在讲“别让模型一会儿看上海时间、一会儿看芝加哥时间，先统一钟表”</h2>
+      <p>时间一乱，提醒、日历、消息先后顺序都会开始拧巴。</p>
+      <p>所以 OpenClaw 会尽量给模型一个统一参考时间，再决定聊天包头、工具返回、系统提示词里怎么写时区。</p>
+    </div>
+    <div class="overview-meta">
+      <span>统一时间参考系</span>
+      <span>重点是 envelopeTimezone、userTimezone、时间显示格式</span>
+      <a href="https://docs.openclaw.ai/concepts/timezone" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一站</p>
+    <h2>📮 消息包头上的时间，默认跟着主机本地钟走</h2>
+    <p>也就是你看到类似 <code>[Provider ... 2026-01-05 16:26 PST]</code> 那类前缀时，它先看的是宿主机时间。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card"><div class="story-card-label"><code>envelopeTimezone: "local"</code></div><p>默认做法，像“用这台机器墙上的钟”。</p></div>
+    <div class="source-card"><div class="story-card-label"><code>"utc"</code></div><p>像全办公室统一挂一面世界标准钟，所有人都看 UTC。</p></div>
+    <div class="source-card"><div class="story-card-label"><code>"user"</code></div><p>像说“别看机器钟了，按用户自己的城市时区来写”。</p></div>
+    <div class="source-card"><div class="story-card-label">IANA 时区</div><p>你也能直接指定 <code>Europe/Vienna</code> 这种固定城市时区，相当于锁死看某一座城的钟。</p></div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二站</p>
+    <h2>⏱️ 这几个开关，控制的是“包头上写不写绝对时间、写不写过去了几分钟”</h2>
+    <p>有时候你想让模型更看重相对时间，有时候你想让它只看干净正文。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card"><span class="home-card-index">🗓️</span><h2><code>envelopeTimestamp</code></h2><p>关掉后，消息前缀里就不再写明确的年月日时分。</p></article>
+    <article class="home-card"><span class="home-card-index">⏳</span><h2><code>envelopeElapsed</code></h2><p>关掉后，像 <code>+2m</code> 这种“刚刚过去两分钟”的小尾巴就会消失。</p></article>
+    <article class="home-card"><span class="home-card-index">🧾</span><h2>Raw tool timestamps</h2><p>工具返回里仍会保留 provider 原始时间，但同时再附上标准化字段，方便统一比较。</p></article>
+    <article class="home-card"><span class="home-card-index">🌍</span><h2><code>timestampUtc</code></h2><p>像给每条时间再贴一张世界统一标签，不用猜时区偏移。</p></article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第三站</p>
+    <h2>👤 <code>userTimezone</code> 是专门告诉模型“用户平时活在哪个时间带”</h2>
+    <p>这不是装饰字段。日程、提醒、今天明天、上午下午，很多理解都靠它。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card"><div class="story-card-label"><code>agents.defaults.userTimezone</code></div><p>像把“用户常驻城市”贴给模型看。没写时会退回主机时区。</p></div>
+    <div class="source-card"><div class="story-card-label"><code>timeFormat: "12" / "24"</code></div><p>这像决定墙上钟表是上午下午制，还是 24 小时制。</p></div>
+    <div class="source-card"><div class="story-card-label">系统提示词</div><p>官方会把当前日期时间和时区写进系统提示词里，不让模型瞎猜“现在几点”。</p></div>
+    <div class="source-card"><div class="story-card-label">🎈 最后记一句</div><p>这页的主线只有一句：先统一钟表，再让模型聊天，不然时间理解很容易歪。</p></div>
+  </div>
+</section>

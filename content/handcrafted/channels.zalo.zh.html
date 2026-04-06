@@ -1,0 +1,123 @@
+<section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>💙 Zalo 这页，其实是在教你“拿到 Bot Token，让 OpenClaw 变成一个能在 Zalo 私聊里回话的小机器人”</h2>
+      <p>它走的是 Zalo Bot API 这条官方机器人路，不是个人号模拟登录。</p>
+      <p>所以这页最重要的三件事很直接：装插件、拿 token、决定陌生人第一次来敲门时怎么审核。</p>
+    </div>
+    <div class="overview-meta">
+      <span>实验性插件</span>
+      <span>重点是 Bot Token、pairing、长轮询 / webhook</span>
+      <a href="https://docs.openclaw.ai/channels/zalo" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一站</p>
+    <h2>🧩 这条路走的是“机器人票务窗口”，先拿到那张 bot token</h2>
+    <p>没有 token，OpenClaw 就像还没领工牌的机器人，站在门口也进不去。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw plugins install @openclaw/zalo</code></div>
+      <p>先把 Zalo 插件装上，相当于给机器人装会说 Zalo 的语言包。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">bot.zaloplatforms.com</div>
+      <p>这里像机器人办证大厅。你在这里创建 bot，最后拿到那串 <code>数字:密钥</code> 的 token。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>ZALO_BOT_TOKEN=...</code></div>
+      <p>这像把工牌先揣进环境变量口袋里，给默认账号用最方便。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>botToken: "123456:abc"</code></div>
+      <p>这则是把工牌直接写进配置账本里，适合多账号管理时逐个登记。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二站</p>
+    <h2>🚪 默认的 <code>dmPolicy: "pairing"</code>，其实就是“陌生人先领一张配对号码牌”</h2>
+    <p>它不是多此一举，而是在帮你挡住一上来就乱敲门的陌生流量。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">🎟️</span>
+      <h2><code>pairing</code></h2>
+      <p>第一次来的人先领配对码，等你审核过，再正式开始聊天。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">📮</span>
+      <h2>DM 场景</h2>
+      <p>现在主打的是 1 对 1 私聊，不是复杂群聊编排。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🧭</span>
+      <h2>Deterministic routing</h2>
+      <p>回信会老老实实回到原来的 Zalo 聊天里，不让模型自己乱挑渠道。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">👀</span>
+      <h2>能力边界</h2>
+      <p>官方也说得很直白：这页对应的是 Marketplace bot 的当前能力，不要自动脑补成 OA 那套。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第三站</p>
+    <h2>📡 长轮询像机器人不断去前台问“有新纸条吗”，webhook 则像别人主动按门铃</h2>
+    <p>Zalo 这页不是逼你一定开 webhook，它默认可以先靠轮询跑起来。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label">Long-polling</div>
+      <p>像机器人隔一会儿就去前台窗口探头问一句：“有没有新消息给我？”</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>channels.zalo.webhookUrl</code></div>
+      <p>如果你要切 webhook，这就像给外界一个固定门铃地址，让消息自己敲门进来。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">2000 字切块</div>
+      <p>Zalo 发长文有长度上限，所以 OpenClaw 会把太长的回复切成几段，不是一口气硬塞。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">媒体大小上限</div>
+      <p><code>mediaMaxMb</code> 像快递柜尺寸限制，超过默认 5MB 就装不进去。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第四站</p>
+    <h2>🛠️ 这一页最实用的配置，其实就是“工牌放哪儿、陌生人怎么审、要不要多账号”</h2>
+    <p>看起来字段多，但真正常用的就那几格。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>accounts.default.botToken</code></div>
+      <p>默认机器人账号的工牌。先把这个填对，整条路才能亮起来。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">多账号</div>
+      <p>如果你有多个 bot，就在 <code>accounts</code> 下面一个个开小抽屉分别放 token。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">重启 Gateway</div>
+      <p>填完 token 后要重启，就像把新领的工牌刷进门禁系统。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 最后记一句</div>
+      <p>Zalo 这页的中心思想很简单：领工牌、开门、先配对、再私聊。</p>
+    </div>
+  </div>
+</section>

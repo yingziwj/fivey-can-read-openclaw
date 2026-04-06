@@ -1,0 +1,57 @@
+<section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>📊 Usage Tracking 这页，其实是在讲“别再自己瞎估费用了，能问 provider 就直接问 provider 账本”</h2>
+      <p>它主打的是实报实销式的查看，不是根据 token 硬猜一个大概数。</p>
+      <p>也就是说，能从官方 usage 接口直接拉到账单窗口，就直接拉；拉不到，就别装得很确定。</p>
+    </div>
+    <div class="overview-meta">
+      <span>优先 provider 真实 usage / quota</span>
+      <span>重点是 /status、/usage、CLI 状态卡</span>
+      <a href="https://docs.openclaw.ai/concepts/usage-tracking" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一站</p>
+    <h2>🧾 这套追踪分两种：一种看 provider 真账本，一种看本地会话小账本</h2>
+    <p>别把这两个来源混成一个。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card"><span class="home-card-index">🏦</span><h2>Provider usage</h2><p>直接去供应商 usage/quota 接口拿真实窗口数据，最像官方账本。</p></article>
+    <article class="home-card"><span class="home-card-index">🧮</span><h2>Local cost summary</h2><p>像 OpenClaw 自己记的小账，按会话日志汇总，不等于 provider 官方账单。</p></article>
+    <article class="home-card"><span class="home-card-index">🙈</span><h2>拿不到就隐藏</h2><p>没有匹配凭据时，它宁可不显示，也不装作自己知道。</p></article>
+    <article class="home-card"><span class="home-card-index">🎯</span><h2>不主打估算</h2><p>官方这里明显偏向“有真数据就展示真数据”，而不是乱猜成本。</p></article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二站</p>
+    <h2>📺 它会出现在好几个地方，就像同一份账单被贴在不同窗口</h2>
+    <p>读者最常碰到的是聊天里的状态卡和 CLI 的汇总。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card"><div class="story-card-label"><code>/status</code></div><p>像聊天窗口里的总览卡。会顺手展示当前 provider 的 usage 情况。</p></div>
+    <div class="source-card"><div class="story-card-label"><code>/usage off|tokens|full</code></div><p>像给每次回复屁股后面加不加“小票尾巴”。</p></div>
+    <div class="source-card"><div class="story-card-label"><code>/usage cost</code></div><p>这句更像看本地累计花费小账本，不是 provider 官方后台。</p></div>
+    <div class="source-card"><div class="story-card-label"><code>openclaw status --usage</code></div><p>像把账单打印到终端里，做一份更完整的分 provider 清单。</p></div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第三站</p>
+    <h2>🔐 能不能看到 usage，关键取决于你手上有没有对应 provider 的凭据</h2>
+    <p>没有钥匙，就进不了账房。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card"><div class="story-card-label">OAuth providers</div><p>像 Anthropic、Copilot、Gemini CLI 这类，通常靠 auth profile 里的 OAuth 身份去查。</p></div>
+    <div class="source-card"><div class="story-card-label">API key providers</div><p>像 MiniMax、z.ai 这种，则用 API key 去问账。</p></div>
+    <div class="source-card"><div class="story-card-label">当前 provider 优先</div><p>它更关心你当前正在用的模型供应商，不会一上来把全世界账本都摊一桌。</p></div>
+    <div class="source-card"><div class="story-card-label">🎈 最后记一句</div><p>Usage tracking 的核心不是“估个差不多”，而是“能拿真账单就拿真账单”。</p></div>
+  </div>
+</section>

@@ -1,0 +1,57 @@
+<section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>📝 Markdown Formatting 这页，其实是在讲“先把消息拆成一份中性稿，再翻译成各个平台能吃的样子”</h2>
+      <p>Slack、Telegram、Signal 各有各的格式脾气。OpenClaw 不会每次都从原文重新猜一遍。</p>
+      <p>它会先做一份中间稿，也就是 IR，然后再按不同通道翻译成各自的口味。</p>
+    </div>
+    <div class="overview-meta">
+      <span>先转 IR，再按通道渲染</span>
+      <span>重点是 safe chunking 和跨通道一致性</span>
+      <a href="https://docs.openclaw.ai/concepts/markdown-formatting" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一站</p>
+    <h2>🧱 IR 可以把它想成“保留意思、不站队平台”的中性积木稿</h2>
+    <p>先做中性稿，后面才不会每个平台都从头猜粗体、链接、代码块。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card"><span class="home-card-index">🔤</span><h2>文本本体</h2><p>先保留纯文字内容，别让样式标签把正文搅乱。</p></article>
+    <article class="home-card"><span class="home-card-index">🎨</span><h2>样式跨度</h2><p>粗体、斜体、删除线、代码这些，会变成“哪一段穿什么衣服”的标记。</p></article>
+    <article class="home-card"><span class="home-card-index">🔗</span><h2>链接跨度</h2><p>链接不会丢，只是被单独记账，后面再按平台格式拼回去。</p></article>
+    <article class="home-card"><span class="home-card-index">✂️</span><h2>先切块再渲染</h2><p>官方特地这样做，是为了别把一半粗体切到上一条、一半切到下一条。</p></article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二站</p>
+    <h2>🚚 整个流水线像“三段工厂”：先拆、再切、最后送到各站台</h2>
+    <p>这就是官方说的 pipeline。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card"><div class="story-card-label">1. Parse Markdown → IR</div><p>像先把原稿拆成“正文 + 样式地图 + 链接地图”。</p></div>
+    <div class="source-card"><div class="story-card-label">2. Chunk IR</div><p>像装箱前先分包，确保格式边界不会被乱砍断。</p></div>
+    <div class="source-card"><div class="story-card-label">3. Render per channel</div><p>最后才翻译成 Slack 的 mrkdwn、Telegram 的 HTML、Signal 的文本加样式范围。</p></div>
+    <div class="source-card"><div class="story-card-label">UTF-16 offsets</div><p>这不是书呆子细节，而是在照顾像 Signal 这种按 UTF-16 位置数格子的接口。</p></div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第三站</p>
+    <h2>📊 Markdown 表格之所以单独拿出来讲，是因为各家聊天窗都很挑食</h2>
+    <p>有的通道能吃代码块，有的更适合子弹点列表，所以官方让你自己挑表格变形方式。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card"><span class="home-card-index">💻</span><h2><code>tables: code</code></h2><p>像把表格塞进等宽小盒子里，保留排版感。</p></article>
+    <article class="home-card"><span class="home-card-index">•</span><h2><code>tables: bullets</code></h2><p>像把每一行拆成几条小项目，更适合 Signal、WhatsApp 这类不爱表格的地方。</p></article>
+    <article class="home-card"><span class="home-card-index">🚫</span><h2><code>tables: off</code></h2><p>像说“我不帮你翻”，原表格文字原样过去。</p></article>
+    <article class="home-card"><span class="home-card-index">🎈</span><h2>最后记一句</h2><p>这页真正讲的是“先做中间稿，再翻译”，这样不同通道才不会各唱各的调。</p></article>
+  </div>
+</section>

@@ -3970,299 +3970,130 @@
   
       </div>
 
-      
       <section class="section-shell">
-        <div class="overview-card">
-          <div>
-            <p class="section-kicker">AI 绘本解读版</p>
-            <h2>🤖 给你的Urbit飞船装个聊天机器人</h2>
-            <p>OpenClaw能变成你的Tlon聊天助手。它会帮你收消息、回消息，还能管好谁可以跟你聊天。</p>
-          </div>
-          <div class="overview-meta">
-            <span>原始路径：/channels/tlon</span>
-            <span>故事卡片：10 张</span>
-            <a href="https://docs.openclaw.ai/channels/tlon" target="_blank" rel="noreferrer">查看官方原文</a>
-          </div>
-        </div>
-      </section>
-      
-          <section class="section-shell" id="section-1">
-            <div class="section-heading">
-              <p class="section-kicker">第 1 站</p>
-              <h2>🎁 先装个插件</h2>
-              <p>Tlon是个额外的聊天工具，不是自带的。你得先把它装到OpenClaw里。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>不装插件，机器人就没法在Tlon里跟你聊天。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>Tlon就像一个新玩具，得先拆开包装才能玩。</li><li>装插件就是给OpenClaw加个新本领。</li><li>装好后，机器人就能听懂Tlon里的悄悄话和群聊了。</li><li>现在它还不能点赞和投票，但能发文字和图片。</li><li>想让它回群聊，得先@它，就像喊它名字一样。</li></ul>
-              </div>
-              
-            <div class="source-card">
-              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
-              <ul><li>`openclaw plugins install @openclaw/tlon` 这行命令就像在说：&#39;去商店买Tlon插件！&#39;</li><li>`openclaw plugins install ./extensions/tlon` 这行命令就像在说：&#39;从家里的工具箱里拿Tlon插件！&#39;</li></ul>
-            </div>
-          
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>先装插件，机器人才能上班。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-2">
-            <div class="section-heading">
-              <p class="section-kicker">第 2 站</p>
-              <h2>🔧 给机器人办入职</h2>
-              <p>告诉机器人你的飞船地址和密码，它就能登录Tlon开始工作了。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>机器人得知道去哪个飞船找你，还要有钥匙开门。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>第一步：装好插件。</li><li>第二步：找到你的飞船地址和登录密码。</li><li>第三步：写一张入职表给机器人。</li><li>第四步：重启一下机器人的办公室。</li><li>第五步：在Tlon里私聊它，或者在群里@它试试。</li></ul>
-              </div>
-              
-            <div class="source-card">
-              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
-              <ul><li>`&quot;ship&quot;: &quot;~sampel-palnet&quot;` 这是在写机器人的名字。</li><li>`&quot;url&quot;: &quot;https://your-ship-host&quot;` 这是在写飞船的地址牌。</li><li>`&quot;code&quot;: &quot;lidlut-tabwed-pillex-ridrup&quot;` 这是在给机器人一把开门钥匙。</li><li>`&quot;ownerShip&quot;: &quot;~your-main-ship&quot;` 这是在指定一个大老板，机器人什么都听他的。</li></ul>
-            </div>
-          
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>填好地址和密码，机器人就能登录了。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-3">
-            <div class="section-heading">
-              <p class="section-kicker">第 3 站</p>
-              <h2>🏠 家里的飞船怎么连？</h2>
-              <p>如果你的飞船就在自己电脑上或者家里网络里，得开个特别通道。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>机器人默认不敢去私人地址，怕走错门。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>机器人很小心，怕去错地方。</li><li>像 `localhost` 或 `192.168.x.x` 这种地址，它一开始不敢去。</li><li>你得告诉它：&#39;放心，这个地址是安全的，去吧！&#39;</li><li>但记住，只有你完全信任家里的网络，才能开这个通道。</li></ul>
-              </div>
-              
-            <div class="source-card">
-              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
-              <ul><li>`&quot;url&quot;: &quot;http://localhost:8080&quot;` 这是在说飞船就在这台电脑上。</li><li>`&quot;allowPrivateNetwork&quot;: true` 这就像按下一个按钮：&#39;允许访问家里的地址！&#39;</li></ul>
-            </div>
-          
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>家里的飞船，需要特别通行证。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-4">
-            <div class="section-heading">
-              <p class="section-kicker">第 4 站</p>
-              <h2>👥 让机器人进群聊天</h2>
-              <p>机器人可以自己找到你加的群，也可以你手动带它进去。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>这样它就知道该在哪些群里回话了。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>机器人很聪明，能自己发现你加入了哪些群。</li><li>你也可以像贴便利贴一样，把重要的群地址告诉它。</li><li>如果你不想让它自己找，可以关掉这个自动发现功能。</li><li>然后只让它去你指定的那几个群。</li></ul>
-              </div>
-              
-            <div class="source-card">
-              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
-              <ul><li>`&quot;groupChannels&quot;: [&quot;chat/~host-ship/general&quot;]` 这就像把群地址写在机器人的小本本上。</li><li>`&quot;autoDiscoverChannels&quot;: false` 这就像关掉机器人的&#39;自动找群&#39;雷达。</li></ul>
-            </div>
-          
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>可以自动找群，也可以手动带路。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-5">
-            <div class="section-heading">
-              <p class="section-kicker">第 5 站</p>
-              <h2>🚦 谁可以和机器人聊天？</h2>
-              <p>你可以定规矩：哪些朋友可以私聊，哪些人可以进哪个群说话。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>这样就不会有陌生人随便来打扰你的机器人了。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>私聊白名单：名单上的朋友才能给机器人发悄悄话。</li><li>群聊守门员：默认群里只有被@了，机器人才会回话。</li><li>你可以给每个群定更细的规矩：完全开放，或者只让名单上的人说话。</li><li>还可以设一个默认名单，这些人在所有群里都能跟机器人聊天。</li></ul>
-              </div>
-              
-            <div class="source-card">
-              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
-              <ul><li>`&quot;dmAllowlist&quot;: [&quot;~zod&quot;]` 这是在私聊白名单上写下朋友的名字。</li><li>`&quot;mode&quot;: &quot;open&quot;` 这是在说：&#39;这个群，谁都可以来跟机器人聊天！&#39;</li><li>`&quot;mode&quot;: &quot;restricted&quot;` 这是在说：&#39;这个群，只有名单上的人才能跟机器人聊天！&#39;</li><li>`&quot;allowedShips&quot;: [&quot;~zod&quot;]` 这是在写这个群的VIP客人名单。</li></ul>
-            </div>
-          
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>定好规矩，管好谁能跟机器人玩。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-6">
-            <div class="section-heading">
-              <p class="section-kicker">第 6 站</p>
-              <h2>👑 找个大老板管审批</h2>
-              <p>设置一个大老板。当有陌生人想找机器人玩时，会先问大老板同不同意。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>大老板能帮你审核陌生人，省去你手动设置的麻烦。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>大老板拥有最高权限，机器人哪里都让他进。</li><li>如果有人不在白名单却想私聊机器人，机器人会问大老板：&#39;让他进来吗？&#39;</li><li>如果有人在没权限的群里@机器人，大老板也会收到通知。</li><li>大老板不需要被加到任何名单里，他天生就有所有权限。</li></ul>
-              </div>
-              
-            <div class="source-card">
-              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
-              <ul><li>`&quot;ownerShip&quot;: &quot;~your-main-ship&quot;` 这就像给机器人指定一个船长。</li></ul>
-            </div>
-          
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>设个大老板，让他帮你把关。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-7">
-            <div class="section-heading">
-              <p class="section-kicker">第 7 站</p>
-              <h2>🤖 让机器人自动交朋友</h2>
-              <p>你可以让机器人自动接受好朋友的私聊邀请，或者自动接受所有群邀请。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>这样好朋友找你聊天，就不用每次都等批准了。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>自动接受私聊：白名单上的朋友发来邀请，机器人直接通过。</li><li>自动接受群聊：任何人拉机器人进群，它都直接同意。</li><li>这就像给机器人设定了&#39;热情好客&#39;或&#39;来者不拒&#39;的性格。</li></ul>
-              </div>
-              
-            <div class="source-card">
-              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
-              <ul><li>`&quot;autoAcceptDmInvites&quot;: true` 这就像打开一个开关：&#39;自动通过好朋友的私聊请求！&#39;</li><li>`&quot;autoAcceptGroupInvites&quot;: true` 这就像打开另一个开关：&#39;自动同意所有进群邀请！&#39;</li></ul>
-            </div>
-          
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>打开自动开关，聊天更顺畅。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-8">
-            <div class="section-heading">
-              <p class="section-kicker">第 8 站</p>
-              <h2>📦 机器人自带的百宝箱</h2>
-              <p>装上Tlon插件，机器人就多了一个装满工具的小箱子。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>用这些工具，你甚至可以用命令直接让机器人去管理聊天。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>联系人工具：可以查看、更新朋友的信息。</li><li>频道工具：可以列出频道、发消息、看历史记录。</li><li>群组工具：可以建新群、管理群成员。</li><li>私聊工具：可以直接发私聊消息、给消息加表情。</li><li>设置工具：可以用斜杠命令管理插件权限。</li><li>这个百宝箱是自动跟着插件一起来的。</li></ul>
-              </div>
-              
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>插件自带工具箱，功能超级多。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-9">
-            <div class="section-heading">
-              <p class="section-kicker">第 9 站</p>
-              <h2>✅ 机器人现在能做什么？</h2>
-              <p>看看你的聊天机器人都有哪些本领。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>了解它的能力，才知道怎么更好地用它。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>私聊：✅ 没问题！</li><li>群聊：✅ 没问题！（但需要@它）</li><li>回复楼中楼：✅ 自动在同一个楼里回话。</li><li>漂亮文字：✅ 会把Markdown变成Tlon能懂的格式。</li><li>发图片：✅ 会把图片链接上传并显示出来。</li><li>加表情：✅ 用自带工具箱可以做到。</li><li>发起投票：❌ 这个还不会。</li><li>听命令：✅ 大老板可以直接命令它做事。</li></ul>
-              </div>
-              
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>能聊能发图，投票功能还在学。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-10">
-            <div class="section-heading">
-              <p class="section-kicker">第 10 站</p>
-              <h2>🩺 机器人不舒服了怎么办？</h2>
-              <p>如果机器人不说话了，按这个顺序检查一下。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>快速找到问题，让机器人恢复健康。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>先看看机器人整体状态好不好。</li><li>再看看它的聊天网关（办公室）开没开门。</li><li>接着看看它的工作日志说了什么。</li><li>最后让医生工具给它做个全面检查。</li><li>常见问题：私聊被忽略？可能是发消息的人不在白名单，也没大老板审批。</li><li>群聊没反应？可能是没发现那个群，或者说话的人没权限。</li><li>连不上飞船？检查地址对不对，家里的飞船记得开特别通道。</li><li>登录失败？密码可能过期了，换一个新的试试。</li></ul>
-              </div>
-              
-            <div class="source-card">
-              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
-              <ul><li>`openclaw status` 这就像问机器人：&#39;你感觉怎么样？&#39;</li><li>`openclaw gateway status` 这就像检查它的聊天办公室门开着吗。</li><li>`openclaw logs --follow` 这就像实时查看机器人心里在想什么。</li><li>`openclaw doctor` 这就像叫来一个医生给机器人看病。</li></ul>
-            </div>
-          
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>按步骤检查，快速解决问题。</p>
-              </div>
-            </div>
-          </section>
-        
-      <section class="section-shell">
-        <div class="ad-placeholder">
-          <p>这里预留给未来的 Google AdSense 模块。</p>
-          <code>&lt;!-- ADSENSE_SNIPPET --&gt;</code>
-        </div>
-      </section>
-    
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>🛸 Tlon 这页，其实是在教你“把 OpenClaw 接到你自己的 Urbit 船上，再决定谁能上船说话”</h2>
+      <p>Tlon 不是常见的大平台，更像你自己开着一艘船，在自己的世界里收私信、看群聊。</p>
+      <p>所以这页最重要的，不是花哨功能，而是船地址、登录码、授权规则，还有私网保护开关。</p>
+    </div>
+    <div class="overview-meta">
+      <span>插件通道</span>
+      <span>重点是 ship、url、code、授权与私网开关</span>
+      <a href="https://docs.openclaw.ai/channels/tlon" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一站</p>
+    <h2>⛵ 先把“船是谁、船停在哪、上船口令是什么”交给 OpenClaw</h2>
+    <p>这部分配置看起来像字段，其实就是三张登船信息卡。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">🚢</span>
+      <h2><code>ship</code></h2>
+      <p>像你的船名，例如 <code>~sampel-palnet</code>。OpenClaw 得先知道自己要接哪艘船。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🌐</span>
+      <h2><code>url</code></h2>
+      <p>像船停泊的码头地址。地址错了，机器人就连不上你的船。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🔑</span>
+      <h2><code>code</code></h2>
+      <p>像登船口令。没有它，OpenClaw 只是站在码头外面看船。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">👑</span>
+      <h2><code>ownerShip</code></h2>
+      <p>像船长账号。设了它以后，审批提醒会优先发给船长，而且船长默认永远能通行。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二站</p>
+    <h2>🏠 如果你的船停在内网，得主动说“我知道自己在开本地门”</h2>
+    <p>官方默认会拦内网地址，这是在防 SSRF，不是故意和你作对。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>url: "http://localhost:8080"</code></div>
+      <p>这说明你的船就在本机或局域网里，不在公开互联网大道上。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>allowPrivateNetwork: true</code></div>
+      <p>这句像亲手把“允许进内网码头”的闸门打开。不开它，OpenClaw 会为了安全直接拦下。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">为什么谨慎</div>
+      <p>因为一旦放开，等于你告诉系统“这条内网路我信任”。所以只在你真懂这条路通向哪儿时再开。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">适用场景</div>
+      <p>像 <code>localhost</code>、局域网 IP、或 <code>my-ship.local</code> 这种内网主机名，都属于这类特殊码头。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第三站</p>
+    <h2>👥 群聊能不能说话，不是默认全开，而是你要决定哪些船员有资格</h2>
+    <p>Tlon 这页真正有分量的地方，是授权体系。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>groupChannels</code></div>
+      <p>像手工把某几个群房间钉在白板上，告诉 OpenClaw “先盯这几个房间”。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>autoDiscoverChannels: false</code></div>
+      <p>这句像关掉“自动巡房”。以后只看你手工点名的那些群。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>dmAllowlist</code></div>
+      <p>像允许私信上船的名单。没在名单里的人，就得走船长审批。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>authorization.channelRules</code></div>
+      <p>这里像每个群房间门口的规则牌：哪个房间是 restricted，哪个房间是 open，都能单独写清楚。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第四站</p>
+    <h2>📣 船长机制其实就是“有人来敲门时，把审批纸条送到你手上”</h2>
+    <p>你设了 <code>ownerShip</code>，OpenClaw 才知道审批消息应该送给谁。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label">DM 请求</div>
+      <p>陌生船员私聊时，船长会收到提醒，相当于“有人在码头想登船”。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">群聊提及</div>
+      <p>有人在未授权群里 @ 机器人时，也会先把消息递给船长裁定。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>autoAcceptDmInvites</code> / <code>autoAcceptGroupInvites</code></div>
+      <p>这两个开关像“看到某类邀请就自动点同意”。开了省事，但也代表你更相信外面的邀请。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 最后记一句</div>
+      <p>Tlon 这页的主线其实很干净：认船、连码头、设船长、定哪些人和哪些群能开口。</p>
+    </div>
+  </div>
+</section>
+
 
       <footer class="page-footer">
         <div>

@@ -1,0 +1,123 @@
+<section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>🔐 Nostr 这页，其实是在教你“给 OpenClaw 一把私钥，让它去分布式世界里收加密私信”</h2>
+      <p>它不像普通聊天平台那样有一个总后台。Nostr 更像很多中继站拼起来的街道网络。</p>
+      <p>所以这页最关键的三件事是：装插件、准备私钥、告诉 OpenClaw 去哪些 relay 门口等消息。</p>
+    </div>
+    <div class="overview-meta">
+      <span>可选插件，默认不启用</span>
+      <span>重点是私钥、relay、DM 策略</span>
+      <a href="https://docs.openclaw.ai/channels/nostr" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一站</p>
+    <h2>🧩 先把插件装上，不然 OpenClaw 根本不会这门方言</h2>
+    <p>这一步很像先给机器人装“会看 Nostr 私信”的耳朵。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw onboard</code></div>
+      <p>像新手老师带着你走流程。选到 Nostr 时，会顺手问你要不要把插件装上。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw plugins install @openclaw/nostr</code></div>
+      <p>这句像去插件商店领现成包裹，把 Nostr 这块能力搬进来。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>--link &lt;path&gt;</code></div>
+      <p>这不是联网下载，而是直接把你本地源码那份插件接进来，更像开发者走内部通道。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🔄 重启 Gateway</div>
+      <p>插件装完要重启，就像新耳朵装好后，得重新开机它才会真正开始听。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二站</p>
+    <h2>🗝️ 私钥不是装饰品，它就是“机器人在 Nostr 世界里的身份证和印章”</h2>
+    <p>没有这把私钥，OpenClaw 就没法解密私信，也没法代表自己发消息。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>nak key generate</code></div>
+      <p>这句像现场给机器人打一把新钥匙。如果你还没有 Nostr 身份，就从这里开始。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>export NOSTR_PRIVATE_KEY="nsec1..."</code></div>
+      <p>这句像先把钥匙放进外套内袋，等 OpenClaw 开门时再摸出来用。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>privateKey: "${NOSTR_PRIVATE_KEY}"</code></div>
+      <p>这不是再造一把钥匙，而是在配置里写“去口袋里拿”。这样比把真钥匙硬写在账本上安全。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>--use-env</code></div>
+      <p>这句的意思很简单：钥匙继续放环境变量里，不要抄进配置文件长期保存。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第三站</p>
+    <h2>📡 relay 就像一排消息中转站，你得告诉机器人去哪些站台蹲消息</h2>
+    <p>Nostr 不是一座大楼，而是一堆分散站点。OpenClaw 要知道去哪几站收信。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>--relay-urls "wss://..."</code></div>
+      <p>这句像把几个站台地址抄给机器人，告诉它“去这些地方等车”。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>dmPolicy: "pairing"</code></div>
+      <p>默认像门卫先发配对码。陌生人先报号，过了再聊，比较稳。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>allowlist / open / disabled</code></div>
+      <p><code>allowlist</code> 是白名单小本本，<code>open</code> 是谁都能敲门，<code>disabled</code> 就是把私信门直接关掉。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>allowFrom</code></div>
+      <p>这里放的是允许来敲门的公钥名单，像门口准入名单。只写这里的人，门卫才放行。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第四站</p>
+    <h2>🖼️ profile 那段，不是聊天功能本体，而是在给机器人挂头像、贴名牌</h2>
+    <p>如果你想让它在 Nostr 世界里看起来像个完整角色，就会用到这部分。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">🏷️</span>
+      <h2><code>name / displayName</code></h2>
+      <p>像正式名字和展示名字，一个给系统认，一个给别人看。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">📝</span>
+      <h2><code>about</code></h2>
+      <p>像胸前小卡片，告诉大家“我是干什么的”。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🖼️</span>
+      <h2><code>picture / banner</code></h2>
+      <p>是头像和横幅。官方还特别提醒，图链最好走 <code>https://</code>。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🎈</span>
+      <h2>最后记一句</h2>
+      <p>Nostr 这页真正的主线只有一句话：装耳朵、拿钥匙、找站台、定门卫规则。</p>
+    </article>
+  </div>
+</section>

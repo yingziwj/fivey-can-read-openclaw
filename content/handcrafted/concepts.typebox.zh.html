@@ -1,0 +1,57 @@
+<section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>📦 TypeBox 这页，其实是在讲“先画一套统一协议蓝图，再让服务器、校验器、JSON Schema、Swift 模型都照着它施工”</h2>
+      <p>它不是又一个花哨工具名，而是 OpenClaw 给 Gateway 协议立的总图纸。</p>
+      <p>谁能发什么消息、回什么样子、事件长什么样，都尽量先写在这一套蓝图里。</p>
+    </div>
+    <div class="overview-meta">
+      <span>协议单一事实来源</span>
+      <span>重点是 Request / Response / Event 三种帧</span>
+      <a href="https://docs.openclaw.ai/concepts/typebox" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一站</p>
+    <h2>📨 Gateway WebSocket 世界里，来回跑的消息其实只有三种车</h2>
+    <p>理解了这三种车，后面整页就都顺了。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card"><span class="home-card-index">🚗</span><h2>Request</h2><p>客户端开过来的请求车：<code>{ type: "req", id, method, params }</code>。</p></article>
+    <article class="home-card"><span class="home-card-index">🚙</span><h2>Response</h2><p>服务器回去的答复车：<code>{ type: "res", id, ok, payload | error }</code>。</p></article>
+    <article class="home-card"><span class="home-card-index">🚨</span><h2>Event</h2><p>服务器主动广播的通知车：<code>{ type: "event", ... }</code>。</p></article>
+    <article class="home-card"><span class="home-card-index">🚪</span><h2><code>connect</code> 先上路</h2><p>第一辆必须是 <code>connect</code>，像先进门打招呼，再谈别的。</p></article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二站</p>
+    <h2>🏗️ TypeBox 的价值不是“写 schema 好看”，而是“一份图纸，多处自动出活”</h2>
+    <p>这也是官方反复强调 single source of truth 的原因。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card"><div class="story-card-label">Runtime validation</div><p>像门卫拿着蓝图验车：不符合协议的帧，别想轻松混进去。</p></div>
+    <div class="source-card"><div class="story-card-label">JSON Schema export</div><p>像把施工图再导出成一套通用说明书，方便别的工具继续接力。</p></div>
+    <div class="source-card"><div class="story-card-label">Swift codegen</div><p>像把同一张蓝图自动翻译给 macOS 客户端，让它也按同样规则收发消息。</p></div>
+    <div class="source-card"><div class="story-card-label"><code>pnpm protocol:check</code></div><p>这句像总验收：重新生成一遍，再检查产物有没有老老实实提交进仓库。</p></div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第三站</p>
+    <h2>🧭 这页真正要你记住的是：协议不是散在各处的小纸条，而是集中在一份总图纸里</h2>
+    <p>所以想查权威定义，应该先回到 schema 源头，而不是只看某个客户端的局部实现。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card"><div class="story-card-label"><code>src/gateway/protocol/schema.ts</code></div><p>这像总蓝图柜，协议形状先从这里定下来。</p></div>
+    <div class="source-card"><div class="story-card-label"><code>server.ts</code></div><p>这里像真正上路的交警岗亭，方法和事件会在这边按蓝图落地。</p></div>
+    <div class="source-card"><div class="story-card-label"><code>dist/protocol.schema.json</code></div><p>像对外分发的标准说明书。</p></div>
+    <div class="source-card"><div class="story-card-label">🎈 最后记一句</div><p>TypeBox 在这里不是配角，它是 Gateway 协议那张“先画图、后施工”的总图纸。</p></div>
+  </div>
+</section>

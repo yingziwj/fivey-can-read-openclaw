@@ -1,0 +1,123 @@
+<section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>🧷 Synology Chat 这页，其实是在教你“拿两根 webhook 线，把 NAS 里的聊天机器人接到 OpenClaw”</h2>
+      <p>一根线负责把外面的消息送进来，一根线负责把 OpenClaw 的回话送回去。</p>
+      <p>所以这页最重要的不是华丽功能，而是三样朴素东西：插件、token、incoming webhook URL。</p>
+    </div>
+    <div class="overview-meta">
+      <span>插件通道</span>
+      <span>重点是双 webhook、DM 策略、用户 ID</span>
+      <a href="https://docs.openclaw.ai/channels/synology-chat" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一站</p>
+    <h2>🔌 先把两头电线接对：谁负责收，谁负责发</h2>
+    <p>这类 webhook 通道最容易乱的地方，就是把进站口和出站口搞反。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">📥</span>
+      <h2>Outgoing webhook</h2>
+      <p>名字虽然叫 outgoing，但对 OpenClaw 来说它是“收件门”。Synology 把用户发来的消息推到这里。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">📤</span>
+      <h2>Incoming webhook URL</h2>
+      <p>这才是“发件门”。OpenClaw 回消息时，会顺着这条 URL 把内容送回 Synology Chat。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🪪</span>
+      <h2><code>token</code></h2>
+      <p>像门口暗号。没有这个暗号，别人随便敲你的 webhook 门就太危险了。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🚪</span>
+      <h2><code>/webhook/synology</code></h2>
+      <p>默认门牌号就是这个。你也可以换门牌，但要让 Synology 和 OpenClaw 两边都认同。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二站</p>
+    <h2>🛠️ 这几句命令，讲白了就是“装插件、登记暗号、把收发门接进去”</h2>
+    <p>如果你看 CLI 容易晕，就把它理解成给门卫做登记。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw plugins install ./extensions/synology-chat</code></div>
+      <p>这句像把 Synology Chat 这套插头先安装到机器上，不装就没有插孔。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw onboard</code></div>
+      <p>像新手向导带你边看边填，适合第一次接这类双 webhook 通道。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw channels add --channel synology-chat --token &lt;token&gt; --url &lt;incoming-webhook-url&gt;</code></div>
+      <p>这句就是手工登记版：把暗号和发件门地址一次性交给 OpenClaw。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🔄 Restart gateway</div>
+      <p>重启像重新开门营业。前面登记好的 webhook 路线，开门后才会真正生效。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第三站</p>
+    <h2>👮 这页真正想保护你的，是“别让任何人都能来 DM 机器人”</h2>
+    <p>官方最推荐的默认值很明确：先白名单，再慢慢放开。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>dmPolicy: "allowlist"</code></div>
+      <p>像只让名单上的人进门。这是最稳的默认做法。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>allowedUserIds</code></div>
+      <p>这里要填的是数字用户 ID，不是昵称。因为昵称会变，数字门牌更稳。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw pairing list synology-chat</code></div>
+      <p>这句像翻门卫登记簿，看看最近谁来敲门、谁还在等审核。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>dangerouslyAllowNameMatching</code></div>
+      <p>这相当于“别看身份证，只看昵称叫法”。官方都把它写成危险选项了，说明真不建议常开。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第四站</p>
+    <h2>📨 发消息时，目标最好用数字 ID，不要赌名字不会变</h2>
+    <p>这页后半段的重点，是把回信送到正确的人手里。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw message send --channel synology-chat --target 123456 --text "Hello"</code></div>
+      <p>这句像对着编号 123456 的收件箱直接投递，不靠模糊猜名字。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>synology-chat:123456</code></div>
+      <p>这个写法像把“通道名 + 门牌号”一起写全，路由时更不容易认错门。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">多账号</div>
+      <p>如果你挂多个 Synology 账号，每个账号最好用不同 <code>webhookPath</code>。别让两扇门共用一个门牌。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 最后记一句</div>
+      <p>Synology Chat 这页本质就是“装插件、接双线、守门、按数字门牌送信”。</p>
+    </div>
+  </div>
+</section>

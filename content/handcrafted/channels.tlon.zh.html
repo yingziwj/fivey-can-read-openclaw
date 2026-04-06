@@ -1,0 +1,123 @@
+<section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>🛸 Tlon 这页，其实是在教你“把 OpenClaw 接到你自己的 Urbit 船上，再决定谁能上船说话”</h2>
+      <p>Tlon 不是常见的大平台，更像你自己开着一艘船，在自己的世界里收私信、看群聊。</p>
+      <p>所以这页最重要的，不是花哨功能，而是船地址、登录码、授权规则，还有私网保护开关。</p>
+    </div>
+    <div class="overview-meta">
+      <span>插件通道</span>
+      <span>重点是 ship、url、code、授权与私网开关</span>
+      <a href="https://docs.openclaw.ai/channels/tlon" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一站</p>
+    <h2>⛵ 先把“船是谁、船停在哪、上船口令是什么”交给 OpenClaw</h2>
+    <p>这部分配置看起来像字段，其实就是三张登船信息卡。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">🚢</span>
+      <h2><code>ship</code></h2>
+      <p>像你的船名，例如 <code>~sampel-palnet</code>。OpenClaw 得先知道自己要接哪艘船。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🌐</span>
+      <h2><code>url</code></h2>
+      <p>像船停泊的码头地址。地址错了，机器人就连不上你的船。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🔑</span>
+      <h2><code>code</code></h2>
+      <p>像登船口令。没有它，OpenClaw 只是站在码头外面看船。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">👑</span>
+      <h2><code>ownerShip</code></h2>
+      <p>像船长账号。设了它以后，审批提醒会优先发给船长，而且船长默认永远能通行。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二站</p>
+    <h2>🏠 如果你的船停在内网，得主动说“我知道自己在开本地门”</h2>
+    <p>官方默认会拦内网地址，这是在防 SSRF，不是故意和你作对。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>url: "http://localhost:8080"</code></div>
+      <p>这说明你的船就在本机或局域网里，不在公开互联网大道上。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>allowPrivateNetwork: true</code></div>
+      <p>这句像亲手把“允许进内网码头”的闸门打开。不开它，OpenClaw 会为了安全直接拦下。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">为什么谨慎</div>
+      <p>因为一旦放开，等于你告诉系统“这条内网路我信任”。所以只在你真懂这条路通向哪儿时再开。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">适用场景</div>
+      <p>像 <code>localhost</code>、局域网 IP、或 <code>my-ship.local</code> 这种内网主机名，都属于这类特殊码头。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第三站</p>
+    <h2>👥 群聊能不能说话，不是默认全开，而是你要决定哪些船员有资格</h2>
+    <p>Tlon 这页真正有分量的地方，是授权体系。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>groupChannels</code></div>
+      <p>像手工把某几个群房间钉在白板上，告诉 OpenClaw “先盯这几个房间”。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>autoDiscoverChannels: false</code></div>
+      <p>这句像关掉“自动巡房”。以后只看你手工点名的那些群。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>dmAllowlist</code></div>
+      <p>像允许私信上船的名单。没在名单里的人，就得走船长审批。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>authorization.channelRules</code></div>
+      <p>这里像每个群房间门口的规则牌：哪个房间是 restricted，哪个房间是 open，都能单独写清楚。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第四站</p>
+    <h2>📣 船长机制其实就是“有人来敲门时，把审批纸条送到你手上”</h2>
+    <p>你设了 <code>ownerShip</code>，OpenClaw 才知道审批消息应该送给谁。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label">DM 请求</div>
+      <p>陌生船员私聊时，船长会收到提醒，相当于“有人在码头想登船”。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">群聊提及</div>
+      <p>有人在未授权群里 @ 机器人时，也会先把消息递给船长裁定。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>autoAcceptDmInvites</code> / <code>autoAcceptGroupInvites</code></div>
+      <p>这两个开关像“看到某类邀请就自动点同意”。开了省事，但也代表你更相信外面的邀请。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 最后记一句</div>
+      <p>Tlon 这页的主线其实很干净：认船、连码头、设船长、定哪些人和哪些群能开口。</p>
+    </div>
+  </div>
+</section>

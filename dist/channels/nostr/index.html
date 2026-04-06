@@ -3970,501 +3970,130 @@
   
       </div>
 
-      
       <section class="section-shell">
-        <div class="overview-card">
-          <div>
-            <p class="section-kicker">AI 绘本解读版</p>
-            <h2>🎭 给OpenClaw装个秘密信箱</h2>
-            <p>Nostr就像个去中心化的社交广场。这个插件能让OpenClaw在广场上收信、回信。装好它，你的机器人就有自己的秘密信箱了。</p>
-          </div>
-          <div class="overview-meta">
-            <span>原始路径：/channels/nostr</span>
-            <span>故事卡片：19 张</span>
-            <a href="https://docs.openclaw.ai/channels/nostr" target="_blank" rel="noreferrer">查看官方原文</a>
-          </div>
-        </div>
-      </section>
-      
-          <section class="section-shell" id="section-1">
-            <div class="section-heading">
-              <p class="section-kicker">第 1 站</p>
-              <h2>🎁 先认识一下</h2>
-              <p>Nostr是个去中心化的社交网络协议。这个插件能让OpenClaw通过它收发加密私信。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>想让你机器人和朋友在广场上悄悄聊天吗？</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>它是个可选插件，默认是关着的。</li><li>就像给你的机器人配了个秘密信箱。</li><li>信箱用NIP-04加密，只有你和朋友能看。</li><li>机器人能自动收信、回信。</li><li>广场上谁都能发，但机器人只认对的钥匙。</li></ul>
-              </div>
-              
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>这是机器人的秘密社交信箱。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-2">
-            <div class="section-heading">
-              <p class="section-kicker">第 2 站</p>
-              <h2>🚀 推荐安装法</h2>
-              <p>用向导安装，就像逛商店选玩具。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>最简单，跟着提示走就行。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>运行 `openclaw onboard` 或 `openclaw channels add`。</li><li>向导会列出所有可选插件，像玩具清单。</li><li>你选Nostr，它就问你要不要装。</li><li>开发版从本地拿，稳定版从网上商店下。</li><li>随时可以改主意，选别的安装方式。</li></ul>
-              </div>
-              
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>跟着向导，点点选选就装好。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-3">
-            <div class="section-heading">
-              <p class="section-kicker">第 3 站</p>
-              <h2>🔧 手动安装</h2>
-              <p>自己动手，直接告诉机器人装什么。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>适合喜欢敲命令的你。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>一条命令就从网上商店下载安装。</li><li>开发版可以链接本地文件夹，方便改代码。</li><li>装完记得重启机器人，让它加载新插件。</li><li>就像给机器人换新装备，得重启才生效。</li></ul>
-              </div>
-              
-            <div class="source-card">
-              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
-              <ul><li>`openclaw plugins install @openclaw/nostr`：这行命令像在说“去商店买Nostr插件”。</li><li>`openclaw plugins install --link &lt;路径&gt;`：这行命令像在说“用我本地这个文件夹当插件”。</li><li>重启Gateway：就像让机器人睡一觉，醒来就有新能力。</li></ul>
-            </div>
-          
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>敲命令安装，重启就生效。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-4">
-            <div class="section-heading">
-              <p class="section-kicker">第 4 站</p>
-              <h2>🤖 自动配置</h2>
-              <p>不用问答，直接告诉机器人所有设置。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>适合脚本或自动化流程。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>一条命令配好私钥和信箱地址。</li><li>私钥可以放环境变量里，更安全。</li><li>可以指定多个信箱地址，收信更稳。</li><li>就像直接给机器人一张配置纸条。</li></ul>
-              </div>
-              
-            <div class="source-card">
-              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
-              <ul><li>`openclaw channels add --channel nostr --private-key &quot;$NOSTR_PRIVATE_KEY&quot;`：这行命令像在说“给机器人配Nostr信箱，钥匙是...”。</li><li>加 `--relay-urls` 参数：像在说“去这几个地址收信”。</li><li>`--use-env` 选项：像在说“钥匙放环境里，别写纸上”。</li></ul>
-            </div>
-          
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>一条命令，全自动配好。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-5">
-            <div class="section-heading">
-              <p class="section-kicker">第 5 站</p>
-              <h2>⚡ 快速上手</h2>
-              <p>四步走，马上让机器人有信箱。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>最快体验秘密聊天。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>第一步：生成一对钥匙（公钥和私钥）。</li><li>第二步：把私钥告诉机器人，写进配置。</li><li>第三步：把私钥放进环境，像藏好真钥匙。</li><li>第四步：重启机器人，信箱就开了。</li></ul>
-              </div>
-              
-            <div class="source-card">
-              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
-              <ul><li>`nak key generate`：这行命令像在说“造一把新钥匙”。</li><li>配置里的 `privateKey: &quot;${NOSTR_PRIVATE_KEY}&quot;`：像在说“机器人的钥匙是环境里那个”。</li><li>`export NOSTR_PRIVATE_KEY=&quot;nsec1...&quot;`：这行命令像在说“把真钥匙藏进环境口袋”。</li></ul>
-            </div>
-          
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>生成钥匙、写配置、藏钥匙、重启。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-6">
-            <div class="section-heading">
-              <p class="section-kicker">第 6 站</p>
-              <h2>🎛️ 配置按钮大全</h2>
-              <p>所有能调的设置，像机器人的控制面板。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>想精细控制信箱怎么工作？看这里。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>`privateKey`：机器人的私钥，开信箱的钥匙。</li><li>`relays`：信箱地址列表，机器人去这儿收信。</li><li>`dmPolicy`：收信规则，决定谁的信能收。</li><li>`allowFrom`：白名单，只收这些朋友的信。</li><li>`enabled`：开关，打开才能用信箱。</li></ul>
-              </div>
-              
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>私钥、地址、规则、白名单、开关。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-7">
-            <div class="section-heading">
-              <p class="section-kicker">第 7 站</p>
-              <h2>📇 机器人名片</h2>
-              <p>给机器人在广场上做个自我介绍。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>让朋友知道这是谁的信箱。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>名片包括名字、头像、签名、网站等。</li><li>可以在控制界面点点鼠标设置。</li><li>也能直接写进配置，一次搞定。</li><li>网址要用https开头，更安全。</li><li>如果广场上已有名片，会和你本地的合并。</li></ul>
-              </div>
-              
-            <div class="source-card">
-              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
-              <ul><li>配置里的 `profile` 对象：像在填一张名片表格。</li><li>`name: &quot;openclaw&quot;`：机器人的真名。</li><li>`picture: &quot;https://...&quot;`：机器人的头像地址。</li></ul>
-            </div>
-          
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>给机器人做张漂亮名片。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-8">
-            <div class="section-heading">
-              <p class="section-kicker">第 8 站</p>
-              <h2>🚦 收信规则</h2>
-              <p>决定哪些信能进信箱，哪些被拦下。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>控制谁可以和机器人聊天。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>`pairing`（默认）：陌生人发信，机器人回个配对码。</li><li>`allowlist`：只收白名单里朋友的信。</li><li>`open`：谁的信都收，但得明确设置。</li><li>`disabled`：不收任何信，信箱关闭。</li><li>规则先检查，再解密，省力气。</li></ul>
-              </div>
-              
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>四种规则：配对、白名单、全开、关闭。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-9">
-            <div class="section-heading">
-              <p class="section-kicker">第 9 站</p>
-              <h2>👥 白名单例子</h2>
-              <p>只让特定朋友和机器人聊天。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>生产环境更安全。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>设置 `dmPolicy` 为 `allowlist`。</li><li>在 `allowFrom` 里列出朋友们的公钥。</li><li>只有这些朋友的加密信才会被解密处理。</li><li>其他人的信直接被忽略。</li></ul>
-              </div>
-              
-            <div class="source-card">
-              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
-              <ul><li>配置里的 `allowFrom: [&quot;npub1abc...&quot;, &quot;npub1xyz...&quot;]`：像在说“只允许这两个朋友发信”。</li></ul>
-            </div>
-          
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>只认名单上的朋友。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-10">
-            <div class="section-heading">
-              <p class="section-kicker">第 10 站</p>
-              <h2>🔑 钥匙格式</h2>
-              <p>机器人认哪种样子的钥匙。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>别给错钥匙了。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>私钥可以是 `nsec...` 格式或64位十六进制。</li><li>公钥（白名单用）可以是 `npub...` 格式或十六进制。</li><li>就像锁认特定形状的钥匙。</li></ul>
-              </div>
-              
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>私钥nsec或hex，公钥npub或hex。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-11">
-            <div class="section-heading">
-              <p class="section-kicker">第 11 站</p>
-              <h2>📮 信箱地址</h2>
-              <p>机器人去哪儿收信。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>地址不对，收不到信。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>默认用两个公共信箱地址。</li><li>可以自己加更多，比如 `wss://relay.primal.net`。</li><li>建议用2-3个，备份更稳。</li><li>太多会慢，信可能重复。</li><li>本地测试可以用 `ws://localhost:7777`。</li></ul>
-              </div>
-              
-            <div class="source-card">
-              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
-              <ul><li>配置里的 `relays: [&quot;wss://...&quot;]`：像在说“去这些地址查信”。</li></ul>
-            </div>
-          
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>选2-3个靠谱地址。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-12">
-            <div class="section-heading">
-              <p class="section-kicker">第 12 站</p>
-              <h2>📜 支持的信件格式</h2>
-              <p>机器人能处理哪种协议的信。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>知道它能做什么、不能做什么。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>NIP-01：基本事件格式和名片，已支持。</li><li>NIP-04：加密私信，已支持。</li><li>NIP-17：礼物包装的信，计划中。</li><li>NIP-44：新版加密，计划中。</li><li>目前主要收加密私信。</li></ul>
-              </div>
-              
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>现在支持加密私信，更多功能在路上。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-13">
-            <div class="section-heading">
-              <p class="section-kicker">第 13 站</p>
-              <h2>🏠 本地信箱</h2>
-              <p>自己搭个信箱，测试用。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>开发调试更方便。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>用Docker运行strfry，本地起个信箱服务。</li><li>机器人配置里指向 `ws://localhost:7777`。</li><li>不用连外网，快速测试收发。</li><li>适合开发阶段玩一玩。</li></ul>
-              </div>
-              
-            <div class="source-card">
-              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
-              <ul><li>`docker run -p 7777:7777 ghcr.io/hoytech/strfry`：这行命令像在说“启动一个本地信箱服务”。</li><li>配置里 `relays: [&quot;ws://localhost:7777&quot;]`：像在说“去本地那个地址收信”。</li></ul>
-            </div>
-          
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>本地搭信箱，测试快又稳。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-14">
-            <div class="section-heading">
-              <p class="section-kicker">第 14 站</p>
-              <h2>🧪 手动测试</h2>
-              <p>装好了？试试发封信。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>确保一切正常工作。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>从日志里找到机器人的公钥（npub）。</li><li>打开Nostr客户端，比如Damus。</li><li>给那个公钥发封加密私信。</li><li>看机器人有没有回信。</li></ul>
-              </div>
-              
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>找到公钥，发信测试。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-15">
-            <div class="section-heading">
-              <p class="section-kicker">第 15 站</p>
-              <h2>🔍 收不到信？</h2>
-              <p>常见问题排查。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>帮你快速解决。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>检查私钥对不对，钥匙错了开不了锁。</li><li>确保信箱地址能连通，用wss://（本地用ws://）。</li><li>确认插件开关是打开的（enabled不是false）。</li><li>看机器人日志有没有连接错误。</li></ul>
-              </div>
-              
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>查钥匙、查地址、查开关、查日志。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-16">
-            <div class="section-heading">
-              <p class="section-kicker">第 16 站</p>
-              <h2>📤 发不出回信？</h2>
-              <p>机器人能收不能回？</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>找出回信卡住的原因。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>检查信箱地址是否允许写信。</li><li>确认机器人网络能连出去。</li><li>注意信箱可能有发信速度限制。</li></ul>
-              </div>
-              
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>查写信权限、网络、限速。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-17">
-            <div class="section-heading">
-              <p class="section-kicker">第 17 站</p>
-              <h2>🔄 回信重复了</h2>
-              <p>为什么收到好几封一样的回信？</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>正常现象，别担心。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>用了多个信箱地址时，正常会重复。</li><li>机器人会去重，只处理第一封。</li><li>就像你同时问几个朋友，他们都回你。</li></ul>
-              </div>
-              
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>多地址正常重复，机器人只回一次。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-18">
-            <div class="section-heading">
-              <p class="section-kicker">第 18 站</p>
-              <h2>🛡️ 安全提醒</h2>
-              <p>保护你的钥匙和机器人。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>安全第一，别泄露。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>千万别把私钥直接写进代码或配置文件。</li><li>用环境变量存私钥，更安全。</li><li>生产环境建议用白名单模式。</li><li>规则先检查，陌生信不解密，省资源。</li></ul>
-              </div>
-              
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>钥匙藏好，用白名单，先检查后解密。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-19">
-            <div class="section-heading">
-              <p class="section-kicker">第 19 站</p>
-              <h2>⚠️ 当前限制</h2>
-              <p>第一个版本能做什么、不能做什么。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>了解边界，合理期待。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>只支持一对一私信，没有群聊。</li><li>不能发图片、文件等附件。</li><li>只支持NIP-04加密，礼物包装信以后加。</li><li>专注核心功能，简单可靠。</li></ul>
-              </div>
-              
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>目前只做加密私信，更多功能后续加。</p>
-              </div>
-            </div>
-          </section>
-        
-      <section class="section-shell">
-        <div class="ad-placeholder">
-          <p>这里预留给未来的 Google AdSense 模块。</p>
-          <code>&lt;!-- ADSENSE_SNIPPET --&gt;</code>
-        </div>
-      </section>
-    
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>🔐 Nostr 这页，其实是在教你“给 OpenClaw 一把私钥，让它去分布式世界里收加密私信”</h2>
+      <p>它不像普通聊天平台那样有一个总后台。Nostr 更像很多中继站拼起来的街道网络。</p>
+      <p>所以这页最关键的三件事是：装插件、准备私钥、告诉 OpenClaw 去哪些 relay 门口等消息。</p>
+    </div>
+    <div class="overview-meta">
+      <span>可选插件，默认不启用</span>
+      <span>重点是私钥、relay、DM 策略</span>
+      <a href="https://docs.openclaw.ai/channels/nostr" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一站</p>
+    <h2>🧩 先把插件装上，不然 OpenClaw 根本不会这门方言</h2>
+    <p>这一步很像先给机器人装“会看 Nostr 私信”的耳朵。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw onboard</code></div>
+      <p>像新手老师带着你走流程。选到 Nostr 时，会顺手问你要不要把插件装上。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw plugins install @openclaw/nostr</code></div>
+      <p>这句像去插件商店领现成包裹，把 Nostr 这块能力搬进来。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>--link &lt;path&gt;</code></div>
+      <p>这不是联网下载，而是直接把你本地源码那份插件接进来，更像开发者走内部通道。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🔄 重启 Gateway</div>
+      <p>插件装完要重启，就像新耳朵装好后，得重新开机它才会真正开始听。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二站</p>
+    <h2>🗝️ 私钥不是装饰品，它就是“机器人在 Nostr 世界里的身份证和印章”</h2>
+    <p>没有这把私钥，OpenClaw 就没法解密私信，也没法代表自己发消息。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>nak key generate</code></div>
+      <p>这句像现场给机器人打一把新钥匙。如果你还没有 Nostr 身份，就从这里开始。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>export NOSTR_PRIVATE_KEY="nsec1..."</code></div>
+      <p>这句像先把钥匙放进外套内袋，等 OpenClaw 开门时再摸出来用。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>privateKey: "${NOSTR_PRIVATE_KEY}"</code></div>
+      <p>这不是再造一把钥匙，而是在配置里写“去口袋里拿”。这样比把真钥匙硬写在账本上安全。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>--use-env</code></div>
+      <p>这句的意思很简单：钥匙继续放环境变量里，不要抄进配置文件长期保存。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第三站</p>
+    <h2>📡 relay 就像一排消息中转站，你得告诉机器人去哪些站台蹲消息</h2>
+    <p>Nostr 不是一座大楼，而是一堆分散站点。OpenClaw 要知道去哪几站收信。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>--relay-urls "wss://..."</code></div>
+      <p>这句像把几个站台地址抄给机器人，告诉它“去这些地方等车”。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>dmPolicy: "pairing"</code></div>
+      <p>默认像门卫先发配对码。陌生人先报号，过了再聊，比较稳。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>allowlist / open / disabled</code></div>
+      <p><code>allowlist</code> 是白名单小本本，<code>open</code> 是谁都能敲门，<code>disabled</code> 就是把私信门直接关掉。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>allowFrom</code></div>
+      <p>这里放的是允许来敲门的公钥名单，像门口准入名单。只写这里的人，门卫才放行。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第四站</p>
+    <h2>🖼️ profile 那段，不是聊天功能本体，而是在给机器人挂头像、贴名牌</h2>
+    <p>如果你想让它在 Nostr 世界里看起来像个完整角色，就会用到这部分。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">🏷️</span>
+      <h2><code>name / displayName</code></h2>
+      <p>像正式名字和展示名字，一个给系统认，一个给别人看。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">📝</span>
+      <h2><code>about</code></h2>
+      <p>像胸前小卡片，告诉大家“我是干什么的”。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🖼️</span>
+      <h2><code>picture / banner</code></h2>
+      <p>是头像和横幅。官方还特别提醒，图链最好走 <code>https://</code>。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🎈</span>
+      <h2>最后记一句</h2>
+      <p>Nostr 这页真正的主线只有一句话：装耳朵、拿钥匙、找站台、定门卫规则。</p>
+    </article>
+  </div>
+</section>
+
 
       <footer class="page-footer">
         <div>

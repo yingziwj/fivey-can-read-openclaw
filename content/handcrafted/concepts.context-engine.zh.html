@@ -1,0 +1,57 @@
+<section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>🧠 Context Engine 这页，其实是在讲“谁来决定每次给模型背什么包”</h2>
+      <p>OpenClaw 每次跑模型前，都要挑聊天记录、摘要、补充说明一起打包。</p>
+      <p>Context engine 就像这个打包总管。它决定旧纸条怎么收、哪些内容带上车、包满了该怎么压缩。</p>
+    </div>
+    <div class="overview-meta">
+      <span>重点是 context 打包总管</span>
+      <span>安装插件后可替换默认 legacy 引擎</span>
+      <a href="https://docs.openclaw.ai/concepts/context-engine" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一站</p>
+    <h2>🎒 它管的不是“记忆本身”，而是“这次出门到底带哪几样东西”</h2>
+    <p>所以别把 context engine 误会成单纯数据库。它更像发车前的装车主管。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card"><span class="home-card-index">📥</span><h2>Ingest</h2><p>新消息一进来，它先决定要怎么收进自己的仓库或索引里。</p></article>
+    <article class="home-card"><span class="home-card-index">🧺</span><h2>Assemble</h2><p>真正开跑前，它把这轮该带的消息按顺序摆出来，装进模型背包。</p></article>
+    <article class="home-card"><span class="home-card-index">✂️</span><h2>Compact</h2><p>包太满时，它负责把旧故事压短，腾出空间。</p></article>
+    <article class="home-card"><span class="home-card-index">🧾</span><h2>After turn</h2><p>一轮结束后，它还能顺手存状态、更新索引、做后台收尾。</p></article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二站</p>
+    <h2>🧩 换引擎这件事，本质上就是“先装新总管，再把总管席位换给它”</h2>
+    <p>官方默认总管叫 <code>legacy</code>。你想换人，就先把新插件装进来。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card"><div class="story-card-label"><code>openclaw plugins install @martian-engineering/lossless-claw</code></div><p>像先把新的打包主管招进公司。</p></div>
+    <div class="source-card"><div class="story-card-label"><code>plugins.slots.contextEngine</code></div><p>这格像“总管座位牌”。把它改成新引擎 id，才算正式换岗。</p></div>
+    <div class="source-card"><div class="story-card-label"><code>entries.{plugin}.enabled</code></div><p>这像给新总管开工牌。没 enabled，就只是人来了但没上岗。</p></div>
+    <div class="source-card"><div class="story-card-label">🔄 重启 Gateway</div><p>换完人记得重启，相当于重新宣布“今天起由这个总管值班”。</p></div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第三站</p>
+    <h2>✨ <code>systemPromptAddition</code> 像总管塞进开场白的一张临时便签</h2>
+    <p>它不是改静态文件，而是每轮临时多贴一句“今天特别注意这个”。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card"><div class="story-card-label">动态提醒</div><p>比如回忆线索、检索提示、当前上下文特别注意点，都可以从这里塞进去。</p></div>
+    <div class="source-card"><div class="story-card-label"><code>onSubagentEnded</code></div><p>这像小工干完活后，总管回来做收尾清场。</p></div>
+    <div class="source-card"><div class="story-card-label"><code>openclaw doctor</code></div><p>这句像去值班室看一眼，现在到底是哪位总管在岗。</p></div>
+    <div class="source-card"><div class="story-card-label">🎈 最后记一句</div><p>Context engine 不是新模型，也不是新记忆库，它是“谁来打包上下文”的总调度。</p></div>
+  </div>
+</section>

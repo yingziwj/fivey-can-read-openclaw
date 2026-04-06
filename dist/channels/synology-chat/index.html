@@ -3970,244 +3970,130 @@
   
       </div>
 
-      
       <section class="section-shell">
-        <div class="overview-card">
-          <div>
-            <p class="section-kicker">AI 绘本解读版</p>
-            <h2>🤖 给群晖聊天装个机器人小助手</h2>
-            <p>OpenClaw 可以变成群晖聊天里的智能机器人。
-它通过一个插件来工作，能收消息也能回消息。</p>
-          </div>
-          <div class="overview-meta">
-            <span>原始路径：/channels/synology-chat</span>
-            <span>故事卡片：8 张</span>
-            <a href="https://docs.openclaw.ai/channels/synology-chat" target="_blank" rel="noreferrer">查看官方原文</a>
-          </div>
-        </div>
-      </section>
-      
-          <section class="section-shell" id="section-1">
-            <div class="section-heading">
-              <p class="section-kicker">第 1 站</p>
-              <h2>🎁 先装插件</h2>
-              <p>群晖聊天这个功能是个插件，不是自带的。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>装上它，你的机器人才能听懂群晖聊天的话。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>想象一下，OpenClaw 是个大机器人，但它不认识群晖聊天。</li><li>这个插件就像一本翻译词典，让它们俩能互相听懂。</li><li>装上插件，机器人就学会了群晖聊天的语言。</li><li>插件装好，机器人就多了一个新本领。</li></ul>
-              </div>
-              
-            <div class="source-card">
-              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
-              <ul><li>这行命令就像在说：“嘿，机器人，去把那个叫 synology-chat 的插件装起来！”</li><li>执行后，机器人会去指定的地方找到插件，然后把它安装好。</li></ul>
-            </div>
-          
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>先装插件，机器人才能和群晖聊天做朋友。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-2">
-            <div class="section-heading">
-              <p class="section-kicker">第 2 站</p>
-              <h2>🔧 快速搭桥</h2>
-              <p>几步就能让机器人和群晖聊天连上线。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>搭好桥，消息就能在两个地方跑来跑去了。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>在群晖聊天里，造一个‘发消息的钩子’和一个‘收消息的钩子’。</li><li>把‘发消息的钩子’的地址，告诉你的 OpenClaw 机器人。</li><li>在 OpenClaw 里，告诉机器人群晖聊天的‘收消息钩子’地址和密码。</li><li>重启机器人，然后试着在群晖聊天里给它发条私信。</li><li>机器人收到后，就能通过‘收消息钩子’给你回信了。</li></ul>
-              </div>
-              
-            <div class="source-card">
-              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
-              <ul><li>`openclaw onboard` 就像带机器人参观新房间，它会问你要不要连群晖聊天。</li><li>`openclaw channels add ...` 就像直接告诉机器人：“去，连上群晖聊天，这是地址和密码。”</li><li>执行这些命令，机器人就会去和群晖聊天握手，建立连接。</li></ul>
-            </div>
-          
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>两边都告诉对方地址和密码，桥就搭好了。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-3">
-            <div class="section-heading">
-              <p class="section-kicker">第 3 站</p>
-              <h2>📝 机器人的小本本</h2>
-              <p>给机器人写个配置，告诉它怎么和群晖聊天玩。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>有了这个小本本，机器人就知道规则了。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>`enabled: true` 是打开这个功能的开关。</li><li>`token` 是群晖聊天发来的秘密暗号，机器人要核对。</li><li>`incomingUrl` 是机器人回消息时要找的地址。</li><li>`webhookPath` 是机器人自己家的门牌，群晖聊天要往这里发消息。</li><li>`dmPolicy: &quot;allowlist&quot;` 是说，只让名单上的好朋友发私信。</li><li>`allowedUserIds` 就是那个好朋友名单，里面是用户的数字ID。</li><li>`rateLimitPerMinute: 30` 是限速器，防止有人发消息太快。</li><li>`allowInsecureSsl: false` 是安全锁，不让走不安全的通道。</li></ul>
-              </div>
-              
-            <div class="source-card">
-              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
-              <ul><li>这段配置就像在机器人的小本本上写规则：谁可以来、从哪条路来、回信寄到哪、说话不能太快。</li><li>机器人启动时会读这个小本本，然后按上面的规则办事。</li></ul>
-            </div>
-          
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>小本本写清楚，机器人做事不糊涂。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-4">
-            <div class="section-heading">
-              <p class="section-kicker">第 4 站</p>
-              <h2>🌍 用环境变量打招呼</h2>
-              <p>也可以把一些秘密告诉机器人的‘环境’。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>这样配置更灵活，有些秘密不用写在文件里。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>比如 `SYNOLOGY_CHAT_TOKEN` 这个环境变量，可以放暗号。</li><li>`SYNOLOGY_CHAT_INCOMING_URL` 可以放回信地址。</li><li>机器人会先看环境里有没有这些信息。</li><li>如果小本本（配置文件）里也写了，就以小本本为准。</li></ul>
-              </div>
-              
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>秘密可以放环境里，但小本本说了算。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-5">
-            <div class="section-heading">
-              <p class="section-kicker">第 5 站</p>
-              <h2>🚪 私信门卫规则</h2>
-              <p>谁来敲机器人的私信门？得看规则。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>管好门，不让陌生人随便进来聊天。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>`dmPolicy: &quot;allowlist&quot;` 是推荐的门卫，只放名单上的人进来。</li><li>名单就是 `allowedUserIds`，里面是用户的数字ID。</li><li>如果名单是空的，门卫会罢工（这是配置错了）。</li><li>`dmPolicy: &quot;open&quot;` 是敞开大门，谁都可以进。</li><li>`dmPolicy: &quot;disabled&quot;` 是锁死大门，谁也不让进。</li><li>机器人回信时，默认认准稳定的数字ID。</li><li>有个叫 `dangerouslyAllowNameMatching` 的紧急开关，打开后机器人会试着用用户名找人了（不推荐）。</li><li>可以用 `openclaw pairing` 命令来批准新朋友。</li></ul>
-              </div>
-              
-            <div class="source-card">
-              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
-              <ul><li>`openclaw pairing list synology-chat` 是看看谁在申请加好友。</li><li>`openclaw pairing approve ...` 是批准某个申请。</li><li>这些命令就像门卫在检查访客名单和发放通行证。</li></ul>
-            </div>
-          
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>门卫管好门，聊天更安心。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-6">
-            <div class="section-heading">
-              <p class="section-kicker">第 6 站</p>
-              <h2>📤 机器人主动发消息</h2>
-              <p>机器人也可以主动去群晖聊天里找人说话。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>不只是回信，还能主动打招呼、发通知。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>发消息时，要告诉机器人找哪个用户，用数字ID。</li><li>比如 `--target 123456` 就是发给ID是123456的用户。</li><li>也支持发带链接的图片或文件。</li><li>机器人就会把消息送到那个用户的群晖聊天里。</li></ul>
-              </div>
-              
-            <div class="source-card">
-              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
-              <ul><li>`openclaw message send --channel synology-chat --target 123456 --text &quot;Hello&quot;`</li><li>这行命令就像在说：“机器人，去群晖聊天频道，找到用户123456，对他说Hello。”</li><li>执行后，机器人就会去送信。</li></ul>
-            </div>
-          
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>告诉机器人用户ID，它就能去送信。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-7">
-            <div class="section-heading">
-              <p class="section-kicker">第 7 站</p>
-              <h2>🏢 多个群晖聊天账户</h2>
-              <p>机器人可以同时和好几个群晖聊天做朋友。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>比如一个管日常聊天，一个管报警通知。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>在 `accounts` 下面，可以给每个朋友起个名字，比如 `default` 和 `alerts`。</li><li>每个朋友可以有自己的暗号、回信地址和门牌。</li><li>给每个朋友的门牌（`webhookPath`）最好不一样。</li><li>机器人很聪明，如果发现两个朋友用一模一样的门牌，它会拒绝启动。</li><li>有个叫 `dangerouslyAllowInheritedWebhookPath` 的开关，能允许继承门牌，但有风险。</li></ul>
-              </div>
-              
-            <div class="source-card">
-              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
-              <ul><li>这段配置就像给机器人一本通讯录，里面记着好几个群晖聊天朋友的不同联系方式。</li><li>机器人会为每个朋友单独记聊天记录，即使数字ID相同也不会搞混。</li></ul>
-            </div>
-          
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>多个朋友分开记，门牌不要用一样的。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-8">
-            <div class="section-heading">
-              <p class="section-kicker">第 8 站</p>
-              <h2>🔒 安全小贴士</h2>
-              <p>和机器人玩，也要注意安全。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>保护好秘密，机器人才能可靠地工作。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>暗号（`token`）要保密，泄露了就换一个。</li><li>安全锁（`allowInsecureSsl`）最好关着，除非你特别信任。</li><li>门卫（`dmPolicy`）在生产环境最好用‘只允许名单’模式。</li><li>紧急开关（`dangerouslyAllowNameMatching` 和 `dangerouslyAllowInheritedWebhookPath`）没事别打开。</li><li>机器人会检查暗号，还会给发消息太快的人限速。</li></ul>
-              </div>
-              
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>秘密保管好，开关不乱开，机器人更可靠。</p>
-              </div>
-            </div>
-          </section>
-        
-      <section class="section-shell">
-        <div class="ad-placeholder">
-          <p>这里预留给未来的 Google AdSense 模块。</p>
-          <code>&lt;!-- ADSENSE_SNIPPET --&gt;</code>
-        </div>
-      </section>
-    
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>🧷 Synology Chat 这页，其实是在教你“拿两根 webhook 线，把 NAS 里的聊天机器人接到 OpenClaw”</h2>
+      <p>一根线负责把外面的消息送进来，一根线负责把 OpenClaw 的回话送回去。</p>
+      <p>所以这页最重要的不是华丽功能，而是三样朴素东西：插件、token、incoming webhook URL。</p>
+    </div>
+    <div class="overview-meta">
+      <span>插件通道</span>
+      <span>重点是双 webhook、DM 策略、用户 ID</span>
+      <a href="https://docs.openclaw.ai/channels/synology-chat" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一站</p>
+    <h2>🔌 先把两头电线接对：谁负责收，谁负责发</h2>
+    <p>这类 webhook 通道最容易乱的地方，就是把进站口和出站口搞反。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">📥</span>
+      <h2>Outgoing webhook</h2>
+      <p>名字虽然叫 outgoing，但对 OpenClaw 来说它是“收件门”。Synology 把用户发来的消息推到这里。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">📤</span>
+      <h2>Incoming webhook URL</h2>
+      <p>这才是“发件门”。OpenClaw 回消息时，会顺着这条 URL 把内容送回 Synology Chat。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🪪</span>
+      <h2><code>token</code></h2>
+      <p>像门口暗号。没有这个暗号，别人随便敲你的 webhook 门就太危险了。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🚪</span>
+      <h2><code>/webhook/synology</code></h2>
+      <p>默认门牌号就是这个。你也可以换门牌，但要让 Synology 和 OpenClaw 两边都认同。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二站</p>
+    <h2>🛠️ 这几句命令，讲白了就是“装插件、登记暗号、把收发门接进去”</h2>
+    <p>如果你看 CLI 容易晕，就把它理解成给门卫做登记。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw plugins install ./extensions/synology-chat</code></div>
+      <p>这句像把 Synology Chat 这套插头先安装到机器上，不装就没有插孔。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw onboard</code></div>
+      <p>像新手向导带你边看边填，适合第一次接这类双 webhook 通道。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw channels add --channel synology-chat --token &lt;token&gt; --url &lt;incoming-webhook-url&gt;</code></div>
+      <p>这句就是手工登记版：把暗号和发件门地址一次性交给 OpenClaw。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🔄 Restart gateway</div>
+      <p>重启像重新开门营业。前面登记好的 webhook 路线，开门后才会真正生效。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第三站</p>
+    <h2>👮 这页真正想保护你的，是“别让任何人都能来 DM 机器人”</h2>
+    <p>官方最推荐的默认值很明确：先白名单，再慢慢放开。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>dmPolicy: "allowlist"</code></div>
+      <p>像只让名单上的人进门。这是最稳的默认做法。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>allowedUserIds</code></div>
+      <p>这里要填的是数字用户 ID，不是昵称。因为昵称会变，数字门牌更稳。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw pairing list synology-chat</code></div>
+      <p>这句像翻门卫登记簿，看看最近谁来敲门、谁还在等审核。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>dangerouslyAllowNameMatching</code></div>
+      <p>这相当于“别看身份证，只看昵称叫法”。官方都把它写成危险选项了，说明真不建议常开。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第四站</p>
+    <h2>📨 发消息时，目标最好用数字 ID，不要赌名字不会变</h2>
+    <p>这页后半段的重点，是把回信送到正确的人手里。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw message send --channel synology-chat --target 123456 --text "Hello"</code></div>
+      <p>这句像对着编号 123456 的收件箱直接投递，不靠模糊猜名字。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>synology-chat:123456</code></div>
+      <p>这个写法像把“通道名 + 门牌号”一起写全，路由时更不容易认错门。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">多账号</div>
+      <p>如果你挂多个 Synology 账号，每个账号最好用不同 <code>webhookPath</code>。别让两扇门共用一个门牌。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 最后记一句</div>
+      <p>Synology Chat 这页本质就是“装插件、接双线、守门、按数字门牌送信”。</p>
+    </div>
+  </div>
+</section>
+
 
       <footer class="page-footer">
         <div>

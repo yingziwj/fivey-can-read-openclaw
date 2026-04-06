@@ -1,0 +1,131 @@
+<section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>📱 Zalo Personal 这页，其实是在教你“让 OpenClaw 借用一个真人 Zalo 账号来收发消息”</h2>
+      <p>和官方 Bot API 不一样，这条路走的是个人号自动化。</p>
+      <p>所以官方一开头就先举黄牌：这是非官方接法，有被封号的风险，别把它当成完全没代价的小玩具。</p>
+    </div>
+    <div class="overview-meta">
+      <span>实验性、非官方</span>
+      <span>重点是 QR 登录、个人号风险、pairing 和目录查询</span>
+      <a href="https://docs.openclaw.ai/channels/zalouser" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一站</p>
+    <h2>⚠️ 先记住：这不是“官方机器人”，而是“让程序代替真人账号值班”</h2>
+    <p>理解这一点，后面很多设计就顺了。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">👤</span>
+      <h2>个人号</h2>
+      <p>它接的是你真人 Zalo 账号，不是官方 bot 身份。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🧪</span>
+      <h2>实验性</h2>
+      <p>官方明确写了 experimental，意思是“能用，但别把它当成铁板钉钉的正式通道”。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🚫</span>
+      <h2>封号风险</h2>
+      <p>这不是吓人，是实话。因为它并不是 Zalo 官方公开鼓励的机器人接法。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🧠</span>
+      <h2><code>zca-js</code></h2>
+      <p>这套集成是直接在进程里跑的，不需要额外安装外部 <code>zca</code> 命令行。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二站</p>
+    <h2>🪪 真正的登录动作，是“在 Gateway 那台机器上弹出二维码，再拿手机扫一下”</h2>
+    <p>这部分最像真人值班交接，而不是传统 API 配 token。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw plugins install @openclaw/zalouser</code></div>
+      <p>先把这条个人号通道装上，不然系统连二维码登录窗口都不会给你。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw channels login --channel zalouser</code></div>
+      <p>这句像对门卫说“请把二维码登录机推出来”。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">扫码</div>
+      <p>接着你要拿 Zalo 手机 App 扫码，就像把真人账号授权给 OpenClaw 临时代班。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>enabled: true</code></div>
+      <p>扫码后还要把通道开关拨到开启，不然只是登录成功，还没正式营业。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第三站</p>
+    <h2>📚 这页里最有用的几句命令，其实是在帮你“查这个人、这个群，到底对应哪个 ID”</h2>
+    <p>因为个人号聊天里，很多时候你得先知道目标是谁，才能更稳地发消息和设规则。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw directory self --channel zalouser</code></div>
+      <p>像先照镜子，看看“我自己这个账号现在是谁”。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>directory peers list --query "name"</code></div>
+      <p>像翻联系人名册，从一堆人里找出你要的那位。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>directory groups list --query "work"</code></div>
+      <p>像翻群聊花名册，把工作群、家人群这些房间号查出来。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">为什么要查</div>
+      <p>因为后面的允许名单、定向发信、群操作，最好都用 ID，不要只靠模糊名字猜。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第四站</p>
+    <h2>🎟️ 默认也是 pairing，这说明官方很清楚：个人号更该先守门</h2>
+    <p>既然是真人账号代班，就更不应该一上来就完全敞开。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>dmPolicy: "pairing"</code></div>
+      <p>陌生人先领配对码，再决定要不要放行。这是最稳的默认门卫模式。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>allowFrom</code></div>
+      <p>这里可以放用户 ID 或名字。安装时插件会尽量帮你把名字认成 ID。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw pairing list zalouser</code></div>
+      <p>这句像打开审批册，看看最近有哪些人正等着进门。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw pairing approve zalouser &lt;code&gt;</code></div>
+      <p>这句像在门卫本上盖一个“准入”章，把某个配对码正式放行。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第五站</p>
+    <h2>🎈 最后记一句：这条路适合“我只能用个人号”，不适合“我想找最稳最官方的方案”</h2>
+    <p>如果你能走官方 bot 路线，通常还是优先看 <code>/channels/zalo</code>。这页更像没有官方门票时的替代通道。</p>
+  </div>
+</section>

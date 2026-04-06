@@ -1,0 +1,97 @@
+<section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>📍 这页不是在教你“发地图”，而是在教 OpenClaw 怎么把别人丢来的位置消息翻成人能看懂的话</h2>
+      <p>别人发来的可能只是一个定位点、一个地点名，或者一段正在移动的实时位置。</p>
+      <p>OpenClaw 做的事很像小秘书：一边把它改写成聊天里好读的文字，一边把经纬度这些信息偷偷塞进上下文，方便后面继续用。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适用于 Telegram / WhatsApp / Matrix</span>
+      <span>重点是显示方式和上下文字段</span>
+      <a href="https://docs.openclaw.ai/channels/location" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一站</p>
+    <h2>🗺️ 它会把冰冷坐标，翻成聊天里能顺眼看下去的一行话</h2>
+    <p>重点不是“保留原格式”，而是“别让人看到一坨难读数据”。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">📌</span>
+      <h2>普通定位点</h2>
+      <p>会变成像 <code>📍 48.858844, 2.294351 ±12m</code> 这样的一行，直接告诉你“点在哪儿”。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🏙️</span>
+      <h2>带地点名</h2>
+      <p>像“埃菲尔铁塔”这种，会连名字和地址一起说出来，不只剩坐标。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🛰️</span>
+      <h2>实时位置</h2>
+      <p>会被标成“Live location”，意思是“这个点会动，不是钉死在地上的”。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">💬</span>
+      <h2>附带留言</h2>
+      <p>如果原消息里还有一句“在这里见”，OpenClaw 会把它接在下一行，不会吞掉。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二站</p>
+    <h2>🧰 真正给模型用的，不是那一行漂亮文字，而是背后那盒彩色小卡片</h2>
+    <p>这些字段就像贴在消息背后的标签，模型后面要算距离、判断是不是实时位置，都靠它们。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>LocationLat / LocationLon</code></div>
+      <p>这是最核心的两张卡，像“地图上的横竖坐标”。没有它们，就只剩一句人话描述。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>LocationName / LocationAddress</code></div>
+      <p>像给这个点贴上“这是哪儿”的门牌和地名。Telegram 的 venue 就会填这两格。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>LocationSource</code></div>
+      <p>告诉系统它是普通点、地点名，还是实时分享。也就是 <code>pin / place / live</code> 三种小标签。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>LocationIsLive</code></div>
+      <p>这是“它会不会继续移动”的小开关。Matrix 解析时这里永远是 false。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第三站</p>
+    <h2>📮 三个通道，各自会夹带一点自己的小脾气</h2>
+    <p>这页最后其实是在提醒你：定位消息虽然都叫“位置”，但每个平台带来的小细节并不一样。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label">Telegram</div>
+      <p>地点名和地址会被单独拆出来；实时位置会带上 <code>live_period</code> 这种“还在动”的线索。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">WhatsApp</div>
+      <p><code>comment</code> 或 <code>caption</code> 会被接到下一行，就像你在地图贴纸下又写了一句备注。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">Matrix</div>
+      <p><code>geo_uri</code> 会被当成普通定位点来拆，海拔会被忽略，也不会被认成实时位置。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 最后记一句</div>
+      <p>这页讲的不是“新通道怎么装”，而是“位置消息进门以后，OpenClaw 会把它整理成什么样子”。</p>
+    </div>
+  </div>
+</section>
