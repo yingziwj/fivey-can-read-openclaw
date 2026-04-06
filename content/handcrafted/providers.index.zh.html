@@ -1,0 +1,112 @@
+<section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>🏬 <code>Provider Directory</code> 像“给 OpenClaw 选脑子供货商的大卖场”</h2>
+      <p>聊天通道讲的是“消息从哪扇门进来”，Provider 讲的是“脑子和模型从哪家供货商拿”。这页就是总入口。</p>
+      <p>你要做的事其实很简单：先挑一家供货商，给它门卡，再把默认模型写成 <code>provider/model</code>。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合第一次给 OpenClaw 选模型供应商的人</span>
+      <span>这页最重要的是记住：通道是门，provider 是脑子来源</span>
+      <a href="https://docs.openclaw.ai/providers/index" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一眼</p>
+    <h2>🧠 这页只讲“脑子供货商”，不讲 WhatsApp、Telegram 那些聊天门</h2>
+    <p>官方特意提醒了这一点，因为很多人会把 provider 和 channel 混在一起。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">🚪</span>
+      <h2>Channels</h2>
+      <p>像门。决定消息从哪儿进来、从哪儿送回去。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🧠</span>
+      <h2>Providers</h2>
+      <p>像脑子供货商。决定 OpenClaw 背后真正用哪家模型说话。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🏷</span>
+      <h2><code>provider/model</code></h2>
+      <p>像给每颗脑子挂上的完整门牌。前半段是谁家供的，后半段是哪一颗。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">📌</span>
+      <h2>一句话</h2>
+      <p>先挑脑子卖场，再选货架上的具体型号。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">最短上手</p>
+    <h2>🪜 官方给的 quick start，其实就是两步</h2>
+    <p>不用多想，先把最短路径记住。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label">1. Authenticate</div>
+      <p>像先去这家卖场办会员卡，让 OpenClaw 有资格进去拿货。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">2. Set default model</div>
+      <p>像在总账本上写清“以后默认先拿这颗脑子”。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>{ agents: { defaults: { model: { primary: "anthropic/claude-opus-4-6" } } } }</code></div>
+      <p>这段配置翻成人话就是：“默认主脑，先用 Anthropic 家那颗 Opus。”</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🎈 记一句</div>
+      <p>先办卡，再挑一颗默认脑子，够开始用了。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">这座卖场里有什么</p>
+    <h2>🛒 官方列的长清单，不是要你全背，而是告诉你“这家店货很多”</h2>
+    <p>OpenAI、Anthropic、DeepSeek、Google、OpenRouter、Ollama、Bedrock、xAI……这些都只是不同货架。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">🌟</span>
+      <h2>大厂直供</h2>
+      <p>像 OpenAI、Anthropic、Google 这些，直接从原厂拿货。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🛍</span>
+      <h2>聚合卖场</h2>
+      <p>像 OpenRouter、LiteLLM、Cloudflare AI Gateway，一家店里摆很多家货。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🏠</span>
+      <h2>本地和私有路线</h2>
+      <p>像 Ollama、vLLM、SGLang，更像你把模型货架搬到自己家里。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🎤</span>
+      <h2>专用能力供应商</h2>
+      <p>比如 Deepgram 这种更偏转写能力的供货商，和通用聊天脑子不是同一类货。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">最后总结</p>
+    <h2>🎈 把这页压成一句最短的话</h2>
+    <p>Provider Directory 就是模型供货商总入口：先办认证卡，再把默认脑子写成 <code>provider/model</code>，剩下只是挑哪家货架更适合你。</p>
+  </div>
+  <div class="ad-placeholder">
+    <p>如果你想继续看“不同供货商到底怎么分类、怎么插到 OpenClaw 里”，下一页就去 <code>/concepts/model-providers</code>。</p>
+  </div>
+</section>
