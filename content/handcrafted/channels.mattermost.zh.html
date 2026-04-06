@@ -1,0 +1,97 @@
+<section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>🟦 Mattermost 这页，其实是在教你“先装插件，再拿 bot token 和站点地址，把 OpenClaw 接进公司自托管聊天楼”</h2>
+      <p>Mattermost 这条路的感觉很像 Slack 的企业自建版：先装一块插件砖，再填 bot token 和 base URL，然后决定群里什么时候开口、是不是要启用原生斜杠命令。</p>
+      <p>所以这页的难点不在“能不能接”，而在“接完之后，你要它在群里怎么表现”。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合自托管团队聊天</span>
+      <span>重点是插件、botToken、chatmode、native slash commands</span>
+      <a href="https://docs.openclaw.ai/channels/mattermost" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一站</p>
+    <h2>🧱 第一步还是“先把 Mattermost 这块门砖装上去”</h2>
+    <p>因为它不是核心内置通道。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw plugins install @openclaw/mattermost</code></div>
+      <p>像从插件仓库把 Mattermost 这扇门装到 OpenClaw 墙上。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>botToken + baseUrl</code></div>
+      <p>前者像门卡，后者像公司聊天大楼地址。两样都要齐。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">📌 最小配置能做什么</div>
+      <p>先让 DM、群聊、频道收发正常工作，后面高级玩法再慢慢加。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 一句话</div>
+      <p>Mattermost 先解决“能接”，再解决“怎么说话更像你要的风格”。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二站</p>
+    <h2>🎛️ chatmode 这块最像“在公共频道里，它到底是被叫到才答，还是逢消息都搭话”</h2>
+    <p>把这个模式选清楚，群里体验差很多。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">@</span>
+      <h2><code>oncall</code></h2>
+      <p>像在频道里被 @ 到才起身，默认最稳。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">💬</span>
+      <h2><code>onmessage</code></h2>
+      <p>像每条频道消息都听到就可能响应，话会更多。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">!</span>
+      <h2><code>onchar</code></h2>
+      <p>像大家先敲一个口令前缀，再把它叫起来。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🎈</span>
+      <h2>一句话</h2>
+      <p>chatmode 决定它像一个安静同事，还是一个常驻插话员。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第三站</p>
+    <h2>⚡ Native slash commands 则像“给 Mattermost 装一排原生后台按钮”</h2>
+    <p>这块是高级玩法，不是必需主路。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label"><code>native: true</code></div>
+      <p>像说“允许 OpenClaw 在 Mattermost 里注册自己的一套斜杠命令按钮”。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>callbackPath</code> / <code>callbackUrl</code></div>
+      <p>像给这些按钮指定“按下以后把请求送回哪一扇门”。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">📌 Reachability 要求</div>
+      <p>如果 Mattermost 服务器根本打不到这个回调地址，按钮就像装了但没接线。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 收尾一句</div>
+      <p>native slash commands 的本质，是把 OpenClaw 的遥控器原生嵌进 Mattermost 里。</p>
+    </div>
+  </div>
+</section>

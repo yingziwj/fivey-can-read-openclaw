@@ -1,0 +1,71 @@
+<section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>🪶 Feishu 这页，其实是在教你“给 OpenClaw 接一只飞书企业机器人，而且尽量别把 webhook 门暴露到外面”</h2>
+      <p>它的好处很直接：收消息这边走 WebSocket 订阅，所以不像很多通道那样一上来就逼你开公网 webhook。</p>
+      <p>这页真正的核心只有三样：飞书应用、App ID / Secret、Gateway 状态检查。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合企业飞书 / Lark 机器人</span>
+      <span>重点是 App ID、App Secret、WebSocket 订阅</span>
+      <a href="https://docs.openclaw.ai/channels/feishu" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一站</p>
+    <h2>🤖 这条路更像“先在飞书后台领一只机器人，再把它的身份证交给 OpenClaw”</h2>
+    <p>不是 token 花活，而是企业应用接入流程。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">🏢</span>
+      <h2>Open Platform</h2>
+      <p>像企业机器人的办证大厅。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🪪</span>
+      <h2>App ID / Secret</h2>
+      <p>像机器人的身份证号和私密钥匙，后面全靠它们对接。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🔌</span>
+      <h2>WebSocket 订阅</h2>
+      <p>像给机器人开一条长连线，不必先在公网搭收件门。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🎈</span>
+      <h2>一句话</h2>
+      <p>Feishu 这条路主打“企业机器人 + 长连接”，不是“先开公网洞”。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二站</p>
+    <h2>🛠️ onboarding 和 channels add，都只是“把身份证录进系统”</h2>
+    <p>选向导还是手工 CLI，差的是入口，不是世界观。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw onboard</code></div>
+      <p>像让新手老师带你一步步办证、录信息、点亮通道。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw channels add</code></div>
+      <p>像你已经熟了，直接走人工窗口，把 App ID 和 Secret 填上去。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>domain: \"lark\"</code></div>
+      <p>如果你用的是国际版 Lark，这就像告诉系统“别去中国区大厅，去全球区大厅办证”。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 收尾一句</div>
+      <p>飞书这页最重要的，不是命令，而是“你拿到的那只企业机器人身份”要填对。</p>
+    </div>
+  </div>
+</section>

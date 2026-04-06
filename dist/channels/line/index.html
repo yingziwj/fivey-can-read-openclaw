@@ -3970,238 +3970,104 @@
   
       </div>
 
-      
       <section class="section-shell">
-        <div class="overview-card">
-          <div>
-            <p class="section-kicker">AI 绘本解读版</p>
-            <h2>LINE 小助手来敲门啦！🚪</h2>
-            <p>让 OpenClaw 和 LINE 做好朋友。装上插件，告诉它门牌号和钥匙，就能在 LINE 里聊天啦！</p>
-          </div>
-          <div class="overview-meta">
-            <span>原始路径：/channels/line</span>
-            <span>故事卡片：8 张</span>
-            <a href="https://docs.openclaw.ai/channels/line" target="_blank" rel="noreferrer">查看官方原文</a>
-          </div>
-        </div>
-      </section>
-      
-          <section class="section-shell" id="section-1">
-            <div class="section-heading">
-              <p class="section-kicker">第 1 站</p>
-              <h2>先认识一下 LINE 小助手</h2>
-              <p>LINE 小助手是一个插件，它能让 OpenClaw 和 LINE 互相说话。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>想用 OpenClaw 回复 LINE 消息吗？先请它进门。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>LINE 小助手像一个传话员，住在 OpenClaw 的网关上。</li><li>它需要两把钥匙才能工作：一个叫访问令牌，一个叫频道密钥。</li><li>它能帮你收消息、发消息，还能处理图片、位置和漂亮的卡片。</li><li>不过，它现在还不会处理点赞和话题串哦。</li><li>它已经准备好为你服务啦！</li></ul>
-              </div>
-              
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>LINE 小助手是连接 OpenClaw 和 LINE 的桥梁。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-2">
-            <div class="section-heading">
-              <p class="section-kicker">第 2 站</p>
-              <h2>请小助手进门 🛠️</h2>
-              <p>就像给手机装新 App，我们也需要给 OpenClaw 装上 LINE 插件。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>不装插件，OpenClaw 就听不懂 LINE 的话。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>打开你的 OpenClaw 工具箱。</li><li>告诉它：去安装一个叫 &#39;@openclaw/line&#39; 的插件。</li><li>如果你是从代码仓库直接运行，就告诉它去 &#39;extensions/line&#39; 文件夹里找。</li><li>安装好，小助手就住进 OpenClaw 的家啦。</li></ul>
-              </div>
-              
-            <div class="source-card">
-              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
-              <ul><li>`openclaw plugins install @openclaw/line` 这行命令就像说：&#39;嘿，去商店把 LINE 插件买回来装上！&#39;</li><li>`openclaw plugins install ./extensions/line` 这行命令就像说：&#39;不用去商店了，家里仓库就有，直接拿来用！&#39;</li></ul>
-            </div>
-          
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>一句话，把 LINE 插件请进门。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-3">
-            <div class="section-heading">
-              <p class="section-kicker">第 3 站</p>
-              <h2>给小助手配钥匙和门牌 🗝️</h2>
-              <p>小助手需要从 LINE 那里拿到专属钥匙，还要知道把信送到 OpenClaw 的哪个门。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>没有正确的钥匙和地址，LINE 的消息送不进来。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>先去 LINE 开发者的办公室（网站）开个账户。</li><li>在里面创建一个&#39;消息 API&#39;频道，就像申请一个专属信箱。</li><li>从频道设置里，抄下两把重要的钥匙：访问令牌和频道密钥。</li><li>告诉 LINE 这个频道：&#39;请把信都送到这个网址（我们的网关）。&#39;</li><li>这个网址就是小助手收信的门，必须是安全的 HTTPS 门。</li><li>小助手会检查每封信的&#39;签名&#39;，确保是 LINE 本人寄的，不是坏人冒充的。</li></ul>
-              </div>
-              
-            <div class="source-card">
-              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
-              <ul><li>设置网址 `https://gateway-host/line/webhook` 就像在门牌上写：&#39;LINE 的信请放这里！&#39;</li><li>如果门牌想换地方，可以在配置里告诉小助手新的 `webhookPath`。</li></ul>
-            </div>
-          
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>拿到钥匙，挂好门牌，通信线路就通了。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-4">
-            <div class="section-heading">
-              <p class="section-kicker">第 4 站</p>
-              <h2>告诉小助手家里的规矩 📜</h2>
-              <p>用一张小纸条（配置文件），告诉小助手怎么工作，谁可以进来聊天。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>没有规矩，小助手不知道该怎么处理消息。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>最简单的纸条上要写：启用 LINE，写上那两把钥匙。</li><li>纸条可以放在环境变量里，就像把密码写在便签上。</li><li>也可以把钥匙内容单独存在文件里，纸条只写文件路径。</li><li>文件必须是实实在在的文件，不能是快捷方式哦。</li><li>可以管理多个 LINE 账号，就像给家里不同的房间配不同的门卫。</li></ul>
-              </div>
-              
-            <div class="source-card">
-              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
-              <ul><li>配置里的 `enabled: true` 就像按下&#39;启动&#39;按钮。</li><li>`channelAccessToken` 和 `channelSecret` 就是那两把钥匙的名字。</li><li>`tokenFile` 和 `secretFile` 是说：&#39;钥匙不在这张纸上，去那个文件里找。&#39;</li></ul>
-            </div>
-          
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>一张纸条，定下所有规矩。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-5">
-            <div class="section-heading">
-              <p class="section-kicker">第 5 站</p>
-              <h2>谁可以进来聊天？🚦</h2>
-              <p>我们可以设定规则，决定哪些 LINE 朋友可以直接聊天，哪些需要先对暗号。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>保护你的 OpenClaw，不让陌生人随便打扰。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>默认情况下，私聊消息需要&#39;配对&#39;。陌生人发消息会被暂时拦住。</li><li>陌生人会收到一个配对码，就像一张临时通行证。</li><li>你可以在 OpenClaw 里查看这些通行证，并决定批准谁进来。</li><li>可以设置白名单，只允许特定的 LINE 用户 ID 和你聊天。</li><li>群聊也可以单独设置规则：全开放、仅白名单、或完全关闭。</li><li>LINE 的用户 ID 像身份证号，有固定格式（U/C/R 开头加一串字符）。</li></ul>
-              </div>
-              
-            <div class="source-card">
-              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
-              <ul><li>`openclaw pairing list line` 命令就像翻开访客登记簿，看看谁在等。</li><li>`openclaw pairing approve line &lt;CODE&gt;` 命令就像拿起印章，在某个通行证上盖&#39;批准&#39;。</li><li>配置项 `dmPolicy: &quot;pairing&quot;` 就是定下&#39;私聊要先配对&#39;这条规矩。</li></ul>
-            </div>
-          
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>你来决定，谁是你的聊天好友。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-6">
-            <div class="section-heading">
-              <p class="section-kicker">第 6 站</p>
-              <h2>消息怎么送出去？📨</h2>
-              <p>小助手会帮你把 OpenClaw 的回复，漂亮地送到 LINE 上。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>了解消息怎么被处理，聊天更顺畅。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>太长的文字会被切成小块，一块一块送，避免卡住。</li><li>简单的 Markdown 格式会被去掉，但代码块和表格会变成漂亮的 LINE 卡片。</li><li>如果回复需要时间生成，LINE 上会先显示一个&#39;加载中&#39;的动画。</li><li>收到的图片、视频等文件，大小不能超过设定的限制（默认 10MB）。</li></ul>
-              </div>
-              
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>小助手会把回复包装得漂漂亮亮再送出。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-7">
-            <div class="section-heading">
-              <p class="section-kicker">第 7 站</p>
-              <h2>发送超酷的消息！🎨</h2>
-              <p>除了普通文字，你还能让 OpenClaw 发送带按钮的快速回复、位置地图、精美卡片！</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>让聊天变得更有趣、更实用。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>在消息里加上一个特殊的&#39;频道数据&#39;包裹，就能发送高级功能。</li><li>可以放几个快速回复按钮，让对方一点就能选。</li><li>可以发送一个具体的位置，带地图和地址。</li><li>可以发送 Flex 卡片，这是一种可以自由排版的漂亮信息框。</li><li>也可以发送模板消息，比如一个&#39;确认&#39;对话框。</li><li>插件还自带一个 `/card` 魔法命令，能快速生成预设好的卡片。</li></ul>
-              </div>
-              
-            <div class="source-card">
-              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
-              <ul><li>在 `channelData.line` 里写 `quickReplies: [&quot;Status&quot;, &quot;Help&quot;]`，就像在消息下面放了两个按钮。</li><li>写 `location: {...}` 就像附上了一张地图标记。</li><li>使用 `/card info &quot;Welcome&quot; &quot;Thanks for joining!&quot;` 命令，就像念了一句咒语，一张欢迎卡片就出现了。</li></ul>
-            </div>
-          
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>给你的消息加点魔法，让它变得更好玩！</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-8">
-            <div class="section-heading">
-              <p class="section-kicker">第 8 站</p>
-              <h2>如果出问题了怎么办？🔧</h2>
-              <p>别担心，大部分问题都有简单的检查步骤。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>快速找到问题，让聊天恢复畅通。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>如果 LINE 验证失败：检查网址是不是 HTTPS，钥匙（频道密钥）对不对。</li><li>如果收不到消息：检查门牌（webhook 路径）和配置里写的是不是一样。</li><li>如果图片下载失败：可能是文件太大了，试试把大小限制调高一点。</li><li>确保你的 OpenClaw 网关能从互联网上被 LINE 访问到。</li></ul>
-              </div>
-              
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>检查钥匙、门牌和文件大小，问题迎刃而解。</p>
-              </div>
-            </div>
-          </section>
-        
-      <section class="section-shell">
-        <div class="ad-placeholder">
-          <p>这里预留给未来的 Google AdSense 模块。</p>
-          <code>&lt;!-- ADSENSE_SNIPPET --&gt;</code>
-        </div>
-      </section>
-    
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>🟢 LINE 这页，其实是在教你“让 LINE 官方通道往 OpenClaw 的 webhook 小门投递消息，再拿 token 和 secret 双重验身”</h2>
+      <p>这条路不复杂，但安全要求很明确：LINE 发来的请求，不是光看头部就信，而是要用整个原始请求体做签名校验。</p>
+      <p>所以这里的重点不只是 Channel access token，还包括 Channel secret 和 webhook 路径。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合 LINE Messaging API</span>
+      <span>重点是 token、secret、webhook、签名校验</span>
+      <a href="https://docs.openclaw.ai/channels/line" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一站</p>
+    <h2>🔑 这条路有两把钥匙，不是一把</h2>
+    <p>把这两把分清，就不会把配置写偏。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">🎫</span>
+      <h2>Channel access token</h2>
+      <p>像机器人发消息用的工作证。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🔐</span>
+      <h2>Channel secret</h2>
+      <p>像门卫验真伪用的暗号，不给它，别人也能伪装来敲门。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🚪</span>
+      <h2><code>/line/webhook</code></h2>
+      <p>像 LINE 官方邮差来投递消息的专用收件口。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🎈</span>
+      <h2>一句话</h2>
+      <p>LINE 不是“给 token 就完”，而是“双钥匙 + webhook 门”。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二站</p>
+    <h2>📮 webhook 验证这块，像“门卫要拿原始信封去验火漆印章”</h2>
+    <p>这就是为什么官方特别强调 raw body。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">📦 原始请求体</div>
+      <p>像完整信封本体，不能先揉皱、拆开、重写后再拿去验签。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🔐 HMAC 签名</div>
+      <p>像火漆印章，用 Channel secret 去核对这封信是不是 LINE 官方真寄来的。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">⛔ 预认证限制</div>
+      <p>像陌生包裹还没验明身份前，不让它先把整屋塞满。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 一句话</div>
+      <p>LINE 这页最关键的不是消息格式，而是“门卫要先验印章”。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第三站</p>
+    <h2>👥 群和私聊也有不同门禁，跟别的通道一样别混掉</h2>
+    <p>DM 用 pairing，群用 groupPolicy，这是主线。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw pairing list line</code></div>
+      <p>像翻私聊陌生访客的临时代码登记簿。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw pairing approve line &lt;CODE&gt;</code></div>
+      <p>像把某位私聊访客正式放进来。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>groupPolicy</code> / <code>groupAllowFrom</code></div>
+      <p>群里则像另一套门卫规矩，先看群能不能进，再看谁能触发。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 收尾一句</div>
+      <p>LINE 这条路很清楚：官方邮差负责送信，OpenClaw 负责签收、验印、再决定回不回。</p>
+    </div>
+  </div>
+</section>
+
 
       <footer class="page-footer">
         <div>

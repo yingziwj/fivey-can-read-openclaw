@@ -1,0 +1,97 @@
+<section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>☁️ Nextcloud Talk 这页，其实是在教你“先在 Nextcloud 里养一只 bot，再让它把房间消息投给 OpenClaw”</h2>
+      <p>这条路更像企业私有云内部接入：先在 Nextcloud 服务器里创建 bot，再把共享 secret 和 webhook 地址对好。</p>
+      <p>它的风格很务实：房间、DM、反应都支持，但媒体上传就别指望像原生客户端那么花哨。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合 Nextcloud 私有协作</span>
+      <span>重点是 occ 建 bot、shared secret、rooms allowlist</span>
+      <a href="https://docs.openclaw.ai/channels/nextcloud-talk" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一站</p>
+    <h2>🤖 首先不是 OpenClaw 自己造 bot，而是让 Nextcloud 先发给你一只官方 bot</h2>
+    <p>这就是那条 <code>occ talk:bot:install</code> 命令的含义。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>./occ talk:bot:install \"OpenClaw\" \"&lt;shared-secret&gt;\" \"&lt;webhook-url&gt;\"</code></div>
+      <p>像在 Nextcloud 服务器后台正式注册一只名叫 OpenClaw 的 bot，并告诉它以后把消息送去哪扇门。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>shared-secret</code></div>
+      <p>像 bot 和 OpenClaw 之间约定的暗号，少了它别人也能伪装 bot 来投递。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">Room settings 里启用</div>
+      <p>像房间管理员还得点头说“这只 bot 可以进这间房”。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 一句话</div>
+      <p>Nextcloud Talk 这条路，是“先在云盘楼里养 bot，再把它接到 OpenClaw”。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二站</p>
+    <h2>🚪 DM 和 rooms 也是两种门，不要混</h2>
+    <p>这条路默认也很保守。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">💬</span>
+      <h2>DM 默认 pairing</h2>
+      <p>陌生人先拿临时码排队，批准后才能私聊触发。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🏢</span>
+      <h2>rooms 默认 allowlist</h2>
+      <p>房间默认不是谁都能让它开口，得在白名单里。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">@</span>
+      <h2>mention gating 仍然在</h2>
+      <p>就算房间被允许，通常也还是更像被点名才答。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">📎</span>
+      <h2>媒体是 URL-only</h2>
+      <p>像它不会帮你直接搬大文件包裹，只会把文件地址递过去。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第三站</p>
+    <h2>🔍 “DM 和 room 在 payload 里分不清”那句提醒，意思是：如果你想更准确认房间类型，就得再给它一副 API 眼镜</h2>
+    <p>这就是 <code>apiUser</code> 和 <code>apiPassword</code> 的作用。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">😵 默认 payload 不够细</div>
+      <p>有些 webhook 包裹本身不会直接告诉你“这是 DM 还是房间”。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>apiUser</code> + <code>apiPassword</code></div>
+      <p>像给 OpenClaw 一副额外眼镜，它可以再去服务器里查清这间房到底是什么类型。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>webhookPublicUrl</code></div>
+      <p>如果前面还有代理，这就像明确告诉 bot：“别看内部门牌，看外面公众能到达的那张门牌。”</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 收尾一句</div>
+      <p>Nextcloud Talk 这页最像“公司内网 bot 接入”，不是大众聊天 app 的傻瓜式绑定。</p>
+    </div>
+  </div>
+</section>

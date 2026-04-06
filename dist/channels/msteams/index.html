@@ -3970,210 +3970,104 @@
   
       </div>
 
-      
       <section class="section-shell">
-        <div class="overview-card">
-          <div>
-            <p class="section-kicker">AI 绘本解读版</p>
-            <h2>🤖 让 OpenClaw 机器人住进你的 Teams 聊天室</h2>
-            <p>就像给你的 Teams 请来一位新朋友。它能看消息，能回话，还能帮你发文件。不过，得先给它安个家，配把钥匙。</p>
-          </div>
-          <div class="overview-meta">
-            <span>原始路径：/channels/msteams</span>
-            <span>故事卡片：7 张</span>
-            <a href="https://docs.openclaw.ai/channels/msteams" target="_blank" rel="noreferrer">查看官方原文</a>
-          </div>
-        </div>
-      </section>
-      
-          <section class="section-shell" id="section-1">
-            <div class="section-heading">
-              <p class="section-kicker">第 1 站</p>
-              <h2>📦 第一步：请机器人进门</h2>
-              <p>OpenClaw 机器人本身不住在 Teams 里，它需要一个专门的“插件”才能进去。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>这样 OpenClaw 主程序可以保持轻快，Teams 机器人也能自己更新。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>Teams 机器人是一个单独的“插件包”。</li><li>以前它和主程序在一起，现在搬出来自己住了。</li><li>想用 Teams 机器人，就必须先安装这个插件。</li><li>就像给手机装个新 App，机器人才能开始工作。</li></ul>
-              </div>
-              
-            <div class="source-card">
-              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
-              <ul><li>`openclaw plugins install @openclaw/msteams` 这行命令，就像在说：“去商店把 Teams 机器人插件买回来装上。”</li><li>如果你是从代码仓库直接运行，可以用 `openclaw plugins install ./extensions/msteams`，意思是：“不用去商店了，我家后院就有，直接拿来用。”</li></ul>
-            </div>
-          
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>想用 Teams 机器人，先装插件。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-2">
-            <div class="section-heading">
-              <p class="section-kicker">第 2 站</p>
-              <h2>🔑 第二步：给机器人办身份证（Azure Bot）</h2>
-              <p>机器人想在 Teams 里活动，需要先在微软的“Azure”云上注册一个身份，拿到三把钥匙。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>没有这个身份，Teams 不认识它，也不会让它进门。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>这个身份叫“Azure Bot”。</li><li>你需要去微软 Azure 网站创建一个。</li><li>创建时会拿到三样东西：App ID（门牌号）、App Password（秘密钥匙）、Tenant ID（小区号）。</li><li>记得选“单租户”类型，这是现在推荐的做法。</li></ul>
-              </div>
-              
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>创建 Azure Bot，拿到三把钥匙。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-3">
-            <div class="section-heading">
-              <p class="section-kicker">第 3 站</p>
-              <h2>📞 第三步：告诉机器人接电话的地址</h2>
-              <p>机器人得有个固定的“电话号码”（网址），Teams 有消息时才能打给它。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>Teams 需要知道把消息送到哪里去。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>在 Azure Bot 的设置里，找到“消息端点”。</li><li>把这个地址设置成你的机器人接听消息的网址。</li><li>如果你在本地电脑上开发，电脑没有公开网址，Teams 打不进来。</li><li>这时你需要一个“隧道”工具，比如 ngrok，它能给你的本地服务一个临时的公开网址。</li></ul>
-              </div>
-              
-            <div class="source-card">
-              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
-              <ul><li>`ngrok http 3978` 这行命令就像在说：“嘿，ngrok，帮我在公网上开个门，映射到我电脑的 3978 号端口。”</li><li>然后你会得到一个像 `https://abc123.ngrok.io` 的网址，这就是机器人的临时公开电话。</li></ul>
-            </div>
-          
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>设置消息端点，让 Teams 能找到机器人。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-4">
-            <div class="section-heading">
-              <p class="section-kicker">第 4 站</p>
-              <h2>⚙️ 第四步：给 OpenClaw 配钥匙</h2>
-              <p>把从 Azure 拿到的三把钥匙，交给 OpenClaw 主程序，它才知道怎么控制这个 Teams 机器人。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>OpenClaw 是机器人的大脑，它需要钥匙才能操作机器人在 Teams 里的身体。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>在 OpenClaw 的配置文件里，专门有一个给 Teams（msteams）的配置区域。</li><li>把 App ID、App Password、Tenant ID 这三把钥匙填进去。</li><li>还要告诉它接电话的端口和路径，默认是 3978 端口和 `/api/messages` 路径。</li><li>最后，把 `enabled` 开关打开，机器人就通电了。</li></ul>
-              </div>
-              
-            <div class="source-card">
-              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
-              <ul><li>配置里的 `appId`, `appPassword`, `tenantId` 就像三个输入框，让你贴上从 Azure 抄来的钥匙。</li><li>`webhook: { port: 3978, path: &quot;/api/messages&quot; }` 这行配置在说：“机器人，你就在 3978 号港口，等一个叫 `/api/messages` 的信使船。”</li></ul>
-            </div>
-          
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>把钥匙填进配置，打开开关。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-5">
-            <div class="section-heading">
-              <p class="section-kicker">第 5 站</p>
-              <h2>🚪 第五步：控制谁能和机器人玩（权限管理）</h2>
-              <p>机器人很听话，但我们要告诉它：可以和谁私聊，可以进哪个群聊。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>为了安全，默认设置比较严格，防止陌生人随便找机器人聊天。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>私聊（DM）：默认是“配对”模式。陌生人发的消息，机器人会假装没看见，直到你批准。</li><li>你可以设置一个“允许名单”，只让名单里的人直接和机器人私聊。</li><li>群聊和频道：默认是“关闭”的，机器人不会在群里回话。</li><li>你可以打开群聊权限，或者设置一个“群聊允许名单”，只让特定的人在群里@机器人时，它才回应。</li></ul>
-              </div>
-              
-            <div class="source-card">
-              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
-              <ul><li>`dmPolicy: &quot;pairing&quot;` 这个配置就像给机器人下了命令：“私聊？先等等，等我主人点头。”</li><li>`groupPolicy: &quot;allowlist&quot;` 这个配置在说：“群聊？免谈，除非你在我的贵宾名单上。”</li><li>`groupAllowFrom: [&quot;user@org.com&quot;]` 这行就是在填写那个贵宾名单。</li></ul>
-            </div>
-          
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>用配置告诉机器人，谁可以找它聊天。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-6">
-            <div class="section-heading">
-              <p class="section-kicker">第 6 站</p>
-              <h2>📎 关于文件和图片的小秘密</h2>
-              <p>机器人能处理文件和图片，但在不同地方，能力不一样。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>因为 Teams 把文件存放在了不同的“仓库”里。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>私聊里发来的文件，机器人可以直接拿到。</li><li>但在群聊或频道里，文件其实存在 SharePoint 或 OneDrive 里。</li><li>如果只靠 Teams 自带的权限，机器人只能看到文件的“名字”，拿不到“内容”。</li><li>想拿到群聊/频道里的文件内容，需要给机器人开通更高级的“Microsoft Graph”权限，这需要管理员同意。</li></ul>
-              </div>
-              
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>私聊文件直接收，群聊文件需授权。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-7">
-            <div class="section-heading">
-              <p class="section-kicker">第 7 站</p>
-              <h2>🎯 机器人的小目标</h2>
-              <p>装好之后，这个机器人能帮你做什么呢？</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>了解它能做什么，你才知道怎么用它。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>你可以在 Teams 的私聊、群聊或频道里和 OpenClaw 机器人说话。</li><li>机器人很聪明，你的消息从哪个聊天窗口来，它的回复就一定会回到那个窗口，不会走错门。</li><li>为了不打扰别人，在群聊和频道里，默认需要@提到机器人，它才会回应。（这个可以改）</li></ul>
-              </div>
-              
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>随处聊天，精准回复，礼貌不扰民。</p>
-              </div>
-            </div>
-          </section>
-        
-      <section class="section-shell">
-        <div class="ad-placeholder">
-          <p>这里预留给未来的 Google AdSense 模块。</p>
-          <code>&lt;!-- ADSENSE_SNIPPET --&gt;</code>
-        </div>
-      </section>
-    
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>🪟 Microsoft Teams 这页，其实是在教你“先去 Azure 办一整套 bot 证件，再把 `/api/messages` 这条门接出来”</h2>
+      <p>它和 Telegram 这种“拿个 token 就上”完全不是一个难度层级。Teams 更像企业系统集成：插件、Azure Bot、App ID、Secret、Tenant、公开回调地址，一个都不能少。</p>
+      <p>所以这页不是“会不会配一个机器人”，而是“会不会给企业 bot 全套办证”。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合企业 Teams bot</span>
+      <span>重点是 Azure Bot、App ID、Tenant、/api/messages</span>
+      <a href="https://docs.openclaw.ai/channels/msteams" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一站</p>
+    <h2>🧱 第一步不是配 token，而是先装插件、再办 Azure Bot 证件</h2>
+    <p>这条路的“门”本身就更复杂。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">🧱</span>
+      <h2>安装插件</h2>
+      <p>像先把 Teams 这扇门装到 OpenClaw 墙上。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🪪</span>
+      <h2>Azure Bot 证件</h2>
+      <p>App ID、App Password、Tenant ID 像整套企业身份卡。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🚪</span>
+      <h2><code>/api/messages</code></h2>
+      <p>这条公开门口是 Teams 往你这边投递消息的必经之路。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🎈</span>
+      <h2>一句话</h2>
+      <p>Teams 这条路最像“企业 bot 办证流程”，不是普通聊天插件。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二站</p>
+    <h2>🔐 DM 和群聊是两套门禁，不要混</h2>
+    <p>官方这页把这件事写得很清楚。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">💬 DM 默认 pairing</div>
+      <p>像陌生人先拿临时码排队，批准后才能在私聊里跟它聊。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">👥 群聊默认 allowlist</div>
+      <p>群里默认更保守，要么白名单，要么你明确改成 open。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">@ mention 仍然重要</div>
+      <p>就算群里开门了，通常也还是得点名叫它，避免它在团队频道乱插话。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 一句话</div>
+      <p>Teams 里“谁能私聊”跟“谁能在团队频道叫它”是两套不同钥匙。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第三站</p>
+    <h2>🏢 teams allowlist 那块，像“整栋楼、楼层、会议室”三级门牌</h2>
+    <p>这就是 team / channel 级控制的直觉版。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">🏢 Team</div>
+      <p>像一整栋办公楼。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🚪 Channel</div>
+      <p>像楼里的某一间会议室。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">📌 稳定 ID 更重要</div>
+      <p>显示名会变，稳定的 team / channel ID 才像真实门牌号。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 收尾一句</div>
+      <p>Teams 这页的难，不在机器人会不会说话，而在“门牌和证件有没有全办对”。</p>
+    </div>
+  </div>
+</section>
+
 
       <footer class="page-footer">
         <div>

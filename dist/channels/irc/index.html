@@ -3970,289 +3970,104 @@
   
       </div>
 
-      
       <section class="section-shell">
-        <div class="overview-card">
-          <div>
-            <p class="section-kicker">AI 绘本解读版</p>
-            <h2>🎪 让OpenClaw机器人去IRC聊天室玩</h2>
-            <p>想让机器人去IRC聊天室和大家聊天吗？就像带它去一个热闹的游乐场。这里教你如何给它买票、定规矩、让它安全地玩耍。</p>
-          </div>
-          <div class="overview-meta">
-            <span>原始路径：/channels/irc</span>
-            <span>故事卡片：10 张</span>
-            <a href="https://docs.openclaw.ai/channels/irc" target="_blank" rel="noreferrer">查看官方原文</a>
-          </div>
-        </div>
-      </section>
-      
-          <section class="section-shell" id="section-1">
-            <div class="section-heading">
-              <p class="section-kicker">第 1 站</p>
-              <h2>🎫 先买张票</h2>
-              <p>机器人要去IRC聊天室，得先给它一张入场券。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>没有这张票，机器人连门都进不去。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>IRC就像一个老式的聊天游乐场，有公共房间和私人小窗。</li><li>机器人是个插件，但它的门票在主控制台里买。</li><li>这张票告诉机器人去哪个游乐场、叫什么名字、进哪个房间。</li><li>记得选加密通道，就像给门票加个保护罩。</li></ul>
-              </div>
-              
-            <div class="source-card">
-              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
-              <ul><li>`enabled: true` 是按下‘启动’按钮。</li><li>`host` 和 `port` 是游乐场的地址和入口。</li><li>`tls: true` 是打开加密保护罩。</li><li>`nick` 是给机器人起个外号。</li><li>`channels` 是它要进的房间列表。</li><li>`openclaw gateway run` 是喊一声‘机器人，出发！’</li></ul>
-            </div>
-          
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>先买票，再出发。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-2">
-            <div class="section-heading">
-              <p class="section-kicker">第 2 站</p>
-              <h2>🔒 游乐场的默认规矩</h2>
-              <p>游乐场有默认的保安规则，保护机器人不乱跑。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>知道默认规矩，才不会一进门就被拦下。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>私人小窗默认只对‘配对’的朋友开放。</li><li>公共房间默认只进‘白名单’上的房间。</li><li>白名单就是一张允许进入的房间清单。</li><li>加密通道默认是打开的，除非你故意关掉。</li></ul>
-              </div>
-              
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>默认规矩很严格，保护机器人安全。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-3">
-            <div class="section-heading">
-              <p class="section-kicker">第 3 站</p>
-              <h2>🚪 两道安检门</h2>
-              <p>进IRC房间要过两道门：房间门和说话人门。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>搞清两道门，才知道消息为什么被拦下。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>第一道是‘房间门’：机器人能进这个房间吗？</li><li>第二道是‘说话人门’：房间里谁可以和机器人说话？</li><li>每道门都有自己的‘白名单’和‘黑名单’。</li><li>说话人要用完整的身份证号，光看外号不安全。</li></ul>
-              </div>
-              
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>房间门和说话人门，两道安检都要过。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-4">
-            <div class="section-heading">
-              <p class="section-kicker">第 4 站</p>
-              <h2>⚠️ 常见小迷糊</h2>
-              <p>很多人搞混了：私人小窗的名单管不了公共房间。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>避免看到‘消息被丢掉了’的日志却不知道原因。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>如果日志说‘丢掉了群组发送者’，那是说话人门没开。</li><li>私人小窗的名单只管私人聊天。</li><li>要开公共房间的说话人门，得用专门的名单。</li><li>可以给所有房间开一个总门，也可以每个房间单独开。</li></ul>
-              </div>
-              
-            <div class="source-card">
-              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
-              <ul><li>`groupAllowFrom` 是给所有房间开说话人门的总开关。</li><li>`groups[&quot;#channel&quot;].allowFrom` 是给单个房间开门的钥匙。</li><li>`allowFrom: [&quot;*&quot;]` 是‘让所有人都能说话’的万能钥匙。</li></ul>
-            </div>
-          
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>私人名单不管公共房间，别用错钥匙。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-5">
-            <div class="section-heading">
-              <p class="section-kicker">第 5 站</p>
-              <h2>📢 喊名字才答应</h2>
-              <p>在公共房间，默认要喊机器人名字，它才会理你。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>不然机器人可能在房间里装聋作哑。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>即使进了房间门，过了说话人门，还要喊名字。</li><li>这叫‘提及门卫’，默认是开着的。</li><li>如果不想每次喊名字，可以把这个门卫关掉。</li><li>关掉后，任何允许的说话人说话，机器人都可能回答。</li></ul>
-              </div>
-              
-            <div class="source-card">
-              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
-              <ul><li>`requireMention: false` 是关掉‘喊名字才答应’的开关。</li><li>`groupPolicy: &quot;open&quot;` 是‘所有房间都能进’的通行证。</li><li>`groups: {&quot;*&quot;: ...}` 是给所有房间定规矩的万能规则。</li></ul>
-            </div>
-          
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p></p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-6">
-            <div class="section-heading">
-              <p class="section-kicker">第 6 站</p>
-              <h2>🛠️ 给房间配工具箱</h2>
-              <p>可以决定机器人在某个房间里能用哪些工具。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>在公共房间，别让陌生人用危险工具。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>工具箱里有各种工具，比如‘文件系统’、‘浏览器’。</li><li>可以禁止整个房间使用某些危险工具。</li><li>这样，即使所有人都能说话，也用不了那些工具。</li><li>就像在游乐场只允许玩安全的游戏。</li></ul>
-              </div>
-              
-            <div class="source-card">
-              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
-              <ul><li>`tools: { deny: [...] }` 是‘禁止使用这些工具’的告示牌。</li><li>列表里的名字就是被锁起来的工具。</li></ul>
-            </div>
-          
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>公共房间，锁好危险工具箱。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-7">
-            <div class="section-heading">
-              <p class="section-kicker">第 7 站</p>
-              <h2>👑 主人有特权</h2>
-              <p>你可以给自己更多工具，给其他人更少的工具。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>主人需要更多权限来管理机器人。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>用‘按发送者分工具’的规则，可以区别对待。</li><li>给所有人（`&quot;*&quot;`）一套严格的工具。</li><li>给你自己的身份证号一套宽松的工具。</li><li>机器人会先找具体规则，找不到再用通用规则。</li></ul>
-              </div>
-              
-            <div class="source-card">
-              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
-              <ul><li>`toolsBySender` 是‘谁用什么工具’的分配表。</li><li>`&quot;id:eigen&quot;` 是用你的身份证号来匹配。</li><li>`&quot;*&quot;` 是‘其他所有人’的通用规则。</li></ul>
-            </div>
-          
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>主人工具多，客人工具少。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-8">
-            <div class="section-heading">
-              <p class="section-kicker">第 8 站</p>
-              <h2>🔐 向门卫报到</h2>
-              <p>有些IRC游乐场需要向‘NickServ’门卫报到，证明你是你。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>不报到，可能会被当成冒牌货赶出去。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>NickServ就像游乐场的身份验证门卫。</li><li>告诉机器人门卫的名字和密码，它就会自动报到。</li><li>如果名字还没注册，可以一次性注册。</li><li>注册成功后记得关掉注册开关，不然会一直尝试。</li></ul>
-              </div>
-              
-            <div class="source-card">
-              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
-              <ul><li>`nickserv.enabled: true` 是打开‘自动报到’功能。</li><li>`password` 是告诉机器人报到密码。</li><li>`register: true` 是‘如果没注册，就注册一下’的指令。</li></ul>
-            </div>
-          
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>需要身份验证？打开自动报到。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-9">
-            <div class="section-heading">
-              <p class="section-kicker">第 9 站</p>
-              <h2>🌍 用环境变量定规矩</h2>
-              <p>也可以用系统环境变量来设置机器人的门票和密码。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>这样设置更灵活，比如从秘密文件里读取。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>环境变量就像写在机器人小本本上的便签。</li><li>可以设置游乐场地址、外号、房间列表。</li><li>也可以设置向NickServ门卫报到的密码。</li><li>机器人会先看便签，便签没有再看主门票。</li></ul>
-              </div>
-              
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>便签和门票，都能定规矩。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-10">
-            <div class="section-heading">
-              <p class="section-kicker">第 10 站</p>
-              <h2>🔧 机器人不听话？</h2>
-              <p>如果机器人进了房间却不说话，或者连不上，看看这里。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>快速解决常见的小故障。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>不吭声？检查房间白名单和‘喊名字’开关。</li><li>登录失败？检查外号有没有被占用，密码对不对。</li><li>加密通道连不上？检查地址、入口和证书对不对。</li><li>看看日志，它经常告诉你哪里卡住了。</li></ul>
-              </div>
-              
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>看日志，查名单，调开关。</p>
-              </div>
-            </div>
-          </section>
-        
-      <section class="section-shell">
-        <div class="ad-placeholder">
-          <p>这里预留给未来的 Google AdSense 模块。</p>
-          <code>&lt;!-- ADSENSE_SNIPPET --&gt;</code>
-        </div>
-      </section>
-    
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>💠 IRC 这页，其实是在教你“让 OpenClaw 进经典聊天室，但别一进频道就对所有人乱搭话”</h2>
+      <p>IRC 看起来古老，但规矩一点都不少。最容易让人踩坑的，是把 DM 白名单、频道允许、频道里谁能触发、是否需要点名，这几层规则混成一锅。</p>
+      <p>所以这页最重要的任务，其实是帮你把“门禁层次”分清楚。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合 IRC 频道和私聊</span>
+      <span>重点是 host、nick、groupPolicy、allowFrom、requireMention</span>
+      <a href="https://docs.openclaw.ai/channels/irc" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一站</p>
+    <h2>📡 Quick start 那几项，其实就是“先告诉它连哪台 IRC 服务器、叫什么名字、进哪几个房间”</h2>
+    <p>先接通，再谈规矩。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">🌐</span>
+      <h2><code>host</code> / <code>port</code> / <code>tls</code></h2>
+      <p>像先写明去哪个 IRC 小区、走哪扇门、要不要加密通道。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🙂</span>
+      <h2><code>nick</code></h2>
+      <p>像它进聊天室时挂在胸前的名字牌。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">#</span>
+      <h2><code>channels</code></h2>
+      <p>像先列出它要进哪些房间。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🎈</span>
+      <h2>一句话</h2>
+      <p>Quick start 先解决“进群”，不是先解决“说多少话”。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二站</p>
+    <h2>🚪 IRC 这里有两层门，再加一层点名，不分清就最容易误判</h2>
+    <p>这是整页最值得读懂的一段。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">🚪 第一层：频道能不能收</div>
+      <p><code>groupPolicy</code> + <code>groups</code> 决定这个频道整体是不是允许它理会。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">👤 第二层：频道里谁能触发</div>
+      <p><code>groupAllowFrom</code> 或每个频道自己的 <code>allowFrom</code> 决定是谁有资格叫它干活。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">@ 第三层：要不要点名</div>
+      <p>即便频道和发言人都放行了，默认仍然可能要 mention 才开口。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 一句话</div>
+      <p>IRC 里“频道允许”和“发言人允许”不是一回事，再加上“是否点名”又是第三回事。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第三站</p>
+    <h2>🪤 那句“allowFrom 是给 DM 用的，不是给频道用的”特别关键</h2>
+    <p>这是最容易踩到的坑。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">💬 DM 的 <code>allowFrom</code></div>
+      <p>像私聊访客名单，只管私聊那扇门。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"># 频道里的触发人</div>
+      <p>要看的是 <code>groupAllowFrom</code> 或者 <code>groups[\"#channel\"].allowFrom</code>，像频道内发言人白名单。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>\"#tuirc-dev\": { allowFrom: [\"*\"] }</code></div>
+      <p>像在这个房间门口贴一张纸：房间里的任何人都能把它叫起来。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 收尾一句</div>
+      <p>如果日志说“group sender 被丢掉”，先别看 DM 名单，你看错门了。</p>
+    </div>
+  </div>
+</section>
+
 
       <footer class="page-footer">
         <div>

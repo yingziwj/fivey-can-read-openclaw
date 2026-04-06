@@ -3970,299 +3970,104 @@
   
       </div>
 
-      
       <section class="section-shell">
-        <div class="overview-card">
-          <div>
-            <p class="section-kicker">AI 绘本解读版</p>
-            <h2>🤖 让OpenClaw机器人住进你的Mattermost聊天室</h2>
-            <p>机器人要来聊天室做客啦！先给它装个插件，再配把钥匙。它能帮你传话、点按钮，还能记住谁是谁。</p>
-          </div>
-          <div class="overview-meta">
-            <span>原始路径：/channels/mattermost</span>
-            <span>故事卡片：10 张</span>
-            <a href="https://docs.openclaw.ai/channels/mattermost" target="_blank" rel="noreferrer">查看官方原文</a>
-          </div>
-        </div>
-      </section>
-      
-          <section class="section-shell" id="section-1">
-            <div class="section-heading">
-              <p class="section-kicker">第 1 站</p>
-              <h2>📦 先装插件，机器人才能进门</h2>
-              <p>机器人不是空手来的，它需要带个“插件工具箱”才能进Mattermost聊天室。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>没插件，机器人连门都找不到。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>Mattermost机器人是个“插件”，不是自带的。</li><li>就像给手机装个新App，机器人才能用。</li><li>可以从网上商店直接安装。</li><li>如果你有机器人的源代码，也可以从本地安装。</li><li>安装时，OpenClaw会帮你选好路。</li></ul>
-              </div>
-              
-            <div class="source-card">
-              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
-              <ul><li>`openclaw plugins install @openclaw/mattermost` 这行命令就像说：“去网上商店，把Mattermost插件买回来装上！”</li><li>`openclaw plugins install ./extensions/mattermost` 这行命令就像说：“不用去商店了，我家里就有这个插件，直接从这拿吧！”</li></ul>
-            </div>
-          
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>先装插件，再请机器人。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-2">
-            <div class="section-heading">
-              <p class="section-kicker">第 2 站</p>
-              <h2>🔑 给机器人配钥匙和地址</h2>
-              <p>机器人要进聊天室，得有一把“钥匙”（bot token）和知道聊天室“地址”（base URL）。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>没钥匙进不了门，不知道地址找不到路。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>先在Mattermost里创建一个机器人账号，拿到它的“钥匙”。</li><li>记住你的聊天室大门地址，比如 https://chat.example.com。</li><li>把钥匙和地址告诉OpenClaw。</li><li>OpenClaw就能启动“网关”，让机器人开始工作。</li><li>配置里还有个“私聊规则”，可以决定谁可以直接找机器人说话。</li></ul>
-              </div>
-              
-            <div class="source-card">
-              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
-              <ul><li>`&quot;botToken&quot;: &quot;mm-token&quot;` 这就像把钥匙串上的“Mattermost钥匙”挂上去。</li><li>`&quot;baseUrl&quot;: &quot;https://chat.example.com&quot;` 这就像在地图上标出聊天室的位置。</li><li>`&quot;dmPolicy&quot;: &quot;pairing&quot;` 这就像说：“不认识的人想私聊？先对个暗号！”</li></ul>
-            </div>
-          
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>钥匙和地址，缺一不可。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-3">
-            <div class="section-heading">
-              <p class="section-kicker">第 3 站</p>
-              <h2>💬 机器人什么时候开口说话？</h2>
-              <p>在群里，机器人不能随便插嘴。我们得告诉它什么时候可以说话。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>不然机器人会在群里乱回复，吵到大家。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>私聊里，机器人会自动回复你。</li><li>在群里，默认要@它，它才理你。</li><li>你可以改成：群里每句话它都回。</li><li>或者：看到特定“暗号”（比如 &gt; 或 !）开头，它才回。</li><li>就算改了，@它它还是会理你。</li></ul>
-              </div>
-              
-            <div class="source-card">
-              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
-              <ul><li>`&quot;chatmode&quot;: &quot;onchar&quot;` 这就像给机器人一个“暗号列表”。</li><li>`&quot;oncharPrefixes&quot;: [&quot;&gt;&quot;, &quot;!&quot;]` 这就像说：“看到消息以&gt;或!开头，你就回答！”</li></ul>
-            </div>
-          
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>定好规矩，机器人就知道什么时候开口。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-4">
-            <div class="section-heading">
-              <p class="section-kicker">第 4 站</p>
-              <h2>🧵 对话是公开聊，还是开小窗？</h2>
-              <p>机器人在群里回复你，是直接在群里说，还是开个“小窗”（线程）悄悄说？</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>开小窗能让对话更整洁，不打扰别人。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>默认：如果你在“小窗”里问，机器人就在“小窗”里答。</li><li>可以改成：你在群里问，机器人就开个新“小窗”和你聊。</li><li>私聊不受这个影响，没有“小窗”。</li><li>一旦开了“小窗”，后面的对话都会在这个“小窗”里。</li><li>这样，一次聊天就不会散得到处都是。</li></ul>
-              </div>
-              
-            <div class="source-card">
-              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
-              <ul><li>`&quot;replyToMode&quot;: &quot;all&quot;` 这就像告诉机器人：“只要在群里聊天，就都开小窗！”</li></ul>
-            </div>
-          
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>开个小窗，悄悄话更整齐。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-5">
-            <div class="section-heading">
-              <p class="section-kicker">第 5 站</p>
-              <h2>🚪 谁可以私聊或@机器人？</h2>
-              <p>得管好大门，不是谁都能来找机器人私聊或在群里@它。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>防止陌生人随便打扰机器人。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>私聊默认要“对暗号”，你批准了才能聊。</li><li>用命令可以查看和批准“暗号”。</li><li>也可以把私聊大门完全打开。</li><li>在群里，默认只允许“白名单”里的人@机器人。</li><li>白名单最好用用户ID，用名字可能变来变去。</li></ul>
-              </div>
-              
-            <div class="source-card">
-              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
-              <ul><li>`openclaw pairing list mattermost` 这就像查看“谁在门口对暗号？”。</li><li>`openclaw pairing approve mattermost &lt;CODE&gt;` 这就像说：“暗号对了，进来吧！”。</li><li>`&quot;groupPolicy&quot;: &quot;allowlist&quot;` 这就像在群里贴了个“允许@机器人名单”。</li></ul>
-            </div>
-          
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>管好大门，聊天更安心。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-6">
-            <div class="section-heading">
-              <p class="section-kicker">第 6 站</p>
-              <h2>📨 让机器人主动发消息给谁？</h2>
-              <p>你可以命令机器人主动发消息。但要告诉它，是发给“一个人”还是“一个群”。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>聊天室里的ID，有时分不清是人是群。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>发消息时，要说清楚是 `channel:&lt;群ID&gt;` 还是 `user:&lt;人ID&gt;`。</li><li>也可以用 `@用户名`，机器人会去查这是谁。</li><li>如果只给一个光秃秃的ID，机器人会先猜这是不是个人。</li><li>猜对了就私聊，猜错了就当成群。</li><li>为了不猜错，最好每次都加上 `channel:` 或 `user:`。</li></ul>
-              </div>
-              
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>说清是人是群，消息不送错。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-7">
-            <div class="section-heading">
-              <p class="section-kicker">第 7 站</p>
-              <h2>🔄 私聊通道打不开？多试几次！</h2>
-              <p>机器人想找人私聊，得先开条“私聊通道”。万一第一次没打开，它会耐心多试几次。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>网络有时会卡一下，多试几次就能成功。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>创建私聊通道时，可能会遇到网络忙或出错。</li><li>机器人默认会重试几次，每次等一会儿。</li><li>你可以调整重试次数和等待时间。</li><li>这只在创建私聊通道时重试，别的事不重试。</li><li>如果是你自己的错误（比如地址错了），它不会重试。</li></ul>
-              </div>
-              
-            <div class="source-card">
-              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
-              <ul><li>`&quot;maxRetries&quot;: 3` 这就像说：“最多试3次！”。</li><li>`&quot;initialDelayMs&quot;: 1000` 这就像：“第一次失败后，先等1秒钟再试。”</li></ul>
-            </div>
-          
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>给点耐心，通道总会打开。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-8">
-            <div class="section-heading">
-              <p class="section-kicker">第 8 站</p>
-              <h2>👍 让机器人给消息点个赞</h2>
-              <p>机器人不仅能说话，还能给消息加表情（比如点赞）。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>点个赞，互动更有趣。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>用专门的命令，告诉机器人去点哪个表情。</li><li>要告诉它是哪条消息（消息ID）。</li><li>表情可以用名字，比如 `thumbsup`。</li><li>也可以让它把点过的赞取消掉。</li><li>默认这个功能是打开的。</li></ul>
-              </div>
-              
-            <div class="source-card">
-              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
-              <ul><li>`message action=react ... emoji=thumbsup` 这行命令就像说：“机器人，去给那条消息点个赞！”</li><li>`remove=true` 这个设置就像说：“不，把那个赞取消掉！”</li></ul>
-            </div>
-          
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>点个表情，消息更生动。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-9">
-            <div class="section-heading">
-              <p class="section-kicker">第 9 站</p>
-              <h2>🛎️ 发消息，带上可以点的按钮</h2>
-              <p>机器人发的消息，可以带上按钮。别人一点，机器人就知道选了什么。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>按钮让选择变得超简单，一点就行。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>先要打开机器人的“按钮”能力。</li><li>发消息时，告诉它按钮怎么排，上面写什么字。</li><li>按钮上的 `callback_data` 就像它的“身份证号”。</li><li>别人一点按钮，机器人就收到这个“身份证号”。</li><li>按钮可以排成一行行，样子还能选“普通”、“重要”或“危险”。</li></ul>
-              </div>
-              
-            <div class="source-card">
-              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
-              <ul><li>`&quot;capabilities&quot;: [&quot;inlineButtons&quot;]` 这就像打开机器人身上的“按钮开关”。</li><li>`buttons=[[{&quot;text&quot;:&quot;Yes&quot;,&quot;callback_data&quot;:&quot;yes&quot;}]]` 这就像在消息下面贴一个按钮，写着“Yes”，点了就告诉机器人“yes”。</li></ul>
-            </div>
-          
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>消息加按钮，选择超方便。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-10">
-            <div class="section-heading">
-              <p class="section-kicker">第 10 站</p>
-              <h2>🤔 机器人不听话了？看看这里！</h2>
-              <p>机器人偶尔会闹点小脾气。大部分问题，这里都有答案。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>快速找到原因，让机器人马上恢复工作。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>在群里不说话？检查它有没有进群，你有没有@它。</li><li>认证出错？检查钥匙和地址对不对。</li><li>按钮点了没反应？检查按钮ID是不是只用了字母和数字。</li><li>按钮显示白框？检查按钮的 `text` 和 `callback_data` 写全没有。</li><li>多账号出问题？记住，环境变量只对“默认”账号有用。</li></ul>
-              </div>
-              
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>常见问题，对照检查。</p>
-              </div>
-            </div>
-          </section>
-        
-      <section class="section-shell">
-        <div class="ad-placeholder">
-          <p>这里预留给未来的 Google AdSense 模块。</p>
-          <code>&lt;!-- ADSENSE_SNIPPET --&gt;</code>
-        </div>
-      </section>
-    
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>🟦 Mattermost 这页，其实是在教你“先装插件，再拿 bot token 和站点地址，把 OpenClaw 接进公司自托管聊天楼”</h2>
+      <p>Mattermost 这条路的感觉很像 Slack 的企业自建版：先装一块插件砖，再填 bot token 和 base URL，然后决定群里什么时候开口、是不是要启用原生斜杠命令。</p>
+      <p>所以这页的难点不在“能不能接”，而在“接完之后，你要它在群里怎么表现”。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合自托管团队聊天</span>
+      <span>重点是插件、botToken、chatmode、native slash commands</span>
+      <a href="https://docs.openclaw.ai/channels/mattermost" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一站</p>
+    <h2>🧱 第一步还是“先把 Mattermost 这块门砖装上去”</h2>
+    <p>因为它不是核心内置通道。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw plugins install @openclaw/mattermost</code></div>
+      <p>像从插件仓库把 Mattermost 这扇门装到 OpenClaw 墙上。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>botToken + baseUrl</code></div>
+      <p>前者像门卡，后者像公司聊天大楼地址。两样都要齐。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">📌 最小配置能做什么</div>
+      <p>先让 DM、群聊、频道收发正常工作，后面高级玩法再慢慢加。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 一句话</div>
+      <p>Mattermost 先解决“能接”，再解决“怎么说话更像你要的风格”。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二站</p>
+    <h2>🎛️ chatmode 这块最像“在公共频道里，它到底是被叫到才答，还是逢消息都搭话”</h2>
+    <p>把这个模式选清楚，群里体验差很多。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">@</span>
+      <h2><code>oncall</code></h2>
+      <p>像在频道里被 @ 到才起身，默认最稳。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">💬</span>
+      <h2><code>onmessage</code></h2>
+      <p>像每条频道消息都听到就可能响应，话会更多。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">!</span>
+      <h2><code>onchar</code></h2>
+      <p>像大家先敲一个口令前缀，再把它叫起来。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🎈</span>
+      <h2>一句话</h2>
+      <p>chatmode 决定它像一个安静同事，还是一个常驻插话员。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第三站</p>
+    <h2>⚡ Native slash commands 则像“给 Mattermost 装一排原生后台按钮”</h2>
+    <p>这块是高级玩法，不是必需主路。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label"><code>native: true</code></div>
+      <p>像说“允许 OpenClaw 在 Mattermost 里注册自己的一套斜杠命令按钮”。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>callbackPath</code> / <code>callbackUrl</code></div>
+      <p>像给这些按钮指定“按下以后把请求送回哪一扇门”。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">📌 Reachability 要求</div>
+      <p>如果 Mattermost 服务器根本打不到这个回调地址，按钮就像装了但没接线。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 收尾一句</div>
+      <p>native slash commands 的本质，是把 OpenClaw 的遥控器原生嵌进 Mattermost 里。</p>
+    </div>
+  </div>
+</section>
+
 
       <footer class="page-footer">
         <div>

@@ -1,0 +1,97 @@
+<section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>💠 IRC 这页，其实是在教你“让 OpenClaw 进经典聊天室，但别一进频道就对所有人乱搭话”</h2>
+      <p>IRC 看起来古老，但规矩一点都不少。最容易让人踩坑的，是把 DM 白名单、频道允许、频道里谁能触发、是否需要点名，这几层规则混成一锅。</p>
+      <p>所以这页最重要的任务，其实是帮你把“门禁层次”分清楚。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合 IRC 频道和私聊</span>
+      <span>重点是 host、nick、groupPolicy、allowFrom、requireMention</span>
+      <a href="https://docs.openclaw.ai/channels/irc" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一站</p>
+    <h2>📡 Quick start 那几项，其实就是“先告诉它连哪台 IRC 服务器、叫什么名字、进哪几个房间”</h2>
+    <p>先接通，再谈规矩。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">🌐</span>
+      <h2><code>host</code> / <code>port</code> / <code>tls</code></h2>
+      <p>像先写明去哪个 IRC 小区、走哪扇门、要不要加密通道。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🙂</span>
+      <h2><code>nick</code></h2>
+      <p>像它进聊天室时挂在胸前的名字牌。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">#</span>
+      <h2><code>channels</code></h2>
+      <p>像先列出它要进哪些房间。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🎈</span>
+      <h2>一句话</h2>
+      <p>Quick start 先解决“进群”，不是先解决“说多少话”。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二站</p>
+    <h2>🚪 IRC 这里有两层门，再加一层点名，不分清就最容易误判</h2>
+    <p>这是整页最值得读懂的一段。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">🚪 第一层：频道能不能收</div>
+      <p><code>groupPolicy</code> + <code>groups</code> 决定这个频道整体是不是允许它理会。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">👤 第二层：频道里谁能触发</div>
+      <p><code>groupAllowFrom</code> 或每个频道自己的 <code>allowFrom</code> 决定是谁有资格叫它干活。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">@ 第三层：要不要点名</div>
+      <p>即便频道和发言人都放行了，默认仍然可能要 mention 才开口。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 一句话</div>
+      <p>IRC 里“频道允许”和“发言人允许”不是一回事，再加上“是否点名”又是第三回事。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第三站</p>
+    <h2>🪤 那句“allowFrom 是给 DM 用的，不是给频道用的”特别关键</h2>
+    <p>这是最容易踩到的坑。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">💬 DM 的 <code>allowFrom</code></div>
+      <p>像私聊访客名单，只管私聊那扇门。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"># 频道里的触发人</div>
+      <p>要看的是 <code>groupAllowFrom</code> 或者 <code>groups[\"#channel\"].allowFrom</code>，像频道内发言人白名单。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>\"#tuirc-dev\": { allowFrom: [\"*\"] }</code></div>
+      <p>像在这个房间门口贴一张纸：房间里的任何人都能把它叫起来。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 收尾一句</div>
+      <p>如果日志说“group sender 被丢掉”，先别看 DM 名单，你看错门了。</p>
+    </div>
+  </div>
+</section>

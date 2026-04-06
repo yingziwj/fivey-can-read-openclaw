@@ -3970,327 +3970,104 @@
   
       </div>
 
-      
       <section class="section-shell">
-        <div class="overview-card">
-          <div>
-            <p class="section-kicker">AI 绘本解读版</p>
-            <h2>🤖 给你的Google Chat请个AI小助手</h2>
-            <p>让OpenClaw住进你的Google Chat。
-就像给聊天室请了个聪明的门卫。
-它会帮你处理消息，还能和你聊天。</p>
-          </div>
-          <div class="overview-meta">
-            <span>原始路径：/channels/googlechat</span>
-            <span>故事卡片：12 张</span>
-            <a href="https://docs.openclaw.ai/channels/googlechat" target="_blank" rel="noreferrer">查看官方原文</a>
-          </div>
-        </div>
-      </section>
-      
-          <section class="section-shell" id="section-1">
-            <div class="section-heading">
-              <p class="section-kicker">第 1 站</p>
-              <h2>🎯 准备开始</h2>
-              <p>先准备好两样东西：一个Google云项目，和一个服务账号。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>这是让AI助手能进Google Chat的“身份证”和“钥匙”。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>Google Chat现在可以和AI助手聊天了。</li><li>它通过一个叫“webhook”的小窗口来传递消息。</li><li>你需要先告诉Google云：“我要用Chat API”。</li><li>然后创建一个“服务账号”，它就是AI助手的官方身份。</li><li>把这个账号的“钥匙”（一个JSON文件）下载下来，放在你的电脑里。</li></ul>
-              </div>
-              
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>准备好身份证和钥匙，AI助手才能上岗。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-2">
-            <div class="section-heading">
-              <p class="section-kicker">第 2 站</p>
-              <h2>🔧 快速安装（新手版）</h2>
-              <p>跟着这几步，把AI助手请进你的Google Chat。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>一步步来，就像搭积木，很简单。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>去Google云控制台，创建一个Chat应用。</li><li>给应用起个名字，比如“OpenClaw”。</li><li>选一张好看的头像图片。</li><li>告诉应用：“你要能加入群聊和私聊”。</li><li>最重要的：设置一个“接收消息的地址”。</li><li>这个地址就是你的OpenClaw网关地址，后面加上“/googlechat”。</li><li>最后，把应用的状态改成“上线”，这样大家就能找到它了。</li><li>在你的OpenClaw里，告诉它服务账号钥匙放在哪里。</li><li>启动OpenClaw，Google Chat就会开始往这里发消息了。</li></ul>
-              </div>
-              
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>创建应用、设置地址、启动网关，三步搞定。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-3">
-            <div class="section-heading">
-              <p class="section-kicker">第 3 站</p>
-              <h2>➕ 把助手加到Google Chat</h2>
-              <p>现在，去你的Google Chat里，把这位新朋友加进来。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>加上了，才能开始和它说话呀。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>打开Google Chat网页。</li><li>在“私聊”旁边，点那个“+”号。</li><li>在搜索框里，输入你刚才给应用起的名字。</li><li>从结果里找到你的AI助手。</li><li>点“添加”或者“聊天”，就可以开始一对一对话了。</li><li>试着发一句“你好”，看看它会不会回应你！</li><li>注意：这个助手是“私人定制”的，不会出现在公共市场里，必须靠名字搜索才能找到。</li></ul>
-              </div>
-              
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>搜索名字，添加好友，打个招呼。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-4">
-            <div class="section-heading">
-              <p class="section-kicker">第 4 站</p>
-              <h2>🌐 需要一个公开的地址</h2>
-              <p>Google Chat需要一个能从外面访问的地址，来发送消息。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>就像你家需要一个门牌号，邮差才知道把信送到哪里。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>这个地址必须是公开的，并且是安全的（HTTPS）。</li><li>为了安全，我们只把“/googlechat”这个小门打开给外面。</li><li>OpenClaw的控制面板和其他重要部分，要藏在你自己的私人网络里。</li></ul>
-              </div>
-              
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>只开一扇小门，保护家里其他房间。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-5">
-            <div class="section-heading">
-              <p class="section-kicker">第 5 站</p>
-              <h2>🚪 开门方案A：用Tailscale Funnel（推荐）</h2>
-              <p>用一个聪明的工具，只把需要的那扇门打开。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>这样最安全，也最方便。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>先用一个命令看看你的OpenClaw网关住在哪个“房间号”（IP地址）。</li><li>用Tailscale Serve把控制面板（整个家）只给你的私人网络看。</li><li>再用Tailscale Funnel，只把“/googlechat”这扇小门公开给全世界。</li></ul>
-              </div>
-              
-            <div class="source-card">
-              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
-              <ul><li>`ss -tlnp | grep 18789` 这个命令像在问电脑：“18789号端口是谁在住？”</li><li>`tailscale serve --bg --https 8443 http://127.0.0.1:18789` 这个命令像在说：“把我家客厅（8443端口）只展示给我的家人（Tailscale网络）看。”</li><li>`tailscale funnel --bg 8443 /googlechat` 这个命令像在说：“但是，把我家‘/googlechat’这个小房间的门，开一条缝给外面的邮差（Google Chat）。”</li></ul>
-            </div>
-          
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>用Funnel工具，精准地开一扇小窗。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-6">
-            <div class="section-heading">
-              <p class="section-kicker">第 6 站</p>
-              <h2>🚪 开门方案B：用反向代理（比如Caddy）</h2>
-              <p>如果你有个叫“Caddy”的管家，可以让他来帮忙开门。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>管家很可靠，能帮你过滤访客。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>告诉你的管家（Caddy）：只有访问“/googlechat”的客人，才请进家里。</li><li>访问其他地方的客人，就告诉他们“这里不对”或者直接不理。</li></ul>
-              </div>
-              
-            <div class="source-card">
-              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
-              <ul><li>`reverse_proxy /googlechat* localhost:18789` 这行配置像在给管家下指令：“听着，只有来找‘/googlechat’的人，才带他去localhost的18789号房。其他人，别管。”</li></ul>
-            </div>
-          
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>让管家只放行特定的访客。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-7">
-            <div class="section-heading">
-              <p class="section-kicker">第 7 站</p>
-              <h2>🚪 开门方案C：用Cloudflare隧道</h2>
-              <p>挖一条只通往“/googlechat”的秘密隧道。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>隧道很安全，只走指定的路。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>设置一条隧道规则：只有走“/googlechat”这条路的人，才能通到你的OpenClaw。</li><li>其他所有路，都设置成“此路不通”。</li></ul>
-              </div>
-              
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>挖一条专属的单行道。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-8">
-            <div class="section-heading">
-              <p class="section-kicker">第 8 站</p>
-              <h2>🤔 它是怎么工作的？</h2>
-              <p>看看消息是怎么从Google Chat跑到AI助手那里的。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>了解原理，出了问题才知道怎么修。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>Google Chat发消息时，会带着一张“通行证”（Bearer Token）。</li><li>OpenClaw会先检查这张通行证是不是有效的。</li><li>它会核对“通行证”上写的“观众”是不是你设置的那个地址或项目号。</li><li>私聊和群聊的消息，会被分开放在不同的“会话盒子”里。</li><li>第一次私聊的人，会收到一个“配对码”，需要你批准才能继续聊。</li><li>在群里，AI助手默认需要被@提到才会回复。</li></ul>
-              </div>
-              
-            <div class="source-card">
-              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
-              <ul><li>`openclaw pairing approve googlechat &lt;code&gt;` 这个命令像在说：“我批准这个配对码，让这个人和我的助手聊天吧。”</li></ul>
-            </div>
-          
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>检查通行证，分装消息，新朋友要配对。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-9">
-            <div class="section-heading">
-              <p class="section-kicker">第 9 站</p>
-              <h2>📮 要发给谁？</h2>
-              <p>怎么告诉AI助手，消息要发给哪个具体的人或群？</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>地址写对了，信才不会送错。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>发给个人：最好用 `users/&lt;用户ID&gt;` 这个格式，像“用户/123”。</li><li>直接用邮箱地址（比如 name@example.com）不太稳定，除非你开了个特殊开关。</li><li>旧的 `users/&lt;邮箱&gt;` 格式，现在会被当成用户ID，而不是邮箱了。</li><li>发给群聊：用 `spaces/&lt;群聊ID&gt;` 这个格式，像“空间/ABC123”。</li></ul>
-              </div>
-              
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>用“用户/ID”找人，用“空间/ID”找群。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-10">
-            <div class="section-heading">
-              <p class="section-kicker">第 10 站</p>
-              <h2>⚙️ 配置规则（像定家规）</h2>
-              <p>这些设置就像给AI助手定的“家规”，告诉它该怎么做事。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>定好规矩，助手才知道什么能做，什么不能做。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>`enabled: true`：打开Google Chat这个通道。</li><li>`serviceAccountFile`：告诉助手钥匙（服务账号文件）放在哪里。</li><li>`audience` 和 `audienceType`：告诉助手要检查谁的“通行证”。</li><li>`webhookPath`：告诉助手消息会从哪扇门进来（默认是“/googlechat”）。</li><li>`dm.policy: &quot;pairing&quot;`：私聊默认需要“配对”，新朋友要你批准。</li><li>`groupPolicy: &quot;allowlist&quot;`：群聊默认只允许名单里的群。</li><li>在群聊规则里，可以设置“需要被@才回复”、“只允许某些用户说话”、“给助手一个简短的回答提示”。</li><li>`actions: { reactions: true }`：打开这个，助手就能在消息上加表情（点赞）了。</li></ul>
-              </div>
-              
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>用配置告诉助手：钥匙在哪、门在哪、对谁客气、在群里怎么回话。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-11">
-            <div class="section-heading">
-              <p class="section-kicker">第 11 站</p>
-              <h2>❌ 常见问题：405错误（门没开）</h2>
-              <p>如果Google那边说“方法不被允许”，通常是门没开对。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>帮你快速找到问题，把门打开。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>最常见的原因：你的OpenClaw配置里，根本没有打开Google Chat这个“通道”。</li><li>用命令检查一下，看看“channels.googlechat”这个配置在不在。</li><li>另一个原因：Google Chat的“插件”没有启用。</li><li>再用命令看看插件列表里有没有“googlechat”。</li></ul>
-              </div>
-              
-            <div class="source-card">
-              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
-              <ul><li>`openclaw config get channels.googlechat` 这个命令像在问：“配置文件里，Google Chat通道的规则是什么？”</li><li>`openclaw plugins list | grep googlechat` 这个命令像在问：“所有插件里，有没有一个叫googlechat的？”</li></ul>
-            </div>
-          
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>405错误？先检查通道配置和插件开关。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-12">
-            <div class="section-heading">
-              <p class="section-kicker">第 12 站</p>
-              <h2>🔍 其他问题怎么办？</h2>
-              <p>如果还有别的问题，试试这些检查方法。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>自己动手，快速排查。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>用 `openclaw channels status --probe` 检查身份验证和地址配置对不对。</li><li>如果收不到消息，去Google Chat应用设置里，确认“接收消息的地址”和“事件订阅”都设好了。</li><li>如果在群里@了助手它却不回，检查一下“botUser”设置和“requireMention”开关。</li><li>发测试消息时，同时用 `openclaw logs --follow` 看看消息有没有真的送到网关门口。</li></ul>
-              </div>
-              
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>用状态检查、日志跟踪，一步步找到问题所在。</p>
-              </div>
-            </div>
-          </section>
-        
-      <section class="section-shell">
-        <div class="ad-placeholder">
-          <p>这里预留给未来的 Google AdSense 模块。</p>
-          <code>&lt;!-- ADSENSE_SNIPPET --&gt;</code>
-        </div>
-      </section>
-    
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>💬 Google Chat 这页，其实是在教你“给 Google Chat 私有机器人准备一张服务账号证件，再只公开一条专用 webhook 小门”</h2>
+      <p>这条路最容易把人绕晕的地方，不是机器人本身，而是 Google Cloud 那一大串项目、服务账号、受众校验和公开 URL。</p>
+      <p>把它压成人话就是：先在 Google 云后台办好证，再只给 `/googlechat` 这一条小门开公网。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合私有 Google Chat 机器人</span>
+      <span>重点是 Service Account、audience、只公开 /googlechat</span>
+      <a href="https://docs.openclaw.ai/channels/googlechat" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一站</p>
+    <h2>🪪 这条路先办的不是 bot token，而是“服务账号证件”</h2>
+    <p>Google Chat 这里的味道更像企业系统集成。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">☁️</span>
+      <h2>Google Cloud Project</h2>
+      <p>像先租一间 Google 的后台办公室。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🪪</span>
+      <h2>Service Account JSON</h2>
+      <p>像机器人的正式工作证，OpenClaw 后面靠它验明身份。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🧷</span>
+      <h2>Audience 校验</h2>
+      <p>像检查来敲门的请求到底是不是发给你这扇门，而不是给隔壁的。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🚪</span>
+      <h2><code>/googlechat</code></h2>
+      <p>唯一应该对公网打开的小门。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二站</p>
+    <h2>🌐 这页最关键的安全提醒，其实只有一句：别把整栋楼打开，只把 `/googlechat` 这条走廊露出去</h2>
+    <p>官方给了三种办法，核心思想都一样。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">🛤️ Tailscale Funnel</div>
+      <p>像前门大厅还留在私人园区里，只把一条专用投递口伸到公网。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🧱 Reverse Proxy</div>
+      <p>像让前台只给 `/googlechat` 开门，其他路径一律当陌生人处理。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">☁️ Cloudflare Tunnel</div>
+      <p>也是同样思路，只把这一个 webhook 小窗连出去。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 一句话</div>
+      <p>Google Chat 这页的安全灵魂是：“只公开 webhook，不公开整个控制室。”</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第三站</p>
+    <h2>🔐 audienceType 在做什么？像门卫在核对“这封信到底是不是写给你家门牌的”</h2>
+    <p>看懂这点，后面的 token 验证就不玄乎了。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>audienceType: \"app-url\"</code></div>
+      <p>像门卫拿“完整门牌地址”来核对，这封信是不是投给你这扇门。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>audienceType: \"project-number\"</code></div>
+      <p>像改拿“这栋楼的项目编号”来验身份。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">📌 为什么先验再读 body</div>
+      <p>因为如果连门口身份都不对，就不该让陌生人把整包内容先塞进屋里。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 收尾一句</div>
+      <p>Google Chat 这条路最像“企业门禁系统接入”，不是普通 bot token 小玩具。</p>
+    </div>
+  </div>
+</section>
+
 
       <footer class="page-footer">
         <div>

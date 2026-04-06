@@ -1,0 +1,97 @@
+<section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>💬 Google Chat 这页，其实是在教你“给 Google Chat 私有机器人准备一张服务账号证件，再只公开一条专用 webhook 小门”</h2>
+      <p>这条路最容易把人绕晕的地方，不是机器人本身，而是 Google Cloud 那一大串项目、服务账号、受众校验和公开 URL。</p>
+      <p>把它压成人话就是：先在 Google 云后台办好证，再只给 `/googlechat` 这一条小门开公网。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合私有 Google Chat 机器人</span>
+      <span>重点是 Service Account、audience、只公开 /googlechat</span>
+      <a href="https://docs.openclaw.ai/channels/googlechat" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一站</p>
+    <h2>🪪 这条路先办的不是 bot token，而是“服务账号证件”</h2>
+    <p>Google Chat 这里的味道更像企业系统集成。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">☁️</span>
+      <h2>Google Cloud Project</h2>
+      <p>像先租一间 Google 的后台办公室。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🪪</span>
+      <h2>Service Account JSON</h2>
+      <p>像机器人的正式工作证，OpenClaw 后面靠它验明身份。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🧷</span>
+      <h2>Audience 校验</h2>
+      <p>像检查来敲门的请求到底是不是发给你这扇门，而不是给隔壁的。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🚪</span>
+      <h2><code>/googlechat</code></h2>
+      <p>唯一应该对公网打开的小门。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二站</p>
+    <h2>🌐 这页最关键的安全提醒，其实只有一句：别把整栋楼打开，只把 `/googlechat` 这条走廊露出去</h2>
+    <p>官方给了三种办法，核心思想都一样。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">🛤️ Tailscale Funnel</div>
+      <p>像前门大厅还留在私人园区里，只把一条专用投递口伸到公网。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🧱 Reverse Proxy</div>
+      <p>像让前台只给 `/googlechat` 开门，其他路径一律当陌生人处理。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">☁️ Cloudflare Tunnel</div>
+      <p>也是同样思路，只把这一个 webhook 小窗连出去。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 一句话</div>
+      <p>Google Chat 这页的安全灵魂是：“只公开 webhook，不公开整个控制室。”</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第三站</p>
+    <h2>🔐 audienceType 在做什么？像门卫在核对“这封信到底是不是写给你家门牌的”</h2>
+    <p>看懂这点，后面的 token 验证就不玄乎了。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>audienceType: \"app-url\"</code></div>
+      <p>像门卫拿“完整门牌地址”来核对，这封信是不是投给你这扇门。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>audienceType: \"project-number\"</code></div>
+      <p>像改拿“这栋楼的项目编号”来验身份。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">📌 为什么先验再读 body</div>
+      <p>因为如果连门口身份都不对，就不该让陌生人把整包内容先塞进屋里。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 收尾一句</div>
+      <p>Google Chat 这条路最像“企业门禁系统接入”，不是普通 bot token 小玩具。</p>
+    </div>
+  </div>
+</section>
