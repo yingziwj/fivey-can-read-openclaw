@@ -1,0 +1,186 @@
+<section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>📘 <code>CLI Setup Reference</code> 像“向导老师的总答案本”</h2>
+      <p>如果上一页是“怎么脚本化”，这页就是“这位向导老师到底每一栏会问什么、会填什么、会写到哪”。</p>
+      <p>它不是教你一条命令，而是把 <code>openclaw onboard</code> 的整套流程拆开给你看。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合想彻底看懂 onboarding 每一步的人</span>
+      <span>这页最重要的是记住：它是总参考，覆盖本机和远端两条路</span>
+      <a href="https://docs.openclaw.ai/start/wizard-cli-reference" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">总说明</p>
+    <h2>🧭 先分清两条路：本机装房子，还是远端去接房子</h2>
+    <p>官方开头就把 local mode 和 remote mode 拆开了。一个负责真的搭房子，一个负责只去连别人的房子。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">🏡</span>
+      <h2>Local mode</h2>
+      <p>像在自己家里把房子搭起来，钥匙、房间、门牌都要自己准备。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🛰</span>
+      <h2>Remote mode</h2>
+      <p>像你这边只拿遥控器去连别处的总机房，不会替对方改房子。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🔁</span>
+      <h2>重新跑向导</h2>
+      <p>再跑一次不会自动把东西全删掉，除非你明确选择 Reset。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">📌</span>
+      <h2>一句话</h2>
+      <p>本机是造房子，远端是连房子，别把两件事混在一起。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">本机流程</p>
+    <h2>🏠 本机模式就像“先修房，再摆门，再请值班员，再验收”</h2>
+    <p>官方把本机流程拆成几个步骤，每一步都是实际会发生的事。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">先看旧配置在不在</div>
+      <p>像开门前先看看屋里已经有没有你之前留过的东西。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">模型和认证</div>
+      <p>像先挑脑子，再挑钥匙。到底用谁的模型、谁的门卡，都在这一轮定。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">Workspace</div>
+      <p>像给小工人腾一个家，顺手把 bootstrap 文件也种下去。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">Gateway</div>
+      <p>像把总机房的门牌号、门锁、朝向和外露方式都定好。</p>
+    </div>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">Channels</div>
+      <p>像把 Telegram、WhatsApp、Discord、Google Chat 这些门一扇一扇接上。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">Daemon install</div>
+      <p>像请一个后台值班员，开机后自己上岗。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">Health check</div>
+      <p>像装完房子后开灯试一遍，确认没有哪盏灯不亮。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">Skills setup</div>
+      <p>像把小工人常用的工具包也一起摆好。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">命令翻译</p>
+    <h2>🛠 <code>openclaw onboard</code> 的每一步，到底在干什么？</h2>
+    <p>这页最值钱的地方，就是把向导老师每一步问什么都列清楚了。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">🧾</span>
+      <h2><code>--reset</code></h2>
+      <p>像告诉老师：如果旧房子有点乱，我愿意先收拾掉一部分再重来。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🪟</span>
+      <h2><code>--gateway-token-ref-env</code></h2>
+      <p>像说：门卡不要我手写，去环境变量这个抽屉里找。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">📱</span>
+      <h2>WhatsApp / Telegram / Discord</h2>
+      <p>像不同的门都要装，老师会按顺序问你每一扇门的钥匙。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🧰</span>
+      <h2>LaunchAgent / systemd</h2>
+      <p>像不同操作系统里的后台值班员制服不一样，但工作本质一样。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">认证和模型</p>
+    <h2>🔑 这一大段，其实是在回答“钥匙怎么放，脑子怎么选”</h2>
+    <p>官方把可选项写得很细，但核心还是两件事：选哪把门卡，选哪颗脑子。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label">API key / OAuth / setup token</div>
+      <p>像三种不同的入场方式：直接拿钥匙、走正式流程、或者拿订阅票。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">Claude CLI reuse / OpenAI Code OAuth</div>
+      <p>像把你别处已经办好的门卡，搬到 OpenClaw 这边继续用。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">Custom provider</div>
+      <p>像你自己开一间柜台，地址、牌子、兼容风格都能自己定。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">Ref mode</div>
+      <p>像不把钥匙写死在纸上，而是写“去哪个抽屉拿”。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">Remote mode</p>
+    <h2>🛰 远端模式像“我只去连别人的家，不替别人搬家”</h2>
+    <p>官方很强调这一点。远端模式只是在这台机器上改配置，让它连别处的 Gateway，不会去改对方那台机器本身。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">🌍</span>
+      <h2>只连，不改</h2>
+      <p>像你带着遥控器去别人家用，不会顺手给人重新装修。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🔐</span>
+      <h2>远端通常要 token</h2>
+      <p>只要门不是在自家内廊，门卡就很难省。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🚪</span>
+      <h2>Loopback-only 时</h2>
+      <p>官方会提醒你用 SSH 隧道或 tailnet，就像别硬从窗户爬过去。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">📌</span>
+      <h2>一句话</h2>
+      <p>远端模式只负责连线，不负责替远端打地基。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">最后总结</p>
+    <h2>🎈 把这页压成一句最短的话</h2>
+    <p><code>CLI Setup Reference</code> 是向导老师的总答案本：本机怎么装、远端怎么连、钥匙怎么存、模型怎么选、门怎么开，所有步骤都在这儿。</p>
+  </div>
+  <div class="ad-placeholder">
+    <p>如果你想看“OpenClaw 这个名字为什么变成现在这样”，下一页就去 <code>/start/lore</code>。</p>
+  </div>
+</section>

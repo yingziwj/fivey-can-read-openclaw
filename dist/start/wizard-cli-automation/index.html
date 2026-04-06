@@ -3970,481 +3970,171 @@
   
       </div>
 
-      
-    <section class="section-shell">
-      <div class="overview-card">
-        <div>
-          <p class="section-kicker">先听这页的人话版</p>
-          <h2>CLI Automation</h2>
-          <p>这一页像一本关于“CLI 自动小闹钟”的小绘本，它先告诉我们这位机器人朋友会做什么，再一步一步解释什么时候该这样做。 你可以先把它想成：CLI 自动小闹钟。</p>
-          <p>如果把这页当成“给普通人看的版本”，你最应该带走的是：它到底在教你一件什么事、什么时候要这样做、以及哪里最容易踩坑。</p>
-        </div>
-        <div class="overview-meta">
-          <span>原始路径：/start/wizard-cli-automation</span>
-          <span>章节数量：5</span>
-          <a href="https://docs.openclaw.ai/start/wizard-cli-automation" target="_blank" rel="noreferrer">查看原文</a>
-        </div>
-      </div>
-    </section>
-    
-        <section class="section-shell" id="section-1">
-          <div class="section-heading">
-            <p class="section-kicker">第 1 站</p>
-            <h2>Start Here</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“CLI 自动小闹钟 Use --non-interactive to automate openclaw onboard. &lt;Note&gt; --json does not imply non-interactive mode. Use --…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“CLI 自动小闹钟”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p># CLI Automation</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Use --non-interactive to automate openclaw onboard.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Use <code>--non-interactive</code> to automate <code>openclaw onboard</code>.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Note&gt; --json does not imply non-interactive mode. Use --non-interactive (and --workspace) for scripts. &lt;/Note&gt;”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>&lt;Note&gt; <code>--json</code> does not imply non-interactive mode. Use <code>--non-interactive</code> (and <code>--workspace</code>) for scripts. &lt;/Note&gt;</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-2">
-          <div class="section-heading">
-            <p class="section-kicker">第 2 站</p>
-            <h2>Baseline non-interactive example</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Add --json for a machine-readable summary. Use --secret-input-mode ref to store env-backed refs in auth profiles instea…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一句直接对 OpenClaw 说的话，就像对小助手下达任务。</p>
-        <ul class="code-steps">
-          <li>这一句是在直接叫 OpenClaw 做事：“openclaw onboard --non-interactive \”。你可以把它想成对机器人说的完整命令。</li><li>这一行“--mode local \”是当前步骤要交给电脑的一小块提示。</li><li>这一行“--auth-choice apiKey \”是当前步骤要交给电脑的一小块提示。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">openclaw onboard --non-interactive \
-  --mode local \
-  --auth-choice apiKey \
-  --anthropic-api-key &quot;$ANTHROPIC_API_KEY&quot; \
-  --secret-input-mode plaintext \
-  --gateway-port 18789 \
-  --gateway-bind loopback \
-  --install-daemon \
-  --daemon-runtime node \
-  --skip-skills</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Add --json for a machine-readable summary.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Add <code>--json</code> for a machine-readable summary.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Use --secret-input-mode ref to store env-backed refs in auth profiles instead of plaintext values. Interactive selectio…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Use <code>--secret-input-mode ref</code> to store env-backed refs in auth profiles instead of plaintext values. Interactive selection between env refs and configured provider refs (<code>file</code> or <code>exec</code>) is available in the onboarding flow.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“In non-interactive ref mode, provider env vars must be set in the process environment. Passing inline key flags without…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>In non-interactive <code>ref</code> mode, provider env vars must be set in the process environment. Passing inline key flags without the matching env var now fails fast.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Example:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Example:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一句直接对 OpenClaw 说的话，就像对小助手下达任务。</p>
-        <ul class="code-steps">
-          <li>这一句是在直接叫 OpenClaw 做事：“openclaw onboard --non-interactive \”。你可以把它想成对机器人说的完整命令。</li><li>这一行“--mode local \”是当前步骤要交给电脑的一小块提示。</li><li>这一行“--auth-choice openai-api-key \”是当前步骤要交给电脑的一小块提示。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">openclaw onboard --non-interactive \
-  --mode local \
-  --auth-choice openai-api-key \
-  --secret-input-mode ref \
-  --accept-risk</code></pre>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-3">
-          <div class="section-heading">
-            <p class="section-kicker">第 3 站</p>
-            <h2>Provider-specific examples</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Accordion大家一起的房间&gt; &lt;Accordion title=&quot;Gemini example&quot;&gt; &lt;/Accordion&gt; &lt;Accordion title=&quot;Z.AI example&quot;&gt; &lt;/Accordion&gt; &lt;Accor…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Accordion大家一起的房间&gt; &lt;Accordion title=&quot;Gemini example&quot;&gt; &lt;/Accordion&gt;”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>&lt;AccordionGroup&gt; &lt;Accordion title=&quot;Gemini example&quot;&gt; ``<code>bash theme={&quot;theme&quot;:{&quot;light&quot;:&quot;min-light&quot;,&quot;dark&quot;:&quot;min-dark&quot;}} openclaw onboard --non-interactive \ --mode local \ --auth-choice gemini-api-key \ --gemini-api-key &quot;$GEMINI_API_KEY&quot; \ --gateway-port 18789 \ --gateway-bind loopback </code>`` &lt;/Accordion&gt;</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Accordion title=&quot;Z.AI example&quot;&gt; &lt;/Accordion&gt;”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>&lt;Accordion title=&quot;Z.AI example&quot;&gt; ``<code>bash theme={&quot;theme&quot;:{&quot;light&quot;:&quot;min-light&quot;,&quot;dark&quot;:&quot;min-dark&quot;}} openclaw onboard --non-interactive \ --mode local \ --auth-choice zai-api-key \ --zai-api-key &quot;$ZAI_API_KEY&quot; \ --gateway-port 18789 \ --gateway-bind loopback </code>`` &lt;/Accordion&gt;</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Accordion title=&quot;Vercel AI 门口的小门卫 example&quot;&gt; &lt;/Accordion&gt;”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>&lt;Accordion title=&quot;Vercel AI Gateway example&quot;&gt; ``<code>bash theme={&quot;theme&quot;:{&quot;light&quot;:&quot;min-light&quot;,&quot;dark&quot;:&quot;min-dark&quot;}} openclaw onboard --non-interactive \ --mode local \ --auth-choice ai-gateway-api-key \ --ai-gateway-api-key &quot;$AI_GATEWAY_API_KEY&quot; \ --gateway-port 18789 \ --gateway-bind loopback </code>`` &lt;/Accordion&gt;</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Accordion title=&quot;Cloudflare AI 门口的小门卫 example&quot;&gt; &lt;/Accordion&gt;”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>&lt;Accordion title=&quot;Cloudflare AI Gateway example&quot;&gt; ``<code>bash theme={&quot;theme&quot;:{&quot;light&quot;:&quot;min-light&quot;,&quot;dark&quot;:&quot;min-dark&quot;}} openclaw onboard --non-interactive \ --mode local \ --auth-choice cloudflare-ai-gateway-api-key \ --cloudflare-ai-gateway-account-id &quot;your-account-id&quot; \ --cloudflare-ai-gateway-gateway-id &quot;your-gateway-id&quot; \ --cloudflare-ai-gateway-api-key &quot;$CLOUDFLARE_AI_GATEWAY_API_KEY&quot; \ --gateway-port 18789 \ --gateway-bind loopback </code>`` &lt;/Accordion&gt;</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Accordion title=&quot;Moonshot example&quot;&gt; &lt;/Accordion&gt;”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>&lt;Accordion title=&quot;Moonshot example&quot;&gt; ``<code>bash theme={&quot;theme&quot;:{&quot;light&quot;:&quot;min-light&quot;,&quot;dark&quot;:&quot;min-dark&quot;}} openclaw onboard --non-interactive \ --mode local \ --auth-choice moonshot-api-key \ --moonshot-api-key &quot;$MOONSHOT_API_KEY&quot; \ --gateway-port 18789 \ --gateway-bind loopback </code>`` &lt;/Accordion&gt;</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Accordion title=&quot;Mistral example&quot;&gt; &lt;/Accordion&gt;”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>&lt;Accordion title=&quot;Mistral example&quot;&gt; ``<code>bash theme={&quot;theme&quot;:{&quot;light&quot;:&quot;min-light&quot;,&quot;dark&quot;:&quot;min-dark&quot;}} openclaw onboard --non-interactive \ --mode local \ --auth-choice mistral-api-key \ --mistral-api-key &quot;$MISTRAL_API_KEY&quot; \ --gateway-port 18789 \ --gateway-bind loopback </code>`` &lt;/Accordion&gt;</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Accordion title=&quot;Synthetic example&quot;&gt; &lt;/Accordion&gt;”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>&lt;Accordion title=&quot;Synthetic example&quot;&gt; ``<code>bash theme={&quot;theme&quot;:{&quot;light&quot;:&quot;min-light&quot;,&quot;dark&quot;:&quot;min-dark&quot;}} openclaw onboard --non-interactive \ --mode local \ --auth-choice synthetic-api-key \ --synthetic-api-key &quot;$SYNTHETIC_API_KEY&quot; \ --gateway-port 18789 \ --gateway-bind loopback </code>`` &lt;/Accordion&gt;</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Accordion title=&quot;OpenCode example&quot;&gt;”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>&lt;Accordion title=&quot;OpenCode example&quot;&gt; ``<code>bash theme={&quot;theme&quot;:{&quot;light&quot;:&quot;min-light&quot;,&quot;dark&quot;:&quot;min-dark&quot;}} openclaw onboard --non-interactive \ --mode local \ --auth-choice opencode-zen \ --opencode-zen-api-key &quot;$OPENCODE_API_KEY&quot; \ --gateway-port 18789 \ --gateway-bind loopback </code>``</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Swap to --auth-choice opencode-go --opencode-go-对话接口-key &quot;$OPENCODE_对话接口_KEY&quot; for the Go catalog. &lt;/Accordion&gt;”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Swap to <code>--auth-choice opencode-go --opencode-go-api-key &quot;$OPENCODE_API_KEY&quot;</code> for the Go catalog. &lt;/Accordion&gt;</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Accordion title=&quot;Ollama example&quot;&gt; &lt;/Accordion&gt;”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>&lt;Accordion title=&quot;Ollama example&quot;&gt; ``<code>bash theme={&quot;theme&quot;:{&quot;light&quot;:&quot;min-light&quot;,&quot;dark&quot;:&quot;min-dark&quot;}} openclaw onboard --non-interactive \ --mode local \ --auth-choice ollama \ --custom-model-id &quot;qwen3.5:27b&quot; \ --accept-risk \ --gateway-port 18789 \ --gateway-bind loopback </code>`` &lt;/Accordion&gt;</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Accordion title=&quot;Custom provider example&quot;&gt;”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>&lt;Accordion title=&quot;Custom provider example&quot;&gt; ``<code>bash theme={&quot;theme&quot;:{&quot;light&quot;:&quot;min-light&quot;,&quot;dark&quot;:&quot;min-dark&quot;}} openclaw onboard --non-interactive \ --mode local \ --auth-choice custom-api-key \ --custom-base-url &quot;https://llm.example.com/v1&quot; \ --custom-model-id &quot;foo-large&quot; \ --custom-api-key &quot;$CUSTOM_API_KEY&quot; \ --custom-provider-id &quot;my-custom&quot; \ --custom-compatibility anthropic \ --gateway-port 18789 \ --gateway-bind loopback </code>``</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“--custom-对话接口-key is optional. If omitted, onboarding checks CUSTOM_对话接口_KEY.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p><code>--custom-api-key</code> is optional. If omitted, onboarding checks <code>CUSTOM_API_KEY</code>.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Ref-mode variant:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Ref-mode variant:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>``<code>bash theme={&quot;theme&quot;:{&quot;light&quot;:&quot;min-light&quot;,&quot;dark&quot;:&quot;min-dark&quot;}} export CUSTOM_API_KEY=&quot;your-key&quot; openclaw onboard --non-interactive \ --mode local \ --auth-choice custom-api-key \ --custom-base-url &quot;https://llm.example.com/v1&quot; \ --custom-model-id &quot;foo-large&quot; \ --secret-input-mode ref \ --custom-provider-id &quot;my-custom&quot; \ --custom-compatibility anthropic \ --gateway-port 18789 \ --gateway-bind loopback </code>``</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“In this mode, onboarding stores 对话接口Key as { source: &quot;env&quot;, provider: &quot;default&quot;, id: &quot;CUSTOM_对话接口_KEY&quot; }. &lt;/Accordion&gt;…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>In this mode, onboarding stores <code>apiKey</code> as <code>{ source: &quot;env&quot;, provider: &quot;default&quot;, id: &quot;CUSTOM_API_KEY&quot; }</code>. &lt;/Accordion&gt; &lt;/AccordionGroup&gt;</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-4">
-          <div class="section-heading">
-            <p class="section-kicker">第 4 站</p>
-            <h2>Add another 机器人朋友</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Use openclaw 机器人朋友s add &lt;name&gt; to create a separate 机器人朋友 with its own workspace, sessions, and auth profiles. Running…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Use openclaw 机器人朋友s add &lt;name&gt; to create a separate 机器人朋友 with its own workspace, sessions, and auth profiles. Running…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Use <code>openclaw agents add &lt;name&gt;</code> to create a separate agent with its own workspace, sessions, and auth profiles. Running without <code>--workspace</code> launches the wizard.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一句直接对 OpenClaw 说的话，就像对小助手下达任务。</p>
-        <ul class="code-steps">
-          <li>这一句是在直接叫 OpenClaw 做事：“openclaw agents add work \”。你可以把它想成对机器人说的完整命令。</li><li>这一行“--workspace ~/.openclaw/workspace-work \”是当前步骤要交给电脑的一小块提示。</li><li>这一行“--model openai/gpt-5.2 \”是当前步骤要交给电脑的一小块提示。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">openclaw agents add work \
-  --workspace ~/.openclaw/workspace-work \
-  --model openai/gpt-5.2 \
-  --bind whatsapp:biz \
-  --non-interactive \
-  --json</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“What it sets:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>What it sets:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Add another agent”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：机器人朋友s.list[].name、机器人朋友s.list[].workspace、机器人朋友s.list[].机器人朋友Dir。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>agents.list[].name</code></li><li><code>agents.list[].workspace</code></li><li><code>agents.list[].agentDir</code></li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Notes:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Notes:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Add another agent”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Default workspaces follow ~/.openclaw/wor…、Add bindings to route inbound 小纸条消息s (the…、Non-interactive flags: --聪明脑袋模型, --机器人朋友-…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Default workspaces follow <code>~/.openclaw/workspace-&lt;agentId&gt;</code>.</li><li>Add <code>bindings</code> to route inbound messages (the wizard can do this).</li><li>Non-interactive flags: <code>--model</code>, <code>--agent-dir</code>, <code>--bind</code>, <code>--non-interactive</code>.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-5">
-          <div class="section-heading">
-            <p class="section-kicker">第 5 站</p>
-            <h2>Related docs</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Related docs”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Onboarding hub: Onboarding (CLI)、Full reference: CLI Setup Reference、魔法口令 reference: openclaw onboard。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Onboarding hub: <a href="/start/wizard" target="_blank" rel="noreferrer">Onboarding (CLI)</a></li><li>Full reference: <a href="/start/wizard-cli-reference" target="_blank" rel="noreferrer">CLI Setup Reference</a></li><li>Command reference: <a href="/cli/onboard" target="_blank" rel="noreferrer"><code>openclaw onboard</code></a></li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-    <section class="section-shell">
-      <div class="ad-placeholder">
-        <p>这里预留给未来的 Google AdSense 模块。</p>
-        <code>&lt;!-- ADSENSE_SNIPPET --&gt;</code>
-      </div>
-    </section>
-  
+      <section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>🤖 <code>CLI Automation</code> 像“把向导老师变成脚本机器人”</h2>
+      <p>这页讲的是：如果你不想一题一题点菜单，也不想坐在终端前慢慢答题，就可以让 <code>openclaw onboard</code> 自动跑起来。</p>
+      <p>它不是偷懒，它是把“我已经知道要填什么”这件事，交给脚本直接做完。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合要批量部署、写脚本、重复装机的人</span>
+      <span>这页最重要的是记住：<code>--json</code> 不是自动化开关，<code>--non-interactive</code> 才是</span>
+      <a href="https://docs.openclaw.ai/start/wizard-cli-automation" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">先记住</p>
+    <h2>🧯 真正让老师闭嘴的，是 <code>--non-interactive</code></h2>
+    <p>很多人会误会 <code>--json</code> 就是静默模式。不是。<code>--json</code> 只是把结果写成机器能读的形状。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">🧠</span>
+      <h2><code>--non-interactive</code></h2>
+      <p>像告诉老师：“今天别一题一题问我，我已经把答案写好了。”</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🧾</span>
+      <h2><code>--json</code></h2>
+      <p>像把最后结果装进清单盒子，给机器看得懂，但它不会让流程自动安静。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">📁</span>
+      <h2><code>--workspace</code></h2>
+      <p>像告诉脚本：这次要在哪个家里开工，别乱跑到别的房间去。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🔐</span>
+      <h2><code>--secret-input-mode</code></h2>
+      <p>像决定钥匙是写在纸上，还是写成“去某个抽屉拿”的引用。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">基础剧本</p>
+    <h2>🎬 最短的一条自动化路线，像把开荒脚本写成一张小条子</h2>
+    <p>官方先给了一个标准例子。它做的事其实很朴素：选本地模式、填认证、设门牌、装后台值班员、跳过技能步骤。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw onboard --non-interactive ...</code></div>
+      <p>整条命令像一张工地施工单。每个参数都像在告诉老师：“这一格我已经决定好了。”</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>--mode local</code></div>
+      <p>像说这次总机房就在本机，不去远端借房。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>--auth-choice apiKey</code></div>
+      <p>像直接指定今天用哪把钥匙，不再现场讨论。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>--install-daemon</code></div>
+      <p>像顺手请一个后台值班员，开机以后自动上岗。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">钥匙怎么放</p>
+    <h2>🔑 这个页面最有用的地方，是告诉你钥匙能放成两种样子</h2>
+    <p>一个是直接放明文，一个是放成引用。自动化时，这个选择很关键。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">✍️</span>
+      <h2><code>plaintext</code></h2>
+      <p>像把钥匙直接写在单子上。简单，但要自己看住。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🗂</span>
+      <h2><code>ref</code></h2>
+      <p>像不写钥匙本身，只写“去哪个抽屉、拿哪把钥匙”。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🧪</span>
+      <h2>env / file / exec</h2>
+      <p>像钥匙柜可以来自不同地方：环境变量、文件，或者一台取件机。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">⚠️</span>
+      <h2>别漏环境变量</h2>
+      <p>如果你选了引用模式，脚本环境里要真的能拿到那把钥匙，不然它会直接停下。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">不同例子</p>
+    <h2>🧩 官方放了一排例子，像给你看“同一张剧本怎么换演员”</h2>
+    <p>这些例子不是让你背下来，而是让你知道：不同 provider 都能这样被脚本化。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label">Gemini / Z.AI / Vercel / Cloudflare / Moonshot / Mistral / Synthetic</div>
+      <p>像给不同店铺分别发施工单，但每家店的门牌写法略有不同。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">OpenCode / Ollama / Custom provider</div>
+      <p>有的是现成柜台，有的是本地柜台，有的是你自己搭的柜台。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>--custom-base-url</code> / <code>--custom-model-id</code></div>
+      <p>像给自定义供应商写地址和房间号。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>--custom-compatibility</code></div>
+      <p>像告诉老师：“这家店说话风格更像 OpenAI 还是 Anthropic。”</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">多一个助手</p>
+    <h2>🧑‍🤝‍🧑 这页还教你：如果要再开一位小助手，脚本也能一起做</h2>
+    <p>OpenClaw 不止能装一次，脚本也能顺手把新的 agent 一起创建出来。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label"><code>openclaw agents add work ...</code></div>
+      <p>像给新助手起名字、分房间、分工作台，再把它接进系统。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>--workspace ~/.openclaw/workspace-work</code></div>
+      <p>像告诉它新房间摆在哪。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>--bind whatsapp:biz</code></div>
+      <p>像提前把它接到某个消息门上。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">📌 一句话</div>
+      <p>自动化不只是省时间，它也让你能把“多开几位助手”写成脚本。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">最后总结</p>
+    <h2>🎈 把这页压成一句最短的话</h2>
+    <p><code>CLI Automation</code> 就是把向导老师变成脚本机器人：用 <code>--non-interactive</code> 让它别问东问西，用 <code>ref</code> 把钥匙藏好，再按不同 provider 的剧本批量装机。</p>
+  </div>
+  <div class="ad-placeholder">
+    <p>如果你想看“完整人工版的问答老师怎么写”，下一页就去 <code>/start/wizard-cli-reference</code>。</p>
+  </div>
+</section>
+
 
       <footer class="page-footer">
         <div>

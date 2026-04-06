@@ -1,0 +1,168 @@
+<section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>✂️ <code>Session Pruning</code> 像“只剪旧工具纸，不剪整本故事书”</h2>
+      <p>这页讲的是一件很细的事：每次模型要开工前，OpenClaw 会把老旧的工具结果先收一收，别让眼前那一页太鼓。</p>
+      <p>它不是把整段历史删掉，而是只在模型真正要看的那一瞬间，把太重的旧工具纸裁一裁。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合想省 Anthropic 缓存成本、又不想删掉历史的人</span>
+      <span>这页最重要的是：pruning 是临时裁纸，不是把 JSONL 历史改写掉</span>
+      <a href="https://docs.openclaw.ai/concepts/session-pruning" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">先分清</p>
+    <h2>🧾 它剪的是“眼前那一页”，不是“书柜里的整本书”</h2>
+    <p>官方第一句就很关键：pruning 只改请求时送去模型的上下文，不会改磁盘上的 session 历史。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">📒</span>
+      <h2>On-disk history 不动</h2>
+      <p>JSONL 里的记录还在，像书柜里的故事书没有被撕页。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">✂️</span>
+      <h2>In-memory context 会裁</h2>
+      <p>只是模型那一轮看到的东西变轻了，像把书桌上的材料减薄。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">⏳</span>
+      <h2>cache-ttl</h2>
+      <p>这个模式像“缓存过期后再先修剪一下”，避免下一次重新缓存时背太多旧纸。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">📌</span>
+      <h2>一句话</h2>
+      <p>它是模型前面的临时收纳，不是历史文档的永久删改。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">什么时候剪</p>
+    <h2>🕰 只有满足条件，它才会拿起小剪刀</h2>
+    <p>官方把触发条件写得非常明确。翻成人话，就是“这次真的需要了再剪”。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label"><code>mode: "cache-ttl"</code></div>
+      <p>像把剪纸规则挂出来：只有走这个模式才会裁旧纸。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">最后一次 Anthropic 调用太久了</div>
+      <p>像说“上次缓存已经过期了，那这次先裁一点再重新上桌”。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">TTL 再次重置</div>
+      <p>一旦裁过，新的缓存窗口就重新开始计时。像刚裁好，桌面又变整齐了。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">只对 Anthropic 系列生效</div>
+      <p>官方写得很直白：这个裁纸工，只在 Anthropic API 和 OpenRouter Anthropic 模型这条线上工作。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">为什么有用</p>
+    <h2>💰 它最想帮你省的是“第一次重新上桌时”的缓存写入</h2>
+    <p>这部分就是成本故事。它不是神奇变快，而是帮你少背一点旧东西，让缓存重写时轻一点。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">💸</span>
+      <h2>cacheWrite 变小</h2>
+      <p>第一次过 TTL 后的那次请求，重新写缓存时会更轻。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🪶</span>
+      <h2>不是“多付费”</h2>
+      <p>官方特地提醒：pruning 不是额外加钱，而是换一种更聪明的上下文形状。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🔁</span>
+      <h2>为什么 TTL reset 重要</h2>
+      <p>裁过一次以后，下一轮 follow-up 就能继续吃新的缓存，而不是反复背很重的旧包。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">📌</span>
+      <h2>一句话</h2>
+      <p>它省的是缓存写入，不是拿历史开刀。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">能剪什么</p>
+    <h2>🧺 它只剪旧工具结果，而且剪得很小心</h2>
+    <p>这页最实在的地方在于边界很明确：不是所有消息都动，只有 toolResult 才在可裁范围里。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">只动 <code>toolResult</code></div>
+      <p>像只裁工具台上堆太厚的旧纸，不碰用户和助手的原话。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">保留最后几位 assistant</div>
+      <p>最后几段助手话不剪，像把最近几页作业本留在桌上。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">有图片的工具结果跳过</div>
+      <p>带图的纸不能随便裁，官方直接让它跳过。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">soft-trim / hard-clear</div>
+      <p>一个像把长纸条头尾留下，中间折掉；一个像整张旧纸直接换成“已清理”的占位牌。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">怎么配</p>
+    <h2>🧩 配置项像剪纸规则本</h2>
+    <p>官方给了一整套默认值。把它看成“裁纸机面板”就好读很多。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">⏳</span>
+      <h2><code>ttl</code></h2>
+      <p>像规定这张缓存票多久后会失效，默认 5 分钟。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🧮</span>
+      <h2><code>keepLastAssistants</code></h2>
+      <p>像规定最近几段助手内容必须留着，默认留 3 段。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">✂️</span>
+      <h2><code>softTrim</code></h2>
+      <p>像裁纸时留头留尾，别把整张纸都扔了。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🧯</span>
+      <h2><code>hardClear</code></h2>
+      <p>像实在太厚就直接换成“这里已经清掉了”的占位卡。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">最后总结</p>
+    <h2>🎈 把这页压成一句最短的话</h2>
+    <p>Session Pruning 就是在模型开工前，把过旧、过厚的工具结果先裁一裁，让 Anthropic 的缓存更轻一点，但又不碰磁盘上的完整故事书。</p>
+  </div>
+  <div class="ad-placeholder">
+    <p>如果你想看“模型怎么通过一组小工具去看会话、发消息、开分身”，下一页可以去 <code>/concepts/session-tool</code>。</p>
+  </div>
+</section>

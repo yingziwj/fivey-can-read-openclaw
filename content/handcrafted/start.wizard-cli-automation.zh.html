@@ -1,0 +1,164 @@
+<section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>🤖 <code>CLI Automation</code> 像“把向导老师变成脚本机器人”</h2>
+      <p>这页讲的是：如果你不想一题一题点菜单，也不想坐在终端前慢慢答题，就可以让 <code>openclaw onboard</code> 自动跑起来。</p>
+      <p>它不是偷懒，它是把“我已经知道要填什么”这件事，交给脚本直接做完。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合要批量部署、写脚本、重复装机的人</span>
+      <span>这页最重要的是记住：<code>--json</code> 不是自动化开关，<code>--non-interactive</code> 才是</span>
+      <a href="https://docs.openclaw.ai/start/wizard-cli-automation" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">先记住</p>
+    <h2>🧯 真正让老师闭嘴的，是 <code>--non-interactive</code></h2>
+    <p>很多人会误会 <code>--json</code> 就是静默模式。不是。<code>--json</code> 只是把结果写成机器能读的形状。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">🧠</span>
+      <h2><code>--non-interactive</code></h2>
+      <p>像告诉老师：“今天别一题一题问我，我已经把答案写好了。”</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🧾</span>
+      <h2><code>--json</code></h2>
+      <p>像把最后结果装进清单盒子，给机器看得懂，但它不会让流程自动安静。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">📁</span>
+      <h2><code>--workspace</code></h2>
+      <p>像告诉脚本：这次要在哪个家里开工，别乱跑到别的房间去。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🔐</span>
+      <h2><code>--secret-input-mode</code></h2>
+      <p>像决定钥匙是写在纸上，还是写成“去某个抽屉拿”的引用。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">基础剧本</p>
+    <h2>🎬 最短的一条自动化路线，像把开荒脚本写成一张小条子</h2>
+    <p>官方先给了一个标准例子。它做的事其实很朴素：选本地模式、填认证、设门牌、装后台值班员、跳过技能步骤。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw onboard --non-interactive ...</code></div>
+      <p>整条命令像一张工地施工单。每个参数都像在告诉老师：“这一格我已经决定好了。”</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>--mode local</code></div>
+      <p>像说这次总机房就在本机，不去远端借房。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>--auth-choice apiKey</code></div>
+      <p>像直接指定今天用哪把钥匙，不再现场讨论。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>--install-daemon</code></div>
+      <p>像顺手请一个后台值班员，开机以后自动上岗。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">钥匙怎么放</p>
+    <h2>🔑 这个页面最有用的地方，是告诉你钥匙能放成两种样子</h2>
+    <p>一个是直接放明文，一个是放成引用。自动化时，这个选择很关键。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">✍️</span>
+      <h2><code>plaintext</code></h2>
+      <p>像把钥匙直接写在单子上。简单，但要自己看住。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🗂</span>
+      <h2><code>ref</code></h2>
+      <p>像不写钥匙本身，只写“去哪个抽屉、拿哪把钥匙”。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🧪</span>
+      <h2>env / file / exec</h2>
+      <p>像钥匙柜可以来自不同地方：环境变量、文件，或者一台取件机。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">⚠️</span>
+      <h2>别漏环境变量</h2>
+      <p>如果你选了引用模式，脚本环境里要真的能拿到那把钥匙，不然它会直接停下。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">不同例子</p>
+    <h2>🧩 官方放了一排例子，像给你看“同一张剧本怎么换演员”</h2>
+    <p>这些例子不是让你背下来，而是让你知道：不同 provider 都能这样被脚本化。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label">Gemini / Z.AI / Vercel / Cloudflare / Moonshot / Mistral / Synthetic</div>
+      <p>像给不同店铺分别发施工单，但每家店的门牌写法略有不同。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">OpenCode / Ollama / Custom provider</div>
+      <p>有的是现成柜台，有的是本地柜台，有的是你自己搭的柜台。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>--custom-base-url</code> / <code>--custom-model-id</code></div>
+      <p>像给自定义供应商写地址和房间号。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>--custom-compatibility</code></div>
+      <p>像告诉老师：“这家店说话风格更像 OpenAI 还是 Anthropic。”</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">多一个助手</p>
+    <h2>🧑‍🤝‍🧑 这页还教你：如果要再开一位小助手，脚本也能一起做</h2>
+    <p>OpenClaw 不止能装一次，脚本也能顺手把新的 agent 一起创建出来。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label"><code>openclaw agents add work ...</code></div>
+      <p>像给新助手起名字、分房间、分工作台，再把它接进系统。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>--workspace ~/.openclaw/workspace-work</code></div>
+      <p>像告诉它新房间摆在哪。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>--bind whatsapp:biz</code></div>
+      <p>像提前把它接到某个消息门上。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">📌 一句话</div>
+      <p>自动化不只是省时间，它也让你能把“多开几位助手”写成脚本。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">最后总结</p>
+    <h2>🎈 把这页压成一句最短的话</h2>
+    <p><code>CLI Automation</code> 就是把向导老师变成脚本机器人：用 <code>--non-interactive</code> 让它别问东问西，用 <code>ref</code> 把钥匙藏好，再按不同 provider 的剧本批量装机。</p>
+  </div>
+  <div class="ad-placeholder">
+    <p>如果你想看“完整人工版的问答老师怎么写”，下一页就去 <code>/start/wizard-cli-reference</code>。</p>
+  </div>
+</section>

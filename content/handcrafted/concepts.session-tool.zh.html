@@ -1,0 +1,194 @@
+<section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>📮 <code>Session Tools</code> 像“专门管会话的小邮局”</h2>
+      <p>这组工具的目标很明确：少而稳，专门用来列会话、看历史、往别的会话里送消息，顺便还能开一个分身会话。</p>
+      <p>它不是一个很大很杂的工具柜，而是一套小而硬的邮政流水线。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合要跨 session 查历史、送消息、起子会话的人</span>
+      <span>这页最重要的是记住：会话 key 有固定格式，main / group / cron / hook / node 各有各的门牌</span>
+      <a href="https://docs.openclaw.ai/concepts/session-tool" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一眼</p>
+    <h2>🧩 这套工具很小，但每个都很硬</h2>
+    <p>官方开头就把目标说得很直接：小、难误用。不是为了炫技，是为了少出错。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">📋</span>
+      <h2><code>sessions_list</code></h2>
+      <p>像翻会话总表，看看有哪些房间还活着、谁最近有动静。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">📚</span>
+      <h2><code>sessions_history</code></h2>
+      <p>像抽出一本会话历史册，翻到其中一页慢慢看。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">✉️</span>
+      <h2><code>sessions_send</code></h2>
+      <p>像往另一个会话房间送一张纸条，让它继续干活或者直接回复。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🪄</span>
+      <h2><code>sessions_spawn</code></h2>
+      <p>像临时再开一个分身小工人，专门去做一个独立任务。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">门牌规则</p>
+    <h2>🚪 会话 key 的命名，其实像不同房间的门牌系统</h2>
+    <p>这一页很容易被 key 名字吓到。别怕，把它们当门牌号就好。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label"><code>"main"</code></div>
+      <p>主会话永远叫这个名字。像家里的总房间，默认就认它。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>agent:&lt;agentId&gt;:... </code></div>
+      <p>群聊和通道会话像一串更长的门牌，能把 agent、channel、group 一起说清楚。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>cron:&lt;job.id&gt;</code> / <code>hook:&lt;uuid&gt;</code></div>
+      <p>定时任务和 hook 也都有自己的小门牌。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">reserved 值</div>
+      <p><code>global</code> 和 <code>unknown</code> 这两个名字不拿来当真正房间号。OpenClaw 会把 <code>global</code> 统一看成 <code>main</code>。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">每个工具干嘛</p>
+    <h2>📦 四个工具，像四个小岗位</h2>
+    <p>它们的职责很明确，彼此不乱抢活。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">1</span>
+      <h2><code>sessions_list</code></h2>
+      <p>像前台翻名单。可以看最近更新、类型、通道、模型、是否有消息，甚至带一点最近的消息摘要。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">2</span>
+      <h2><code>sessions_history</code></h2>
+      <p>像把某个房间的聊天本整本拿出来看。需要的话还能把工具消息也一起带上。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">3</span>
+      <h2><code>sessions_send</code></h2>
+      <p>像给别的会话房间送纸条。可以等结果，也可以只送不等。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">4</span>
+      <h2><code>sessions_spawn</code></h2>
+      <p>像临时叫一个小分身去干活，做完后还会来给你报到。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">命令翻译</p>
+    <h2>🧵 <code>sessions_list</code> 和 <code>sessions_history</code>，像翻目录和翻日记本</h2>
+    <p>这两个最像“先找房间，再翻房间里的记录”。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>sessions_list</code></div>
+      <p>像把总目录翻开，看哪些会话最近还热着，哪些是 main、group、cron、hook、node。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>messageLimit</code></div>
+      <p>像说“要不要顺手带上最近几条消息”。默认不带，避免目录页太胖。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>sessions_history</code></div>
+      <p>像把某个房间的日记抽屉打开，按时间往回看。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>includeTools</code></div>
+      <p>像决定要不要把工具操作那几页也一起翻出来。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">送纸条</p>
+    <h2>✉️ <code>sessions_send</code> 像“往别的房间递一张工作纸”</h2>
+    <p>这页的精华之一，是它不只会送，还会决定是送完就走，还是等着看回信。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">🕊</span>
+      <h2><code>timeoutSeconds = 0</code></h2>
+      <p>像把纸条塞进去就走，不等回话。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">⏳</span>
+      <h2><code>timeoutSeconds &gt; 0</code></h2>
+      <p>像坐在门口等一等，看看这间房多久能回你。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🔁</span>
+      <h2>Reply-back loop</h2>
+      <p>像两个房间互相递纸条，直到有人写 <code>REPLY_SKIP</code> 说“先停吧”。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">📣</span>
+      <h2>Announce step</h2>
+      <p>最后还会补一个公告回执，告诉 target 房间刚才发生了什么。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">开分身</p>
+    <h2>🪄 <code>sessions_spawn</code> 像“请一个小分身去做独立任务”</h2>
+    <p>这条命令很像小助手分工法。它不是继续往同一份聊天里塞，而是专门开一个新活。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label"><code>task</code></div>
+      <p>像直接告诉小分身“这次你去干这件事”。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>runtime: "subagent"</code> / <code>"acp"</code></div>
+      <p>像决定这个分身到底是 OpenClaw 自己家的，还是 ACP harness 那条路的。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>thread=true</code></div>
+      <p>像把这个分身绑到某个线程/主题上，让它沿着那条线说话。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>ANNOUNCE_SKIP</code></div>
+      <p>分身干完活后，也可以安安静静地不发公告。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">最后总结</p>
+    <h2>🎈 把这页压成一句最短的话</h2>
+    <p>Session Tools 就是一套小邮局：先翻名单，再查历史，往别的会话送纸条，必要时再开一个分身去单独干活。</p>
+  </div>
+  <div class="ad-placeholder">
+    <p>如果你还想继续看 OpenClaw 的其它“房间分工”故事，下一页可以接着看 <code>/concepts/queue</code> 或 <code>/concepts/compaction</code>。</p>
+  </div>
+</section>

@@ -1,0 +1,212 @@
+<section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>🏡 <code>Agent Workspace</code> 像“小工人的家和书桌”</h2>
+      <p>OpenClaw 不是把东西乱塞在天上。它给小工人一个真正住的地方，让它平时读文件、记东西、找线索，都先从这里出发。</p>
+      <p>这页讲的，就是这个家该怎么摆、哪些东西属于家里、哪些东西根本不该塞进来。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合想搞懂工作区到底放什么、不放什么的人</span>
+      <span>这页最重要的是记住：工作区是家，不是保险箱；但它也要尽量私密</span>
+      <a href="https://docs.openclaw.ai/concepts/agent-workspace" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一眼</p>
+    <h2>🪑 它是默认桌面，不是硬邦邦的沙箱</h2>
+    <p>官方先把边界说得很清楚：工作区是默认 cwd，也就是默认工作桌面。但它不是硬沙盒，绝对路径还是能摸到别处去，除非你另外开 sandbox。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">🏠</span>
+      <h2>默认工作目录</h2>
+      <p>像小工人平时就坐在这张桌子前干活。工具里的相对路径都先朝这里算。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🧷</span>
+      <h2>不是硬沙盒</h2>
+      <p>这张桌子不是铁笼子。绝对路径还是可能伸到外面去，所以真正隔离还得靠 sandbox。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🪟</span>
+      <h2>开启 sandbox 时</h2>
+      <p>如果开了隔离桌，某些会话会被换到 <code>~/.openclaw/sandboxes</code> 里的另一张桌子上。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">📌</span>
+      <h2>一句话</h2>
+      <p>工作区是家里的主桌，sandbox 是临时工棚。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">家在哪</p>
+    <h2>📍 默认家门牌其实很固定</h2>
+    <p>官方给了两个最常见的地址。你只要记住一个默认地址，再知道 profile 会让地址长出后缀，就够用了。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>~/.openclaw/workspace</code></div>
+      <p>默认就是这间房。大多数人第一次开工，都会从这里开始住。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>~/.openclaw/workspace-&lt;profile&gt;</code></div>
+      <p>如果你用了别的 profile，房号后面会多一个小尾巴，像 <code>-main</code>、<code>-rescue</code> 这种。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>agent.workspace</code></div>
+      <p>这是在 <code>openclaw.json</code> 里改家地址的地方。不是改楼层图，而是直接改住址。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw setup</code> / <code>configure</code> / <code>onboard</code></div>
+      <p>这几个命令都可能顺手帮你把家和基础文件搭起来。像搬家师傅顺手帮你把桌椅摆正。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">家里有哪些抽屉</p>
+    <h2>🗂 这些文件就像小工人家的固定抽屉</h2>
+    <p>官方把工作区里会出现的标准文件列得很清楚。读它们时，不要把它们当成一堆冷名字，要把它们当成一组抽屉标签。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">📘</span>
+      <h2><code>AGENTS.md</code></h2>
+      <p>工作规矩本。告诉小工人怎么做事、优先看什么、哪些习惯别忘了。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">💛</span>
+      <h2><code>SOUL.md</code></h2>
+      <p>性格和边界卡。像告诉它“你说话要像谁，别越过哪里”。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🪪</span>
+      <h2><code>USER.md</code> / <code>IDENTITY.md</code></h2>
+      <p>一个是用户画像，一个是它自己的身份牌。这样它不会连主人和自己都认错。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🧰</span>
+      <h2><code>TOOLS.md</code></h2>
+      <p>工具小贴士。不是发工具许可证，而是写“我家里的工具最好怎么用”。</p>
+    </article>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>BOOTSTRAP.md</code></div>
+      <p>第一次入住时的那张仪式卡。做完之后就该删掉，不该一直躺在家里占位置。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>HEARTBEAT.md</code></div>
+      <p>心跳巡逻的小清单。内容要短，不然每次巡逻都背一大本书，太累。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>BOOT.md</code></div>
+      <p>开机小抄。Gateway 重启时会看它，像桌上放了一张只在开机时用的待办卡。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>memory/YYYY-MM-DD.md</code></div>
+      <p>每天一页的日记本。平时不自动塞满脑子，需要时再翻。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">哪些东西不住这里</p>
+    <h2>🚫 家里这几样别乱放进仓库</h2>
+    <p>官方这里很像在提醒你：工作区是记忆和规则的家，不是把所有私密东西一起公开晾着的地方。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label"><code>~/.openclaw/openclaw.json</code></div>
+      <p>配置本住在 <code>~/.openclaw/</code>，不是工作区仓库里。像私人抽屉别倒进客厅。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>~/.openclaw/credentials/</code></div>
+      <p>OAuth token、API key 这些更要单独放好，别塞进仓库当成纪念品。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>~/.openclaw/agents/.../sessions/</code></div>
+      <p>会话 transcript 是另一本账，不是工作区本体。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">一句最重要的</div>
+      <p>工作区可以放“怎么做事”的记忆，但不要把“怎么登录”的秘密也一起扔进去。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">备份</p>
+    <h2>💾 官方建议把工作区当成“私密记忆”，最好有一个私人的备份仓</h2>
+    <p>这部分其实很朴素：既然这是小工人的脑子和工作本，那就该好好备份，而且别做成公开仓库。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">🔒</span>
+      <h2>私有 git 仓库</h2>
+      <p>像给记忆本再加一层私密保险柜。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🌱</span>
+      <h2>初始化后再推送</h2>
+      <p>先把工作区放进一个私有 repo，再慢慢更新，不要一开始就把秘密摊出来。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🧼</span>
+      <h2>不要提交秘密</h2>
+      <p>API key、密码、OAuth token、原始聊天 dump，都别往仓库里塞。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">📌</span>
+      <h2>一句话</h2>
+      <p>把工作区当私密记忆备份，不要当公开展示柜。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">换机器</p>
+    <h2>🚚 换电脑时，不是搬一个文件夹就完事，而是把家和记忆一起安顿好</h2>
+    <p>官方这里提醒得很细：工作区是可以迁移的，但你得把地址、会话和配置分清楚。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label">1. 克隆工作区</div>
+      <p>像把你的私密小屋先搬到新地址。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">2. 改 <code>agents.defaults.workspace</code></div>
+      <p>像把新地址告诉小工人自己以后该住哪。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">3. 用 <code>openclaw setup --workspace &lt;path&gt;</code></div>
+      <p>像让搬家师傅把缺的抽屉和便签补齐。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">4. 旧会话单独搬</div>
+      <p>会话 transcript 不是工作区本体，要单独拷，不要当成地毯一起卷走。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">最后总结</p>
+    <h2>🎈 把这页压成一句最短的话</h2>
+    <p>Agent Workspace 就是小工人的家和书桌：地址可以改，抽屉有固定标签，秘密别乱放，换机器时记得把家和记忆一起安顿好。</p>
+  </div>
+  <div class="ad-placeholder">
+    <p>如果你想继续看“这间家背后的整栋楼是谁在管”，下一页就去 <code>/concepts/architecture</code>。</p>
+  </div>
+</section>

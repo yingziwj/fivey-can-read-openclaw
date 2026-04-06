@@ -1,0 +1,194 @@
+<section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>🏢 <code>Gateway Architecture</code> 像“OpenClaw 整栋楼的总机房图”</h2>
+      <p>这页不是在讲一个孤零零的程序，而是在讲一整栋楼怎么搭起来、谁住哪、谁从哪条门口小路进来。</p>
+      <p>如果你只记一句话，就记：Gateway 是总机房，别的客户端和节点都要沿着它安排好的路走。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合想从系统全景上理解 OpenClaw 的人</span>
+      <span>这页最重要的是：Gateway 不是配角，它是整栋楼的中枢</span>
+      <a href="https://docs.openclaw.ai/concepts/architecture" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一眼</p>
+    <h2>🌉 一台长住的 Gateway，像楼里的总控机房</h2>
+    <p>官方开头用的词很多，但真正的意思很简单：这是一台长期值班的总机房，消息通道都从这里过。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">🏠</span>
+      <h2>单个 Gateway</h2>
+      <p>一台主机上通常只放一个总机房。这样 WhatsApp Web 会话和各类通道不会互相打架。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🧵</span>
+      <h2>长寿进程</h2>
+      <p>它不是临时跑一下的脚本，而是一直站岗的门卫室。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🪟</span>
+      <h2>控制平面</h2>
+      <p>CLI、mac app、web UI、automations，都是沿着 WebSocket 这条桥跟它说话。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">📌</span>
+      <h2>一句话</h2>
+      <p>Gateway 是楼心脏，不是边角插件。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">谁连进来</p>
+    <h2>📡 这栋楼里，进门的角色主要分两种</h2>
+    <p>一类是管事的，一类是带能力上门干活的。它们都要先过 Gateway 这一关。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">Control-plane clients</div>
+      <p>像 macOS app、CLI、网页控制台。它们是来下命令、看状态、管流程的。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">Nodes</div>
+      <p>像 iOS、Android、headless 设备。它们不是来管流程的，而是来带着摄像头、屏幕、定位这些能力上场的。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>role: node</code></div>
+      <p>节点一进门就报工种，像胸牌上直接写“我是设备节点”。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">同一扇门，不同工种</div>
+      <p>管事的和干活的都走同一个总机房，但报到方式不一样，权限也不一样。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">Gateway 里面有什么</p>
+    <h2>🧰 Gateway 像一间满墙开关的机房</h2>
+    <p>它不只是一条桥，而是把连接、验证、事件、健康、心跳、Cron 都放进同一个调度中心。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">🔌</span>
+      <h2>Provider connections</h2>
+      <p>像给 WhatsApp、Telegram、Slack、Discord 这些通道各拉一根线。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">📣</span>
+      <h2>WS API</h2>
+      <p>像前台收发请求、广播事件、回状态的统一喇叭口。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🧾</span>
+      <h2>JSON Schema</h2>
+      <p>像每个纸条都有固定格式，乱写的就不收。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">💓</span>
+      <h2>health / heartbeat / cron</h2>
+      <p>像门卫的体检、定时巡逻和定时广播都在同一间机房里协调。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">连接流程</p>
+    <h2>🤝 一次连接，其实像一段很完整的握手</h2>
+    <p>官方把它画成 sequenceDiagram。翻成人话，就是门口报到、门卫确认、广播状态、继续办事。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label">Client 先发 <code>connect</code></div>
+      <p>像把开门申请单递进去。没有这一步，后面的事都别想开始。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">Gateway 回 <code>hello-ok</code></div>
+      <p>像门卫盖章：“我认得你了，协议对上了，继续吧。”</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">随后推送 <code>presence</code> / <code>tick</code></div>
+      <p>像大厅里开始滚动显示谁在线、什么时候轮到下一次动作。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>agent</code> 请求</div>
+      <p>像你开始正式递交一张工作单，Gateway 再把它送去后场。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">关键规则</p>
+    <h2>🔐 这栋楼有几条死规矩，官方写得很明白</h2>
+    <p>这些不是装饰，是系统真正在执行的规则。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">1</span>
+      <h2>Handshake 必须先来</h2>
+      <p>第一帧不是 <code>connect</code>，门直接关。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">2</span>
+      <h2>一栋楼一台主机房</h2>
+      <p>尤其 WhatsApp Web，不允许多个 Gateway 随便共用同一条大门。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">3</span>
+      <h2>事件不回放</h2>
+      <p>广播过去就过去了，掉线了就要重新看状态，不会自动给你补旧广播。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">4</span>
+      <h2>远程要带门卡</h2>
+      <p>走 tailnet、SSH、TLS 时，门卡和认证都不能省。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">远程门路</p>
+    <h2>🚪 如果不是本地门口，就走更远但更稳的路</h2>
+    <p>官方把远程访问讲得很实在：优先用 Tailscale 或 VPN，不行再 SSH tunnel，TLS 也可以开。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">Tailscale / VPN</div>
+      <p>像把楼里总机房和外面的路接成一条私密内线。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">SSH tunnel</div>
+      <p>像临时打通一条专门的暗道。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>openclaw gateway --bind tailnet --token ...</code></div>
+      <p>像把门开到外面时，顺手把门卡也挂上去，不让陌生人白进。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">📌 一句话</div>
+      <p>越远的门路，越不能没有认证。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">最后总结</p>
+    <h2>🎈 把这页压成一句最短的话</h2>
+    <p>Gateway architecture 讲的就是这栋楼怎么运转：一个总机房管住所有通道，客户端和节点都沿着它规定的门和桥进来，握手、验证、广播、调度都集中在这里。</p>
+  </div>
+  <div class="ad-placeholder">
+    <p>如果你想看“这栋楼里不同消息到底怎么一路跑完”，下一页就去 <code>/concepts/messages</code>。</p>
+  </div>
+</section>

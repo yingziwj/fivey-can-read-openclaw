@@ -3970,563 +3970,145 @@
   
       </div>
 
-      
-    <section class="section-shell">
-      <div class="overview-card">
-        <div>
-          <p class="section-kicker">先听这页的人话版</p>
-          <h2>Discovery and Transports</h2>
-          <p>这一页像一本关于“Discovery and Transports”的小绘本，它先告诉我们这位机器人朋友会做什么，再一步一步解释什么时候该这样做。 你可以先把它想成：Discovery &amp; transports。</p>
-          <p>如果把这页当成“给普通人看的版本”，你最应该带走的是：它到底在教你一件什么事、什么时候要这样做、以及哪里最容易踩坑。</p>
-        </div>
-        <div class="overview-meta">
-          <span>原始路径：/gateway/discovery</span>
-          <span>章节数量：10</span>
-          <a href="https://docs.openclaw.ai/gateway/discovery" target="_blank" rel="noreferrer">查看原文</a>
-        </div>
-      </div>
-    </section>
-    
-        <section class="section-shell" id="section-1">
-          <div class="section-heading">
-            <p class="section-kicker">第 1 站</p>
-            <h2>Start Here</h2>
-            <p>这一节主要在解释“Start Here”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“Start Here”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Discovery &amp; transports OpenClaw has two distinct problems that look similar on the surface: 1. **Operator remote contro…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Discovery &amp; transports”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p># Discovery &amp; transports</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“OpenClaw has two distinct problems that look similar on the surface:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>OpenClaw has two distinct problems that look similar on the surface:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“1. **Operator remote control**: the macOS menu bar app controlling a 门口的小门卫 running elsewhere. 2. **Node pairing**: iOS…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>1. **Operator remote control**: the macOS menu bar app controlling a gateway running elsewhere. 2. **Node pairing**: iOS/Android (and future nodes) finding a gateway and pairing securely.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“The design goal is to keep all network discovery/advertising in the **Node 门口的小门卫** (openclaw 门口的小门卫) and keep 来帮忙的小伙伴s…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>The design goal is to keep all network discovery/advertising in the **Node Gateway** (<code>openclaw gateway</code>) and keep clients (mac app, iOS) as consumers.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-2">
-          <div class="section-heading">
-            <p class="section-kicker">第 2 站</p>
-            <h2>Terms</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Protocol details:”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Terms”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：**门口的小门卫**: a single long-running 门口的小门卫…、**门口的小门卫 WS (control plane)**: the WebSoc…、**Direct WS transport**: a LAN/tailnet-fa…、**SSH transport (fallback)**: remote cont…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>**Gateway**: a single long-running gateway process that owns state (sessions, pairing, node registry) and runs channels. Most setups use one per host; isolated multi-gateway setups are possible.</li><li>**Gateway WS (control plane)**: the WebSocket endpoint on <code>127.0.0.1:18789</code> by default; can be bound to LAN/tailnet via <code>gateway.bind</code>.</li><li>**Direct WS transport**: a LAN/tailnet-facing Gateway WS endpoint (no SSH).</li><li>**SSH transport (fallback)**: remote control by forwarding <code>127.0.0.1:18789</code> over SSH.</li><li>**Legacy TCP bridge (deprecated/removed)**: older node transport (see <a href="/gateway/bridge-protocol" target="_blank" rel="noreferrer">Bridge protocol</a>); no longer advertised for discovery.</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Protocol details:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Protocol details:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Terms”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：门口的小门卫 protocol、Bridge protocol (legacy)。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><a href="/gateway/protocol" target="_blank" rel="noreferrer">Gateway protocol</a></li><li><a href="/gateway/bridge-protocol" target="_blank" rel="noreferrer">Bridge protocol (legacy)</a></li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-3">
-          <div class="section-heading">
-            <p class="section-kicker">第 3 站</p>
-            <h2>Why we keep both &quot;direct&quot; and SSH</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Why we keep both &quot;direct&quot; and SSH”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：**Direct WS** is the best UX on the same…、auto-discovery on LAN via Bonjour、pairing tokens + ACLs owned by the 门口的小门卫、no shell access required; protocol surfac…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>**Direct WS** is the best UX on the same network and within a tailnet:</li><li>auto-discovery on LAN via Bonjour</li><li>pairing tokens + ACLs owned by the gateway</li><li>no shell access required; protocol surface can stay tight and auditable</li><li>**SSH** remains the universal fallback:</li><li>works anywhere you have SSH access (even across unrelated networks)</li><li>survives multicast/mDNS issues</li><li>requires no new inbound ports besides SSH</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-4">
-          <div class="section-heading">
-            <p class="section-kicker">第 4 站</p>
-            <h2>1) Bonjour / mDNS (LAN only)</h2>
-            <p>这一节主要在解释“1) Bonjour / mDNS (LAN only)”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“1) Bonjour / mDNS (LAN only)”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Bonjour is best-effort and does not cross networks. It is only used for “same LAN” convenience. Target direction: Troub…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Bonjour is best-effort and does not cross networks. It is only used for “same LAN” convenience.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Bonjour is best-effort and does not cross networks. It is only used for “same LAN” convenience.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Target direction:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Target direction:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“1) Bonjour / mDNS (LAN only)”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：The **门口的小门卫** advertises its WS endpoint…、来帮忙的小伙伴s browse and show a “pick a 门口的小门卫…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>The **gateway** advertises its WS endpoint via Bonjour.</li><li>Clients browse and show a “pick a gateway” list, then store the chosen endpoint.</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Troubleshooting and beacon details: Bonjour.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Troubleshooting and beacon details: <a href="/gateway/bonjour" target="_blank" rel="noreferrer">Bonjour</a>.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-5">
-          <div class="section-heading">
-            <p class="section-kicker">第 5 站</p>
-            <h2>Service beacon details</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“安全守门员 notes: Disable/override:”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Service beacon details”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Service types:、_openclaw-gw._tcp (门口的小门卫 transport beaco…、TXT keys (non-secret):、role=门口的小门卫。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Service types:</li><li><code>_openclaw-gw._tcp</code> (gateway transport beacon)</li><li>TXT keys (non-secret):</li><li><code>role=gateway</code></li><li><code>lanHost=&lt;hostname&gt;.local</code></li><li><code>sshPort=22</code> (or whatever is advertised)</li><li><code>gatewayPort=18789</code> (Gateway WS + HTTP)</li><li><code>gatewayTls=1</code> (only when TLS is enabled)</li><li><code>gatewayTlsSha256=&lt;sha256&gt;</code> (only when TLS is enabled and fingerprint is available)</li><li><code>canvasPort=&lt;port&gt;</code> (canvas host port; currently the same as <code>gatewayPort</code> when the canvas host is enabled)</li><li><code>cliPath=&lt;path&gt;</code> (optional; absolute path to a runnable <code>openclaw</code> entrypoint or binary)</li><li><code>tailnetDns=&lt;magicdns&gt;</code> (optional hint; auto-detected when Tailscale is available)</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“安全守门员 notes:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Security notes:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Service beacon details”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Bonjour/mDNS TXT records are **unauthenti…、Routing (host/port) should prefer the **r…、TLS pinning must never allow an advertise…、iOS/Android nodes should treat discovery-…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Bonjour/mDNS TXT records are **unauthenticated**. Clients must treat TXT values as UX hints only.</li><li>Routing (host/port) should prefer the **resolved service endpoint** (SRV + A/AAAA) over TXT-provided <code>lanHost</code>, <code>tailnetDns</code>, or <code>gatewayPort</code>.</li><li>TLS pinning must never allow an advertised <code>gatewayTlsSha256</code> to override a previously stored pin.</li><li>iOS/Android nodes should treat discovery-based direct connects as **TLS-only** and require an explicit “trust this fingerprint” confirmation before storing a first-time pin (out-of-band verification).</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Disable/override:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Disable/override:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Service beacon details”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：OPENCLAW_DISABLE_BONJOUR=1 disables adver…、门口的小门卫.bind in ~/.openclaw/openclaw.json…、OPENCLAW_SSH_PORT overrides the SSH port…、OPENCLAW_TAILNET_DNS publishes a tailnetD…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>OPENCLAW_DISABLE_BONJOUR=1</code> disables advertising.</li><li><code>gateway.bind</code> in <code>~/.openclaw/openclaw.json</code> controls the Gateway bind mode.</li><li><code>OPENCLAW_SSH_PORT</code> overrides the SSH port advertised in TXT (defaults to 22).</li><li><code>OPENCLAW_TAILNET_DNS</code> publishes a <code>tailnetDns</code> hint (MagicDNS).</li><li><code>OPENCLAW_CLI_PATH</code> overrides the advertised CLI path.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-6">
-          <div class="section-heading">
-            <p class="section-kicker">第 6 站</p>
-            <h2>2) Tailnet (cross-network)</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“For London/Vienna style setups, Bonjour won’t help. The recommended “direct” target is: If the 门口的小门卫 can detect it is…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“For London/Vienna style setups, Bonjour won’t help. The recommended “direct” target is:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>For London/Vienna style setups, Bonjour won’t help. The recommended “direct” target is:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“2) Tailnet (cross-network)”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Tailscale MagicDNS name (preferred) or a…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Tailscale MagicDNS name (preferred) or a stable tailnet IP.</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“If the 门口的小门卫 can detect it is running under Tailscale, it publishes tailnetDns as an optional hint for 来帮忙的小伙伴s (inclu…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>If the gateway can detect it is running under Tailscale, it publishes <code>tailnetDns</code> as an optional hint for clients (including wide-area beacons).</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-7">
-          <div class="section-heading">
-            <p class="section-kicker">第 7 站</p>
-            <h2>3) Manual / SSH target</h2>
-            <p>这一节主要在解释“3) Manual / SSH target”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“3) Manual / SSH target”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“When there is no direct route (or direct is disabled), 来帮忙的小伙伴s can always connect via SSH by forwarding the loopback 门…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“When there is no direct route (or direct is disabled), 来帮忙的小伙伴s can always connect via SSH by forwarding the loopback 门…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>When there is no direct route (or direct is disabled), clients can always connect via SSH by forwarding the loopback gateway port.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“See Remote access.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>See <a href="/gateway/remote" target="_blank" rel="noreferrer">Remote access</a>.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-8">
-          <div class="section-heading">
-            <p class="section-kicker">第 8 站</p>
-            <h2>Transport selection (来帮忙的小伙伴 policy)</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Recommended 来帮忙的小伙伴 behavior: 1. If a paired direct endpoint is 设置说明书ured and reachable, use it. 2. Else, if Bonjour fi…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Recommended 来帮忙的小伙伴 behavior:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Recommended client behavior:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“1. If a paired direct endpoint is 设置说明书ured and reachable, use it. 2. Else, if Bonjour finds a 门口的小门卫 on LAN, offer a o…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>1. If a paired direct endpoint is configured and reachable, use it. 2. Else, if Bonjour finds a gateway on LAN, offer a one-tap “Use this gateway” choice and save it as the direct endpoint. 3. Else, if a tailnet DNS/IP is configured, try direct. 4. Else, fall back to SSH.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-9">
-          <div class="section-heading">
-            <p class="section-kicker">第 9 站</p>
-            <h2>Pairing + auth (direct transport)</h2>
-            <p>这一节主要在解释“Pairing + auth (direct transport)”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“Pairing + auth (direct transport)”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“The 门口的小门卫 is the source of truth for node/来帮忙的小伙伴 admission.”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“The 门口的小门卫 is the source of truth for node/来帮忙的小伙伴 admission.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>The gateway is the source of truth for node/client admission.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Pairing + auth (direct transport)”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Pairing requests are created/approved/rej…、The 门口的小门卫 enforces:、auth (token / keypair)、scopes/ACLs (the 门口的小门卫 is not a raw prox…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Pairing requests are created/approved/rejected in the gateway (see <a href="/gateway/pairing" target="_blank" rel="noreferrer">Gateway pairing</a>).</li><li>The gateway enforces:</li><li>auth (token / keypair)</li><li>scopes/ACLs (the gateway is not a raw proxy to every method)</li><li>rate limits</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-10">
-          <div class="section-heading">
-            <p class="section-kicker">第 10 站</p>
-            <h2>Responsibilities by component</h2>
-            <p>这一节主要在解释“Responsibilities by component”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“Responsibilities by component”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Responsibilities by component”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：**门口的小门卫**: advertises discovery beacons,…、**macOS app**: helps you pick a 门口的小门卫, s…、**iOS/Android nodes**: browse Bonjour as…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>**Gateway**: advertises discovery beacons, owns pairing decisions, and hosts the WS endpoint.</li><li>**macOS app**: helps you pick a gateway, shows pairing prompts, and uses SSH only as a fallback.</li><li>**iOS/Android nodes**: browse Bonjour as a convenience and connect to the paired Gateway WS.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-    <section class="section-shell">
-      <div class="ad-placeholder">
-        <p>这里预留给未来的 Google AdSense 模块。</p>
-        <code>&lt;!-- ADSENSE_SNIPPET --&gt;</code>
-      </div>
-    </section>
-  
+      <section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>🧭 <code>Discovery &amp; transports</code> 像“先找到哪一栋楼，再决定走哪条路进去”</h2>
+      <p>这页看着像网络术语，其实只在讲两件事：客户端怎么先发现 Gateway 在哪，以及发现后该走直连、尾网还是 SSH 这条路。</p>
+      <p>所以它不像“复杂协议课”，更像找门和选路图。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合想弄清客户端到底怎么找到 Gateway 的人</span>
+      <span>这页最重要的是先分清：发现是找门，传输是选路</span>
+      <a href="https://docs.openclaw.ai/gateway/discovery" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一眼</p>
+    <h2>🚪 表面上都像“远程连接”，其实有两类完全不同的问题</h2>
+    <p>官方开头就点破了：一类是操作员远程控制，一类是节点设备配对。两者都在找 Gateway，但关心的细节不一样。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">🧑‍💻</span>
+      <h2>Operator remote control</h2>
+      <p>像你在别处拿着遥控器，想控制家里的总机房。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">📱</span>
+      <h2>Node pairing</h2>
+      <p>像手机、平板这些外面的手脚，要先认出自家总机房，再安全配对。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🏢</span>
+      <h2>Gateway 是发现中心</h2>
+      <p>官方坚持把发现和广播都放在 Gateway 这边做，客户端只做“看见并选择”。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">📌</span>
+      <h2>一句话</h2>
+      <p>先找到楼，再决定从正门、专线还是暗门进去。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">三条常见路</p>
+    <h2>🛣 Bonjour、Tailnet、SSH，像三种找门和进门办法</h2>
+    <p>官方把路分得很清楚。好处是你不用全背，只要按场景挑路。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">📣 Bonjour / mDNS</div>
+      <p>像同一片小区里的门口小广播。适合同一个局域网里“哦，原来 Gateway 在这儿”。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🛰 Tailnet</div>
+      <p>像跨街区的专线。离得远时，MagicDNS 或稳定 tailnet IP 会比局域网广播靠谱得多。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🗝 SSH fallback</div>
+      <p>像万能暗门。哪怕广播失灵、跨网复杂，只要 SSH 能通，就还能兜底进去。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 记一句</div>
+      <p>Bonjour 负责“近处好找”，Tailnet 负责“远处好连”，SSH 负责“再不行还有后门”。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">发现输入</p>
+    <h2>📦 广播牌上的 TXT 记录只是提示牌，不是身份证</h2>
+    <p>这一段官方写得很谨慎。因为很多人会误把广播里的字段当成最终可信答案。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>role=gateway</code> / <code>gatewayPort</code> / <code>tailnetDns</code></div>
+      <p>像广播牌上贴的说明小字：这栋楼是什么角色、门牌号大概在哪、有没有尾网门牌提示。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">UX hints only</div>
+      <p>它们只是帮助你更快认路，不该被当成铁打不变的最终认证材料。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">先看解析出的真实地址</div>
+      <p>官方强调应优先信 SRV + A/AAAA 真正解析出的门口，而不是盲信广播牌上的文字。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">TLS 指纹也别乱覆盖</div>
+      <p>如果以前已经信过一扇门的指纹，广播新喊来的值不能随手把旧信任覆盖掉。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">客户端怎么选路</p>
+    <h2>🪜 官方建议的顺序，像“先走熟路，再试附近，再试专线，最后走 SSH”</h2>
+    <p>这个顺序很像一个很务实的找门策略。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">1</span>
+      <h2>先用已配好的 direct endpoint</h2>
+      <p>像先走你已经记熟的那扇门。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">2</span>
+      <h2>再试局域网 Bonjour</h2>
+      <p>像在附近街区看一眼有没有广播牌。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">3</span>
+      <h2>再试 tailnet DNS / IP</h2>
+      <p>像发现近路没有，就走专线过去。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">4</span>
+      <h2>最后 SSH</h2>
+      <p>像保底暗门，只要 SSH 还在，你基本就还有办法进去。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">最后总结</p>
+    <h2>🎈 把这页压成一句最短的话</h2>
+    <p>Discovery 讲的就是先找门再选路：近处靠 Bonjour，远处靠 tailnet，任何复杂场景最后都还能回到 SSH 这扇保底门。</p>
+  </div>
+  <div class="ad-placeholder">
+    <p>如果你想直接看“SSH 这条保底门到底怎么走”，下一页就去 <code>/gateway/remote</code>。</p>
+  </div>
+</section>
+
 
       <footer class="page-footer">
         <div>

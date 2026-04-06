@@ -3970,589 +3970,175 @@
   
       </div>
 
-      
-    <section class="section-shell">
-      <div class="overview-card">
-        <div>
-          <p class="section-kicker">先听这页的人话版</p>
-          <h2>Session Pruning</h2>
-          <p>这一页像一本关于“Session Pruning”的小绘本，它先告诉我们这位机器人朋友会做什么，再一步一步解释什么时候该这样做。 你可以先把它想成：Session Pruning。</p>
-          <p>如果把这页当成“给普通人看的版本”，你最应该带走的是：它到底在教你一件什么事、什么时候要这样做、以及哪里最容易踩坑。</p>
-        </div>
-        <div class="overview-meta">
-          <span>原始路径：/concepts/session-pruning</span>
-          <span>章节数量：12</span>
-          <a href="https://docs.openclaw.ai/concepts/session-pruning" target="_blank" rel="noreferrer">查看原文</a>
-        </div>
-      </div>
-    </section>
-    
-        <section class="section-shell" id="section-1">
-          <div class="section-heading">
-            <p class="section-kicker">第 1 站</p>
-            <h2>Start Here</h2>
-            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>你理解的是能力边界，不只是功能名字。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Session Pruning Session pruning trims **old 工具小帮手 results** from the in-memory context right before each LLM call. It d…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Session Pruning”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p># Session Pruning</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Session pruning trims **old 工具小帮手 results** from the in-memory context right before each LLM call. It does **not** rewr…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Session pruning trims **old tool results** from the in-memory context right before each LLM call. It does **not** rewrite the on-disk session history (<code>*.jsonl</code>).</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-2">
-          <div class="section-heading">
-            <p class="section-kicker">第 2 站</p>
-            <h2>When it runs</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“When it runs”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：When mode: &quot;cache-ttl&quot; is enabled and the…、Only affects the 小纸条消息s sent to the 聪明脑袋模…、Only active for Anthropic 对话接口 calls (and…、For best results, match ttl to your 聪明脑袋模…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>When <code>mode: &quot;cache-ttl&quot;</code> is enabled and the last Anthropic call for the session is older than <code>ttl</code>.</li><li>Only affects the messages sent to the model for that request.</li><li>Only active for Anthropic API calls (and OpenRouter Anthropic models).</li><li>For best results, match <code>ttl</code> to your model <code>cacheRetention</code> policy (<code>short</code> = 5m, <code>long</code> = 1h).</li><li>After a prune, the TTL window resets so subsequent requests keep cache until <code>ttl</code> expires again.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-3">
-          <div class="section-heading">
-            <p class="section-kicker">第 3 站</p>
-            <h2>Smart defaults (Anthropic)</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Smart defaults (Anthropic)”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：**OAuth or setup-token** profiles: enable…、**对话接口 key** profiles: enable cache-ttl p…、If you set any of these values explicitly…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>**OAuth or setup-token** profiles: enable <code>cache-ttl</code> pruning and set heartbeat to <code>1h</code>.</li><li>**API key** profiles: enable <code>cache-ttl</code> pruning, set heartbeat to <code>30m</code>, and default <code>cacheRetention: &quot;short&quot;</code> on Anthropic models.</li><li>If you set any of these values explicitly, OpenClaw does **not** override them.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-4">
-          <div class="section-heading">
-            <p class="section-kicker">第 4 站</p>
-            <h2>What this improves (cost + cache behavior)</h2>
-            <p>这一节主要在解释“What this improves (cost + cache behavior)”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“What this improves (cost + cache behavior)”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“What this improves (cost + cache behavior)”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：**Why prune:** Anthropic prompt caching o…、**What gets cheaper:** pruning reduces th…、**Why the TTL reset matters:** once pruni…、**What it does not do:** pruning doesn’t…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>**Why prune:** Anthropic prompt caching only applies within the TTL. If a session goes idle past the TTL, the next request re-caches the full prompt unless you trim it first.</li><li>**What gets cheaper:** pruning reduces the **cacheWrite** size for that first request after the TTL expires.</li><li>**Why the TTL reset matters:** once pruning runs, the cache window resets, so follow‑up requests can reuse the freshly cached prompt instead of re-caching the full history again.</li><li>**What it does not do:** pruning doesn’t add tokens or “double” costs; it only changes what gets cached on that first post‑TTL request.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-5">
-          <div class="section-heading">
-            <p class="section-kicker">第 5 站</p>
-            <h2>What can be pruned</h2>
-            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>你理解的是能力边界，不只是功能名字。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“What can be pruned”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Only 工具小帮手Result 小纸条消息s.、User + assistant 小纸条消息s are **never** mod…、The last keepLastAssistants assistant 小纸条…、If there aren’t enough assistant 小纸条消息s t…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Only <code>toolResult</code> messages.</li><li>User + assistant messages are **never** modified.</li><li>The last <code>keepLastAssistants</code> assistant messages are protected; tool results after that cutoff are not pruned.</li><li>If there aren’t enough assistant messages to establish the cutoff, pruning is skipped.</li><li>Tool results containing **image blocks** are skipped (never trimmed/cleared).</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-6">
-          <div class="section-heading">
-            <p class="section-kicker">第 6 站</p>
-            <h2>Context window estimation</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Pruning uses an estimated context window (chars ≈ tokens × 4). The base window is resolved in this order: 1. 聪明脑袋模型s.pr…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Pruning uses an estimated context window (chars ≈ tokens × 4). The base window is resolved in this order:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Pruning uses an estimated context window (chars ≈ tokens × 4). The base window is resolved in this order:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“1. 聪明脑袋模型s.providers.*.聪明脑袋模型s[].contextWindow override. 2. 聪明脑袋模型 definition contextWindow (from the 聪明脑袋模型 registry).…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>1. <code>models.providers.*.models[].contextWindow</code> override. 2. Model definition <code>contextWindow</code> (from the model registry). 3. Default <code>200000</code> tokens.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“If 机器人朋友s.defaults.contextTokens is set, it is treated as a cap (min) on the resolved window.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>If <code>agents.defaults.contextTokens</code> is set, it is treated as a cap (min) on the resolved window.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-7">
-          <div class="section-heading">
-            <p class="section-kicker">第 7 站</p>
-            <h2>cache-ttl</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“cache-ttl”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Pruning only runs if the last Anthropic c…、When it runs: same soft-trim + hard-clear…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Pruning only runs if the last Anthropic call is older than <code>ttl</code> (default <code>5m</code>).</li><li>When it runs: same soft-trim + hard-clear behavior as before.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-8">
-          <div class="section-heading">
-            <p class="section-kicker">第 8 站</p>
-            <h2>Soft vs hard pruning</h2>
-            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>你理解的是能力边界，不只是功能名字。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Soft vs hard pruning”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：**Soft-trim**: only for oversized 工具小帮手 r…、Keeps head + tail, inserts ..., and appen…、Skips results with image blocks.、**Hard-clear**: replaces the entire 工具小帮手…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>**Soft-trim**: only for oversized tool results.</li><li>Keeps head + tail, inserts <code>...</code>, and appends a note with the original size.</li><li>Skips results with image blocks.</li><li>**Hard-clear**: replaces the entire tool result with <code>hardClear.placeholder</code>.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-9">
-          <div class="section-heading">
-            <p class="section-kicker">第 9 站</p>
-            <h2>工具小帮手 selection</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Tool selection”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：工具小帮手s.allow / 工具小帮手s.deny support * wild…、Deny wins.、Matching is case-insensitive.、Empty allow list =&gt; all 工具小帮手s allowed.</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>tools.allow</code> / <code>tools.deny</code> support <code>*</code> wildcards.</li><li>Deny wins.</li><li>Matching is case-insensitive.</li><li>Empty allow list =&gt; all tools allowed.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-10">
-          <div class="section-heading">
-            <p class="section-kicker">第 10 站</p>
-            <h2>Interaction with other limits</h2>
-            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>你理解的是能力边界，不只是功能名字。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Interaction with other limits”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Built-in 工具小帮手s already truncate their ow…、Compaction is separate: compaction summar…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Built-in tools already truncate their own output; session pruning is an extra layer that prevents long-running chats from accumulating too much tool output in the model context.</li><li>Compaction is separate: compaction summarizes and persists, pruning is transient per request. See <a href="/concepts/compaction" target="_blank" rel="noreferrer">/concepts/compaction</a>.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-11">
-          <div class="section-heading">
-            <p class="section-kicker">第 11 站</p>
-            <h2>Defaults (when enabled)</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Defaults (when enabled)”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：ttl: &quot;5m&quot;、keepLastAssistants: 3、softTrimRatio: 0.3、hardClearRatio: 0.5。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>ttl</code>: <code>&quot;5m&quot;</code></li><li><code>keepLastAssistants</code>: <code>3</code></li><li><code>softTrimRatio</code>: <code>0.3</code></li><li><code>hardClearRatio</code>: <code>0.5</code></li><li><code>minPrunableToolChars</code>: <code>50000</code></li><li><code>softTrim</code>: <code>{ maxChars: 4000, headChars: 1500, tailChars: 1500 }</code></li><li><code>hardClear</code>: <code>{ enabled: true, placeholder: &quot;[Old tool result content cleared]&quot; }</code></li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-12">
-          <div class="section-heading">
-            <p class="section-kicker">第 12 站</p>
-            <h2>Examples</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Default (off): Enable TTL-aware pruning: Restrict pruning to specific 工具小帮手s: See 设置说明书 reference: 门口的小门卫 设置说明书uration”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Default (off):”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Default (off):</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“agents”贴标签，意思是把它设置成“{ defaults: { contextPruning: { mode: off } } }”。</li><li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json5">{
-  agents: { defaults: { contextPruning: { mode: &quot;off&quot; } } },
-}</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Enable TTL-aware pruning:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Enable TTL-aware pruning:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“agents”贴标签，意思是把它设置成“{ defaults: { contextPruning: { mode: cache-ttl ttl: 5m } } }”。</li><li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json5">{
-  agents: { defaults: { contextPruning: { mode: &quot;cache-ttl&quot;, ttl: &quot;5m&quot; } } },
-}</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Restrict pruning to specific 工具小帮手s:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Restrict pruning to specific tools:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“agents”贴标签，意思是把它设置成“{”。</li><li>这里在给“defaults”贴标签，意思是把它设置成“{”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json5">{
-  agents: {
-    defaults: {
-      contextPruning: {
-        mode: &quot;cache-ttl&quot;,
-        tools: { allow: [&quot;exec&quot;, &quot;read&quot;], deny: [&quot;*image*&quot;] },
-      },
-    },
-  },
-}</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“See 设置说明书 reference: 门口的小门卫 设置说明书uration”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>See config reference: <a href="/gateway/configuration" target="_blank" rel="noreferrer">Gateway Configuration</a></p>
-      </div>
-    
-          </div>
-        </section>
-      
-    <section class="section-shell">
-      <div class="ad-placeholder">
-        <p>这里预留给未来的 Google AdSense 模块。</p>
-        <code>&lt;!-- ADSENSE_SNIPPET --&gt;</code>
-      </div>
-    </section>
-  
+      <section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>✂️ <code>Session Pruning</code> 像“只剪旧工具纸，不剪整本故事书”</h2>
+      <p>这页讲的是一件很细的事：每次模型要开工前，OpenClaw 会把老旧的工具结果先收一收，别让眼前那一页太鼓。</p>
+      <p>它不是把整段历史删掉，而是只在模型真正要看的那一瞬间，把太重的旧工具纸裁一裁。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合想省 Anthropic 缓存成本、又不想删掉历史的人</span>
+      <span>这页最重要的是：pruning 是临时裁纸，不是把 JSONL 历史改写掉</span>
+      <a href="https://docs.openclaw.ai/concepts/session-pruning" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">先分清</p>
+    <h2>🧾 它剪的是“眼前那一页”，不是“书柜里的整本书”</h2>
+    <p>官方第一句就很关键：pruning 只改请求时送去模型的上下文，不会改磁盘上的 session 历史。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">📒</span>
+      <h2>On-disk history 不动</h2>
+      <p>JSONL 里的记录还在，像书柜里的故事书没有被撕页。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">✂️</span>
+      <h2>In-memory context 会裁</h2>
+      <p>只是模型那一轮看到的东西变轻了，像把书桌上的材料减薄。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">⏳</span>
+      <h2>cache-ttl</h2>
+      <p>这个模式像“缓存过期后再先修剪一下”，避免下一次重新缓存时背太多旧纸。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">📌</span>
+      <h2>一句话</h2>
+      <p>它是模型前面的临时收纳，不是历史文档的永久删改。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">什么时候剪</p>
+    <h2>🕰 只有满足条件，它才会拿起小剪刀</h2>
+    <p>官方把触发条件写得非常明确。翻成人话，就是“这次真的需要了再剪”。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label"><code>mode: "cache-ttl"</code></div>
+      <p>像把剪纸规则挂出来：只有走这个模式才会裁旧纸。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">最后一次 Anthropic 调用太久了</div>
+      <p>像说“上次缓存已经过期了，那这次先裁一点再重新上桌”。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">TTL 再次重置</div>
+      <p>一旦裁过，新的缓存窗口就重新开始计时。像刚裁好，桌面又变整齐了。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">只对 Anthropic 系列生效</div>
+      <p>官方写得很直白：这个裁纸工，只在 Anthropic API 和 OpenRouter Anthropic 模型这条线上工作。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">为什么有用</p>
+    <h2>💰 它最想帮你省的是“第一次重新上桌时”的缓存写入</h2>
+    <p>这部分就是成本故事。它不是神奇变快，而是帮你少背一点旧东西，让缓存重写时轻一点。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">💸</span>
+      <h2>cacheWrite 变小</h2>
+      <p>第一次过 TTL 后的那次请求，重新写缓存时会更轻。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🪶</span>
+      <h2>不是“多付费”</h2>
+      <p>官方特地提醒：pruning 不是额外加钱，而是换一种更聪明的上下文形状。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🔁</span>
+      <h2>为什么 TTL reset 重要</h2>
+      <p>裁过一次以后，下一轮 follow-up 就能继续吃新的缓存，而不是反复背很重的旧包。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">📌</span>
+      <h2>一句话</h2>
+      <p>它省的是缓存写入，不是拿历史开刀。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">能剪什么</p>
+    <h2>🧺 它只剪旧工具结果，而且剪得很小心</h2>
+    <p>这页最实在的地方在于边界很明确：不是所有消息都动，只有 toolResult 才在可裁范围里。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">只动 <code>toolResult</code></div>
+      <p>像只裁工具台上堆太厚的旧纸，不碰用户和助手的原话。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">保留最后几位 assistant</div>
+      <p>最后几段助手话不剪，像把最近几页作业本留在桌上。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">有图片的工具结果跳过</div>
+      <p>带图的纸不能随便裁，官方直接让它跳过。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">soft-trim / hard-clear</div>
+      <p>一个像把长纸条头尾留下，中间折掉；一个像整张旧纸直接换成“已清理”的占位牌。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">怎么配</p>
+    <h2>🧩 配置项像剪纸规则本</h2>
+    <p>官方给了一整套默认值。把它看成“裁纸机面板”就好读很多。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">⏳</span>
+      <h2><code>ttl</code></h2>
+      <p>像规定这张缓存票多久后会失效，默认 5 分钟。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🧮</span>
+      <h2><code>keepLastAssistants</code></h2>
+      <p>像规定最近几段助手内容必须留着，默认留 3 段。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">✂️</span>
+      <h2><code>softTrim</code></h2>
+      <p>像裁纸时留头留尾，别把整张纸都扔了。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🧯</span>
+      <h2><code>hardClear</code></h2>
+      <p>像实在太厚就直接换成“这里已经清掉了”的占位卡。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">最后总结</p>
+    <h2>🎈 把这页压成一句最短的话</h2>
+    <p>Session Pruning 就是在模型开工前，把过旧、过厚的工具结果先裁一裁，让 Anthropic 的缓存更轻一点，但又不碰磁盘上的完整故事书。</p>
+  </div>
+  <div class="ad-placeholder">
+    <p>如果你想看“模型怎么通过一组小工具去看会话、发消息、开分身”，下一页可以去 <code>/concepts/session-tool</code>。</p>
+  </div>
+</section>
+
 
       <footer class="page-footer">
         <div>

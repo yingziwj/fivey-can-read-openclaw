@@ -1,0 +1,138 @@
+<section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>🧭 <code>Discovery &amp; transports</code> 像“先找到哪一栋楼，再决定走哪条路进去”</h2>
+      <p>这页看着像网络术语，其实只在讲两件事：客户端怎么先发现 Gateway 在哪，以及发现后该走直连、尾网还是 SSH 这条路。</p>
+      <p>所以它不像“复杂协议课”，更像找门和选路图。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合想弄清客户端到底怎么找到 Gateway 的人</span>
+      <span>这页最重要的是先分清：发现是找门，传输是选路</span>
+      <a href="https://docs.openclaw.ai/gateway/discovery" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一眼</p>
+    <h2>🚪 表面上都像“远程连接”，其实有两类完全不同的问题</h2>
+    <p>官方开头就点破了：一类是操作员远程控制，一类是节点设备配对。两者都在找 Gateway，但关心的细节不一样。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">🧑‍💻</span>
+      <h2>Operator remote control</h2>
+      <p>像你在别处拿着遥控器，想控制家里的总机房。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">📱</span>
+      <h2>Node pairing</h2>
+      <p>像手机、平板这些外面的手脚，要先认出自家总机房，再安全配对。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🏢</span>
+      <h2>Gateway 是发现中心</h2>
+      <p>官方坚持把发现和广播都放在 Gateway 这边做，客户端只做“看见并选择”。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">📌</span>
+      <h2>一句话</h2>
+      <p>先找到楼，再决定从正门、专线还是暗门进去。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">三条常见路</p>
+    <h2>🛣 Bonjour、Tailnet、SSH，像三种找门和进门办法</h2>
+    <p>官方把路分得很清楚。好处是你不用全背，只要按场景挑路。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">📣 Bonjour / mDNS</div>
+      <p>像同一片小区里的门口小广播。适合同一个局域网里“哦，原来 Gateway 在这儿”。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🛰 Tailnet</div>
+      <p>像跨街区的专线。离得远时，MagicDNS 或稳定 tailnet IP 会比局域网广播靠谱得多。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🗝 SSH fallback</div>
+      <p>像万能暗门。哪怕广播失灵、跨网复杂，只要 SSH 能通，就还能兜底进去。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 记一句</div>
+      <p>Bonjour 负责“近处好找”，Tailnet 负责“远处好连”，SSH 负责“再不行还有后门”。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">发现输入</p>
+    <h2>📦 广播牌上的 TXT 记录只是提示牌，不是身份证</h2>
+    <p>这一段官方写得很谨慎。因为很多人会误把广播里的字段当成最终可信答案。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>role=gateway</code> / <code>gatewayPort</code> / <code>tailnetDns</code></div>
+      <p>像广播牌上贴的说明小字：这栋楼是什么角色、门牌号大概在哪、有没有尾网门牌提示。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">UX hints only</div>
+      <p>它们只是帮助你更快认路，不该被当成铁打不变的最终认证材料。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">先看解析出的真实地址</div>
+      <p>官方强调应优先信 SRV + A/AAAA 真正解析出的门口，而不是盲信广播牌上的文字。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">TLS 指纹也别乱覆盖</div>
+      <p>如果以前已经信过一扇门的指纹，广播新喊来的值不能随手把旧信任覆盖掉。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">客户端怎么选路</p>
+    <h2>🪜 官方建议的顺序，像“先走熟路，再试附近，再试专线，最后走 SSH”</h2>
+    <p>这个顺序很像一个很务实的找门策略。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">1</span>
+      <h2>先用已配好的 direct endpoint</h2>
+      <p>像先走你已经记熟的那扇门。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">2</span>
+      <h2>再试局域网 Bonjour</h2>
+      <p>像在附近街区看一眼有没有广播牌。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">3</span>
+      <h2>再试 tailnet DNS / IP</h2>
+      <p>像发现近路没有，就走专线过去。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">4</span>
+      <h2>最后 SSH</h2>
+      <p>像保底暗门，只要 SSH 还在，你基本就还有办法进去。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">最后总结</p>
+    <h2>🎈 把这页压成一句最短的话</h2>
+    <p>Discovery 讲的就是先找门再选路：近处靠 Bonjour，远处靠 tailnet，任何复杂场景最后都还能回到 SSH 这扇保底门。</p>
+  </div>
+  <div class="ad-placeholder">
+    <p>如果你想直接看“SSH 这条保底门到底怎么走”，下一页就去 <code>/gateway/remote</code>。</p>
+  </div>
+</section>
