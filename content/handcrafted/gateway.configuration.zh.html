@@ -1,0 +1,246 @@
+<section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>🧰 <code>Configuration</code> 这页，其实是在教你怎么读 OpenClaw 的“总控制台总账本”</h2>
+      <p><code>~/.openclaw/openclaw.json</code> 看起来像一大本设置书。别被它吓到。它不是叫你一次全写完，而是在说：如果你想让 OpenClaw 接门、选脑子、配工具、设规矩，这些都写在这本总账本里。</p>
+      <p>这页最重要的三句话是：没这个文件也能用安全默认值；真要写就从最小例子开始；写错字段时，Gateway 会宁愿不开机，也不带病上路。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合第一次碰 openclaw.json 的人</span>
+      <span>先学会怎么读总账本，再学会改总账本</span>
+      <a href="https://docs.openclaw.ai/gateway/configuration" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一步</p>
+    <h2>📒 先别把它想成“程序配置”，把它想成“整栋楼的总开关书”</h2>
+    <p>你要给 OpenClaw 接 Telegram、换模型、开工具、配沙箱、设会话规则，这些都像在调一栋楼里的不同开关。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">🚪</span>
+      <h2>channels</h2>
+      <p>像大楼外面有哪些门：Telegram 门、Slack 门、WhatsApp 门。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🧠</span>
+      <h2>agents / models</h2>
+      <p>像楼里请哪位脑力老师坐镇，平时默认谁先上。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🧰</span>
+      <h2>tools / sandbox</h2>
+      <p>像老师手边能不能拿剪刀、放大镜、计算器，还有是不是要在隔离实验箱里做事。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">⏰</span>
+      <h2>session / cron / hooks</h2>
+      <p>像记忆规则、定时广播员和门铃回调器。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二步</p>
+    <h2>🪶 没有配置文件也能跑，所以别一上来就想写满整本书</h2>
+    <p>官方明确说了：没有 <code>openclaw.json</code> 时，OpenClaw 也会用安全默认值。也就是说，这本书不是“没有就死”，而是“想精细控制时再写”。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">✅ 没文件</div>
+      <p>像大楼按默认安全模式开门，能先跑起来。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">✍️ 有文件</div>
+      <p>像你开始自己摆桌子、换门锁、贴规则牌。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">📌 官方真正的建议</div>
+      <p>新手先用 <code>openclaw onboard</code>。想抄现成样板，去看配置样例页。不要第一天就抱着字段参考大全硬啃。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 一句话</div>
+      <p>配置是加控制，不是入场门槛。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第三步</p>
+    <h2>🧱 最小配置像什么？像先摆一张桌子，再只开一扇门</h2>
+    <p>官方给的最小例子特别值得看，因为它在告诉你“能跑”到底需要多少东西。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>agents: { defaults: { workspace: "~/.openclaw/workspace" } }</code></div>
+      <p>像先给老师准备一张工作桌，告诉他东西往哪里放。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>channels: { whatsapp: { allowFrom: ["+15555550123"] } }</code></div>
+      <p>像只先开 WhatsApp 这一扇门，并告诉门卫“只放这个号码进来”。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">为什么例子这么短</div>
+      <p>因为官方是在故意教你：先让一件事稳稳跑起来，再慢慢加家具，不要一口气把整栋楼全装修完。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 这一段的核心</div>
+      <p>最小配置不是寒酸，而是聪明。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第四步</p>
+    <h2>✏️ 改配置有四种路，其实就是“向导、点按钮、单行改、直接翻账本”</h2>
+    <p>官方把编辑方式列了四条。翻成人话，就像四种改房间的方式。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">🧭</span>
+      <h2><code>openclaw onboard</code> / <code>openclaw configure</code></h2>
+      <p>像有带路老师陪你一间一间走，适合第一次布置新房。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🪛</span>
+      <h2><code>openclaw config get/set/unset</code></h2>
+      <p>像拿一把小螺丝刀，精准地拧某一个开关。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🖥</span>
+      <h2>Control UI</h2>
+      <p>像打开墙上的总控面板，用表单点点点；真不够用时再钻进 Raw JSON 维修口。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">📖</span>
+      <h2>直接编辑文件</h2>
+      <p>像你自己翻开总账本手写。最自由，但也最容易写错。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第五步</p>
+    <h2>🚫 严格校验是什么意思？像“零件尺寸不对，整栋楼宁愿不开机”</h2>
+    <p>这是这页最重要的安全提醒之一。OpenClaw 不是“差不多就凑合”，它是“字段不对我就拒绝开机”。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">🙅 unknown keys</div>
+      <p>像你往总账本里塞了一个系统根本不认识的抽屉名字。它不会猜，也不会放过。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">📏 malformed types</div>
+      <p>像本来该填数字，你却塞了香蕉。系统会直接说不行。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🛑 invalid values</div>
+      <p>像你把门开关写成一个不存在的档位，系统也会拒绝启动。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw doctor</code></div>
+      <p>像请总维修师来检查哪颗螺丝写错了。<code>--fix</code> 则像让它顺手帮你修一部分问题。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第六步</p>
+    <h2>🧭 “常见任务”这一大段，不是字典，而是“我现在最常想改什么”导航</h2>
+    <p>这一页后半段列了很多常见任务。别逐字背，把它当成“现在我想改哪一种事情”的地图就够了。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">🚪 配门</div>
+      <p>通道都在 <code>channels.&lt;provider&gt;</code> 下面，DM 政策和群组政策是最常见两个门卫开关。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🧠 选脑子</div>
+      <p><code>model.primary</code> 是默认请哪位老师上场，<code>fallbacks</code> 是第一位忙不过来时的替补队员。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🗣 群聊提到我才回</div>
+      <p><code>requireMention</code>、<code>mentionPatterns</code> 这些是在决定群里是不是非得先点名，老师才开口。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🧪 沙箱、心跳、定时任务、hooks</div>
+      <p>这些都不是“刚开机必须懂”的东西，而是你房子已经住顺以后，开始加自动门铃、自动广播员和隔离实验室。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第七步</p>
+    <h2>♨️ 热更新像什么？像你换窗帘不用整栋停电，但改大门位置就得重启</h2>
+    <p>官方这里解释得很细。最简单的记法是：有些改动可以热换，有些涉及 Gateway 本体的大改动就得重启。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">🪟</span>
+      <h2>热改类</h2>
+      <p>通道、模型、会话、工具这些，很多都像换窗帘、挪椅子，可以边运行边调整。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🚪</span>
+      <h2>重启类</h2>
+      <p><code>gateway.*</code> 这类核心大门、端口、绑定、TLS、HTTP 面，像拆门框，系统会更慎重。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🤖</span>
+      <h2><code>hybrid</code></h2>
+      <p>像智能管家模式。能热换的就热换，必须重启的它帮你安排重启。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🎈</span>
+      <h2>一句话</h2>
+      <p>小家具能边住边挪，大门口改造通常要重启。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第八步</p>
+    <h2>🌱 环境变量、<code>${VAR}</code>、SecretRef，都是“不要把钥匙直接写死在账本里”</h2>
+    <p>这几段讲的是保管秘密的方法。别把它看成更抽象的术语，它其实都在说：钥匙怎么藏才稳。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label"><code>env</code></div>
+      <p>像把钥匙放在值班室抽屉，不直接贴在总账本正文里。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>${OPENROUTER_API_KEY}</code></div>
+      <p>像账本上写“钥匙在这个抽屉里”，而不是把钥匙本身复印上去。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">SecretRef</div>
+      <p>像更正式的藏宝图系统。可以从环境、文件，甚至外部保险箱程序里去拿秘密。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 这一段的核心</div>
+      <p>总账本负责指路，真正的钥匙尽量不要明晃晃写在正文里。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">最后总结</p>
+    <h2>🎈 把配置总览页压成一句最好记的话</h2>
+    <p><code>openclaw.json</code> 不是让你一次背完的字段海洋，而是 OpenClaw 的总控制台总账本。先从最小例子起步，改自己现在最需要的那一页，写错就交给 <code>doctor</code> 抓虫。</p>
+  </div>
+  <div class="ad-placeholder">
+    <p>如果你现在想直接抄现成装修样板，下一页就该看配置样例；如果你想查某个抽屉的精确字段名，再去看配置参考大全。</p>
+  </div>
+</section>

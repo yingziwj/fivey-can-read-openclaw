@@ -1,0 +1,93 @@
+<section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>🛍 OpenRouter 像一个超大模型商场：你带一把门卡进去，里面很多柜台都能逛</h2>
+      <p>这页官方内容其实很简单。OpenRouter 不是某一颗单独模型脑子，而是一个统一入口。你给它一把 API key，它帮你把请求转去不同 provider 的不同模型。</p>
+      <p>所以这里最关键的，不是学一堆参数，而是先接受这个概念：你不是直接敲某家店的门，而是在模型商场的总前台登记。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合想一把钥匙接多家模型的人</span>
+      <span>重点是模型命名格式和统一入口思维</span>
+      <a href="https://docs.openclaw.ai/providers/openrouter" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一步</p>
+    <h2>🔑 先把 OpenRouter 门卡交给 OpenClaw</h2>
+    <p>这一步没有花活，就是认证。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">🛠</span>
+      <h2><code>openclaw onboard --auth-choice apiKey --token-provider openrouter --token "$OPENROUTER_API_KEY"</code></h2>
+      <p>像在总前台说：“我要进模型商场，这是我的门卡。”</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">📦</span>
+      <h2><code>OPENROUTER_API_KEY</code></h2>
+      <p>这张卡不是某一家模型专属钥匙，而是进总商场的统一通行证。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🏠</span>
+      <h2>放哪里最稳</h2>
+      <p>跟其他 provider 一样，最好放到 Gateway 长期值班时也能读到的地方。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🎈</span>
+      <h2>一句话</h2>
+      <p>OpenRouter 先认你的商场门卡，再帮你转去具体柜台。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二步</p>
+    <h2>🏷 模型名字为什么这么长？因为它在写“商场 / 店家 / 柜台”</h2>
+    <p>官方最值得你看懂的，就是这个命名格式。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label"><code>openrouter/anthropic/claude-sonnet-4-6</code></div>
+      <p>第一段 <code>openrouter</code> 像商场名字，第二段 <code>anthropic</code> 像进了哪家店，第三段才是柜台上具体哪位模型老师。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">为什么不是直接 <code>anthropic/...</code>？</div>
+      <p>因为你此时不是直连 Anthropic，而是先过 OpenRouter 这个总转运站。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🧭 这页真正想告诉你的事</div>
+      <p>OpenRouter 最有价值的地方，不是“名字长”，而是你能用同一种入口去切很多 provider 和模型。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 一句话</div>
+      <p>模型名越长，不是越复杂，而是在把路径写完整。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第三步</p>
+    <h2>📮 Bearer token 在现场像什么？像你进商场时给门卫看的通行证</h2>
+    <p>官方最后一句说 OpenRouter 底层用 Bearer token。翻成人话，就是请求每次都会带着那张门卡去前台验票。</p>
+  </div>
+  <div class="ad-placeholder">
+    <p>所以你看到 <code>env: { OPENROUTER_API_KEY: "sk-or-..." }</code> 这种配置，不是在“背参数”，而是在往总前台的验票机里塞通行证。</p>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">最后总结</p>
+    <h2>🎈 把 OpenRouter 这页压成一句最好记的话</h2>
+    <p>OpenRouter 不是某一个模型，而是模型商场总前台。你交一把门卡进去，再用 <code>openrouter/店家/模型</code> 这种路径告诉 OpenClaw 你到底要去哪个柜台。</p>
+  </div>
+  <div class="ad-placeholder">
+    <p>如果你想知道“整栋 Gateway 大楼的总设置本到底怎么读”，下一页就该看配置总览。</p>
+  </div>
+</section>

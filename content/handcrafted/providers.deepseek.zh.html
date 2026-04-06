@@ -1,0 +1,108 @@
+<section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>🐋 DeepSeek 这页很短，因为它其实只在教你：把钥匙放进去，然后选“普通脑”还是“思考脑”</h2>
+      <p>官方这页没有太多绕路。DeepSeek 在 OpenClaw 里走的是 OpenAI 兼容路线，所以整体感觉就是：拿 API key，选默认模型，然后让 Gateway 能读到这把钥匙。</p>
+      <p>真正需要分清的，只有两个模型：<code>deepseek-chat</code> 和 <code>deepseek-reasoner</code>。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合想快速接好 DeepSeek 的人</span>
+      <span>重点只有钥匙、默认模型、守护进程环境变量</span>
+      <a href="https://docs.openclaw.ai/providers/deepseek" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一步</p>
+    <h2>🔑 先把 DeepSeek 钥匙交给 OpenClaw</h2>
+    <p>这页最核心的动作就是认证。没有钥匙，后面模型名字写得再漂亮也只是空牌子。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">🛠</span>
+      <h2><code>openclaw onboard --auth-choice deepseek-api-key</code></h2>
+      <p>像在新手向导里直接说：“我要接 DeepSeek，请收下这把钥匙。”</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">⚡</span>
+      <h2>非交互式命令</h2>
+      <p>那串带 <code>--non-interactive</code> 的命令，像你不想聊天，直接把表格一次填完交上去。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">📦</span>
+      <h2><code>DEEPSEEK_API_KEY</code></h2>
+      <p>这就是那把真正的钥匙。最好放到 Gateway 能长期读到的地方。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🧹</span>
+      <h2><code>--skip-health --accept-risk</code></h2>
+      <p>像跳过体检、直接签字开跑。能用，但更像自动化脚本场景，不是最稳的新手路线。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二步</p>
+    <h2>🧠 两个模型，其实就是两个脑袋档位</h2>
+    <p>官方给你的选择不复杂。别被表格吓到，本质就是“快聊”和“认真想”。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label"><code>deepseek/deepseek-chat</code></div>
+      <p>像普通聊天脑。更适合日常对话、一般回答、速度优先的工作。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>deepseek/deepseek-reasoner</code></div>
+      <p>像戴着思考帽的脑袋。更适合需要多想几步、推一推、算一算的任务。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">📏 128K context 在说什么</div>
+      <p>像这两个脑袋都自带一张挺长的桌子，能摊开比较多上下文。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 最好记的话</div>
+      <p><code>chat</code> 是普通模式，<code>reasoner</code> 是认真想模式。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第三步</p>
+    <h2>🏠 守护进程环境变量，就是“值班门卫能不能摸到钥匙”</h2>
+    <p>官方专门补了这一句，是因为很多人本地命令能跑，服务一挂到后台就突然找不到 key。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label">🪟 前台终端能看到钥匙</div>
+      <p>像你手里拿着钥匙，自己当场开门，当然没问题。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🏢 launchd / systemd 后台值班</div>
+      <p>像换成夜班门卫在看门。如果你没把钥匙交给他，他就会一脸茫然。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>~/.openclaw/.env</code></div>
+      <p>像给值班室留一份稳定钥匙清单。官方点名推荐这种地方。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 这句一定记住</div>
+      <p>你不是把钥匙给“你自己现在这个终端”，而是给“真正跑 Gateway 的那个进程”。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">最后总结</p>
+    <h2>🎈 把 DeepSeek 这页压成一句最好记的话</h2>
+    <p>先把 <code>DEEPSEEK_API_KEY</code> 放稳，再决定默认用普通聊天脑还是思考脑，最后确认后台值班进程也摸得到这把钥匙。</p>
+  </div>
+  <div class="ad-placeholder">
+    <p>如果你下一步要比较“哪家模型商店接入更省事”，可以接着看 OpenRouter 或 Google 那几页。</p>
+  </div>
+</section>

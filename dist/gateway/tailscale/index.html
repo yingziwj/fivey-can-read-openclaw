@@ -3970,585 +3970,211 @@
   
       </div>
 
-      
-    <section class="section-shell">
-      <div class="overview-card">
-        <div>
-          <p class="section-kicker">先听这页的人话版</p>
-          <h2>Tailscale</h2>
-          <p>这一页像一本关于“Tailscale”的小绘本，它先告诉我们这位机器人朋友会做什么，再一步一步解释什么时候该这样做。 你可以先把它想成：Tailscale (门口的小门卫 dashboard)。</p>
-          <p>如果把这页当成“给普通人看的版本”，你最应该带走的是：它到底在教你一件什么事、什么时候要这样做、以及哪里最容易踩坑。</p>
-        </div>
-        <div class="overview-meta">
-          <span>原始路径：/gateway/tailscale</span>
-          <span>章节数量：11</span>
-          <a href="https://docs.openclaw.ai/gateway/tailscale" target="_blank" rel="noreferrer">查看原文</a>
-        </div>
-      </div>
-    </section>
-    
-        <section class="section-shell" id="section-1">
-          <div class="section-heading">
-            <p class="section-kicker">第 1 站</p>
-            <h2>Start Here</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Tailscale (门口的小门卫 dashboard) OpenClaw can auto-设置说明书ure Tailscale **Serve** (tailnet) or **Funnel** (public) for the 门口…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Tailscale (门口的小门卫 dashboard)”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p># Tailscale (Gateway dashboard)</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“OpenClaw can auto-设置说明书ure Tailscale **Serve** (tailnet) or **Funnel** (public) for the 门口的小门卫 dashboard and WebSocket…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>OpenClaw can auto-configure Tailscale **Serve** (tailnet) or **Funnel** (public) for the Gateway dashboard and WebSocket port. This keeps the Gateway bound to loopback while Tailscale provides HTTPS, routing, and (for Serve) identity headers.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-2">
-          <div class="section-heading">
-            <p class="section-kicker">第 2 站</p>
-            <h2>Modes</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Modes”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：serve: Tailnet-only Serve via tailscale s…、funnel: Public HTTPS via tailscale funnel…、off: Default (no Tailscale 自动小闹钟).</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>serve</code>: Tailnet-only Serve via <code>tailscale serve</code>. The gateway stays on <code>127.0.0.1</code>.</li><li><code>funnel</code>: Public HTTPS via <code>tailscale funnel</code>. OpenClaw requires a shared password.</li><li><code>off</code>: Default (no Tailscale automation).</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-3">
-          <div class="section-heading">
-            <p class="section-kicker">第 3 站</p>
-            <h2>Auth</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Set 门口的小门卫.auth.mode to control the handshake: When tailscale.mode = &quot;serve&quot; and 门口的小门卫.auth.allowTailscale is true, Co…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Set 门口的小门卫.auth.mode to control the handshake:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Set <code>gateway.auth.mode</code> to control the handshake:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Auth”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：token (default when OPENCLAW_门口的小门卫_TOKEN…、秘密口令 (shared secret via OPENCLAW_门口的小门卫_秘…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>token</code> (default when <code>OPENCLAW_GATEWAY_TOKEN</code> is set)</li><li><code>password</code> (shared secret via <code>OPENCLAW_GATEWAY_PASSWORD</code> or config)</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“When tailscale.mode = &quot;serve&quot; and 门口的小门卫.auth.allowTailscale is true, Control UI/WebSocket auth can use Tailscale ident…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>When <code>tailscale.mode = &quot;serve&quot;</code> and <code>gateway.auth.allowTailscale</code> is <code>true</code>, Control UI/WebSocket auth can use Tailscale identity headers (<code>tailscale-user-login</code>) without supplying a token/password. OpenClaw verifies the identity by resolving the <code>x-forwarded-for</code> address via the local Tailscale daemon (<code>tailscale whois</code>) and matching it to the header before accepting it. OpenClaw only treats a request as Serve when it arrives from loopback with Tailscale’s <code>x-forwarded-for</code>, <code>x-forwarded-proto</code>, and <code>x-forwarded-host</code> headers. HTTP API endpoints (for example <code>/v1/*</code>, <code>/tools/invoke</code>, and <code>/api/channels/*</code>) still require token/password auth. This tokenless flow assumes the gateway host is trusted. If untrusted local code may run on the same host, disable <code>gateway.auth.allowTailscale</code> and require token/password auth instead. To require explicit credentials, set <code>gateway.auth.allowTailscale: false</code> or force <code>gateway.auth.mode: &quot;password&quot;</code>.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-4">
-          <div class="section-heading">
-            <p class="section-kicker">第 4 站</p>
-            <h2>Tailnet-only (Serve)</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Open: https://&lt;magicdns&gt;/ (or your 设置说明书ured 门口的小门卫.controlUi.basePath)”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“gateway”贴标签，意思是把它设置成“{”。</li><li>这里在给“bind”贴标签，意思是把它设置成“loopback”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json5">{
-  gateway: {
-    bind: &quot;loopback&quot;,
-    tailscale: { mode: &quot;serve&quot; },
-  },
-}</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Open: https://&lt;magicdns&gt;/ (or your 设置说明书ured 门口的小门卫.controlUi.basePath)”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Open: <code>https://&lt;magicdns&gt;/</code> (or your configured <code>gateway.controlUi.basePath</code>)</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-5">
-          <div class="section-heading">
-            <p class="section-kicker">第 5 站</p>
-            <h2>Tailnet-only (bind to Tailnet IP)</h2>
-            <p>这一节主要在解释“Tailnet-only (bind to Tailnet IP)”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“Tailnet-only (bind to Tailnet IP)”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Use this when you want the 门口的小门卫 to listen directly on the Tailnet IP (no Serve/Funnel). Connect from another Tailnet…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Use this when you want the 门口的小门卫 to listen directly on the Tailnet IP (no Serve/Funnel).”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Use this when you want the Gateway to listen directly on the Tailnet IP (no Serve/Funnel).</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“gateway”贴标签，意思是把它设置成“{”。</li><li>这里在给“bind”贴标签，意思是把它设置成“tailnet”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json5">{
-  gateway: {
-    bind: &quot;tailnet&quot;,
-    auth: { mode: &quot;token&quot;, token: &quot;your-token&quot; },
-  },
-}</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Connect from another Tailnet device:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Connect from another Tailnet device:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Tailnet-only (bind to Tailnet IP)”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Control UI: http://&lt;tailscale-ip&gt;:18789/、WebSocket: ws://&lt;tailscale-ip&gt;:18789。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Control UI: <code>http://&lt;tailscale-ip&gt;:18789/</code></li><li>WebSocket: <code>ws://&lt;tailscale-ip&gt;:18789</code></li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Note: loopback (http://127.0.0.1:18789) will **not** work in this mode.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Note: loopback (<code>http://127.0.0.1:18789</code>) will **not** work in this mode.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-6">
-          <div class="section-heading">
-            <p class="section-kicker">第 6 站</p>
-            <h2>Public internet (Funnel + shared 秘密口令)</h2>
-            <p>这一节主要在解释“Public internet (Funnel + shared 秘密口令)”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“Public internet (Funnel + shared 秘密口令)”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Prefer OPENCLAW_门口的小门卫_秘密口令 over committing a 秘密口令 to disk.”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“gateway”贴标签，意思是把它设置成“{”。</li><li>这里在给“bind”贴标签，意思是把它设置成“loopback”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json5">{
-  gateway: {
-    bind: &quot;loopback&quot;,
-    tailscale: { mode: &quot;funnel&quot; },
-    auth: { mode: &quot;password&quot;, password: &quot;replace-me&quot; },
-  },
-}</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Prefer OPENCLAW_门口的小门卫_秘密口令 over committing a 秘密口令 to disk.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Prefer <code>OPENCLAW_GATEWAY_PASSWORD</code> over committing a password to disk.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-7">
-          <div class="section-heading">
-            <p class="section-kicker">第 7 站</p>
-            <h2>CLI examples</h2>
-            <p>这一节主要在解释“CLI examples”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“CLI examples”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一句直接对 OpenClaw 说的话，就像对小助手下达任务。</p>
-        <ul class="code-steps">
-          <li>这一句是在直接叫 OpenClaw 做事：“openclaw gateway --tailscale serve”。你可以把它想成对机器人说的完整命令。</li><li>这一句是在直接叫 OpenClaw 做事：“openclaw gateway --tailscale funnel --auth password”。你可以把它想成对机器人说的完整命令。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">openclaw gateway --tailscale serve
-openclaw gateway --tailscale funnel --auth password</code></pre>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-8">
-          <div class="section-heading">
-            <p class="section-kicker">第 8 站</p>
-            <h2>Notes</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“or tailscale funnel 设置说明书uration on shutdown. the same 门口的小门卫 WS endpoint, so Serve can work for node access.”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“or tailscale funnel 设置说明书uration on shutdown.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>or <code>tailscale funnel</code> configuration on shutdown.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“the same 门口的小门卫 WS endpoint, so Serve can work for node access.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>the same Gateway WS endpoint, so Serve can work for node access.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Notes”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Tailscale Serve/Funnel requires the tails…、tailscale.mode: &quot;funnel&quot; refuses to start…、Set 门口的小门卫.tailscale.resetOnExit if you w…、门口的小门卫.bind: &quot;tailnet&quot; is a direct Tailne…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Tailscale Serve/Funnel requires the <code>tailscale</code> CLI to be installed and logged in.</li><li><code>tailscale.mode: &quot;funnel&quot;</code> refuses to start unless auth mode is <code>password</code> to avoid public exposure.</li><li>Set <code>gateway.tailscale.resetOnExit</code> if you want OpenClaw to undo <code>tailscale serve</code></li><li><code>gateway.bind: &quot;tailnet&quot;</code> is a direct Tailnet bind (no HTTPS, no Serve/Funnel).</li><li><code>gateway.bind: &quot;auto&quot;</code> prefers loopback; use <code>tailnet</code> if you want Tailnet-only.</li><li>Serve/Funnel only expose the **Gateway control UI + WS**. Nodes connect over</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-9">
-          <div class="section-heading">
-            <p class="section-kicker">第 9 站</p>
-            <h2>Browser control (remote 门口的小门卫 + local browser)</h2>
-            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>你理解的是能力边界，不只是功能名字。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“If you run the 门口的小门卫 on one machine but want to drive a browser on another machine, run a **node host** on the browser…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“If you run the 门口的小门卫 on one machine but want to drive a browser on another machine, run a **node host** on the browser…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>If you run the Gateway on one machine but want to drive a browser on another machine, run a **node host** on the browser machine and keep both on the same tailnet. The Gateway will proxy browser actions to the node; no separate control server or Serve URL needed.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Avoid Funnel for browser control; treat node pairing like operator access.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Avoid Funnel for browser control; treat node pairing like operator access.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-10">
-          <div class="section-heading">
-            <p class="section-kicker">第 10 站</p>
-            <h2>Tailscale prerequisites + limits</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Tailscale prerequisites + limits”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Serve requires HTTPS enabled for your tai…、Serve injects Tailscale identity headers;…、Funnel requires Tailscale v1.38.3+, Magic…、Funnel only supports ports 443, 8443, and…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Serve requires HTTPS enabled for your tailnet; the CLI prompts if it is missing.</li><li>Serve injects Tailscale identity headers; Funnel does not.</li><li>Funnel requires Tailscale v1.38.3+, MagicDNS, HTTPS enabled, and a funnel node attribute.</li><li>Funnel only supports ports <code>443</code>, <code>8443</code>, and <code>10000</code> over TLS.</li><li>Funnel on macOS requires the open-source Tailscale app variant.</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-11">
-          <div class="section-heading">
-            <p class="section-kicker">第 11 站</p>
-            <h2>Learn more</h2>
-            <p>这一节主要在解释“Learn more”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“Learn more”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Learn more”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Tailscale Serve overview: https://tailsca…、tailscale serve 魔法口令: https://tailscale.c…、Tailscale Funnel overview: https://tailsc…、tailscale funnel 魔法口令: https://tailscale.…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Tailscale Serve overview: <a href="https://tailscale.com/kb/1312/serve" target="_blank" rel="noreferrer">https://tailscale.com/kb/1312/serve</a></li><li><code>tailscale serve</code> command: <a href="https://tailscale.com/kb/1242/tailscale-serve" target="_blank" rel="noreferrer">https://tailscale.com/kb/1242/tailscale-serve</a></li><li>Tailscale Funnel overview: <a href="https://tailscale.com/kb/1223/tailscale-funnel" target="_blank" rel="noreferrer">https://tailscale.com/kb/1223/tailscale-funnel</a></li><li><code>tailscale funnel</code> command: <a href="https://tailscale.com/kb/1311/tailscale-funnel" target="_blank" rel="noreferrer">https://tailscale.com/kb/1311/tailscale-funnel</a></li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-    <section class="section-shell">
-      <div class="ad-placeholder">
-        <p>这里预留给未来的 Google AdSense 模块。</p>
-        <code>&lt;!-- ADSENSE_SNIPPET --&gt;</code>
-      </div>
-    </section>
-  
+      <section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>🛡 Tailscale 这页，其实是在教你：怎么给 Gateway 搭一条安全接驳车，而不是把大门直接暴露在外面</h2>
+      <p>官方想做的事很简单：Gateway 继续老老实实待在本机回环口，外面那层 HTTPS、路由和身份识别，交给 Tailscale 来接。</p>
+      <p>所以这一页最重要的不是命令本身，而是先分清三种模式：<code>serve</code>、<code>funnel</code>、<code>off</code>。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合想远程访问 Gateway 的人</span>
+      <span>先分清尾网专用接驳车和公开展台</span>
+      <a href="https://docs.openclaw.ai/gateway/tailscale" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一步</p>
+    <h2>🚍 三种模式，像三种开门方式</h2>
+    <p>别一看到 Tailscale 就想着“能远程了”。先分清你到底是给谁开门。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">🏠</span>
+      <h2><code>serve</code></h2>
+      <p>像只给自家尾网成员开的接驳车。Gateway 还待在 <code>127.0.0.1</code>，但尾网里的人能走 HTTPS 进来。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">📣</span>
+      <h2><code>funnel</code></h2>
+      <p>像把一个展台开到公网门口。风险更高，所以官方强制你至少带共享密码。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">😴</span>
+      <h2><code>off</code></h2>
+      <p>默认就是关着。没有自动 Tailscale 接驳。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🎈</span>
+      <h2>一句话</h2>
+      <p><code>serve</code> 是尾网专用接驳车，<code>funnel</code> 是公开展台。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二步</p>
+    <h2>🔐 Auth 这一段，其实是在讲“到门口以后还要怎么验票”</h2>
+    <p>用了 Tailscale，不等于就完全不要认证。官方很仔细地区分了不同场景。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label"><code>gateway.auth.mode: "token"</code></div>
+      <p>像进门时还要出示共享令牌。是最常见那种“有票才能进”。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>gateway.auth.mode: "password"</code></div>
+      <p>像大门口还要说暗号。特别是公网 Funnel，官方要求必须这样更稳。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>gateway.auth.allowTailscale: true</code></div>
+      <p>像门卫会信任 Tailscale 发来的身份牌。对 Control UI 和 WebSocket 来说，尾网身份头就能当一部分通行证。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🚫 但不是所有门都免票</div>
+      <p>官方特别提醒：HTTP API 这些门还是要 token 或 password。也就是说，Tailscale 身份头不是万能通行证。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第三步</p>
+    <h2>🏠 Tailnet-only Serve，像“楼还是锁在家里，但家人有专属接驳入口”</h2>
+    <p>这是最像官方推荐主路的用法。Gateway 自己不跑到外面去，还是待在 loopback。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>gateway: { bind: "loopback", tailscale: { mode: "serve" } }</code></div>
+      <p>像说：“大门继续锁在家里，但请 Tailscale 帮我在尾网里做一个安全前台。”</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">打开地址</div>
+      <p>官方给的意思是：之后你可以走 MagicDNS 那个 HTTPS 地址进来，而不是非要死盯本机地址。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">为什么舒服</div>
+      <p>因为 HTTPS、路由、身份头这些外层工作，都交给 Tailscale。Gateway 本体不用硬撑在公网门口。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第四步</p>
+    <h2>📍 直接绑 Tailnet IP，像“把门直接开在尾网街区”</h2>
+    <p>这不是 Serve/Funnel，而是另一种更直接的路。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>bind: "tailnet"</code></div>
+      <p>像不再通过接驳车中转，而是直接把门开在 Tailscale 那条街上。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🔑 这时更要自己带认证</div>
+      <p>官方示例里直接写了 token，因为这时候不是借 Serve 的那套包装壳了。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">⚠️ 记住那句提示</div>
+      <p>你开成 <code>tailnet</code> 以后，本机 <code>127.0.0.1</code> 那条路就不是原来那种用法了。不要还拿旧地址去试。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第五步</p>
+    <h2>📣 Funnel 像“把展台摆到公共广场上”，所以官方才死命强调密码</h2>
+    <p>只要看到 Funnel，就自动把安全警惕心拉高一档。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label"><code>tailscale: { mode: "funnel" }</code></div>
+      <p>像告诉 Tailscale：“把这个入口公开出去。”</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>auth: { mode: "password" }</code></div>
+      <p>像官方直接要求你在公开展台前再加一层口令门，不允许裸奔。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">📌 为什么文档这么凶</div>
+      <p>因为一旦到公网，你面对的就不只是自家尾网成员。官方宁愿你麻烦一点，也不让你图省事把整扇门敞开。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🏷 最好别把密码写死</div>
+      <p>官方还顺手提醒你，优先用环境变量，不要把密码直接抄在磁盘账本上。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第六步</p>
+    <h2>🛠 CLI 命令像什么？像让接驳车司机现场切模式</h2>
+    <p>这两条命令不用背参数学问，把它们看成“现场开关模式”就行。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">🚍</span>
+      <h2><code>openclaw gateway --tailscale serve</code></h2>
+      <p>像对司机说：“今天开尾网专线接驳车。”</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">📣</span>
+      <h2><code>openclaw gateway --tailscale funnel --auth password</code></h2>
+      <p>像说：“今天开公开展台，但一定把口令门也立上。”</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🧹</span>
+      <h2><code>resetOnExit</code></h2>
+      <p>像演出散场后，要不要把临时搭的展台和路标顺手拆掉。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🎈</span>
+      <h2>一句话</h2>
+      <p>命令不是玄学，就是在切换接驳模式。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第七步</p>
+    <h2>🧷 前置条件和限制，像“这条接驳车不是哪里都能开”</h2>
+    <p>官方最后列了一堆前提，别嫌烦。这些通常就是为什么你照抄却跑不起来的根源。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label">Serve 要求</div>
+      <p>得先有 Tailscale CLI，而且它已经登录。HTTPS、MagicDNS 这些基础设施也得就位。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">Funnel 更挑</div>
+      <p>版本、端口、节点属性、macOS 应用形态都有限制。它不是“随便一台机器都能开公开展台”。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">浏览器控制建议</div>
+      <p>如果 Gateway 和浏览器不在同一台机器，官方更建议用 node host 代理浏览器动作，不要把 Funnel 当万能遥控器。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">最后总结</p>
+    <h2>🎈 把 Tailscale 这页压成一句最好记的话</h2>
+    <p>最舒服的主路通常是 <code>serve</code>：Gateway 继续缩在本地回环口，Tailscale 帮你做安全接驳。<code>funnel</code> 是公开展台，只适合你真的知道自己在把什么暴露到外面时再开。</p>
+  </div>
+  <div class="ad-placeholder">
+    <p>如果你下一步还是要继续抠字段，那就回配置参考页；如果你准备实际远程连上控制台，就从 Serve 模式先试。</p>
+  </div>
+</section>
+
 
       <footer class="page-footer">
         <div>

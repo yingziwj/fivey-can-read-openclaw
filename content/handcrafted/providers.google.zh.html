@@ -1,0 +1,145 @@
+<section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>🌈 Google 这页，其实是在说：Gemini 不只是会聊天，它还是个会看图、听音、看视频、上网找资料的多面手</h2>
+      <p>官方这页最重要的，不是背命令，而是看懂 Google 这条线为什么特别。它不是只有一个“文字脑”，它更像一个多才多艺的大脑工具箱。</p>
+      <p>接法主要还是 API key。那条 Gemini CLI 的 OAuth 路线，官方专门提醒过：它是非官方小路，有风险。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合想把 Gemini 接进 OpenClaw 的人</span>
+      <span>先走 API key 主路，再理解它的多模态能力</span>
+      <a href="https://docs.openclaw.ai/providers/google" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一步</p>
+    <h2>🔑 主路还是 API key：先把 Gemini 的门票交出去</h2>
+    <p>Google 这页的主路非常直接。你给 key，OpenClaw 就能去找 Gemini。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">🛠</span>
+      <h2><code>openclaw onboard --auth-choice google-api-key</code></h2>
+      <p>像在向导里明确说：“我要接 Gemini，请收下 API key。”</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">📦</span>
+      <h2><code>GEMINI_API_KEY</code> / <code>GOOGLE_API_KEY</code></h2>
+      <p>这两个像同一串钥匙的两个标签。官方允许你拿这两种名字中的任意一种来交钥匙。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🧭</span>
+      <h2>默认模型</h2>
+      <p><code>google/gemini-3.1-pro-preview</code> 像“先请 Gemini 家里这位比较全能的大老师来值班”。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">⚡</span>
+      <h2>非交互式命令</h2>
+      <p>那条带 <code>--gemini-api-key</code> 的命令，像你把登记卡一次填完，适合脚本和自动部署。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二步</p>
+    <h2>🎨 Gemini 的厉害之处，不是只会聊天，而是“感官很多”</h2>
+    <p>官方把能力表列得很平，但真正好懂的说法是：Gemini 不是只会读字，它还有眼睛、耳朵，还会出去帮你找资料。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">💬 Chat completions</div>
+      <p>会聊天，这是最基础的一项。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🖼 Image generation / understanding</div>
+      <p>既能看图，也能画图。像又会欣赏画，又能自己动手画。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🎧 Audio / 🎬 Video</div>
+      <p>会听声音、也能看视频。像不只是会读信，还能看录像、听录音。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🌍 Web search grounding</div>
+      <p>像它不只靠脑内记忆，还能真的跑出去查资料，再把答案带回来。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第三步</p>
+    <h2>🧠 Thinking / reasoning，就是“Gemini 会不会多想几步”</h2>
+    <p>官方表格最后一列写的是支持 thinking/reasoning。翻成人话，就是 Gemini 3.1 往上，已经不只是会答，还会更认真推理。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">🧩 普通回答</div>
+      <p>像有人问你现在几点，你看一眼就答。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🔍 reasoning</div>
+      <p>像有人给你一道绕一点的题，你要先摆积木、排步骤、再出答案。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">📌 这里别想歪</div>
+      <p>这不是说“Google 页又有一套特殊命令”，而是在提醒你：Gemini 这类模型本身就带更强的推理能力。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 一句话</div>
+      <p>Gemini 不只是多模态，还会思考。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第四步</p>
+    <h2>🪪 那条 OAuth 小路，像“借别的证件进门”，官方没有把它当主路</h2>
+    <p>Google 这页专门把 <code>google-gemini-cli</code> 拎出来说，是因为它跟 API key 不是一回事。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>google-gemini-cli</code></div>
+      <p>像借 Gemini CLI 的 OAuth 身份来进门，而不是拿正式 API key。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">⚠️ 为什么官方提醒“有风险”</div>
+      <p>因为这条不是最稳、最标准、最被官方公开扶正的路线。有用户会碰到账户限制，所以文档明确叫你自己承担风险。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>OPENCLAW_GEMINI_OAUTH_CLIENT_ID</code></div>
+      <p>这些环境变量像你要先准备一整套 OAuth 证件材料，不像 API key 那么直截了当。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 真正建议</div>
+      <p>如果你只是想把 Google 接稳，先走 API key 主路。别一上来就钻旁门。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第五步</p>
+    <h2>🏠 还是那句老话：后台值班的 Gateway 也得摸得到钥匙</h2>
+    <p>官方每个 provider 页都反复提醒这一句，不是啰嗦，而是这真的是最常见坑。</p>
+  </div>
+  <div class="ad-placeholder">
+    <p><code>GEMINI_API_KEY</code> 放在你当前终端里，不代表守护进程也能看到。真正长期跑的 Gateway，要把钥匙放到它也能拿到的地方，比如 <code>~/.openclaw/.env</code> 或对应的环境导入配置。</p>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">最后总结</p>
+    <h2>🎈 把 Google 这页压成一句最好记的话</h2>
+    <p>Gemini 这条线最值钱的地方，是一把 API key 能接上一个会聊天、会看图、会听音、会看视频、还会出去查资料的多面手；CLI OAuth 那条路只是旁路，不是主路。</p>
+  </div>
+  <div class="ad-placeholder">
+    <p>如果你想看“一把钥匙连很多模型商店”的玩法，接着看 OpenRouter 会很顺。</p>
+  </div>
+</section>

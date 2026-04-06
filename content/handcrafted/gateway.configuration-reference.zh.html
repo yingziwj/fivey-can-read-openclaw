@@ -1,0 +1,171 @@
+<section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>📚 <code>Configuration Reference</code> 不是故事书，它是“超大字段字典”</h2>
+      <p>这一页最大的问题不是内容少，而是内容太多。正确读法绝对不是从第一页读到最后一页，而是先知道自己要查什么，再把它当字典翻。</p>
+      <p>所以这页真正该教你的，不是每个字段，而是“怎么不被淹死”。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合已经知道自己要查什么的人</span>
+      <span>把它当字段字典，不要当睡前故事整本看</span>
+      <a href="https://docs.openclaw.ai/gateway/configuration-reference" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一件事</p>
+    <h2>🧭 这页的正确打开方式：先带问题来，再翻对应抽屉</h2>
+    <p>如果你只是想“开始配置”，先回去看配置总览或配置样例。这一页更像图书馆索引柜。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">🚪</span>
+      <h2>我要配 Telegram / Slack</h2>
+      <p>就翻 <code>Channels</code> 这一大组里对应的门。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🧠</span>
+      <h2>我要查模型字段</h2>
+      <p>就去模型、provider、agent 默认值那几格里找。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🔐</span>
+      <h2>我要藏 API key</h2>
+      <p>就翻 <code>env</code>、SecretRef、secrets providers 这些抽屉。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🎈</span>
+      <h2>一句话</h2>
+      <p>先问自己“我要查哪块”，再翻字典，不要整本硬吞。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二件事</p>
+    <h2>🚪 Channels 这一大块，核心其实只有三个门卫问题</h2>
+    <p>虽然这部分列了很多 provider，但一开始你只要先盯住三个问题。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">谁能私聊进门？</div>
+      <p><code>dmPolicy</code> 就是在决定陌生人先配对、只看白名单、全部放行，还是完全不理。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">群里谁能叫到我？</div>
+      <p><code>groupPolicy</code>、<code>groupAllowFrom</code>、<code>requireMention</code> 这些是在管群聊门卫。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">这扇门默认请哪位老师值班？</div>
+      <p><code>modelByChannel</code> 像给不同门口贴不同老师值班表。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 先别陷进去</div>
+      <p>你不需要先会背 Slack、Telegram、Discord 全字段。先会看“门卫规则、提及规则、默认老师”就够用了。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第三件事</p>
+    <h2>🧱 字段参考最容易让人犯的错，是把“举例”当“必须全写”</h2>
+    <p>官方这一页列的很多大对象，都像把柜子里的所有抽屉一口气拉开给你看。那不代表你每个抽屉都要先塞东西。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label">例如 Telegram</div>
+      <p><code>botToken</code>、<code>groups</code>、<code>retry</code>、<code>network</code>、<code>webhookUrl</code> 都列出来了，但你并不是第一次接 Telegram 就要每个都写。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">例如 Discord</div>
+      <p>动作权限、线程绑定、语音、presence、组件配色全在这页，但多数人刚开始只会用其中一小块。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">正确心法</div>
+      <p>把大对象当“这间房可以摆哪些家具”的清单，不是“交房前必须买齐”。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第四件事</p>
+    <h2>🗣 DM policy 和 group policy，真的值得单独记住</h2>
+    <p>因为几乎所有通道都会遇到这套门卫语言。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">🤝</span>
+      <h2><code>pairing</code></h2>
+      <p>陌生人先拿一次性配对码，像先在门口登记。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">📋</span>
+      <h2><code>allowlist</code></h2>
+      <p>只有名单上的人能进。像门卫手里拿着白名单。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🌐</span>
+      <h2><code>open</code></h2>
+      <p>谁都能进。像把门敞开，但通常也要配合 <code>["*"]</code> 这种明确表态。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🚫</span>
+      <h2><code>disabled</code></h2>
+      <p>这扇门直接不接客。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第五件事</p>
+    <h2>🔐 SecretRef 这一类字段，读法是“别把宝藏直接贴墙上”</h2>
+    <p>这一页后面那些 <code>source: "env" | "file" | "exec"</code>，看起来像新术语，其实都在说秘密怎么藏。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label"><code>source: "env"</code></div>
+      <p>像藏宝图指向环境变量抽屉。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>source: "file"</code></div>
+      <p>像藏宝图指向另一份秘密文件。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>source: "exec"</code></div>
+      <p>像去问一个外部保险箱管理员，让它现场把秘密吐出来。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">📌 为什么这很重要</div>
+      <p>因为 API key、token、password 这种东西，本来就不该大剌剌写在最显眼的总账本正文里。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第六件事</p>
+    <h2>⚠️ 参考页最适合拿来“纠错”，不是拿来“开局”</h2>
+    <p>什么时候最该来这里？当你知道大概想做什么，但拼写、路径、字段名拿不准的时候。</p>
+  </div>
+  <div class="ad-placeholder">
+    <p>比如你已经知道要配 Telegram 群聊提及规则，只是不确定 <code>requireMention</code> 写在哪层、<code>topics</code> 怎么挂、<code>defaultAccount</code> 应该放哪。这种时候，参考页特别好用。</p>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">最后总结</p>
+    <h2>🎈 把配置参考页压成一句最好记的话</h2>
+    <p>它是字段字典，不是入门课。先知道自己要查哪个抽屉，再来翻这一页，才不会淹在参数海里。</p>
+  </div>
+  <div class="ad-placeholder">
+    <p>如果你接下来想把 Gateway 放进 Tailscale 里，用更舒服的远程入口去开控制台，下一页就看 Tailscale。</p>
+  </div>
+</section>

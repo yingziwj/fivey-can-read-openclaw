@@ -1,0 +1,242 @@
+<section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>🧠 Anthropic 这页，其实是在问：你想拿钥匙进 Claude 家，还是直接把家里的 Claude 柜台接进来？</h2>
+      <p>官方这一页看起来东西很多，其实只有三条主要路。第一条是 API key，像拿正式钥匙进门。第二条是 setup-token，像拿订阅门票。第三条是 Claude CLI，像你家里已经有一个 Claude 柜台，OpenClaw 直接过去接线。</p>
+      <p>后面那些 <code>thinking</code>、<code>/fast</code>、缓存、1M 上下文，看着吓人，其实都只是“门已经开了以后，这位 Claude 老师要怎么工作”。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合正在接 Claude 的人</span>
+      <span>先选进门方式，再决定要不要开加速、缓存和长上下文</span>
+      <a href="https://docs.openclaw.ai/providers/anthropic" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一步</p>
+    <h2>🚪 先分清三条路，不然后面会越看越乱</h2>
+    <p>Anthropic 这页最容易把人绕晕的地方，就是把三条路线混在一起看。其实它们各管各的。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">🔑 API key</div>
+      <p>像正规的公司钥匙。最稳，最适合长期值班，按量计费也最清楚。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🎟 setup-token</div>
+      <p>像 Claude 订阅票。能进门，但更像“拿票刷卡”，不是万能总钥匙。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🖥 Claude CLI</div>
+      <p>像你家电脑上已经有 Claude 柜台，OpenClaw 不再自己去 API 大楼排队，而是直接请这台本地柜台出手。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 一句话收住</div>
+      <p>API key 是正式钥匙，setup-token 是订阅门票，Claude CLI 是把本地柜台接进来。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二步</p>
+    <h2>🔑 如果你走 API key 路线，重点就是“把钥匙放稳”</h2>
+    <p>官方其实最推荐这条给长期运行的 Gateway。因为它最直接，最像一把固定门卡。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">🧭</span>
+      <h2>适合谁</h2>
+      <p>想稳定跑、想自己看账单、想少一点奇怪门禁的人，先走这条。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🛠</span>
+      <h2><code>openclaw onboard</code></h2>
+      <p>像带你走一遍登记台，最后选择 “Anthropic API key”。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">⚡</span>
+      <h2><code>openclaw onboard --anthropic-api-key "$ANTHROPIC_API_KEY"</code></h2>
+      <p>像你已经把钥匙握在手里了，不走问答，直接塞给系统。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">📦</span>
+      <h2><code>env: { ANTHROPIC_API_KEY: "sk-ant-..." }</code></h2>
+      <p>像把钥匙放进固定钥匙盒，方便 Gateway 以后自己拿。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第三步</p>
+    <h2>🤔 <code>thinking</code> 在说什么？它像 Claude 的“思考帽”</h2>
+    <p>Claude 4.6 这里有个很关键的默认行为：如果你没特别说，它会自己决定要戴多厚的思考帽。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">🎩 adaptive</div>
+      <p>像 Claude 自己看题目难不难，再决定要不要认真想久一点。不是死板固定。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>/think:&lt;level&gt;</code></div>
+      <p>像你在现场跟它说：“这一题你多想一点”或者“别想太久”。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>agents.defaults.models["anthropic/&lt;model&gt;"].params.thinking</code></div>
+      <p>像在后台总账本里给这位 Claude 老师预先设好思考档位，之后每次来都先按这个习惯工作。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 这一段别误会</div>
+      <p>它不是在介绍一个新模型，而是在说同一个模型要不要多想、少想、自己判断着想。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第四步</p>
+    <h2>⚡ <code>/fast</code> 不是换脑子，而是让 Claude 换跑法</h2>
+    <p>这一段最容易被误读成“又一种新模型”。其实不是。它更像给同一个 Claude 按下加速键。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label"><code>/fast on</code></div>
+      <p>像跟前台说：“这次先给我走快车道。”官方把它映射到 <code>service_tier: "auto"</code>。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>/fast off</code></div>
+      <p>像说：“别抢快车道了，走普通排队线。”也就是 <code>service_tier: "standard_only"</code>。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🚧 这几个限制要记住</div>
+      <p>它只对 API key 路线生效。setup-token、OAuth 不吃这套。如果你把 Anthropic 请求又转发到别的代理门口，OpenClaw 也不会强行替你塞这个加速标签。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>params: { fastMode: true }</code></div>
+      <p>像给某个模型默认贴上“优先走快一点”的小纸条。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第五步</p>
+    <h2>🗂 Prompt caching 像“把刚用过的草稿纸先留在桌上”</h2>
+    <p>这一段讲的是缓存，不是记忆永生。别把它想得太玄。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label"><code>none</code></div>
+      <p>不用缓存。像每次都把桌面清空重来。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>short</code></div>
+      <p>留 5 分钟。像刚才写过的草稿先别扔，也许马上还要接着看。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>long</code></div>
+      <p>留 1 小时。像把草稿夹进文件夹里，今天这一阵子都先别丢。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">📌 这段最关键的话</div>
+      <p>Anthropic API key 路线默认就会给你一个 <code>short</code>。也就是说，OpenClaw 默认会先帮你把刚写过的草稿留 5 分钟。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第六步</p>
+    <h2>📜 1M context 像“超长卷轴模式”，但不是每张票都能开</h2>
+    <p>官方这里很认真地提醒你：这不是普通设置，而是测试中、带门槛的超长上下文模式。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">📏</span>
+      <h2><code>params.context1m: true</code></h2>
+      <p>像明确告诉系统：“这次我要展开超长卷轴。”不写就不会自动开。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🚫</span>
+      <h2>为什么会报 429</h2>
+      <p>像你想租超大会议室，但手上的票不够资格。官方明确说，没开通额外长上下文权限就会被拒。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">⚠️</span>
+      <h2>OAuth 票更受限</h2>
+      <p>官方还专门说了：OAuth / 订阅票目前不会走这个 1M beta 头。也就是这条票路本身就不支持这扇门。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🎈</span>
+      <h2>一句话</h2>
+      <p>1M context 是超长卷轴，不是默认纸张；先确认你的凭证够不够格。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第七步</p>
+    <h2>🖥 Claude CLI 这条路，像“把本地 Claude 柜台接到 OpenClaw 总机”</h2>
+    <p>这部分很重要，因为它根本不是 Anthropic API。它是另外一条本地柜台路线。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">1. OpenClaw 启动本地 <code>claude</code></div>
+      <p>像请家里已经装好的 Claude 柜台开张。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">2. 第一次对话会建一个 session</div>
+      <p>像第一次领一张会话号牌。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">3. 后续对话会继续沿用这张号牌</div>
+      <p>像你下次回来，不重新排队，而是拿着旧号牌继续办业务。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">📌 适合什么场景</div>
+      <p>更适合一台个人 Gateway 主机，已经装好并登录过 Claude CLI 的情况。它不是给多人共享计费场景准备的。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第八步</p>
+    <h2>🎟 setup-token 路线，像“先去 Claude Code 机器上打一张票，再拿回来刷”</h2>
+    <p>这条路线不是在 Anthropic Console 里拿钥匙，而是从 Claude Code CLI 那边拿票。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>claude setup-token</code></div>
+      <p>像去发票机前打一张新的订阅票。这个动作可以在任何机器上做。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw models auth setup-token --provider anthropic</code></div>
+      <p>像你站在 Gateway 主机前，直接把票塞进 Anthropic 的票夹里。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw models auth paste-token --provider anthropic</code></div>
+      <p>像票是在别处打出来的，你现在把它抄回来，再贴到 Gateway 主机上。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">⚠️ 官方真正想提醒什么</div>
+      <p>setup-token 还支持，但它不是最稳、最适合所有情况的主路。遇到失效、刷新失败之类的问题，也优先想到重新拿票。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">最后总结</p>
+    <h2>🎈 把 Anthropic 这页压成一句最好记的话</h2>
+    <p>先选进门方式：API key、setup-token，还是 Claude CLI。选完以后，再去决定 Claude 要戴多厚的思考帽、要不要走快车道、要不要把草稿纸多留一会儿、要不要展开超长卷轴。</p>
+  </div>
+  <div class="ad-placeholder">
+    <p>如果你下一步最怕“票失效、钥匙失踪、为什么又 429”，接着看网关排障页会最顺。</p>
+  </div>
+</section>

@@ -1,0 +1,189 @@
+<section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>🏠 <code>Configuration Examples</code> 像“样板房大街”：不是让你全搬，而是教你怎么抄得聪明</h2>
+      <p>这一页不是定义字典，也不是概念课。它就是在给你看几套现成装修样板：最小能住版、推荐起步版、展开全配版，以及几个常见场景版。</p>
+      <p>所以这页的正确读法不是从头背到尾，而是先找“哪一套最像我家”，然后先抄一小块，再慢慢改。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合想直接抄配置的人</span>
+      <span>把样板房当模板，不要当圣经整本照抄</span>
+      <a href="https://docs.openclaw.ai/gateway/configuration-examples" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一套</p>
+    <h2>🪑 Absolute minimum 像“先放一张桌子，先开一扇门”</h2>
+    <p>官方第一套最小样板特别值得学，因为它在教你：系统能开张，不需要先塞满整栋楼。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>agent: { workspace: "~/.openclaw/workspace" }</code></div>
+      <p>像先摆好一张工作桌。老师至少要有个地方放东西。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>channels: { whatsapp: { allowFrom: ["+15555550123"] } }</code></div>
+      <p>像只开 WhatsApp 这一扇门，并只让一个号码先试进来。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">为什么这套好</div>
+      <p>因为它让你先把“一件事能跑通”这件事做成，再说别的。不是一上来把所有房间都装修。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二套</p>
+    <h2>🌟 Recommended starter 像“可以真正住进去的第一版小房子”</h2>
+    <p>这一套在最小版基础上，多了身份、默认模型和群聊提及规则，所以更像可长期住的起步房。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">🙂</span>
+      <h2>identity</h2>
+      <p>像给你的机器人起名字、定人设、选表情，不再只是一个没脸没名的小黑盒。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🧠</span>
+      <h2><code>model.primary</code></h2>
+      <p>像明确请一位默认老师长期坐班。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">👆</span>
+      <h2><code>groups: { "*": { requireMention: true } }</code></h2>
+      <p>像写一块牌子：“群里请先点名，再找我说话。”</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🎈</span>
+      <h2>这一套适合谁</h2>
+      <p>大多数第一次正式搭自己的 OpenClaw，都该从这套气质出发。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第三套</p>
+    <h2>🏘 Expanded example 像“看一整条样板房街”</h2>
+    <p>这部分很长，但别硬吞。它不是让你整块照搬，而是在展示“楼里还能加哪些房间”。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">🔐 env / auth</div>
+      <p>像钥匙间和门禁册。不同 provider 的钥匙、登录档案，放在这类区块里。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🪪 identity / logging / messages</div>
+      <p>像门牌名、监控记录、说话风格这些基础生活设施。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🧰 tools / media / sandbox</div>
+      <p>像工具间、影音室、隔离实验室。高级一点，但都很实用。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🚦 routing / session / gateway / hooks / cron</div>
+      <p>像楼里的交通规则、记忆规则、总开关室、门铃系统和定时广播系统。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第四套</p>
+    <h2>🌉 Multi-platform setup 像“同一位老师开了好多扇门”</h2>
+    <p>WhatsApp、Telegram、Discord 一起上，不是在变复杂，而是在说：同一位 OpenClaw 可以同时守多扇门。</p>
+  </div>
+  <div class="ad-placeholder">
+    <p>但样板也顺手在提醒你：不同门的 ID 规则都不一样。手机号、用户 ID、频道 ID，别拿错门牌号。</p>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第五套</p>
+    <h2>🔒 Secure DM mode 像“不要让不同来访者共用同一本谈话笔记”</h2>
+    <p>这一套特别重要，因为它讲的是多用户私聊时最容易踩的大坑。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>session: { dmScope: "per-channel-peer" }</code></div>
+      <p>像给每个来访者单独准备一本笔记本。这样 A 来问的问题，不会和 B 的上下文搅在一起。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">什么时候一定该开</div>
+      <p>只要不止一个人能私聊你的 bot，就该优先考虑这套。共享 DM 上下文很容易串味。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 最短记法</div>
+      <p>多人 DM，不要共用一本谈话本。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第六套</p>
+    <h2>🔁 OAuth + API key failover 像“先刷会员卡，不行再掏备用钥匙”</h2>
+    <p>这一类样板的价值，不是字段本身，而是思路：一条路不通时，系统可以换下一条认证路继续走。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">🪪 OAuth 在前</div>
+      <p>像先试账号票，省事、顺手。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🔑 API key 在后</div>
+      <p>像会员卡刷不过时，再掏正式钥匙补上。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>auth.order</code></div>
+      <p>像在门禁本上写明“先试哪张卡，再试哪把钥匙”的顺序表。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第七套</p>
+    <h2>🏢 Work bot / local models only，这些都是“不同房型”</h2>
+    <p>后面几套看着五花八门，其实只是不同用途的房型样板。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">💼</span>
+      <h2>Work bot</h2>
+      <p>像办公室用房。门更少、权限更严、语气更专业。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🏠</span>
+      <h2>Local models only</h2>
+      <p>像完全在自己家里做饭，不叫外卖。全部靠本地模型厨房。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🧪</span>
+      <h2>Anthropic + fallback 例子</h2>
+      <p>像主厨是 Claude，备选厨师是别的平台模型。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🎈</span>
+      <h2>真正要学的</h2>
+      <p>不是背每一套，而是学会“从哪一套开始抄最省力”。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">最后总结</p>
+    <h2>🎈 把配置样例页压成一句最好记的话</h2>
+    <p>这一页是样板房大街。先找最像你家的那一套，抄最小可用的一块，先住进去，再慢慢加家具。别把整条街一起搬回家。</p>
+  </div>
+  <div class="ad-placeholder">
+    <p>如果你下一步想知道某个字段到底能填什么、拼写到底怎么写，再去看配置参考大全。</p>
+  </div>
+</section>
