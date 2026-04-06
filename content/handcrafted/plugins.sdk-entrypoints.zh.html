@@ -1,0 +1,71 @@
+<section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>🪟 Entry Points，就是插件的“正门”</h2>
+      <p>这页讲的是插件从哪里开始被 OpenClaw 找到。入口写对了，系统才知道先推哪扇门。</p>
+      <p>你可以把 entry point 想成房子的前门牌号。门牌写错，快递员就会先绕晕。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合先搞懂插件从哪开始被发现</span>
+      <span>重点是 package.json、manifest 和 subpath</span>
+      <a href="https://docs.openclaw.ai/plugins/sdk-entrypoints" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一站</p>
+    <h2>🚪 入口不是装饰，是“从哪里开始读”</h2>
+    <p>官方讲 entry points 的目的，是让你别把代码写好了，却忘了告诉系统先看哪一页。</p>
+  </div>
+  <div class="story-grid">
+    <div class="home-card">
+      <span class="home-card-index">📦</span>
+      <h2><code>package.json</code></h2>
+      <p>像包裹外面的总标签，告诉系统入口在哪。</p>
+    </div>
+    <div class="home-card">
+      <span class="home-card-index">🪪</span>
+      <h2>manifest</h2>
+      <p>像身份证，写明你是谁、能干嘛、该从哪开始认你。</p>
+    </div>
+    <div class="home-card">
+      <span class="home-card-index">🧭</span>
+      <h2>subpath</h2>
+      <p>像门牌里的楼层号，入口不一定只有一个。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二站</p>
+    <h2>🛠 入口相关的配置，像“先把正门、侧门、后门都标好”</h2>
+    <p>这页的代码示例，核心是在告诉系统：我的插件在哪个文件起步，哪些导出可以被读到。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label">`exports` / `imports`</div>
+      <p>像在地图上画箭头，告诉系统该往哪条小路走。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">`openclaw.plugin.json`</div>
+      <p>像在门口贴上“从这儿进”的说明牌。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">`definePluginEntry`</div>
+      <p>像正式登记门牌，让系统把这扇门收进清单里。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">最后记住</p>
+    <h2>🎈 Entry points 不是细节，它是“先从哪里开始看你”</h2>
+    <p>入口一旦不清楚，后面再漂亮的插件也会像没有门牌的房子，别人找不到。</p>
+  </div>
+</section>
+

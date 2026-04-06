@@ -1,0 +1,71 @@
+<section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>🏗 Plugin Internals，就是插件肚子里那张路线图</h2>
+      <p>这页讲的是插件内部怎么拼起来：入口、注册、生命周期、能力、运行时。</p>
+      <p>它不是单页功能说明，而是整个插件系统的“骨架图”。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合想看插件内部怎么连线的人</span>
+      <span>重点是生命周期、注册流程、和能力边界</span>
+      <a href="https://docs.openclaw.ai/plugins/architecture" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一站</p>
+    <h2>🧩 插件不是一块代码，而是一整套“从报到到上岗”的流程</h2>
+    <p>官方把内部结构摊开，是为了让你知道：插件真正运行时，哪些步骤先发生，哪些步骤后发生。</p>
+  </div>
+  <div class="story-grid">
+    <div class="home-card">
+      <span class="home-card-index">🪪</span>
+      <h2>身份</h2>
+      <p>先登记自己是谁。</p>
+    </div>
+    <div class="home-card">
+      <span class="home-card-index">🧰</span>
+      <h2>能力</h2>
+      <p>再说明自己能做什么。</p>
+    </div>
+    <div class="home-card">
+      <span class="home-card-index">🚦</span>
+      <h2>生命周期</h2>
+      <p>最后说明什么时候启动、什么时候退出。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二站</p>
+    <h2>🛠 代码像在做什么</h2>
+    <p>这页很多图和表，其实在讲同一件事：消息进来以后，谁先看、谁后看、谁最后决定。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label">`register`</div>
+      <p>像在前台登记新员工。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">`capabilities`</div>
+      <p>像员工证上的技能标签。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">`runtime`</div>
+      <p>像上班后真的能用到的工具间。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">最后记住</p>
+    <h2>🎈 Architecture 不是为了难，而是为了让插件长得不乱</h2>
+    <p>骨架讲清楚了，后面做 manifest、runtime、testing 才不会混成一团。</p>
+  </div>
+</section>
+

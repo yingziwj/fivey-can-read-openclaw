@@ -1,0 +1,71 @@
+<section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>🧠 Building Provider Plugins，就是给 OpenClaw 再接一台“新大脑供应机”</h2>
+      <p>这页讲的是怎么让 OpenClaw 认识新的模型提供商。</p>
+      <p>像给机器人接一条新电源线：它还是那个机器人，但现在能从另一台机器那里拿到思考力。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合想接新模型供应商的人</span>
+      <span>重点是 provider 如何注册、如何拿模型、如何配置</span>
+      <a href="https://docs.openclaw.ai/plugins/sdk-provider-plugins" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一站</p>
+    <h2>🔌 Provider 插件像“换一台会思考的机器接到后面”</h2>
+    <p>官方讲 provider 不是为了炫技，而是为了让模型来源变多，系统还能保持统一。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">🧠</span>
+      <h2>拿模型</h2>
+      <p>把请求送给后面的模型服务商。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🧾</span>
+      <h2>拿配置</h2>
+      <p>像先看这台机器要什么牌子的电池和卡。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🚚</span>
+      <h2>转发请求</h2>
+      <p>OpenClaw 负责排队，provider 负责送达。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二站</p>
+    <h2>🛠 代码像在做什么</h2>
+    <p>示例代码里最重要的不是语法，而是“先登记，再返回模型，最后把回应送回来”。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label">`registerProvider(...)`</div>
+      <p>像在前台登记“我是一台新的大脑供应机”。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">`generate(...)`</div>
+      <p>像让这台机器开始真正想问题。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">`apiKey` / `baseUrl`</div>
+      <p>像电源插头和门牌号，连错了就找不到机器。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">最后记住</p>
+    <h2>🎈 Provider 插件的本质，就是“让 OpenClaw 会找新脑子”</h2>
+    <p>这一页看懂后，你就知道 provider 不是单纯换名字，而是把模型供应这件事接成统一门口。</p>
+  </div>
+</section>
+

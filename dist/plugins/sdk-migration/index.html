@@ -3970,536 +3970,75 @@
   
       </div>
 
-      
-    <section class="section-shell">
-      <div class="overview-card">
-        <div>
-          <p class="section-kicker">先听这页的人话版</p>
-          <h2>Plugin SDK Migration</h2>
-          <p>这一页像一本关于“新本领插件 SDK Migration”的小绘本，它先告诉我们这位机器人朋友会做什么，再一步一步解释什么时候该这样做。 你可以先把它想成：新本领插件 SDK Migration。</p>
-          <p>如果把这页当成“给普通人看的版本”，你最应该带走的是：它到底在教你一件什么事、什么时候要这样做、以及哪里最容易踩坑。</p>
-        </div>
-        <div class="overview-meta">
-          <span>原始路径：/plugins/sdk-migration</span>
-          <span>章节数量：8</span>
-          <a href="https://docs.openclaw.ai/plugins/sdk-migration" target="_blank" rel="noreferrer">查看原文</a>
-        </div>
-      </div>
-    </section>
-    
-        <section class="section-shell" id="section-1">
-          <div class="section-heading">
-            <p class="section-kicker">第 1 站</p>
-            <h2>Start Here</h2>
-            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>你理解的是能力边界，不只是功能名字。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“新本领插件 SDK Migration OpenClaw has moved from a broad backwards-compatibility layer to a modern 新本领插件 architecture with f…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“新本领插件 SDK Migration”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p># Plugin SDK Migration</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“OpenClaw has moved from a broad backwards-compatibility layer to a modern 新本领插件 architecture with focused, documented i…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>OpenClaw has moved from a broad backwards-compatibility layer to a modern plugin architecture with focused, documented imports. If your plugin was built before the new architecture, this guide helps you migrate.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-2">
-          <div class="section-heading">
-            <p class="section-kicker">第 2 站</p>
-            <h2>What is changing</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“The old 新本领插件 system provided two wide-open surfaces that let 新本领插件s import anything they needed from a single entry po…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“The old 新本领插件 system provided two wide-open surfaces that let 新本领插件s import anything they needed from a single entry po…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>The old plugin system provided two wide-open surfaces that let plugins import anything they needed from a single entry point:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“helpers. It was introduced to keep older hook-based 新本领插件s working while the new 新本领插件 architecture was being built.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>helpers. It was introduced to keep older hook-based plugins working while the new plugin architecture was being built.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“host-side helpers like the embedded 机器人朋友 runner.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>host-side helpers like the embedded agent runner.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“What is changing”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：**openclaw/新本领插件-sdk/compat** — a single…、**openclaw/extension-对话接口** — a bridge th…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>**<code>openclaw/plugin-sdk/compat</code>** — a single import that re-exported dozens of</li><li>**<code>openclaw/extension-api</code>** — a bridge that gave plugins direct access to</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Both surfaces are now **deprecated**. They still work at runtime, but new 新本领插件s must not use them, and existing 新本领插件s…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Both surfaces are now **deprecated**. They still work at runtime, but new plugins must not use them, and existing plugins should migrate before the next major release removes them.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Warning&gt; The backwards-compatibility layer will be removed in a future major release. 新本领插件s that still import from th…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>&lt;Warning&gt; The backwards-compatibility layer will be removed in a future major release. Plugins that still import from these surfaces will break when that happens. &lt;/Warning&gt;</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-3">
-          <div class="section-heading">
-            <p class="section-kicker">第 3 站</p>
-            <h2>Why this changed</h2>
-            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>你理解的是能力边界，不只是功能名字。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“The old approach caused problems: The modern 新本领插件 SDK fixes this: each import path (openclaw/新本领插件-sdk/\&lt;subpath\&gt;) is…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“The old approach caused problems:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>The old approach caused problems:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Why this changed”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：**Slow startup** — importing one helper l…、**Circular dependencies** — broad re-expo…、**Unclear 对话接口 surface** — no way to tell…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>**Slow startup** — importing one helper loaded dozens of unrelated modules</li><li>**Circular dependencies** — broad re-exports made it easy to create import cycles</li><li>**Unclear API surface** — no way to tell which exports were stable vs internal</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“The modern 新本领插件 SDK fixes this: each import path (openclaw/新本领插件-sdk/\&lt;subpath\&gt;) is a small, self-contained module wi…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>The modern plugin SDK fixes this: each import path (<code>openclaw/plugin-sdk/\&lt;subpath\&gt;</code>) is a small, self-contained module with a clear purpose and documented contract.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-4">
-          <div class="section-heading">
-            <p class="section-kicker">第 4 站</p>
-            <h2>How to migrate</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Steps&gt; &lt;Step title=&quot;Find deprecated imports&quot;&gt; Search your 新本领插件 for imports from either deprecated surface: &lt;/Step&gt; &lt;S…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Steps&gt; &lt;Step title=&quot;Find deprecated imports&quot;&gt; Search your 新本领插件 for imports from either deprecated surface:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>&lt;Steps&gt; &lt;Step title=&quot;Find deprecated imports&quot;&gt; Search your plugin for imports from either deprecated surface:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;/Step&gt;”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>``<code>bash theme={&quot;theme&quot;:{&quot;light&quot;:&quot;min-light&quot;,&quot;dark&quot;:&quot;min-dark&quot;}} grep -r &quot;plugin-sdk/compat&quot; my-plugin/ grep -r &quot;openclaw/extension-api&quot; my-plugin/ </code>`` &lt;/Step&gt;</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Step title=&quot;Replace with focused imports&quot;&gt; Each export from the old surface maps to a specific modern import path:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>&lt;Step title=&quot;Replace with focused imports&quot;&gt; Each export from the old surface maps to a specific modern import path:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“```typescript theme={&quot;theme&quot;:{&quot;light&quot;:&quot;min-light&quot;,&quot;dark&quot;:&quot;min-dark&quot;}} // Before (deprecated backwards-compatibility lay…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>```typescript theme={&quot;theme&quot;:{&quot;light&quot;:&quot;min-light&quot;,&quot;dark&quot;:&quot;min-dark&quot;}} // Before (deprecated backwards-compatibility layer) import { createChannelReplyPipeline, createPluginRuntimeStore, resolveControlCommandGate, } from &quot;openclaw/plugin-sdk/compat&quot;;</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“// After (modern focused imports) import { create消息通道ReplyPipeline } from &quot;openclaw/新本领插件-sdk/消息通道-reply-pipeline&quot;; imp…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>// After (modern focused imports) import { createChannelReplyPipeline } from &quot;openclaw/plugin-sdk/channel-reply-pipeline&quot;; import { createPluginRuntimeStore } from &quot;openclaw/plugin-sdk/runtime-store&quot;; import { resolveControlCommandGate } from &quot;openclaw/plugin-sdk/command-auth&quot;; ```</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“For host-side helpers, use the injected 新本领插件 runtime instead of importing directly:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>For host-side helpers, use the injected plugin runtime instead of importing directly:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“```typescript theme={&quot;theme&quot;:{&quot;light&quot;:&quot;min-light&quot;,&quot;dark&quot;:&quot;min-dark&quot;}} // Before (deprecated extension-对话接口 bridge) impo…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>```typescript theme={&quot;theme&quot;:{&quot;light&quot;:&quot;min-light&quot;,&quot;dark&quot;:&quot;min-dark&quot;}} // Before (deprecated extension-api bridge) import { runEmbeddedPiAgent } from &quot;openclaw/extension-api&quot;; const result = await runEmbeddedPiAgent({ sessionId, prompt });</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“// After (injected runtime) const result = await 对话接口.runtime.机器人朋友.runEmbeddedPi机器人朋友({ sessionId, prompt }); ```”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>// After (injected runtime) const result = await api.runtime.agent.runEmbeddedPiAgent({ sessionId, prompt }); ```</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“The same pattern applies to other legacy bridge helpers:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>The same pattern applies to other legacy bridge helpers:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Old import Modern equivalent -------------------------- -------------------------------------------- resolve机器人朋友Dir 对话…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>| Old import | Modern equivalent | | -------------------------- | -------------------------------------------- | | <code>resolveAgentDir</code> | <code>api.runtime.agent.resolveAgentDir</code> | | <code>resolveAgentWorkspaceDir</code> | <code>api.runtime.agent.resolveAgentWorkspaceDir</code> | | <code>resolveAgentIdentity</code> | <code>api.runtime.agent.resolveAgentIdentity</code> | | <code>resolveThinkingDefault</code> | <code>api.runtime.agent.resolveThinkingDefault</code> | | <code>resolveAgentTimeoutMs</code> | <code>api.runtime.agent.resolveAgentTimeoutMs</code> | | <code>ensureAgentWorkspace</code> | <code>api.runtime.agent.ensureAgentWorkspace</code> | | session store helpers | <code>api.runtime.agent.session.*</code> | &lt;/Step&gt;</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Step title=&quot;Build and test&quot;&gt; &lt;/Step&gt; &lt;/Steps&gt;”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>&lt;Step title=&quot;Build and test&quot;&gt; ``<code>bash theme={&quot;theme&quot;:{&quot;light&quot;:&quot;min-light&quot;,&quot;dark&quot;:&quot;min-dark&quot;}} pnpm build pnpm test -- my-plugin/ </code>`` &lt;/Step&gt; &lt;/Steps&gt;</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-5">
-          <div class="section-heading">
-            <p class="section-kicker">第 5 站</p>
-            <h2>Import path reference</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Accordion title=&quot;Full import path table&quot;&gt; Import path Purpose Key exports ----------------------------------- --------…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Accordion title=&quot;Full import path table&quot;&gt; Import path Purpose Key exports ----------------------------------- --------…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>&lt;Accordion title=&quot;Full import path table&quot;&gt; | Import path | Purpose | Key exports | | ----------------------------------- | ------------------------------------------------------- | ----------------------------------------------------- | | <code>plugin-sdk/plugin-entry</code> | Canonical plugin entry helper | <code>definePluginEntry</code> | | <code>plugin-sdk/core</code> | Channel entry definitions, channel builders, base types | <code>defineChannelPluginEntry</code>, <code>createChatChannelPlugin</code> | | <code>plugin-sdk/channel-setup</code> | Setup wizard adapters | <code>createOptionalChannelSetupSurface</code> | | <code>plugin-sdk/channel-pairing</code> | DM pairing primitives | <code>createChannelPairingController</code> | | <code>plugin-sdk/channel-reply-pipeline</code> | Reply prefix + typing wiring | <code>createChannelReplyPipeline</code> | | <code>plugin-sdk/channel-config-helpers</code> | Config adapter factories | <code>createHybridChannelConfigAdapter</code> | | <code>plugin-sdk/channel-config-schema</code> | Config schema builders | Channel config schema types | | <code>plugin-sdk/channel-policy</code> | Group/DM policy resolution | <code>resolveChannelGroupRequireMention</code> | | <code>plugin-sdk/channel-lifecycle</code> | Account status tracking | <code>createAccountStatusSink</code> | | <code>plugin-sdk/channel-runtime</code> | Runtime wiring helpers | Channel runtime utilities | | <code>plugin-sdk/channel-send-result</code> | Send result types | Reply result types | | <code>plugin-sdk/runtime-store</code> | Persistent plugin storage | <code>createPluginRuntimeStore</code> | | <code>plugin-sdk/approval-runtime</code> | Approval prompt helpers | Exec/plugin approval payload and reply helpers | | <code>plugin-sdk/collection-runtime</code> | Bounded cache helpers | <code>pruneMapToMaxSize</code> | | <code>plugin-sdk/diagnostic-runtime</code> | Diagnostic gating helpers | <code>isDiagnosticFlagEnabled</code>, <code>isDiagnosticsEnabled</code> | | <code>plugin-sdk/error-runtime</code> | Error formatting helpers | <code>formatUncaughtError</code>, error graph helpers | | <code>plugin-sdk/fetch-runtime</code> | Wrapped fetch/proxy helpers | <code>resolveFetch</code>, proxy helpers | | <code>plugin-sdk/host-runtime</code> | Host normalization helpers | <code>normalizeHostname</code>, <code>normalizeScpRemoteHost</code> | | <code>plugin-sdk/retry-runtime</code> | Retry helpers | <code>RetryConfig</code>, <code>retryAsync</code>, policy runners | | <code>plugin-sdk/allow-from</code> | Allowlist formatting | <code>formatAllowFromLowercase</code> | | <code>plugin-sdk/allowlist-resolution</code> | Allowlist input mapping | <code>mapAllowlistResolutionInputs</code> | | <code>plugin-sdk/command-auth</code> | Command gating | <code>resolveControlCommandGate</code> | | <code>plugin-sdk/secret-input</code> | Secret input parsing | Secret input helpers | | <code>plugin-sdk/webhook-ingress</code> | Webhook request helpers | Webhook target utilities | | <code>plugin-sdk/webhook-request-guards</code> | Webhook body guard helpers | Request body read/limit helpers | | <code>plugin-sdk/reply-payload</code> | Message reply types | Reply payload types | | <code>plugin-sdk/provider-onboard</code> | Provider onboarding patches | Onboarding config helpers | | <code>plugin-sdk/keyed-async-queue</code> | Ordered async queue | <code>KeyedAsyncQueue</code> | | <code>plugin-sdk/testing</code> | Test utilities | Test helpers and mocks | &lt;/Accordion&gt;</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Use the narrowest import that matches the job. If you cannot find an export, check the source at src/新本领插件-sdk/ or ask…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Use the narrowest import that matches the job. If you cannot find an export, check the source at <code>src/plugin-sdk/</code> or ask in Discord.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-6">
-          <div class="section-heading">
-            <p class="section-kicker">第 6 站</p>
-            <h2>Removal timeline</h2>
-            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>你理解的是能力边界，不只是功能名字。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“When What happens ---------------------- ----------------------------------------------------------------------- **Now*…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“When What happens ---------------------- ----------------------------------------------------------------------- **Now*…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>| When | What happens | | ---------------------- | ----------------------------------------------------------------------- | | **Now** | Deprecated surfaces emit runtime warnings | | **Next major release** | Deprecated surfaces will be removed; plugins still using them will fail |</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“All core 新本领插件s have already been migrated. External 新本领插件s should migrate before the next major release.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>All core plugins have already been migrated. External plugins should migrate before the next major release.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-7">
-          <div class="section-heading">
-            <p class="section-kicker">第 7 站</p>
-            <h2>Suppressing the warnings temporarily</h2>
-            <p>这一节主要在解释“Suppressing the warnings temporarily”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“Suppressing the warnings temporarily”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Set these environment variables while you work on migrating: This is a temporary escape hatch, not a permanent solution.”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Set these environment variables while you work on migrating:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Set these environment variables while you work on migrating:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一串终端魔法口令，像按步骤按下几个按钮，让电脑开始干活。</p>
-        <ul class="code-steps">
-          <li>这一行“OPENCLAW_SUPPRESS_PLUGIN_SDK_COMPAT_WARNING=1 openclaw gateway run”是当前步骤要交给电脑的一小块提示。</li><li>这一行“OPENCLAW_SUPPRESS_EXTENSION_API_WARNING=1 openclaw gateway run”是当前步骤要交给电脑的一小块提示。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">OPENCLAW_SUPPRESS_PLUGIN_SDK_COMPAT_WARNING=1 openclaw gateway run
-OPENCLAW_SUPPRESS_EXTENSION_API_WARNING=1 openclaw gateway run</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“This is a temporary escape hatch, not a permanent solution.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>This is a temporary escape hatch, not a permanent solution.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-8">
-          <div class="section-heading">
-            <p class="section-kicker">第 8 站</p>
-            <h2>Related</h2>
-            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>你理解的是能力边界，不只是功能名字。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Related”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Getting Started — build your first 新本领插件、SDK Overview — full subpath import refere…、消息通道 新本领插件s — building 消息通道 新本领插件s、Provider 新本领插件s — building provider 新本领插件s。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><a href="/plugins/building-plugins" target="_blank" rel="noreferrer">Getting Started</a> — build your first plugin</li><li><a href="/plugins/sdk-overview" target="_blank" rel="noreferrer">SDK Overview</a> — full subpath import reference</li><li><a href="/plugins/sdk-channel-plugins" target="_blank" rel="noreferrer">Channel Plugins</a> — building channel plugins</li><li><a href="/plugins/sdk-provider-plugins" target="_blank" rel="noreferrer">Provider Plugins</a> — building provider plugins</li><li><a href="/plugins/architecture" target="_blank" rel="noreferrer">Plugin Internals</a> — architecture deep dive</li><li><a href="/plugins/manifest" target="_blank" rel="noreferrer">Plugin Manifest</a> — manifest schema reference</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-    <section class="section-shell">
-      <div class="ad-placeholder">
-        <p>这里预留给未来的 Google AdSense 模块。</p>
-        <code>&lt;!-- ADSENSE_SNIPPET --&gt;</code>
-      </div>
-    </section>
-  
+      <section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>🧳 Plugin SDK Migration，就是把旧盒子搬成新盒子</h2>
+      <p>这页讲的是升级路径。老插件不是扔掉，而是像搬家一样，先把能用的东西整理出来，再放进新的 SDK 盒子里。</p>
+      <p>官方想帮你少走弯路：先保住原来的能力，再慢慢换成新的结构。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合正在把旧插件搬到新 SDK 的人</span>
+      <span>重点是旧目录怎么映射到新插件结构</span>
+      <a href="https://docs.openclaw.ai/plugins/sdk-migration" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一站</p>
+    <h2>🚚 先别推倒重来，先把旧家的家具搬出来</h2>
+    <p>Migration 不是“从零重写”，更像把旧插件拆成几箱：目录、命令、hook、配置、测试，再一个个搬。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">📁 先看目录</div>
+      <p>哪里放 skill，哪里放 commands，哪里放 hooks，先把家当分类。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🧾 先看 manifest</div>
+      <p>旧盒子里的身份证先拿出来，看看新盒子认不认。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🧪 先跑测试</div>
+      <p>搬家后先试试门能不能开、灯能不能亮。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二站</p>
+    <h2>🛠 代码像在做什么</h2>
+    <p>官方的迁移建议，本质是把老格式翻译成新格式，而不是把功能全部推倒。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label">`openclaw.plugin.json`</div>
+      <p>像新家门口的登记表，得先写给系统看。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">`commands/` / `hooks/`</div>
+      <p>像把老抽屉里的纸条分成两沓，再按新规矩摆好。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">`pnpm test` / `pnpm check`</div>
+      <p>像搬完家后把每扇门都推一遍，确认没有卡住。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">最后记住</p>
+    <h2>🎈 Migration 的目标不是“改得很猛”，而是“搬得稳”</h2>
+    <p>这页最重要的提醒就是：先保住原能力，再慢慢换骨架。</p>
+  </div>
+</section>
+
+
 
       <footer class="page-footer">
         <div>

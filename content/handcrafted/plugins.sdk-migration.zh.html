@@ -1,0 +1,68 @@
+<section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>🧳 Plugin SDK Migration，就是把旧盒子搬成新盒子</h2>
+      <p>这页讲的是升级路径。老插件不是扔掉，而是像搬家一样，先把能用的东西整理出来，再放进新的 SDK 盒子里。</p>
+      <p>官方想帮你少走弯路：先保住原来的能力，再慢慢换成新的结构。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合正在把旧插件搬到新 SDK 的人</span>
+      <span>重点是旧目录怎么映射到新插件结构</span>
+      <a href="https://docs.openclaw.ai/plugins/sdk-migration" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一站</p>
+    <h2>🚚 先别推倒重来，先把旧家的家具搬出来</h2>
+    <p>Migration 不是“从零重写”，更像把旧插件拆成几箱：目录、命令、hook、配置、测试，再一个个搬。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">📁 先看目录</div>
+      <p>哪里放 skill，哪里放 commands，哪里放 hooks，先把家当分类。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🧾 先看 manifest</div>
+      <p>旧盒子里的身份证先拿出来，看看新盒子认不认。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🧪 先跑测试</div>
+      <p>搬家后先试试门能不能开、灯能不能亮。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二站</p>
+    <h2>🛠 代码像在做什么</h2>
+    <p>官方的迁移建议，本质是把老格式翻译成新格式，而不是把功能全部推倒。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label">`openclaw.plugin.json`</div>
+      <p>像新家门口的登记表，得先写给系统看。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">`commands/` / `hooks/`</div>
+      <p>像把老抽屉里的纸条分成两沓，再按新规矩摆好。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">`pnpm test` / `pnpm check`</div>
+      <p>像搬完家后把每扇门都推一遍，确认没有卡住。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">最后记住</p>
+    <h2>🎈 Migration 的目标不是“改得很猛”，而是“搬得稳”</h2>
+    <p>这页最重要的提醒就是：先保住原能力，再慢慢换骨架。</p>
+  </div>
+</section>
+
