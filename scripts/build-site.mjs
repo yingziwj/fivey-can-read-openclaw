@@ -328,7 +328,16 @@ const handcraftedPageMap = new Map([
   ["/web/dashboard", path.resolve("content/handcrafted/web.dashboard.zh.html")],
   ["/web/index", path.resolve("content/handcrafted/web.index.zh.html")],
   ["/web/tui", path.resolve("content/handcrafted/web.tui.zh.html")],
-  ["/web/webchat", path.resolve("content/handcrafted/web.webchat.zh.html")]
+  ["/web/webchat", path.resolve("content/handcrafted/web.webchat.zh.html")],
+  ["/nodes/index", path.resolve("content/handcrafted/nodes.index.zh.html")],
+  ["/nodes/audio", path.resolve("content/handcrafted/nodes.audio.zh.html")],
+  ["/nodes/camera", path.resolve("content/handcrafted/nodes.camera.zh.html")],
+  ["/nodes/images", path.resolve("content/handcrafted/nodes.images.zh.html")],
+  ["/nodes/location-command", path.resolve("content/handcrafted/nodes.location-command.zh.html")],
+  ["/nodes/media-understanding", path.resolve("content/handcrafted/nodes.media-understanding.zh.html")],
+  ["/nodes/talk", path.resolve("content/handcrafted/nodes.talk.zh.html")],
+  ["/nodes/troubleshooting", path.resolve("content/handcrafted/nodes.troubleshooting.zh.html")],
+  ["/nodes/voicewake", path.resolve("content/handcrafted/nodes.voicewake.zh.html")]
 ]);
 
 function asset(fileName) {
