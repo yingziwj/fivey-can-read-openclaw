@@ -3970,360 +3970,130 @@
   
       </div>
 
-      
       <section class="section-shell">
-        <div class="overview-card">
-          <div>
-            <p class="section-kicker">AI 绘本解读版</p>
-            <h2>🤖 欢迎来到 OpenClaw 的魔法聊天屋！</h2>
-            <p>这是一个叫 Matrix 的插件，能让你的机器人去一个叫 Matrix 的聊天城堡里玩。它支持悄悄话、群聊、加密信件，还有好多好玩的！</p>
-          </div>
-          <div class="overview-meta">
-            <span>原始路径：/channels/matrix</span>
-            <span>故事卡片：12 张</span>
-            <a href="https://docs.openclaw.ai/channels/matrix" target="_blank" rel="noreferrer">查看官方原文</a>
-          </div>
-        </div>
-      </section>
-      
-          <section class="section-shell" id="section-1">
-            <div class="section-heading">
-              <p class="section-kicker">第 1 站</p>
-              <h2>🎁 先拿礼物</h2>
-              <p>Matrix 是个插件，就像给你的机器人买一个新玩具。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>不装这个玩具，机器人就没法去 Matrix 城堡玩。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>玩具不在盒子里，得单独去拿。</li><li>用一条魔法咒语就能把它装进机器人的口袋里。</li><li>咒语是：openclaw plugins install @openclaw/matrix。</li><li>念完咒语，玩具就装好啦！</li></ul>
-              </div>
-              
-            <div class="source-card">
-              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
-              <ul><li>openclaw plugins install @openclaw/matrix 就像在说：&#39;机器人，快把这个叫 Matrix 的玩具装好！&#39;</li><li>念完这句，机器人就会点点头，把玩具放进它的工具箱。</li></ul>
-            </div>
-          
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>先拿玩具，才能去玩！</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-2">
-            <div class="section-heading">
-              <p class="section-kicker">第 2 站</p>
-              <h2>🔑 开门进城堡</h2>
-              <p>要进 Matrix 城堡，得先有钥匙和门牌号。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>没有钥匙，机器人连城堡的门都打不开。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>钥匙有两种：一种是密码钥匙（accessToken），一种是用户名加密码钥匙。</li><li>门牌号就是城堡的地址（homeserver URL），比如 https://matrix.example.org。</li><li>把钥匙和门牌号告诉机器人，它就能开门进去啦！</li><li>机器人进去后，你就可以在城堡里找它聊天了。</li></ul>
-              </div>
-              
-            <div class="source-card">
-              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
-              <ul><li>openclaw channels add 就像在说：&#39;机器人，我们加个新聊天屋吧！&#39;</li><li>然后它会问你：城堡地址是啥？用哪种钥匙？</li><li>你回答完，机器人就记下钥匙，准备开门。</li></ul>
-            </div>
-          
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>钥匙和地址，一个都不能少！</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-3">
-            <div class="section-heading">
-              <p class="section-kicker">第 3 站</p>
-              <h2>📜 城堡守则</h2>
-              <p>在城堡里玩，得定一些规则，比如谁能进来、怎么回话。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>有了规则，机器人就不会乱跑乱说话啦。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>可以定一条&#39;悄悄话规则&#39;：只让好朋友给你发悄悄话。</li><li>可以定一条&#39;群聊规则&#39;：只进允许的群，或者只在被@时才说话。</li><li>机器人回话时，可以决定是单独开个小话题（线程），还是在大厅里说。</li><li>这些规则都写在一张魔法纸上（配置文件）。</li></ul>
-              </div>
-              
-            <div class="source-card">
-              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
-              <ul><li>在魔法纸上写 &#39;dm: { policy: &quot;allowlist&quot; }&#39; 就像说：&#39;悄悄话只让名单上的人发！&#39;</li><li>写 &#39;groupPolicy: &quot;allowlist&quot;&#39; 就像说：&#39;群聊只进名单上的群！&#39;</li><li>机器人看到这些，就会乖乖照做。</li></ul>
-            </div>
-          
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>定好规则，玩得更开心！</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-4">
-            <div class="section-heading">
-              <p class="section-kicker">第 4 站</p>
-              <h2>🤝 机器人交朋友</h2>
-              <p>有时候，你想让两个机器人自己在城堡里聊天。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>这样它们就能互相帮忙，不用总找你。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>默认情况下，机器人会忽略其他机器人的消息，怕吵到你。</li><li>但你可以打开&#39;允许机器人聊天&#39;的开关。</li><li>开关有两种：一种是随便聊，一种是只在被@时才聊。</li><li>打开开关后，记得把群聊规则定严一点，别让它们乱跑。</li></ul>
-              </div>
-              
-            <div class="source-card">
-              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
-              <ul><li>在魔法纸上写 &#39;allowBots: &quot;mentions&quot;&#39; 就像说：&#39;机器人朋友，只有被点名时，你们才能聊天哦！&#39;</li><li>这样它们就会安静地等点名，不会瞎嚷嚷。</li></ul>
-            </div>
-          
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>机器人也能做好朋友！</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-5">
-            <div class="section-heading">
-              <p class="section-kicker">第 5 站</p>
-              <h2>🔐 魔法加密信</h2>
-              <p>在城堡里，可以给信件加上魔法锁，只有你和收信人能打开。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>这样你的悄悄话就不会被别人偷看啦！</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>魔法锁叫 E2EE（端到端加密）。</li><li>打开它，机器人就会用魔法锁保护所有悄悄话和群聊消息。</li><li>但用魔法锁前，得先&#39;验证&#39;一下，确保锁是你自己的。</li><li>验证就像对暗号：你和机器人在另一个地方（比如手机）核对一串表情或数字。</li></ul>
-              </div>
-              
-            <div class="source-card">
-              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
-              <ul><li>在魔法纸上写 &#39;encryption: true&#39; 就像说：&#39;机器人，快给所有信加上魔法锁！&#39;</li><li>然后它会点点头，开始准备锁和钥匙。</li></ul>
-            </div>
-          
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>魔法锁让悄悄话更安全！</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-6">
-            <div class="section-heading">
-              <p class="section-kicker">第 6 站</p>
-              <h2>🛠️ 修锁小能手</h2>
-              <p>如果魔法锁坏了或丢了，别怕，机器人会修！</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>锁坏了，就看不了以前的加密信了，得赶紧修好。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>用 openclaw matrix verify bootstrap 这个咒语，机器人就会检查并修复锁。</li><li>它会先找找有没有备用的钥匙（恢复密钥），没有就做一把新的。</li><li>然后它会设置好&#39;交叉签名&#39;，这是一种高级魔法，让锁更牢靠。</li><li>如果故意想换把新锁，可以加个 --force-reset-cross-signing 的选项。</li></ul>
-              </div>
-              
-            <div class="source-card">
-              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
-              <ul><li>念 openclaw matrix verify bootstrap 就像说：&#39;机器人，快检查一下魔法锁，坏了就修好！&#39;</li><li>它会忙活一阵，然后告诉你：&#39;锁修好啦，钥匙在这儿！&#39;</li></ul>
-            </div>
-          
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>锁坏了？机器人来修！</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-7">
-            <div class="section-heading">
-              <p class="section-kicker">第 7 站</p>
-              <h2>🧹 打扫旧玩具</h2>
-              <p>机器人用久了，可能会留下一些旧&#39;设备&#39;，就像不玩的旧玩具。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>旧玩具多了，城堡会乱，加密信也容易搞混。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>用 openclaw matrix devices list 看看有哪些旧玩具。</li><li>用 openclaw matrix devices prune-stale 把不用的旧玩具清理掉。</li><li>清理后，城堡更整洁，加密信也更清楚该用哪把锁。</li></ul>
-              </div>
-              
-            <div class="source-card">
-              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
-              <ul><li>念 openclaw matrix devices list 就像说：&#39;机器人，把你所有的玩具都拿出来我看看！&#39;</li><li>念 openclaw matrix devices prune-stale 就像说：&#39;把那些旧了的、不玩的玩具都扔掉吧！&#39;</li></ul>
-            </div>
-          
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>定期打扫，城堡更亮堂！</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-8">
-            <div class="section-heading">
-              <p class="section-kicker">第 8 站</p>
-              <h2>🧵 话题小房间</h2>
-              <p>在城堡里，可以开一个个&#39;小话题房间&#39;，专门聊一件事。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>这样聊天不会乱，想找什么话题一下就找到。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>小话题房间叫&#39;线程&#39;（threads）。</li><li>你可以让机器人总是在小房间里回话，或者只在原话题里回。</li><li>在小房间里，还能绑定一个&#39;工作空间&#39;（ACP），让机器人一直在这里帮你。</li><li>用 /focus 或 /acp spawn 就能创建或绑定小房间。</li></ul>
-              </div>
-              
-            <div class="source-card">
-              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
-              <ul><li>在魔法纸上写 &#39;threadReplies: &quot;always&quot;&#39; 就像说：&#39;机器人，回话时都开个小房间吧！&#39;</li><li>这样它就会把每次聊天都整理得整整齐齐。</li></ul>
-            </div>
-          
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>小房间让聊天井井有条！</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-9">
-            <div class="section-heading">
-              <p class="section-kicker">第 9 站</p>
-              <h2>😊 表情小贴纸</h2>
-              <p>在城堡里，可以给消息贴&#39;表情小贴纸&#39;，就像点赞或评论。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>贴个小贴纸，聊天更有趣，还能告诉机器人&#39;我收到啦&#39;。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>机器人可以给别人贴贴纸（发反应），也可以看别人贴的贴纸。</li><li>你可以定一个&#39;收到贴纸&#39;，比如👍，机器人收到消息就自动贴一个。</li><li>贴纸规则可以按账号、按频道定，非常灵活。</li><li>这样聊天时，机器人会更懂你的心情。</li></ul>
-              </div>
-              
-            <div class="source-card">
-              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
-              <ul><li>在魔法纸上写 &#39;ackReaction: &quot;👍&quot;&#39; 就像说：&#39;机器人，每次收到消息，就贴个👍小贴纸！&#39;</li><li>它就会乖乖照做，让你的聊天充满点赞。</li></ul>
-            </div>
-          
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>小贴纸，大心情！</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-10">
-            <div class="section-heading">
-              <p class="section-kicker">第 10 站</p>
-              <h2>🏠 多个机器人管家</h2>
-              <p>你可以有好几个机器人，每个管不同的事，比如一个当助手，一个发警报。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>分工合作，效率更高！</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>给每个机器人起个名字，比如&#39;助手&#39;和&#39;警报员&#39;。</li><li>分别给它们钥匙和规则，让&#39;助手&#39;收悄悄话，&#39;警报员&#39;只收管理员的消息。</li><li>定一个&#39;默认管家&#39;，平时就它主要干活。</li><li>这样，你的城堡就有好几个能干的小帮手啦！</li></ul>
-              </div>
-              
-            <div class="source-card">
-              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
-              <ul><li>在魔法纸上写 &#39;accounts: { assistant: {...}, alerts: {...} }&#39; 就像说：&#39;我有两个机器人，一个叫助手，一个叫警报员，这是它们的钥匙和规则。&#39;</li><li>机器人看到后，就会各自站好岗。</li></ul>
-            </div>
-          
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>多个管家，城堡更热闹！</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-11">
-            <div class="section-heading">
-              <p class="section-kicker">第 11 站</p>
-              <h2>🚪 自家小城堡</h2>
-              <p>如果你的 Matrix 城堡在自己家里（比如本地服务器），得特别告诉机器人一声。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>默认机器人只去公共城堡，怕走错门。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>自家城堡地址可能是 localhost 或内部名字，比如 http://matrix-synapse:8008。</li><li>在魔法纸上加个 allowPrivateNetwork: true，机器人就知道这是自家门，可以进。</li><li>但为了安全，最好还是用 https:// 的地址，像给门加把锁。</li></ul>
-              </div>
-              
-            <div class="source-card">
-              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
-              <ul><li>写 &#39;allowPrivateNetwork: true&#39; 就像说：&#39;机器人，这个地址是咱家的，放心进去吧！&#39;</li><li>它就会点点头，不再犹豫。</li></ul>
-            </div>
-          
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>自家城堡，打个招呼就能进！</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-12">
-            <div class="section-heading">
-              <p class="section-kicker">第 12 站</p>
-              <h2>📋 规则大全</h2>
-              <p>最后，这是一张所有规则的清单，方便你随时查看。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>有了清单，定规则时就不会漏掉什么啦！</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>enabled：开关，打开机器人才能玩。</li><li>homeserver：城堡地址。</li><li>accessToken 或 password：钥匙。</li><li>encryption：魔法锁开关。</li><li>dm 和 groupPolicy：悄悄话和群聊规则。</li><li>threadReplies：小话题房间规则。</li><li>还有很多其他按钮，比如怎么回话、贴纸规则等。</li></ul>
-              </div>
-              
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>规则在手，城堡任你游！</p>
-              </div>
-            </div>
-          </section>
-        
-      <section class="section-shell">
-        <div class="ad-placeholder">
-          <p>这里预留给未来的 Google AdSense 模块。</p>
-          <code>&lt;!-- ADSENSE_SNIPPET --&gt;</code>
-        </div>
-      </section>
-    
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>🔷 Matrix 这页，其实是在教你“先把 Matrix 这块插件砖装上，再决定用密码还是门票进屋，还要不要处理加密房间”</h2>
+      <p>它和 Telegram、Slack 最大的不同，是它不是核心内置通道，而是一块插件。也就是说，第一步不是填配置，而是先把这块砖装进墙里。</p>
+      <p>然后真正的难点只有两个：账号怎么登录，以及加密房间的验证和备份怎么处理。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合 Matrix 插件通道</span>
+      <span>重点是插件安装、homeserver、token/密码、E2EE</span>
+      <a href="https://docs.openclaw.ai/channels/matrix" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一站</p>
+    <h2>🧱 第一步永远是“先装插件砖”，不然墙上根本没有这扇门</h2>
+    <p>这就是官方把 Plugin required 放在最前面的原因。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw plugins install @openclaw/matrix</code></div>
+      <p>像去插件仓库拿一块现成的 Matrix 门组件，装到 OpenClaw 墙上。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw plugins install ./extensions/matrix</code></div>
+      <p>像不用商店现货，而是直接拿本地那块 Matrix 开发砖来装。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">📌 为什么要先装</div>
+      <p>因为 Matrix 不是“已经在门上，只是没开锁”，而是“门本身还没装上去”。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 一句话</div>
+      <p>Matrix 这条路的第一步不是登录，是先把门造出来。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二站</p>
+    <h2>🔑 登录有两条路：直接给 access token，或者给账号密码让它自己换票</h2>
+    <p>把它想成两种进门方式就好。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">🎫</span>
+      <h2>accessToken 路线</h2>
+      <p>像你直接拿着现成门票进门，最省事。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">👤</span>
+      <h2>userId + password 路线</h2>
+      <p>像先拿账号密码去前台换票，换来的 token 之后会被缓存起来。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🏠</span>
+      <h2><code>homeserver</code></h2>
+      <p>像你这块 Matrix 门到底连到哪栋楼，必须先写清楚。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🗃️</span>
+      <h2>credentials 缓存</h2>
+      <p>换到的票会被存进状态目录，下次不用每次都重新排队。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第三站</p>
+    <h2>🔐 E2EE 和 verify 那大段，不是在吓人，而是在教你“怎么把加密房间的钥匙链整理好”</h2>
+    <p>这也是 Matrix 比普通通道更麻烦的一点。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">🔏 encryption: true</div>
+      <p>像告诉 Matrix：“我要进加密房间，但你得准备好钥匙管理。”</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw matrix verify bootstrap</code></div>
+      <p>像把这台设备正式接进你的 Matrix 钥匙体系，建立交叉签名和备份基线。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw matrix verify device \"&lt;recovery-key&gt;\"</code></div>
+      <p>像拿恢复钥匙来证明“这台设备确实是自己人”。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw matrix verify backup restore</code></div>
+      <p>像从保险柜里把旧房间钥匙取回来，恢复之前的加密阅读能力。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第四站</p>
+    <h2>🤖 allowBots 那段，说白了就是“要不要让别的 Matrix 机器人也能在同一房间和你搭话”</h2>
+    <p>默认是比较保守的。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label"><code>allowBots: true</code></div>
+      <p>像说“别的 OpenClaw Matrix 机器人也可以跟我说话”。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>allowBots: \"mentions\"</code></div>
+      <p>像说“它们不是不能说，但在群房里也得先点我名”。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">📌 为什么默认谨慎</div>
+      <p>不然多个 bot 在同一房间里，很容易互相接球、越聊越热闹。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 收尾一句</div>
+      <p>Matrix 这页最难的从来不是门本身，而是加密钥匙和设备信任链。</p>
+    </div>
+  </div>
+</section>
+
 
       <footer class="page-footer">
         <div>

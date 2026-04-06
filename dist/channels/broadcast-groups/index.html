@@ -3970,266 +3970,78 @@
   
       </div>
 
-      
       <section class="section-shell">
-        <div class="overview-card">
-          <div>
-            <p class="section-kicker">AI 绘本解读版</p>
-            <h2>📢 群聊小分队：让多个AI助手一起工作</h2>
-            <p>就像组建一支超级英雄小队！一个消息发来，所有队员同时出动。每个队员都有自己独特的超能力。</p>
-          </div>
-          <div class="overview-meta">
-            <span>原始路径：/channels/broadcast-groups</span>
-            <span>故事卡片：9 张</span>
-            <a href="https://docs.openclaw.ai/channels/broadcast-groups" target="_blank" rel="noreferrer">查看官方原文</a>
-          </div>
-        </div>
-      </section>
-      
-          <section class="section-shell" id="section-1">
-            <div class="section-heading">
-              <p class="section-kicker">第 1 站</p>
-              <h2>🎯 这是什么？</h2>
-              <p>群聊小分队让多个AI助手一起处理同一个消息。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>这样你就能组建专门的小队，各司其职。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>想象一个开发团队群聊。</li><li>代码审查员、文档机器人、安全检查员同时工作。</li><li>他们都在同一个WhatsApp群里，但各有分工。</li><li>目前只支持WhatsApp这个聊天软件。</li><li>就像门卫先检查，然后小队才出动。</li></ul>
-              </div>
-              
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>一个消息，多个专家一起看。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-2">
-            <div class="section-heading">
-              <p class="section-kicker">第 2 站</p>
-              <h2>🏗️ 怎么组建小队？</h2>
-              <p>告诉系统：在哪个群里，哪些助手要一起工作。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>这是让小队运转起来的魔法配方。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>在配置文件里加一个‘broadcast’区域。</li><li>就像给每个群贴一张队员名单。</li><li>名单的钥匙是群的门牌号。</li><li>群聊用群ID，私聊用电话号码。</li><li>名单的值就是队员的名字列表。</li></ul>
-              </div>
-              
-            <div class="source-card">
-              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
-              <ul><li>{&quot;broadcast&quot;: {&quot;120363403215116621@g.us&quot;: [&quot;alfred&quot;, &quot;baerbel&quot;, &quot;assistant3&quot;]}} 这行配置就像说：在这个群里，alfred、baerbel、assistant3这三个队员要一起工作。</li></ul>
-            </div>
-          
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>写好名单，小队就位。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-3">
-            <div class="section-heading">
-              <p class="section-kicker">第 3 站</p>
-              <h2>⚡ 怎么工作？并行还是排队？</h2>
-              <p>队员们可以同时干活，也可以一个接一个。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>不同的任务需要不同的配合方式。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>默认是‘并行’模式。</li><li>所有队员像赛跑一样同时开始。</li><li>也可以选‘顺序’模式。</li><li>队员们像接力赛，一个干完下一个再开始。</li><li>在名单里加一个‘strategy’按钮就能切换。</li></ul>
-              </div>
-              
-            <div class="source-card">
-              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
-              <ul><li>{&quot;strategy&quot;: &quot;parallel&quot;, ...} 这就像按下‘同时开始’的按钮。</li><li>{&quot;strategy&quot;: &quot;sequential&quot;, ...} 这就像按下‘排队接力’的按钮。</li></ul>
-            </div>
-          
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>同时干快，排队干稳。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-4">
-            <div class="section-heading">
-              <p class="section-kicker">第 4 站</p>
-              <h2>🚧 消息怎么流动？</h2>
-              <p>消息来了，系统先检查，再决定谁出动。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>了解流程，就知道小队什么时候会跳出来。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>消息到达WhatsApp群。</li><li>系统检查：这个群在不在小队名单里？</li><li>如果在名单里：名单上的所有队员都处理这个消息。</li><li>每个队员都有自己的小房间和记忆。</li><li>他们按你定的模式（并行或顺序）工作。</li><li>如果不在名单里：就按平常的规则，只有一个助手回应。</li></ul>
-              </div>
-              
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>先查名单，再派队员。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-5">
-            <div class="section-heading">
-              <p class="section-kicker">第 5 站</p>
-              <h2>🧱 队员们独立吗？</h2>
-              <p>每个队员都有自己的小世界，互不干扰。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>这样他们才能专注自己的任务，不会打架。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>每个队员有自己专属的会话钥匙。</li><li>有自己独立的聊天记录。</li><li>有自己的工作台和工具箱。</li><li>可以有不同的性格和技能。</li><li>但他们会看到群里最近同样的聊天背景。</li></ul>
-              </div>
-              
-            <div class="source-card">
-              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
-              <ul><li>agent:alfred:whatsapp:group:120363... 这是alfred的专属钥匙，别人打不开。</li><li>Tools: read, write, exec 这是alfred的工具箱，里面有什么工具可以自己定。</li></ul>
-            </div>
-          
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>各干各的，共享背景。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-6">
-            <div class="section-heading">
-              <p class="section-kicker">第 6 站</p>
-              <h2>💡 用好小队的秘诀</h2>
-              <p>想让小队高效工作？记住这几个小窍门。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>用对了方法，小队就是你的超级外挂。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>给每个队员一个清晰的小任务。</li><li>起个好听又明白的名字。</li><li>按需分配工具箱，别给太多。</li><li>队员多了可能会慢，注意控制人数。</li><li>一个队员出错，不影响其他队员。</li></ul>
-              </div>
-              
-            <div class="source-card">
-              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
-              <ul><li>[&quot;formatter&quot;, &quot;linter&quot;, &quot;tester&quot;] 像三个专门队员：整理员、检查员、测试员。</li><li>&quot;tools&quot;: {&quot;allow&quot;: [&quot;read&quot;, &quot;exec&quot;]} 这就像只给这个队员‘读’和‘执行’两把钥匙。</li></ul>
-            </div>
-          
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>专人专事，工具精给。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-7">
-            <div class="section-heading">
-              <p class="section-kicker">第 7 站</p>
-              <h2>🔧 常见问题怎么办？</h2>
-              <p>如果小队不听话，可以这样检查。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>快速找到问题，让小队重新跑起来。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>队员不回应？检查名字写对没，门牌号对不对。</li><li>只有一个队员干活？可能名单没写对。</li><li>速度太慢？试试减少队员，或用轻量级模型。</li><li>可以看系统日志找线索。</li></ul>
-              </div>
-              
-            <div class="source-card">
-              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
-              <ul><li>tail -f ~/.openclaw/logs/gateway.log | grep broadcast 这行命令就像打开监控屏幕，只看小队活动的记录。</li></ul>
-            </div>
-          
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>对名单，看日志，调配置。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-8">
-            <div class="section-heading">
-              <p class="section-kicker">第 8 站</p>
-              <h2>🚀 看看小队实战！</h2>
-              <p>来看两个活生生的小队例子。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>例子一看，你就知道怎么用了。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>代码审查小队：整理格式、检查安全、生成测试、核对文档，四个专家同时给你反馈。</li><li>多语言支持小队：先检测语言，然后英语翻译员和德语翻译员接力工作。</li></ul>
-              </div>
-              
-            <div class="source-card">
-              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
-              <ul><li>用户发来代码片段，四个队员同时回应，各说各的专长。</li><li>在私聊里，检测语言队员先工作，然后翻译队员们按顺序接力。</li></ul>
-            </div>
-          
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>例子是最好用的说明书。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-9">
-            <div class="section-heading">
-              <p class="section-kicker">第 9 站</p>
-              <h2>📝 记住这些要点</h2>
-              <p>最后，把最重要的几条记在心里。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>知道边界，用起来更顺手。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>队员太多可能会慢，建议别超过10个。</li><li>队员们看不到彼此的回复（故意设计的）。</li><li>并行回复时，消息到达顺序可能乱。</li><li>所有队员都算在WhatsApp的发送限制里。</li><li>未来可能会有更多好玩的模式。</li></ul>
-              </div>
-              
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>小队强大，但也有小规则。</p>
-              </div>
-            </div>
-          </section>
-        
-      <section class="section-shell">
-        <div class="ad-placeholder">
-          <p>这里预留给未来的 Google AdSense 模块。</p>
-          <code>&lt;!-- ADSENSE_SNIPPET --&gt;</code>
-        </div>
-      </section>
-    
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>📣 Broadcast Groups 这页，其实是在教你“同一个群里，一条消息可以同时叫醒不止一个脑子”</h2>
+      <p>平时一条消息通常只会被分给一个 agent，但 Broadcast Groups 允许你把同一个触发点分发给一组 agent。</p>
+      <p>所以这页更像“群发任务机制”，不是普通群聊准入设置。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合多 agent 同场响应</span>
+      <span>重点是 strategy、群 ID、agent 列表</span>
+      <a href="https://docs.openclaw.ai/channels/broadcast-groups" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一站</p>
+    <h2>🧠 这不是多通道，而是“同一扇门进来后，同时喊多个脑子开会”</h2>
+    <p>把这层区别看懂，才不会把它和 routing 搅混。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">🚪</span>
+      <h2>还是同一个群</h2>
+      <p>门没有变，消息还是从原来的群里进来。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">👥</span>
+      <h2>但 agent 不止一个</h2>
+      <p>这次不是选一个脑子，而是一次叫醒一组脑子。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">⚙️</span>
+      <h2><code>broadcast.strategy</code></h2>
+      <p>像开会方式，决定这些脑子并行上还是按别的策略来。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🎈</span>
+      <h2>一句话</h2>
+      <p>Broadcast Groups 就是“一个群里，一次群发给多个 agent”。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二站</p>
+    <h2>🗂️ 那段配置很好懂：群 ID 在左边，要叫醒的脑子名单在右边</h2>
+    <p>读成“群 -> agent 列表”就够了。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>\"120363...@g.us\": [\"alfred\", \"baerbel\"]</code></div>
+      <p>像写明“这个 WhatsApp 群一旦触发，就同时通知 Alfred 和 Baerbel 来处理”。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>\"+1555...\": [\"support\", \"logger\"]</code></div>
+      <p>同理，这个入口可以同时叫客服脑和记录脑。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">📌 仍然先过普通触发门槛</div>
+      <p>不是任何消息都广播。它还是发生在“本来已经会正常回复”的前提下。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 收尾一句</div>
+      <p>Broadcast Groups 不是扩大准入，而是扩大“谁来一起接这活”。</p>
+    </div>
+  </div>
+</section>
+
 
       <footer class="page-footer">
         <div>

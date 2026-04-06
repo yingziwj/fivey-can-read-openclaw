@@ -1,0 +1,97 @@
+<section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>👥 Groups 这页，其实是在教你“群聊不是随便进门就能把 OpenClaw 叫醒，它更像一间有人看门的大厅”</h2>
+      <p>新手最容易误会的一点是：只要 OpenClaw 在群里，它就会对所有话自动开口。不是。默认它对群聊很谨慎，通常既要过门禁，还要被点名。</p>
+      <p>所以这页真正讲的是三件事：群能不能进、谁能触发、没有被点名时消息会被怎么处理。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合理解群聊默认规则</span>
+      <span>重点是 groupPolicy、allowlist、requireMention</span>
+      <a href="https://docs.openclaw.ai/channels/groups" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一站</p>
+    <h2>🚪 群聊这边有两层门：先看群本身允不允许，再看有没有被点名</h2>
+    <p>把这两层分开想，就不会把配置搅成一团。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">🏢</span>
+      <h2><code>groupPolicy</code></h2>
+      <p>像大楼门禁，决定这类群消息整体是开门、关门，还是只放白名单。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">📋</span>
+      <h2><code>groups</code> / <code>groupAllowFrom</code></h2>
+      <p>像门卫名单，决定哪些具体群、哪些具体人能在群里把它叫起来。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">@</span>
+      <h2><code>requireMention</code></h2>
+      <p>像进大厅后还得点名喊它，不然它只在旁边听，不随便插嘴。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🪣</span>
+      <h2>群会话单独分桶</h2>
+      <p>每个群各有一只记忆桶，不跟你的私聊主桶混在一起。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二站</p>
+    <h2>🧪 那张 quick flow 图，其实是在讲一条很朴素的门卫流程</h2>
+    <p>读成动作，比读条件判断舒服得多。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">🚫 policy 是 disabled</div>
+      <p>像门口直接挂“今日不接待”，消息进来就不处理。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">📋 policy 是 allowlist</div>
+      <p>像先翻名单，不在名单里的群，还是不让进。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">@ 需要 mention</div>
+      <p>即便进了大厅，也得被点名它才会正式起身回应。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">📝 没触发时会怎样</div>
+      <p>很多频道里它会把消息留作上下文参考，但不当场开口。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第三站</p>
+    <h2>🧠 “个人 DM + 公共群” 那个模式，说白了就是“同一个脑子，但私聊和群聊用不同工作姿势”</h2>
+    <p>这是这一页最实用的一段。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">💬 私聊在主桶</div>
+      <p>像最贴身的工作台，权限更大、工具更全。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">👥 群聊在非主桶</div>
+      <p>像公共大厅，常常更适合配沙箱、更克制的工具权限。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🧪 sandbox: non-main</div>
+      <p>像说“凡是不在私聊主工作台上的，就放进更安全的实验箱里处理”。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 一句话</div>
+      <p>同一个脑子也可以在不同房间用不同规矩上班。</p>
+    </div>
+  </div>
+</section>

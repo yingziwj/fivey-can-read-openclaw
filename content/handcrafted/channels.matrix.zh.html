@@ -1,0 +1,123 @@
+<section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>🔷 Matrix 这页，其实是在教你“先把 Matrix 这块插件砖装上，再决定用密码还是门票进屋，还要不要处理加密房间”</h2>
+      <p>它和 Telegram、Slack 最大的不同，是它不是核心内置通道，而是一块插件。也就是说，第一步不是填配置，而是先把这块砖装进墙里。</p>
+      <p>然后真正的难点只有两个：账号怎么登录，以及加密房间的验证和备份怎么处理。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合 Matrix 插件通道</span>
+      <span>重点是插件安装、homeserver、token/密码、E2EE</span>
+      <a href="https://docs.openclaw.ai/channels/matrix" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一站</p>
+    <h2>🧱 第一步永远是“先装插件砖”，不然墙上根本没有这扇门</h2>
+    <p>这就是官方把 Plugin required 放在最前面的原因。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw plugins install @openclaw/matrix</code></div>
+      <p>像去插件仓库拿一块现成的 Matrix 门组件，装到 OpenClaw 墙上。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw plugins install ./extensions/matrix</code></div>
+      <p>像不用商店现货，而是直接拿本地那块 Matrix 开发砖来装。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">📌 为什么要先装</div>
+      <p>因为 Matrix 不是“已经在门上，只是没开锁”，而是“门本身还没装上去”。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 一句话</div>
+      <p>Matrix 这条路的第一步不是登录，是先把门造出来。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二站</p>
+    <h2>🔑 登录有两条路：直接给 access token，或者给账号密码让它自己换票</h2>
+    <p>把它想成两种进门方式就好。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">🎫</span>
+      <h2>accessToken 路线</h2>
+      <p>像你直接拿着现成门票进门，最省事。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">👤</span>
+      <h2>userId + password 路线</h2>
+      <p>像先拿账号密码去前台换票，换来的 token 之后会被缓存起来。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🏠</span>
+      <h2><code>homeserver</code></h2>
+      <p>像你这块 Matrix 门到底连到哪栋楼，必须先写清楚。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🗃️</span>
+      <h2>credentials 缓存</h2>
+      <p>换到的票会被存进状态目录，下次不用每次都重新排队。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第三站</p>
+    <h2>🔐 E2EE 和 verify 那大段，不是在吓人，而是在教你“怎么把加密房间的钥匙链整理好”</h2>
+    <p>这也是 Matrix 比普通通道更麻烦的一点。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">🔏 encryption: true</div>
+      <p>像告诉 Matrix：“我要进加密房间，但你得准备好钥匙管理。”</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw matrix verify bootstrap</code></div>
+      <p>像把这台设备正式接进你的 Matrix 钥匙体系，建立交叉签名和备份基线。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw matrix verify device \"&lt;recovery-key&gt;\"</code></div>
+      <p>像拿恢复钥匙来证明“这台设备确实是自己人”。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw matrix verify backup restore</code></div>
+      <p>像从保险柜里把旧房间钥匙取回来，恢复之前的加密阅读能力。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第四站</p>
+    <h2>🤖 allowBots 那段，说白了就是“要不要让别的 Matrix 机器人也能在同一房间和你搭话”</h2>
+    <p>默认是比较保守的。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label"><code>allowBots: true</code></div>
+      <p>像说“别的 OpenClaw Matrix 机器人也可以跟我说话”。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>allowBots: \"mentions\"</code></div>
+      <p>像说“它们不是不能说，但在群房里也得先点我名”。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">📌 为什么默认谨慎</div>
+      <p>不然多个 bot 在同一房间里，很容易互相接球、越聊越热闹。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 收尾一句</div>
+      <p>Matrix 这页最难的从来不是门本身，而是加密钥匙和设备信任链。</p>
+    </div>
+  </div>
+</section>

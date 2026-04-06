@@ -3970,358 +3970,104 @@
   
       </div>
 
-      
       <section class="section-shell">
-        <div class="overview-card">
-          <div>
-            <p class="section-kicker">AI 绘本解读版</p>
-            <h2>📱 群聊小管家</h2>
-            <p>OpenClaw是你的聊天小助手。它能帮你管理所有群聊。就像给每个群都配了个小门卫。</p>
-          </div>
-          <div class="overview-meta">
-            <span>原始路径：/channels/groups</span>
-            <span>故事卡片：13 张</span>
-            <a href="https://docs.openclaw.ai/channels/groups" target="_blank" rel="noreferrer">查看官方原文</a>
-          </div>
-        </div>
-      </section>
-      
-          <section class="section-shell" id="section-1">
-            <div class="section-heading">
-              <p class="section-kicker">第 1 站</p>
-              <h2>🎯 小助手住在哪？</h2>
-              <p>OpenClaw就住在你自己的聊天账号里。它不是个单独的机器人。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>这样它才能看到你所在的群，并在群里帮你回复。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>它就像你的影子助手。</li><li>你在哪个群，它就能看到哪个群。</li><li>它支持很多聊天软件，比如微信、Telegram、Discord。</li><li>它没有自己的机器人账号。</li><li>它和你共用同一个账号。</li></ul>
-              </div>
-              
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>小助手和你形影不离。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-2">
-            <div class="section-heading">
-              <p class="section-kicker">第 2 站</p>
-              <h2>🔒 默认的群聊规则</h2>
-              <p>默认情况下，小助手在群里很安静。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>这样能防止它在你不希望的地方乱说话。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>群聊默认是‘限制模式’。</li><li>就像给群聊大门上了锁。</li><li>只有‘白名单’里的群才能放行。</li><li>在群里叫它名字（@它），它才会回应。</li><li>不叫它，它就默默听着，不插嘴。</li></ul>
-              </div>
-              
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>不叫它，它就不说话。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-3">
-            <div class="section-heading">
-              <p class="section-kicker">第 3 站</p>
-              <h2>🚦 消息怎么流动？</h2>
-              <p>一条群消息要经过好几道检查。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>看看这条消息能不能送到小助手那里。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>第一关：群聊总开关开了吗？没开就扔掉。</li><li>第二关：这个群在白名单里吗？不在就扔掉。</li><li>第三关：需要@它吗？需要但没@，就只记下来。</li><li>都通过了，小助手才会准备回复。</li></ul>
-              </div>
-              
-            <div class="source-card">
-              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
-              <ul><li>`groupPolicy? disabled -&gt; drop` 这行命令像在问：‘群聊总开关关了吗？关了就把消息扔掉。’</li><li>`groupPolicy? allowlist -&gt; group allowed? no -&gt; drop` 这行命令像在问：‘这个群在白名单里吗？不在也扔掉。’</li><li>`requireMention? yes -&gt; mentioned? no -&gt; store for context only` 这行命令像在问：‘需要@它吗？需要但没@，那就只把消息存起来当背景知识。’</li><li>`otherwise -&gt; reply` 这行命令像在说：‘上面都通过了？好，那就可以回复了！’</li></ul>
-            </div>
-          
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>消息要过三关，才能到小助手面前。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-4">
-            <div class="section-heading">
-              <p class="section-kicker">第 4 站</p>
-              <h2>🗝️ 每个群都有独立小房间</h2>
-              <p>小助手给每个群都准备了一个独立的小房间。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>这样不同群的聊天记录就不会混在一起。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>群聊的小房间钥匙长得像 `agent:助手ID:软件名:group:群ID`。</li><li>Telegram的论坛话题还有额外的小隔间。</li><li>私聊用的是主房间。</li><li>群聊的小房间不需要定时‘心跳’检查。</li></ul>
-              </div>
-              
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>一个群，一把钥匙，一个独立小房间。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-5">
-            <div class="section-heading">
-              <p class="section-kicker">第 5 站</p>
-              <h2>🏠 私聊和群聊分开住</h2>
-              <p>你可以让私聊和群聊住在不同的‘房子’里。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>这样更安全，群聊不会影响到你的私聊。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>私聊通常住在‘主房子’里。</li><li>群聊都住在‘副房子’里。</li><li>你可以把‘副房子’放进一个更安全的‘沙箱’。</li><li>在沙箱里，群聊能用的‘工具’可以受到限制。</li><li>比如，只让群聊发消息，不让它碰你的电脑文件。</li></ul>
-              </div>
-              
-            <div class="source-card">
-              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
-              <ul><li>`mode: &quot;non-main&quot;` 这个配置像在说：‘把不是主房间的都放进沙箱。’</li><li>`workspaceAccess: &quot;none&quot;` 这个配置像在说：‘沙箱里的房间，不许碰主房子的任何东西。’</li><li>`allow: [&quot;group:messaging&quot;, &quot;group:sessions&quot;]` 这个配置像在说：‘在沙箱里，只允许用‘发消息’和‘管理小房间’这两个工具。’</li><li>`deny: [&quot;group:runtime&quot;, &quot;group:fs&quot;]` 这个配置像在说：‘在沙箱里，坚决不许用‘运行程序’和‘访问文件’这些工具。’</li></ul>
-            </div>
-          
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>私聊住主屋，群聊住沙箱，安全又清爽。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-6">
-            <div class="section-heading">
-              <p class="section-kicker">第 6 站</p>
-              <h2>🏷️ 给群聊贴标签</h2>
-              <p>在管理界面上，每个群都有个好看的名字标签。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>让你一眼就能认出是哪个群。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>标签会用群聊的显示名。</li><li>格式一般是 `软件名:群标识`。</li><li>专门的频道房间用 `#房间名`。</li><li>普通群聊用 `g-群简称`。</li></ul>
-              </div>
-              
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>每个群都有个漂亮的名牌。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-7">
-            <div class="section-heading">
-              <p class="section-kicker">第 7 站</p>
-              <h2>🚪 群聊大门的三把锁</h2>
-              <p>你可以给每个聊天软件设置群聊大门的规则。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>控制小助手能进哪些群。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>第一把锁叫 `groupPolicy`，有三种模式。</li><li>`&quot;open&quot;` 模式：大门敞开，但进门后可能还要@它。</li><li>`&quot;disabled&quot;` 模式：大门紧闭，所有群消息都不理。</li><li>`&quot;allowlist&quot;` 模式：只给白名单上的群发钥匙。</li></ul>
-              </div>
-              
-            <div class="source-card">
-              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
-              <ul><li>`groupPolicy: &quot;disabled&quot;` 这个配置像在说：‘给这个软件的所有群聊大门上把死锁，谁也不让进。’</li><li>`groupAllowFrom: [&quot;+15551234567&quot;]` 这个配置像在说：‘只允许电话号码是+15551234567的人所在的群进来。’</li><li>不同软件的钥匙长得不一样，比如Telegram用数字ID，Discord用频道ID。</li></ul>
-            </div>
-          
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>开门、关门、还是只让好朋友进，你说了算。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-8">
-            <div class="section-heading">
-              <p class="section-kicker">第 8 站</p>
-              <h2>📢 怎么在群里叫它？</h2>
-              <p>在群里，通常需要@它或者回复它，它才会理你。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>防止它在群里刷屏。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>这是默认规则，叫‘提门铃’。</li><li>你可以给某个群单独取消这个规则。</li><li>回复小助手的上一条消息，也算叫了它。</li><li>这个功能在Telegram、微信、Discord等软件上都有效。</li></ul>
-              </div>
-              
-            <div class="source-card">
-              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
-              <ul><li>`&quot;*&quot;: { requireMention: true }` 这个配置像在说：‘默认情况下，所有群都要@我才能说话。’</li><li>`&quot;123@g.us&quot;: { requireMention: false }` 这个配置像在说：‘但是，ID是123@g.us的这个群，不用@我也可以直接说话。’</li></ul>
-            </div>
-          
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>想让它说话？记得@它一下。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-9">
-            <div class="section-heading">
-              <p class="section-kicker">第 9 站</p>
-              <h2>🧰 限制群里的工具箱</h2>
-              <p>你可以规定，在某个群里，小助手只能用哪些工具。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>防止它在群里做危险的事。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>可以给整个群规定一套工具。</li><li>还可以给群里的某个人单独规定工具。</li><li>规则很灵活，最具体的规则说了算。</li><li>比如，禁止整个群用‘运行命令’工具，但允许群主用。</li></ul>
-              </div>
-              
-            <div class="source-card">
-              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
-              <ul><li>`tools: { deny: [&quot;exec&quot;] }` 这个配置像在说：‘在这个群里，不准用‘运行命令’这个工具。’</li><li>`toolsBySender: { &quot;id:123456789&quot;: { alsoAllow: [&quot;exec&quot;] } }` 这个配置像在说：‘但是，如果发消息的人是ID 123456789，就允许他用。’</li></ul>
-            </div>
-          
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>在谁的地盘，就用谁的规矩。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-10">
-            <div class="section-heading">
-              <p class="section-kicker">第 10 站</p>
-              <h2>📋 白名单的三种用法</h2>
-              <p>白名单就是一份‘好朋友群’的名单。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>快速设置你希望小助手参与的群。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>用法一：关掉所有群聊。</li><li>用法二：只允许名单上的这几个群。</li><li>用法三：允许所有群，但都必须@它才行。</li></ul>
-              </div>
-              
-            <div class="source-card">
-              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
-              <ul><li>`groupPolicy: &quot;disabled&quot;` 这是用法一，像在说：‘所有群聊，再见！’</li><li>`groups: { &quot;123@g.us&quot;: { requireMention: true } }` 这是用法二，像在说：‘只允许ID是123@g.us的群，并且要@我。’</li><li>`groups: { &quot;*&quot;: { requireMention: true } }` 这是用法三，像在说：‘所有群都可以进，但进门后都要@我一下。’</li></ul>
-            </div>
-          
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>一份名单，三种用法，简单明了。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-11">
-            <div class="section-heading">
-              <p class="section-kicker">第 11 站</p>
-              <h2>👑 群主专属开关</h2>
-              <p>群主有个秘密开关，可以控制小助手在群里的活跃度。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>让群主来管理这个群的小助手。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>只有群主才能用这个开关。</li><li>命令是 `/activation mention` 或 `/activation always`。</li><li>`mention` 模式：需要@它才说话。</li><li>`always` 模式：不用@，它也会参与聊天。</li></ul>
-              </div>
-              
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>群主有个魔法口令。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-12">
-            <div class="section-heading">
-              <p class="section-kicker">第 12 站</p>
-              <h2>📝 小助手看到的群信息</h2>
-              <p>小助手收到群消息时，会附带一些‘小纸条’。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>让它知道这是群聊，以及群里都有谁。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>小纸条上写着‘这是群聊’。</li><li>可能还有群名字和成员名单。</li><li>会注明这条消息有没有@它。</li><li>Telegram的论坛话题还有额外的小纸条。</li></ul>
-              </div>
-              
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>每条消息都带着背景介绍。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-13">
-            <div class="section-heading">
-              <p class="section-kicker">第 13 站</p>
-              <h2>💬 苹果信息（iMessage）小贴士</h2>
-              <p>在苹果信息里，群聊用 `chat_id` 来识别。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>这是找到和进入苹果群聊的钥匙。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>设置规则时，最好用 `chat_id:&lt;数字&gt;`。</li><li>想看看有哪些群？用命令 `imsg chats`。</li><li>在群里回复，消息会自动回到同一个 `chat_id` 的群。</li></ul>
-              </div>
-              
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>苹果群聊，认准chat_id这把钥匙。</p>
-              </div>
-            </div>
-          </section>
-        
-      <section class="section-shell">
-        <div class="ad-placeholder">
-          <p>这里预留给未来的 Google AdSense 模块。</p>
-          <code>&lt;!-- ADSENSE_SNIPPET --&gt;</code>
-        </div>
-      </section>
-    
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>👥 Groups 这页，其实是在教你“群聊不是随便进门就能把 OpenClaw 叫醒，它更像一间有人看门的大厅”</h2>
+      <p>新手最容易误会的一点是：只要 OpenClaw 在群里，它就会对所有话自动开口。不是。默认它对群聊很谨慎，通常既要过门禁，还要被点名。</p>
+      <p>所以这页真正讲的是三件事：群能不能进、谁能触发、没有被点名时消息会被怎么处理。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合理解群聊默认规则</span>
+      <span>重点是 groupPolicy、allowlist、requireMention</span>
+      <a href="https://docs.openclaw.ai/channels/groups" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一站</p>
+    <h2>🚪 群聊这边有两层门：先看群本身允不允许，再看有没有被点名</h2>
+    <p>把这两层分开想，就不会把配置搅成一团。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">🏢</span>
+      <h2><code>groupPolicy</code></h2>
+      <p>像大楼门禁，决定这类群消息整体是开门、关门，还是只放白名单。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">📋</span>
+      <h2><code>groups</code> / <code>groupAllowFrom</code></h2>
+      <p>像门卫名单，决定哪些具体群、哪些具体人能在群里把它叫起来。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">@</span>
+      <h2><code>requireMention</code></h2>
+      <p>像进大厅后还得点名喊它，不然它只在旁边听，不随便插嘴。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🪣</span>
+      <h2>群会话单独分桶</h2>
+      <p>每个群各有一只记忆桶，不跟你的私聊主桶混在一起。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二站</p>
+    <h2>🧪 那张 quick flow 图，其实是在讲一条很朴素的门卫流程</h2>
+    <p>读成动作，比读条件判断舒服得多。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">🚫 policy 是 disabled</div>
+      <p>像门口直接挂“今日不接待”，消息进来就不处理。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">📋 policy 是 allowlist</div>
+      <p>像先翻名单，不在名单里的群，还是不让进。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">@ 需要 mention</div>
+      <p>即便进了大厅，也得被点名它才会正式起身回应。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">📝 没触发时会怎样</div>
+      <p>很多频道里它会把消息留作上下文参考，但不当场开口。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第三站</p>
+    <h2>🧠 “个人 DM + 公共群” 那个模式，说白了就是“同一个脑子，但私聊和群聊用不同工作姿势”</h2>
+    <p>这是这一页最实用的一段。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">💬 私聊在主桶</div>
+      <p>像最贴身的工作台，权限更大、工具更全。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">👥 群聊在非主桶</div>
+      <p>像公共大厅，常常更适合配沙箱、更克制的工具权限。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🧪 sandbox: non-main</div>
+      <p>像说“凡是不在私聊主工作台上的，就放进更安全的实验箱里处理”。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 一句话</div>
+      <p>同一个脑子也可以在不同房间用不同规矩上班。</p>
+    </div>
+  </div>
+</section>
+
 
       <footer class="page-footer">
         <div>

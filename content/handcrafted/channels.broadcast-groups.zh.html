@@ -1,0 +1,71 @@
+<section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>📣 Broadcast Groups 这页，其实是在教你“同一个群里，一条消息可以同时叫醒不止一个脑子”</h2>
+      <p>平时一条消息通常只会被分给一个 agent，但 Broadcast Groups 允许你把同一个触发点分发给一组 agent。</p>
+      <p>所以这页更像“群发任务机制”，不是普通群聊准入设置。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合多 agent 同场响应</span>
+      <span>重点是 strategy、群 ID、agent 列表</span>
+      <a href="https://docs.openclaw.ai/channels/broadcast-groups" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一站</p>
+    <h2>🧠 这不是多通道，而是“同一扇门进来后，同时喊多个脑子开会”</h2>
+    <p>把这层区别看懂，才不会把它和 routing 搅混。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">🚪</span>
+      <h2>还是同一个群</h2>
+      <p>门没有变，消息还是从原来的群里进来。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">👥</span>
+      <h2>但 agent 不止一个</h2>
+      <p>这次不是选一个脑子，而是一次叫醒一组脑子。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">⚙️</span>
+      <h2><code>broadcast.strategy</code></h2>
+      <p>像开会方式，决定这些脑子并行上还是按别的策略来。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🎈</span>
+      <h2>一句话</h2>
+      <p>Broadcast Groups 就是“一个群里，一次群发给多个 agent”。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二站</p>
+    <h2>🗂️ 那段配置很好懂：群 ID 在左边，要叫醒的脑子名单在右边</h2>
+    <p>读成“群 -> agent 列表”就够了。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>\"120363...@g.us\": [\"alfred\", \"baerbel\"]</code></div>
+      <p>像写明“这个 WhatsApp 群一旦触发，就同时通知 Alfred 和 Baerbel 来处理”。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>\"+1555...\": [\"support\", \"logger\"]</code></div>
+      <p>同理，这个入口可以同时叫客服脑和记录脑。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">📌 仍然先过普通触发门槛</div>
+      <p>不是任何消息都广播。它还是发生在“本来已经会正常回复”的前提下。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 收尾一句</div>
+      <p>Broadcast Groups 不是扩大准入，而是扩大“谁来一起接这活”。</p>
+    </div>
+  </div>
+</section>

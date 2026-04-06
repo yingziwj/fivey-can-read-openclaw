@@ -1,0 +1,97 @@
+<section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>💙 BlueBubbles 这页，其实是在教你“让一台 Mac 帮 OpenClaw 把 iMessage 世界翻译成人能接的接口”</h2>
+      <p>它不是另一个聊天应用，而是一个中间翻译员。Messages.app 在 Mac 里，OpenClaw 不会直接钻进它肚子里，所以要靠 BlueBubbles 把收发消息、编辑、撤回这些动作变成 HTTP 和 webhook。</p>
+      <p>所以这页真正的主角不是 bot token，而是那台装了 BlueBubbles Server 的 Mac。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合 iMessage 集成</span>
+      <span>重点是 Mac、Server URL、password、webhook</span>
+      <a href="https://docs.openclaw.ai/channels/bluebubbles" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一站</p>
+    <h2>📮 先把角色分清：OpenClaw 不是直接碰 iMessage，而是隔着 BlueBubbles 这位翻译员</h2>
+    <p>把这层关系看懂，整页就不拧巴了。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">🍎</span>
+      <h2>Mac + Messages.app</h2>
+      <p>真正装着 iMessage 世界的房间。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">💙</span>
+      <h2>BlueBubbles Server</h2>
+      <p>像翻译员，帮你把 Messages 的动作翻成 HTTP API 和 webhook。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🧠</span>
+      <h2>OpenClaw</h2>
+      <p>像后台总控室，通过翻译员收消息、回消息、看反应。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🎈</span>
+      <h2>一句话</h2>
+      <p>BlueBubbles 这条路，是“Mac 负责原生消息，OpenClaw 负责脑子”。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二站</p>
+    <h2>🔑 Quick start 的核心其实只有三把钥匙：Server URL、password、webhookPath</h2>
+    <p>别被后面高级能力吓到，第一次接通先盯这三样。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>serverUrl</code></div>
+      <p>像翻译员的办公室地址，OpenClaw 得先知道去哪儿找它。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>password</code></div>
+      <p>像翻译员办公室的门禁密码。没有它，别人也能假装 BlueBubbles 来敲门。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>webhookPath</code></div>
+      <p>像 OpenClaw 给翻译员留的一条专用收件口，来消息时往这里塞。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>https://your-gateway/.../bluebubbles-webhook?password=...</code></div>
+      <p>像告诉翻译员：“以后有新消息，就按这个门牌和密码来找我。”</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第三站</p>
+    <h2>😴 “Keeping Messages.app alive” 那段，说白了就是“有些 Mac 会打瞌睡，所以你得定时戳它一下”</h2>
+    <p>这段很像偏方，但它解决的就是现实里的掉线病。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">🍎 为什么会打瞌睡</div>
+      <p>有些 VM 或长期后台环境里，Messages.app 会看起来还在，实际上已经不积极接活。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>poke-messages.scpt</code></div>
+      <p>像每隔几分钟轻轻敲一下门，确认 Messages 还醒着。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">LaunchAgent 每 300 秒跑一次</div>
+      <p>像安排一个定时巡逻员，每 5 分钟去喊一句“别睡”。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 一句话</div>
+      <p>这不是花活，而是给“会打盹的 Messages”安排一个闹钟。</p>
+    </div>
+  </div>
+</section>

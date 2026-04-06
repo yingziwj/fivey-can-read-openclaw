@@ -1,0 +1,97 @@
+<section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>💬 iMessage 这页，其实是在教你“让 OpenClaw 通过 Mac 上的 imsg 工具，学会收发苹果消息”</h2>
+      <p>这条路和 BlueBubbles 很像，都是 Mac 世界里的桥，但方式不同。BlueBubbles 更像有一位 HTTP 翻译员，iMessage 这里更像让 OpenClaw 直接指挥一个叫 <code>imsg</code> 的工具人去跑腿。</p>
+      <p>所以这页最重要的不是 token，而是那台有 Messages 登录、权限给齐的 Mac。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合原生 iMessage 通道</span>
+      <span>重点是 imsg、Mac 权限、cliPath、群提及</span>
+      <a href="https://docs.openclaw.ai/channels/imessage" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一站</p>
+    <h2>🍎 这条路最核心的现实条件只有一句：Messages 得真登录在那台 Mac 上</h2>
+    <p>没有这块地基，后面配置再漂亮都只是空房子。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">💬</span>
+      <h2>Messages 必须已登录</h2>
+      <p>像电话卡真的插在那台 Mac 里，不然 imsg 没东西可控制。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🔐</span>
+      <h2>Full Disk Access</h2>
+      <p>像给工具人进资料室的门卡，不然它连消息数据库都看不到。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🤖</span>
+      <h2>Automation 权限</h2>
+      <p>像允许这个工具人去按 Messages 的按钮，不然它不能代发消息。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🎈</span>
+      <h2>一句话</h2>
+      <p>iMessage 这条路最怕的不是配置错，而是那台 Mac 根本没被授权好。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二站</p>
+    <h2>🧰 Local Mac 和 Remote Mac 的区别，其实只是“工具人住你身边，还是住在远方的那台 Mac 上”</h2>
+    <p>世界观没变，跑腿地点变了。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">🏠 Local Mac</div>
+      <p>像工具人就在你屋里，直接调用本机的 <code>imsg</code>。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🌐 Remote Mac over SSH</div>
+      <p>像你写了个 wrapper，让命令先 SSH 过去，再让远方那台 Mac 上的 <code>imsg</code> 跑腿。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>exec ssh -T gateway-host imsg \"$@\"</code></div>
+      <p>这行脚本翻成人话就是：“我不在本地跑，所有跑腿动作都转交给远方那位 Mac 助手。”</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>remoteHost</code></div>
+      <p>像写明远方那位工具人住哪儿，附件也要靠这个地址去拿。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第三站</p>
+    <h2>👥 群聊这块最要命的一句是：iMessage 没有原生 mention 元数据，所以你得靠模式识别“别人是不是在喊我”</h2>
+    <p>这就是为什么 mentionPatterns 在这里格外重要。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">🚫 没有原生 @ 提示</div>
+      <p>不像 Discord / Telegram 那样会明确告诉你“它被提到了”。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🔤 要靠 regex 模式</div>
+      <p>像给 OpenClaw 一张“别人可能会怎么喊我”的小抄。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">📋 groupPolicy / groupAllowFrom</div>
+      <p>先管这群和这些人能不能叫，再管有没有真的点名叫到它。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 一句话</div>
+      <p>iMessage 群聊里最重要的不是 bot 权限，而是“识别点名”的耳朵。</p>
+    </div>
+  </div>
+</section>

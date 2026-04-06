@@ -1,0 +1,97 @@
+<section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>🧭 Channel Routing 这页，其实是在教你“消息从哪扇门进来，就该回到哪扇门；至于交给哪个脑子，由你事先定规矩”</h2>
+      <p>最重要的一句是：模型不会自己临场决定“我要去 Telegram 回还是去 Slack 回”。路由是死规矩，不是自由发挥。</p>
+      <p>所以这页真正要你理解的，不是术语本身，而是“门、脑子、会话桶、回信路线”这几层怎么接起来。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合理解多通道路由</span>
+      <span>重点是 channel、agent、sessionKey、bindings</span>
+      <a href="https://docs.openclaw.ai/channels/channel-routing" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一站</p>
+    <h2>🚪 先把四个词翻成人话</h2>
+    <p>这四个词一旦看顺，整页就清楚了。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">🚪</span>
+      <h2>Channel</h2>
+      <p>像门。Telegram、Slack、Discord、WhatsApp 都是不同的门。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🧠</span>
+      <h2>Agent</h2>
+      <p>像脑子。消息进来后，到底交给哪个脑子思考，是由你配的 bindings 决定。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🪣</span>
+      <h2>SessionKey</h2>
+      <p>像记忆桶。哪一串对话归同一个桶，决定了上下文会不会混在一起。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🗺️</span>
+      <h2>Binding</h2>
+      <p>像路牌规则。写明“哪种门、哪个群、哪个账号，交给哪个脑子”。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二站</p>
+    <h2>🪣 SessionKey 那串长字符串，其实就是“消息到底应该被丢进哪只记忆桶里”</h2>
+    <p>这不是炫复杂，而是在避免不同地方的聊天互相串味。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">💬 DM 常落主桶</div>
+      <p>像私聊都回到同一只主记忆桶里，方便维持连续感。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">👥 群和频道各有各桶</div>
+      <p>像每个群都单独一桶，不会把 A 群吵架记到 B 群头上。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🧵 Thread 会再细分</div>
+      <p>像在同一大桶里再挂一只小袋子，专门装这个子线程的上下文。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 一句话</div>
+      <p>SessionKey 的作用，就是防止“聊着聊着串台”。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第三站</p>
+    <h2>🛣️ Routing rules 那张优先级表，本质是在说“更具体的门牌，永远先赢过大而化之的默认规则”</h2>
+    <p>越像“指定某一间房”，优先级越高。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">🎯 精确 peer 匹配</div>
+      <p>像直接写“这一个具体群、这一个具体房间，交给某个脑子”。最先匹配。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🏢 guild / team / account</div>
+      <p>像从“整栋楼”或“整家公司”这个级别做分流。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🚪 channel 匹配</div>
+      <p>再宽一点，像说“凡是从 Telegram 门进来的，都交给这个脑子”。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🛟 default agent</div>
+      <p>前面都没写时，最后的兜底脑子。</p>
+    </div>
+  </div>
+</section>

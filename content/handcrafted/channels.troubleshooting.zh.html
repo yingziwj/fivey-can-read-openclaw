@@ -1,0 +1,97 @@
+<section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>🩺 Channel Troubleshooting 这页，其实是在给你一张“通道看病挂号单”</h2>
+      <p>它不是每个通道的完整手册，而是一张总分诊台。症状来了，先按这张单子查最短的路，不要一上来就满站点乱翻。</p>
+      <p>最核心的价值，是把“通道连上了但表现不对”这种糊成一团的问题，先拆成几个可检查的症状。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合通道异常排查</span>
+      <span>重点是命令梯子、症状对照、先查哪一步</span>
+      <a href="https://docs.openclaw.ai/channels/troubleshooting" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一站</p>
+    <h2>🪜 Command ladder 其实就是“先走这 5 级楼梯，别一脚跨去猜原因”</h2>
+    <p>这是整页最实用的部分。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw status</code></div>
+      <p>像先看整栋楼有没有通电，别通道还没坏就先怀疑通道。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw gateway status</code></div>
+      <p>像再看总控室门牌是不是亮着。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw logs --follow</code></div>
+      <p>像站在玻璃窗后面看它实时咳不咳嗽。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw doctor</code> + <code>openclaw channels status --probe</code></div>
+      <p>一个像总医生体检，一个像逐个去敲每扇门看门后有没有人。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二站</p>
+    <h2>📋 后面那些 failure signatures，不是在教新知识，而是在帮你“按症状最快分诊”</h2>
+    <p>每个通道都给了一个最短排查入口。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">🟢</span>
+      <h2>WhatsApp</h2>
+      <p>看 pairing、看 mention、看重连，像先查门禁、点名和登录状态。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">📨</span>
+      <h2>Telegram</h2>
+      <p>重点先查 bot 是否被批准、群里 privacy mode 和提及规则是否挡住了它。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🎮</span>
+      <h2>Discord / Slack</h2>
+      <p>先查 guild/channel allowlist、token、scope、message content intent。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🍎</span>
+      <h2>iMessage / BlueBubbles / Signal</h2>
+      <p>更像权限、webhook、pairing 和本地守护进程状态的组合问题。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第三站</p>
+    <h2>🎯 这页的真正价值，是让你先问“最快该查哪一项”，而不是“我是不是全坏了”</h2>
+    <p>把症状和最快检查项配对，排错会轻松很多。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">📭 “连上了但没人回我”</div>
+      <p>先看 pairing、allowlist 和 mention gating，不要先怀疑模型。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🌐 “发消息报网络错”</div>
+      <p>先看 logs 里的 API 调用和网络环境，不要先重装整个通道。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🔁 “老是掉线重连”</div>
+      <p>先看 credentials 目录、session 健康、原始通道连接状态。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 收尾一句</div>
+      <p>这页像总分诊台，先把问题分门别类，再去各通道专科深查。</p>
+    </div>
+  </div>
+</section>

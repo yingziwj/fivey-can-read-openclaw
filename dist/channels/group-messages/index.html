@@ -3970,205 +3970,104 @@
   
       </div>
 
-      
       <section class="section-shell">
-        <div class="overview-card">
-          <div>
-            <p class="section-kicker">AI 绘本解读版</p>
-            <h2>📱 让OpenClaw在群聊里当个聪明小伙伴</h2>
-            <p>OpenClaw可以悄悄待在WhatsApp群聊里。只有被点名时才出来说话。每个群聊都有自己的小房间，不会打扰你的私人聊天。</p>
-          </div>
-          <div class="overview-meta">
-            <span>原始路径：/channels/group-messages</span>
-            <span>故事卡片：7 张</span>
-            <a href="https://docs.openclaw.ai/channels/group-messages" target="_blank" rel="noreferrer">查看官方原文</a>
-          </div>
-        </div>
-      </section>
-      
-          <section class="section-shell" id="section-1">
-            <div class="section-heading">
-              <p class="section-kicker">第 1 站</p>
-              <h2>🎯 它怎么知道该说话了？</h2>
-              <p>OpenClaw在群里有两种工作模式：被点名才说话，或者一直听着但只在需要时回答。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>这样它就不会在群里乱插话，像个懂礼貌的好朋友。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>默认是‘点名模式’：只有@它、提到它的名字或号码，它才会醒来。</li><li>可以改成‘一直听模式’：每条消息都听，但只有觉得能帮忙时才回答，不然就安静。</li><li>你可以给所有群定个规矩，也可以单独给某个群改规矩。</li><li>还能设置一个‘允许名单’，决定哪些群可以让OpenClaw加入。</li><li>默认是‘名单模式’，你得先告诉它哪些群可以进。</li></ul>
-              </div>
-              
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>想让它说话？记得先点名哦！</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-2">
-            <div class="section-heading">
-              <p class="section-kicker">第 2 站</p>
-              <h2>🏠 每个群都有自己的小房间</h2>
-              <p>OpenClaw为每个群都准备了一个独立的小房间，里面发生的事不会影响你和它的私聊。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>这样群里的指令和聊天历史就不会和你的私人对话混在一起。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>每个群聊都有一个专属的‘房间钥匙’。</li><li>在群里发的指令，比如‘/verbose on’（打开详细模式），只在这个群里有效。</li><li>你和它的私人聊天状态完全不受影响。</li><li>为了不打扰大家，它在群里不会发‘心跳’消息（就是那些表示‘我在线’的小提示）。</li><li>每次它要说话时，会先看看最近大家聊了什么（最多50条没触发它回复的消息）。</li><li>它会清楚地知道每句话是谁说的，名字和号码都会告诉它。</li><li>就算消息是‘阅后即焚’的，里面的点名也能叫醒它。</li><li>第一次进群或改模式时，它会收到一个‘群聊说明书’，告诉它这是哪个群、有谁、该怎么工作。</li></ul>
-              </div>
-              
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>群是群，私聊是私聊，互不打扰。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-3">
-            <div class="section-heading">
-              <p class="section-kicker">第 3 站</p>
-              <h2>🔧 怎么给它定群聊规矩？（配置示例）</h2>
-              <p>在你的设置文件里加几行字，就能告诉OpenClaw在群里该怎么工作。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>这样即使WhatsApp把@符号藏起来了，只要提到名字或号码，它也能听到。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>在‘channels.whatsapp.groups’这里定规矩。</li><li>例子里的‘&quot;*&quot;’意思是‘所有群都适用这条规矩’。</li><li>‘requireMention: true’就是要求必须被点名才说话。</li><li>在‘agents.list’里，给每个‘小伙伴’（Agent）单独设置。</li><li>可以告诉它：‘historyLimit: 50’——只看最近50条没回复的消息。</li><li>‘mentionPatterns’是‘点名清单’：写下能叫醒它的名字或号码，比如‘@?openclaw’或‘\\+?15555550123’。</li><li>点名清单不区分大小写，而且很安全，太复杂的规则会被忽略。</li><li>通常别人在群里点你联系人时，WhatsApp会发标准信号，号码备选很少用到，但有个备选更安心。</li></ul>
-              </div>
-              
-            <div class="source-card">
-              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
-              <ul><li>这就像在总控制台写了一张‘群聊工作守则’。</li><li>守则说：‘所有群（*）都按这个来：必须被点名（requireMention）才说话。’</li><li>还给名叫‘main’的小伙伴一个工具箱，里面装着：‘历史消息只看50条’，‘点名暗号是这些词’。</li><li>写规则时用的词（正则表达式）很灵活，但系统会检查是否安全。</li><li>WhatsApp通常会把点名信号发得很好，这个号码备选就像个安全网，以防万一。</li></ul>
-            </div>
-          
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>写好规则，点名就灵。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-4">
-            <div class="section-heading">
-              <p class="section-kicker">第 4 站</p>
-              <h2>🎛️ 老板，改模式啦！（专属命令）</h2>
-              <p>只有群主（或指定的管理员）能在群里用特殊命令切换OpenClaw的工作模式。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>防止别人随便改变它在群里的行为。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>在群里单独发一条消息：‘/activation mention’——切换到‘点名才说话’模式。</li><li>或者发：‘/activation always’——切换到‘一直听’模式。</li><li>只有老板的号码（或没设老板时它自己的号码）才能发这个命令。</li><li>想看看它现在是什么模式？在群里单独发‘/status’就行。</li></ul>
-              </div>
-              
-            <div class="source-card">
-              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
-              <ul><li>‘/activation mention’ 就像对OpenClaw喊：‘注意！改成点名模式！’</li><li>‘/activation always’ 则是喊：‘改成一直待命模式！’</li><li>这些命令必须单独发一条消息，它才能听清并执行。</li><li>‘/status’ 是问它：‘你现在是什么工作状态呀？’</li></ul>
-            </div>
-          
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>专属命令，老板专用。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-5">
-            <div class="section-heading">
-              <p class="section-kicker">第 5 站</p>
-              <h2>🚀 开始玩吧！使用步骤</h2>
-              <p>简单几步，让你的OpenClaw小伙伴加入群聊并开始互动。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>跟着做，你就能在群里和它聊天了。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>第一步：把你的WhatsApp账号（就是运行OpenClaw的那个）拉进群里。</li><li>第二步：在群里@它，或者提到它的名字/号码。除非你设置了‘完全开放’，否则只有‘允许名单’里的人才能叫醒它。</li><li>第三步：它要说话前，会先看看最近的聊天，并且知道刚才是谁在叫它。</li><li>第四步：群里的指令（比如‘/verbose on’打开唠叨模式，‘/think high’深度思考，‘/new’开新话题）只在这个群有效，记得单独发一条消息。你的私聊完全不受影响。</li></ul>
-              </div>
-              
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>拉进群，点名它，单独发令，私聊照旧。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-6">
-            <div class="section-heading">
-              <p class="section-kicker">第 6 站</p>
-              <h2>🔍 检查一下，它工作正常吗？</h2>
-              <p>做几个小测试，看看OpenClaw在群里是不是乖乖的。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>确保它按你想的方式在运行。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>手动小测试：在群里@它一下，看看它回复时有没有提到发消息的人的名字。</li><li>再@它一次，确认它把之前的聊天记录也考虑进去了，并且下次会刷新。</li><li>打开详细日志模式（运行加‘--verbose’），看看网关日志。</li><li>在日志里找‘inbound web message’（收到的网页消息），能看到消息来自哪个群，以及‘[from: …]’这个标记加上了没有。</li></ul>
-              </div>
-              
-            <div class="source-card">
-              <div class="story-card-label">🛠 命令 / 代码像在做什么</div>
-              <ul><li>运行命令时加上‘--verbose’，就像打开了‘现场直播监视器’。</li><li>在监视器里，你能看到每条进出消息的详细信息。</li><li>特别注意消息是否标明了来自哪个群（groupJid），以及是否正确附加了发送者信息。</li></ul>
-            </div>
-          
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>点名测试，日志查看，一切明了。</p>
-              </div>
-            </div>
-          </section>
-        
-          <section class="section-shell" id="section-7">
-            <div class="section-heading">
-              <p class="section-kicker">第 7 站</p>
-              <h2>💡 需要知道的小细节</h2>
-              <p>还有一些小事情，知道了会让体验更好。</p>
-            </div>
-            <div class="story-grid">
-              <div class="story-card">
-                <div class="story-card-label">🌟 为什么要看</div>
-                <p>了解这些，你就更懂你的小伙伴了。</p>
-              </div>
-              <div class="source-card">
-                <div class="story-card-label">🧠 这节要记住什么</div>
-                <ul><li>为了不刷屏，它在群里默认不发‘心跳’消息（就是‘我还在哦’的提示）。</li><li>防重复：如果你连续发两条一模一样的、没点名它的消息，它只会回复第一条。</li><li>它的‘群聊小房间’记录会存在一个特定位置，文件名像‘agent:小伙伴ID:whatsapp:group:群ID’。如果找不到，只是说明这个群还没叫醒过它。</li><li>它在群里的‘正在输入…’提示，遵循默认设置（没被点名时，默认只在发消息前显示）。</li></ul>
-              </div>
-              
-              <div class="story-card">
-                <div class="story-card-label">🎈 最后记一句</div>
-                <p>心跳不发，防重复答，记录可查，输入有规。</p>
-              </div>
-            </div>
-          </section>
-        
-      <section class="section-shell">
-        <div class="ad-placeholder">
-          <p>这里预留给未来的 Google AdSense 模块。</p>
-          <code>&lt;!-- ADSENSE_SNIPPET --&gt;</code>
-        </div>
-      </section>
-    
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>💬 Group Messages 这页，其实是在教你“让 WhatsApp 群里的 OpenClaw 像一个懂礼貌的旁听同学，被点名才站起来回答”</h2>
+      <p>这页专门盯 WhatsApp 群聊，但它在讲的不是“怎么让它多说话”，反而是“怎么让它别乱说话”。</p>
+      <p>默认思路非常克制：被提到才醒；没被提到时，先把消息记在旁边，等需要时再当作上下文参考。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合 WhatsApp 群聊行为</span>
+      <span>重点是 activation、mention、pending-only context、单独群会话</span>
+      <a href="https://docs.openclaw.ai/channels/group-messages" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一站</p>
+    <h2>😴 这页的核心不是“让它一直开口”，而是“让它会挑时机开口”</h2>
+    <p>activation 的两个模式，读成性格就很好懂。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">@</span>
+      <h2><code>mention</code></h2>
+      <p>像课堂上被点名才发言。默认最稳。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🗣️</span>
+      <h2><code>always</code></h2>
+      <p>像一直在认真听，但也不是每句话都要接，没必要时会选择沉默。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🤫</span>
+      <h2><code>NO_REPLY</code></h2>
+      <p>像它心里想了，但判断“现在不该插话”，于是安静坐回去。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🎈</span>
+      <h2>一句话</h2>
+      <p>群聊里最好的 OpenClaw，不是最话多的那个，而是最会挑时机的那个。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二站</p>
+    <h2>🧲 mention 检测其实是在看“有没有真的叫到我名字”</h2>
+    <p>而且不只是 WhatsApp 原生 @，还可以靠模式匹配兜底。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">✅ 原生 @ mention</div>
+      <p>这是最直接的点名方式，WhatsApp 会通过 <code>mentionedJids</code> 告诉 OpenClaw。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🔤 mentionPatterns</div>
+      <p>像额外准备一份“别人可能会怎么喊我”的小抄，比如昵称、号码。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>mentionPatterns: [\"@?openclaw\", \"\\\\+?1555...\"]</code></div>
+      <p>像告诉它：看到这些叫法，也算是在喊我。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 一句话</div>
+      <p>mentionPatterns 不是装饰，是群里“点名识别系统”的备用耳朵。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第三站</p>
+    <h2>🪣 每个群单独一桶记忆，这件事很重要</h2>
+    <p>因为你不希望家庭群和工作群互相串台。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">👥 群有自己的 session key</div>
+      <p>像每个群有自己专属笔记本，群里的开关命令只影响这一本。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">💬 私聊主桶不受影响</div>
+      <p>你在个人 DM 里的状态，不会因为群里一条 <code>/think high</code> 被改掉。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">📝 pending-only context</div>
+      <p>没触发回答的群消息，会先被当成“旁听笔记”，以后回答时再塞给它当背景。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 收尾一句</div>
+      <p>群聊不是“每条都答”，而是“很多先记着，等真被点名时再用上”。</p>
+    </div>
+  </div>
+</section>
+
 
       <footer class="page-footer">
         <div>
