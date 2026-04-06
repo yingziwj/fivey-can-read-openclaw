@@ -3970,544 +3970,145 @@
   
       </div>
 
-      
-    <section class="section-shell">
-      <div class="overview-card">
-        <div>
-          <p class="section-kicker">先听这页的人话版</p>
-          <h2>Amazon Bedrock</h2>
-          <p>这一页像一本关于“Amazon Bedrock”的小绘本，它先告诉我们这位机器人朋友会做什么，再一步一步解释什么时候该这样做。 你可以先把它想成：Amazon Bedrock。</p>
-          <p>如果把这页当成“给普通人看的版本”，你最应该带走的是：它到底在教你一件什么事、什么时候要这样做、以及哪里最容易踩坑。</p>
-        </div>
-        <div class="overview-meta">
-          <span>原始路径：/providers/bedrock</span>
-          <span>章节数量：7</span>
-          <a href="https://docs.openclaw.ai/providers/bedrock" target="_blank" rel="noreferrer">查看原文</a>
-        </div>
-      </div>
-    </section>
-    
-        <section class="section-shell" id="section-1">
-          <div class="section-heading">
-            <p class="section-kicker">第 1 站</p>
-            <h2>Start Here</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Amazon Bedrock OpenClaw can use **Amazon Bedrock** 聪明脑袋模型s via pi‑ai’s **Bedrock Converse** 一边说一边送ing provider. Bedrock…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Amazon Bedrock”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p># Amazon Bedrock</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“OpenClaw can use **Amazon Bedrock** 聪明脑袋模型s via pi‑ai’s **Bedrock Converse** 一边说一边送ing provider. Bedrock auth uses the…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>OpenClaw can use **Amazon Bedrock** models via pi‑ai’s **Bedrock Converse** streaming provider. Bedrock auth uses the **AWS SDK default credential chain**, not an API key.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-2">
-          <div class="section-heading">
-            <p class="section-kicker">第 2 站</p>
-            <h2>What pi-ai supports</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“What pi-ai supports”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Provider: amazon-bedrock、对话接口: bedrock-converse-一边说一边送、Auth: AWS credentials (env vars, shared 设…、Region: AWS_REGION or AWS_DEFAULT_REGION…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Provider: <code>amazon-bedrock</code></li><li>API: <code>bedrock-converse-stream</code></li><li>Auth: AWS credentials (env vars, shared config, or instance role)</li><li>Region: <code>AWS_REGION</code> or <code>AWS_DEFAULT_REGION</code> (default: <code>us-east-1</code>)</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-3">
-          <div class="section-heading">
-            <p class="section-kicker">第 3 站</p>
-            <h2>Automatic 聪明脑袋模型 discovery</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“If AWS credentials are detected, OpenClaw can automatically discover Bedrock 聪明脑袋模型s that support **一边说一边送ing** and **t…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“If AWS credentials are detected, OpenClaw can automatically discover Bedrock 聪明脑袋模型s that support **一边说一边送ing** and **t…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>If AWS credentials are detected, OpenClaw can automatically discover Bedrock models that support **streaming** and **text output**. Discovery uses <code>bedrock:ListFoundationModels</code> and is cached (default: 1 hour).</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“设置说明书 options live under 聪明脑袋模型s.bedrockDiscovery:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Config options live under <code>models.bedrockDiscovery</code>:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“models”贴标签，意思是把它设置成“{”。</li><li>这里在给“bedrockDiscovery”贴标签，意思是把它设置成“{”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json5">{
-  models: {
-    bedrockDiscovery: {
-      enabled: true,
-      region: &quot;us-east-1&quot;,
-      providerFilter: [&quot;anthropic&quot;, &quot;amazon&quot;],
-      refreshInterval: 3600,
-      defaultContextWindow: 32000,
-      defaultMaxTokens: 4096,
-    },
-  },
-}</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Notes:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Notes:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“are used for discovered 聪明脑袋模型s (override if you know your 聪明脑袋模型 limits).”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>are used for discovered models (override if you know your model limits).</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Automatic model discovery”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：enabled defaults to true when AWS credent…、region defaults to AWS_REGION or AWS_DEFA…、providerFilter matches Bedrock provider n…、refreshInterval is seconds; set to 0 to d…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>enabled</code> defaults to <code>true</code> when AWS credentials are present.</li><li><code>region</code> defaults to <code>AWS_REGION</code> or <code>AWS_DEFAULT_REGION</code>, then <code>us-east-1</code>.</li><li><code>providerFilter</code> matches Bedrock provider names (for example <code>anthropic</code>).</li><li><code>refreshInterval</code> is seconds; set to <code>0</code> to disable caching.</li><li><code>defaultContextWindow</code> (default: <code>32000</code>) and <code>defaultMaxTokens</code> (default: <code>4096</code>)</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-4">
-          <div class="section-heading">
-            <p class="section-kicker">第 4 站</p>
-            <h2>Onboarding</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“1. Ensure AWS credentials are available on the **门口的小门卫 host**: 2. Add a Bedrock provider and 聪明脑袋模型 to your 设置说明书 (no…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“1. Ensure AWS credentials are available on the **门口的小门卫 host**:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>1. Ensure AWS credentials are available on the **gateway host**:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一串终端魔法口令，像按步骤按下几个按钮，让电脑开始干活。</p>
-        <ul class="code-steps">
-          <li>这一行“export AWS_ACCESS_KEY_ID=&quot;AKIA...&quot;”是当前步骤要交给电脑的一小块提示。</li><li>这一行“export AWS_SECRET_ACCESS_KEY=&quot;...&quot;”是当前步骤要交给电脑的一小块提示。</li><li>这一行“export AWS_REGION=&quot;us-east-1&quot;”是当前步骤要交给电脑的一小块提示。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">export AWS_ACCESS_KEY_ID=&quot;AKIA...&quot;
-export AWS_SECRET_ACCESS_KEY=&quot;...&quot;
-export AWS_REGION=&quot;us-east-1&quot;
-# Optional:
-export AWS_SESSION_TOKEN=&quot;...&quot;
-export AWS_PROFILE=&quot;your-profile&quot;
-# Optional (Bedrock API key/bearer token):
-export AWS_BEARER_TOKEN_BEDROCK=&quot;...&quot;</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“2. Add a Bedrock provider and 聪明脑袋模型 to your 设置说明书 (no 对话接口Key required):”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>2. Add a Bedrock provider and model to your config (no <code>apiKey</code> required):</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“models”贴标签，意思是把它设置成“{”。</li><li>这里在给“providers”贴标签，意思是把它设置成“{”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json5">{
-  models: {
-    providers: {
-      &quot;amazon-bedrock&quot;: {
-        baseUrl: &quot;https://bedrock-runtime.us-east-1.amazonaws.com&quot;,
-        api: &quot;bedrock-converse-stream&quot;,
-        auth: &quot;aws-sdk&quot;,
-        models: [
-          {
-            id: &quot;us.anthropic.claude-opus-4-6-v1:0&quot;,
-            name: &quot;Claude Opus 4.6 (Bedrock)&quot;,
-            reasoning: true,
-            input: [&quot;text&quot;, &quot;image&quot;],
-            cost: { input: 0, output: 0, cacheRead: 0, cacheWrite: 0 },
-            contextWindow: 200000,
-            maxTokens: 8192,
-          },
-        ],
-      },
-    },
-  },
-  agents: {
-    defaults: {
-      model: { primary: &quot;amazon-bedrock/us.anthropic.claude-opus-4-6-v1:0&quot; },
-    },
-  },
-}</code></pre>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-5">
-          <div class="section-heading">
-            <p class="section-kicker">第 5 站</p>
-            <h2>EC2 Instance Roles</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“When running OpenClaw on an EC2 instance with an IAM role attached, the AWS SDK will automatically use the instance met…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“When running OpenClaw on an EC2 instance with an IAM role attached, the AWS SDK will automatically use the instance met…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>When running OpenClaw on an EC2 instance with an IAM role attached, the AWS SDK will automatically use the instance metadata service (IMDS) for authentication. However, OpenClaw&#39;s credential detection currently only checks for environment variables, not IMDS credentials.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“**Workaround:** Set AWS_PROFILE=default to signal that AWS credentials are available. The actual authentication still u…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>**Workaround:** Set <code>AWS_PROFILE=default</code> to signal that AWS credentials are available. The actual authentication still uses the instance role via IMDS.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一串终端魔法口令，像按步骤按下几个按钮，让电脑开始干活。</p>
-        <ul class="code-steps">
-          <li>这一行“# Add to ~/.bashrc or your shell profile”是当前步骤要交给电脑的一小块提示。</li><li>这一行“export AWS_PROFILE=default”是当前步骤要交给电脑的一小块提示。</li><li>这一行“export AWS_REGION=us-east-1”是当前步骤要交给电脑的一小块提示。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash"># Add to ~/.bashrc or your shell profile
-export AWS_PROFILE=default
-export AWS_REGION=us-east-1</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“**Required IAM permissions** for the EC2 instance role:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>**Required IAM permissions** for the EC2 instance role:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“EC2 Instance Roles”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：bedrock:Invoke聪明脑袋模型、bedrock:Invoke聪明脑袋模型WithResponse一边说一边送、bedrock:ListFoundation聪明脑袋模型s (for automa…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>bedrock:InvokeModel</code></li><li><code>bedrock:InvokeModelWithResponseStream</code></li><li><code>bedrock:ListFoundationModels</code> (for automatic discovery)</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Or attach the managed policy AmazonBedrockFullAccess.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Or attach the managed policy <code>AmazonBedrockFullAccess</code>.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-6">
-          <div class="section-heading">
-            <p class="section-kicker">第 6 站</p>
-            <h2>Quick setup (AWS path)</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一串终端魔法口令，像按步骤按下几个按钮，让电脑开始干活。</p>
-        <ul class="code-steps">
-          <li>这一行“# 1. Create IAM role and instance profile”是当前步骤要交给电脑的一小块提示。</li><li>这一行“aws iam create-role --role-name EC2-Bedrock-Access \”是当前步骤要交给电脑的一小块提示。</li><li>这一行“--assume-role-policy-document &#39;{”是当前步骤要交给电脑的一小块提示。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash"># 1. Create IAM role and instance profile
-aws iam create-role --role-name EC2-Bedrock-Access \
-  --assume-role-policy-document &#39;{
-    &quot;Version&quot;: &quot;2012-10-17&quot;,
-    &quot;Statement&quot;: [{
-      &quot;Effect&quot;: &quot;Allow&quot;,
-      &quot;Principal&quot;: {&quot;Service&quot;: &quot;ec2.amazonaws.com&quot;},
-      &quot;Action&quot;: &quot;sts:AssumeRole&quot;
-    }]
-  }&#39;
+      <section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>☁️ Bedrock 像 AWS 里的“大模型码头”：你不是交一把 API key，而是要证明“你有这片云港口的通行权”</h2>
+      <p>这页最容易让人误会的地方，就是总想去找一把普通 API key。官方其实在反复说：Bedrock 走的是 AWS 身份链，不是常见那种单独钥匙。</p>
+      <p>所以你该把它想成一座云港口。OpenClaw 想进去调模型，不是看你有没有某个字符串钥匙，而是看你到底有没有 AWS 这套通行证、角色或身份资料。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合要把 OpenClaw 接到 AWS Bedrock 的人</span>
+      <span>重点是身份链、自动发现、EC2 角色</span>
+      <a href="https://docs.openclaw.ai/providers/bedrock" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
 
-aws iam attach-role-policy --role-name EC2-Bedrock-Access \
-  --policy-arn arn:aws:iam::aws:policy/AmazonBedrockFullAccess
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一步</p>
+    <h2>🪪 Bedrock 不认普通 API key，它认的是 AWS 身份链</h2>
+    <p>官方开头就把这件事讲死了。别去找“Bedrock 专属 key”当主路。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">🌿 环境变量凭证</div>
+      <p>像你把 AWS 通行证直接挂在值班室墙上，OpenClaw 一眼就能看到。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">📁 shared config / profile</div>
+      <p>像把通行证收进 AWS 自家的档案柜里，再告诉系统去哪个抽屉拿。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🏷 instance role</div>
+      <p>像你这台 EC2 机器自己就带工作证，不用额外掏小纸条。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 最短记法</div>
+      <p>Bedrock 不是“塞 key”，而是“证明你有 AWS 港口通行权”。</p>
+    </div>
+  </div>
+</section>
 
-aws iam create-instance-profile --instance-profile-name EC2-Bedrock-Access
-aws iam add-role-to-instance-profile \
-  --instance-profile-name EC2-Bedrock-Access \
-  --role-name EC2-Bedrock-Access
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二步</p>
+    <h2>🛰 自动发现模型，像码头管理员先去看“今天哪些船能靠岸”</h2>
+    <p>这页里最有意思的不是手写模型，而是自动发现。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>models.bedrockDiscovery.enabled</code></div>
+      <p>像告诉管理员：“你开工时先去码头公告牌看一眼，今天能接哪些船。”</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>providerFilter</code></div>
+      <p>像说“我只想看 Anthropic 或 Amazon 这几家的船，不要把整片港口全搬给我看”。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>refreshInterval</code></div>
+      <p>像公告牌多久去重抄一次。默认一小时，不是每秒都去看。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>defaultContextWindow</code> / <code>defaultMaxTokens</code></div>
+      <p>像管理员还没拿到精确船只参数时，先用一个保守估值写在临时表上。</p>
+    </div>
+  </div>
+</section>
 
-# 2. Attach to your EC2 instance
-aws ec2 associate-iam-instance-profile \
-  --instance-id i-xxxxx \
-  --iam-instance-profile Name=EC2-Bedrock-Access
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第三步</p>
+    <h2>📦 那段环境变量命令，像“把 AWS 证件袋放到 Gateway 主机上”</h2>
+    <p>这几行不是在炫命令，而是在做一件很朴素的事：让真正跑 Gateway 的机器拿到 AWS 身份。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">🔑</span>
+      <h2><code>AWS_ACCESS_KEY_ID</code> / <code>AWS_SECRET_ACCESS_KEY</code></h2>
+      <p>像主证件和签名章，缺一半都不够。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🌍</span>
+      <h2><code>AWS_REGION</code></h2>
+      <p>像告诉码头管理员“你今天去哪个港区接船”。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🧾</span>
+      <h2><code>AWS_PROFILE</code></h2>
+      <p>像告诉系统去 AWS 档案柜里拿哪一份现成身份资料。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🎈</span>
+      <h2>一句话</h2>
+      <p>这整段就是在给 Gateway 主机准备 AWS 通行证。</p>
+    </article>
+  </div>
+</section>
 
-# 3. On the EC2 instance, enable discovery
-openclaw config set models.bedrockDiscovery.enabled true
-openclaw config set models.bedrockDiscovery.region us-east-1
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第四步</p>
+    <h2>🧠 手写模型配置，像“指定今天固定要接哪条船”</h2>
+    <p>如果你不想全靠自动发现，就自己写一个明确模型入口。</p>
+  </div>
+  <div class="ad-placeholder">
+    <p><code>amazon-bedrock/us.anthropic.claude-opus-4-6-v1:0</code> 这种长名字，像在写“港口 / 提供方 / 具体船号”。不是故意写长，而是在把路线写完整。</p>
+  </div>
+</section>
 
-# 4. Set the workaround env vars
-echo &#39;export AWS_PROFILE=default&#39; &gt;&gt; ~/.bashrc
-echo &#39;export AWS_REGION=us-east-1&#39; &gt;&gt; ~/.bashrc
-source ~/.bashrc
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第五步</p>
+    <h2>🚜 EC2 instance role 那段，像“这辆云主机自己就挂着工作证”</h2>
+    <p>这部分很多人看着头大，其实就一句话：EC2 机器自己能带身份，但 OpenClaw 还需要一点提示，才知道去用这条路。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label">为什么要 <code>AWS_PROFILE=default</code></div>
+      <p>像你虽然已经穿着工服，但门口扫描器还需要你举一下员工牌，才知道“哦，这位是有身份的”。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">IAM 权限清单</div>
+      <p>像码头工作人员至少得有“叫船进港、流式收货、看公告牌”的几项权力，不然啥也干不了。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">那段一长串 <code>aws iam ...</code> 命令</div>
+      <p>像在给 EC2 配正式工作证、挂权限、再把这张证绑到这台机器身上。</p>
+    </div>
+  </div>
+</section>
 
-# 5. Verify models are discovered
-openclaw models list</code></pre>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-7">
-          <div class="section-heading">
-            <p class="section-kicker">第 7 站</p>
-            <h2>Notes</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“then AWS_ACCESS_KEY_ID + AWS_SECRET_ACCESS_KEY, then AWS_PROFILE, then the default AWS SDK chain. current capabilities.…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“then AWS_ACCESS_KEY_ID + AWS_SECRET_ACCESS_KEY, then AWS_PROFILE, then the default AWS SDK chain.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>then <code>AWS_ACCESS_KEY_ID</code> + <code>AWS_SECRET_ACCESS_KEY</code>, then <code>AWS_PROFILE</code>, then the default AWS SDK chain.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“current capabilities.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>current capabilities.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“proxy in front of Bedrock and 设置说明书ure it as an OpenAI provider instead.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>proxy in front of Bedrock and configure it as an OpenAI provider instead.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Notes”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Bedrock requires **聪明脑袋模型 access** enable…、Automatic discovery needs the bedrock:Lis…、If you use profiles, set AWS_PROFILE on t…、OpenClaw surfaces the credential source i…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Bedrock requires **model access** enabled in your AWS account/region.</li><li>Automatic discovery needs the <code>bedrock:ListFoundationModels</code> permission.</li><li>If you use profiles, set <code>AWS_PROFILE</code> on the gateway host.</li><li>OpenClaw surfaces the credential source in this order: <code>AWS_BEARER_TOKEN_BEDROCK</code>,</li><li>Reasoning support depends on the model; check the Bedrock model card for</li><li>If you prefer a managed key flow, you can also place an OpenAI‑compatible</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-    <section class="section-shell">
-      <div class="ad-placeholder">
-        <p>这里预留给未来的 Google AdSense 模块。</p>
-        <code>&lt;!-- ADSENSE_SNIPPET --&gt;</code>
-      </div>
-    </section>
-  
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">最后总结</p>
+    <h2>🎈 把 Bedrock 这页压成一句最好记的话</h2>
+    <p>Bedrock 不是普通 API key 路线，而是 AWS 身份路线。先把通行证给对，再决定是让系统自己去码头发现能用的船，还是你手写指定要接哪一条。</p>
+  </div>
+</section>
+
 
       <footer class="page-footer">
         <div>

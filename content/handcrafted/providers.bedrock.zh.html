@@ -1,0 +1,138 @@
+<section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>☁️ Bedrock 像 AWS 里的“大模型码头”：你不是交一把 API key，而是要证明“你有这片云港口的通行权”</h2>
+      <p>这页最容易让人误会的地方，就是总想去找一把普通 API key。官方其实在反复说：Bedrock 走的是 AWS 身份链，不是常见那种单独钥匙。</p>
+      <p>所以你该把它想成一座云港口。OpenClaw 想进去调模型，不是看你有没有某个字符串钥匙，而是看你到底有没有 AWS 这套通行证、角色或身份资料。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合要把 OpenClaw 接到 AWS Bedrock 的人</span>
+      <span>重点是身份链、自动发现、EC2 角色</span>
+      <a href="https://docs.openclaw.ai/providers/bedrock" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一步</p>
+    <h2>🪪 Bedrock 不认普通 API key，它认的是 AWS 身份链</h2>
+    <p>官方开头就把这件事讲死了。别去找“Bedrock 专属 key”当主路。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">🌿 环境变量凭证</div>
+      <p>像你把 AWS 通行证直接挂在值班室墙上，OpenClaw 一眼就能看到。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">📁 shared config / profile</div>
+      <p>像把通行证收进 AWS 自家的档案柜里，再告诉系统去哪个抽屉拿。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">🏷 instance role</div>
+      <p>像你这台 EC2 机器自己就带工作证，不用额外掏小纸条。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">🎈 最短记法</div>
+      <p>Bedrock 不是“塞 key”，而是“证明你有 AWS 港口通行权”。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二步</p>
+    <h2>🛰 自动发现模型，像码头管理员先去看“今天哪些船能靠岸”</h2>
+    <p>这页里最有意思的不是手写模型，而是自动发现。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>models.bedrockDiscovery.enabled</code></div>
+      <p>像告诉管理员：“你开工时先去码头公告牌看一眼，今天能接哪些船。”</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>providerFilter</code></div>
+      <p>像说“我只想看 Anthropic 或 Amazon 这几家的船，不要把整片港口全搬给我看”。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>refreshInterval</code></div>
+      <p>像公告牌多久去重抄一次。默认一小时，不是每秒都去看。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>defaultContextWindow</code> / <code>defaultMaxTokens</code></div>
+      <p>像管理员还没拿到精确船只参数时，先用一个保守估值写在临时表上。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第三步</p>
+    <h2>📦 那段环境变量命令，像“把 AWS 证件袋放到 Gateway 主机上”</h2>
+    <p>这几行不是在炫命令，而是在做一件很朴素的事：让真正跑 Gateway 的机器拿到 AWS 身份。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">🔑</span>
+      <h2><code>AWS_ACCESS_KEY_ID</code> / <code>AWS_SECRET_ACCESS_KEY</code></h2>
+      <p>像主证件和签名章，缺一半都不够。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🌍</span>
+      <h2><code>AWS_REGION</code></h2>
+      <p>像告诉码头管理员“你今天去哪个港区接船”。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🧾</span>
+      <h2><code>AWS_PROFILE</code></h2>
+      <p>像告诉系统去 AWS 档案柜里拿哪一份现成身份资料。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🎈</span>
+      <h2>一句话</h2>
+      <p>这整段就是在给 Gateway 主机准备 AWS 通行证。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第四步</p>
+    <h2>🧠 手写模型配置，像“指定今天固定要接哪条船”</h2>
+    <p>如果你不想全靠自动发现，就自己写一个明确模型入口。</p>
+  </div>
+  <div class="ad-placeholder">
+    <p><code>amazon-bedrock/us.anthropic.claude-opus-4-6-v1:0</code> 这种长名字，像在写“港口 / 提供方 / 具体船号”。不是故意写长，而是在把路线写完整。</p>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第五步</p>
+    <h2>🚜 EC2 instance role 那段，像“这辆云主机自己就挂着工作证”</h2>
+    <p>这部分很多人看着头大，其实就一句话：EC2 机器自己能带身份，但 OpenClaw 还需要一点提示，才知道去用这条路。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label">为什么要 <code>AWS_PROFILE=default</code></div>
+      <p>像你虽然已经穿着工服，但门口扫描器还需要你举一下员工牌，才知道“哦，这位是有身份的”。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">IAM 权限清单</div>
+      <p>像码头工作人员至少得有“叫船进港、流式收货、看公告牌”的几项权力，不然啥也干不了。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">那段一长串 <code>aws iam ...</code> 命令</div>
+      <p>像在给 EC2 配正式工作证、挂权限、再把这张证绑到这台机器身上。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">最后总结</p>
+    <h2>🎈 把 Bedrock 这页压成一句最好记的话</h2>
+    <p>Bedrock 不是普通 API key 路线，而是 AWS 身份路线。先把通行证给对，再决定是让系统自己去码头发现能用的船，还是你手写指定要接哪一条。</p>
+  </div>
+</section>
