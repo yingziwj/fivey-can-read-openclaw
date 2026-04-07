@@ -1,0 +1,97 @@
+<section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>🔔 Webhooks 插件像给 OpenClaw 装一个“外部门铃”</h2>
+      <p>外面的系统按一下铃，可以叫主会话醒一醒，也可以直接开一间任务房，让流程进去跑。</p>
+      <p>它最适合接 Zapier、n8n、CI job 或内部服务这种“外面来敲门”的东西。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合让外部系统驱动 TaskFlow 的人</span>
+      <span>重点是路由、鉴权、wake / agent 两种入口</span>
+      <a href="https://docs.openclaw.ai/plugins/webhooks" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一步</p>
+    <h2>🚪 先把门铃装上，再给它一个暗号和门牌</h2>
+    <p>没有 `enabled`、`token`、`path`，门铃就不完整。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label"><code>enabled</code></div>
+      <p>像给门铃通电。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>token</code></div>
+      <p>像门铃暗号，没暗号谁都能乱按就不行。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>path</code></div>
+      <p>像门牌号，告诉外面的人该敲哪儿。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二步</p>
+    <h2>🪪 鉴权像“先对暗号，再进门”</h2>
+    <p>这页反复强调 token，不是啰嗦，而是因为这扇门一旦开了，权限就不轻。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">🔐</span>
+      <h2><code>Authorization: Bearer &lt;token&gt;</code></h2>
+      <p>像最正式的敲门方式。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🪧</span>
+      <h2><code>x-openclaw-token</code></h2>
+      <p>像备用暗号通道。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🚫</span>
+      <h2>不要把 token 写进 query string</h2>
+      <p>像别把门禁暗号贴在门外纸条上。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🧠</span>
+      <h2>secret references</h2>
+      <p>像把暗号藏进更安全的柜子里，不直接摊在配置上。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第三步</p>
+    <h2>💓 wake 和 agent，是两种完全不同的按铃结果</h2>
+    <p>一个只叫醒主会话，一个直接开新任务。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>/hooks/wake</code></div>
+      <p>像轻轻拍门：“醒一醒，有消息了。”</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>/hooks/agent</code></div>
+      <p>像直接塞一张新任务单：“去隔壁房间干活。”</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">taskflow 入口</div>
+      <p>真正复杂的外部自动化，最后通常都会落到 TaskFlow 这条线上。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">最后总结</p>
+    <h2>🎈 把 Webhooks 这页压成一句最好记的话</h2>
+    <p>Webhooks 就是外部门铃：先装好门牌和暗号，外面的系统才能安全地把任务推进 OpenClaw。</p>
+  </div>
+</section>

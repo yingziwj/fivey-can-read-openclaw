@@ -1,0 +1,97 @@
+<section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>🐧 QQ Bot 像给 OpenClaw 装上一扇“QQ 专用大门”</h2>
+      <p>它接的是官方 QQ Bot API，能收私聊、群里 @ 消息、频道消息，还能处理图片、语音、视频和文件。</p>
+      <p>这页最重要的不是“QQ 能不能接”，而是先知道它是一个 bundled 插件，正常安装里一般不用额外再装一遍。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合想把 OpenClaw 接进 QQ 的人</span>
+      <span>重点是 AppID、AppSecret、token 这三样</span>
+      <a href="https://docs.openclaw.ai/channels/qqbot" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一步</p>
+    <h2>🪪 先去 QQ 开平台领门票</h2>
+    <p>官方流程像很普通的办卡动作：先注册，再创建机器人，再把卡号记下来。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">1</span>
+      <h2>注册 / 登录</h2>
+      <p>像先去 QQ 开放平台门口排队。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">2</span>
+      <h2>创建 Bot</h2>
+      <p>像给这扇门办一张新工牌。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">3</span>
+      <h2>抄下 AppID / AppSecret</h2>
+      <p>像把门牌号和暗号写到小本本上。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">4</span>
+      <h2>注意 AppSecret</h2>
+      <p>它不会明文一直摆着，离开页面不存就得重新生成。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二步</p>
+    <h2>🛠 添加频道的命令，其实是在说“这扇 QQ 门正式上岗”</h2>
+    <p>命令别死背，先看它在做什么。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw channels add --channel qqbot --token "AppID:AppSecret"</code></div>
+      <p>像把 QQ 门牌和暗号一起交给 Gatewa，让它知道这扇门怎么开。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw channels add</code></div>
+      <p>像走带路老师的图形版登记流程。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw configure --section channels</code></div>
+      <p>像直接打开“通道配置房间”，把 QQ 这一间也填进去。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第三步</p>
+    <h2>📦 配置片段，就是给这扇门贴一张“值班表”</h2>
+    <p>官方给了两种放 secret 的方式：直接写，或者放到文件里。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label"><code>channels.qqbot.enabled</code></div>
+      <p>像把这扇门的开关拨到开。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>clientSecretFile</code></div>
+      <p>像把真正的暗号放进文件柜，不直接摊在桌上。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>QQBOT_APP_ID</code> / <code>QQBOT_CLIENT_SECRET</code></div>
+      <p>像给夜班门卫一份稳定的钥匙清单。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">最后总结</p>
+    <h2>🎈 把 QQ Bot 这页压成一句最好记的话</h2>
+    <p>QQ Bot 就是给 OpenClaw 接上一扇 QQ 专用门。先办号、记暗号，再把它登记到 channels 里，后面就能收私聊、群消息和频道消息。</p>
+  </div>
+</section>

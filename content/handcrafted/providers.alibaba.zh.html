@@ -1,0 +1,18 @@
+<section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>🎬 Alibaba Model Studio 这页，主要是在讲“把视频生成这扇门接进来”</h2>
+      <p>它不是聊天模型页，而是 OpenClaw 的视频生成供应商。你给它一个钥匙，它就能让 Wan 系列模型出片。</p>
+      <p>它和 Qwen 共享部分底层风味，但这页更像“直接开阿里云自家的视频窗口”。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合做视频生成的人</span>
+      <span>重点是 MODELSTUDIO_API_KEY 和 Wan 系列模型</span>
+      <a href="https://docs.openclaw.ai/providers/alibaba" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+<section class="section-shell"><div class="section-heading"><p class="section-kicker">第一步</p><h2>🔑 先把视频门票交上去</h2><p>官方让你先选 auth，再把默认视频模型挂上。</p></div><div class="home-grid"><article class="home-card"><span class="home-card-index">🎟</span><h2><code>openclaw onboard --auth-choice qwen-standard-api-key</code></h2><p>像先领一张视频场馆的入场券。</p></article><article class="home-card"><span class="home-card-index">🎞</span><h2><code>agents.defaults.videoGenerationModel.primary</code></h2><p>像告诉系统“以后先叫哪位剪辑师上场”。</p></article><article class="home-card"><span class="home-card-index">🪄</span><h2>Wan 模型</h2><p>像一排会出片的工作台，分图生、文生、续帧几个口子。</p></article></div></section>
+<section class="section-shell"><div class="section-heading"><p class="section-kicker">第二步</p><h2>🧭 `alibaba/wan2.6-t2v` 这类名字，像“同一家工作室里的不同工位”</h2><p>模型名不是背诵题，而是告诉你这台机器是拿来做什么的。</p></div><div class="story-grid"><div class="story-card"><div class="story-card-label">`wan2.6-t2v`</div><p>像文字直接出视频。</p></div><div class="story-card"><div class="story-card-label">`wan2.6-i2v`</div><p>像拿图当参考，再长出视频。</p></div><div class="story-card"><div class="story-card-label">`wan2.7-r2v`</div><p>像拿参考视频再继续做视频。</p></div><div class="story-card"><div class="story-card-label">限制</div><p>这页最该记住的是时长、输入数量、远程 URL 这些边界。</p></div></div></section>
+<section class="section-shell"><div class="section-heading"><p class="section-kicker">最后总结</p><h2>🎈 把 Alibaba 这页压成一句最好记的话</h2><p>Alibaba Model Studio 在这里更像视频工场。先拿门票，再选工位，最后让 Wan 系列去把画面做出来。</p></div></section>

@@ -1,0 +1,97 @@
+<section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>🗂 Background Tasks 像后台工作总账本</h2>
+      <p>它不负责“什么时候开始”，它只负责“这件被派出去的事最后怎么样了”。</p>
+      <p>Cron、ACP、子代理、CLI 这些后台动作，只要真的跑离了主会话，就会在这里记一笔。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合想查后台跑腿记录的人</span>
+      <span>重点是 queued / running / terminal 三段式状态</span>
+      <a href="https://docs.openclaw.ai/automation/tasks" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一站</p>
+    <h2>📓 它像账本，不像日程表</h2>
+    <p>最容易混的地方就是：任务会记录工作，但不会替你安排时间。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">记录而不是调度</div>
+      <p>谁跑了、什么时候跑、最后有没有成功，这里都能看。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">主会话外的活</div>
+      <p>不像正常聊天那样一直待在前台。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">不取代 sessions</div>
+      <p>它是账本，不是对话本身。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二站</p>
+    <h2>🚦 三段状态，像一张跑腿小票</h2>
+    <p>任务从排队，到出发，到结束，都有痕迹。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">1</span>
+      <h2><code>queued</code></h2>
+      <p>像站在队伍里，等着轮到你。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">2</span>
+      <h2><code>running</code></h2>
+      <p>像已经被派出去，正在路上。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">3</span>
+      <h2><code>terminal</code></h2>
+      <p>像任务结束了，结果落袋。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">📌</span>
+      <h2>完成态不是一个值</h2>
+      <p>成功、失败、超时、取消、丢失，都算 terminal 家族。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第三站</p>
+    <h2>🛠 CLI 和 cron 都会来这儿记账</h2>
+    <p>凡是“跑出去”的工作，最后都得能查。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw tasks list</code></div>
+      <p>像翻总账本，看看最近都有哪些跑腿单。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw tasks show &lt;lookup&gt;</code></div>
+      <p>像点开某一张单子看细节。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>openclaw tasks audit</code></div>
+      <p>像让系统帮你把异常单子单独拎出来。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">最后总结</p>
+    <h2>🎈 把 Background Tasks 这页压成一句最好记的话</h2>
+    <p>Background Tasks 是总账本，不负责安排工作时间，只负责把跑出去的后台工作记清楚、查得到、追得回。</p>
+  </div>
+</section>

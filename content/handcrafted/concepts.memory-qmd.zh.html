@@ -1,0 +1,97 @@
+<section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>🔬 QMD Memory Engine 像给 OpenClaw 请了一个本地搜索小助手</h2>
+      <p>它跑在旁边，负责更强的本地检索、重排和扩展搜索范围，还能把别的目录也一起扫进来。</p>
+      <p>如果 builtin engine 像小抽屉，QMD 就像多了一台能翻整屋子的检索机器。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合想要更强本地检索的人</span>
+      <span>重点是 reranking、query expansion、sidecar</span>
+      <a href="https://docs.openclaw.ai/concepts/memory-qmd" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一站</p>
+    <h2>🧱 它像一台旁挂的小车，不是把主系统拆开重装</h2>
+    <p>QMD 的定位就是 sidecar，和主系统并排跑。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">Reranking</div>
+      <p>像把搜出来的纸条重新排一排，把最像你要的放前面。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">Query expansion</div>
+      <p>像你问一句，它顺手替你想出更多相关问法，再一起去找。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">Index extra directories</div>
+      <p>不只看 workspace，桌上别的文件夹也能一起看。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二站</p>
+    <h2>🛠 安装和启用，像先把小助手放到门口，再告诉它去哪翻</h2>
+    <p>原文把 prerequisites 讲得很认真，因为这台小助手对环境有要求。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">📦</span>
+      <h2><code>npm install -g @tobilu/qmd</code></h2>
+      <p>像先把小助手装进工具柜。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🧰</span>
+      <h2><code>brew install sqlite</code></h2>
+      <p>像给它准备能插扩展的桌子。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">⚙</span>
+      <h2><code>memory.backend: \"qmd\"</code></h2>
+      <p>像对系统说：“以后记忆检索就请这位本地小助手来帮忙。”</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🏠</span>
+      <h2>自带 home</h2>
+      <p>OpenClaw 会在自己的家里给 QMD 单独建一个工作角落。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第三站</p>
+    <h2>📚 它的工作流程，像每天开机先扫一遍旧书桌</h2>
+    <p>启动时更新、周期性更新、后台运行，这些都像定时整理。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>qmd update</code></div>
+      <p>像把新材料重新扫进索引。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>qmd embed</code></div>
+      <p>像给每份材料做脑内标签。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">默认 5 分钟一轮</div>
+      <p>像隔一会儿就回来检查桌面有没有新纸条。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">最后总结</p>
+    <h2>🎈 把 QMD Memory 这页压成一句最好记的话</h2>
+    <p>QMD 是更强的本地检索小助手：能翻更大范围、能重排、更像一台旁挂的检索机器。</p>
+  </div>
+</section>
