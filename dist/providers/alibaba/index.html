@@ -4180,335 +4180,104 @@
   
       </div>
 
-      
-    <section class="section-shell">
-      <div class="overview-card">
-        <div>
-          <p class="section-kicker">先听这页的人话版</p>
-          <h2>Alibaba Model Studio</h2>
-          <p>这一页像一本关于“Alibaba 聪明脑袋模型 Studio”的小绘本，它先告诉我们这位机器人朋友会做什么，再一步一步解释什么时候该这样做。 你可以先把它想成：Alibaba 聪明脑袋模型 Studio。</p>
-          <p>如果把这页当成“给普通人看的版本”，你最应该带走的是：它到底在教你一件什么事、什么时候要这样做、以及哪里最容易踩坑。</p>
-        </div>
-        <div class="overview-meta">
-          <span>原始路径：/providers/alibaba</span>
-          <span>章节数量：6</span>
-          <a href="https://docs.openclaw.ai/providers/alibaba" target="_blank" rel="noreferrer">查看原文</a>
-        </div>
-      </div>
-    </section>
-    
-        <section class="section-shell" id="section-1">
-          <div class="section-heading">
-            <p class="section-kicker">第 1 站</p>
-            <h2>Start Here</h2>
-            <p>这一节主要在解释“Start Here”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“Start Here”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Alibaba 聪明脑袋模型 Studio OpenClaw ships a bundled alibaba video-generation provider for Wan 聪明脑袋模型s on Alibaba 聪明脑袋模型 Stud…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Alibaba 聪明脑袋模型 Studio”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p># Alibaba Model Studio</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“OpenClaw ships a bundled alibaba video-generation provider for Wan 聪明脑袋模型s on Alibaba 聪明脑袋模型 Studio / DashScope.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>OpenClaw ships a bundled <code>alibaba</code> video-generation provider for Wan models on Alibaba Model Studio / DashScope.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Start Here”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Provider: alibaba、Preferred auth: 聪明脑袋模型STUDIO_对话接口_KEY、Also accepted: DASHSCOPE_对话接口_KEY, QWEN_对…、对话接口: DashScope / 聪明脑袋模型 Studio async vid…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Provider: <code>alibaba</code></li><li>Preferred auth: <code>MODELSTUDIO_API_KEY</code></li><li>Also accepted: <code>DASHSCOPE_API_KEY</code>, <code>QWEN_API_KEY</code></li><li>API: DashScope / Model Studio async video generation</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-2">
-          <div class="section-heading">
-            <p class="section-kicker">第 2 站</p>
-            <h2>Quick start</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“1. Set an 对话接口 key: 2. Set a default video 聪明脑袋模型:”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“1. Set an 对话接口 key:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>1. Set an API key:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一句直接对 OpenClaw 说的话，就像对小助手下达任务。</p>
-        <ul class="code-steps">
-          <li>这一句是在直接叫 OpenClaw 做事：“openclaw onboard --auth-choice qwen-standard-api-key”。你可以把它想成对机器人说的完整命令。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">openclaw onboard --auth-choice qwen-standard-api-key</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“2. Set a default video 聪明脑袋模型:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>2. Set a default video model:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“agents”贴标签，意思是把它设置成“{”。</li><li>这里在给“defaults”贴标签，意思是把它设置成“{”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json5">{
-  agents: {
-    defaults: {
-      videoGenerationModel: {
-        primary: &quot;alibaba/wan2.6-t2v&quot;,
-      },
-    },
-  },
-}</code></pre>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-3">
-          <div class="section-heading">
-            <p class="section-kicker">第 3 站</p>
-            <h2>Built-in Wan 聪明脑袋模型s</h2>
-            <p>这一节主要在解释“Built-in Wan 聪明脑袋模型s”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“Built-in Wan 聪明脑袋模型s”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“The bundled alibaba provider currently registers:”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“The bundled alibaba provider currently registers:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>The bundled <code>alibaba</code> provider currently registers:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Built-in Wan models”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：alibaba/wan2.6-t2v、alibaba/wan2.6-i2v、alibaba/wan2.6-r2v、alibaba/wan2.6-r2v-flash。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>alibaba/wan2.6-t2v</code></li><li><code>alibaba/wan2.6-i2v</code></li><li><code>alibaba/wan2.6-r2v</code></li><li><code>alibaba/wan2.6-r2v-flash</code></li><li><code>alibaba/wan2.7-r2v</code></li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-4">
-          <div class="section-heading">
-            <p class="section-kicker">第 4 站</p>
-            <h2>Current limits</h2>
-            <p>这一节主要在解释“Current limits”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“Current limits”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Current limits”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Up to **1** output video per request、Up to **1** input image、Up to **4** input videos、Up to **10 seconds** duration。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Up to **1** output video per request</li><li>Up to **1** input image</li><li>Up to **4** input videos</li><li>Up to **10 seconds** duration</li><li>Supports <code>size</code>, <code>aspectRatio</code>, <code>resolution</code>, <code>audio</code>, and <code>watermark</code></li><li>Reference image/video mode currently requires **remote http(s) URLs**</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-5">
-          <div class="section-heading">
-            <p class="section-kicker">第 5 站</p>
-            <h2>Relationship to Qwen</h2>
-            <p>这一节主要在解释“Relationship to Qwen”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“Relationship to Qwen”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“The bundled qwen provider also uses Alibaba-hosted DashScope endpoints for Wan video generation. Use:”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“The bundled qwen provider also uses Alibaba-hosted DashScope endpoints for Wan video generation. Use:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>The bundled <code>qwen</code> provider also uses Alibaba-hosted DashScope endpoints for Wan video generation. Use:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Relationship to Qwen”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：qwen/... when you want the canonical Qwen…、alibaba/... when you want the direct vend…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>qwen/...</code> when you want the canonical Qwen provider surface</li><li><code>alibaba/...</code> when you want the direct vendor-owned Wan video surface</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-6">
-          <div class="section-heading">
-            <p class="section-kicker">第 6 站</p>
-            <h2>Related</h2>
-            <p>这一节主要在解释“Related”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“Related”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Related”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Video Generation、Qwen、设置说明书uration Reference。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><a href="/tools/video-generation" target="_blank" rel="noreferrer">Video Generation</a></li><li><a href="/providers/qwen" target="_blank" rel="noreferrer">Qwen</a></li><li><a href="/gateway/configuration-reference#agent-defaults" target="_blank" rel="noreferrer">Configuration Reference</a></li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-    <section class="section-shell">
-      <div class="ad-placeholder">
-        <p>这里预留给未来的 Google AdSense 模块。</p>
-        <code>&lt;!-- ADSENSE_SNIPPET --&gt;</code>
-      </div>
-    </section>
-  
+      <section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>🌊 Alibaba Model Studio 这页，是在讲“阿里云 Wan 视频门”</h2>
+      <p>它不是普通聊天模型页，而是 OpenClaw 里专门给视频生成开的门，默认走的是阿里云 / DashScope 的那套视频接口。</p>
+      <p>最值得记住的只有两件事：钥匙怎么给，默认视频模型选谁。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合想用 Wan 生成视频的人</span>
+      <span>重点是 `MODELSTUDIO_API_KEY` 和 `alibaba/wan2.6-t2v`</span>
+      <a href="https://docs.openclaw.ai/providers/alibaba" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一步</p>
+    <h2>🔑 先把门票交给 OpenClaw</h2>
+    <p>官方给的 onboarding 命令，像是在说“我今天用阿里云视频门”。
+    </p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">🛠</span>
+      <h2><code>openclaw onboard --auth-choice qwen-standard-api-key</code></h2>
+      <p>像把阿里系的门票交给向导。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🪪</span>
+      <h2><code>MODELSTUDIO_API_KEY</code></h2>
+      <p>这是优先认的正式钥匙。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🧷</span>
+      <h2>别名钥匙也认</h2>
+      <p><code>DASHSCOPE_API_KEY</code>、<code>QWEN_API_KEY</code> 也能被接住。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二步</p>
+    <h2>🎬 默认视频模型，就是先安排哪位导演上场</h2>
+    <p>这页的核心不是模型特别多，而是认清“这是视频门，不是聊天门”。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label"><code>alibaba/wan2.6-t2v</code></div>
+      <p>默认文本到视频老师。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>alibaba/wan2.6-i2v</code></div>
+      <p>图片到视频老师。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>alibaba/wan2.6-r2v</code></div>
+      <p>参考视频转视频老师。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">最容易记住的点</div>
+      <p>先选视频导演，再谈画面风格。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第三步</p>
+    <h2>📦 限制条件，像这扇门的场地规则</h2>
+    <p>这页也把视频能力的边界说得很清楚。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label">输出数量</div>
+      <p>一次最多 1 个视频。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">参考媒体</div>
+      <p>最多 1 张图、4 个视频参考，且参考资源得是远程 http(s) 链接。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">和 qwen 的关系</div>
+      <p>同样在阿里系，但这页是直接面向 Wan 视频门的。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">最后总结</p>
+    <h2>🎈 把 Alibaba 这页压成一句最好记的话</h2>
+    <p>Alibaba Model Studio 是阿里云 Wan 视频门：先给钥匙，再选默认视频导演，最后照着它的场地规则交参考素材。</p>
+  </div>
+</section>
+
 
       <footer class="page-footer">
         <div>

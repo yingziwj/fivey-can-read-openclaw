@@ -1,4 +1,44 @@
-<section class="section-shell"><div class="overview-card"><div><p class="section-kicker">先讲人话版</p><h2>🧭 SearXNG Search 像一台自己家里架起来的“搜索总转盘”</h2><p>它不是一个单独搜索站，而是把 Google、Bing、DuckDuckGo 等结果聚合到一起的开源搜索机。</p></div><div class="overview-meta"><span>适合自托管、想省钱、想更私密的人</span><span>重点是本地部署、无 key、web_search 配置</span><a href="https://docs.openclaw.ai/tools/searxng-search" target="_blank" rel="noreferrer">查看官方原文</a></div></div></section>
-<section class="section-shell"><div class="section-heading"><p class="section-kicker">第一步</p><h2>🧱 先把搜索机架起来</h2><p>官方给了一个最小例子：先起容器，再让 OpenClaw 去找这台机器。</p></div><div class="home-grid"><article class="home-card"><span class="home-card-index">🐳</span><h2><code>docker run ... searxng/searxng</code></h2><p>像先把搜索机器开机摆桌上。</p></article><article class="home-card"><span class="home-card-index">🔧</span><h2><code>openclaw configure --section web</code></h2><p>像让 OpenClaw 去认这台搜索机。</p></article><article class="home-card"><span class="home-card-index">📭</span><h2>无 key</h2><p>像开源自托管小店，不用再去买商业门票。</p></article></div></section>
-<section class="section-shell"><div class="section-heading"><p class="section-kicker">第二步</p><h2>🔍 它把结果从很多搜索站搬进一个篮子</h2><p>这就是 meta-search 的意思：它帮你把几个搜索结果装到一个碗里。</p></div><div class="story-grid"><div class="story-card"><div class="story-card-label">聚合</div><p>像把不同店铺的零食装到同一个便当盒。</p></div><div class="story-card"><div class="story-card-label">私密</div><p>查询不需要离开你自己的网络。</p></div><div class="story-card"><div class="story-card-label">可定制</div><p>语言、分类、地址都能调。</p></div></div></section>
-<section class="section-shell"><div class="section-heading"><p class="section-kicker">最后总结</p><h2>🎈 把 SearXNG 这页压成一句最好记的话</h2><p>SearXNG 是自托管搜索总转盘。你先把机器架起来，再让 OpenClaw 认它，就能得到一个无商业 key 的私有搜索入口。</p></div></section>
+<section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>🕸 SearXNG Search 像给 OpenClaw 装一个“自己家里开的搜索超市”</h2>
+      <p>它是自托管、不要 key 的 web_search provider。也就是说，查询不会跑去商业搜索 API 那边，而是走你自己的 SearXNG 实例。</p>
+      <p>这页特别适合在意隐私、预算，或者想完全自己控搜索结果的人。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合自托管搜索的人</span>
+      <span>重点是 docker run、SEARXNG_BASE_URL、https 限制</span>
+      <a href="https://docs.openclaw.ai/tools/searxng-search" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading"><p class="section-kicker">第一步</p><h2>🏗 先起一个 SearXNG 小站</h2><p>最直白的起手式就是自己跑一台实例。</p></div>
+  <div class="home-grid">
+    <article class="home-card"><span class="home-card-index">1</span><h2><code>docker run ... searxng/searxng</code></h2><p>像先把搜索超市开起来。</p></article>
+    <article class="home-card"><span class="home-card-index">2</span><h2><code>openclaw configure --section web</code></h2><p>像把网页搜索门牌改成 SearXNG。</p></article>
+    <article class="home-card"><span class="home-card-index">3</span><h2><code>SEARXNG_BASE_URL</code></h2><p>像告诉 OpenClaw 这家超市在哪。</p></article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading"><p class="section-kicker">第二步</p><h2>🔒 私有、免费、可控，是它的三大卖点</h2><p>官方把优势写得很实在。</p></div>
+  <div class="story-grid">
+    <div class="story-card"><div class="story-card-label">Free and unlimited</div><p>不需要商业搜索 key。</p></div>
+    <div class="story-card"><div class="story-card-label">Privacy</div><p>请求只在你自己的网络里走。</p></div>
+    <div class="story-card"><div class="story-card-label">Works anywhere</div><p>没有地域商业限制。</p></div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading"><p class="section-kicker">第三步</p><h2>📦 配置时要注意 https 和 baseUrl</h2><p>这类自托管搜索，最容易出错的是地址和协议。</p></div>
+  <div class="story-grid">
+    <div class="source-card"><div class="story-card-label"><code>provider: "searxng"</code></div><p>像把搜索按钮指向 SearXNG。</p></div>
+    <div class="source-card"><div class="story-card-label"><code>baseUrl</code></div><p>像写清楚这家超市的门牌号。</p></div>
+    <div class="source-card"><div class="story-card-label">https 规则</div><p>公开 host 要用 https，http 只给可信内网或 loopback。</p></div>
+  </div>
+</section>
+
+<section class="section-shell"><div class="section-heading"><p class="section-kicker">最后总结</p><h2>🎈 把 SearXNG 这页压成一句最好记的话</h2><p>SearXNG 就是自家开的搜索超市：自己起实例、自己配门牌、自己控制隐私和结果来源。</p></div></section>

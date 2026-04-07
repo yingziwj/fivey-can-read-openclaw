@@ -1,4 +1,66 @@
-<section class="section-shell"><div class="overview-card"><div><p class="section-kicker">先讲人话版</p><h2>🖼 Image Generation 像给 OpenClaw 装了一支画笔</h2><p>它让代理自己决定什么时候该画图、什么时候该改图。只要有图像供应商，`image_generate` 就会冒出来。</p></div><div class="overview-meta"><span>适合想让代理画图、修图的人</span><span>重点是 provider 选择、默认模型和自动出图</span><a href="https://docs.openclaw.ai/tools/image-generation" target="_blank" rel="noreferrer">查看官方原文</a></div></div></section>
-<section class="section-shell"><div class="section-heading"><p class="section-kicker">先看按钮</p><h2>🎨 `image_generate` 像一只自动上色的手</h2><p>你不用手动选工具，只要供应商在，代理会自己去用。</p></div><div class="home-grid"><article class="home-card"><span class="home-card-index">✅</span><h2>自动出现</h2><p>像工具箱里自动弹出一支画笔。</p></article><article class="home-card"><span class="home-card-index">🧠</span><h2>默认模型</h2><p>像告诉系统先把哪位画师排在前面。</p></article><article class="home-card"><span class="home-card-index">🧰</span><h2>编辑也能做</h2><p>像拿参考图再修一轮。</p></article></div></section>
-<section class="section-shell"><div class="section-heading"><p class="section-kicker">第二步</p><h2>🧭 供应商名单像不同画室</h2><p>OpenAI、Google、fal、MiniMax、Vydra、Comfy 都可能是这支画笔背后的画室。</p></div><div class="story-grid"><div class="story-card"><div class="story-card-label">出图</div><p>像从一句话画出一张图。</p></div><div class="story-card"><div class="story-card-label">修图</div><p>像拿一张参考图补一补。</p></div><div class="story-card"><div class="story-card-label">默认模型</div><p>像先把常用画师排到前面。</p></div></div></section>
-<section class="section-shell"><div class="section-heading"><p class="section-kicker">最后总结</p><h2>🎈 把 Image Generation 这页压成一句最好记的话</h2><p>Image Generation 就是自动画笔。只要有供应商，代理就能自己去画、去改，不需要你手动给它装工具。</p></div></section>
+<section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>🖼 `image_generate` 像给代理一支会画画的手</h2>
+      <p>它能画图，也能改图，最后生成的图片会自动作为回复里的媒体附件出现。</p>
+      <p>这页最重要的是：只要有一个可用的图像 provider，这个工具通常就会自动出现。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合想让代理自动出图的人</span>
+      <span>重点是 provider 可用性和默认模型</span>
+      <a href="https://docs.openclaw.ai/tools/image-generation" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一步</p>
+    <h2>🎯 先让工具出现，再让它干活</h2>
+    <p>这不是手动 allowlist 的工具，它是“有 provider 就亮”的那种。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label">自动出现</div>
+      <p>只要配置了图像 provider，工具就会在 agent 工具里冒出来。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">默认模型</div>
+      <p>可选但常用，像先给它选一支默认画笔。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">生成结果</div>
+      <p>会直接回到回复里作为媒体附件。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二步</p>
+    <h2>🛠 各家画师各有分工</h2>
+    <p>OpenClaw 支持的 provider 很多，但思路是一样的：选对工位。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card"><span class="home-card-index">A</span><h2>OpenAI</h2><p>默认 <code>gpt-image-1</code>。</p></article>
+    <article class="home-card"><span class="home-card-index">G</span><h2>Google</h2><p>带多模态图片生成能力。</p></article>
+    <article class="home-card"><span class="home-card-index">F</span><h2>fal</h2><p>快、轻、常用。</p></article>
+    <article class="home-card"><span class="home-card-index">V</span><h2>Vydra</h2><p>图像线也有，但不做编辑。</p></article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第三步</p>
+    <h2>📦 `<code>/tool image_generate</code>` 像现场下单</h2>
+    <p>你给一句话，代理就会自己决定要不要画图。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card"><div class="story-card-label">Prompt</div><p>像把画面描述交给画师。</p></div>
+    <div class="source-card"><div class="story-card-label">List</div><p>可以先看哪些 provider 和模型在线。</p></div>
+    <div class="source-card"><div class="story-card-label">Edit</div><p>有些 provider 还能拿参考图改图。</p></div>
+  </div>
+</section>
+
+<section class="section-shell"><div class="section-heading"><p class="section-kicker">最后总结</p><h2>🎈 把 Image Generation 这页压成一句最好记的话</h2><p>`image_generate` 就是代理的画画手：先有 provider，再选默认模型，然后就能把图直接送回回复里。</p></div></section>

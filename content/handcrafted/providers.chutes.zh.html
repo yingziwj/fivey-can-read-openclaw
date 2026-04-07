@@ -1,4 +1,92 @@
-<section class="section-shell"><div class="overview-card"><div><p class="section-kicker">先讲人话版</p><h2>🪂 Chutes 像一扇既能刷 OAuth、也能刷 API key 的模型门</h2><p>它最像“先验证身份，再把模型目录接进来”的双入口通道。</p></div><div class="overview-meta"><span>适合要兼顾浏览器登录和 key 登录的人</span><span>重点是 OAuth、API key 和 bundled catalog</span><a href="https://docs.openclaw.ai/providers/chutes" target="_blank" rel="noreferrer">查看官方原文</a></div></div></section>
-<section class="section-shell"><div class="section-heading"><p class="section-kicker">第一步</p><h2>🚪 两种开门方式</h2><p>官方允许你用浏览器 OAuth，也允许你直接拿 API key。</p></div><div class="story-grid"><div class="story-card"><div class="story-card-label">OAuth</div><p>像先去网页登录，再让门自己认你。</p></div><div class="story-card"><div class="story-card-label">API key</div><p>像拿一张硬门卡直接刷。</p></div><div class="story-card"><div class="story-card-label">`chutes/zai-org/GLM-4.7-TEE`</div><p>像默认被领到的那位老师。</p></div></div></section>
-<section class="section-shell"><div class="section-heading"><p class="section-kicker">第二步</p><h2>🧾 发现失败时会先兜底</h2><p>官方做了静态目录兜底，所以就算在线发现失败，门也不会完全打不开。</p></div><div class="home-grid"><article class="home-card"><span class="home-card-index">🧰</span><h2>发现目录</h2><p>像翻前台名册，看今天能叫谁。</p></article><article class="home-card"><span class="home-card-index">🛟</span><h2>静态兜底</h2><p>像万一名册没翻出来，先拿备用名单顶上。</p></article><article class="home-card"><span class="home-card-index">🏷</span><h2>别名</h2><p>像给常用老师起昵称，方便记。</p></article></div></section>
-<section class="section-shell"><div class="section-heading"><p class="section-kicker">最后总结</p><h2>🎈 把 Chutes 这页压成一句最好记的话</h2><p>Chutes 是一扇双入口模型门。OAuth 和 key 都能进，能发现就发现，发现失败也有备用名单兜底。</p></div></section>
+<section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>🛰 Chutes 像一个能用浏览器登录，也能直接拿 API key 的模型集市</h2>
+      <p>它提供 OpenAI 兼容接口，OpenClaw 既能走 OAuth，也能走 key。官方还会在拿到认证后帮你发现模型。</p>
+      <p>这页的重点是：你是走浏览器登录，还是直接用 key。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合想用 Chutes 模型目录的人</span>
+      <span>重点是 OAuth / API key 双路线</span>
+      <a href="https://docs.openclaw.ai/providers/chutes" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一步</p>
+    <h2>🔐 两条入口，像两种进门方式</h2>
+    <p>你可以走浏览器认证，也可以直接丢 key。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">🌐</span>
+      <h2>OAuth</h2>
+      <p><code>openclaw onboard --auth-choice chutes</code></p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🪪</span>
+      <h2>API key</h2>
+      <p><code>openclaw onboard --auth-choice chutes-api-key</code></p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🧭</span>
+      <h2>登录成功后会自动发现目录</h2>
+      <p>像前台帮你抄今天的柜台名单。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二步</p>
+    <h2>🏷 默认模型和别名像“先给你安排一个常用老师”</h2>
+    <p>Chutes 会先给一个默认模型，也顺手给几个便利别名。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label"><code>chutes/zai-org/GLM-4.7-TEE</code></div>
+      <p>默认老师，通常会先上场。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>chutes-fast</code></div>
+      <p>像快跑别名，指向更快的 GLM 版本。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>chutes-pro</code></div>
+      <p>像更稳更强的备选别名。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第三步</p>
+    <h2>📦 发现失败时，也要能兜底</h2>
+    <p>官方很实际：如果发现不顺，还是会回落到内置目录，别让启动直接断。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label">Discovery</div>
+      <p>认证到位后，OpenClaw 会去 Chutes 目录看当前可用模型。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">Fallback catalog</div>
+      <p>如果目录抓不到，也还有内置清单顶着。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">适合场景</div>
+      <p>想要稳定目录，又不想自己手写一堆模型条目的人。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">最后总结</p>
+    <h2>🎈 把 Chutes 这页压成一句最好记的话</h2>
+    <p>Chutes 是能走浏览器登录也能走 key 的模型集市：先认证，再发现目录，最后给你默认老师和便利别名。</p>
+  </div>
+</section>

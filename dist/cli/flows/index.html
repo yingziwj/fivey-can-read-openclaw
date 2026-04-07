@@ -4180,100 +4180,52 @@
   
       </div>
 
-      
-    <section class="section-shell">
-      <div class="overview-card">
-        <div>
-          <p class="section-kicker">先听这页的人话版</p>
-          <h2>flows (redirect)</h2>
-          <p>这一页像一本关于“flows (redirect)”的小绘本，它先告诉我们这位机器人朋友会做什么，再一步一步解释什么时候该这样做。 你可以先把它想成：openclaw tasks flow。</p>
-          <p>如果把这页当成“给普通人看的版本”，你最应该带走的是：它到底在教你一件什么事、什么时候要这样做、以及哪里最容易踩坑。</p>
-        </div>
-        <div class="overview-meta">
-          <span>原始路径：/cli/flows</span>
-          <span>章节数量：1</span>
-          <a href="https://docs.openclaw.ai/cli/flows" target="_blank" rel="noreferrer">查看原文</a>
-        </div>
-      </div>
-    </section>
-    
-        <section class="section-shell" id="section-1">
-          <div class="section-heading">
-            <p class="section-kicker">第 1 站</p>
-            <h2>Start Here</h2>
-            <p>这一节主要在解释“Start Here”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“Start Here”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“openclaw tasks flow Flow 魔法口令s are sub魔法口令s of openclaw tasks, not a standalone flows 魔法口令. For full documentation see…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“openclaw tasks flow”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p># <code>openclaw tasks flow</code></p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Flow 魔法口令s are sub魔法口令s of openclaw tasks, not a standalone flows 魔法口令.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Flow commands are subcommands of <code>openclaw tasks</code>, not a standalone <code>flows</code> command.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一句直接对 OpenClaw 说的话，就像对小助手下达任务。</p>
-        <ul class="code-steps">
-          <li>这一句是在直接叫 OpenClaw 做事：“openclaw tasks flow list [--json]”。你可以把它想成对机器人说的完整命令。</li><li>这一句是在直接叫 OpenClaw 做事：“openclaw tasks flow show &lt;lookup&gt;”。你可以把它想成对机器人说的完整命令。</li><li>这一句是在直接叫 OpenClaw 做事：“openclaw tasks flow cancel &lt;lookup&gt;”。你可以把它想成对机器人说的完整命令。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">openclaw tasks flow list [--json]
-openclaw tasks flow show &lt;lookup&gt;
-openclaw tasks flow cancel &lt;lookup&gt;</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“For full documentation see Task Flow and the tasks CLI reference.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>For full documentation see <a href="/automation/taskflow" target="_blank" rel="noreferrer">Task Flow</a> and the <a href="/cli/index#tasks" target="_blank" rel="noreferrer">tasks CLI reference</a>.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-    <section class="section-shell">
-      <div class="ad-placeholder">
-        <p>这里预留给未来的 Google AdSense 模块。</p>
-        <code>&lt;!-- ADSENSE_SNIPPET --&gt;</code>
-      </div>
-    </section>
-  
+      <section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>🧵 `openclaw tasks flow` 像给后台任务再套一层“流程衣服”</h2>
+      <p>它不是独立的 `flows` 主命令，而是 `openclaw tasks` 下面的子命令。</p>
+      <p>这页最重要的是：它管的是 Task Flow，不是普通单个 task。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合想操作任务流程的人</span>
+      <span>重点是 list / show / cancel 三个动作</span>
+      <a href="https://docs.openclaw.ai/cli/flows" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading"><p class="section-kicker">第一站</p><h2>📚 先认命令位置：它住在 tasks 下面</h2><p>这页开头就把误会掐掉了。</p></div>
+  <div class="story-grid">
+    <div class="source-card"><div class="story-card-label"><code>openclaw tasks flow list</code></div><p>像列出所有流程。</p></div>
+    <div class="source-card"><div class="story-card-label"><code>openclaw tasks flow show &lt;lookup&gt;</code></div><p>像打开某条流程看详情。</p></div>
+    <div class="source-card"><div class="story-card-label"><code>openclaw tasks flow cancel &lt;lookup&gt;</code></div><p>像把某条流程按停。</p></div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading"><p class="section-kicker">第二站</p><h2>🪢 它管理的是“多步流程”，不是单次跑腿</h2><p>Task Flow 适合一串步骤接着一串步骤的事。</p></div>
+  <div class="home-grid">
+    <article class="home-card"><span class="home-card-index">1</span><h2>先列出</h2><p>像看有哪些流程在账本里。</p></article>
+    <article class="home-card"><span class="home-card-index">2</span><h2>再查看</h2><p>像打开某条流程的说明书。</p></article>
+    <article class="home-card"><span class="home-card-index">3</span><h2>必要时取消</h2><p>像给流程踩刹车。</p></article>
+    <article class="home-card"><span class="home-card-index">📌</span><h2>和 tasks 的区别</h2><p>tasks 记单个后台工作，flow 记整条流程。</p></article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading"><p class="section-kicker">第三站</p><h2>📦 这页其实是在帮你找对那三条路</h2><p>流程命令没那么多，别把它想复杂了。</p></div>
+  <div class="story-grid">
+    <div class="story-card"><div class="story-card-label">list</div><p>像列清单。</p></div>
+    <div class="story-card"><div class="story-card-label">show</div><p>像看细节。</p></div>
+    <div class="story-card"><div class="story-card-label">cancel</div><p>像按停按钮。</p></div>
+  </div>
+</section>
+
+<section class="section-shell"><div class="section-heading"><p class="section-kicker">最后总结</p><h2>🎈 把 CLI Flows 这页压成一句最好记的话</h2><p>`openclaw tasks flow` 不是单独的大门，而是 `tasks` 下面的流程抽屉：列、看、停，三件事就够了。</p></div></section>
+
 
       <footer class="page-footer">
         <div>

@@ -1,3 +1,45 @@
-<section class="section-shell"><div class="overview-card"><div><p class="section-kicker">先讲人话版</p><h2>🧵 `openclaw tasks flow` 像是“任务流的分支小入口”</h2><p>它不是一个单独叫 `flows` 的命令，而是 `openclaw tasks` 下面的子命令。官方这页主要是在纠正大家别敲错门。</p></div><div class="overview-meta"><span>适合找 Task Flow 子命令的人</span><span>重点是 list / show / cancel 和 tasks 入口</span><a href="https://docs.openclaw.ai/cli/flows" target="_blank" rel="noreferrer">查看官方原文</a></div></div></section>
-<section class="section-shell"><div class="section-heading"><p class="section-kicker">先纠正一件事</p><h2>🚪 它不是 `flows` 单独一扇门</h2><p>官方最先想防的，就是你去找一个不存在的独立命令。</p></div><div class="story-grid"><div class="source-card"><div class="story-card-label"><code>openclaw tasks flow list</code></div><p>像打开任务流清单。</p></div><div class="source-card"><div class="story-card-label"><code>show</code></div><p>像把某一条流的细节翻出来看。</p></div><div class="source-card"><div class="story-card-label"><code>cancel</code></div><p>像把这条流停下来。</p></div></div></section>
-<section class="section-shell"><div class="section-heading"><p class="section-kicker">最后总结</p><h2>🎈 把 flows 这页压成一句最好记的话</h2><p>这页不是教你一个新顶层命令，而是提醒你：任务流是 `openclaw tasks` 下面的一支小分队，别把门牌找错了。</p></div></section>
+<section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>🧵 `openclaw tasks flow` 像给后台任务再套一层“流程衣服”</h2>
+      <p>它不是独立的 `flows` 主命令，而是 `openclaw tasks` 下面的子命令。</p>
+      <p>这页最重要的是：它管的是 Task Flow，不是普通单个 task。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合想操作任务流程的人</span>
+      <span>重点是 list / show / cancel 三个动作</span>
+      <a href="https://docs.openclaw.ai/cli/flows" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading"><p class="section-kicker">第一站</p><h2>📚 先认命令位置：它住在 tasks 下面</h2><p>这页开头就把误会掐掉了。</p></div>
+  <div class="story-grid">
+    <div class="source-card"><div class="story-card-label"><code>openclaw tasks flow list</code></div><p>像列出所有流程。</p></div>
+    <div class="source-card"><div class="story-card-label"><code>openclaw tasks flow show &lt;lookup&gt;</code></div><p>像打开某条流程看详情。</p></div>
+    <div class="source-card"><div class="story-card-label"><code>openclaw tasks flow cancel &lt;lookup&gt;</code></div><p>像把某条流程按停。</p></div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading"><p class="section-kicker">第二站</p><h2>🪢 它管理的是“多步流程”，不是单次跑腿</h2><p>Task Flow 适合一串步骤接着一串步骤的事。</p></div>
+  <div class="home-grid">
+    <article class="home-card"><span class="home-card-index">1</span><h2>先列出</h2><p>像看有哪些流程在账本里。</p></article>
+    <article class="home-card"><span class="home-card-index">2</span><h2>再查看</h2><p>像打开某条流程的说明书。</p></article>
+    <article class="home-card"><span class="home-card-index">3</span><h2>必要时取消</h2><p>像给流程踩刹车。</p></article>
+    <article class="home-card"><span class="home-card-index">📌</span><h2>和 tasks 的区别</h2><p>tasks 记单个后台工作，flow 记整条流程。</p></article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading"><p class="section-kicker">第三站</p><h2>📦 这页其实是在帮你找对那三条路</h2><p>流程命令没那么多，别把它想复杂了。</p></div>
+  <div class="story-grid">
+    <div class="story-card"><div class="story-card-label">list</div><p>像列清单。</p></div>
+    <div class="story-card"><div class="story-card-label">show</div><p>像看细节。</p></div>
+    <div class="story-card"><div class="story-card-label">cancel</div><p>像按停按钮。</p></div>
+  </div>
+</section>
+
+<section class="section-shell"><div class="section-heading"><p class="section-kicker">最后总结</p><h2>🎈 把 CLI Flows 这页压成一句最好记的话</h2><p>`openclaw tasks flow` 不是单独的大门，而是 `tasks` 下面的流程抽屉：列、看、停，三件事就够了。</p></div></section>

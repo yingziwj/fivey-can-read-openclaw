@@ -1,4 +1,97 @@
-<section class="section-shell"><div class="overview-card"><div><p class="section-kicker">先讲人话版</p><h2>🛰 fal 像一个专门做图和视频的云工厂</h2><p>它给你的是 hosted image/video generation，最像“拿 key 进厂，默认选一台画图机或视频机”。</p></div><div class="overview-meta"><span>适合图像/视频生成</span><span>重点是 FAL_KEY 和默认 image/video 模型</span><a href="https://docs.openclaw.ai/providers/fal" target="_blank" rel="noreferrer">查看官方原文</a></div></div></section>
-<section class="section-shell"><div class="section-heading"><p class="section-kicker">第一步</p><h2>🔑 先把工厂门卡交上去</h2><p>官方让你先跑 onboarding，再给默认图像模型或视频模型设主力。</p></div><div class="story-grid"><div class="story-card"><div class="story-card-label"><code>FAL_KEY</code></div><p>像工厂门卡。</p></div><div class="story-card"><div class="story-card-label">图像默认值</div><p>像先叫画图机站到门口。</p></div><div class="story-card"><div class="story-card-label">视频默认值</div><p>像再把视频机排到第二个工位。</p></div></div></section>
-<section class="section-shell"><div class="section-heading"><p class="section-kicker">第二步</p><h2>🎨 编辑和视频都是流水线任务</h2><p>fal 的图和视频不是一次性小动作，而是分请求、分回执的工厂活。</p></div><div class="home-grid"><article class="home-card"><span class="home-card-index">🖼</span><h2>Image edit</h2><p>像拿一张参考图，让工厂在上面改。</p></article><article class="home-card"><span class="home-card-index">🎞</span><h2>Video queue</h2><p>像把长活排进队列等加工。</p></article><article class="home-card"><span class="home-card-index">⚠</span><h2>当前限制</h2><p>一些编辑形状会有限制，官方也写得很明白。</p></article></div></section>
-<section class="section-shell"><div class="section-heading"><p class="section-kicker">最后总结</p><h2>🎈 把 fal 这页压成一句最好记的话</h2><p>fal 就是云端图像和视频工厂。先拿门卡，再选默认工位，图片和视频就能按流水线出货。</p></div></section>
+<section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>⚡ fal 像一座速度快、会顺手做图和做视频的云工厂</h2>
+      <p>它既能出图，也能出视频，OpenClaw 用它时主要记住：一个 key、两条能力线、默认模型是什么。</p>
+      <p>这页不是最复杂，但很适合拿来当 image/video 双用 provider 的样本。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合图像和视频都要的人</span>
+      <span>重点是 `FAL_KEY`、`fal/fal-ai/flux/dev`、`fal/fal-ai/minimax/video-01-live`</span>
+      <a href="https://docs.openclaw.ai/providers/fal" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一步</p>
+    <h2>🔑 先拿一把统一工牌</h2>
+    <p>它的 key 很简单，主打一个通用。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label"><code>FAL_KEY</code></div>
+      <p>正式门票。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>FAL_API_KEY</code></div>
+      <p>备用名字，也能认。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>openclaw onboard --auth-choice fal-api-key</code></div>
+      <p>像把工牌交给向导。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二步</p>
+    <h2>🎨 出图和出视频，像两条流水线</h2>
+    <p>默认模型名字一看就知道它分别负责什么。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">🖼</span>
+      <h2><code>fal/fal-ai/flux/dev</code></h2>
+      <p>默认图像流水线。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🎥</span>
+      <h2><code>fal/fal-ai/minimax/video-01-live</code></h2>
+      <p>默认视频流水线。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🧪</span>
+      <h2>编辑模式</h2>
+      <p>图像支持参考图，视频走异步提交-查询流程。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">📐</span>
+      <h2>参数不多</h2>
+      <p>它的重点是速度和简单，不是把一堆图纸塞给你。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第三步</p>
+    <h2>📦 用作默认 provider 时，就是把这两条流水线挂到代理身上</h2>
+    <p>图像和视频都能默认指向它。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label">Image</div>
+      <p>默认图像 provider 可直接挂到 agent defaults 上。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">Video</div>
+      <p>视频默认模型也能挂进去，交给后台跑。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">Shared behavior</div>
+      <p>同一把 key，能支撑多个媒体能力。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">最后总结</p>
+    <h2>🎈 把 fal 这页压成一句最好记的话</h2>
+    <p>fal 是快手型媒体工厂：一把 key 同时管图和视频，默认模型也很直白。</p>
+  </div>
+</section>

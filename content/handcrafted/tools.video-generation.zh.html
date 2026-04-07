@@ -1,4 +1,46 @@
-<section class="section-shell"><div class="overview-card"><div><p class="section-kicker">先讲人话版</p><h2>🎬 Video Generation 像一座会排队的出片工厂</h2><p>它能从文字、图片、视频做视频，OpenClaw 会根据你带的参考素材自动判断该走哪种工位。</p></div><div class="overview-meta"><span>适合做视频的人</span><span>重点是 generate / imageToVideo / videoToVideo 三种模式</span><a href="https://docs.openclaw.ai/tools/video-generation" target="_blank" rel="noreferrer">查看官方原文</a></div></div></section>
-<section class="section-shell"><div class="section-heading"><p class="section-kicker">第一步</p><h2>🧭 先分清三条路</h2><p>官方把视频生成拆成三种运行模式，像三条不同的传送带。</p></div><div class="home-grid"><article class="home-card"><span class="home-card-index">✍️</span><h2><code>generate</code></h2><p>像从一句话直接做视频。</p></article><article class="home-card"><span class="home-card-index">🖼</span><h2><code>imageToVideo</code></h2><p>像拿图当起点。</p></article><article class="home-card"><span class="home-card-index">🎞</span><h2><code>videoToVideo</code></h2><p>像拿已有视频继续加工。</p></article></div></section>
-<section class="section-shell"><div class="section-heading"><p class="section-kicker">第二步</p><h2>⏳ 视频是慢工活，会先给你任务号</h2><p>这页最重要的概念就是异步：先提交，后回来拿结果。</p></div><div class="story-grid"><div class="story-card"><div class="story-card-label">任务号</div><p>像工厂给你一张取货单。</p></div><div class="story-card"><div class="story-card-label">回来看状态</div><p>像过一会儿再去问“做好了吗”。</p></div><div class="story-card"><div class="story-card-label">支持多供应商</div><p>像你可以选不同片场拍摄。</p></div></div></section>
-<section class="section-shell"><div class="section-heading"><p class="section-kicker">最后总结</p><h2>🎈 把 Video Generation 这页压成一句最好记的话</h2><p>视频生成像排队出片工厂。先选生成模式，再把任务交进去，等任务号回来，过会儿再取结果。</p></div></section>
+<section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>🎬 `video_generate` 像给代理一台会剪片的后台工厂</h2>
+      <p>它能把文字、图片、视频参考变成视频，而且是异步做完再回传成品。</p>
+      <p>这页最重要的是：视频生成不是单步动作，而是有运行模式的长工单。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合想让代理做视频的人</span>
+      <span>重点是 generate / imageToVideo / videoToVideo</span>
+      <a href="https://docs.openclaw.ai/tools/video-generation" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading"><p class="section-kicker">第一站</p><h2>🧭 先认出三种工作模式</h2><p>它们对应不同的输入材料。</p></div>
+  <div class="home-grid">
+    <article class="home-card"><span class="home-card-index">A</span><h2><code>generate</code></h2><p>纯文字生视频。</p></article>
+    <article class="home-card"><span class="home-card-index">B</span><h2><code>imageToVideo</code></h2><p>拿图做视频。</p></article>
+    <article class="home-card"><span class="home-card-index">C</span><h2><code>videoToVideo</code></h2><p>拿视频再加工。</p></article>
+    <article class="home-card"><span class="home-card-index">🧷</span><h2>模式先验</h2><p>工具会先验证当前模式是否支持，再提交。</p></article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading"><p class="section-kicker">第二站</p><h2>⏳ 视频是长工单，先提交，再回来取结果</h2><p>这和普通工具瞬时返回不一样。</p></div>
+  <div class="story-grid">
+    <div class="story-card"><div class="story-card-label">提交任务</div><p>先拿到 task ID。</p></div>
+    <div class="story-card"><div class="story-card-label">后台生产</div><p>通常要等一会儿。</p></div>
+    <div class="story-card"><div class="story-card-label">完成回流</div><p>结果再被唤回原会话。</p></div>
+    <div class="story-card"><div class="story-card-label">重复调用</div><p>同一会话里再点一次，多半只是查状态。</p></div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading"><p class="section-kicker">第三站</p><h2>🛠 支持的 provider 很多，但你先别全背</h2><p>先知道它支持很多视频后台就够了。</p></div>
+  <div class="story-grid">
+    <div class="source-card"><div class="story-card-label">Google / OpenAI / Runway / Vydra</div><p>只是列表里的一部分常见老师。</p></div>
+    <div class="source-card"><div class="story-card-label">默认模型</div><p>可以从配置里钉住。</p></div>
+    <div class="source-card"><div class="story-card-label">asynchronous</div><p>视频生成本身就是异步流程。</p></div>
+  </div>
+</section>
+
+<section class="section-shell"><div class="section-heading"><p class="section-kicker">最后总结</p><h2>🎈 把 Video Generation 这页压成一句最好记的话</h2><p>`video_generate` 是视频工厂：先选模式，再提交长工单，最后等成片回到会话里。</p></div></section>

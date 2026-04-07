@@ -4180,395 +4180,51 @@
   
       </div>
 
-      
-    <section class="section-shell">
-      <div class="overview-card">
-        <div>
-          <p class="section-kicker">先听这页的人话版</p>
-          <h2>Ollama Web Search</h2>
-          <p>这一页像一本关于“Ollama Web Search”的小绘本，它先告诉我们这位机器人朋友会做什么，再一步一步解释什么时候该这样做。 你可以先把它想成：Ollama Web Search。</p>
-          <p>如果把这页当成“给普通人看的版本”，你最应该带走的是：它到底在教你一件什么事、什么时候要这样做、以及哪里最容易踩坑。</p>
-        </div>
-        <div class="overview-meta">
-          <span>原始路径：/tools/ollama-search</span>
-          <span>章节数量：5</span>
-          <a href="https://docs.openclaw.ai/tools/ollama-search" target="_blank" rel="noreferrer">查看原文</a>
-        </div>
-      </div>
-    </section>
-    
-        <section class="section-shell" id="section-1">
-          <div class="section-heading">
-            <p class="section-kicker">第 1 站</p>
-            <h2>Start Here</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Ollama Web Search OpenClaw supports **Ollama Web Search** as a bundled web_search provider. It uses Ollama&#39;s experiment…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Ollama Web Search”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p># Ollama Web Search</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“OpenClaw supports **Ollama Web Search** as a bundled web_search provider. It uses Ollama&#39;s experimental web-search 对话接口…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>OpenClaw supports **Ollama Web Search** as a bundled <code>web_search</code> provider. It uses Ollama&#39;s experimental web-search API and returns structured results with titles, URLs, and snippets.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Unlike the Ollama 聪明脑袋模型 provider, this setup does not need an 对话接口 key by default. It does require:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Unlike the Ollama model provider, this setup does not need an API key by default. It does require:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Start Here”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：an Ollama host that is reachable from Ope…、ollama signin。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>an Ollama host that is reachable from OpenClaw</li><li><code>ollama signin</code></li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-2">
-          <div class="section-heading">
-            <p class="section-kicker">第 2 站</p>
-            <h2>Setup</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Steps&gt; &lt;Step title=&quot;Start Ollama&quot;&gt; Make sure Ollama is installed and running. &lt;/Step&gt; &lt;Step title=&quot;Sign in&quot;&gt; Run: &lt;/St…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Steps&gt; &lt;Step title=&quot;Start Ollama&quot;&gt; Make sure Ollama is installed and running. &lt;/Step&gt;”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>&lt;Steps&gt; &lt;Step title=&quot;Start Ollama&quot;&gt; Make sure Ollama is installed and running. &lt;/Step&gt;</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Step title=&quot;Sign in&quot;&gt; Run:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>&lt;Step title=&quot;Sign in&quot;&gt; Run:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;/Step&gt;”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>``<code>bash theme={&quot;theme&quot;:{&quot;light&quot;:&quot;min-light&quot;,&quot;dark&quot;:&quot;min-dark&quot;}} ollama signin </code>`` &lt;/Step&gt;</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Step title=&quot;Choose Ollama Web Search&quot;&gt; Run:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>&lt;Step title=&quot;Choose Ollama Web Search&quot;&gt; Run:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>``<code>bash theme={&quot;theme&quot;:{&quot;light&quot;:&quot;min-light&quot;,&quot;dark&quot;:&quot;min-dark&quot;}} openclaw configure --section web </code>``</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Then select **Ollama Web Search** as the provider. &lt;/Step&gt; &lt;/Steps&gt;”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Then select **Ollama Web Search** as the provider. &lt;/Step&gt; &lt;/Steps&gt;</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“If you already use Ollama for 聪明脑袋模型s, Ollama Web Search reuses the same 设置说明书ured host.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>If you already use Ollama for models, Ollama Web Search reuses the same configured host.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-3">
-          <div class="section-heading">
-            <p class="section-kicker">第 3 站</p>
-            <h2>设置说明书</h2>
-            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>你理解的是能力边界，不只是功能名字。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Optional Ollama host override: If no explicit Ollama base URL is set, OpenClaw uses http://127.0.0.1:11434. If your Oll…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“tools”贴标签，意思是把它设置成“{”。</li><li>这里在给“web”贴标签，意思是把它设置成“{”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json5">{
-  tools: {
-    web: {
-      search: {
-        provider: &quot;ollama&quot;,
-      },
-    },
-  },
-}</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Optional Ollama host override:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Optional Ollama host override:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“models”贴标签，意思是把它设置成“{”。</li><li>这里在给“providers”贴标签，意思是把它设置成“{”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json5">{
-  models: {
-    providers: {
-      ollama: {
-        baseUrl: &quot;http://ollama-host:11434&quot;,
-      },
-    },
-  },
-}</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“If no explicit Ollama base URL is set, OpenClaw uses http://127.0.0.1:11434.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>If no explicit Ollama base URL is set, OpenClaw uses <code>http://127.0.0.1:11434</code>.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“If your Ollama host expects bearer auth, OpenClaw reuses 聪明脑袋模型s.providers.ollama.对话接口Key (or the matching env-backed p…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>If your Ollama host expects bearer auth, OpenClaw reuses <code>models.providers.ollama.apiKey</code> (or the matching env-backed provider auth) for web-search requests too.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-4">
-          <div class="section-heading">
-            <p class="section-kicker">第 4 站</p>
-            <h2>Notes</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“provider 对话接口 key when present. it does not block selection. credentialed provider is 设置说明书ured. endpoint.”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“provider 对话接口 key when present.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>provider API key when present.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“it does not block selection.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>it does not block selection.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“credentialed provider is 设置说明书ured.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>credentialed provider is configured.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“endpoint.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>endpoint.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Notes”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：No web-search-specific 对话接口 key field is…、If the Ollama host is auth-protected, Ope…、OpenClaw warns during setup if Ollama is…、Runtime auto-detect can fall back to Olla…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>No web-search-specific API key field is required for this provider.</li><li>If the Ollama host is auth-protected, OpenClaw reuses the normal Ollama</li><li>OpenClaw warns during setup if Ollama is unreachable or not signed in, but</li><li>Runtime auto-detect can fall back to Ollama Web Search when no higher-priority</li><li>The provider uses Ollama&#39;s experimental <code>/api/experimental/web_search</code></li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-5">
-          <div class="section-heading">
-            <p class="section-kicker">第 5 站</p>
-            <h2>Related</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Related”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Web Search overview -- all providers and…、Ollama -- Ollama 聪明脑袋模型 setup and cloud/l…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><a href="/tools/web" target="_blank" rel="noreferrer">Web Search overview</a> -- all providers and auto-detection</li><li><a href="/providers/ollama" target="_blank" rel="noreferrer">Ollama</a> -- Ollama model setup and cloud/local modes</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-    <section class="section-shell">
-      <div class="ad-placeholder">
-        <p>这里预留给未来的 Google AdSense 模块。</p>
-        <code>&lt;!-- ADSENSE_SNIPPET --&gt;</code>
-      </div>
-    </section>
-  
+      <section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>🔎 Ollama Web Search 像给本地 Ollama 再开一扇“搜网页”的门</h2>
+      <p>它不是模型 provider，而是 web_search provider。意思是：这扇门负责上网找资料，不负责聊天大脑。</p>
+      <p>它很适合本地 Ollama 用户，因为能复用同一台机器和同一个登录状态。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合已经在用 Ollama 的人</span>
+      <span>重点是 `ollama signin` 和 `openclaw configure --section web`</span>
+      <a href="https://docs.openclaw.ai/tools/ollama-search" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading"><p class="section-kicker">第一步</p><h2>🪪 先登录 Ollama，再把它选成搜索门</h2><p>这不是直接填一个 API key，而是先让 Ollama 自己知道你是谁。</p></div>
+  <div class="home-grid">
+    <article class="home-card"><span class="home-card-index">1</span><h2><code>ollama signin</code></h2><p>像先去 Ollama 前台刷脸。</p></article>
+    <article class="home-card"><span class="home-card-index">2</span><h2><code>openclaw configure --section web</code></h2><p>像去网页搜索房间里选门。</p></article>
+    <article class="home-card"><span class="home-card-index">3</span><h2>provider = ollama</h2><p>像把搜索任务交给这扇门。</p></article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading"><p class="section-kicker">第二步</p><h2>🏠 它会复用你已有的 Ollama host</h2><p>如果你已经拿 Ollama 跑模型，它就顺手接着用同一台主机。</p></div>
+  <div class="story-grid">
+    <div class="story-card"><div class="story-card-label">默认 host</div><p><code>127.0.0.1:11434</code>。</p></div>
+    <div class="story-card"><div class="story-card-label">自定义 host</div><p>你也可以写自己的远程 Ollama 地址。</p></div>
+    <div class="story-card"><div class="story-card-label">Bearer auth</div><p>如果 host 要认证，OpenClaw 还能复用同一套 key。</p></div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading"><p class="section-kicker">第三步</p><h2>📦 这页最容易混的点：它是搜索，不是模型</h2><p>不要把 Ollama Web Search 跟 Ollama 模型 provider 混成一件事。</p></div>
+  <div class="story-grid">
+    <div class="source-card"><div class="story-card-label">输出</div><p>标题、URL、snippet 这种结构化结果。</p></div>
+    <div class="source-card"><div class="story-card-label">不用单独的搜索 key</div><p>它默认不需要 web-search 专门 API key。</p></div>
+    <div class="source-card"><div class="story-card-label">实验性 endpoint</div><p>底层走 Ollama 的 experimental web search API。</p></div>
+  </div>
+</section>
+
+<section class="section-shell"><div class="section-heading"><p class="section-kicker">最后总结</p><h2>🎈 把 Ollama Web Search 这页压成一句最好记的话</h2><p>这页就是给 Ollama 再开一扇搜网页的门：先登录，再选 provider，最后复用你已有的本地 host。</p></div></section>
+
 
       <footer class="page-footer">
         <div>

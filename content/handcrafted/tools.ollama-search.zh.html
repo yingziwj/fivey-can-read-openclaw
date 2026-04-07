@@ -1,4 +1,44 @@
-<section class="section-shell"><div class="overview-card"><div><p class="section-kicker">先讲人话版</p><h2>🔎 Ollama Web Search 像给本地 Ollama 再装一只“搜网页的小眼睛”</h2><p>它不是搜索引擎大厂，而是 Ollama 自己的实验搜索接口。你先让 Ollama 登录，再让 OpenClaw 去选它。</p></div><div class="overview-meta"><span>适合已经在用 Ollama 的人</span><span>重点是 ollama signin 和 web search 配置</span><a href="https://docs.openclaw.ai/tools/ollama-search" target="_blank" rel="noreferrer">查看官方原文</a></div></div></section>
-<section class="section-shell"><div class="section-heading"><p class="section-kicker">第一步</p><h2>🪪 先让 Ollama 自己签到</h2><p>没有 `ollama signin`，它就像没拿到进图书馆的门卡。</p></div><div class="home-grid"><article class="home-card"><span class="home-card-index">🏠</span><h2>本地 Ollama</h2><p>像你家里的一台会查资料的小机房。</p></article><article class="home-card"><span class="home-card-index">🔐</span><h2>`ollama signin`</h2><p>像先登记账户，告诉它你是谁。</p></article><article class="home-card"><span class="home-card-index">🧭</span><h2>`openclaw configure --section web`</h2><p>像把“网页搜索”这间房间门打开，然后选 Ollama。</p></article></div></section>
-<section class="section-shell"><div class="section-heading"><p class="section-kicker">第二步</p><h2>🧰 它会复用你原来那台 Ollama 机器</h2><p>如果你本来就有 Ollama 模型，它会直接借同一台主机，不用另起一套搜索服务。</p></div><div class="story-grid"><div class="story-card"><div class="story-card-label">无 key 默认</div><p>像不再额外办一张搜索卡。</p></div><div class="story-card"><div class="story-card-label">自带 host</div><p>像直接沿用你原来那台机器。</p></div><div class="story-card"><div class="story-card-label">可复用 auth</div><p>像模型和搜索共用同一把钥匙。</p></div></div></section>
-<section class="section-shell"><div class="section-heading"><p class="section-kicker">最后总结</p><h2>🎈 把 Ollama Search 这页压成一句最好记的话</h2><p>Ollama Web Search 是本地 Ollama 的网页眼睛。先签到，再选它当搜索供应商，就能把同一台本地机房的能力顺手借出来。</p></div></section>
+<section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>🔎 Ollama Web Search 像给本地 Ollama 再开一扇“搜网页”的门</h2>
+      <p>它不是模型 provider，而是 web_search provider。意思是：这扇门负责上网找资料，不负责聊天大脑。</p>
+      <p>它很适合本地 Ollama 用户，因为能复用同一台机器和同一个登录状态。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合已经在用 Ollama 的人</span>
+      <span>重点是 `ollama signin` 和 `openclaw configure --section web`</span>
+      <a href="https://docs.openclaw.ai/tools/ollama-search" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading"><p class="section-kicker">第一步</p><h2>🪪 先登录 Ollama，再把它选成搜索门</h2><p>这不是直接填一个 API key，而是先让 Ollama 自己知道你是谁。</p></div>
+  <div class="home-grid">
+    <article class="home-card"><span class="home-card-index">1</span><h2><code>ollama signin</code></h2><p>像先去 Ollama 前台刷脸。</p></article>
+    <article class="home-card"><span class="home-card-index">2</span><h2><code>openclaw configure --section web</code></h2><p>像去网页搜索房间里选门。</p></article>
+    <article class="home-card"><span class="home-card-index">3</span><h2>provider = ollama</h2><p>像把搜索任务交给这扇门。</p></article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading"><p class="section-kicker">第二步</p><h2>🏠 它会复用你已有的 Ollama host</h2><p>如果你已经拿 Ollama 跑模型，它就顺手接着用同一台主机。</p></div>
+  <div class="story-grid">
+    <div class="story-card"><div class="story-card-label">默认 host</div><p><code>127.0.0.1:11434</code>。</p></div>
+    <div class="story-card"><div class="story-card-label">自定义 host</div><p>你也可以写自己的远程 Ollama 地址。</p></div>
+    <div class="story-card"><div class="story-card-label">Bearer auth</div><p>如果 host 要认证，OpenClaw 还能复用同一套 key。</p></div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading"><p class="section-kicker">第三步</p><h2>📦 这页最容易混的点：它是搜索，不是模型</h2><p>不要把 Ollama Web Search 跟 Ollama 模型 provider 混成一件事。</p></div>
+  <div class="story-grid">
+    <div class="source-card"><div class="story-card-label">输出</div><p>标题、URL、snippet 这种结构化结果。</p></div>
+    <div class="source-card"><div class="story-card-label">不用单独的搜索 key</div><p>它默认不需要 web-search 专门 API key。</p></div>
+    <div class="source-card"><div class="story-card-label">实验性 endpoint</div><p>底层走 Ollama 的 experimental web search API。</p></div>
+  </div>
+</section>
+
+<section class="section-shell"><div class="section-heading"><p class="section-kicker">最后总结</p><h2>🎈 把 Ollama Web Search 这页压成一句最好记的话</h2><p>这页就是给 Ollama 再开一扇搜网页的门：先登录，再选 provider，最后复用你已有的本地 host。</p></div></section>

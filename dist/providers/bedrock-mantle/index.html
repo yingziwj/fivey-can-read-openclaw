@@ -4180,422 +4180,99 @@
   
       </div>
 
-      
-    <section class="section-shell">
-      <div class="overview-card">
-        <div>
-          <p class="section-kicker">先听这页的人话版</p>
-          <h2>Amazon Bedrock Mantle</h2>
-          <p>这一页像一本关于“Amazon Bedrock Mantle”的小绘本，它先告诉我们这位机器人朋友会做什么，再一步一步解释什么时候该这样做。 你可以先把它想成：Amazon Bedrock Mantle。</p>
-          <p>如果把这页当成“给普通人看的版本”，你最应该带走的是：它到底在教你一件什么事、什么时候要这样做、以及哪里最容易踩坑。</p>
-        </div>
-        <div class="overview-meta">
-          <span>原始路径：/providers/bedrock-mantle</span>
-          <span>章节数量：6</span>
-          <a href="https://docs.openclaw.ai/providers/bedrock-mantle" target="_blank" rel="noreferrer">查看原文</a>
-        </div>
-      </div>
-    </section>
-    
-        <section class="section-shell" id="section-1">
-          <div class="section-heading">
-            <p class="section-kicker">第 1 站</p>
-            <h2>Start Here</h2>
-            <p>这一节主要在解释“Start Here”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“Start Here”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Amazon Bedrock Mantle OpenClaw includes a bundled **Amazon Bedrock Mantle** provider that connects to the Mantle OpenAI…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Amazon Bedrock Mantle”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p># Amazon Bedrock Mantle</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“OpenClaw includes a bundled **Amazon Bedrock Mantle** provider that connects to the Mantle OpenAI-compatible endpoint.…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>OpenClaw includes a bundled **Amazon Bedrock Mantle** provider that connects to the Mantle OpenAI-compatible endpoint. Mantle hosts open-source and third-party models (GPT-OSS, Qwen, Kimi, GLM, and similar) through a standard <code>/v1/chat/completions</code> surface backed by Bedrock infrastructure.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-2">
-          <div class="section-heading">
-            <p class="section-kicker">第 2 站</p>
-            <h2>What OpenClaw supports</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“What OpenClaw supports”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Provider: amazon-bedrock-mantle、对话接口: openai-completions (OpenAI-compatib…、Auth: explicit AWS_BEARER_TOKEN_BEDROCK o…、Region: AWS_REGION or AWS_DEFAULT_REGION…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Provider: <code>amazon-bedrock-mantle</code></li><li>API: <code>openai-completions</code> (OpenAI-compatible)</li><li>Auth: explicit <code>AWS_BEARER_TOKEN_BEDROCK</code> or IAM credential-chain bearer-token generation</li><li>Region: <code>AWS_REGION</code> or <code>AWS_DEFAULT_REGION</code> (default: <code>us-east-1</code>)</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-3">
-          <div class="section-heading">
-            <p class="section-kicker">第 3 站</p>
-            <h2>Automatic 聪明脑袋模型 discovery</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“When AWS_BEARER_TOKEN_BEDROCK is set, OpenClaw uses it directly. Otherwise, OpenClaw attempts to generate a Mantle bear…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“When AWS_BEARER_TOKEN_BEDROCK is set, OpenClaw uses it directly. Otherwise, OpenClaw attempts to generate a Mantle bear…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>When <code>AWS_BEARER_TOKEN_BEDROCK</code> is set, OpenClaw uses it directly. Otherwise, OpenClaw attempts to generate a Mantle bearer token from the AWS default credential chain, including shared credentials/config profiles, SSO, web identity, and instance or task roles. It then discovers available Mantle models by querying the region&#39;s <code>/v1/models</code> endpoint. Discovery results are cached for 1 hour, and IAM-derived bearer tokens are refreshed hourly.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Supported regions: us-east-1, us-east-2, us-west-2, ap-northeast-1, ap-south-1, ap-southeast-3, eu-central-1, eu-west-1…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Supported regions: <code>us-east-1</code>, <code>us-east-2</code>, <code>us-west-2</code>, <code>ap-northeast-1</code>, <code>ap-south-1</code>, <code>ap-southeast-3</code>, <code>eu-central-1</code>, <code>eu-west-1</code>, <code>eu-west-2</code>, <code>eu-south-1</code>, <code>eu-north-1</code>, <code>sa-east-1</code>.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-4">
-          <div class="section-heading">
-            <p class="section-kicker">第 4 站</p>
-            <h2>Onboarding</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“1. Choose one auth path on the **门口的小门卫 host**: Explicit bearer token: IAM credentials: 2. Verify 聪明脑袋模型s are discovere…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“1. Choose one auth path on the **门口的小门卫 host**:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>1. Choose one auth path on the **gateway host**:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Explicit bearer token:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Explicit bearer token:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一串终端魔法口令，像按步骤按下几个按钮，让电脑开始干活。</p>
-        <ul class="code-steps">
-          <li>这一行“export AWS_BEARER_TOKEN_BEDROCK=&quot;...&quot;”是当前步骤要交给电脑的一小块提示。</li><li>这里在给“# Optional (defaults to us-east-1)”贴标签，意思是把它设置成“”。</li><li>这一行“export AWS_REGION=&quot;us-west-2&quot;”是当前步骤要交给电脑的一小块提示。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">export AWS_BEARER_TOKEN_BEDROCK=&quot;...&quot;
-# Optional (defaults to us-east-1):
-export AWS_REGION=&quot;us-west-2&quot;</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“IAM credentials:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>IAM credentials:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一串终端魔法口令，像按步骤按下几个按钮，让电脑开始干活。</p>
-        <ul class="code-steps">
-          <li>这里在给“# Any AWS SDK-compatible auth source works here for example”贴标签，意思是把它设置成“”。</li><li>这一行“export AWS_PROFILE=&quot;default&quot;”是当前步骤要交给电脑的一小块提示。</li><li>这一行“export AWS_REGION=&quot;us-west-2&quot;”是当前步骤要交给电脑的一小块提示。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash"># Any AWS SDK-compatible auth source works here, for example:
-export AWS_PROFILE=&quot;default&quot;
-export AWS_REGION=&quot;us-west-2&quot;</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“2. Verify 聪明脑袋模型s are discovered:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>2. Verify models are discovered:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一句直接对 OpenClaw 说的话，就像对小助手下达任务。</p>
-        <ul class="code-steps">
-          <li>这一句是在直接叫 OpenClaw 做事：“openclaw models list”。你可以把它想成对机器人说的完整命令。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">openclaw models list</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Discovered 聪明脑袋模型s appear under the amazon-bedrock-mantle provider. No additional 设置说明书 is required unless you want to…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Discovered models appear under the <code>amazon-bedrock-mantle</code> provider. No additional config is required unless you want to override defaults.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-5">
-          <div class="section-heading">
-            <p class="section-kicker">第 5 站</p>
-            <h2>Manual 设置说明书uration</h2>
-            <p>这一节主要在解释“Manual 设置说明书uration”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“Manual 设置说明书uration”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“If you prefer explicit 设置说明书 instead of auto-discovery:”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“If you prefer explicit 设置说明书 instead of auto-discovery:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>If you prefer explicit config instead of auto-discovery:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“models”贴标签，意思是把它设置成“{”。</li><li>这里在给“providers”贴标签，意思是把它设置成“{”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json5">{
-  models: {
-    providers: {
-      &quot;amazon-bedrock-mantle&quot;: {
-        baseUrl: &quot;https://bedrock-mantle.us-east-1.api.aws/v1&quot;,
-        api: &quot;openai-completions&quot;,
-        auth: &quot;api-key&quot;,
-        apiKey: &quot;env:AWS_BEARER_TOKEN_BEDROCK&quot;,
-        models: [
-          {
-            id: &quot;gpt-oss-120b&quot;,
-            name: &quot;GPT-OSS 120B&quot;,
-            reasoning: true,
-            input: [&quot;text&quot;],
-            cost: { input: 0, output: 0, cacheRead: 0, cacheWrite: 0 },
-            contextWindow: 32000,
-            maxTokens: 4096,
-          },
-        ],
-      },
-    },
-  },
-}</code></pre>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-6">
-          <div class="section-heading">
-            <p class="section-kicker">第 6 站</p>
-            <h2>Notes</h2>
-            <p>这一节主要在解释“Notes”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“Notes”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“IAM credentials when AWS_BEARER_TOKEN_BEDROCK is not set. Amazon Bedrock provider. thinking, reasoner, or gpt-oss-120b.…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“IAM credentials when AWS_BEARER_TOKEN_BEDROCK is not set.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>IAM credentials when <code>AWS_BEARER_TOKEN_BEDROCK</code> is not set.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Amazon Bedrock provider.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p><a href="/providers/bedrock" target="_blank" rel="noreferrer">Amazon Bedrock</a> provider.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“thinking, reasoner, or gpt-oss-120b.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p><code>thinking</code>, <code>reasoner</code>, or <code>gpt-oss-120b</code>.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“silently skipped.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>silently skipped.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Notes”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：OpenClaw can mint the Mantle bearer token…、The bearer token is the same AWS_BEARER_T…、Reasoning support is inferred from 聪明脑袋模型…、If the Mantle endpoint is unavailable or…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>OpenClaw can mint the Mantle bearer token for you from AWS SDK-compatible</li><li>The bearer token is the same <code>AWS_BEARER_TOKEN_BEDROCK</code> used by the standard</li><li>Reasoning support is inferred from model IDs containing patterns like</li><li>If the Mantle endpoint is unavailable or returns no models, the provider is</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-    <section class="section-shell">
-      <div class="ad-placeholder">
-        <p>这里预留给未来的 Google AdSense 模块。</p>
-        <code>&lt;!-- ADSENSE_SNIPPET --&gt;</code>
-      </div>
-    </section>
-  
+      <section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>🪵 Bedrock Mantle 像 AWS 里的一扇模型大门</h2>
+      <p>它走的是 OpenAI 兼容接口，但钥匙来自 AWS 身份链或者显式 bearer token。你可以把它理解成“Bedrock 里面多了一层 Mantle 门厅”。</p>
+      <p>这页最重要的是：先把 AWS 认证链打通，再让 OpenClaw 自动发现模型。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合 AWS 里跑模型的人</span>
+      <span>重点是 bearer token、region、自动发现</span>
+      <a href="https://docs.openclaw.ai/providers/bedrock-mantle" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一步</p>
+    <h2>🔑 先决定你是用现成门票，还是走 AWS 身份链</h2>
+    <p>官方把两条路都写出来了，省得你卡在认证上。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">🎟</span>
+      <h2>显式 bearer token</h2>
+      <p><code>AWS_BEARER_TOKEN_BEDROCK</code> 直接给一张现成门票。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🪪</span>
+      <h2>IAM credential chain</h2>
+      <p>让 AWS 自己从你现成的身份链里把票变出来。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🌍</span>
+      <h2>Region</h2>
+      <p>像选去哪一栋 AWS 楼层，默认 `us-east-1`。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二步</p>
+    <h2>🔎 自动发现模型，像先去大厅查目录</h2>
+    <p>只要认证通了，OpenClaw 会去 /v1/models 看今天有哪些模型可用。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label">自动发现</div>
+      <p>像前台直接去大厅名单板抄名单。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">缓存</div>
+      <p>发现结果会缓存一小时，避免每次都重跑。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">适用模型</div>
+      <p>GPT-OSS、Qwen、Kimi、GLM 这类托管模型都可能在这里出现。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第三步</p>
+    <h2>📦 手写配置时，门牌就得自己填清楚</h2>
+    <p>如果你不走自动发现，也能手写 baseUrl 和模型列表。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label"><code>amazon-bedrock-mantle</code></div>
+      <p>像这扇门在 OpenClaw 里的正式门牌。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>/v1/chat/completions</code></div>
+      <p>像统一的对话窗口。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">AWS 区域兼容</div>
+      <p>支持的 region 很多，但要跟你的身份和门牌对应上。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">最后总结</p>
+    <h2>🎈 把 Bedrock Mantle 这页压成一句最好记的话</h2>
+    <p>Bedrock Mantle 是 AWS 里的模型门：先把身份链打通，再让 OpenClaw 自动去大厅找模型，必要时再自己手写门牌。</p>
+  </div>
+</section>
+
 
       <footer class="page-footer">
         <div>

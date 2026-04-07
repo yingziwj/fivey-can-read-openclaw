@@ -4180,590 +4180,73 @@
   
       </div>
 
-      
-    <section class="section-shell">
-      <div class="overview-card">
-        <div>
-          <p class="section-kicker">先听这页的人话版</p>
-          <h2>Image Generation</h2>
-          <p>这一页像一本关于“Image Generation”的小绘本，它先告诉我们这位机器人朋友会做什么，再一步一步解释什么时候该这样做。 你可以先把它想成：Image Generation。</p>
-          <p>如果把这页当成“给普通人看的版本”，你最应该带走的是：它到底在教你一件什么事、什么时候要这样做、以及哪里最容易踩坑。</p>
-        </div>
-        <div class="overview-meta">
-          <span>原始路径：/tools/image-generation</span>
-          <span>章节数量：9</span>
-          <a href="https://docs.openclaw.ai/tools/image-generation" target="_blank" rel="noreferrer">查看原文</a>
-        </div>
-      </div>
-    </section>
-    
-        <section class="section-shell" id="section-1">
-          <div class="section-heading">
-            <p class="section-kicker">第 1 站</p>
-            <h2>Start Here</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Image Generation The image_generate 工具小帮手 lets the 机器人朋友 create and edit images using your 设置说明书ured providers. Generat…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Image Generation”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p># Image Generation</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“The image_generate 工具小帮手 lets the 机器人朋友 create and edit images using your 设置说明书ured providers. Generated images are del…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>The <code>image_generate</code> tool lets the agent create and edit images using your configured providers. Generated images are delivered automatically as media attachments in the agent&#39;s reply.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“&lt;Note&gt; The 工具小帮手 only appears when at least one image generation provider is available. If you don&#39;t see image_generate…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>&lt;Note&gt; The tool only appears when at least one image generation provider is available. If you don&#39;t see <code>image_generate</code> in your agent&#39;s tools, configure <code>agents.defaults.imageGenerationModel</code> or set up a provider API key. &lt;/Note&gt;</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-2">
-          <div class="section-heading">
-            <p class="section-kicker">第 2 站</p>
-            <h2>Quick start</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“1. Set an 对话接口 key for at least one provider (for example OPENAI_对话接口_KEY or GEMINI_对话接口_KEY). 2. Optionally set your p…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“1. Set an 对话接口 key for at least one provider (for example OPENAI_对话接口_KEY or GEMINI_对话接口_KEY). 2. Optionally set your p…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>1. Set an API key for at least one provider (for example <code>OPENAI_API_KEY</code> or <code>GEMINI_API_KEY</code>). 2. Optionally set your preferred model:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“agents”贴标签，意思是把它设置成“{”。</li><li>这里在给“defaults”贴标签，意思是把它设置成“{”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json5">{
-  agents: {
-    defaults: {
-      imageGenerationModel: {
-        primary: &quot;openai/gpt-image-1&quot;,
-      },
-    },
-  },
-}</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“3. Ask the 机器人朋友: *&quot;Generate an image of a friendly lobster mascot.&quot;*”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>3. Ask the agent: *&quot;Generate an image of a friendly lobster mascot.&quot;*</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“The 机器人朋友 calls image_generate automatically. No 工具小帮手 allow-listing needed — it&#39;s enabled by default when a provider i…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>The agent calls <code>image_generate</code> automatically. No tool allow-listing needed — it&#39;s enabled by default when a provider is available.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-3">
-          <div class="section-heading">
-            <p class="section-kicker">第 3 站</p>
-            <h2>Supported providers</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Provider Default 聪明脑袋模型 Edit support 对话接口 key -------- -------------------------------- -------------------------------…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Provider Default 聪明脑袋模型 Edit support 对话接口 key -------- -------------------------------- -------------------------------…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>| Provider | Default model | Edit support | API key | | -------- | -------------------------------- | ---------------------------------- | ----------------------------------------------------- | | OpenAI | <code>gpt-image-1</code> | Yes (up to 5 images) | <code>OPENAI_API_KEY</code> | | Google | <code>gemini-3.1-flash-image-preview</code> | Yes | <code>GEMINI_API_KEY</code> or <code>GOOGLE_API_KEY</code> | | fal | <code>fal-ai/flux/dev</code> | Yes | <code>FAL_KEY</code> | | MiniMax | <code>image-01</code> | Yes (subject reference) | <code>MINIMAX_API_KEY</code> or MiniMax OAuth (<code>minimax-portal</code>) | | ComfyUI | <code>workflow</code> | Yes (1 image, workflow-configured) | <code>COMFY_API_KEY</code> or <code>COMFY_CLOUD_API_KEY</code> for cloud | | Vydra | <code>grok-imagine</code> | No | <code>VYDRA_API_KEY</code> |</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Use action: &quot;list&quot; to inspect available providers and 聪明脑袋模型s at runtime:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Use <code>action: &quot;list&quot;</code> to inspect available providers and models at runtime:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段像给机器人看的说明书，告诉它要按什么样子准备东西。</p>
-        <ul class="code-steps">
-          <li>这一行“/tool image_generate action=list”是当前步骤要交给电脑的一小块提示。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-text">/tool image_generate action=list</code></pre>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-4">
-          <div class="section-heading">
-            <p class="section-kicker">第 4 站</p>
-            <h2>工具小帮手 parameters</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Parameter Type Description ------------- --------- --------------------------------------------------------------------…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Parameter Type Description ------------- --------- --------------------------------------------------------------------…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>| Parameter | Type | Description | | ------------- | --------- | ------------------------------------------------------------------------------------- | | <code>prompt</code> | string | Image generation prompt (required for <code>action: &quot;generate&quot;</code>) | | <code>action</code> | string | <code>&quot;generate&quot;</code> (default) or <code>&quot;list&quot;</code> to inspect providers | | <code>model</code> | string | Provider/model override, e.g. <code>openai/gpt-image-1</code> | | <code>image</code> | string | Single reference image path or URL for edit mode | | <code>images</code> | string\[] | Multiple reference images for edit mode (up to 5) | | <code>size</code> | string | Size hint: <code>1024x1024</code>, <code>1536x1024</code>, <code>1024x1536</code>, <code>1024x1792</code>, <code>1792x1024</code> | | <code>aspectRatio</code> | string | Aspect ratio: <code>1:1</code>, <code>2:3</code>, <code>3:2</code>, <code>3:4</code>, <code>4:3</code>, <code>4:5</code>, <code>5:4</code>, <code>9:16</code>, <code>16:9</code>, <code>21:9</code> | | <code>resolution</code> | string | Resolution hint: <code>1K</code>, <code>2K</code>, or <code>4K</code> | | <code>count</code> | number | Number of images to generate (1–4) | | <code>filename</code> | string | Output filename hint |</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Not all providers support all parameters. When a fallback provider supports a nearby geometry option instead of the exa…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Not all providers support all parameters. When a fallback provider supports a nearby geometry option instead of the exact requested one, OpenClaw remaps to the closest supported size, aspect ratio, or resolution before submission. Truly unsupported overrides are still reported in the tool result.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“工具小帮手 results report the applied settings. When OpenClaw remaps geometry during provider fallback, the returned size, a…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Tool results report the applied settings. When OpenClaw remaps geometry during provider fallback, the returned <code>size</code>, <code>aspectRatio</code>, and <code>resolution</code> values reflect what was actually sent, and <code>details.normalization</code> captures the requested-to-applied translation.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-5">
-          <div class="section-heading">
-            <p class="section-kicker">第 5 站</p>
-            <h2>聪明脑袋模型 selection</h2>
-            <p>这一节主要在解释“聪明脑袋模型 selection”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“聪明脑袋模型 selection”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“agents”贴标签，意思是把它设置成“{”。</li><li>这里在给“defaults”贴标签，意思是把它设置成“{”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json5">{
-  agents: {
-    defaults: {
-      imageGenerationModel: {
-        primary: &quot;openai/gpt-image-1&quot;,
-        fallbacks: [&quot;google/gemini-3.1-flash-image-preview&quot;, &quot;fal/fal-ai/flux/dev&quot;],
-      },
-    },
-  },
-}</code></pre>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-6">
-          <div class="section-heading">
-            <p class="section-kicker">第 6 站</p>
-            <h2>Provider selection order</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“When generating an image, OpenClaw tries providers in this order: 1. **聪明脑袋模型 parameter** from the 工具小帮手 call (if the 机…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“When generating an image, OpenClaw tries providers in this order:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>When generating an image, OpenClaw tries providers in this order:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“1. **聪明脑袋模型 parameter** from the 工具小帮手 call (if the 机器人朋友 specifies one) 2. **imageGeneration聪明脑袋模型.primary** from 设置说明…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>1. **<code>model</code> parameter** from the tool call (if the agent specifies one) 2. **<code>imageGenerationModel.primary</code>** from config 3. **<code>imageGenerationModel.fallbacks</code>** in order 4. **Auto-detection** — uses auth-backed provider defaults only:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Provider selection order”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：current default provider first、remaining registered image-generation pro…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>current default provider first</li><li>remaining registered image-generation providers in provider-id order</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“If a provider fails (auth error, rate limit, etc.), the next candidate is tried automatically. If all fail, the error i…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>If a provider fails (auth error, rate limit, etc.), the next candidate is tried automatically. If all fail, the error includes details from each attempt.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Notes:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Notes:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“when OpenClaw can actually authenticate that provider.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>when OpenClaw can actually authenticate that provider.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“机器人朋友s.defaults.mediaGenerationAutoProviderFallback: false if you want image generation to use only the explicit 聪明脑袋模型…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p><code>agents.defaults.mediaGenerationAutoProviderFallback: false</code> if you want image generation to use only the explicit <code>model</code>, <code>primary</code>, and <code>fallbacks</code> entries.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“default 聪明脑袋模型s, and auth env-var hints.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>default models, and auth env-var hints.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Provider selection order”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Auto-detection is auth-aware. A provider…、Auto-detection is enabled by default. Set、Use action: &quot;list&quot; to inspect the current…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Auto-detection is auth-aware. A provider default only enters the candidate list</li><li>Auto-detection is enabled by default. Set</li><li>Use <code>action: &quot;list&quot;</code> to inspect the currently registered providers, their</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-7">
-          <div class="section-heading">
-            <p class="section-kicker">第 7 站</p>
-            <h2>Image editing</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“OpenAI, Google, fal, MiniMax, and ComfyUI support editing reference images. Pass a reference image path or URL: OpenAI…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“OpenAI, Google, fal, MiniMax, and ComfyUI support editing reference images. Pass a reference image path or URL:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>OpenAI, Google, fal, MiniMax, and ComfyUI support editing reference images. Pass a reference image path or URL:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段像给机器人看的说明书，告诉它要按什么样子准备东西。</p>
-        <ul class="code-steps">
-          <li>这里在给“Generate a watercolor version of this photo + image”贴标签，意思是把它设置成“/path/to/photo.jpg”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-text">&quot;Generate a watercolor version of this photo&quot; + image: &quot;/path/to/photo.jpg&quot;</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“OpenAI and Google support up to 5 reference images via the images parameter. fal, MiniMax, and ComfyUI support 1.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>OpenAI and Google support up to 5 reference images via the <code>images</code> parameter. fal, MiniMax, and ComfyUI support 1.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“MiniMax image generation is available through both bundled MiniMax auth paths:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>MiniMax image generation is available through both bundled MiniMax auth paths:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Image editing”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：minimax/image-01 for 对话接口-key setups、minimax-portal/image-01 for OAuth setups。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>minimax/image-01</code> for API-key setups</li><li><code>minimax-portal/image-01</code> for OAuth setups</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-8">
-          <div class="section-heading">
-            <p class="section-kicker">第 8 站</p>
-            <h2>Provider capabilities</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Capability OpenAI Google fal MiniMax ComfyUI Vydra --------------------- -------------------- -------------------- ----…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Capability OpenAI Google fal MiniMax ComfyUI Vydra --------------------- -------------------- -------------------- ----…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>| Capability | OpenAI | Google | fal | MiniMax | ComfyUI | Vydra | | --------------------- | -------------------- | -------------------- | ------------------- | -------------------------- | ---------------------------------- | ------- | | Generate | Yes (up to 4) | Yes (up to 4) | Yes (up to 4) | Yes (up to 9) | Yes (workflow-defined outputs) | Yes (1) | | Edit/reference | Yes (up to 5 images) | Yes (up to 5 images) | Yes (1 image) | Yes (1 image, subject ref) | Yes (1 image, workflow-configured) | No | | Size control | Yes | Yes | Yes | No | No | No | | Aspect ratio | No | Yes | Yes (generate only) | Yes | No | No | | Resolution (1K/2K/4K) | No | Yes | Yes | No | No | No |</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-9">
-          <div class="section-heading">
-            <p class="section-kicker">第 9 站</p>
-            <h2>Related</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Related”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：工具小帮手s Overview — all available 机器人朋友 工具小…、fal — fal image and video provider setup、ComfyUI — local ComfyUI and Comfy Cloud w…、Google (Gemini) — Gemini image provider s…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><a href="/tools" target="_blank" rel="noreferrer">Tools Overview</a> — all available agent tools</li><li><a href="/providers/fal" target="_blank" rel="noreferrer">fal</a> — fal image and video provider setup</li><li><a href="/providers/comfy" target="_blank" rel="noreferrer">ComfyUI</a> — local ComfyUI and Comfy Cloud workflow setup</li><li><a href="/providers/google" target="_blank" rel="noreferrer">Google (Gemini)</a> — Gemini image provider setup</li><li><a href="/providers/minimax" target="_blank" rel="noreferrer">MiniMax</a> — MiniMax image provider setup</li><li><a href="/providers/openai" target="_blank" rel="noreferrer">OpenAI</a> — OpenAI Images provider setup</li><li><a href="/providers/vydra" target="_blank" rel="noreferrer">Vydra</a> — Vydra image, video, and speech setup</li><li><a href="/gateway/configuration-reference#agent-defaults" target="_blank" rel="noreferrer">Configuration Reference</a> — <code>imageGenerationModel</code> config</li><li><a href="/concepts/models" target="_blank" rel="noreferrer">Models</a> — model configuration and failover</li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-    <section class="section-shell">
-      <div class="ad-placeholder">
-        <p>这里预留给未来的 Google AdSense 模块。</p>
-        <code>&lt;!-- ADSENSE_SNIPPET --&gt;</code>
-      </div>
-    </section>
-  
+      <section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>🖼 `image_generate` 像给代理一支会画画的手</h2>
+      <p>它能画图，也能改图，最后生成的图片会自动作为回复里的媒体附件出现。</p>
+      <p>这页最重要的是：只要有一个可用的图像 provider，这个工具通常就会自动出现。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合想让代理自动出图的人</span>
+      <span>重点是 provider 可用性和默认模型</span>
+      <a href="https://docs.openclaw.ai/tools/image-generation" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一步</p>
+    <h2>🎯 先让工具出现，再让它干活</h2>
+    <p>这不是手动 allowlist 的工具，它是“有 provider 就亮”的那种。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label">自动出现</div>
+      <p>只要配置了图像 provider，工具就会在 agent 工具里冒出来。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">默认模型</div>
+      <p>可选但常用，像先给它选一支默认画笔。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">生成结果</div>
+      <p>会直接回到回复里作为媒体附件。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二步</p>
+    <h2>🛠 各家画师各有分工</h2>
+    <p>OpenClaw 支持的 provider 很多，但思路是一样的：选对工位。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card"><span class="home-card-index">A</span><h2>OpenAI</h2><p>默认 <code>gpt-image-1</code>。</p></article>
+    <article class="home-card"><span class="home-card-index">G</span><h2>Google</h2><p>带多模态图片生成能力。</p></article>
+    <article class="home-card"><span class="home-card-index">F</span><h2>fal</h2><p>快、轻、常用。</p></article>
+    <article class="home-card"><span class="home-card-index">V</span><h2>Vydra</h2><p>图像线也有，但不做编辑。</p></article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第三步</p>
+    <h2>📦 `<code>/tool image_generate</code>` 像现场下单</h2>
+    <p>你给一句话，代理就会自己决定要不要画图。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card"><div class="story-card-label">Prompt</div><p>像把画面描述交给画师。</p></div>
+    <div class="source-card"><div class="story-card-label">List</div><p>可以先看哪些 provider 和模型在线。</p></div>
+    <div class="source-card"><div class="story-card-label">Edit</div><p>有些 provider 还能拿参考图改图。</p></div>
+  </div>
+</section>
+
+<section class="section-shell"><div class="section-heading"><p class="section-kicker">最后总结</p><h2>🎈 把 Image Generation 这页压成一句最好记的话</h2><p>`image_generate` 就是代理的画画手：先有 provider，再选默认模型，然后就能把图直接送回回复里。</p></div></section>
+
 
       <footer class="page-footer">
         <div>

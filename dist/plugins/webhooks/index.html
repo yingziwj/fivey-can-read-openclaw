@@ -4180,718 +4180,104 @@
   
       </div>
 
-      
-    <section class="section-shell">
-      <div class="overview-card">
-        <div>
-          <p class="section-kicker">先听这页的人话版</p>
-          <h2>Webhooks Plugin</h2>
-          <p>这一页像一本关于“小铃铛通知s 新本领插件”的小绘本，它先告诉我们这位机器人朋友会做什么，再一步一步解释什么时候该这样做。 你可以先把它想成：小铃铛通知s (新本领插件)。</p>
-          <p>如果把这页当成“给普通人看的版本”，你最应该带走的是：它到底在教你一件什么事、什么时候要这样做、以及哪里最容易踩坑。</p>
-        </div>
-        <div class="overview-meta">
-          <span>原始路径：/plugins/webhooks</span>
-          <span>章节数量：10</span>
-          <a href="https://docs.openclaw.ai/plugins/webhooks" target="_blank" rel="noreferrer">查看原文</a>
-        </div>
-      </div>
-    </section>
-    
-        <section class="section-shell" id="section-1">
-          <div class="section-heading">
-            <p class="section-kicker">第 1 站</p>
-            <h2>Start Here</h2>
-            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>你理解的是能力边界，不只是功能名字。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“小铃铛通知s (新本领插件) The 小铃铛通知s 新本领插件 adds authenticated HTTP routes that bind external 自动小闹钟 to OpenClaw TaskFlows. Use it w…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“小铃铛通知s (新本领插件)”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p># Webhooks (plugin)</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“The 小铃铛通知s 新本领插件 adds authenticated HTTP routes that bind external 自动小闹钟 to OpenClaw TaskFlows.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>The Webhooks plugin adds authenticated HTTP routes that bind external automation to OpenClaw TaskFlows.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Use it when you want a trusted system such as Z对话接口er, n8n, a CI job, or an internal service to create and drive manage…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Use it when you want a trusted system such as Zapier, n8n, a CI job, or an internal service to create and drive managed TaskFlows without writing a custom plugin first.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-2">
-          <div class="section-heading">
-            <p class="section-kicker">第 2 站</p>
-            <h2>Where it runs</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“The 小铃铛通知s 新本领插件 runs inside the 门口的小门卫 process. If your 门口的小门卫 runs on another machine, install and 设置说明书ure the 新本领插件…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“The 小铃铛通知s 新本领插件 runs inside the 门口的小门卫 process.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>The Webhooks plugin runs inside the Gateway process.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“If your 门口的小门卫 runs on another machine, install and 设置说明书ure the 新本领插件 on that 门口的小门卫 host, then restart the 门口的小门卫.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>If your Gateway runs on another machine, install and configure the plugin on that Gateway host, then restart the Gateway.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-3">
-          <div class="section-heading">
-            <p class="section-kicker">第 3 站</p>
-            <h2>设置说明书ure routes</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Set 设置说明书 under 新本领插件s.entries.小铃铛通知s.设置说明书: Route fields: Supported secret inputs: If a secret-backed route cannot res…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Set 设置说明书 under 新本领插件s.entries.小铃铛通知s.设置说明书:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Set config under <code>plugins.entries.webhooks.config</code>:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“plugins”贴标签，意思是把它设置成“{”。</li><li>这里在给“entries”贴标签，意思是把它设置成“{”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json5">{
-  plugins: {
-    entries: {
-      webhooks: {
-        enabled: true,
-        config: {
-          routes: {
-            zapier: {
-              path: &quot;/plugins/webhooks/zapier&quot;,
-              sessionKey: &quot;agent:main:main&quot;,
-              secret: {
-                source: &quot;env&quot;,
-                provider: &quot;default&quot;,
-                id: &quot;OPENCLAW_WEBHOOK_SECRET&quot;,
-              },
-              controllerId: &quot;webhooks/zapier&quot;,
-              description: &quot;Zapier TaskFlow bridge&quot;,
-            },
-          },
-        },
-      },
-    },
-  },
-}</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Route fields:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Route fields:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Configure routes”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：enabled: optional, defaults to true、path: optional, defaults to /新本领插件s/小铃铛通知…、sessionKey: required session that owns th…、secret: required shared secret or SecretR…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>enabled</code>: optional, defaults to <code>true</code></li><li><code>path</code>: optional, defaults to <code>/plugins/webhooks/&lt;routeId&gt;</code></li><li><code>sessionKey</code>: required session that owns the bound TaskFlows</li><li><code>secret</code>: required shared secret or SecretRef</li><li><code>controllerId</code>: optional controller id for created managed flows</li><li><code>description</code>: optional operator note</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Supported secret inputs:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Supported <code>secret</code> inputs:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Configure routes”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Plain string、SecretRef with source: &quot;env&quot; &quot;file&quot; &quot;exec&quot;。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Plain string</li><li>SecretRef with <code>source: &quot;env&quot; | &quot;file&quot; | &quot;exec&quot;</code></li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“If a secret-backed route cannot resolve its secret at startup, the 新本领插件 skips that route and logs a warning instead of…”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>If a secret-backed route cannot resolve its secret at startup, the plugin skips that route and logs a warning instead of exposing a broken endpoint.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-4">
-          <div class="section-heading">
-            <p class="section-kicker">第 4 站</p>
-            <h2>安全守门员 聪明脑袋模型</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Each route is trusted to act with the TaskFlow authority of its 设置说明书ured sessionKey. This means the route can inspect…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Each route is trusted to act with the TaskFlow authority of its 设置说明书ured sessionKey.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Each route is trusted to act with the TaskFlow authority of its configured <code>sessionKey</code>.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“This means the route can inspect and mutate TaskFlows owned by that session, so you should:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>This means the route can inspect and mutate TaskFlows owned by that session, so you should:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Security model”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Use a strong unique secret per route、Prefer secret references over inline plai…、Bind routes to the narrowest session that…、Expose only the specific 小铃铛通知 path you n…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Use a strong unique secret per route</li><li>Prefer secret references over inline plaintext secrets</li><li>Bind routes to the narrowest session that fits the workflow</li><li>Expose only the specific webhook path you need</li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“The 新本领插件 applies:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>The plugin applies:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Security model”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Shared-secret authentication、Request body size and timeout guards、Fixed-window rate limiting、In-flight request limiting。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>Shared-secret authentication</li><li>Request body size and timeout guards</li><li>Fixed-window rate limiting</li><li>In-flight request limiting</li><li>Owner-bound TaskFlow access through <code>api.runtime.taskFlow.bindSession(...)</code></li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-5">
-          <div class="section-heading">
-            <p class="section-kicker">第 5 站</p>
-            <h2>Request format</h2>
-            <p>这一节主要在解释“Request format”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“Request format”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Send POST requests with: Example:”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Send POST requests with:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Send <code>POST</code> requests with:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Request format”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：Content-Type: application/json、Authorization: Bearer &lt;secret&gt; or x-openc…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>Content-Type: application/json</code></li><li><code>Authorization: Bearer &lt;secret&gt;</code> or <code>x-openclaw-webhook-secret: &lt;secret&gt;</code></li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Example:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Example:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一串终端魔法口令，像按步骤按下几个按钮，让电脑开始干活。</p>
-        <ul class="code-steps">
-          <li>这里在给“curl -X POST https”贴标签，意思是把它设置成“//gateway.example.com/plugins/webhooks/zapier \”。</li><li>这里在给“-H Content-Type”贴标签，意思是把它设置成“application/json&#39; \”。</li><li>这里在给“-H Authorization”贴标签，意思是把它设置成“Bearer YOUR_SHARED_SECRET&#39; \”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">curl -X POST https://gateway.example.com/plugins/webhooks/zapier \
-  -H &#39;Content-Type: application/json&#39; \
-  -H &#39;Authorization: Bearer YOUR_SHARED_SECRET&#39; \
-  -d &#39;{&quot;action&quot;:&quot;create_flow&quot;,&quot;goal&quot;:&quot;Review inbound queue&quot;}&#39;</code></pre>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-6">
-          <div class="section-heading">
-            <p class="section-kicker">第 6 站</p>
-            <h2>Supported actions</h2>
-            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>你理解的是能力边界，不只是功能名字。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“The 新本领插件 currently accepts these JSON action values:”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“The 新本领插件 currently accepts these JSON action values:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>The plugin currently accepts these JSON <code>action</code> values:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Supported actions”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：create_flow、get_flow、list_flows、find_latest_flow。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>create_flow</code></li><li><code>get_flow</code></li><li><code>list_flows</code></li><li><code>find_latest_flow</code></li><li><code>resolve_flow</code></li><li><code>get_task_summary</code></li><li><code>set_waiting</code></li><li><code>resume_flow</code></li><li><code>finish_flow</code></li><li><code>fail_flow</code></li><li><code>request_cancel</code></li><li><code>cancel_flow</code></li><li><code>run_task</code></li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-7">
-          <div class="section-heading">
-            <p class="section-kicker">第 7 站</p>
-            <h2>`create_flow`</h2>
-            <p>这一节主要在解释“`create_flow`”到底是干什么的，以及你什么时候会遇到它。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节主要在解释“`create_flow`”到底是干什么的，以及你什么时候会遇到它。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>如果你是第一次接触 OpenClaw，这一节最值得看的不是术语本身，而是它背后的使用场景和限制。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正动手时，先看它有没有默认值、有没有必须打开的选项、以及会不会影响安全边界。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Creates a managed TaskFlow for the route&#39;s bound session. Example:”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Creates a managed TaskFlow for the route&#39;s bound session.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Creates a managed TaskFlow for the route&#39;s bound session.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Example:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Example:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“action”贴标签，意思是把它设置成“create_flow”。</li><li>这里在给“goal”贴标签，意思是把它设置成“Review inbound queue”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json">{
-  &quot;action&quot;: &quot;create_flow&quot;,
-  &quot;goal&quot;: &quot;Review inbound queue&quot;,
-  &quot;status&quot;: &quot;queued&quot;,
-  &quot;notifyPolicy&quot;: &quot;done_only&quot;
-}</code></pre>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-8">
-          <div class="section-heading">
-            <p class="section-kicker">第 8 站</p>
-            <h2>`run_task`</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Creates a managed child task inside an existing managed TaskFlow. Allowed runtimes are: Example:”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Creates a managed child task inside an existing managed TaskFlow.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Creates a managed child task inside an existing managed TaskFlow.</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Allowed runtimes are:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Allowed runtimes are:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“`run_task`”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：sub机器人朋友、acp。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><code>subagent</code></li><li><code>acp</code></li></ul>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Example:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Example:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“action”贴标签，意思是把它设置成“run_task”。</li><li>这里在给“flowId”贴标签，意思是把它设置成“flow_123”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json">{
-  &quot;action&quot;: &quot;run_task&quot;,
-  &quot;flowId&quot;: &quot;flow_123&quot;,
-  &quot;runtime&quot;: &quot;acp&quot;,
-  &quot;childSessionKey&quot;: &quot;agent:main:acp:worker&quot;,
-  &quot;task&quot;: &quot;Inspect the next message batch&quot;
-}</code></pre>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-9">
-          <div class="section-heading">
-            <p class="section-kicker">第 9 站</p>
-            <h2>Response shape</h2>
-            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>你理解的是能力边界，不只是功能名字。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Successful responses return: Rejected requests return: The 新本领插件 intentionally scrubs owner/session metadata from 小铃铛通知…”。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Successful responses return:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Successful responses return:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“ok”贴标签，意思是把它设置成“true”。</li><li>这里在给“routeId”贴标签，意思是把它设置成“zapier”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json">{
-  &quot;ok&quot;: true,
-  &quot;routeId&quot;: &quot;zapier&quot;,
-  &quot;result&quot;: {}
-}</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“Rejected requests return:”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Rejected requests return:</p>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这段不是故事对白，而是设置卡片，像在给机器人贴名字、地址和规则标签。</p>
-        <ul class="code-steps">
-          <li>大括号像把同一组设置抱在一起，说“这些是一家的”。</li><li>这里在给“ok”贴标签，意思是把它设置成“false”。</li><li>这里在给“routeId”贴标签，意思是把它设置成“zapier”。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-json">{
-  &quot;ok&quot;: false,
-  &quot;routeId&quot;: &quot;zapier&quot;,
-  &quot;code&quot;: &quot;not_found&quot;,
-  &quot;error&quot;: &quot;TaskFlow not found.&quot;,
-  &quot;result&quot;: {}
-}</code></pre>
-      </div>
-    
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>把它讲给 5 岁小朋友听，就是：先认识这里出现的几个角色和规则，再按顺序照着做。这里最重要的意思是“The 新本领插件 intentionally scrubs owner/session metadata from 小铃铛通知 responses.”。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>The plugin intentionally scrubs owner/session metadata from webhook responses.</p>
-      </div>
-    
-          </div>
-        </section>
-      
-        <section class="section-shell" id="section-10">
-          <div class="section-heading">
-            <p class="section-kicker">第 10 站</p>
-            <h2>Related docs</h2>
-            <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲一类能力是怎么工作的：它能做什么、不能做什么、适合在什么场景下调用。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>你理解的是能力边界，不只是功能名字。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>如果这节里同时出现命令、配置和例子，优先先看例子，再回头看配置。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>这一小段像旁白，提醒我们现在讲到哪一步了。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-            
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一组条目像“Related docs”的小卡片，告诉我们要准备哪些东西、哪些规则不能漏掉。先记住这几个重点：新本领插件 runtime SDK、Hooks and 小铃铛通知s overview、CLI 小铃铛通知s。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li><a href="/plugins/sdk-runtime" target="_blank" rel="noreferrer">Plugin runtime SDK</a></li><li><a href="/automation/hooks" target="_blank" rel="noreferrer">Hooks and webhooks overview</a></li><li><a href="/cli/webhooks" target="_blank" rel="noreferrer">CLI webhooks</a></li></ul>
-      </div>
-    
-          </div>
-        </section>
-      
-    <section class="section-shell">
-      <div class="ad-placeholder">
-        <p>这里预留给未来的 Google AdSense 模块。</p>
-        <code>&lt;!-- ADSENSE_SNIPPET --&gt;</code>
-      </div>
-    </section>
-  
+      <section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>🔔 Webhooks 插件像给 OpenClaw 装一个“外部门铃”</h2>
+      <p>外面的系统按一下铃，可以叫主会话醒一醒，也可以直接开一间任务房，让流程进去跑。</p>
+      <p>它最适合接 Zapier、n8n、CI job 或内部服务这种“外面来敲门”的东西。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合让外部系统驱动 TaskFlow 的人</span>
+      <span>重点是路由、鉴权、wake / agent 两种入口</span>
+      <a href="https://docs.openclaw.ai/plugins/webhooks" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一步</p>
+    <h2>🚪 先把门铃装上，再给它一个暗号和门牌</h2>
+    <p>没有 `enabled`、`token`、`path`，门铃就不完整。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label"><code>enabled</code></div>
+      <p>像给门铃通电。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>token</code></div>
+      <p>像门铃暗号，没暗号谁都能乱按就不行。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label"><code>path</code></div>
+      <p>像门牌号，告诉外面的人该敲哪儿。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二步</p>
+    <h2>🪪 鉴权像“先对暗号，再进门”</h2>
+    <p>这页反复强调 token，不是啰嗦，而是因为这扇门一旦开了，权限就不轻。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">🔐</span>
+      <h2><code>Authorization: Bearer &lt;token&gt;</code></h2>
+      <p>像最正式的敲门方式。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🪧</span>
+      <h2><code>x-openclaw-token</code></h2>
+      <p>像备用暗号通道。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🚫</span>
+      <h2>不要把 token 写进 query string</h2>
+      <p>像别把门禁暗号贴在门外纸条上。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🧠</span>
+      <h2>secret references</h2>
+      <p>像把暗号藏进更安全的柜子里，不直接摊在配置上。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第三步</p>
+    <h2>💓 wake 和 agent，是两种完全不同的按铃结果</h2>
+    <p>一个只叫醒主会话，一个直接开新任务。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>/hooks/wake</code></div>
+      <p>像轻轻拍门：“醒一醒，有消息了。”</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>/hooks/agent</code></div>
+      <p>像直接塞一张新任务单：“去隔壁房间干活。”</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">taskflow 入口</div>
+      <p>真正复杂的外部自动化，最后通常都会落到 TaskFlow 这条线上。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">最后总结</p>
+    <h2>🎈 把 Webhooks 这页压成一句最好记的话</h2>
+    <p>Webhooks 就是外部门铃：先装好门牌和暗号，外面的系统才能安全地把任务推进 OpenClaw。</p>
+  </div>
+</section>
+
 
       <footer class="page-footer">
         <div>

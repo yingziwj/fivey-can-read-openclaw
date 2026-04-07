@@ -1,4 +1,96 @@
-<section class="section-shell"><div class="overview-card"><div><p class="section-kicker">先讲人话版</p><h2>🎥 Runway 像一座专门排队做视频的工坊</h2><p>它不靠一次性返回结果，而是先给你任务号，再让你过一会儿回来查进度。</p></div><div class="overview-meta"><span>适合视频生成</span><span>重点是任务轮询、gen4.5 和 gen4_aleph</span><a href="https://docs.openclaw.ai/providers/runway" target="_blank" rel="noreferrer">查看官方原文</a></div></div></section>
-<section class="section-shell"><div class="section-heading"><p class="section-kicker">第一步</p><h2>🪪 先把 Runway 门卡拿好</h2><p>拿到 key 后，先把默认视频模型切到 Runway，OpenClaw 就知道后面该找谁做视频。</p></div><div class="home-grid"><article class="home-card"><span class="home-card-index">🔑</span><h2><code>RUNWAYML_API_SECRET</code></h2><p>像标准门卡。</p></article><article class="home-card"><span class="home-card-index">🎬</span><h2><code>runway/gen4.5</code></h2><p>像默认的视频工位。</p></article><article class="home-card"><span class="home-card-index">🔁</span><h2>轮询</h2><p>像先交任务，再回来问进度。</p></article></div></section>
-<section class="section-shell"><div class="section-heading"><p class="section-kicker">第二步</p><h2>🖼 `gen4.5`、`gen4_aleph`，像两种视频工位</h2><p>一个偏文本到视频，一个偏图到视频或视频到视频。</p></div><div class="story-grid"><div class="story-card"><div class="story-card-label">Text-to-video</div><p>像从一句话开始做视频。</p></div><div class="story-card"><div class="story-card-label">Image-to-video</div><p>像拿一张图当出发点。</p></div><div class="story-card"><div class="story-card-label">Video-to-video</div><p>像拿现成视频继续加工。</p></div></div></section>
-<section class="section-shell"><div class="section-heading"><p class="section-kicker">最后总结</p><h2>🎈 把 Runway 这页压成一句最好记的话</h2><p>Runway 是视频排队工坊。门卡先备好，模型先定好，剩下就是交任务、拿任务号、过会儿回来查结果。</p></div></section>
+<section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>🎬 Runway 像一座专门做视频的制作车间</h2>
+      <p>它是任务式的，OpenClaw 发单后会去查任务状态，等视频做完再把结果拿回来。</p>
+      <p>这页最重要的是：它不是即时返回，而是异步生产。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合想做视频的人</span>
+      <span>重点是 `gen4.5`、`gen4_aleph`、任务轮询</span>
+      <a href="https://docs.openclaw.ai/providers/runway" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一步</p>
+    <h2>🧾 先拿 key，再指定默认导演</h2>
+    <p>Runway 的起手式和别家视频门很像，但强调的是任务化流程。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">🔑</span>
+      <h2><code>RUNWAYML_API_SECRET</code></h2>
+      <p>正式门票。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🛠</span>
+      <h2><code>openclaw onboard --auth-choice runway-api-key</code></h2>
+      <p>像把门票交给向导。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">🎥</span>
+      <h2><code>runway/gen4.5</code></h2>
+      <p>默认视频导演。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二步</p>
+    <h2>⏳ 它最像“先提交工单，再回来取件”</h2>
+    <p>这个 provider 的核心不是立即给结果，而是先拿任务号。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">Text-to-video</div>
+      <p>文字直接变视频。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">Image-to-video</div>
+      <p>一张图加上去，开始动起来。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">Video-to-video</div>
+      <p>拿视频再做视频，走更重的流程。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">任务状态</div>
+      <p>提交后查状态，是这类视频门的正常工作方式。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第三步</p>
+    <h2>📦 参考图 / 参考视频 / 宽高比，都是工单里的材料</h2>
+    <p>它允许的模式不一样，但思路都很清楚：先投单，再等完成。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label">`gen4.5`</div>
+      <p>默认文本到视频模型。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">`gen4_aleph`</div>
+      <p>支持视频到视频。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">`16:9` / `9:16`</div>
+      <p>文本到视频目前常见的画幅选择。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">最后总结</p>
+    <h2>🎈 把 Runway 这页压成一句最好记的话</h2>
+    <p>Runway 是视频工单车间：先发单、再查状态、最后把成片取回来，不是即时回包的那种门。</p>
+  </div>
+</section>
