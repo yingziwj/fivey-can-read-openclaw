@@ -69,7 +69,7 @@
     "title": "LINE",
     "pathname": "/channels/line",
     "section": "Channels",
-    "description": "LINE (plugin)"
+    "description": "LINE"
   },
   {
     "title": "Channel Location Parsing",
@@ -81,25 +81,25 @@
     "title": "Matrix",
     "pathname": "/channels/matrix",
     "section": "Channels",
-    "description": "Matrix (plugin)"
+    "description": "Matrix"
   },
   {
     "title": "Mattermost",
     "pathname": "/channels/mattermost",
     "section": "Channels",
-    "description": "Mattermost (plugin)"
+    "description": "Mattermost"
   },
   {
     "title": "Microsoft Teams",
     "pathname": "/channels/msteams",
     "section": "Channels",
-    "description": "Microsoft Teams (plugin)"
+    "description": "Microsoft Teams"
   },
   {
     "title": "Nextcloud Talk",
     "pathname": "/channels/nextcloud-talk",
     "section": "Channels",
-    "description": "Nextcloud Talk (plugin)"
+    "description": "Nextcloud Talk"
   },
   {
     "title": "Nostr",
@@ -112,6 +112,12 @@
     "pathname": "/channels/pairing",
     "section": "Channels",
     "description": "Pairing"
+  },
+  {
+    "title": "QQ Bot",
+    "pathname": "/channels/qqbot",
+    "section": "Channels",
+    "description": "QQ Bot"
   },
   {
     "title": "Signal",
@@ -129,7 +135,7 @@
     "title": "Synology Chat",
     "pathname": "/channels/synology-chat",
     "section": "Channels",
-    "description": "Synology Chat (plugin)"
+    "description": "Synology Chat"
   },
   {
     "title": "Telegram",
@@ -141,7 +147,7 @@
     "title": "Tlon",
     "pathname": "/channels/tlon",
     "section": "Channels",
-    "description": "Tlon (plugin)"
+    "description": "Tlon"
   },
   {
     "title": "Channel Troubleshooting",
@@ -153,7 +159,7 @@
     "title": "Twitch",
     "pathname": "/channels/twitch",
     "section": "Channels",
-    "description": "Twitch (plugin)"
+    "description": "Twitch"
   },
   {
     "title": "WhatsApp",
@@ -201,7 +207,7 @@
     "title": "Compaction",
     "pathname": "/concepts/compaction",
     "section": "Concepts",
-    "description": "Context Window & Compaction"
+    "description": "Compaction"
   },
   {
     "title": "Context",
@@ -222,16 +228,46 @@
     "description": "Delegate Architecture"
   },
   {
+    "title": "Dreaming (experimental)",
+    "pathname": "/concepts/dreaming",
+    "section": "Concepts",
+    "description": "Dreaming (experimental)"
+  },
+  {
     "title": "Features",
     "pathname": "/concepts/features",
     "section": "Concepts",
     "description": "Features"
   },
   {
-    "title": "Memory",
+    "title": "Memory Overview",
     "pathname": "/concepts/memory",
     "section": "Concepts",
-    "description": "Memory"
+    "description": "Memory Overview"
+  },
+  {
+    "title": "Builtin Memory Engine",
+    "pathname": "/concepts/memory-builtin",
+    "section": "Concepts",
+    "description": "Builtin Memory Engine"
+  },
+  {
+    "title": "Honcho Memory",
+    "pathname": "/concepts/memory-honcho",
+    "section": "Concepts",
+    "description": "Honcho Memory"
+  },
+  {
+    "title": "QMD Memory Engine",
+    "pathname": "/concepts/memory-qmd",
+    "section": "Concepts",
+    "description": "QMD Memory Engine"
+  },
+  {
+    "title": "Memory Search",
+    "pathname": "/concepts/memory-search",
+    "section": "Concepts",
+    "description": "Memory Search"
   },
   {
     "title": "Messages",
@@ -288,6 +324,12 @@
     "description": "Session Tools"
   },
   {
+    "title": "SOUL.md Personality Guide",
+    "pathname": "/concepts/soul",
+    "section": "Concepts",
+    "description": "SOUL.md Personality Guide"
+  },
+  {
     "title": "Streaming and Chunking",
     "pathname": "/concepts/streaming",
     "section": "Concepts",
@@ -322,6 +364,12 @@
     "pathname": "/install/bun",
     "section": "Install",
     "description": "Bun (Experimental)"
+  },
+  {
+    "title": "ClawDock",
+    "pathname": "/install/clawdock",
+    "section": "Install",
+    "description": "ClawDock"
   },
   {
     "title": "Release Channels",
@@ -468,12 +516,6 @@
     "description": "Updating"
   },
   {
-    "title": "Building Plugins",
-    "pathname": "/plugins/building-plugins",
-    "section": "Plugins",
-    "description": "Building Plugins"
-  },
-  {
     "title": "Plugin Bundles",
     "pathname": "/plugins/bundles",
     "section": "Plugins",
@@ -484,48 +526,6 @@
     "pathname": "/plugins/community",
     "section": "Plugins",
     "description": "Community Plugins"
-  },
-  {
-    "title": "Building Channel Plugins",
-    "pathname": "/plugins/sdk-channel-plugins",
-    "section": "Plugins",
-    "description": "Building Channel Plugins"
-  },
-  {
-    "title": "Plugin Entry Points",
-    "pathname": "/plugins/sdk-entrypoints",
-    "section": "Plugins",
-    "description": "Plugin Entry Points"
-  },
-  {
-    "title": "Plugin SDK Migration",
-    "pathname": "/plugins/sdk-migration",
-    "section": "Plugins",
-    "description": "Plugin SDK Migration"
-  },
-  {
-    "title": "Plugin SDK Overview",
-    "pathname": "/plugins/sdk-overview",
-    "section": "Plugins",
-    "description": "Plugin SDK Overview"
-  },
-  {
-    "title": "Building Provider Plugins",
-    "pathname": "/plugins/sdk-provider-plugins",
-    "section": "Plugins",
-    "description": "Building Provider Plugins"
-  },
-  {
-    "title": "Plugin Runtime Helpers",
-    "pathname": "/plugins/sdk-runtime",
-    "section": "Plugins",
-    "description": "Plugin Runtime Helpers"
-  },
-  {
-    "title": "Voice Call Plugin",
-    "pathname": "/plugins/voice-call",
-    "section": "Plugins",
-    "description": "Voice Call (plugin)"
   },
   {
     "title": "Agent Bootstrapping",
@@ -600,28 +600,10 @@
     "description": "Linux Server"
   },
   {
-    "title": "Auth Monitoring",
-    "pathname": "/automation/auth-monitoring",
-    "section": "Automation",
-    "description": "Auth monitoring"
-  },
-  {
-    "title": "Cron Jobs",
+    "title": "Scheduled Tasks",
     "pathname": "/automation/cron-jobs",
     "section": "Automation",
-    "description": "Cron jobs (Gateway scheduler)"
-  },
-  {
-    "title": "Cron vs Heartbeat",
-    "pathname": "/automation/cron-vs-heartbeat",
-    "section": "Automation",
-    "description": "Cron vs Heartbeat: When to Use Each"
-  },
-  {
-    "title": "Gmail PubSub",
-    "pathname": "/automation/gmail-pubsub",
-    "section": "Automation",
-    "description": "Gmail Pub/Sub -> OpenClaw"
+    "description": "Scheduled Tasks (Cron)"
   },
   {
     "title": "Hooks",
@@ -630,10 +612,10 @@
     "description": "Hooks"
   },
   {
-    "title": "Polls",
-    "pathname": "/automation/poll",
+    "title": "Automation & Tasks",
+    "pathname": "/automation/index",
     "section": "Automation",
-    "description": "Polls"
+    "description": "Automation & Tasks"
   },
   {
     "title": "Standing Orders",
@@ -642,16 +624,16 @@
     "description": "Standing Orders"
   },
   {
-    "title": "Automation Troubleshooting",
-    "pathname": "/automation/troubleshooting",
+    "title": "Task Flow",
+    "pathname": "/automation/taskflow",
     "section": "Automation",
-    "description": "Automation troubleshooting"
+    "description": "Task Flow"
   },
   {
-    "title": "Webhooks",
-    "pathname": "/automation/webhook",
+    "title": "Background Tasks",
+    "pathname": "/automation/tasks",
     "section": "Automation",
-    "description": "Webhooks"
+    "description": "Background Tasks"
   },
   {
     "title": "Model Failover",
@@ -672,64 +654,58 @@
     "description": "Models CLI"
   },
   {
-    "title": "Android App",
-    "pathname": "/platforms/android",
-    "section": "Platforms",
-    "description": "Android App (Node)"
-  },
-  {
-    "title": "Platforms",
-    "pathname": "/platforms/index",
-    "section": "Platforms",
-    "description": "Platforms"
-  },
-  {
-    "title": "iOS App",
-    "pathname": "/platforms/ios",
-    "section": "Platforms",
-    "description": "iOS App (Node)"
-  },
-  {
-    "title": "Linux App",
-    "pathname": "/platforms/linux",
-    "section": "Platforms",
-    "description": "Linux App"
-  },
-  {
-    "title": "macOS Dev Setup",
-    "pathname": "/platforms/mac/dev-setup",
-    "section": "Platforms",
-    "description": "macOS Developer Setup"
-  },
-  {
-    "title": "Menu Bar",
-    "pathname": "/platforms/mac/menu-bar",
-    "section": "Platforms",
-    "description": "Menu Bar Status Logic"
-  },
-  {
-    "title": "macOS App",
-    "pathname": "/platforms/macos",
-    "section": "Platforms",
-    "description": "OpenClaw macOS Companion (menu bar + gateway broker)"
-  },
-  {
-    "title": "Windows",
-    "pathname": "/platforms/windows",
-    "section": "Platforms",
-    "description": "Windows"
-  },
-  {
     "title": "Plugin Internals",
     "pathname": "/plugins/architecture",
     "section": "Plugins",
     "description": "Plugin Internals"
   },
   {
+    "title": "Building Plugins",
+    "pathname": "/plugins/building-plugins",
+    "section": "Plugins",
+    "description": "Building Plugins"
+  },
+  {
     "title": "Plugin Manifest",
     "pathname": "/plugins/manifest",
     "section": "Plugins",
     "description": "Plugin manifest (openclaw\\.plugin.json)"
+  },
+  {
+    "title": "Building Channel Plugins",
+    "pathname": "/plugins/sdk-channel-plugins",
+    "section": "Plugins",
+    "description": "Building Channel Plugins"
+  },
+  {
+    "title": "Plugin Entry Points",
+    "pathname": "/plugins/sdk-entrypoints",
+    "section": "Plugins",
+    "description": "Plugin Entry Points"
+  },
+  {
+    "title": "Plugin SDK Migration",
+    "pathname": "/plugins/sdk-migration",
+    "section": "Plugins",
+    "description": "Plugin SDK Migration"
+  },
+  {
+    "title": "Plugin SDK Overview",
+    "pathname": "/plugins/sdk-overview",
+    "section": "Plugins",
+    "description": "Plugin SDK Overview"
+  },
+  {
+    "title": "Building Provider Plugins",
+    "pathname": "/plugins/sdk-provider-plugins",
+    "section": "Plugins",
+    "description": "Building Provider Plugins"
+  },
+  {
+    "title": "Plugin Runtime Helpers",
+    "pathname": "/plugins/sdk-runtime",
+    "section": "Plugins",
+    "description": "Plugin Runtime Helpers"
   },
   {
     "title": "Plugin Setup and Config",
@@ -744,10 +720,28 @@
     "description": "Plugin Testing"
   },
   {
+    "title": "Voice Call Plugin",
+    "pathname": "/plugins/voice-call",
+    "section": "Plugins",
+    "description": "Voice Call (plugin)"
+  },
+  {
+    "title": "Webhooks Plugin",
+    "pathname": "/plugins/webhooks",
+    "section": "Plugins",
+    "description": "Webhooks (plugin)"
+  },
+  {
     "title": "OpenProse",
     "pathname": "/prose",
     "section": "Prose",
     "description": "OpenProse"
+  },
+  {
+    "title": "Alibaba Model Studio",
+    "pathname": "/providers/alibaba",
+    "section": "Providers",
+    "description": "Alibaba Model Studio"
   },
   {
     "title": "Anthropic",
@@ -756,10 +750,28 @@
     "description": "Anthropic (Claude)"
   },
   {
+    "title": "Arcee AI",
+    "pathname": "/providers/arcee",
+    "section": "Providers",
+    "description": "Arcee AI"
+  },
+  {
     "title": "Amazon Bedrock",
     "pathname": "/providers/bedrock",
     "section": "Providers",
     "description": "Amazon Bedrock"
+  },
+  {
+    "title": "Amazon Bedrock Mantle",
+    "pathname": "/providers/bedrock-mantle",
+    "section": "Providers",
+    "description": "Amazon Bedrock Mantle"
+  },
+  {
+    "title": "Chutes",
+    "pathname": "/providers/chutes",
+    "section": "Providers",
+    "description": "Chutes"
   },
   {
     "title": "Claude Max API Proxy",
@@ -774,6 +786,12 @@
     "description": "Cloudflare AI Gateway"
   },
   {
+    "title": "ComfyUI",
+    "pathname": "/providers/comfy",
+    "section": "Providers",
+    "description": "ComfyUI"
+  },
+  {
     "title": "Deepgram",
     "pathname": "/providers/deepgram",
     "section": "Providers",
@@ -784,6 +802,12 @@
     "pathname": "/providers/deepseek",
     "section": "Providers",
     "description": "DeepSeek"
+  },
+  {
+    "title": "fal",
+    "pathname": "/providers/fal",
+    "section": "Providers",
+    "description": "fal"
   },
   {
     "title": "GitHub Copilot",
@@ -912,70 +936,10 @@
     "description": "Qwen"
   },
   {
-    "title": "Qwen / Model Studio",
-    "pathname": "/providers/qwen_modelstudio",
+    "title": "Runway",
+    "pathname": "/providers/runway",
     "section": "Providers",
-    "description": "Qwen / Model Studio (Alibaba Cloud)"
-  },
-  {
-    "title": "SGLang",
-    "pathname": "/providers/sglang",
-    "section": "Providers",
-    "description": "SGLang"
-  },
-  {
-    "title": "Synthetic",
-    "pathname": "/providers/synthetic",
-    "section": "Providers",
-    "description": "Synthetic"
-  },
-  {
-    "title": "Together AI",
-    "pathname": "/providers/together",
-    "section": "Providers",
-    "description": "Together AI"
-  },
-  {
-    "title": "Venice AI",
-    "pathname": "/providers/venice",
-    "section": "Providers",
-    "description": "Venice AI (Venice highlight)"
-  },
-  {
-    "title": "Vercel AI Gateway",
-    "pathname": "/providers/vercel-ai-gateway",
-    "section": "Providers",
-    "description": "Vercel AI Gateway"
-  },
-  {
-    "title": "vLLM",
-    "pathname": "/providers/vllm",
-    "section": "Providers",
-    "description": "vLLM"
-  },
-  {
-    "title": "Volcengine (Doubao)",
-    "pathname": "/providers/volcengine",
-    "section": "Providers",
-    "description": "Volcengine (Doubao)"
-  },
-  {
-    "title": "xAI",
-    "pathname": "/providers/xai",
-    "section": "Providers",
-    "description": "xAI"
-  },
-  {
-    "title": "Xiaomi MiMo",
-    "pathname": "/providers/xiaomi",
-    "section": "Providers",
-    "description": "Xiaomi MiMo"
-  },
-  {
-    "title": "Z.AI",
-    "pathname": "/providers/zai",
-    "section": "Providers",
-    "description": "Z.AI"
+    "description": "Runway"
   },
   {
     "title": "ACP Agents",
@@ -1104,6 +1068,12 @@
     "description": "Grok Search"
   },
   {
+    "title": "Image Generation",
+    "pathname": "/tools/image-generation",
+    "section": "Tools",
+    "description": "Image Generation"
+  },
+  {
     "title": "Kimi Search",
     "pathname": "/tools/kimi-search",
     "section": "Tools",
@@ -1128,10 +1098,28 @@
     "description": "Tool-loop detection"
   },
   {
+    "title": "Media Overview",
+    "pathname": "/tools/media-overview",
+    "section": "Tools",
+    "description": "Media Generation and Understanding"
+  },
+  {
     "title": "Multi-Agent Sandbox & Tools",
     "pathname": "/tools/multi-agent-sandbox-tools",
     "section": "Tools",
     "description": "Multi-Agent Sandbox & Tools Configuration"
+  },
+  {
+    "title": "Music Generation",
+    "pathname": "/tools/music-generation",
+    "section": "Tools",
+    "description": "Music Generation"
+  },
+  {
+    "title": "Ollama Web Search",
+    "pathname": "/tools/ollama-search",
+    "section": "Tools",
+    "description": "Ollama Web Search"
   },
   {
     "title": "PDF Tool",
@@ -1150,6 +1138,12 @@
     "pathname": "/tools/reactions",
     "section": "Tools",
     "description": "Reactions"
+  },
+  {
+    "title": "SearXNG Search",
+    "pathname": "/tools/searxng-search",
+    "section": "Tools",
+    "description": "SearXNG Search"
   },
   {
     "title": "Skills",
@@ -1188,6 +1182,12 @@
     "description": "Thinking Levels (/think directives)"
   },
   {
+    "title": "Video Generation",
+    "pathname": "/tools/video-generation",
+    "section": "Tools",
+    "description": "Video Generation"
+  },
+  {
     "title": "Web Search",
     "pathname": "/tools/web",
     "section": "Tools",
@@ -1206,52 +1206,16 @@
     "description": "Auth Credential Semantics"
   },
   {
-    "title": "agent",
-    "pathname": "/cli/agent",
-    "section": "Cli",
-    "description": "openclaw agent"
-  },
-  {
-    "title": "agents",
-    "pathname": "/cli/agents",
-    "section": "Cli",
-    "description": "openclaw agents"
-  },
-  {
-    "title": "approvals",
-    "pathname": "/cli/approvals",
-    "section": "Cli",
-    "description": "openclaw approvals"
-  },
-  {
     "title": "backup",
     "pathname": "/cli/backup",
     "section": "Cli",
     "description": "openclaw backup"
   },
   {
-    "title": "channels",
-    "pathname": "/cli/channels",
-    "section": "Cli",
-    "description": "openclaw channels"
-  },
-  {
     "title": "daemon",
     "pathname": "/cli/daemon",
     "section": "Cli",
     "description": "openclaw daemon"
-  },
-  {
-    "title": "devices",
-    "pathname": "/cli/devices",
-    "section": "Cli",
-    "description": "openclaw devices"
-  },
-  {
-    "title": "directory",
-    "pathname": "/cli/directory",
-    "section": "Cli",
-    "description": "openclaw directory"
   },
   {
     "title": "doctor",
@@ -1272,12 +1236,6 @@
     "description": "openclaw health"
   },
   {
-    "title": "hooks",
-    "pathname": "/cli/hooks",
-    "section": "Cli",
-    "description": "openclaw hooks"
-  },
-  {
     "title": "CLI Reference",
     "pathname": "/cli/index",
     "section": "Cli",
@@ -1290,40 +1248,10 @@
     "description": "openclaw logs"
   },
   {
-    "title": "memory",
-    "pathname": "/cli/memory",
-    "section": "Cli",
-    "description": "openclaw memory"
-  },
-  {
-    "title": "message",
-    "pathname": "/cli/message",
-    "section": "Cli",
-    "description": "openclaw message"
-  },
-  {
-    "title": "models",
-    "pathname": "/cli/models",
-    "section": "Cli",
-    "description": "openclaw models"
-  },
-  {
     "title": "onboard",
     "pathname": "/cli/onboard",
     "section": "Cli",
     "description": "openclaw onboard"
-  },
-  {
-    "title": "pairing",
-    "pathname": "/cli/pairing",
-    "section": "Cli",
-    "description": "openclaw pairing"
-  },
-  {
-    "title": "qr",
-    "pathname": "/cli/qr",
-    "section": "Cli",
-    "description": "openclaw qr"
   },
   {
     "title": "reset",
@@ -1338,58 +1266,10 @@
     "description": "openclaw secrets"
   },
   {
-    "title": "security",
-    "pathname": "/cli/security",
-    "section": "Cli",
-    "description": "openclaw security"
-  },
-  {
-    "title": "sessions",
-    "pathname": "/cli/sessions",
-    "section": "Cli",
-    "description": "openclaw sessions"
-  },
-  {
-    "title": "setup",
-    "pathname": "/cli/setup",
-    "section": "Cli",
-    "description": "openclaw setup"
-  },
-  {
-    "title": "status",
-    "pathname": "/cli/status",
-    "section": "Cli",
-    "description": "openclaw status"
-  },
-  {
-    "title": "system",
-    "pathname": "/cli/system",
-    "section": "Cli",
-    "description": "openclaw system"
-  },
-  {
-    "title": "uninstall",
-    "pathname": "/cli/uninstall",
-    "section": "Cli",
-    "description": "openclaw uninstall"
-  },
-  {
-    "title": "update",
-    "pathname": "/cli/update",
-    "section": "Cli",
-    "description": "openclaw update"
-  },
-  {
-    "title": "voicecall",
-    "pathname": "/cli/voicecall",
-    "section": "Cli",
-    "description": "openclaw voicecall"
-  },
-  {
     "title": "Authentication",
     "pathname": "/gateway/authentication",
     "section": "Gateway",
-    "description": "Authentication"
+    "description": "Authentication (Model Providers)"
   },
   {
     "title": "Background Exec and Process Tool",
@@ -1533,7 +1413,7 @@
     "title": "Remote Gateway Setup",
     "pathname": "/gateway/remote-gateway-readme",
     "section": "Gateway",
-    "description": "Running OpenClaw\\.app with a Remote Gateway"
+    "description": "> This content has been merged into Remote Access. See that page for the current guide."
   },
   {
     "title": "Sandbox vs Tool Policy vs Elevated",
@@ -1656,6 +1536,30 @@
     "description": "Voice Wake (Global Wake Words)"
   },
   {
+    "title": "Android App",
+    "pathname": "/platforms/android",
+    "section": "Platforms",
+    "description": "Android App (Node)"
+  },
+  {
+    "title": "Platforms",
+    "pathname": "/platforms/index",
+    "section": "Platforms",
+    "description": "Platforms"
+  },
+  {
+    "title": "iOS App",
+    "pathname": "/platforms/ios",
+    "section": "Platforms",
+    "description": "iOS App (Node)"
+  },
+  {
+    "title": "Linux App",
+    "pathname": "/platforms/linux",
+    "section": "Platforms",
+    "description": "Linux App"
+  },
+  {
     "title": "Gateway on macOS",
     "pathname": "/platforms/mac/bundled-gateway",
     "section": "Platforms",
@@ -1674,6 +1578,12 @@
     "description": "Gateway lifecycle on macOS"
   },
   {
+    "title": "macOS Dev Setup",
+    "pathname": "/platforms/mac/dev-setup",
+    "section": "Platforms",
+    "description": "macOS Developer Setup"
+  },
+  {
     "title": "Health Checks (macOS)",
     "pathname": "/platforms/mac/health",
     "section": "Platforms",
@@ -1690,6 +1600,12 @@
     "pathname": "/platforms/mac/logging",
     "section": "Platforms",
     "description": "Logging (macOS)"
+  },
+  {
+    "title": "Menu Bar",
+    "pathname": "/platforms/mac/menu-bar",
+    "section": "Platforms",
+    "description": "Menu Bar Status Logic"
   },
   {
     "title": "Peekaboo Bridge",
@@ -1744,6 +1660,90 @@
     "pathname": "/platforms/mac/xpc",
     "section": "Platforms",
     "description": "OpenClaw macOS IPC architecture"
+  },
+  {
+    "title": "macOS App",
+    "pathname": "/platforms/macos",
+    "section": "Platforms",
+    "description": "OpenClaw macOS Companion (menu bar + gateway broker)"
+  },
+  {
+    "title": "Windows",
+    "pathname": "/platforms/windows",
+    "section": "Platforms",
+    "description": "Windows"
+  },
+  {
+    "title": "SGLang",
+    "pathname": "/providers/sglang",
+    "section": "Providers",
+    "description": "SGLang"
+  },
+  {
+    "title": "StepFun",
+    "pathname": "/providers/stepfun",
+    "section": "Providers",
+    "description": "StepFun"
+  },
+  {
+    "title": "Synthetic",
+    "pathname": "/providers/synthetic",
+    "section": "Providers",
+    "description": "Synthetic"
+  },
+  {
+    "title": "Together AI",
+    "pathname": "/providers/together",
+    "section": "Providers",
+    "description": "Together AI"
+  },
+  {
+    "title": "Venice AI",
+    "pathname": "/providers/venice",
+    "section": "Providers",
+    "description": "Venice AI (Venice highlight)"
+  },
+  {
+    "title": "Vercel AI Gateway",
+    "pathname": "/providers/vercel-ai-gateway",
+    "section": "Providers",
+    "description": "Vercel AI Gateway"
+  },
+  {
+    "title": "vLLM",
+    "pathname": "/providers/vllm",
+    "section": "Providers",
+    "description": "vLLM"
+  },
+  {
+    "title": "Volcengine (Doubao)",
+    "pathname": "/providers/volcengine",
+    "section": "Providers",
+    "description": "Volcengine (Doubao)"
+  },
+  {
+    "title": "Vydra",
+    "pathname": "/providers/vydra",
+    "section": "Providers",
+    "description": "Vydra"
+  },
+  {
+    "title": "xAI",
+    "pathname": "/providers/xai",
+    "section": "Providers",
+    "description": "xAI"
+  },
+  {
+    "title": "Xiaomi MiMo",
+    "pathname": "/providers/xiaomi",
+    "section": "Providers",
+    "description": "Xiaomi MiMo"
+  },
+  {
+    "title": "Z.AI",
+    "pathname": "/providers/zai",
+    "section": "Providers",
+    "description": "Z.AI"
   },
   {
     "title": "Contributing to the Threat Model",
@@ -1812,10 +1812,34 @@
     "description": "acp"
   },
   {
+    "title": "agent",
+    "pathname": "/cli/agent",
+    "section": "Cli",
+    "description": "openclaw agent"
+  },
+  {
+    "title": "agents",
+    "pathname": "/cli/agents",
+    "section": "Cli",
+    "description": "openclaw agents"
+  },
+  {
+    "title": "approvals",
+    "pathname": "/cli/approvals",
+    "section": "Cli",
+    "description": "openclaw approvals"
+  },
+  {
     "title": "browser",
     "pathname": "/cli/browser",
     "section": "Cli",
     "description": "openclaw browser"
+  },
+  {
+    "title": "channels",
+    "pathname": "/cli/channels",
+    "section": "Cli",
+    "description": "openclaw channels"
   },
   {
     "title": "clawbot",
@@ -1854,6 +1878,18 @@
     "description": "openclaw dashboard"
   },
   {
+    "title": "devices",
+    "pathname": "/cli/devices",
+    "section": "Cli",
+    "description": "openclaw devices"
+  },
+  {
+    "title": "directory",
+    "pathname": "/cli/directory",
+    "section": "Cli",
+    "description": "openclaw directory"
+  },
+  {
     "title": "dns",
     "pathname": "/cli/dns",
     "section": "Cli",
@@ -1866,10 +1902,40 @@
     "description": "openclaw docs"
   },
   {
+    "title": "flows (redirect)",
+    "pathname": "/cli/flows",
+    "section": "Cli",
+    "description": "openclaw tasks flow"
+  },
+  {
+    "title": "hooks",
+    "pathname": "/cli/hooks",
+    "section": "Cli",
+    "description": "openclaw hooks"
+  },
+  {
     "title": "mcp",
     "pathname": "/cli/mcp",
     "section": "Cli",
     "description": "mcp"
+  },
+  {
+    "title": "memory",
+    "pathname": "/cli/memory",
+    "section": "Cli",
+    "description": "openclaw memory"
+  },
+  {
+    "title": "message",
+    "pathname": "/cli/message",
+    "section": "Cli",
+    "description": "openclaw message"
+  },
+  {
+    "title": "models",
+    "pathname": "/cli/models",
+    "section": "Cli",
+    "description": "openclaw models"
   },
   {
     "title": "node",
@@ -1884,10 +1950,22 @@
     "description": "openclaw nodes"
   },
   {
+    "title": "pairing",
+    "pathname": "/cli/pairing",
+    "section": "Cli",
+    "description": "openclaw pairing"
+  },
+  {
     "title": "plugins",
     "pathname": "/cli/plugins",
     "section": "Cli",
     "description": "openclaw plugins"
+  },
+  {
+    "title": "qr",
+    "pathname": "/cli/qr",
+    "section": "Cli",
+    "description": "openclaw qr"
   },
   {
     "title": "Sandbox CLI",
@@ -1896,16 +1974,64 @@
     "description": "Sandbox CLI"
   },
   {
+    "title": "security",
+    "pathname": "/cli/security",
+    "section": "Cli",
+    "description": "openclaw security"
+  },
+  {
+    "title": "sessions",
+    "pathname": "/cli/sessions",
+    "section": "Cli",
+    "description": "openclaw sessions"
+  },
+  {
+    "title": "setup",
+    "pathname": "/cli/setup",
+    "section": "Cli",
+    "description": "openclaw setup"
+  },
+  {
     "title": "skills",
     "pathname": "/cli/skills",
     "section": "Cli",
     "description": "openclaw skills"
   },
   {
+    "title": "status",
+    "pathname": "/cli/status",
+    "section": "Cli",
+    "description": "openclaw status"
+  },
+  {
+    "title": "system",
+    "pathname": "/cli/system",
+    "section": "Cli",
+    "description": "openclaw system"
+  },
+  {
     "title": "tui",
     "pathname": "/cli/tui",
     "section": "Cli",
     "description": "openclaw tui"
+  },
+  {
+    "title": "uninstall",
+    "pathname": "/cli/uninstall",
+    "section": "Cli",
+    "description": "openclaw uninstall"
+  },
+  {
+    "title": "update",
+    "pathname": "/cli/update",
+    "section": "Cli",
+    "description": "openclaw update"
+  },
+  {
+    "title": "voicecall",
+    "pathname": "/cli/voicecall",
+    "section": "Cli",
+    "description": "openclaw voicecall"
   },
   {
     "title": "webhooks",

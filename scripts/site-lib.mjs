@@ -586,6 +586,37 @@ export function parseLlmsFull(raw) {
 
 export function buildNavigation(pages) {
   const sectionMap = new Map();
+  const preferredSectionOrder = [
+    "index",
+    "start",
+    "install",
+    "channels",
+    "concepts",
+    "tools",
+    "plugins",
+    "providers",
+    "platforms",
+    "gateway",
+    "cli",
+    "automation",
+    "web",
+    "nodes",
+    "security",
+    "logging",
+    "network",
+    "debug",
+    "diagnostics",
+    "date-time",
+    "prose",
+    "vps",
+    "auth-credential-semantics",
+    "pi",
+    "pi-dev",
+    "reference",
+    "help",
+    "ci"
+  ];
+  const sectionRank = new Map(preferredSectionOrder.map((key, index) => [key, index]));
 
   for (const page of pages) {
     if (!sectionMap.has(page.sectionKey)) {
@@ -607,7 +638,16 @@ export function buildNavigation(pages) {
     });
   }
 
-  return Array.from(sectionMap.values());
+  return Array.from(sectionMap.values()).sort((left, right) => {
+    const leftRank = sectionRank.has(left.key) ? sectionRank.get(left.key) : Number.MAX_SAFE_INTEGER;
+    const rightRank = sectionRank.has(right.key) ? sectionRank.get(right.key) : Number.MAX_SAFE_INTEGER;
+
+    if (leftRank !== rightRank) {
+      return leftRank - rightRank;
+    }
+
+    return left.label.localeCompare(right.label, "en");
+  });
 }
 
 export function buildSiteData(raw) {
