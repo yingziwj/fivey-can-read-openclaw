@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:48:24.653Z",
+  "pathname": "/install/clawdock",
+  "title": "ClawDock",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "ClawDock安装与使用指南",
+    "heroSummary": "这页介绍如何安装ClawDock——一个简化Docker版OpenClaw操作的命令行工具，提供clawdock-start等快捷命令替代复杂的docker compose调用。安装时需注意必须使用新的scripts/clawdock/clawdock-helpers.sh路径，旧路径已失效。"
+  }
+}

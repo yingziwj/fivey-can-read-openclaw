@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:49:44.212Z",
+  "pathname": "/providers/anthropic",
+  "title": "Anthropic",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "在OpenClaw中配置Anthropic Claude的两种方式",
+    "heroSummary": "这页说明如何将Anthropic Claude接入OpenClaw，支持API密钥和复用现有Claude CLI登录两种方式。配置时需注意，对于长期运行的生产环境，使用API密钥是最清晰可靠的路径。最容易出错的地方是混淆两种接入方式的配置步骤，特别是复用CLI时需确保主机上已安装并登录Claude CLI。"
+  }
+}

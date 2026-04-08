@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:52:28.516Z",
+  "pathname": "/platforms/mac/canvas",
+  "title": "Canvas",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "macOS应用中的Canvas面板配置与API使用",
+    "heroSummary": "这页详细说明macOS应用中Canvas面板的文件存储位置、URL访问方式和通过Gateway WebSocket控制的API接口。最该先看Canvas状态文件存储在Application Support目录下的具体路径和自定义URL scheme的映射规则。最容易搞错的是canvas.navigate命令接受的路径类型，它支持本地canvas路径、http(s)和file://三种格式，如果传递\"/\"会显示本地脚手架或index.html。"
+  }
+}

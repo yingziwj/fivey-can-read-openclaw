@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:52:03.985Z",
+  "pathname": "/gateway/security/index",
+  "title": "Security",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "OpenClaw安全配置：个人助理模型下的防护要点",
+    "heroSummary": "这页详细说明OpenClaw在个人助理部署模型下的安全配置，核心是每个网关对应一个可信操作者边界。首先要运行`openclaw security audit`命令快速检查常见风险点，特别注意共享Slack工作区中多人使用同一工具化代理时，任何授权发送者都能调用该代理的全部工具权限。"
+  }
+}

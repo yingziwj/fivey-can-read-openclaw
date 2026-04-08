@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:49:53.676Z",
+  "pathname": "/providers/deepgram",
+  "title": "Deepgram",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "配置Deepgram语音转文字服务",
+    "heroSummary": "这页教你如何在OpenClaw中接入Deepgram，将用户上传的音频文件转为文字。先设置DEEPGRAM_API_KEY环境变量，再在tools.media.audio配置中启用。最容易错的是配置层级，providerOptions要放在audio下，而不是models里。"
+  }
+}

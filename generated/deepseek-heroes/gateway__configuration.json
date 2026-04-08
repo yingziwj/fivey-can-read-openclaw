@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:51:33.004Z",
+  "pathname": "/gateway/configuration",
+  "title": "Configuration",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "OpenClaw 配置文件详解",
+    "heroSummary": "这页教你如何通过 JSON5 配置文件连接消息通道、设置 AI 模型和调整系统行为。建议先用 `openclaw onboard` 交互式向导快速上手，避免手动编辑时因格式错误导致网关无法启动。"
+  }
+}

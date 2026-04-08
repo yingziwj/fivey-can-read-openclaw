@@ -2106,8 +2106,8 @@
           </div>
         </div>
         <p class="hero-eyebrow">Concepts 导读</p>
-        <h1>QMD Memory Engine：先把这条底层规则想明白</h1>
-        <p class="hero-copy">这页不是教你按按钮，而是在补脑内地图。看完你应该知道 QMD Memory Engine 在系统里到底管什么、为什么会影响后面的行为，以及不理解它时最容易把哪几件事看反。原文最想强调的那句话，可以先抓成：QMD Memory Engine。</p>
+        <h1>如何启用并配置 QMD 本地增强搜索</h1>
+        <p class="hero-copy">本页介绍如何将 QMD 作为 OpenClaw 的本地搜索增强引擎，它通过整合 BM25、向量搜索和重排序来提升记忆检索的召回率。配置时，你需要在 `memory.backend` 中指定 `&quot;qmd&quot;`，并确保 QMD 已安装且位于网关的 `PATH` 中。首次搜索会较慢，因为 QMD 需要自动下载约 2GB 的 GGUF 模型文件用于重排序和查询扩展。</p>
         <div class="hero-pills">
           <span>气球故事书主题</span>
           <span>逐节讲解</span>

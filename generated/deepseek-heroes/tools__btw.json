@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:50:33.430Z",
+  "pathname": "/tools/btw",
+  "title": "BTW Side Questions",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "用 /btw 问临时问题，不污染对话历史",
+    "heroSummary": "这页讲的是 /btw 命令，它让你在当前会话中问一个临时问题，但这个问题和回答都不会被记入对话历史。使用前要明白，它不会调用工具，回答也是临时的，刷新页面就会消失。"
+  }
+}

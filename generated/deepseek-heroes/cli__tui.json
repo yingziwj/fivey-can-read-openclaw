@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:54:01.443Z",
+  "pathname": "/cli/tui",
+  "title": "tui",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "启动终端界面连接网关",
+    "heroSummary": "运行 openclaw tui 命令启动终端界面，连接到网关进行交互操作。在已配置的代理工作空间目录中运行时，会自动选择该代理作为会话默认值，无需手动指定。注意该命令会尝试解析网关认证的 SecretRefs 配置，支持环境变量、文件和执行命令三种方式获取令牌或密码。"
+  }
+}

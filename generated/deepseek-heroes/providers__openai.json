@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:50:12.354Z",
+  "pathname": "/providers/openai",
+  "title": "OpenAI",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "OpenAI接入配置与交互风格设置",
+    "heroSummary": "这页详细说明如何在OpenClaw中接入OpenAI的两种方式：API密钥和ChatGPT订阅登录，并配置交互风格。首先要设置正确的认证方式，API密钥用于按量计费，ChatGPT登录用于订阅访问。最容易出错的是混淆openai/*和openai-codex/*路由，以及忘记配置personality参数来控制提示覆盖层。"
+  }
+}

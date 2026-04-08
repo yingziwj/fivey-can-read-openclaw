@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:54:46.131Z",
+  "pathname": "/reference/templates/HEARTBEAT",
+  "title": "HEARTBEAT.md Template",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "HEARTBEAT.md 心跳文件配置模板",
+    "heroSummary": "这页提供心跳文件的模板，用于控制代理的周期性检查任务。文件留空或只写注释可跳过心跳调用，添加任务则让代理定期执行检查。配置时注意：文件内容直接影响心跳行为，误填任务可能导致不必要的资源消耗。"
+  }
+}

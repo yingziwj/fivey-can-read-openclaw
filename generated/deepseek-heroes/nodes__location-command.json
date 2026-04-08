@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:52:13.794Z",
+  "pathname": "/nodes/location-command",
+  "title": "Location Command",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "Location命令配置与权限映射",
+    "heroSummary": "这页详细说明如何通过node.invoke调用location.get命令，以及对应的系统权限设置模型。配置时需注意Android应用默认关闭位置服务，需在应用内选择“使用期间”模式来请求前台权限。最容易出错的是iOS/Android的精确位置是独立开关，与基础位置权限分开管理，系统实际授权可能与应用请求不一致。"
+  }
+}

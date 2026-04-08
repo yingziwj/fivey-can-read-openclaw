@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:48:36.380Z",
+  "pathname": "/install/gcp",
+  "title": "GCP",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "在GCP虚拟机部署OpenClaw网关的完整指南",
+    "heroSummary": "这页详细指导如何在Google Cloud的Compute Engine虚拟机上，通过Docker部署可持久运行的OpenClaw网关。你需要先准备好GCP项目、虚拟机、Docker环境，然后配置持久化目录和访问方式。最容易出错的地方是忘记将~/.openclaw目录挂载到主机，导致重启后状态丢失。"
+  }
+}

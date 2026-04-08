@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:52:47.680Z",
+  "pathname": "/platforms/macos",
+  "title": "macOS App",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "macOS 菜单栏应用：权限管理与网关连接",
+    "heroSummary": "这页讲的是 OpenClaw 在 macOS 上的菜单栏应用，它负责处理系统权限（如通知、辅助功能）并连接本地或远程网关。最该先看的是应用在“本地”和“远程”两种模式下如何启动网关服务，这决定了你的 Mac 是否能被远程访问。最容易搞错的是 LaunchAgent 的标签名，使用 `--profile` 参数时标签会变成 `ai.openclaw.<profile>`，手动操作时若写错会导致服务无法控制。"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:51:28.906Z",
+  "pathname": "/gateway/background-process",
+  "title": "Background Exec and Process Tool",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "后台命令执行与会话管理工具详解",
+    "heroSummary": "本页详细说明如何使用 exec 工具执行 shell 命令并管理后台进程，以及如何通过 process 工具监控和操作这些后台会话。配置时需特别注意 yieldMs 和 timeout 参数，避免进程意外终止或资源泄漏。使用 process 工具进行轮询和日志读取是监控长时间运行任务的关键操作。"
+  }
+}

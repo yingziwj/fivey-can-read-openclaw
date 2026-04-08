@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:52:03.663Z",
+  "pathname": "/gateway/troubleshooting",
+  "title": "Troubleshooting",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "网关故障排查手册",
+    "heroSummary": "这页是网关问题的深度排查指南，提供从基础状态检查到特定错误（如429长上下文限制、无回复、控制面板连接失败）的完整诊断流程。首先运行命令梯子中的状态检查命令，确认网关和通道的基本运行状态。最容易出错的地方是忽略配对审批、群组提及规则或长上下文API权限等配置细节，导致问题定位困难。"
+  }
+}

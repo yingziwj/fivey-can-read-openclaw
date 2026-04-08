@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:51:56.990Z",
+  "pathname": "/gateway/sandboxing",
+  "title": "Sandboxing",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "配置OpenClaw沙盒隔离工具执行",
+    "heroSummary": "这页讲解如何通过配置让工具在沙盒中运行，以限制模型误操作时的文件系统和进程访问范围。你需要先设置`agents.defaults.sandbox.mode`决定何时启用沙盒，并注意`tools.elevated`工具会绕过沙盒直接在主机上执行。"
+  }
+}

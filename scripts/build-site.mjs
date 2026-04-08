@@ -719,6 +719,21 @@ async function renderAiPageContent(page) {
   }
 }
 
+async function loadHeroOverride(page) {
+  const filePath = path.resolve("generated", "deepseek-heroes", `${page.slug.replace(/\//g, "__")}.json`);
+  try {
+    const raw = await fs.readFile(filePath, "utf8");
+    const payload = JSON.parse(raw);
+    const result = payload?.result || {};
+    return {
+      heroTitle: typeof result.heroTitle === "string" ? result.heroTitle.trim() : "",
+      heroSummary: typeof result.heroSummary === "string" ? result.heroSummary.trim() : ""
+    };
+  } catch {
+    return null;
+  }
+}
+
 function renderSidebar(navigation, currentPathname) {
   return `
     <nav class="sidebar-nav">
@@ -1108,14 +1123,15 @@ async function renderDocPage(page) {
   `;
   const handcraftedContent = await renderHandcraftedContent(page);
   const aiContent = handcraftedContent ? null : await renderAiPageContent(page);
+  const heroOverride = await loadHeroOverride(page);
 
   return renderPageLayout({
     title: page.title,
     description: excerpt(page.description || `${page.title} 的儿童故事化解读。`, 160),
     pathname: page.pathname,
     heroEyebrow: `${page.sectionLabel} 导读`,
-    heroTitle: buildDocHeroTitle(page),
-    heroText: buildDocHeroText(page),
+    heroTitle: heroOverride?.heroTitle || buildDocHeroTitle(page),
+    heroText: heroOverride?.heroSummary || buildDocHeroText(page),
     content: handcraftedContent || aiContent || genericContent,
     navigation: siteData.navigation,
     breadcrumbs

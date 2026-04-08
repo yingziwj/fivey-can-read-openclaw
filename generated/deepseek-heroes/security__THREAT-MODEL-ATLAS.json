@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:53:07.079Z",
+  "pathname": "/security/THREAT-MODEL-ATLAS",
+  "title": "Threat Model (MITRE ATLAS)",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "OpenClaw AI平台威胁模型（基于MITRE ATLAS框架）",
+    "heroSummary": "这页详细说明了OpenClaw AI平台和ClawHub技能市场面临的对抗性威胁，采用专门为AI/ML系统设计的MITRE ATLAS框架进行记录。建议先了解该威胁模型如何基于ATLAS框架构建，并注意这是由社区维护的动态文档，可贡献新威胁或缓解措施。"
+  }
+}

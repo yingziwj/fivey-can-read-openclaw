@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:53:06.398Z",
+  "pathname": "/security/formal-verification",
+  "title": "Formal Verification (Security Models)",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "OpenClaw安全模型的形式化验证",
+    "heroSummary": "这页记录了OpenClaw用TLA+/TLC编写的可执行安全模型，用于验证授权、会话隔离等核心安全策略。模型与代码可能存在差异，验证结果受限于状态空间边界和明确的环境假设。"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:54:46.169Z",
+  "pathname": "/reference/templates/BOOT",
+  "title": "BOOT.md Template",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "BOOT.md 启动配置模板",
+    "heroSummary": "这页是 BOOT.md 模板，用于定义 OpenClaw 启动时要执行的任务。启动前必须启用 `hooks.internal.enabled` 配置项，否则任务不会运行。如果任务需要发送消息，必须使用消息工具，并在完成后回复 `NO_REPLY` 或 `no_reply` 静默令牌，否则系统会等待响应。"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:49:53.459Z",
+  "pathname": "/providers/deepseek",
+  "title": "Deepseek",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "接入 DeepSeek 模型",
+    "heroSummary": "这页教你如何配置 OpenClaw 来使用 DeepSeek 的 AI 模型。先设置 DEEPSEEK_API_KEY 环境变量，然后通过 openclaw onboard 命令完成接入。注意如果 Gateway 以守护进程运行，必须确保 API 密钥能被该进程访问到，否则会连接失败。"
+  }
+}

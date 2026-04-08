@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:47:11.099Z",
+  "pathname": "/channels/channel-routing",
+  "title": "Channel Routing",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "通道路由配置与规则详解",
+    "heroSummary": "本页详细说明OpenClaw如何将回复路由回消息来源的通道，路由过程由主机配置决定而非模型选择。配置多账户时务必设置明确的默认账户，否则回退路由可能选择第一个规范化账户ID。路由规则按优先级匹配绑定条件，所有提供的字段必须完全匹配才能应用对应代理。"
+  }
+}

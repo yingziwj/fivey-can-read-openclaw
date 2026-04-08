@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:54:45.281Z",
+  "pathname": "/reference/templates/BOOTSTRAP",
+  "title": "BOOTSTRAP.md Template",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "AI助手初始化引导模板",
+    "heroSummary": "本页是AI助手首次启动时的引导模板，指导用户通过对话确定助手的身份、个性和沟通方式。请先阅读“The Conversation”部分开始对话，注意对话结束后需要更新IDENTITY.md和USER.md文件来保存配置。"
+  }
+}

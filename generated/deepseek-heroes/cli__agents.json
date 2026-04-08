@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:53:17.571Z",
+  "pathname": "/cli/agents",
+  "title": "agents",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "管理多工作空间与路由绑定",
+    "heroSummary": "这页教你用命令行管理独立的OpenClaw代理，每个代理包含独立的工作空间、认证和路由配置。先看示例代码了解如何添加代理和绑定渠道，特别注意绑定升级机制：从渠道级绑定升级到账户级时会替换原有绑定，而不是新增重复项。"
+  }
+}

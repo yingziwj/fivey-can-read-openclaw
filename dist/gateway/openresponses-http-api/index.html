@@ -2106,8 +2106,8 @@
           </div>
         </div>
         <p class="hero-eyebrow">Gateway 导读</p>
-        <h1>OpenResponses 对话接口：先看总控室这一层在管什么</h1>
-        <p class="hero-copy">这页讲的是网关总控室的一块。你先要看懂它在整套系统里卡在哪一层、会影响哪些客户端和工具、配置改动会落到哪里，然后再去看命令。原文最想强调的那句话，可以先抓成：OpenResponses 对话接口 (HTTP)。</p>
+        <h1>配置 OpenResponses API 端点</h1>
+        <p class="hero-copy">这页教你如何启用并配置 Gateway 的 OpenResponses 兼容端点，默认是关闭的，需要先在配置中开启。配置时最容易搞错的是身份验证模式：共享密钥模式会忽略 x-openclaw-scopes 头，而可信代理模式则会尊重它，这直接影响操作权限。</p>
         <div class="hero-pills">
           <span>气球故事书主题</span>
           <span>逐节讲解</span>

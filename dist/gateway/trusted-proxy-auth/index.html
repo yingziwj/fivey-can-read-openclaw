@@ -2106,8 +2106,8 @@
           </div>
         </div>
         <p class="hero-eyebrow">Gateway 导读</p>
-        <h1>Trusted Proxy Auth：先看总控室这一层在管什么</h1>
-        <p class="hero-copy">这页讲的是网关总控室的一块。你先要看懂它在整套系统里卡在哪一层、会影响哪些客户端和工具、配置改动会落到哪里，然后再去看命令。原文最想强调的那句话，可以先抓成：Trusted Proxy Auth。</p>
+        <h1>网关反向代理认证配置指南</h1>
+        <p class="hero-copy">本页详细说明如何配置网关，使其信任前置反向代理（如Pomerium、nginx+oauth2-proxy）传递的用户身份信息进行认证。启用前必须确保代理已正确处理认证并正确设置可信代理IP，否则可能导致未授权访问。配置后，控制UI的WebSocket连接将依赖代理认证和用户白名单，而非设备配对。</p>
         <div class="hero-pills">
           <span>气球故事书主题</span>
           <span>逐节讲解</span>

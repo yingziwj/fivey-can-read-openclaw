@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:49:44.097Z",
+  "pathname": "/providers/bedrock",
+  "title": "Amazon Bedrock",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "配置 OpenClaw 接入 Amazon Bedrock 模型",
+    "heroSummary": "这页说明如何通过 AWS 凭证而非 API 密钥，让 OpenClaw 使用 Bedrock Converse 流式接口调用模型。配置时需注意，自动模型发现功能仅在检测到特定 AWS 环境标记（如 AWS_ACCESS_KEY_ID）时才会启用，否则需在配置中显式设置 discovery.enabled: true。"
+  }
+}

@@ -2106,8 +2106,8 @@
           </div>
         </div>
         <p class="hero-eyebrow">Concepts 导读</p>
-        <h1>机器人朋友 Loop：先把这条底层规则想明白</h1>
-        <p class="hero-copy">这页不是教你按按钮，而是在补脑内地图。看完你应该知道 机器人朋友 Loop 在系统里到底管什么、为什么会影响后面的行为，以及不理解它时最容易把哪几件事看反。原文最想强调的那句话，可以先抓成：机器人朋友 Loop (OpenClaw)。</p>
+        <h1>Agent Loop 完整执行流程详解</h1>
+        <p class="hero-copy">这页详细拆解了 Agent 从接收消息到生成回复的完整执行链路，包括输入、上下文组装、模型推理、工具调用等核心环节。你应该先看‘Entry points’部分，了解如何通过 Gateway RPC 或 CLI 命令触发一个 Loop 运行。最容易搞错的地方是队列并发机制，它通过会话级和全局队列来序列化运行，防止工具调用和会话状态出现竞争，这是保持会话历史一致性的关键。</p>
         <div class="hero-pills">
           <span>气球故事书主题</span>
           <span>逐节讲解</span>

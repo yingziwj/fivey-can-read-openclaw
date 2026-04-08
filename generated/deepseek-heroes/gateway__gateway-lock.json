@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:51:38.488Z",
+  "pathname": "/gateway/gateway-lock",
+  "title": "Gateway Lock",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "网关端口独占锁机制",
+    "heroSummary": "这页解释网关如何通过独占WebSocket端口来防止同一主机上多个实例冲突。启动时若端口被占会立即报错，无需手动清理锁文件。注意错误信息会区分端口被占和其他绑定失败的情况。"
+  }
+}

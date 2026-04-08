@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:47:25.295Z",
+  "pathname": "/channels/location",
+  "title": "Channel Location Parsing",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "聊天位置消息的标准化解析",
+    "heroSummary": "这页说明OpenClaw如何将Telegram、WhatsApp、Matrix等聊天渠道的位置消息（包括固定地点、场所和实时位置）统一解析为可读文本和结构化数据。最该先看支持的渠道列表，确认你的渠道是否在内。最容易搞错的是不同渠道的字段映射，比如Telegram的场所名称和WhatsApp的评论处理方式不同。"
+  }
+}

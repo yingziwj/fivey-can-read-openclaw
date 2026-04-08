@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:50:56.031Z",
+  "pathname": "/tools/pdf",
+  "title": "PDF Tool",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "PDF 工具：如何配置与使用",
+    "heroSummary": "这页详细说明 PDF 工具如何从本地或远程文件提取文本，并返回分析结果。配置时需注意：工具是否可用取决于能否为代理解析到支持 PDF 的模型，优先检查 `agents.defaults.pdfModel` 等设置。输入参数中，`pdf` 或 `pdfs` 必须提供，否则会报错；使用 `pages` 过滤页面时，页码从 1 开始，且会被去重和排序。"
+  }
+}

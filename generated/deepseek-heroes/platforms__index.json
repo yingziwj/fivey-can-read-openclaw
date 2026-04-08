@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:52:23.914Z",
+  "pathname": "/platforms/index",
+  "title": "Platforms",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "OpenClaw 平台选择与网关安装指南",
+    "heroSummary": "这页帮你根据操作系统选择运行 OpenClaw 的方式，并指导安装网关服务。最该先看“Choose your OS”部分确定你的平台，然后按“Gateway service install (CLI)”执行安装命令。最容易搞错的是 Windows 用户需注意网关推荐通过 WSL2 运行，而非原生 Windows 应用。"
+  }
+}

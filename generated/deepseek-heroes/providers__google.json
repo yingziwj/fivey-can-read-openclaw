@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:49:58.714Z",
+  "pathname": "/providers/google",
+  "title": "Google (Gemini)",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "接入 Google Gemini 模型与功能",
+    "heroSummary": "这页说明如何通过 API 密钥或 OAuth 方式，将 Google Gemini 模型接入你的系统，以使用其对话、图像生成、多模态理解及联网搜索能力。配置时，务必区分 `google`（API 密钥）和 `google-gemini-cli`（OAuth）两种提供者，后者为第三方集成，使用时需注意账户限制风险。"
+  }
+}

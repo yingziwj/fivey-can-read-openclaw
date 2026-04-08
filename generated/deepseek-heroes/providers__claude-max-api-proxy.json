@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:49:48.779Z",
+  "pathname": "/providers/claude-max-api-proxy",
+  "title": "Claude Max API Proxy",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "Claude Max订阅转OpenAI API代理工具",
+    "heroSummary": "这页教你如何将Claude Max订阅转换为OpenAI兼容的API接口，让其他工具能调用你的订阅。启动前必须确认Anthropic当前政策是否允许这种使用方式，否则可能导致订阅被封。安装后代理会在本地3456端口运行，接收标准OpenAI格式请求并转发给Claude CLI。"
+  }
+}

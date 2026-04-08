@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:49:10.332Z",
+  "pathname": "/tools/index",
+  "title": "Tools and Plugins",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "工具与插件：让智能体执行文本之外的操作",
+    "heroSummary": "本页介绍智能体如何通过工具执行文件读写、命令运行、网页浏览等操作，以及工具、技能、插件三者的协作关系。建议先了解内置工具列表，它们无需安装即可使用。配置工具允许/拒绝列表时，需注意拒绝规则优先级高于允许规则。"
+  }
+}

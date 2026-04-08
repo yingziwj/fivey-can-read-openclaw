@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:47:48.423Z",
+  "pathname": "/concepts/compaction",
+  "title": "Compaction",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "对话压缩机制：如何让长对话继续运行",
+    "heroSummary": "这页解释当对话接近模型上下文限制时，系统如何自动压缩旧消息为摘要来维持对话。你应该先了解自动压缩的触发条件和手动压缩命令的用法。最容易忽略的是压缩前系统会自动提醒保存重要信息到记忆文件，防止关键内容丢失。"
+  }
+}

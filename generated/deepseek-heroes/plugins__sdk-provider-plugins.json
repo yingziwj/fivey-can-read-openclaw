@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:49:35.527Z",
+  "pathname": "/plugins/sdk-provider-plugins",
+  "title": "Building Provider Plugins",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "为 OpenClaw 构建模型提供商插件",
+    "heroSummary": "本页指导你如何构建一个插件，将新的 AI 模型提供商（如 Acme AI）接入 OpenClaw 系统。你需要先配置插件清单（openclaw.plugin.json）来声明提供商 ID、API 密钥环境变量和模型前缀。最容易出错的地方是混淆发布命令，务必使用 `clawhub package publish` 而非旧版别名。"
+  }
+}

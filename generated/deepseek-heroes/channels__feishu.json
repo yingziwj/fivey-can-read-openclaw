@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:47:15.365Z",
+  "pathname": "/channels/feishu",
+  "title": "Feishu",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "配置飞书机器人连接通道",
+    "heroSummary": "这页指导你如何将OpenClaw连接到飞书（Lark）机器人，以便接收消息。首先应通过`openclaw onboard`向导或`openclaw channels add`命令添加通道并填入App ID和App Secret。配置后务必检查网关状态，否则机器人无法正常工作。"
+  }
+}

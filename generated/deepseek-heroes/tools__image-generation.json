@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:50:46.870Z",
+  "pathname": "/tools/image-generation",
+  "title": "Image Generation",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "配置和使用图像生成工具",
+    "heroSummary": "这页教你如何让智能体通过配置好的提供商自动生成和编辑图片。首先检查是否有可用的图像生成提供商，如果没有，需要设置API密钥或配置默认模型。最容易出错的地方是参数兼容性，不同提供商支持的参数不同，系统会自动映射最接近的尺寸或比例，但结果会报告实际应用的设置。"
+  }
+}

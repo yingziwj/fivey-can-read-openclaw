@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:48:14.959Z",
+  "pathname": "/concepts/session-tool",
+  "title": "Session Tools",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "跨会话工具：列表、通信与子代理管理",
+    "heroSummary": "这页详细列出了OpenClaw中用于跨会话操作的工具集，包括会话列表查询、历史记录读取、消息发送和子代理控制。使用sessions_send发送消息时，务必设置timeoutSeconds参数来控制是否等待回复，这是最易出错的地方。sessions_history默认会过滤工具调用结果，需要includeTools: true才能查看完整记录。"
+  }
+}

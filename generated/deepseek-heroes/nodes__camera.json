@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:52:14.010Z",
+  "pathname": "/nodes/camera",
+  "title": "Camera Capture",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "iOS/Android/macOS设备通过Gateway调用摄像头拍照或录视频",
+    "heroSummary": "这页详细说明如何通过node.invoke命令控制iOS、Android、macOS设备的摄像头进行拍照(jpg)或录制短视频(mp4)。使用前必须先检查用户设置中的Camera权限是否开启，否则会返回CAMERA_DISABLED错误。iOS设备只能在应用前台执行camera.*命令，后台调用会失败。"
+  }
+}

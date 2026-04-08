@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:48:31.185Z",
+  "pathname": "/install/exe-dev",
+  "title": "exe.dev",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "在exe.dev虚拟机上安装OpenClaw网关",
+    "heroSummary": "这页教你如何在exe.dev虚拟机上部署OpenClaw网关，使其可通过https://<vm-name>.exe.xyz从你的笔记本电脑访问。最该先看“Beginner quick path”快速入门步骤，按顺序点击链接、填写认证信息、等待配置完成。最容易错的是忘记保持虚拟机为有状态模式，否则OpenClaw的配置文件和会话数据会丢失。"
+  }
+}

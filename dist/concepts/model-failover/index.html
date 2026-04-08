@@ -2106,8 +2106,8 @@
           </div>
         </div>
         <p class="hero-eyebrow">Concepts 导读</p>
-        <h1>聪明脑袋模型 Failover：先把这条底层规则想明白</h1>
-        <p class="hero-copy">这页不是教你按按钮，而是在补脑内地图。看完你应该知道 聪明脑袋模型 Failover 在系统里到底管什么、为什么会影响后面的行为，以及不理解它时最容易把哪几件事看反。原文最想强调的那句话，可以先抓成：聪明脑袋模型 failover。</p>
+        <h1>OpenClaw 模型故障转移机制详解</h1>
+        <p class="hero-copy">本页详细解释了 OpenClaw 在模型调用失败时的两阶段处理流程：先在同一提供商内轮换认证配置，再按配置顺序切换到备用模型。配置 `agents.defaults.model.fallbacks` 时需注意，系统会严格按顺序尝试，并在失败时持久化回退选择以确保会话一致性。</p>
         <div class="hero-pills">
           <span>气球故事书主题</span>
           <span>逐节讲解</span>

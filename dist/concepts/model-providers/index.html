@@ -2106,8 +2106,8 @@
           </div>
         </div>
         <p class="hero-eyebrow">Concepts 导读</p>
-        <h1>聪明脑袋模型 Providers：先把这条底层规则想明白</h1>
-        <p class="hero-copy">这页不是教你按按钮，而是在补脑内地图。看完你应该知道 聪明脑袋模型 Providers 在系统里到底管什么、为什么会影响后面的行为，以及不理解它时最容易把哪几件事看反。原文最想强调的那句话，可以先抓成：聪明脑袋模型 providers。</p>
+        <h1>模型提供商的配置与轮换机制</h1>
+        <p class="hero-copy">这页详细说明了如何配置不同AI模型提供商（如OpenAI、Anthropic）的API密钥，并实现密钥轮换以应对限流。配置时需注意`models.providers.*.models[].contextTokens`是实际生效的上下文长度上限，而密钥轮换仅在收到限流错误（如429）时才会触发，其他错误会立即失败。</p>
         <div class="hero-pills">
           <span>气球故事书主题</span>
           <span>逐节讲解</span>

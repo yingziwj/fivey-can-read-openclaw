@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:49:25.398Z",
+  "pathname": "/plugins/manifest",
+  "title": "Plugin Manifest",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "OpenClaw 插件清单文件详解",
+    "heroSummary": "这页讲的是 OpenClaw 原生插件的核心配置文件 openclaw.plugin.json，它定义了插件在加载前的元数据和行为。你应该先看‘Top-level field reference’表格，了解每个字段的用途和必填项。最容易错的是混淆不同插件格式的清单文件，比如 Codex 或 Claude 插件用的是别的文件，而 OpenClaw 原生插件必须用这个。"
+  }
+}

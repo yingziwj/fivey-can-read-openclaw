@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:47:33.488Z",
+  "pathname": "/channels/telegram",
+  "title": "Telegram",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "Telegram 机器人接入配置指南",
+    "heroSummary": "这页详细说明如何配置 Telegram 机器人，重点是设置 botToken 和 dmPolicy。最容易出错的地方是混淆 DM 配对授权与群组权限，配对只允许私聊，群组访问仍需在 allowFrom 中明确添加用户 ID。"
+  }
+}

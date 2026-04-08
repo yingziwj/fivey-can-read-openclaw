@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:51:14.883Z",
+  "pathname": "/cli/backup",
+  "title": "backup",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "备份OpenClaw本地数据",
+    "heroSummary": "使用`openclaw backup create`命令创建包含状态、配置、凭据和工作空间的本地压缩包。先运行`openclaw backup create --dry-run --json`预览备份内容，避免误操作。注意配置文件无效时备份会失败，需用`--no-include-workspace`跳过工作空间或`--only-config`仅备份配置文件。"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:53:36.499Z",
+  "pathname": "/cli/directory",
+  "title": "directory",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "openclaw directory 命令：查找联系人、群组和自身ID",
+    "heroSummary": "这页讲解如何使用 openclaw directory 命令查找支持目录查询的频道（如联系人、群组和“我”）的ID，以便在其他命令（特别是 message send）中作为目标参数使用。使用前需注意 --channel 标志在配置多个频道时为必填项，且不同频道的ID格式各异（如 WhatsApp 用电话号码，Slack 用 user:U… 格式），输出默认为制表符分隔的 id 和 name，脚本处理时建议使用 --json 标志。"
+  }
+}

@@ -2106,8 +2106,8 @@
           </div>
         </div>
         <p class="hero-eyebrow">Channels 导读</p>
-        <h1>Synology Chat：先看这扇消息门怎么接</h1>
-        <p class="hero-copy">这页不是只在报配置名。它真正要帮你看懂的是：Synology Chat 这扇门怎么连上 OpenClaw，要交哪把钥匙，什么消息会进来，以及哪些坑最容易把人绊住。原文最想强调的那句话，可以先抓成：Synology Chat。</p>
+        <h1>Synology Chat 插件配置与接入指南</h1>
+        <p class="hero-copy">本页详细说明如何将 Synology Chat 作为直接消息通道接入 OpenClaw 系统，包括插件安装、Webhook 配置和环境变量设置。首先需要确认插件是否已安装，然后重点配置 Synology Chat 的出站 Webhook 指向 OpenClaw 网关，并获取入站 Webhook URL 用于回复。最容易出错的地方是 DM 策略配置：默认使用 allowlist 模式，如果 allowedUserIds 列表为空会导致 Webhook 路由无法启动，此时应改用 open 策略或添加允许的用户 ID。</p>
         <div class="hero-pills">
           <span>气球故事书主题</span>
           <span>逐节讲解</span>

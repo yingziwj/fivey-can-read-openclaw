@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:51:23.252Z",
+  "pathname": "/cli/reset",
+  "title": "reset",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "重置本地配置与状态",
+    "heroSummary": "此命令用于清理本地配置、凭据或会话，但不会卸载 CLI 本身。使用前务必通过 --dry-run 预览操作，并注意不同 --scope 选项会删除不同范围的数据。"
+  }
+}

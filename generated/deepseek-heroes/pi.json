@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:54:27.573Z",
+  "pathname": "/pi",
+  "title": "Pi Integration Architecture",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "OpenClaw如何嵌入pi AI代理实现代码能力",
+    "heroSummary": "这页讲OpenClaw直接导入pi的AgentSession来嵌入AI代理，而不是通过子进程或RPC。最该先看runEmbeddedPiAgent()的调用参数，特别是sessionId和provider配置。最容易错的是把工具文件放错位置——现在各插件的运行时文件都在自己的扩展目录里，不在统一的src/agents/tools下。"
+  }
+}

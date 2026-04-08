@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:51:09.695Z",
+  "pathname": "/tools/thinking",
+  "title": "Thinking Levels",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "AI思考级别指令详解",
+    "heroSummary": "这页说明如何在消息中使用/think指令控制AI的思考深度，从off到xhigh共7个级别。最该先看指令格式和级别别名，因为不同级别对应不同思考强度。最容易错的是不同AI模型对思考级别的支持差异，比如Z.AI只支持开关模式，Moonshot启用思考后工具调用有限制。"
+  }
+}

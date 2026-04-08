@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:53:51.551Z",
+  "pathname": "/cli/plugins",
+  "title": "plugins",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "OpenClaw 插件管理命令详解",
+    "heroSummary": "这页详细列出了 openclaw plugins 所有子命令，用于安装、查看、启用或卸载插件。安装时需注意配置无效会默认失败，且安全扫描会阻止危险代码安装。使用 --verbose 或 --json 参数可获取插件详细信息，便于排查问题。"
+  }
+}

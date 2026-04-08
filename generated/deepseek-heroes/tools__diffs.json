@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:50:37.904Z",
+  "pathname": "/tools/diffs",
+  "title": "Diffs",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "Diffs插件：将文本变更转为可视化差异图",
+    "heroSummary": "这页讲解如何启用和使用diffs插件，它能把文本的前后版本或补丁文件转换成只读的差异图，供智能体展示或发送。最该先看启用插件的配置代码，明确要填enabled: true。最容易搞错的是allowPromptInjection设置，它只禁用内置提示而不影响工具功能，若想完全禁用需关闭整个插件。"
+  }
+}

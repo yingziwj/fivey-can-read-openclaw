@@ -2106,8 +2106,8 @@
           </div>
         </div>
         <p class="hero-eyebrow">Plugins 导读</p>
-        <h1>新本领插件 Entry Points：先看这块外挂积木怎么插</h1>
-        <p class="hero-copy">这页讲的是插件这块积木怎么接进系统。你应该先搞清楚它负责哪段能力、配置写在哪里、外部系统怎样通过它进来，以及哪些 secret、route 或 manifest 最不能配错。原文最想强调的那句话，可以先抓成：新本领插件 Entry Points。</p>
+        <h1>插件入口点：三种定义方式与注册模式</h1>
+        <p class="hero-copy">这页详细解释了插件如何通过definePluginEntry、defineChannelPluginEntry和defineSetupPluginEntry三种辅助函数定义入口对象。开发时需根据插件类型选择对应函数，并特别注意api.registrationMode的不同值，它决定了在网关启动、通道禁用或CLI元数据捕获等场景下应注册哪些组件，避免错误地加载重型运行时。</p>
         <div class="hero-pills">
           <span>气球故事书主题</span>
           <span>逐节讲解</span>

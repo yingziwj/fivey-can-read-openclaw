@@ -2106,8 +2106,8 @@
           </div>
         </div>
         <p class="hero-eyebrow">Plugins 导读</p>
-        <h1>新本领插件 Runtime Helpers：先看这块外挂积木怎么插</h1>
-        <p class="hero-copy">这页讲的是插件这块积木怎么接进系统。你应该先搞清楚它负责哪段能力、配置写在哪里、外部系统怎样通过它进来，以及哪些 secret、route 或 manifest 最不能配错。原文最想强调的那句话，可以先抓成：新本领插件 Runtime Helpers。</p>
+        <h1>插件运行时助手参考</h1>
+        <p class="hero-copy">这页列出了插件注册时注入的`api.runtime`对象所有可用方法，用于访问Agent身份、启动子任务等运行时功能。开发插件时，应优先查看`api.runtime.agent`部分，它提供了工作目录、会话管理等核心助手。注意，`api.runtime.subagent`中的模型覆盖功能需要配置明确授权，否则请求会被拒绝。</p>
         <div class="hero-pills">
           <span>气球故事书主题</span>
           <span>逐节讲解</span>

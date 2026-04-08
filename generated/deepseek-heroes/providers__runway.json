@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:50:22.143Z",
+  "pathname": "/providers/runway",
+  "title": "Runway",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "接入Runway视频生成服务",
+    "heroSummary": "这页教你如何配置OpenClaw使用Runway的AI视频生成功能，包括API密钥设置和默认模型指定。先运行onboard命令设置RUNWAYML_API_SECRET，再配置agents.defaults.videoGenerationModel.primary为runway/gen4.5。注意视频转视频模式必须使用runway/gen4_aleph模型，且本地文件需通过data URIs格式提供。"
+  }
+}

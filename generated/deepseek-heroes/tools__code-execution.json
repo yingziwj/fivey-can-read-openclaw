@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:50:33.764Z",
+  "pathname": "/tools/code-execution",
+  "title": "Code Execution",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "远程Python代码执行工具配置与使用",
+    "heroSummary": "这页讲解如何在xAI的远程沙箱中运行Python代码进行数据分析，与本地exec工具区分使用场景。配置时需要提供xAI API密钥，最容易错在误用它访问本地文件或设备。使用时应明确分析意图，将完整请求和数据一次性发送给agent。"
+  }
+}

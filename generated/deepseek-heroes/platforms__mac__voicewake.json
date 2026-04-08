@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:52:41.763Z",
+  "pathname": "/platforms/mac/voicewake",
+  "title": "Voice Wake (macOS)",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "macOS语音唤醒与按键通话配置详解",
+    "heroSummary": "这页详细说明macOS上语音唤醒和按键通话两种模式的运行机制与配置要点。先看Modes部分了解两种触发方式的区别，特别注意wake-word模式下需要约0.55秒停顿才能触发，这是最容易误操作的地方。"
+  }
+}

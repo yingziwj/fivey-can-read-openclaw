@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:51:48.111Z",
+  "pathname": "/gateway/openresponses-http-api",
+  "title": "OpenResponses API",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "配置 OpenResponses API 端点",
+    "heroSummary": "这页教你如何启用并配置 Gateway 的 OpenResponses 兼容端点，默认是关闭的，需要先在配置中开启。配置时最容易搞错的是身份验证模式：共享密钥模式会忽略 x-openclaw-scopes 头，而可信代理模式则会尊重它，这直接影响操作权限。"
+  }
+}

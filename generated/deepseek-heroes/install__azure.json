@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:48:19.143Z",
+  "pathname": "/install/azure",
+  "title": "Azure",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "在 Azure Linux 虚拟机上安装 OpenClaw",
+    "heroSummary": "本页指导你使用 Azure CLI 创建一台 Linux 虚拟机，并通过配置网络安全组和 Azure Bastion 来安全地安装 OpenClaw。部署前务必先注册 Microsoft.Compute 和 Microsoft.Network 资源提供程序，并注意 NSG 规则会严格限制 SSH 访问来源，仅允许来自 Bastion 子网的连接。"
+  }
+}

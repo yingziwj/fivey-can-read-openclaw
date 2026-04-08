@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:48:45.013Z",
+  "pathname": "/install/nix",
+  "title": "Nix",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "用 Nix 安装 OpenClaw 的完整指南",
+    "heroSummary": "这页详细说明如何通过 nix-openclaw 模块以声明式方式安装 OpenClaw，包括网关、macOS 应用和工具。安装后需配置消息机器人令牌和模型提供商 API 密钥，并注意 Nix 模式会禁用自动安装流程，需手动设置环境变量。"
+  }
+}

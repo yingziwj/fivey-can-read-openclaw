@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:54:46.130Z",
+  "pathname": "/reference/templates/IDENTITY",
+  "title": "IDENTITY Template",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "IDENTITY模板：定义你的AI助手身份",
+    "heroSummary": "这页是IDENTITY.md模板，用于在首次对话中定义AI助手的身份、语气和签名。你需要根据提示填写具体内容，比如选择AI是机器人还是幽灵、设定语气是犀利还是温暖。最容易错的是直接复制模板而不个性化，这会影响助手后续的互动风格。"
+  }
+}

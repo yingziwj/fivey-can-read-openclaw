@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:52:18.571Z",
+  "pathname": "/nodes/voicewake",
+  "title": "Voice Wake",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "全局唤醒词配置与管理",
+    "heroSummary": "本页说明如何通过网关统一管理所有节点和应用的语音唤醒词列表，任何节点都可修改此全局列表，修改后会广播给所有连接方。配置时需注意触发词会被自动规范化处理，空列表会回退到默认值。"
+  }
+}

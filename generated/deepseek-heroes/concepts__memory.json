@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:47:59.217Z",
+  "pathname": "/concepts/memory",
+  "title": "Memory Overview",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "OpenClaw记忆系统工作原理",
+    "heroSummary": "这页讲OpenClaw如何通过Markdown文件实现记忆功能，包括三个核心文件的作用和位置。你应该先了解MEMORY.md、每日笔记和DREAMS.md各自存储什么内容，以及它们如何被加载。最容易搞错的是以为模型有隐藏状态，实际上所有记忆都只保存在磁盘文件中，没有配置嵌入提供者API密钥就无法使用语义搜索功能。"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:48:04.311Z",
+  "pathname": "/concepts/memory-search",
+  "title": "Memory Search",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "内存搜索：如何从笔记中智能查找内容",
+    "heroSummary": "这页讲的是OpenClaw如何通过向量和关键词两种方式，从你的记忆文件中找到相关笔记，即使查询的措辞与原文不同。配置时最该先看provider设置，明确要填哪个API提供商或本地选项；最容易错的地方是以为所有provider都能自动检测，实际上像ollama和local这类本地选项需要手动指定。"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:50:07.490Z",
+  "pathname": "/providers/nvidia",
+  "title": "NVIDIA",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "接入NVIDIA API的配置指南",
+    "heroSummary": "这页详细说明如何通过环境变量或配置文件设置NVIDIA的OpenAI兼容API，并列出可用的模型ID。配置时需注意API密钥应优先通过环境变量设置，避免在命令行中直接传递。"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:49:10.771Z",
+  "pathname": "/start/wizard-cli-reference",
+  "title": "CLI Setup Reference",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "CLI 设置向导完整参数手册",
+    "heroSummary": "这页是 `openclaw onboard` 命令的完整参考手册，详细列出了本地模式和远程模式的所有配置步骤。最该先看“本地模式”部分，了解如何设置模型认证、工作空间和守护进程。最容易搞错的是重置操作的范围选择，`--reset` 默认只清除配置和凭据，要用 `--reset-scope full` 才会连带删除工作空间。"
+  }
+}

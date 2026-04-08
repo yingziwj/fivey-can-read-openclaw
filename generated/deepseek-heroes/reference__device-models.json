@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:54:36.805Z",
+  "pathname": "/reference/device-models",
+  "title": "Device Model Database",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "macOS应用如何将苹果设备型号ID转成友好名称",
+    "heroSummary": "这页说明macOS配套应用如何通过JSON映射文件，将苹果设备型号标识符（如iPad16,6）转换为用户可读的友好名称。更新数据库时，必须先修改NOTICE.md中的提交哈希，再重新下载对应版本的JSON文件，否则可能导致构建失败或显示错误。"
+  }
+}

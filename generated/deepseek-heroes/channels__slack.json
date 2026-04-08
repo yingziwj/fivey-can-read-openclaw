@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:47:33.941Z",
+  "pathname": "/channels/slack",
+  "title": "Slack",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "Slack 通道配置与接入指南",
+    "heroSummary": "本页详细说明如何将 OpenClaw 接入 Slack，包含 Socket Mode（默认）和 HTTP Request URLs 两种模式的完整配置步骤。配置时需重点关注 App-Level Token 和 Bot Token 的获取与填写，并确保 manifest 中的权限范围（scopes）和事件订阅（bot_events）设置正确，这是连接失败的最常见原因。"
+  }
+}

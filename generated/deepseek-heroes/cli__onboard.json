@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:51:24.196Z",
+  "pathname": "/cli/onboard",
+  "title": "onboard",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "openclaw onboard 命令：交互式网关配置向导",
+    "heroSummary": "这页详细说明如何使用 openclaw onboard 命令，通过交互式向导配置本地或远程网关。最该先看的是命令的基本用法和 --flow 参数选项，了解如何选择快速启动或手动配置流程。最容易搞错的是在脚本中使用时，需要明确添加 --non-interactive 参数，而不是依赖 --json 输出，否则命令会进入交互模式中断脚本执行。"
+  }
+}

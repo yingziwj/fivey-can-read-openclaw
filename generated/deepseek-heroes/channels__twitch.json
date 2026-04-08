@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:47:38.402Z",
+  "pathname": "/channels/twitch",
+  "title": "Twitch",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "配置OpenClaw连接Twitch聊天",
+    "heroSummary": "这页指导你如何将OpenClaw作为机器人连接到Twitch聊天室。你需要先通过第三方工具生成Bot Token，并注意配置访问控制以防止未授权触发。"
+  }
+}

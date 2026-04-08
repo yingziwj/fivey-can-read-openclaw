@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:47:11.063Z",
+  "pathname": "/channels/bluebubbles",
+  "title": "BlueBubbles",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "通过BlueBubbles接入iMessage",
+    "heroSummary": "这页教你如何配置BlueBubbles插件，让OpenClaw通过macOS服务器收发iMessage。先按Quick start步骤安装BlueBubbles服务器并设置密码，然后配置OpenClaw连接。注意在虚拟机或无头环境中，Messages.app可能休眠导致收不到消息，需要定期唤醒。"
+  }
+}

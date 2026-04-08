@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:53:40.287Z",
+  "pathname": "/cli/hooks",
+  "title": "hooks",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "管理 OpenClaw 钩子命令",
+    "heroSummary": "这页教你用 openclaw hooks 命令管理事件驱动的自动化钩子，比如网关启动或执行 /new、/reset 命令时触发的动作。先运行 openclaw hooks list 查看所有可用钩子，注意工作区钩子默认是禁用的，需要手动启用才能生效。"
+  }
+}

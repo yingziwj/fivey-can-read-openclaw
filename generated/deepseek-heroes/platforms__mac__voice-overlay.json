@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:52:42.363Z",
+  "pathname": "/platforms/mac/voice-overlay",
+  "title": "Voice Overlay",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "macOS语音叠加层生命周期管理",
+    "heroSummary": "本页详细说明macOS应用中语音唤醒和按键通话同时触发时，如何保持语音叠加层的稳定行为。开发者应先关注当前实现的核心逻辑：按键通话会继承唤醒词已显示的文本作为前缀，避免重置。最容易出错的地方是会话令牌不匹配导致回调被丢弃，调试时需检查日志确保只有一个活跃令牌。"
+  }
+}

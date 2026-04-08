@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:53:23.267Z",
+  "pathname": "/cli/approvals",
+  "title": "approvals",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "管理 OpenClaw 执行审批的 CLI 命令",
+    "heroSummary": "这页讲解如何使用 `openclaw approvals` 命令管理本地主机、网关或节点的执行审批规则。最该先看 `openclaw approvals get` 命令，它能显示针对不同目标的生效策略。最容易搞错的是 `set` 命令接受 JSON5 格式，且 `--file` 和 `--stdin` 参数不能同时使用。"
+  }
+}

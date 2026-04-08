@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:53:34.889Z",
+  "pathname": "/cli/devices",
+  "title": "devices",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "设备配对与令牌管理命令",
+    "heroSummary": "这页讲解如何用 openclaw devices 命令管理设备配对请求和设备令牌。先看 list 命令查看待处理请求和已配对设备，特别注意 approve 命令前要重新运行 list 获取最新 requestId，因为设备重试配对会生成新 ID。"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:53:00.784Z",
+  "pathname": "/providers/zai",
+  "title": "Z.AI",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "Z.AI 接入配置指南",
+    "heroSummary": "这页说明如何将 Z.AI 的 GLM 模型接入 OpenClaw，核心是配置 API 密钥和选择正确的区域端点。配置时最容易出错的是混淆通用 API 与 Coding Plan 的密钥类型，导致认证失败。"
+  }
+}

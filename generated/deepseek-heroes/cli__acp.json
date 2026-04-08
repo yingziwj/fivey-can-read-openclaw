@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:53:18.711Z",
+  "pathname": "/cli/acp",
+  "title": "acp",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "OpenClaw ACP 桥接命令：连接 IDE 与网关的会话转发器",
+    "heroSummary": "此命令在 IDE 与 OpenClaw 网关之间建立 ACP 协议桥接，负责会话映射和提示转发。最需注意它与 ACP 原生运行时的区别：它仅作桥接，不支持客户端文件系统或终端方法，且会话历史重建功能有限。配置时需明确指定网关 URL 和令牌，并注意 `--session` 参数用于绑定现有会话。"
+  }
+}

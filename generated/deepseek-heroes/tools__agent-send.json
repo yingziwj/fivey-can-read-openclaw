@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:50:22.962Z",
+  "pathname": "/tools/agent-send",
+  "title": "Agent Send",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "命令行触发单次Agent交互",
+    "heroSummary": "这页教你用`openclaw agent`命令从命令行触发一次Agent交互，无需等待聊天消息，适用于脚本工作流和测试。最该先看`--message`参数怎么填，这是必填项。最容易错的是会话选择：用`--to`指定目标（如手机号）会推导会话，用`--agent`会使用该Agent的`main`会话，用`--session-id`则复用现有会话，三者逻辑不同，选错可能导致消息发到不预期的会话。"
+  }
+}

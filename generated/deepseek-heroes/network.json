@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:52:09.515Z",
+  "pathname": "/network",
+  "title": "Network",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "OpenClaw网络连接核心指南",
+    "heroSummary": "这页是OpenClaw网络功能的中心入口，详细说明了设备如何通过Gateway进程在本地、局域网和Tailscale网络中连接配对。首先要理解Gateway是核心控制进程，它管理所有通道连接和WebSocket控制平面。配置非回环绑定时最容易出错，必须设置正确的网关认证路径（共享密钥或可信代理部署）。"
+  }
+}

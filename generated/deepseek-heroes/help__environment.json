@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:54:21.919Z",
+  "pathname": "/help/environment",
+  "title": "Environment Variables",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "OpenClaw环境变量加载规则与配置",
+    "heroSummary": "这页详细说明了OpenClaw从多个来源加载环境变量的优先级顺序，核心规则是“从不覆盖已有值”。配置时最容易搞错的是优先级顺序，特别是`.env`文件和配置文件中`env`块的区别。"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:51:59.464Z",
+  "pathname": "/gateway/sandbox-vs-tool-policy-vs-elevated",
+  "title": "Sandbox vs Tool Policy vs Elevated",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "OpenClaw 三种权限控制详解",
+    "heroSummary": "本页解释 Sandbox、Tool Policy 和 Elevated 三个核心配置的区别与联系，它们分别决定工具在哪里运行、哪些工具可用以及如何突破沙箱限制。配置时最容易混淆的是 `sandbox.mode` 的 `\"non-main\"` 模式，它只沙箱化非主会话，常导致群组或频道中的意外行为。建议先使用 `openclaw sandbox explain` 命令查看当前会话的实际生效配置，再调整相关设置。"
+  }
+}

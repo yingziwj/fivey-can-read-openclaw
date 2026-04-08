@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:52:09.734Z",
+  "pathname": "/logging",
+  "title": "Logging Overview",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "OpenClaw 日志系统概览与操作指南",
+    "heroSummary": "本页详细说明 OpenClaw 日志的两种输出方式（文件日志与控制台输出）及其默认存储位置。建议先了解如何通过 CLI 命令 `openclaw logs --follow` 实时查看日志，这是最常用的调试方式。配置日志路径时，最容易在 `~/.openclaw/openclaw.json` 文件中写错文件路径格式，需确保 JSON 结构正确。"
+  }
+}

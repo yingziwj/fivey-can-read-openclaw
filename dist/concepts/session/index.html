@@ -2106,8 +2106,8 @@
           </div>
         </div>
         <p class="hero-eyebrow">Concepts 导读</p>
-        <h1>Session Management：先把这条底层规则想明白</h1>
-        <p class="hero-copy">这页不是教你按按钮，而是在补脑内地图。看完你应该知道 Session Management 在系统里到底管什么、为什么会影响后面的行为，以及不理解它时最容易把哪几件事看反。原文最想强调的那句话，可以先抓成：Session Management。</p>
+        <h1>会话管理：消息如何分组与隔离</h1>
+        <p class="hero-copy">这页解释OpenClaw如何根据消息来源（私聊、群聊、定时任务等）将对话分组到不同会话中。最关键的是私聊隔离配置，多人使用时必须设置`dmScope: &quot;per-channel-peer&quot;`，否则所有用户的私聊会共享上下文。会话会按每日重置或空闲超时自动清理，状态数据存储在网关本地文件中。</p>
         <div class="hero-pills">
           <span>气球故事书主题</span>
           <span>逐节讲解</span>

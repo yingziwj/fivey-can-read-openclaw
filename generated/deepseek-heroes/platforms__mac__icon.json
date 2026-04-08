@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:52:33.093Z",
+  "pathname": "/platforms/mac/icon",
+  "title": "Menu Bar Icon",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "macOS菜单栏图标状态与动画控制",
+    "heroSummary": "这页详细说明了菜单栏图标在空闲、暂停、语音触发和工作四种状态下的动画表现与控制方法。开发者最该先看如何通过AppState的triggerVoiceEars和setWorking方法正确触发语音和工作动画。最容易错的是忘记在defer块中重置工作状态，导致动画卡住。"
+  }
+}

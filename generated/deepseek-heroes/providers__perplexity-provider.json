@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:50:17.406Z",
+  "pathname": "/providers/perplexity-provider",
+  "title": "Perplexity (Provider)",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "配置Perplexity网页搜索插件",
+    "heroSummary": "这页教你如何接入Perplexity的网页搜索功能，让AI助手能上网查资料。配置时要注意区分API密钥前缀：pplx-走原生接口支持过滤，sk-or-走OpenRouter提供AI摘要。最容易错的是把环境变量配给错误的进程，特别是后台服务运行时需要确保密钥能被网关进程读取。"
+  }
+}

@@ -2106,8 +2106,8 @@
           </div>
         </div>
         <p class="hero-eyebrow">Tools 导读</p>
-        <h1>工具小帮手-loop detection：先弄明白它到底替你做哪一步</h1>
-        <p class="hero-copy">这页重点不是术语，而是动作。它会讲清楚 工具小帮手-loop detection 会在什么时候出手、吃进去什么、吐出来什么，以及命令和参数在现场到底像哪个按钮。原文最想强调的那句话，可以先抓成：工具小帮手-loop detection。</p>
+        <h1>工具循环检测配置指南</h1>
+        <p class="hero-copy">这页教你如何配置OpenClaw的循环检测功能，防止AI代理陷入重复调用工具的无限循环。先看配置块中的默认设置，了解每个字段的作用和默认值。最容易出错的地方是阈值设置顺序，必须保持warningThreshold小于criticalThreshold小于globalCircuitBreakerThreshold，否则检测逻辑会失效。</p>
         <div class="hero-pills">
           <span>气球故事书主题</span>
           <span>逐节讲解</span>

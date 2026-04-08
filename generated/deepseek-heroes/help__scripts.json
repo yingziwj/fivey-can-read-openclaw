@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:54:26.523Z",
+  "pathname": "/help/scripts",
+  "title": "Scripts",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "脚本目录使用指南",
+    "heroSummary": "这页说明scripts/目录中辅助脚本的用途和注意事项。脚本主要用于本地工作流和运维任务，但优先使用CLI工具。运行前务必检查脚本内容，因为它们是主机特定的。"
+  }
+}

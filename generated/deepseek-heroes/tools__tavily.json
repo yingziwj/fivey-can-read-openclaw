@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:51:04.944Z",
+  "pathname": "/tools/tavily",
+  "title": "Tavily",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "Tavily搜索与内容提取配置指南",
+    "heroSummary": "本页详细说明如何在OpenClaw中配置和使用Tavily API进行网页搜索和内容提取。首先需要获取API密钥并正确配置插件，然后根据需求选择通用web_search或专用的tavily_search/tavily_extract工具。最容易出错的地方是search_depth和extract_depth参数的选择：basic适合常规场景，advanced用于高精度需求但速度较慢，错误选择会影响性能和结果质量。"
+  }
+}

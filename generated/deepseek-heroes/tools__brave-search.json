@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:50:29.078Z",
+  "pathname": "/tools/brave-search",
+  "title": "Brave Search",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "配置Brave搜索API接入OpenClaw",
+    "heroSummary": "这页指导如何将Brave搜索API配置为OpenClaw的web_search工具。配置时需注意API密钥应放在plugins.entries.brave.config.webSearch.apiKey路径下，而非旧版tools.web.search.apiKey。Brave提供每月$5免费额度，可覆盖1000次查询，建议在仪表盘中设置用量限制以避免意外费用。"
+  }
+}

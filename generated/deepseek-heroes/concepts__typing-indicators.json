@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:54:11.913Z",
+  "pathname": "/concepts/typing-indicators",
+  "title": "Typing Indicators",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "打字指示器配置详解",
+    "heroSummary": "这页讲如何控制AI在聊天中显示“正在输入”的时机和频率。先看typingMode的四种模式，它们决定打字指示器何时触发。最容易错的是把typingIntervalSeconds当成开始时间，它其实控制刷新频率，而heartbeat运行永远不显示打字指示器。"
+  }
+}

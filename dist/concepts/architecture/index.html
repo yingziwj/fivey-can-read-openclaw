@@ -2106,8 +2106,8 @@
           </div>
         </div>
         <p class="hero-eyebrow">Concepts 导读</p>
-        <h1>门口的小门卫 Architecture：先把这条底层规则想明白</h1>
-        <p class="hero-copy">这页不是教你按按钮，而是在补脑内地图。看完你应该知道 门口的小门卫 Architecture 在系统里到底管什么、为什么会影响后面的行为，以及不理解它时最容易把哪几件事看反。原文最想强调的那句话，可以先抓成：门口的小门卫 architecture。</p>
+        <h1>网关架构：一个中心连接所有消息平台和设备</h1>
+        <p class="hero-copy">这页讲的是系统如何通过一个网关（Gateway）统一管理WhatsApp、Telegram等消息服务，并通过WebSocket连接控制端（如macOS应用）和设备节点（如手机）。最该先看网关如何作为唯一中心，负责所有外部消息连接和会话。最容易搞错的是节点（Nodes）虽然也连同一个WebSocket，但需要声明`role: node`并提供设备身份，其配对是基于设备的。</p>
         <div class="hero-pills">
           <span>气球故事书主题</span>
           <span>逐节讲解</span>

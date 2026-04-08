@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:47:24.667Z",
+  "pathname": "/channels/matrix",
+  "title": "Matrix",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "OpenClaw 的 Matrix 插件配置与使用",
+    "heroSummary": "这页详细说明如何在 OpenClaw 中配置和使用 Matrix 插件，包括安装、账户设置和关键配置项。配置时最容易混淆的是 autoJoin 和 dm.policy 的区别：autoJoin 控制是否接受邀请，dm.policy 决定加入后如何处理私聊消息。"
+  }
+}

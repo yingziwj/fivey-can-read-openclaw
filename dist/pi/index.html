@@ -2106,8 +2106,8 @@
           </div>
         </div>
         <p class="hero-eyebrow">Pi 导读</p>
-        <h1>Pi Integration Architecture：先抓住它最核心的那件事</h1>
-        <p class="hero-copy">先别急着背术语。这页真正想让你看懂的是“Pi Integration Architecture”到底管哪件事、什么时候该用、以及最容易在哪一步搞混。 原文里真正关键的一句是在说：Pi Integration Architecture。</p>
+        <h1>OpenClaw如何嵌入pi AI代理实现代码能力</h1>
+        <p class="hero-copy">这页讲OpenClaw直接导入pi的AgentSession来嵌入AI代理，而不是通过子进程或RPC。最该先看runEmbeddedPiAgent()的调用参数，特别是sessionId和provider配置。最容易错的是把工具文件放错位置——现在各插件的运行时文件都在自己的扩展目录里，不在统一的src/agents/tools下。</p>
         <div class="hero-pills">
           <span>气球故事书主题</span>
           <span>逐节讲解</span>

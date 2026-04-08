@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:51:47.955Z",
+  "pathname": "/gateway/openai-http-api",
+  "title": "OpenAI Chat Completions",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "启用OpenAI兼容HTTP接口的配置与安全须知",
+    "heroSummary": "这页说明如何配置Gateway以提供OpenAI Chat Completions兼容的HTTP端点，该功能默认关闭，需在配置中手动开启。配置时务必注意安全边界：此端点具有完整的操作员访问权限，认证通过后即被视为可信操作员，应仅在内网或私有入口使用，避免直接暴露到公网。"
+  }
+}

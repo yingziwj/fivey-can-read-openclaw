@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:47:39.068Z",
+  "pathname": "/channels/whatsapp",
+  "title": "WhatsApp",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "WhatsApp 插件安装与配置指南",
+    "heroSummary": "这页详细说明如何安装 WhatsApp 插件并配置消息接收策略，重点是设置 dmPolicy 和 allowFrom 来控制谁可以发消息给你。最容易出错的地方是配对模式（pairing）下忘记批准首次连接请求，导致消息无法送达。"
+  }
+}

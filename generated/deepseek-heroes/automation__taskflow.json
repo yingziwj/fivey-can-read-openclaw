@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:49:20.831Z",
+  "pathname": "/automation/taskflow",
+  "title": "Task Flow",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "多步骤自动化流程编排",
+    "heroSummary": "这页讲解如何用Task Flow编排需要多个步骤的自动化工作流，比如数据收集→报告生成→发送这样的连续操作。你应该先看“何时使用Task Flow”表格，明确区分单任务和多步骤场景。最容易搞错的是混淆Managed和Mirrored模式——前者由系统全权管理任务创建和执行，后者只同步观察外部创建的任务进度。"
+  }
+}

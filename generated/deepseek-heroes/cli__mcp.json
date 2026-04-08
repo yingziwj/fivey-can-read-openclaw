@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:53:42.745Z",
+  "pathname": "/cli/mcp",
+  "title": "mcp",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "OpenClaw MCP 命令：启动服务器与管理外部连接",
+    "heroSummary": "这页详细说明 `openclaw mcp` 命令的两个核心功能：通过 `serve` 启动 MCP 服务器，以及通过 `list`、`show` 等子命令管理 OpenClaw 需要连接的外部 MCP 服务器定义。使用 `serve` 时，最关键的是根据你的客户端类型（通用 MCP 客户端还是 Claude Code）决定是否启用 `--claude-channel-mode` 参数，这直接影响可用的工具集。最容易出错的地方是混淆 `openclaw mcp serve` 与 `openclaw acp` 的使用场景：前者用于让外部 MCP 客户端直接与 OpenClaw 网关通信，后者用于 OpenClaw 自身托管编码运行时。"
+  }
+}

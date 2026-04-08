@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:52:51.828Z",
+  "pathname": "/providers/stepfun",
+  "title": "StepFun",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "StepFun 提供商接入指南",
+    "heroSummary": "这页详细说明如何在 OpenClaw 中配置 StepFun 的两种 API 端点（标准版和 Step Plan 版），包括区域选择、认证设置和模型引用。配置时需注意区分中国区（.com）和全球区（.ai）的 API 密钥与端点对应关系，否则会导致认证失败。"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:48:49.221Z",
+  "pathname": "/install/railway",
+  "title": "Railway",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "Railway一键部署OpenClaw指南",
+    "heroSummary": "这页教你用Railway的模板一键部署OpenClaw，无需服务器终端操作。部署后要设置Volume挂载到/data目录，并配置OPENCLAW_GATEWAY_PORT和OPENCLAW_GATEWAY_TOKEN这两个关键变量。最容易出错的是忘记启用HTTP代理到8080端口，这会导致无法通过公网访问控制界面。"
+  }
+}

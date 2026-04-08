@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:52:23.613Z",
+  "pathname": "/platforms/ios",
+  "title": "iOS App",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "iOS App 连接网关配置指南",
+    "heroSummary": "这页详细说明 iOS App 如何通过 WebSocket 连接网关，并获取节点能力。首先需要确保网关已在另一设备运行，并在 iOS 设置中选择或手动输入网关地址。配对时若应用重试导致请求 ID 变更，务必在批准前重新运行设备列表命令确认最新 ID。"
+  }
+}

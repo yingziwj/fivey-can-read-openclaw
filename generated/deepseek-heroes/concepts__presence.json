@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:48:10.146Z",
+  "pathname": "/concepts/presence",
+  "title": "Presence",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "OpenClaw Presence：网关与客户端连接状态的轻量视图",
+    "heroSummary": "这页解释OpenClaw的Presence机制，它负责追踪网关自身和所有连接客户端的实时状态，主要用于在macOS应用的Instances标签页中展示。阅读时先关注Presence包含哪些字段（如instanceId、host、mode），这些字段决定了状态信息的完整性和准确性。最容易出错的地方是instanceId字段——虽然可选但强烈建议设置，它用于稳定标识客户端身份，如果缺失可能导致状态追踪混乱。"
+  }
+}

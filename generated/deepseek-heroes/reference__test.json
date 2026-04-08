@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:54:51.296Z",
+  "pathname": "/reference/test",
+  "title": "Tests",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "测试命令与基准脚本参考",
+    "heroSummary": "这页列出了所有测试相关的pnpm命令和基准脚本，包括单元测试、覆盖率、本地PR检查、模型延迟和CLI启动时间测量。开发时最该先看Start Here里的test:force命令，它能解决端口占用问题。最容易搞错的是test:changed命令，它只在修改可路由文件时生效，配置变更会回退到全量运行。"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:53:29.166Z",
+  "pathname": "/cli/cron",
+  "title": "cron",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "管理 Gateway 调度器的定时任务",
+    "heroSummary": "这页教你用 openclaw cron 命令添加、编辑和运行定时任务。先看 Start Here 了解基本用法和默认的 --announce 交付设置。最容易错的是忘记用 --no-deliver 来关闭任务输出，或者混淆了 --announce 和已弃用的 --deliver 参数。"
+  }
+}

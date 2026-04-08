@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:55:00.060Z",
+  "pathname": "/start/lore",
+  "title": "OpenClaw Lore",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "OpenClaw项目名称的演变故事",
+    "heroSummary": "这页详细记录了WhatsApp网关项目从Warelay到Clawd，再到Molty，最终定名为OpenClaw的完整改名历程。最该先看“The Origin Story”部分，了解项目为何需要多次改名。最容易搞错的是以为这只是个趣味故事，实际上它解释了项目开源、社区驱动的核心理念，以及“OpenClaw = OPEN + CLAW”这个名称背后的设计哲学。"
+  }
+}

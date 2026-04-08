@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:52:37.962Z",
+  "pathname": "/platforms/mac/signing",
+  "title": "macOS Signing",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "macOS调试版签名配置与权限保持",
+    "heroSummary": "本页说明如何配置macOS调试版应用的签名，确保系统权限（如通知、屏幕录制）在多次构建后不会丢失。首先设置SIGN_IDENTITY环境变量或使用ALLOW_ADHOC_SIGNING=1启用临时签名，但注意临时签名会禁用强化运行时并导致权限不稳定。最容易出错的是未正确配置签名身份导致构建失败，或使用临时签名时忽略权限持久化问题。"
+  }
+}

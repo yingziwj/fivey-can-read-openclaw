@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:50:47.143Z",
+  "pathname": "/tools/gemini-search",
+  "title": "Gemini Search",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "配置 Gemini 搜索：接入 Google 实时搜索的 AI 回答",
+    "heroSummary": "这页教你如何在 OpenClaw 中配置 Gemini 模型，使其能调用 Google 实时搜索并生成带引用的 AI 回答。首先要获取并设置 GEMINI_API_KEY，可通过环境变量或配置文件完成。注意 Gemini 搜索返回的是 AI 综合答案而非传统链接列表，且不支持 country、language 等过滤参数。"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:52:56.537Z",
+  "pathname": "/providers/vllm",
+  "title": "vLLM",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "连接OpenClaw到vLLM服务器的配置指南",
+    "heroSummary": "这页教你如何将OpenClaw连接到vLLM服务器，通过OpenAI兼容API使用开源模型。首先要设置VLLM_API_KEY环境变量并确认服务器地址正确，否则自动发现会失败。最容易出错的地方是忘记配置API密钥或服务器地址，导致连接失败。"
+  }
+}

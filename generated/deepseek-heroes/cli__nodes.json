@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:53:52.371Z",
+  "pathname": "/cli/nodes",
+  "title": "nodes",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "管理节点设备与调用节点能力",
+    "heroSummary": "这页介绍如何使用 `openclaw nodes` 命令管理已配对的设备节点，并直接调用节点上的功能。最该先看 `nodes list` 和 `nodes pending` 命令来查看设备状态和待处理请求。最容易搞错的是：想执行 shell 命令时，不能用 `nodes invoke` 调用 `system.run`，而应该使用 `exec` 工具并设置 `host=node`。"
+  }
+}

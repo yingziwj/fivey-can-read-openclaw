@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:53:07.057Z",
+  "pathname": "/tools/tts",
+  "title": "Text-to-Speech",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "OpenClaw 文本转语音配置指南",
+    "heroSummary": "这页详细说明如何为 OpenClaw 配置四种文本转语音服务（ElevenLabs、Microsoft、MiniMax、OpenAI），让机器人回复能变成语音。配置时最该先看需要为哪些服务准备 API 密钥，以及 Microsoft 服务无需密钥但稳定性有限。最容易搞错的是配置多个服务时的主备顺序，以及启用自动摘要时对应的模型也需要认证。"
+  }
+}

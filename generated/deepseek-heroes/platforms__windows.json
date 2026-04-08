@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:52:46.711Z",
+  "pathname": "/platforms/windows",
+  "title": "Windows",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "Windows平台支持说明：原生与WSL2对比",
+    "heroSummary": "这页详细说明OpenClaw在Windows上的两种运行方式：推荐使用WSL2以获得完整功能，原生Windows支持核心CLI但有特定限制。最该先看WSL2的安装步骤，因为这是最稳定的路径。最容易搞错的是在原生Windows上运行网关服务时，如果计划任务创建失败，系统会回退到启动文件夹方式，这可能导致不同的监控状态。"
+  }
+}

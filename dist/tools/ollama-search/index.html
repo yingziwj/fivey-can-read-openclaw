@@ -2106,8 +2106,8 @@
           </div>
         </div>
         <p class="hero-eyebrow">Tools 导读</p>
-        <h1>Ollama Web Search：先弄明白它到底替你做哪一步</h1>
-        <p class="hero-copy">这页重点不是术语，而是动作。它会讲清楚 Ollama Web Search 会在什么时候出手、吃进去什么、吐出来什么，以及命令和参数在现场到底像哪个按钮。原文最想强调的那句话，可以先抓成：Ollama Web Search。</p>
+        <h1>配置Ollama Web搜索</h1>
+        <p class="hero-copy">这页教你如何在OpenClaw中设置Ollama Web Search作为搜索提供者，无需额外API密钥。先确保Ollama已运行并执行`ollama signin`登录，然后通过`openclaw configure --section web`选择该提供者。注意配置中默认使用本地地址`http://127.0.0.1:11434`，若需覆盖或使用认证，需在`models.providers.ollama`中设置baseUrl或apiKey。</p>
         <div class="hero-pills">
           <span>气球故事书主题</span>
           <span>逐节讲解</span>

@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:50:02.931Z",
+  "pathname": "/providers/minimax",
+  "title": "MiniMax",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "MiniMax 多模态能力接入指南",
+    "heroSummary": "这页详细说明了如何将 MiniMax 的文本、图像、音乐、视频生成及搜索能力接入 OpenClaw 系统。接入时需先区分 API-key 和 OAuth 两种认证方式，并注意图像生成支持多种宽高比，音乐和视频生成需在配置中明确指定模型。"
+  }
+}

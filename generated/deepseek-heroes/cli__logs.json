@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:51:19.198Z",
+  "pathname": "/cli/logs",
+  "title": "logs",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "用 openclaw logs 实时查看网关日志",
+    "heroSummary": "这页教你如何通过 RPC 远程查看网关文件日志，支持实时跟随和多种输出格式。先看 --follow 选项来启动实时日志流，最容易错的是用 --url 指定远程网关时忘记同时提供 --token 进行认证。"
+  }
+}

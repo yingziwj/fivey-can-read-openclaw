@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:49:43.927Z",
+  "pathname": "/providers/arcee",
+  "title": "Arcee AI",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "接入 Arcee AI 模型提供商的配置指南",
+    "heroSummary": "这页详细说明如何通过直接或 OpenRouter 两种方式，将 Arcee AI 的 Trinity 系列模型接入 OpenClaw 系统。配置时最关键的是根据所选方式正确设置对应的 API 密钥环境变量，并注意在后台服务运行时确保密钥对进程可见。"
+  }
+}

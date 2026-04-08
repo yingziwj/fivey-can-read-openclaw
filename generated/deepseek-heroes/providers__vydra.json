@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:52:57.352Z",
+  "pathname": "/providers/vydra",
+  "title": "Vydra",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "Vydra 插件配置与使用要点",
+    "heroSummary": "这页说明如何接入 Vydra 插件，它提供图像、视频生成和语音合成功能，使用同一个 API 密钥。配置时务必使用 `https://www.vydra.ai/api/v1` 作为基础 URL，避免因重定向导致认证失败。视频生成时需注意 `vydra/kling` 模型仅支持远程图片 URL，且当前插件未开放分辨率等高级参数设置。"
+  }
+}

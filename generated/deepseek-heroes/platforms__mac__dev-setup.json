@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:52:27.536Z",
+  "pathname": "/platforms/mac/dev-setup",
+  "title": "macOS Dev Setup",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "macOS开发环境搭建指南",
+    "heroSummary": "这页详细说明如何在macOS上从源码构建和运行OpenClaw应用。先检查Xcode和Node.js版本是否满足要求，然后按步骤安装依赖、打包应用。特别注意脚本默认使用ad-hoc签名，可能导致安全提示或应用崩溃，需要查看故障排除部分。"
+  }
+}

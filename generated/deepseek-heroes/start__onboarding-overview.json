@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:48:59.762Z",
+  "pathname": "/start/onboarding-overview",
+  "title": "Onboarding Overview",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "OpenClaw 两种初始化方式对比",
+    "heroSummary": "这页帮你选择 CLI 命令行或 macOS 应用来配置 OpenClaw 的核心组件。建议先看表格对比平台、界面和自动化支持，确定哪种方式适合你的环境。配置时最容易混淆的是 Gateway 端口绑定和模型提供商认证，这两项直接影响后续连接是否成功。"
+  }
+}

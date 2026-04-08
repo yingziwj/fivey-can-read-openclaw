@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:53:57.184Z",
+  "pathname": "/cli/security",
+  "title": "security",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "OpenClaw 安全审计命令详解",
+    "heroSummary": "这页讲解 `openclaw security audit` 命令，用于检查配置中的安全风险并提供自动修复选项。运行命令前，先确认是否需要 `--deep` 参数来深度扫描敏感数据，并注意 `--fix` 仅执行安全且确定性的修复，不会自动轮换密钥或禁用核心工具。"
+  }
+}

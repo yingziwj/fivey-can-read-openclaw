@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:51:47.512Z",
+  "pathname": "/gateway/openshell",
+  "title": "OpenShell",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "OpenShell 沙盒后端配置指南",
+    "heroSummary": "这页教你如何配置 OpenClaw 使用 OpenShell 作为远程沙盒后端，替代本地 Docker 容器。首先要设置插件启用和沙盒后端参数，最容易错的是 workspaceAccess 权限和 mirror 模式的选择，这会影响本地与远程文件的同步逻辑。"
+  }
+}

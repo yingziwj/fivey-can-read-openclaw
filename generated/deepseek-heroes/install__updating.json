@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:48:55.499Z",
+  "pathname": "/install/updating",
+  "title": "Updating",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "OpenClaw 更新指南：命令、配置与常见误区",
+    "heroSummary": "这页详细说明如何更新 OpenClaw，包括推荐命令、手动方法和自动更新配置。最该先看 `openclaw update` 命令，它能自动检测安装类型并完成更新。最容易搞错的是 `--channel` 和 `--tag` 参数的区别，以及自动更新配置中不同通道的行为差异。"
+  }
+}

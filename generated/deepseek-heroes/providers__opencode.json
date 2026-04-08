@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:50:11.727Z",
+  "pathname": "/providers/opencode",
+  "title": "OpenCode",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "OpenCode 接入配置指南",
+    "heroSummary": "这页说明如何在 OpenClaw 中接入 OpenCode 的两个托管目录（Zen 和 Go），它们共享同一个 API 密钥。配置时最容易混淆的是 Zen 和 Go 目录的运行时提供者 ID 不同，但 API 密钥只需设置一次。"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:47:16.320Z",
+  "pathname": "/channels/groups",
+  "title": "Groups",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "群聊配置与安全控制",
+    "heroSummary": "这页详细说明OpenClaw在Discord、WhatsApp等平台处理群聊消息的权限设置和会话管理。你需要先配置groupPolicy和allowlist来决定哪些群组和成员能触发AI响应。最容易搞错的是群聊会话使用独立的session key，与私聊会话完全隔离，这会影响工具权限和沙箱执行环境。"
+  }
+}

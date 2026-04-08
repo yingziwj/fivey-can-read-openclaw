@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:47:43.553Z",
+  "pathname": "/concepts/agent",
+  "title": "Agent Runtime",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "OpenClaw 代理运行环境配置指南",
+    "heroSummary": "这页详细说明了 OpenClaw 代理的唯一工作目录设置和启动文件注入机制。配置代理时，必须先通过 `openclaw setup` 初始化工作空间，否则代理无法正常启动。最容易出错的地方是混淆了 `TOOLS.md` 文件的作用——它只是使用指南，并不控制工具的实际可用性。"
+  }
+}

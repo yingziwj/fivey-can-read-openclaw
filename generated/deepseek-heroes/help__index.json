@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:54:22.028Z",
+  "pathname": "/help/index",
+  "title": "Help",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "OpenClaw 故障排查与调试指南",
+    "heroSummary": "本页汇总了 OpenClaw 系统遇到问题时最常用的排查路径和调试工具。遇到具体故障时，应先从 Troubleshooting 页面开始，按步骤定位问题；环境变量加载顺序和调试模式是配置中最容易出错的地方，需要特别注意。"
+  }
+}

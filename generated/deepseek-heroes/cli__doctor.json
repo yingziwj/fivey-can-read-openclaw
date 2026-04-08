@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:51:14.340Z",
+  "pathname": "/cli/doctor",
+  "title": "doctor",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "网关健康检查与自动修复命令",
+    "heroSummary": "运行 openclaw doctor 命令检查网关和通道配置状态，并可使用 --repair 参数自动修复常见问题。特别注意 --force 参数会覆盖自定义配置，而 --non-interactive 模式在无头环境中会自动跳过交互提示。"
+  }
+}

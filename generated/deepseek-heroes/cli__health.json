@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:51:19.100Z",
+  "pathname": "/cli/health",
+  "title": "health",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "检查 Gateway 运行状态",
+    "heroSummary": "使用 openclaw health 命令获取正在运行的 Gateway 的健康状态。执行时注意 --timeout 参数默认值为 10000 毫秒，若网络环境不佳可适当调整。该命令支持 --json 选项输出机器可读格式，便于脚本处理。"
+  }
+}

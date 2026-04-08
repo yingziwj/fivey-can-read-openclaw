@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:51:19.461Z",
+  "pathname": "/cli/index",
+  "title": "CLI Reference",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "CLI命令全集与使用要点",
+    "heroSummary": "这页列出了所有CLI命令和全局参数，是查找具体命令的入口页。使用前先看全局参数如--dev和--profile，它们会影响命令执行环境。注意输出样式部分解释了颜色显示和进度指示器的触发条件，这在脚本中容易出错。"
+  }
+}

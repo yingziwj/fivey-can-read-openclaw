@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:52:47.661Z",
+  "pathname": "/platforms/mac/xpc",
+  "title": "macOS IPC",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "macOS IPC架构：本地Unix socket连接节点服务与GUI应用",
+    "heroSummary": "这页详细说明OpenClaw在macOS上如何通过本地Unix socket连接节点服务与GUI应用，实现系统命令执行和权限管理。最该先看节点服务与GUI应用之间的IPC机制，了解system.run请求如何通过socket转发并在UI上下文中执行。最容易搞错的是PeekabooBridge的UI自动化使用独立的bridge.sock和JSON协议，且主机选择有特定顺序，安全设置需注意TeamID验证和调试标志。"
+  }
+}

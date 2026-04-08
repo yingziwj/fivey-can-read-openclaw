@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:48:44.613Z",
+  "pathname": "/install/northflank",
+  "title": "Northflank",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "在Northflank一键部署OpenClaw",
+    "heroSummary": "这页教你用Northflank的模板免服务器终端部署OpenClaw，重点是设置环境变量OPENCLAW_GATEWAY_TOKEN。部署后通过/openclaw访问控制界面，用配置的共享密钥连接。"
+  }
+}

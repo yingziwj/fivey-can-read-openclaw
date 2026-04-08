@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:48:59.811Z",
+  "pathname": "/start/getting-started",
+  "title": "Getting Started",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "5分钟安装OpenClaw并启动AI助手",
+    "heroSummary": "这页指导你安装OpenClaw、运行配置向导并开始聊天，5分钟内就能让Gateway运行起来。先准备好Node.js和模型API密钥，然后按系统选择安装命令。最容易错的是Windows用户没选对安装方式，WSL2比原生PowerShell更稳定。"
+  }
+}

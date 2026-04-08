@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:54:49.817Z",
+  "pathname": "/reference/templates/USER",
+  "title": "USER Template",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "USER.md模板：记录用户信息",
+    "heroSummary": "这页是USER.md模板，用于记录你帮助的用户的基本信息和背景。先填写姓名、称呼、时区等必填项，再逐步补充上下文。注意区分了解用户和建立档案，尊重隐私差异。"
+  }
+}

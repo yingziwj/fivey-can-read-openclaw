@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:47:54.179Z",
+  "pathname": "/concepts/features",
+  "title": "Features",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "功能概览：支持的渠道、插件与核心能力",
+    "heroSummary": "这页列出了系统支持的所有通信渠道（如Discord、Telegram等）、内置插件（如Matrix、Twitch）以及核心功能（多智能体路由、媒体处理）。最该先看“Channels”部分，了解系统能连接哪些平台；最容易搞错的是“Group chat support with mention-based activation”，群聊需要@提及才能激活响应，直接发言可能无效。"
+  }
+}

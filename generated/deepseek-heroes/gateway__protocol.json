@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:51:53.208Z",
+  "pathname": "/gateway/protocol",
+  "title": "Gateway Protocol",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "OpenClaw网关WebSocket协议详解",
+    "heroSummary": "这页详细说明了OpenClaw所有客户端（CLI、Web UI、移动端节点等）必须通过WebSocket连接网关的握手流程和消息格式。最该先看的是连接时必须发送的`connect`请求结构，特别是`role`和`scopes`字段的填写方式。最容易搞错的是首次连接时必须先处理网关发送的`connect.challenge`事件，否则握手会失败。"
+  }
+}

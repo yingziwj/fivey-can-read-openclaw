@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:47:20.758Z",
+  "pathname": "/channels/irc",
+  "title": "IRC",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "配置 OpenClaw 连接 IRC 频道",
+    "heroSummary": "这页教你如何在 OpenClaw 主配置中启用并设置 IRC 插件，以接入 IRC 服务器和频道。先看 Quick start 部分，按步骤填写 host、port、nick 等必填项。最容易搞错的是 access control：allowFrom 仅用于私聊，频道发言权限需单独配置 groupAllowFrom 或 groups[\"#channel\"].allowFrom。"
+  }
+}

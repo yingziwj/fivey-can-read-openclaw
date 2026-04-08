@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:54:55.347Z",
+  "pathname": "/reference/wizard",
+  "title": "Onboarding Reference",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "openclaw onboard 命令完整参考",
+    "heroSummary": "这页详细说明 openclaw onboard 命令的所有选项和流程细节，包括本地模式配置检测、非交互式自动化脚本和网关RPC接口。使用非交互模式时，注意 --gateway-token 和 --gateway-token-ref-env 参数互斥，这是最容易出错的地方。"
+  }
+}

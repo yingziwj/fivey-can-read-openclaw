@@ -2106,8 +2106,8 @@
           </div>
         </div>
         <p class="hero-eyebrow">Help 导读</p>
-        <h1>Debugging：先看它到底在帮你排什么雷</h1>
-        <p class="hero-copy">这页属于排雷手册。重点是先看症状，再看该查哪条命令或日志，最后才决定要不要改配置，不要一上来就乱动系统。原文最想强调的那句话，可以先抓成：Debugging。</p>
+        <h1>调试流式输出与运行时配置</h1>
+        <p class="hero-copy">这页介绍三种调试工具：用 /debug 命令临时覆盖配置、用 gateway:watch 监听文件变化自动重启、以及启用原始流日志查看推理文本。最该先看 /debug 的用法，它能在聊天中快速开关设置而不用改配置文件。最容易搞错的是 gateway:watch 的监听范围，它只对特定文件类型（如源码、配置）触发重启，扩展元数据变化时不会强制重建。</p>
         <div class="hero-pills">
           <span>气球故事书主题</span>
           <span>逐节讲解</span>

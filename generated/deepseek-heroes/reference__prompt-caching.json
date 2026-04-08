@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:54:36.603Z",
+  "pathname": "/reference/prompt-caching",
+  "title": "Prompt Caching",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "Prompt缓存配置与监控",
+    "heroSummary": "这页详细说明如何通过cacheRetention等参数控制提示前缀的复用，直接影响API调用成本和响应速度。配置时需注意Anthropic模型默认使用short缓存，而long缓存仅对直接API主机生效。当会话元数据丢失时，/status页面会从最近的日志中恢复缓存计数器显示。"
+  }
+}

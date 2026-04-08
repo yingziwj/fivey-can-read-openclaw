@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:54:31.812Z",
+  "pathname": "/reference/AGENTS.default",
+  "title": "Default AGENTS.md",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "OpenClaw 默认助手配置与启动指南",
+    "heroSummary": "这页说明如何首次运行 OpenClaw 默认助手，包括创建专用工作空间、复制模板文件和安全默认设置。启动时务必先配置 SOUL.md 文件定义助手身份，并注意安全规则禁止泄露目录或秘密信息。"
+  }
+}

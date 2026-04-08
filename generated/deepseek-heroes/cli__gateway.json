@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:51:19.771Z",
+  "pathname": "/cli/gateway",
+  "title": "gateway",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "Gateway CLI 命令详解与配置要点",
+    "heroSummary": "这页详细说明了 OpenClaw 网关服务器的命令行操作，包括启动、配置选项和查询命令。启动网关时，必须先确保配置文件中的 gateway.mode=local 已设置，否则需要使用 --allow-unconfigured 参数。使用 --url 参数连接远程网关时，必须同时提供 --token 或 --password 凭证，否则会报错。"
+  }
+}

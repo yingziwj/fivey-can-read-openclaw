@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:52:23.723Z",
+  "pathname": "/platforms/android",
+  "title": "Android App",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "Android节点应用配置与连接指南",
+    "heroSummary": "本页详细说明如何为Android设备配置OpenClaw节点应用，并建立与网关的稳定连接。首先需要确保网关已在其他系统上运行，然后重点关注Android应用与网关之间的WebSocket连接方式，特别是不同网络环境下的安全配置。最容易出错的地方是跨网络连接时未使用安全的wss协议，导致连接失败。"
+  }
+}

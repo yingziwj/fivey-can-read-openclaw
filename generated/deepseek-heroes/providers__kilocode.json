@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:50:03.024Z",
+  "pathname": "/providers/kilocode",
+  "title": "Kilo Gateway",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "Kilo Gateway 接入指南",
+    "heroSummary": "这页教你如何接入 Kilo Gateway，它提供一个统一的 OpenAI 兼容 API 来路由请求到多个模型。最该先看如何获取 API 密钥，最容易错的是配置中的模型引用 `kilocode/kilo/auto` 是提供商管理的智能路由模型，而非具体的上游模型映射。"
+  }
+}

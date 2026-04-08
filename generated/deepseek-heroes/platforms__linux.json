@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:52:23.947Z",
+  "pathname": "/platforms/linux",
+  "title": "Linux App",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "Linux 环境部署 OpenClaw 网关",
+    "heroSummary": "这页指导如何在 Linux 系统上安装和运行 OpenClaw 网关，推荐使用 Node 24 作为运行时。最该先看“Beginner quick path (VPS)”部分，按步骤安装 Node、OpenClaw 并设置端口转发。最容易搞错的是运行时选择：不要用 Bun，它可能导致 WhatsApp/Telegram 相关错误。"
+  }
+}

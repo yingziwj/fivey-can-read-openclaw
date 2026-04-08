@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:47:43.198Z",
+  "pathname": "/channels/zalouser",
+  "title": "Zalo Personal",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "Zalo个人账号自动化接入指南",
+    "heroSummary": "这页教你如何通过OpenClaw内置插件自动化个人Zalo账号，但这是非官方集成，有封号风险。先确认插件是否已安装，然后通过扫码登录并启用通道。最容易出错的是忘记启用通道配置中的zalouser项，导致连接失败。"
+  }
+}

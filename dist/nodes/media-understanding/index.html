@@ -2106,8 +2106,8 @@
           </div>
         </div>
         <p class="hero-eyebrow">Nodes 导读</p>
-        <h1>Media Understanding：先看这只感官小帮手能做什么</h1>
-        <p class="hero-copy">这页讲的是 OpenClaw 接在外面的感官或动作小帮手。你要先看它能接什么输入、会产出什么结果、以及和主会话是怎么搭桥的。原文最想强调的那句话，可以先抓成：Media Understanding - Inbound (2026-01-17)。</p>
+        <h1>配置媒体理解：自动摘要图片音频视频</h1>
+        <p class="hero-copy">这页教你如何配置 OpenClaw 在回复前自动理解用户发送的图片、音频或视频，生成文本摘要用于路由和指令解析。配置核心是 `tools.media` 对象，你需要填写模型列表（支持 provider API 和 CLI 工具）并设置各媒体类型的参数。最容易出错的地方是配置回退顺序和并发数，以及忘记为音频转录设置 `echoTranscript` 来控制是否在回复中显示原文。</p>
         <div class="hero-pills">
           <span>气球故事书主题</span>
           <span>逐节讲解</span>

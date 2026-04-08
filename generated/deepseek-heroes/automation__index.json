@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:49:14.928Z",
+  "pathname": "/automation/index",
+  "title": "Automation & Tasks",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "OpenClaw后台任务机制选择指南",
+    "heroSummary": "这页帮你根据具体需求选择后台任务类型：需要精确定时选Cron，需要会话上下文选Heartbeat，需要追踪任务记录选Background Tasks。先看快速决策流程图确定你的使用场景，特别注意Cron和Heartbeat在定时精度和会话隔离上的关键区别。"
+  }
+}

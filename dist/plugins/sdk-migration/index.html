@@ -2106,8 +2106,8 @@
           </div>
         </div>
         <p class="hero-eyebrow">Plugins 导读</p>
-        <h1>新本领插件 SDK Migration：先看这块外挂积木怎么插</h1>
-        <p class="hero-copy">这页讲的是插件这块积木怎么接进系统。你应该先搞清楚它负责哪段能力、配置写在哪里、外部系统怎样通过它进来，以及哪些 secret、route 或 manifest 最不能配错。原文最想强调的那句话，可以先抓成：新本领插件 SDK Migration。</p>
+        <h1>插件SDK迁移指南：替换废弃导入，避免未来中断</h1>
+        <p class="hero-copy">本页指导如何将旧版插件从废弃的兼容层迁移到新的模块化SDK。首先应使用grep命令查找并替换`plugin-sdk/compat`和`openclaw/extension-api`这两个废弃的导入路径。迁移时最容易出错的地方是Windows包装器回退行为，未显式设置`allowShellFallback: true`将导致失败。</p>
         <div class="hero-pills">
           <span>气球故事书主题</span>
           <span>逐节讲解</span>

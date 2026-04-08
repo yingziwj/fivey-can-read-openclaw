@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:47:54.139Z",
+  "pathname": "/concepts/delegate-architecture",
+  "title": "Delegate Architecture",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "委托代理架构：让AI助手以独立身份代表组织成员工作",
+    "heroSummary": "这页解释如何将OpenClaw配置为拥有独立身份的委托代理，代表组织成员处理邮件、日程等任务。你需要先理解委托代理与个人助手的核心区别：委托代理使用自己的账户和权限，不会冒充人类。配置时最容易忽略权限层级，应从只读+草稿模式开始，避免过度授权。"
+  }
+}

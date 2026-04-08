@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:47:07.494Z",
+  "pathname": "/channels/broadcast-groups",
+  "title": "Broadcast Groups",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "多智能体同时处理消息的广播组配置",
+    "heroSummary": "这页教你如何配置广播组，让多个智能体在同一个WhatsApp群聊中同时处理用户消息。配置时要注意：目前仅支持WhatsApp渠道，且广播触发时机取决于群组激活规则。最容易出错的地方是忘记设置智能体的具体职责范围，导致多个智能体重复响应相同内容。"
+  }
+}

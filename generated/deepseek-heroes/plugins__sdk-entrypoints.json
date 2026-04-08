@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:49:30.146Z",
+  "pathname": "/plugins/sdk-entrypoints",
+  "title": "Plugin Entry Points",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "插件入口点：三种定义方式与注册模式",
+    "heroSummary": "这页详细解释了插件如何通过definePluginEntry、defineChannelPluginEntry和defineSetupPluginEntry三种辅助函数定义入口对象。开发时需根据插件类型选择对应函数，并特别注意api.registrationMode的不同值，它决定了在网关启动、通道禁用或CLI元数据捕获等场景下应注册哪些组件，避免错误地加载重型运行时。"
+  }
+}

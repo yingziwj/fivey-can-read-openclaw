@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:51:05.076Z",
+  "pathname": "/tools/skills-config",
+  "title": "Skills Config",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "配置技能加载与安装",
+    "heroSummary": "这页说明如何通过 `~/.openclaw/openclaw.json` 中的 `skills` 字段管理技能，包括允许加载哪些技能、从哪些目录加载，以及安装时使用哪个包管理器。最容易搞错的是：在沙盒环境中，技能进程不继承主机的环境变量，必须通过 `agents.defaults.sandbox.docker.env` 单独配置。"
+  }
+}

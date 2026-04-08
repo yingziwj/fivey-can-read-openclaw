@@ -2106,8 +2106,8 @@
           </div>
         </div>
         <p class="hero-eyebrow">Reference 导读</p>
-        <h1>Session Management Deep Dive：把它当成字典看就不容易晕</h1>
-        <p class="hero-copy">这页更像参考字典。先别试图整页背下来，先抓住它在回答哪类具体问题、适合什么时候回来翻、哪些字段和表格是拿来当场查的。原文最想强调的那句话，可以先抓成：Session Management &amp; Compaction (Deep Dive)。</p>
+        <h1>OpenClaw会话管理与压缩机制详解</h1>
+        <p class="hero-copy">本页详细解析OpenClaw会话从路由到持久化的完整流程，重点说明会话存储(sessions.json)与对话记录(*.jsonl)的双层结构。阅读时应先理解Gateway作为唯一状态源的核心地位，避免在远程模式下误查本地文件。最需注意的是磁盘空间控制机制，当启用enforce模式时系统会按特定顺序清理文件，可能影响会话数据的保留。</p>
         <div class="hero-pills">
           <span>气球故事书主题</span>
           <span>逐节讲解</span>

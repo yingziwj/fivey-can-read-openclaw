@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:52:04.082Z",
+  "pathname": "/gateway/tools-invoke-http-api",
+  "title": "Tools Invoke API",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "通过 HTTP 直接调用单个工具",
+    "heroSummary": "本页说明如何使用 Gateway 的 /tools/invoke 端点直接调用工具，需注意其认证等同于网关操作员权限。调用时需在请求体中指定工具名、参数和会话键，工具可用性受网关策略链控制。最关键的安全要点是：此端点应视为网关的完全操作员访问接口，切勿将网关的共享密钥凭证暴露给不受信任的调用方，且不应将此端点直接暴露在公网上。"
+  }
+}

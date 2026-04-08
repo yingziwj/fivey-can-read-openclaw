@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:53:17.553Z",
+  "pathname": "/ci",
+  "title": "CI Pipeline",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "CI流水线任务清单与执行逻辑",
+    "heroSummary": "本页详细列出了CI流水线中每个任务的具体用途、触发条件和执行顺序，重点解释了智能范围检测如何跳过不必要的任务以节省时间。最该先看Job Overview表格，了解各任务的分工；最容易搞错的是preflight任务中的范围检测逻辑，它决定了后续哪些任务会运行，而不是一个独立的检查步骤。"
+  }
+}

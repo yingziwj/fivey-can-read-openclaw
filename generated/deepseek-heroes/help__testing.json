@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:54:28.038Z",
+  "pathname": "/help/testing",
+  "title": "Testing",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "OpenClaw 测试套件与常用命令指南",
+    "heroSummary": "本页详细说明 OpenClaw 的三个测试套件（单元/集成、端到端、实时测试）各自覆盖的范围和运行命令。最该先看“Quick start”部分，了解日常开发、调试和提交前应运行的命令。最容易搞错的是混淆不同套件的用途，例如用单元测试去验证需要真实密钥的模型行为，或忘记在修改测试代码后运行覆盖率检查。"
+  }
+}

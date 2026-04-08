@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:48:14.448Z",
+  "pathname": "/concepts/soul",
+  "title": "SOUL.md Personality Guide",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "SOUL.md文件：定义AI助手性格的核心配置文件",
+    "heroSummary": "这页教你如何通过SOUL.md文件设置AI助手的语气、观点和表达风格，直接影响对话体验。先看“What belongs in SOUL.md”部分，明确哪些内容该写、哪些不该写。最容易错的是把文件写成冗长的个人故事或公司政策，而不是能改变对话行为的简洁指令。"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:48:55.315Z",
+  "pathname": "/install/uninstall",
+  "title": "Uninstall",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "卸载OpenClaw的两种路径",
+    "heroSummary": "这页教你如何彻底卸载OpenClaw，根据CLI是否还在，选择简单路径或手动移除服务。先确认openclaw命令是否可用，如果已删除但服务仍在运行，必须手动清理macOS的launchd或Linux的systemd配置。最容易错的是忘记删除遗留的配置文件，导致服务重启后自动恢复。"
+  }
+}

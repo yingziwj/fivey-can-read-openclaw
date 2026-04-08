@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:54:40.818Z",
+  "pathname": "/reference/templates/AGENTS",
+  "title": "AGENTS.md Template",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "AGENTS.md工作空间配置指南",
+    "heroSummary": "这页详细说明AGENTS.md工作空间的启动流程和记忆文件管理规则。启动时必须先读取SOUL.md和USER.md文件来确认身份和任务，然后加载最近两天的记忆文件。特别注意MEMORY.md文件只能在主会话中加载，包含个人敏感信息，绝不能在群聊或共享环境中使用。"
+  }
+}

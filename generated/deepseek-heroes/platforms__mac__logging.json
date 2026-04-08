@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:52:33.010Z",
+  "pathname": "/platforms/mac/logging",
+  "title": "macOS Logging",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "macOS日志配置与调试文件管理",
+    "heroSummary": "这页详细说明如何在macOS上配置OpenClaw的日志系统，包括启用本地滚动诊断日志和设置统一日志的隐私数据可见性。先看如何启用调试面板中的滚动日志文件，这是捕获持久日志的关键步骤。最容易错的是忘记在调试后关闭隐私数据可见性，这可能导致敏感信息泄露。"
+  }
+}

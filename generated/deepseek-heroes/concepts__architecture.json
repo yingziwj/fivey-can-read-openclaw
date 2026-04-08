@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:47:49.242Z",
+  "pathname": "/concepts/architecture",
+  "title": "Gateway Architecture",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "网关架构：一个中心连接所有消息平台和设备",
+    "heroSummary": "这页讲的是系统如何通过一个网关（Gateway）统一管理WhatsApp、Telegram等消息服务，并通过WebSocket连接控制端（如macOS应用）和设备节点（如手机）。最该先看网关如何作为唯一中心，负责所有外部消息连接和会话。最容易搞错的是节点（Nodes）虽然也连同一个WebSocket，但需要声明`role: node`并提供设备身份，其配对是基于设备的。"
+  }
+}

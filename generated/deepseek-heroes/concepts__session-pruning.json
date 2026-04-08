@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:48:14.243Z",
+  "pathname": "/concepts/session-pruning",
+  "title": "Session Pruning",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "会话修剪：自动清理工具结果以节省成本",
+    "heroSummary": "这页解释会话修剪如何自动移除旧工具结果来减少上下文膨胀，特别适合Anthropic提示缓存场景。最该先看它如何通过软修剪和硬清除两步操作保留对话文本。最容易搞错的是它只影响内存中的上下文，不会修改磁盘上的完整会话记录。"
+  }
+}

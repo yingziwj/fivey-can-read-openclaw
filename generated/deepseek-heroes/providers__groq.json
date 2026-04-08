@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:49:57.891Z",
+  "pathname": "/providers/groq",
+  "title": "Groq",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "接入Groq：配置API密钥与默认模型",
+    "heroSummary": "这页指导如何将OpenClaw连接到Groq的OpenAI兼容API，以使用其高速推理服务。首先获取GROQ_API_KEY并设置默认模型，配置时最容易忽略的是在守护进程环境中确保环境变量可访问。"
+  }
+}

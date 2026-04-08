@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:50:37.306Z",
+  "pathname": "/tools/duckduckgo-search",
+  "title": "DuckDuckGo Search",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "DuckDuckGo 无密钥搜索配置",
+    "heroSummary": "这页教你如何在 OpenClaw 中配置 DuckDuckGo 作为无需 API 密钥的网页搜索工具。配置时只需在 web 工具中指定 provider 为 'duckduckgo'，但要注意这是实验性集成，可能因反爬机制或页面结构变化而中断。"
+  }
+}

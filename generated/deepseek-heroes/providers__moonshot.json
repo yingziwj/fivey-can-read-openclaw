@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:50:07.988Z",
+  "pathname": "/providers/moonshot",
+  "title": "Moonshot AI",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "配置 Moonshot AI (Kimi) 接入",
+    "heroSummary": "这页教你如何配置 Moonshot AI 的 Kimi API 和 Kimi Coding，包括设置 API 密钥、选择模型和配置网络搜索。先看 Start Here 部分了解基本模型 ID 和配置结构，最容易错的是混淆 moonshot/ 和 kimi/ 前缀的模型引用，以及选错 API 端点（国际版或中国版）。"
+  }
+}

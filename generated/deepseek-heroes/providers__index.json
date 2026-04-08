@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:50:03.814Z",
+  "pathname": "/providers/index",
+  "title": "Provider Directory",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "OpenClaw 支持的模型提供商列表与接入指南",
+    "heroSummary": "本页列出了 OpenClaw 支持的所有模型提供商，并说明如何通过身份验证和配置默认模型来接入。接入时，最关键的一步是正确设置 `agents.defaults.model.primary` 为 `provider/model` 格式。请注意，此页不涉及聊天渠道（如 WhatsApp、Telegram）的配置，相关文档需查看单独的 [Channels](/channels) 页面。"
+  }
+}

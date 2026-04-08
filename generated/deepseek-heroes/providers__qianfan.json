@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:50:16.969Z",
+  "pathname": "/providers/qianfan",
+  "title": "Qianfan",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "接入百度千帆大模型平台",
+    "heroSummary": "这页教你如何配置 OpenClaw 使用百度千帆的统一 API。先准备好千帆 API 密钥，然后在配置中填入密钥并指定模型。注意 API 密钥格式是 `bce-v3/ALTAK-...`，且配置里的 `baseUrl` 必须指向 `https://qianfan.baidubce.com/v2`。"
+  }
+}

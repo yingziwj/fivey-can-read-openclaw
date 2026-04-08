@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:50:46.916Z",
+  "pathname": "/tools/kimi-search",
+  "title": "Kimi Search",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "配置 Kimi 搜索：获取 API 密钥与避免 401 错误",
+    "heroSummary": "这页教你如何在 OpenClaw 中接入 Kimi 作为网页搜索工具，核心是获取 Moonshot API 密钥并正确配置。配置时最容易出错的是 API 端点（baseUrl）选择不当导致 401 错误，需注意中国区与国际区端点的区别。"
+  }
+}

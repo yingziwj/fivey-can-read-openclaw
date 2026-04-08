@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:49:39.731Z",
+  "pathname": "/plugins/voice-call",
+  "title": "Voice Call Plugin",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "OpenClaw语音通话插件安装与配置",
+    "heroSummary": "这页详细说明如何安装和配置语音通话插件，支持Twilio、Telnyx、Plivo等提供商。配置时需在plugins.entries.voice-call.config下设置provider和API密钥，并确保webhook URL可公开访问。最容易出错的是签名验证和ngrok免费层URL变动，生产环境建议使用稳定域名。"
+  }
+}

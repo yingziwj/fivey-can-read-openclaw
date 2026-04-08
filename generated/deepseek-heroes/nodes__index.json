@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:52:13.941Z",
+  "pathname": "/nodes/index",
+  "title": "Nodes",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "节点设备连接与命令执行指南",
+    "heroSummary": "这页说明如何将手机、电脑等设备作为节点连接到网关，并通过WebSocket暴露canvas、camera等命令接口。配置时需注意节点是外围设备而非网关，所有消息仍由网关处理，配对后需通过CLI批准设备请求。最容易出错的是节点重连时认证信息变更会导致旧请求失效，必须重新列出设备ID再批准。"
+  }
+}

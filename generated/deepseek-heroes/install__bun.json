@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:48:25.529Z",
+  "pathname": "/install/bun",
+  "title": "Bun (Experimental)",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "Bun 实验性安装与使用指南",
+    "heroSummary": "这页说明如何用 Bun 作为本地运行时直接运行 TypeScript，但生产环境网关不推荐使用（WhatsApp 和 Telegram 有已知问题）。安装时用 `bun install` 命令，注意它会忽略 `pnpm-lock.yaml` 且默认不保存锁文件。Bun 会阻止依赖的生命周期脚本执行，遇到运行时问题需用 `bun pm trust` 显式信任特定包。"
+  }
+}

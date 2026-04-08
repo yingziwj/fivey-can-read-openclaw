@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:52:27.880Z",
+  "pathname": "/platforms/mac/child-process",
+  "title": "Gateway Lifecycle",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "macOS上Gateway的启动与管理方式",
+    "heroSummary": "这页说明macOS应用默认通过launchd管理Gateway，而非子进程模式。最该先看默认的launchd行为，了解应用如何自动启动Gateway。最容易搞错的是开发构建时的签名问题，未签名构建会禁用launchd，需手动重置。"
+  }
+}

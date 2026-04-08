@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:53:17.553Z",
+  "pathname": "/cli/agent",
+  "title": "agent",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "通过命令行运行智能体任务",
+    "heroSummary": "使用 openclaw agent 命令通过网关或本地模式执行智能体任务，必须至少指定一个会话选择器（如 --to、--session-id 或 --agent）。最需要注意 --local 参数会强制使用嵌入式智能体，但仍会预加载插件注册表，确保插件功能可用。"
+  }
+}

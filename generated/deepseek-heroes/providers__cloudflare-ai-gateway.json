@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:49:48.310Z",
+  "pathname": "/providers/cloudflare-ai-gateway",
+  "title": "Cloudflare AI Gateway",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "配置 Cloudflare AI Gateway 接入 Anthropic",
+    "heroSummary": "这页教你如何通过 Cloudflare AI Gateway 接入 Anthropic 模型，重点是设置正确的 Base URL 和 API Key。最容易出错的地方是忘记在启用 Gateway 认证时额外添加 cf-aig-authorization 请求头。"
+  }
+}

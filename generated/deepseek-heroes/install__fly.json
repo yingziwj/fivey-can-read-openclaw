@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:48:31.076Z",
+  "pathname": "/install/fly",
+  "title": "Fly.io",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "在 Fly.io 上部署 OpenClaw 网关",
+    "heroSummary": "本页指导你将 OpenClaw 网关部署到 Fly.io 平台，实现持久化存储和自动 HTTPS。你需要先准备好模型 API 密钥和频道凭证，然后通过修改 fly.toml 配置文件并设置环境密钥来完成部署。最常见的错误是网关绑定到本地地址导致应用无法访问，需在配置中指定正确的绑定地址和端口。"
+  }
+}

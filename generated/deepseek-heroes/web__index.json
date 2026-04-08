@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:53:12.706Z",
+  "pathname": "/web/index",
+  "title": "Web",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "网关Web界面配置与访问指南",
+    "heroSummary": "这页详细说明如何配置和访问网关的Web控制界面，包括默认启用设置、绑定模式选择和访问路径。配置时需注意区分loopback和tailnet两种绑定模式，它们决定了访问地址和安全性设置。最容易出错的地方是忘记设置basePath或混淆不同绑定模式下的访问URL格式。"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:53:23.484Z",
+  "pathname": "/cli/clawbot",
+  "title": "clawbot",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "clawbot 命令：旧版别名与迁移指南",
+    "heroSummary": "这页说明 `openclaw clawbot` 是旧版命令别名，仅用于向后兼容，当前唯一支持的别名是 `openclaw clawbot qr`。建议直接使用现代顶级命令如 `openclaw qr`，避免混淆或依赖过时语法。"
+  }
+}

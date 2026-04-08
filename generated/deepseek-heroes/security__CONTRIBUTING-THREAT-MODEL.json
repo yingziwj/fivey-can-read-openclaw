@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:53:01.843Z",
+  "pathname": "/security/CONTRIBUTING-THREAT-MODEL",
+  "title": "Contributing to the Threat Model",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "如何为OpenClaw威胁模型贡献内容",
+    "heroSummary": "这页说明如何提交新的安全威胁、缓解措施或攻击链，帮助完善OpenClaw的安全文档。最该先看“添加威胁”部分，了解如何用简单描述提交潜在风险。最容易搞错的是将威胁模型贡献与实时漏洞报告混淆——发现可被利用的漏洞应通过Trust页面报告。"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:50:12.721Z",
+  "pathname": "/providers/ollama",
+  "title": "Ollama",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "OpenClaw接入Ollama本地大模型",
+    "heroSummary": "这页教你如何将OpenClaw连接到Ollama，以使用本地或云端开源大模型。最该先看“快速配置”部分，用`openclaw onboard`命令自动完成设置。最容易搞错的是：远程Ollama用户必须使用原生API地址`http://host:11434`，而不是OpenAI兼容的`/v1`端点，否则工具调用会失效。"
+  }
+}

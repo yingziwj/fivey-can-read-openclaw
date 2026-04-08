@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:49:05.139Z",
+  "pathname": "/start/openclaw",
+  "title": "Personal Assistant Setup",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "用OpenClaw搭建个人AI助手：配置专属WhatsApp号码",
+    "heroSummary": "这页教你如何配置一个专属的WhatsApp号码作为你的AI助手，避免将个人账号直接接入。最关键的是设置allowFrom白名单，只允许特定号码访问，否则你的Mac会暴露给所有WhatsApp消息。配置时务必使用第二个手机号，并在openclaw.json中明确指定允许的来电号码。"
+  }
+}

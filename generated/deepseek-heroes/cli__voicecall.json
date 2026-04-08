@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:54:07.912Z",
+  "pathname": "/cli/voicecall",
+  "title": "voicecall",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "OpenClaw 语音通话 CLI 命令详解",
+    "heroSummary": "这页详细说明 openclaw voicecall 命令的用法，包括通话状态查询、发起通话、继续通话和结束通话等核心操作。使用前需确保已安装并启用 voice-call 插件，否则命令不会显示。特别注意 expose 命令的安全配置，建议优先使用 Tailscale Serve 模式而非 Funnel 模式来保护 webhook 端点。"
+  }
+}

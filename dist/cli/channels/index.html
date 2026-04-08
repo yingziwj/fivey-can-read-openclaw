@@ -2106,8 +2106,8 @@
           </div>
         </div>
         <p class="hero-eyebrow">Cli 导读</p>
-        <h1>消息通道s：先把这颗命令按钮认清</h1>
-        <p class="hero-copy">这页要帮你把命令行里的这颗按钮认清：它解决什么问题、常见命令各自是在按哪一下、出了错时该先看哪类反馈。原文最想强调的那句话，可以先抓成：openclaw 消息通道s。</p>
+        <h1>管理聊天通道账户与运行状态</h1>
+        <p class="hero-copy">这页讲解如何使用 openclaw channels 命令管理 Gateway 上的聊天通道账户，包括查看状态、添加/移除账户等操作。最该先看 channels status 命令，它能检查通道的实时运行状态，但要注意 --probe 参数仅在网关可达时才会执行实际探测，否则只显示配置摘要。添加账户时最容易错在忘记指定通道类型所需的特定参数（如 Telegram 的 --token 或 Nostr 的 --private-key），建议先运行 openclaw channels add --help 查看对应通道的必填字段。</p>
         <div class="hero-pills">
           <span>气球故事书主题</span>
           <span>逐节讲解</span>

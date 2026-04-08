@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:52:42.363Z",
+  "pathname": "/platforms/mac/skills",
+  "title": "Skills (macOS)",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "macOS 技能安装与配置详解",
+    "heroSummary": "这页说明 macOS 应用如何通过网关远程管理 OpenClaw 技能，包括安装优先级和密钥存储位置。安装时网关会按 Homebrew、uv、node 管理器顺序选择，默认会因危险代码阻止安装。API 密钥和配置存储在本地 JSON 文件中，通过网关请求更新。"
+  }
+}

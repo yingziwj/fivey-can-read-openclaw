@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:47:54.986Z",
+  "pathname": "/concepts/dreaming",
+  "title": "Dreaming (experimental)",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "Dreaming：后台记忆固化系统（实验性功能）",
+    "heroSummary": "这页讲的是OpenClaw中负责将短期记忆信号转化为长期记忆的后台处理系统，默认关闭需要手动开启。读这页最该先看Dreaming会生成哪些文件（机器状态在memory/.dreams/，可读输出在DREAMS.md），最容易搞错的是三个处理阶段（Light/Deep/REM）是内部实现细节，不是用户可配置的独立模式。"
+  }
+}

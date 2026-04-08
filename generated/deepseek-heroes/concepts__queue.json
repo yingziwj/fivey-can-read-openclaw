@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:48:09.431Z",
+  "pathname": "/concepts/queue",
+  "title": "Command Queue",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "命令队列：如何管理多消息并发避免冲突",
+    "heroSummary": "这页讲的是系统如何通过队列机制处理同时到达的自动回复请求，防止多个代理运行相互干扰。你应该先看“队列模式”部分，了解不同渠道如何配置消息处理方式。最容易搞错的是steer-backlog模式，它会在当前运行后保留消息进行后续回复，可能导致流式界面出现重复响应。"
+  }
+}

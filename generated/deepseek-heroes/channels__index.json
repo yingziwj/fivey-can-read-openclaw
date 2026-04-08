@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:47:20.414Z",
+  "pathname": "/channels/index",
+  "title": "Chat Channels",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "OpenClaw支持的聊天应用通道",
+    "heroSummary": "这页列出了OpenClaw能连接的所有聊天应用，包括iMessage、Discord、WhatsApp等。你应该先看BlueBubbles（推荐用于iMessage）或Telegram（设置最简单）。注意不同通道的功能支持差异很大，比如WhatsApp需要QR配对，而iMessage的编辑功能在macOS 26上可能失效。"
+  }
+}

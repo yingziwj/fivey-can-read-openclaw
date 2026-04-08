@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:54:54.616Z",
+  "pathname": "/reference/token-use",
+  "title": "Token Use and Costs",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "OpenClaw 的 Token 计算与成本控制",
+    "heroSummary": "这页详细说明了 OpenClaw 如何计算 Token 用量，以及哪些内容会占用上下文窗口。使用 `/status` 和 `/usage` 命令可以实时查看用量和预估成本，但需注意 OAuth 授权会隐藏美元成本。"
+  }
+}

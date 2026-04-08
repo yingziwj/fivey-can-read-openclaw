@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:54:11.827Z",
+  "pathname": "/concepts/timezone",
+  "title": "Timezones",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "配置消息信封和系统提示的时区",
+    "heroSummary": "这页讲解如何设置消息信封的时区格式和系统提示中的用户时区。先看 envelopeTimezone 配置项，它决定信封时间戳是本地、UTC、用户时区还是固定时区。最容易错的是未设置 userTimezone 时，系统会动态使用主机时区，可能导致时间显示不一致。"
+  }
+}

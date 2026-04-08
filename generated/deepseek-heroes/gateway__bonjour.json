@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:51:28.907Z",
+  "pathname": "/gateway/bonjour",
+  "title": "Bonjour Discovery",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "跨网络自动发现网关的配置方法",
+    "heroSummary": "这页讲解如何配置Bonjour/mDNS，让设备在局域网或跨Tailscale网络时都能自动发现网关。最该先看网关配置，启用wideArea选项来发布DNS-SD记录。最容易错的是忘记在Tailscale控制台设置DNS服务器和域名解析，这会导致跨网络发现失败。"
+  }
+}

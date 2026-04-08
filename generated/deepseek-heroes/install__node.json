@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:48:45.373Z",
+  "pathname": "/install/node",
+  "title": "Node.js",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "安装 Node.js 并配置环境",
+    "heroSummary": "这页指导你为 OpenClaw 安装 Node.js 22.14 或更新版本，并确保全局安装路径正确配置。先运行 node -v 检查版本，如果版本不符或遇到 'openclaw: command not found' 错误，按步骤调整 PATH 或 npm 全局前缀。"
+  }
+}

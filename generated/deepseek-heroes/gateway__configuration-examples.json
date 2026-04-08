@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:51:33.792Z",
+  "pathname": "/gateway/configuration-examples",
+  "title": "Configuration Examples",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "网关配置示例：从最简到推荐配置",
+    "heroSummary": "这页提供OpenClaw网关的JSON5配置示例，从最简配置到推荐的多功能配置。先看“推荐入门配置”，它包含了身份、模型和频道设置，能快速启动一个功能完整的机器人。注意配置中channels.whatsapp.allowFrom字段必须填写允许的号码，否则机器人无法接收消息。"
+  }
+}

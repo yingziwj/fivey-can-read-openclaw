@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:52:14.633Z",
+  "pathname": "/nodes/images",
+  "title": "Image and Media Support",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "WhatsApp媒体发送与自动回复配置指南",
+    "heroSummary": "这页详细说明了通过OpenClaw CLI发送媒体文件到WhatsApp的具体命令格式和参数要求，包括图片压缩、音频转语音笔记等处理规则。使用`openclaw message send --media`命令时，必须注意文件路径或URL的格式，以及不同类型媒体的大小限制差异。配置自动回复时，`getReplyFromConfig`返回的媒体URL会经过相同处理流程，多张图片会按顺序发送。"
+  }
+}

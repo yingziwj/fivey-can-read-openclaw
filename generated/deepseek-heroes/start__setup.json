@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:55:00.059Z",
+  "pathname": "/start/setup",
+  "title": "Setup",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "OpenClaw 安装与配置指南",
+    "heroSummary": "这页详细说明 OpenClaw 的两种安装方式：稳定版 macOS 应用和前沿版源码运行。最关键的是配置文件的存放位置——定制化内容应放在 `~/.openclaw/` 目录下，这样更新系统时不会丢失个人设置。最容易出错的地方是混淆本地配置和源码仓库，导致更新后定制内容被覆盖。"
+  }
+}

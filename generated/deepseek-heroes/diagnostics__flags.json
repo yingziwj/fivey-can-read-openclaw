@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:54:17.379Z",
+  "pathname": "/diagnostics/flags",
+  "title": "Diagnostics Flags",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "诊断标志：精准开启调试日志",
+    "heroSummary": "这页教你如何通过配置诊断标志，只开启特定子系统的调试日志，避免全局冗长日志。先看配置示例，了解如何填写标志字符串（支持通配符）。最容易错的是修改配置后忘记重启网关，导致标志不生效。"
+  }
+}

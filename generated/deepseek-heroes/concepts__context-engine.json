@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:47:54.108Z",
+  "pathname": "/concepts/context-engine",
+  "title": "Context Engine",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "OpenClaw上下文引擎：控制模型对话历史的构建方式",
+    "heroSummary": "这页讲解OpenClaw中负责管理模型对话上下文的引擎机制，它决定哪些历史消息被保留、如何压缩旧内容以及跨子代理的上下文处理。你需要先了解如何检查和切换不同的上下文引擎，因为这会直接影响模型接收到的历史信息。最容易出错的地方是配置插件时引擎ID必须与插件注册的ID完全匹配，否则无法生效。"
+  }
+}

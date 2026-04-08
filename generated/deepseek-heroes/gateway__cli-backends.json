@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:51:29.462Z",
+  "pathname": "/gateway/cli-backends",
+  "title": "CLI Backends",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "配置本地AI命令行工具作为备用响应源",
+    "heroSummary": "这页教你如何将本地AI命令行工具设置为OpenClaw的备用响应源，当API提供商故障或限流时自动切换。最该先看快速启动部分，了解如何无需配置直接使用Codex CLI。最容易错的是在allowlist配置中忘记包含CLI后端模型，导致备用机制不生效。"
+  }
+}

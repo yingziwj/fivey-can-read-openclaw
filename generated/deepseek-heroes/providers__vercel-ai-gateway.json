@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:52:56.734Z",
+  "pathname": "/providers/vercel-ai-gateway",
+  "title": "Vercel AI Gateway",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "接入 Vercel AI Gateway 配置指南",
+    "heroSummary": "这页说明如何将 OpenClaw 连接到 Vercel AI Gateway，以通过单一端点访问数百个模型。配置时需先设置 API 密钥，并注意环境变量需能被后台进程访问。"
+  }
+}

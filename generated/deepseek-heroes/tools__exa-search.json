@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:50:41.056Z",
+  "pathname": "/tools/exa-search",
+  "title": "Exa Search",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "配置 Exa 作为 OpenClaw 的网页搜索工具",
+    "heroSummary": "这页教你如何将 Exa AI 接入 OpenClaw 作为 `web_search` 的搜索提供商。首先需要获取并配置 API 密钥，最容易出错的地方是混淆环境变量和配置文件两种设置方式。"
+  }
+}

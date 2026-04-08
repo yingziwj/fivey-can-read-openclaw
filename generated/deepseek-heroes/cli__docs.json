@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:53:40.286Z",
+  "pathname": "/cli/docs",
+  "title": "docs",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "用 openclaw docs 搜索实时文档",
+    "heroSummary": "这页介绍 openclaw docs 命令，用于在实时文档索引中搜索关键词。输入搜索词作为参数即可查询，例如 openclaw docs browser existing-session。注意查询词需准确匹配文档术语，否则可能返回空结果。"
+  }
+}

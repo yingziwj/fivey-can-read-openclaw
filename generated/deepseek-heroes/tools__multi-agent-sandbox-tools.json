@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-04-08T14:50:55.077Z",
+  "pathname": "/tools/multi-agent-sandbox-tools",
+  "title": "Multi-Agent Sandbox & Tools",
+  "model": "deepseek-chat",
+  "result": {
+    "heroTitle": "多代理沙盒与工具配置详解",
+    "heroSummary": "这页教你如何为每个代理单独配置沙盒和工具权限，覆盖全局设置。先看代理认证配置，每个代理有独立的认证文件，绝不能跨代理共享。最容易错的是误用agentDir导致认证泄露，或混淆全局与代理级配置的优先级。"
+  }
+}

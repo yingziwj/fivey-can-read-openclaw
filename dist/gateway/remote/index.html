@@ -2106,8 +2106,8 @@
           </div>
         </div>
         <p class="hero-eyebrow">Gateway 导读</p>
-        <h1>Remote Access：先看总控室这一层在管什么</h1>
-        <p class="hero-copy">这页讲的是网关总控室的一块。你先要看懂它在整套系统里卡在哪一层、会影响哪些客户端和工具、配置改动会落到哪里，然后再去看命令。原文最想强调的那句话，可以先抓成：Remote access (SSH, tunnels, and tailnets)。</p>
+        <h1>远程访问网关的两种核心模式</h1>
+        <p class="hero-copy">这页讲如何通过SSH隧道或Tailscale网络远程连接网关主机，让代理程序在专用服务器上持续运行。你应该先确定自己的使用场景：是需要网关24小时在线，还是仅临时从笔记本电脑远程控制。最容易搞错的是混淆网关主机和客户端角色，网关必须绑定到本地回环端口，远程连接时才需要隧道转发。</p>
         <div class="hero-pills">
           <span>气球故事书主题</span>
           <span>逐节讲解</span>
