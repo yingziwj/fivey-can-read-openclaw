@@ -357,8 +357,118 @@ export function storyLead(title, description) {
   const softenedTitle = softenTerms(title);
   const softenedDescription = softenTerms(description);
   return toSentence(
-    `这一页像一本关于“${softenedTitle}”的小绘本，它先告诉我们这位机器人朋友会做什么，再一步一步解释什么时候该这样做。${softenedDescription ? ` 你可以先把它想成：${softenedDescription}` : ""}`
+    `先别急着背术语。这页真正想让你看懂的是“${softenedTitle}”到底管哪件事、什么时候该用、以及最容易在哪一步搞混。${softenedDescription ? ` 原文里真正关键的一句是在说：${excerpt(softenedDescription, 96)}` : ""}`
   );
+}
+
+function heroDetail(description = "") {
+  const softened = softenTerms(description);
+  if (!softened) {
+    return "";
+  }
+
+  return `原文最想强调的那句话，可以先抓成：${excerpt(softened, 88)}。`;
+}
+
+export function buildDocHeroTitle(page) {
+  const title = softenTerms(page.title || "");
+
+  switch (page.sectionKey) {
+    case "channels":
+      return `${title}：先看这扇消息门怎么接`;
+    case "providers":
+      return `${title}：先搞清这家模型入口怎么开`;
+    case "tools":
+      return `${title}：先弄明白它到底替你做哪一步`;
+    case "concepts":
+      return `${title}：先把这条底层规则想明白`;
+    case "install":
+      return `${title}：先选对这条安装路`;
+    case "automation":
+      return `${title}：先看它会怎么自己跑`;
+    case "cli":
+      return `${title}：先把这颗命令按钮认清`;
+    case "plugins":
+      return `${title}：先看这块外挂积木怎么插`;
+    case "platforms":
+      return `${title}：先看这个平台版本到底管哪些事`;
+    case "gateway":
+      return `${title}：先看总控室这一层在管什么`;
+    case "web":
+      return `${title}：先看这个网页面板到底帮你干嘛`;
+    case "reference":
+      return `${title}：把它当成字典看就不容易晕`;
+    case "help":
+      return `${title}：先看它到底在帮你排什么雷`;
+    case "nodes":
+      return `${title}：先看这只感官小帮手能做什么`;
+    case "security":
+      return `${title}：先看守门规则到底防什么`;
+    case "logging":
+      return `${title}：先看日志到底记了哪些事`;
+    case "network":
+      return `${title}：先看消息和请求到底怎么跑`;
+    case "debug":
+    case "diagnostics":
+      return `${title}：先看这类毛病该从哪里下手查`;
+    case "start":
+      return `${title}：先把第一圈路走明白`;
+    case "index":
+      return `${title}：先看 OpenClaw 整体像什么`;
+    default:
+      return `${title}：先抓住它最核心的那件事`;
+  }
+}
+
+export function buildDocHeroText(page) {
+  const title = softenTerms(page.title || "");
+  const detail = heroDetail(page.description || "");
+
+  switch (page.sectionKey) {
+    case "channels":
+      return toSentence(`这页不是只在报配置名。它真正要帮你看懂的是：${title} 这扇门怎么连上 OpenClaw，要交哪把钥匙，什么消息会进来，以及哪些坑最容易把人绊住。${detail}`);
+    case "providers":
+      return toSentence(`先别急着填 key。这页真正要讲的是：${title} 这家入口走哪种认证、默认该请哪位模型老师、哪些地址和模式一填错就会整页失灵。${detail}`);
+    case "tools":
+      return toSentence(`这页重点不是术语，而是动作。它会讲清楚 ${title} 会在什么时候出手、吃进去什么、吐出来什么，以及命令和参数在现场到底像哪个按钮。${detail}`);
+    case "concepts":
+      return toSentence(`这页不是教你按按钮，而是在补脑内地图。看完你应该知道 ${title} 在系统里到底管什么、为什么会影响后面的行为，以及不理解它时最容易把哪几件事看反。${detail}`);
+    case "install":
+      return toSentence(`这页真正想解决的是：${title} 这条装法适合谁、要先准备什么、装完后怎么验活，以及哪些命令只是搬东西、哪些命令才是真正开机。${detail}`);
+    case "automation":
+      return toSentence(`这页重点不是“自动化”四个字，而是边界：${title} 什么时候会自己启动、会留下什么记录、和 cron、heartbeat、tasks 这些近亲到底怎么分工。${detail}`);
+    case "cli":
+      return toSentence(`这页要帮你把命令行里的这颗按钮认清：它解决什么问题、常见命令各自是在按哪一下、出了错时该先看哪类反馈。${detail}`);
+    case "plugins":
+      return toSentence(`这页讲的是插件这块积木怎么接进系统。你应该先搞清楚它负责哪段能力、配置写在哪里、外部系统怎样通过它进来，以及哪些 secret、route 或 manifest 最不能配错。${detail}`);
+    case "platforms":
+      return toSentence(`这页不是单纯介绍平台名，而是在讲这个平台版本能做什么、受哪些系统限制、要开哪些权限，以及日常最常见的掉链子点在哪里。${detail}`);
+    case "gateway":
+      return toSentence(`这页讲的是网关总控室的一块。你先要看懂它在整套系统里卡在哪一层、会影响哪些客户端和工具、配置改动会落到哪里，然后再去看命令。${detail}`);
+    case "web":
+      return toSentence(`这页主要在讲网页这一层到底能替你看见什么、控制什么、哪些设置只该在这里动，以及它和网关、通道、配对流程怎么串起来。${detail}`);
+    case "reference":
+      return toSentence(`这页更像参考字典。先别试图整页背下来，先抓住它在回答哪类具体问题、适合什么时候回来翻、哪些字段和表格是拿来当场查的。${detail}`);
+    case "help":
+      return toSentence(`这页属于排雷手册。重点是先看症状，再看该查哪条命令或日志，最后才决定要不要改配置，不要一上来就乱动系统。${detail}`);
+    case "nodes":
+      return toSentence(`这页讲的是 OpenClaw 接在外面的感官或动作小帮手。你要先看它能接什么输入、会产出什么结果、以及和主会话是怎么搭桥的。${detail}`);
+    case "security":
+      return toSentence(`这页不是在吓人，而是在画边界。它要你先看清系统到底防谁、信谁、哪条路默认放行、哪条路必须多加一道锁。${detail}`);
+    case "logging":
+      return toSentence(`这页讲的是系统把事情记到哪里、出了问题先该翻哪本记录本，以及哪些日志是现场看、哪些日志适合事后复盘。${detail}`);
+    case "network":
+      return toSentence(`这页讲的是请求和消息在系统里怎么走。先把路由看懂，后面很多“为什么连不上”或“为什么回不来”的问题就不会全靠猜。${detail}`);
+    case "debug":
+    case "diagnostics":
+      return toSentence(`这页是查毛病路线图。重点不是记结论，而是先学会从什么现象切进去、第一步看哪里、第二步怎么缩小范围。${detail}`);
+    case "start":
+      return toSentence(`这页属于第一圈导览，重点是别一上来被零件名淹没。你先要知道这一步在整套上手路线里排第几、做完后应该看到什么结果。${detail}`);
+    case "index":
+      return toSentence(`这页更像总地图。先把 OpenClaw 整体想成哪些房间拼在一起、你第一次读应该先进哪间房、不同房间分别解决什么问题。${detail}`);
+    default:
+      return storyLead(page.title || "", page.description || "");
+  }
 }
 
 export function storyForParagraph(text) {
