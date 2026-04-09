@@ -739,6 +739,7 @@ function renderSidebar(navigation, currentPathname) {
     <nav class="sidebar-nav">
       ${navigation
         .map((section) => {
+          const hasActivePage = section.pages.some((page) => page.pathname === currentPathname);
           const links = section.pages
             .map((page) => {
               const active = page.pathname === currentPathname ? "is-active" : "";
@@ -752,10 +753,10 @@ function renderSidebar(navigation, currentPathname) {
             .join("");
 
           return `
-            <section class="sidebar-group">
-              <h3>${escapeHtml(section.translatedLabel || translateSectionLabel(section.key, section.label))}</h3>
+            <details class="sidebar-group"${hasActivePage ? " open" : ""}>
+              <summary>${escapeHtml(section.translatedLabel || translateSectionLabel(section.key, section.label))}</summary>
               <div class="sidebar-links">${links}</div>
-            </section>
+            </details>
           `;
         })
         .join("")}
@@ -1239,17 +1240,46 @@ code, pre {
   gap: 18px;
 }
 
-.sidebar-group h3 {
-  margin: 0 0 10px;
+.sidebar-group {
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.48);
+  border: 1px solid rgba(176, 75, 143, 0.08);
+  overflow: hidden;
+}
+
+.sidebar-group summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  margin: 0;
   font-size: 0.86rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: #b04b8f;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sidebar-group summary::-webkit-details-marker {
+  display: none;
+}
+
+.sidebar-group summary::after {
+  content: "展开";
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  color: var(--soft-ink);
+}
+
+.sidebar-group[open] summary::after {
+  content: "收起";
 }
 
 .sidebar-links {
   display: grid;
   gap: 8px;
+  padding: 0 12px 12px;
 }
 
 .sidebar-link {
