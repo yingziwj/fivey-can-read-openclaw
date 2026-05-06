@@ -4,24 +4,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Codex Harness | Fivey Can Read OpenClaw</title>
-  <meta name="description" content="Codex Harness">
+  <meta name="description" content="启用内置 codex 插件后，模型发现、线程恢复、压缩、执行都交给 Codex 应用服务器，OpenClaw 仍管聊天通道、会话文件、工具、审批和消息展示。默认关闭，只有 model 前缀是 codex/ 或显式设置 runtime 为 codex 才生效，现有 openai/、anthropic/ 等模型不受影响。…">
   <meta name="robots" content="index,follow">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Fivey Can Read OpenClaw">
   <meta property="og:title" content="Codex Harness | Fivey Can Read OpenClaw">
-  <meta property="og:description" content="Codex Harness">
+  <meta property="og:description" content="启用内置 codex 插件后，模型发现、线程恢复、压缩、执行都交给 Codex 应用服务器，OpenClaw 仍管聊天通道、会话文件、工具、审批和消息展示。默认关闭，只有 model 前缀是 codex/ 或显式设置 runtime 为 codex 才生效，现有 openai/、anthropic/ 等模型不受影响。…">
   <meta property="og:url" content="https://fivey-can-read-openclaw.pages.dev/plugins/codex-harness/">
   <meta property="og:image" content="https://fivey-can-read-openclaw.pages.dev/og-image.svg">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Codex Harness | Fivey Can Read OpenClaw">
-  <meta name="twitter:description" content="Codex Harness">
+  <meta name="twitter:description" content="启用内置 codex 插件后，模型发现、线程恢复、压缩、执行都交给 Codex 应用服务器，OpenClaw 仍管聊天通道、会话文件、工具、审批和消息展示。默认关闭，只有 model 前缀是 codex/ 或显式设置 runtime 为 codex 才生效，现有 openai/、anthropic/ 等模型不受影响。…">
   <meta name="theme-color" content="#f5576c">
   <link rel="canonical" href="https://fivey-can-read-openclaw.pages.dev/plugins/codex-harness/">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="manifest" href="/site.webmanifest">
   <link rel="preload" href="/assets/site.css" as="style">
   <link rel="stylesheet" href="/assets/site.css">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Codex Harness","description":"Codex Harness","url":"https://fivey-can-read-openclaw.pages.dev/plugins/codex-harness/","isPartOf":{"@type":"WebSite","name":"Fivey Can Read OpenClaw","url":"https://fivey-can-read-openclaw.pages.dev"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Codex Harness","description":"启用内置 codex 插件后，模型发现、线程恢复、压缩、执行都交给 Codex 应用服务器，OpenClaw 仍管聊天通道、会话文件、工具、审批和消息展示。默认关闭，只有 model 前缀是 codex/ 或显式设置 runtime 为 codex 才生效，现有 openai/、anthropic/ 等模型不受影响。…","url":"https://fivey-can-read-openclaw.pages.dev/plugins/codex-harness/","isPartOf":{"@type":"WebSite","name":"Fivey Can Read OpenClaw","url":"https://fivey-can-read-openclaw.pages.dev"}}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://fivey-can-read-openclaw.pages.dev"},{"@type":"ListItem","position":2,"name":"Plugins","item":"https://fivey-can-read-openclaw.pages.dev/plugins/codex-harness/"}]}</script>
 </head>
 <body>
@@ -2180,8 +2180,8 @@
           </div>
         </div>
         <p class="hero-eyebrow">Plugins 导读</p>
-        <h1>Codex Harness：先看这块外挂积木怎么插</h1>
-        <p class="hero-copy">这页讲的是插件这块积木怎么接进系统。你应该先搞清楚它负责哪段能力、配置写在哪里、外部系统怎样通过它进来，以及哪些 secret、route 或 manifest 最不能配错。原文最想强调的那句话，可以先抓成：Codex Harness。</p>
+        <h1>Codex 接管底层 Agent 会话，OpenClaw 只做上层调度</h1>
+        <p class="hero-copy">启用内置 codex 插件后，模型发现、线程恢复、压缩、执行都交给 Codex 应用服务器，OpenClaw 仍管聊天通道、会话文件、工具、审批和消息展示。默认关闭，只有 model 前缀是 codex/ 或显式设置 runtime 为 codex 才生效，现有 openai/、anthropic/ 等模型不受影响。配置时最容易漏掉 plugins.allow 列表，记得把 codex 加进去。</p>
       </header>
 
       <div class="mobile-nav-shell" data-mobile-shell>

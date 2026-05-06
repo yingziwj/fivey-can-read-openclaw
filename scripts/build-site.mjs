@@ -641,7 +641,10 @@ function sectionGuide(section) {
 async function renderHandcraftedContent(page) {
   const filePath = handcraftedPageMap.get(page.pathname);
   if (!filePath) return null;
-  return fs.readFile(filePath, "utf8");
+  const original = await fs.readFile(filePath, "utf8");
+  const heroOverride = await loadHeroOverride(page);
+  const rewritten = rewriteHandcraftedOverviewCard(page, original, heroOverride);
+  return `<!-- handcrafted-source:${path.basename(filePath)} -->\n${rewritten}`;
 }
 
 async function renderAiPageContent(page) {
@@ -732,6 +735,51 @@ async function loadHeroOverride(page) {
   } catch {
     return null;
   }
+}
+
+function buildUnifiedOverviewCard(page, heroOverride) {
+  const overviewTitle = heroOverride?.heroTitle || buildDocHeroTitle(page);
+  const overviewSummary = heroOverride?.heroSummary || buildDocHeroText(page);
+  const firstSection = page.sections?.[0]?.title ? softenTerms(page.sections[0].title) : "";
+
+  return `
+<section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲这一页到底在解决什么</p>
+      <h2>${escapeHtml(overviewTitle)}</h2>
+      <p>${escapeHtml(overviewSummary)}</p>
+    </div>
+    <div class="overview-meta">
+      <span>原文共 ${page.sections.length} 节${firstSection ? `，先看 ${firstSection}` : ""}</span>
+      <span>路径：${escapeHtml(page.pathname)}</span>
+      <a href="${escapeHtml(page.url)}" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+`.trim();
+}
+
+function rewriteHandcraftedOverviewCard(page, html, heroOverride) {
+  const replacement = buildUnifiedOverviewCard(page, heroOverride);
+  const trimmed = html.trimStart();
+
+  if (!trimmed.startsWith("<section")) {
+    return `${replacement}\n\n${html}`;
+  }
+
+  const firstSectionEnd = trimmed.indexOf("</section>");
+  if (firstSectionEnd === -1) {
+    return `${replacement}\n\n${trimmed}`;
+  }
+
+  const firstSection = trimmed.slice(0, firstSectionEnd + "</section>".length);
+  if (!firstSection.includes('class="overview-card"')) {
+    return `${replacement}\n\n${trimmed}`;
+  }
+
+  const rest = trimmed.slice(firstSectionEnd + "</section>".length).trimStart();
+  return rest ? `${replacement}\n\n${rest}` : replacement;
 }
 
 function renderSidebar(navigation, currentPathname) {
@@ -1125,13 +1173,16 @@ async function renderDocPage(page) {
   const aiContent = handcraftedContent ? null : await renderAiPageContent(page);
   const heroOverride = await loadHeroOverride(page);
 
+  const heroTitle = heroOverride?.heroTitle || buildDocHeroTitle(page);
+  const heroText = heroOverride?.heroSummary || buildDocHeroText(page);
+
   return renderPageLayout({
     title: page.title,
-    description: excerpt(page.description || `${page.title} 的儿童故事化解读。`, 160),
+    description: excerpt(heroText || page.description || `${page.title} 的儿童故事化解读。`, 160),
     pathname: page.pathname,
     heroEyebrow: `${page.sectionLabel} 导读`,
-    heroTitle: heroOverride?.heroTitle || buildDocHeroTitle(page),
-    heroText: heroOverride?.heroSummary || buildDocHeroText(page),
+    heroTitle,
+    heroText,
     content: handcraftedContent || aiContent || genericContent,
     navigation: siteData.navigation,
     breadcrumbs
