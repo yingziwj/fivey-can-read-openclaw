@@ -4,25 +4,24 @@
 
 站点采用“零框架静态生成”方案：
 - `npm run sync` 会抓取 `https://docs.openclaw.ai/llms-full.txt`，解析出导航顺序、章节和原文内容。
-- `npm run build` 会把这些数据渲染为故事化静态页面，输出到 `dist/`。
-- 如果需要从线上文档重新同步后再构建，使用 `npm run build:fresh`。
+- `npm run build` 会先同步线上文档，再渲染为故事化静态页面，输出到 `dist/`，适合 Cloudflare Pages 的干净 checkout 环境。
+- `npm run build:offline` 只读取本地已有的 `generated/site-data.json`，适合本地调试构建器时避免重复联网。
 - 默认品牌主题已经定为 `concept-balloon-book.svg`，并会同步生成 `og-image.svg` 作为社交分享图。
 
 ## 本地流程
 
 1. 安装依赖：`npm ci`。当前项目没有第三方依赖，这一步主要用于保持 CI/Cloudflare 流程一致。
-2. 同步内容：`npm run sync`。
-3. 构建输出：`npm run build`。
+2. 同步并构建输出：`npm run build`。
 4. 本地预览：`npm run dev`，默认打开 `http://localhost:4173`。
 5. 快速校验生成物：`npm run check`。
 
-如果想把同步和构建合成一步，可以运行 `npm run build:fresh`。默认 `npm run build` 只读取本地 `generated/site-data.json`，避免构建阶段悄悄联网或改写同步数据。
+如果你已经运行过 `npm run sync`，并且只想复用本地同步数据重新生成 `dist/`，运行 `npm run build:offline`。
 
 ## 同步与构建说明
 
 `npm run sync`：从 `https://docs.openclaw.ai/llms-full.txt` 抓取整站转储，解析导航顺序与各章节，连同命令/代码段一起转成可供 build 使用的结构化 JSON。
 
-`npm run build`：读取同步数据，按照海报级视觉（大圆角卡片、渐变、糖果色背景、轻动效）输出静态站点到 `dist/`，包括：
+`npm run build`：先同步最新文档，再按照海报级视觉（大圆角卡片、渐变、糖果色背景、轻动效）输出静态站点到 `dist/`，包括：
 - 核心入口页
 - 所有导航页的逐节故事化解读
 - SEO 所需的 meta/meta-graph 标签
@@ -34,7 +33,7 @@
 ## Cloudflare Pages 部署
 
 1. 使用 `yingziwj/fivey-can-read-openclaw` 仓库创建 Cloudflare Pages 项目，选择 `main`（或主分支）作为源。
-2. 构建命令填 `npm run build`。如果希望 Cloudflare 每次部署都先抓取最新官方文档，可改填 `npm run build:fresh`。
+2. 构建命令填 `npm run build`。
 3. 输出目录设为 `dist`。
 4. 环境变量中至少保留 `CI=1`，必要时再补充（例如：`NODE_ENV=production`）。
 5. 关联自定义域 `fivey-can-read-openclaw.pages.dev`，启用 HTTPS（系统会自动完成）。
@@ -43,7 +42,7 @@
 ## GitHub Actions 自动同步（三天一次 + 手动）
 
 详见 `.github/workflows/sync-build.yml`，核心流程：
-1. 每 3 天凌晨拉一次 `main`，运行 `npm run sync` + `npm run build`，生成 `dist/`。
+1. 每 3 天凌晨拉一次 `main`，运行 `npm run build`，同步文档并生成 `dist/`。
 2. 若生成内容有变动，自动提交并推送回仓库，触发 Cloudflare Pages 重构。
 3. 支持 `workflow_dispatch`，可手动即时触发同步并调试生成器。
 4. 工作流依赖 `GITHUB_TOKEN` 直接推送，必要时自行补充 `PERSONAL_ACCESS_TOKEN` 以确保有写权限。

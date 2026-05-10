@@ -28,7 +28,7 @@ async function loadSiteData() {
     return await readJson(DATA_PATH);
   } catch (error) {
     throw new Error(
-      `Missing generated site data at ${DATA_PATH}. Run npm run sync before npm run build.`,
+      `Missing generated site data at ${DATA_PATH}. Run npm run build to sync and build, or npm run sync before npm run build:offline.`,
       { cause: error }
     );
   }

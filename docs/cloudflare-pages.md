@@ -12,8 +12,8 @@
 
 ## 为什么这样配
 
-- `npm run build` 使用仓库里已经同步好的 `generated/site-data.json`，构建过程可预测，不会在部署阶段悄悄改写同步数据。
-- 如果希望 Cloudflare 每次部署都先抓取最新官方文档，可以把 Build command 改成 `npm run build:fresh`。
+- `npm run build` 会先同步 `docs.openclaw.ai`，再生成 `dist/`，适合 Cloudflare Pages 的干净 checkout 环境。
+- 如果只想在本地复用已有同步数据调试生成器，可以运行 `npm run build:offline`。
 - `dist/` 是完整静态输出，适合 Cloudflare Pages 全球分发。
 - 站点已经内置 `sitemap.xml`、`robots.txt`、`ads.txt` 和基础 SEO 元信息。
 

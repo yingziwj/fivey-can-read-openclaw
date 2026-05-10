@@ -5,9 +5,9 @@
 ## 通常流程
 
 1. 本地或 CI 运行 `npm run sync`：抓取最新 `docs.openclaw.ai` 内容。确认输出 JSON 中的导航顺序与原站一致。
-2. 然后跑 `npm run build`：它会将同步数据转为故事化 `dist/` 站点，并自动插入 metadata、`ads.txt`、OG 片段。
+2. 然后跑 `npm run build:offline`：它会将同步数据转为故事化 `dist/` 站点，并自动插入 metadata、`ads.txt`、OG 片段。
 3. 检查 `dist/` 中对应页面，确保顺序、标题、命令/代码段的“讲故事”输出未丢失。
-4. 如果需要同步和构建一步完成，运行 `npm run build:fresh`。
+4. 如果需要同步和构建一步完成，运行 `npm run build`。Cloudflare Pages 也使用这个命令，保证干净 checkout 下不会缺少 `generated/site-data.json`。
 
 ## 异常排查
 
@@ -18,7 +18,7 @@
 ## Cloudflare & 自动部署
 
 - 每次生成结果有变动后，workflow 会自动提交。Cloudflare Pages 检查最新提交并重新构建，如果部署失败，可在 Pages 控制台查看日志。
-- 若 Cloudflare 显示 `Page could not be built`，先在本地运行 `npm run build`，确认本地同步数据能生成结果；如果缺少 `generated/site-data.json`，先运行 `npm run sync` 或改用 `npm run build:fresh`。
+- 若 Cloudflare 显示 `Page could not be built`，先在本地运行 `npm run build`，确认同步和构建都能完成；如果只想复用已有同步数据调试构建器，运行 `npm run build:offline`。
 
 ## SEO / 广告准备
 
