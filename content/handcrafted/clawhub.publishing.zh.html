@@ -1,0 +1,81 @@
+<section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>Publishing 就是“把自己的本领盒子正式摆上 ClawHub 货架”</h2>
+      <p>发布不是把文件随手丢上网。ClawHub 会看 owner、名字、版本、文件、范围和权限，确认这盒东西该由谁摆上架。</p>
+      <p>如果说安装是顾客拿货，发布就是店主交货：要贴对标签，也要确认你真的有权把它放到这个位置。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合准备发布 skill 或 plugin 的维护者</span>
+      <span>重点是 owner、包名、版本和发布流程</span>
+      <a href="https://docs.openclaw.ai/clawhub/publishing" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一站</p>
+    <h2>owner 像货架上的店名，包名要和店名对得上</h2>
+    <p>ClawHub 里的 owner 可以是个人，也可以是组织。发布时选了哪个 owner，就要让包名和这个身份匹配。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <div class="story-card-label">个人 owner</div>
+      <p>像“这是小明自己的摊位”。别人不能随便把东西摆到小明摊位上。</p>
+    </div>
+    <div class="story-card">
+      <div class="story-card-label">组织 owner</div>
+      <p>像一个小团队共用的摊位，成员按权限一起维护。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label">scope 必须匹配</div>
+      <p>如果包名写着一个店名，却想发布到另一个 owner 下面，ClawHub 会拒绝。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二站</p>
+    <h2>skill 和 plugin 是两种不同盒子</h2>
+    <p>skill 更像一份会教 OpenClaw 怎么做事的说明书；plugin 更像可以装进系统的能力零件。发布时，它们看的材料也不完全一样。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">S</span>
+      <h2>Skill</h2>
+      <p>核心是一个文件夹和 <code>SKILL.md</code>。描述写得清楚，别人更容易知道该不该装。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">P</span>
+      <h2>Plugin</h2>
+      <p>通常像 npm 包一样，需要清楚的包名、版本、入口和兼容信息。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">V</span>
+      <h2>Version</h2>
+      <p>每次发布都要有版本号，像给每批货打日期和编号。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">F</span>
+      <h2>Files</h2>
+      <p>只把该发布的文件放进包里，不把临时文件、秘密钥匙和杂物塞进去。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">发布流程</p>
+    <h2>一次发布像过四道小门</h2>
+    <p>先收集 metadata 和文件，再把请求发给 ClawHub。服务器会检查权限、名字、版本和内容，然后才把它放到公开货架。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card"><div class="story-card-label">1. 收拾盒子</div><p>准备说明、版本、文件和入口。</p></div>
+    <div class="source-card"><div class="story-card-label">2. 送到仓库</div><p>CLI、网页或工作流把发布请求交给 ClawHub。</p></div>
+    <div class="source-card"><div class="story-card-label">3. 后台检查</div><p>检查 owner、scope、版本、文件和安全线索。</p></div>
+    <div class="source-card"><div class="story-card-label">4. 上架</div><p>检查通过后，别人才能搜索、查看和安装。</p></div>
+  </div>
+</section>

@@ -1,0 +1,55 @@
+<section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>Manage plugins 像“给 OpenClaw 装零件、换零件、拆零件”</h2>
+      <p>插件管理不需要先背很多理论。大多数时候就是几步：列出已有插件、搜索新插件、安装、重启 Gateway、确认能用，不需要时再卸载。</p>
+      <p>这页适合把 <code>openclaw plugins</code> 的日常动作串起来看，像整理一盒工具。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合日常安装和维护 plugin 的读者</span>
+      <span>重点是 list、search、install、update、uninstall</span>
+      <a href="https://docs.openclaw.ai/plugins/manage-plugins" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一站</p>
+    <h2>先看桌上已经有什么零件</h2>
+    <p>安装新东西前，先列出现有插件。这样你知道哪些已经启用、哪些只是放着、哪些可能正在影响系统。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card"><div class="story-card-label"><code>openclaw plugins list</code></div><p>像打开工具箱，看看里面有哪些零件。</p></div>
+    <div class="source-card"><div class="story-card-label"><code>--enabled</code></div><p>只看正在通电工作的零件。</p></div>
+    <div class="source-card"><div class="story-card-label"><code>--verbose</code></div><p>把标签看得更细，包括来源、版本和更多状态。</p></div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二站</p>
+    <h2>搜索和安装像“先问店员，再把盒子搬回家”</h2>
+    <p>ClawHub 是主要货架之一。裸包名、ClawHub 包和本地目录都可能成为安装来源，但越是外来的东西，越要先看清来源和说明。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card"><span class="home-card-index">1</span><h2>Search</h2><p>先找，不急装。关键词越清楚，越容易拿到合适结果。</p></article>
+    <article class="home-card"><span class="home-card-index">2</span><h2>Install</h2><p>把选中的 plugin 记录到 OpenClaw 的插件位置。</p></article>
+    <article class="home-card"><span class="home-card-index">3</span><h2>Restart</h2><p>Gateway 常常要重新读配置，像机器换了零件后重开电源。</p></article>
+    <article class="home-card"><span class="home-card-index">4</span><h2>Verify</h2><p>装完要确认真的出现、真的启用、真的能被调用。</p></article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第三站</p>
+    <h2>更新和卸载都先用 <code>--dry-run</code> 想一想</h2>
+    <p>更新像换新版零件，卸载像把零件从机器里取出来。影响越大，越适合先 dry run 看看会发生什么。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card"><div class="story-card-label"><code>openclaw plugins update --all</code></div><p>像给所有插件检查新版，但要留意兼容性。</p></div>
+    <div class="source-card"><div class="story-card-label"><code>openclaw plugins uninstall &lt;id&gt; --dry-run</code></div><p>先演练拆零件，不马上真的动手。</p></div>
+    <div class="source-card"><div class="story-card-label">发布到 ClawHub 或 npm</div><p>想把自己的插件分享出去，就从“使用者动作”升级成“维护者动作”。</p></div>
+  </div>
+</section>

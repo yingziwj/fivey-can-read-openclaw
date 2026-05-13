@@ -1,0 +1,50 @@
+<section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>Dependency resolution 像“装零件时把螺丝包配齐，运行时不要再翻箱倒柜”</h2>
+      <p>OpenClaw 把插件依赖处理放在安装和更新阶段。等 Gateway 真正启动或重新加载时，它不应该临时跑包管理器、修依赖树或偷偷改目录。</p>
+      <p>这页的核心是责任分工：插件包自己带清依赖，安装器负责放好，运行时只读取并加载。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合插件作者和运维者</span>
+      <span>重点是安装阶段处理依赖，运行阶段保持稳定</span>
+      <a href="https://docs.openclaw.ai/plugins/dependency-resolution" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一站</p>
+    <h2>运行时不临时装东西，是为了让机器启动可预测</h2>
+    <p>如果 Gateway 启动时突然联网安装依赖，失败原因会变多：网络、权限、版本、锁文件都可能卡住。OpenClaw 选择把这些麻烦提前到安装和更新阶段处理。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card"><div class="story-card-label">Install time</div><p>像组装前先把螺丝、说明书、配件都点清楚。</p></div>
+    <div class="story-card"><div class="story-card-label">Runtime</div><p>像正式开机，只拿已经放好的零件，不再去商店买。</p></div>
+    <div class="story-card"><div class="story-card-label">Reload</div><p>像重新读清单，不应该偷偷修改工具箱。</p></div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二站</p>
+    <h2>不同来源要放在稳定的根目录里</h2>
+    <p>ClawHub、npm、本地插件和 bundled 插件的来源不同。稳定的 install roots 能让 OpenClaw 知道每个零件从哪里来、该怎么更新、出问题时该查哪一层。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card"><span class="home-card-index">C</span><h2>ClawHub</h2><p>记录 ClawHub source metadata，方便以后回到同一个货架找新版。</p></article>
+    <article class="home-card"><span class="home-card-index">N</span><h2>npm</h2><p>像从大仓库拿包，要尊重包自己的依赖图。</p></article>
+    <article class="home-card"><span class="home-card-index">L</span><h2>Local</h2><p>本地插件由开发者自己控制，OpenClaw 不会替它临时安装依赖。</p></article>
+    <article class="home-card"><span class="home-card-index">B</span><h2>Bundled</h2><p>随 OpenClaw 自带的插件要保持轻，重依赖更适合拆成可下载包。</p></article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">最后记住</p>
+    <h2>依赖解析越早完成，运行时越安静</h2>
+    <p>插件作者要把依赖声明清楚，安装流程要把东西放稳。这样 Gateway 启动时就像打开整理好的工具箱，而不是一边开机一边找零件。</p>
+  </div>
+</section>

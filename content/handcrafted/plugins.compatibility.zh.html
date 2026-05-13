@@ -1,0 +1,50 @@
+<section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>Plugin compatibility 像“旧插头和新插座之间的转接头”</h2>
+      <p>OpenClaw 的插件系统会进化。新接口出现时，旧插件不能一下子全坏掉，所以系统会用 compatibility adapter 帮旧规则继续工作一段时间。</p>
+      <p>这页讲的是维护者如何记录兼容层、什么时候废弃旧契约，以及为什么不能把旧门锁突然拆掉。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合插件维护者和核心开发者</span>
+      <span>重点是兼容注册表、检查器、废弃策略和验收</span>
+      <a href="https://docs.openclaw.ai/plugins/compatibility" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一站</p>
+    <h2>兼容层不是怀旧，是防止用户的旧工具突然断电</h2>
+    <p>如果一个旧插件昨天还能用，今天升级后突然不认识新系统，用户会很难排查。compatibility adapter 就像临时转接头，让旧插件还能说上话。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card"><div class="story-card-label">旧契约</div><p>像旧插头的形状，插件已经按这个样子做出来了。</p></div>
+    <div class="story-card"><div class="story-card-label">新契约</div><p>像新插座，更清楚、更强，但形状可能变了。</p></div>
+    <div class="story-card"><div class="story-card-label">Adapter</div><p>像中间转接头，帮助旧插件继续接入。</p></div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二站</p>
+    <h2>兼容记录要放在登记册里，不能靠记忆</h2>
+    <p>官方提到核心 registry。它像一本值班登记册，记录哪些旧规则还被支持、哪些已经被替换、哪些将来会移除。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card"><span class="home-card-index">1</span><h2>记录 contract</h2><p>让维护者知道到底在保护哪条旧规则。</p></article>
+    <article class="home-card"><span class="home-card-index">2</span><h2>外部 inspector</h2><p>检查插件包时，最好让检查器跟着版本化规则走。</p></article>
+    <article class="home-card"><span class="home-card-index">3</span><h2>验收 lane</h2><p>用干净环境跑测试，确认外部包真的能装、能加载。</p></article>
+    <article class="home-card"><span class="home-card-index">4</span><h2>废弃通知</h2><p>不能在推出替代品的同一版里马上拆掉旧规则。</p></article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">最后记住</p>
+    <h2>兼容策略是在保护升级路上的人</h2>
+    <p>好的兼容层会让新系统继续往前走，也让旧插件有时间换新接口。它不是永远保留旧东西，而是给迁移留出清楚的桥。</p>
+  </div>
+</section>

@@ -1,0 +1,66 @@
+<section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>Skill format 就是在教你“一个技能盒子该怎么装”</h2>
+      <p>ClawHub 不能只看到一堆文件就猜出它们是什么。一个 skill 要像整齐的小资料夹：有 <code>SKILL.md</code>，有名字，有简介，必要时还要声明它需要什么运行环境。</p>
+      <p>这页最重要的不是背字段，而是明白：清楚的格式能让别人看懂、能让搜索找到、也能让安全检查更靠谱。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合要写 skill 并发布到 ClawHub 的人</span>
+      <span>重点是 <code>SKILL.md</code>、frontmatter 和运行需求</span>
+      <a href="https://docs.openclaw.ai/clawhub/skill-format" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一站</p>
+    <h2>一个 skill 先是一整个文件夹，不只是一句话</h2>
+    <p>文件夹里最关键的是 <code>SKILL.md</code>。它像封面和说明书，告诉 OpenClaw 这个 skill 叫什么、会做什么、该什么时候用。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card"><div class="story-card-label">文件夹</div><p>像一个透明资料袋，里面可以放说明、脚本、示例和资源。</p></div>
+    <div class="source-card"><div class="story-card-label"><code>SKILL.md</code></div><p>像资料袋封面。没有它，别人不知道这袋东西是不是一个正式 skill。</p></div>
+    <div class="source-card"><div class="story-card-label">可选支持文件</div><p>像附带的小工具和参考图，能帮助 skill 真正把事情做好。</p></div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二站</p>
+    <h2>frontmatter 像盒子顶部的小标签</h2>
+    <p>YAML frontmatter 放在 <code>SKILL.md</code> 开头。它不是给人看的长故事，而是给 ClawHub 和机器快速读取的小标签。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">N</span>
+      <h2><code>name</code></h2>
+      <p>这盒 skill 的名字。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">D</span>
+      <h2><code>description</code></h2>
+      <p>一句短说明，搜索结果里常常靠它让人判断。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">V</span>
+      <h2><code>version</code></h2>
+      <p>像第几版说明书，方便更新和回退。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">R</span>
+      <h2>runtime metadata</h2>
+      <p>告诉系统它可能需要哪些 OpenClaw 能力或运行条件。</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">小心事项</p>
+    <h2>格式写清楚，是在帮未来的自己</h2>
+    <p>名字别太像别人的，简介别写成谜语，运行需求别藏着不说。ClawHub 越能读懂这个 skill，用户越容易放心安装。</p>
+  </div>
+</section>

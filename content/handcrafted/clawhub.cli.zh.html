@@ -1,0 +1,89 @@
+<section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2><code>clawhub</code> CLI 像仓库后台的遥控器</h2>
+      <p>普通安装技能时，多数时候用 <code>openclaw</code> 就够了。<code>clawhub</code> CLI 更像给发布者、维护者和自动化脚本用的后台遥控器。</p>
+      <p>它负责登录、确认身份、搜索、发布、撤回、同步和管理包。也就是说，它不是“拿货小车”，更像“货架管理员的工作台”。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合要发布或维护 ClawHub 包的人</span>
+      <span>重点是登录、配置、发布和安全操作</span>
+      <a href="https://docs.openclaw.ai/clawhub/cli" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一站</p>
+    <h2>全局参数像“先告诉遥控器你站在哪里”</h2>
+    <p>CLI 里很多参数不是在做大事，而是在说清楚工作目录、安装目录、站点地址和输出格式。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>--workdir &lt;dir&gt;</code></div>
+      <p>像说：“今天我们在这张桌子上干活。”</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>--dir &lt;dir&gt;</code></div>
+      <p>像说：“拿回来的 skill 要放进哪个抽屉。”</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>--json</code></div>
+      <p>像把结果写成机器也能读懂的表格，方便脚本接着处理。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二站</p>
+    <h2>登录像拿到店主钥匙，不能随便乱放</h2>
+    <p><code>clawhub login</code> 会把 API token 保存到配置里。这个 token 像钥匙，能证明你是谁，也可能允许你发布东西。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card">
+      <span class="home-card-index">1</span>
+      <h2>浏览器登录</h2>
+      <p>适合本机有浏览器时使用，像走正门刷卡。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">2</span>
+      <h2>token 登录</h2>
+      <p>适合服务器或脚本，但 token 要像钥匙一样保管。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">3</span>
+      <h2>device 登录</h2>
+      <p>适合远程环境，CLI 给你一个码，你去别处完成授权。</p>
+    </article>
+    <article class="home-card">
+      <span class="home-card-index">4</span>
+      <h2><code>whoami</code></h2>
+      <p>像问系统：“我现在拿着的钥匙到底是谁的？”</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第三站</p>
+    <h2>发布、撤回、同步，都是“管货架”的动作</h2>
+    <p>这些命令会影响公开货架上的内容，所以要比普通搜索和安装更谨慎。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card">
+      <div class="story-card-label"><code>publish</code></div>
+      <p>把本地文件夹或包送上货架，让别人能找到。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>yank</code></div>
+      <p>像把某个有问题的版本从显眼位置撤下来，避免更多人继续拿。</p>
+    </div>
+    <div class="source-card">
+      <div class="story-card-label"><code>sync</code></div>
+      <p>像重新整理货架索引，让 ClawHub 和来源保持一致。</p>
+    </div>
+  </div>
+</section>

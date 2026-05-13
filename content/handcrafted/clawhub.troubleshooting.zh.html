@@ -1,0 +1,50 @@
+<section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>Troubleshooting 是 ClawHub 的“找不到货时先查这张纸”</h2>
+      <p>ClawHub 出问题时，常见原因不是很神秘：没有登录、token 过期、网络被代理挡住、包名写错、owner 没权限、版本已经存在。</p>
+      <p>这页适合在卡住时按顺序排查，就像先看电源、再看网线、再看账号。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合安装、登录、发布失败时阅读</span>
+      <span>重点是从身份、网络、名字和权限开始查</span>
+      <a href="https://docs.openclaw.ai/clawhub/troubleshooting" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一站</p>
+    <h2>先问四个最省时间的问题</h2>
+    <p>排错时不要一上来拆机器。先确认最常见的小开关。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card"><span class="home-card-index">1</span><h2>我登录了吗</h2><p><code>whoami</code> 能帮你确认当前 token 还认不认得你。</p></article>
+    <article class="home-card"><span class="home-card-index">2</span><h2>网络通吗</h2><p>公司代理、DNS 或防火墙可能让 CLI 找不到 ClawHub。</p></article>
+    <article class="home-card"><span class="home-card-index">3</span><h2>名字对吗</h2><p>包名、scope、owner、版本，只要错一个，就像快递地址写错。</p></article>
+    <article class="home-card"><span class="home-card-index">4</span><h2>权限够吗</h2><p>不是每个人都能往每个 owner 的货架上放东西。</p></article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二站</p>
+    <h2>发布失败时，重点看“能不能放”和“是不是已经放过”</h2>
+    <p>发布不是复制文件那么简单。ClawHub 会检查你是否有权发布、版本是否重复、包名是否符合规则、文件是否能被正确读取。</p>
+  </div>
+  <div class="story-grid">
+    <div class="source-card"><div class="story-card-label">401 / 403</div><p>像钥匙不对，或你没有这个货架的管理权限。</p></div>
+    <div class="source-card"><div class="story-card-label">版本冲突</div><p>像同一个批次号已经贴过，不能再贴一遍。</p></div>
+    <div class="source-card"><div class="story-card-label">scope 不匹配</div><p>像盒子写的是 A 店，却想摆到 B 店的货架。</p></div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">最后记住</p>
+    <h2>ClawHub 排错的顺序，是先查身份，再查路，再查盒子标签</h2>
+    <p>这三个方向能解决大多数卡点。真正复杂的问题，再带着具体命令、错误消息和包名继续查，会快很多。</p>
+  </div>
+</section>

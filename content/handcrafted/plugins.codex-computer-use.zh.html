@@ -1,0 +1,50 @@
+<section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>Codex Computer Use 像“让 Codex 在被允许时看屏幕、点按钮”</h2>
+      <p>这页讲的是一个 Codex 原生 MCP 插件。OpenClaw 不会自己偷偷控制桌面，也不会绕过 Codex 的权限；它只是帮 Codex 模式准备好能接入 Computer Use 的配置。</p>
+      <p>对小朋友讲，就是：不是 OpenClaw 自己伸手去点电脑，而是经过 Codex 和系统许可后，才把“看和点”的能力交给合适的工具。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合理解 Codex 桌面控制边界的人</span>
+      <span>重点是 OpenClaw、Codex、MCP 和权限边界</span>
+      <a href="https://docs.openclaw.ai/plugins/codex-computer-use" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一站</p>
+    <h2>先划清三条线：谁准备、谁授权、谁执行</h2>
+    <p>OpenClaw 的 codex 插件准备配置；Codex 负责实际使用 Computer Use；桌面系统和用户权限决定能不能看屏幕、点按钮。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card"><div class="story-card-label">OpenClaw</div><p>像把教室门牌和工具清单准备好。</p></div>
+    <div class="story-card"><div class="story-card-label">Codex</div><p>像真正拿着工具做事的学生。</p></div>
+    <div class="story-card"><div class="story-card-label">Permissions</div><p>像老师和门禁，没许可就不能随便看屏幕、点按钮。</p></div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二站</p>
+    <h2>它不是 Peekaboo，也不是 iOS 节点</h2>
+    <p>官方特别把几个名字分开，是为了避免误会。OpenClaw.app 的 Peekaboo 集成、iOS app 节点、上游 <code>cua-driver mcp</code>，都不是同一个东西。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card"><span class="home-card-index">C</span><h2>Codex Computer Use</h2><p>Codex 原生 MCP 插件，重点是 Codex 模式下的桌面控制能力。</p></article>
+    <article class="home-card"><span class="home-card-index">P</span><h2>Peekaboo</h2><p>macOS app 的另一条集成路线，权限和桥接方式不同。</p></article>
+    <article class="home-card"><span class="home-card-index">I</span><h2>iOS app</h2><p>作为 OpenClaw node 暴露移动端能力，不是桌面控制后端。</p></article>
+    <article class="home-card"><span class="home-card-index">M</span><h2>Direct MCP</h2><p>也可以通过 OpenClaw 的 MCP registry 接上游驱动，但那是另一种配置。</p></article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">最后记住</p>
+    <h2>Computer Use 最重要的不是“能点”，而是“在正确边界内能点”</h2>
+    <p>这页真正要保护的是权限边界：配置可以提前准备，实际桌面动作仍要跟着 Codex、MCP server 和系统许可走。</p>
+  </div>
+</section>

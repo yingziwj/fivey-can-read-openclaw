@@ -5226,516 +5226,56 @@
         </div>
       </div>
 
-
-    <section class="section-shell">
-      <div class="overview-card">
-        <div>
-          <p class="section-kicker">先听这页的人话版</p>
-          <h2>Plugin dependency resolution</h2>
-          <p>这一页不是在堆术语，它像把“新本领插件 dependency resolution”这台小机器搬到桌上，当着你的面拆开给你看。你先不用全记住，先抓住它到底在忙什么：OpenClaw keeps 新本领插件 dependency work at install/update time. Runtime loading does not run packa…。</p>
-          <p>如果把这页当成“给普通人看的版本”，你最应该带走的是：它到底在教你一件什么事、什么时候要这样做、以及哪里最容易踩坑。</p>
-        </div>
-        <div class="overview-meta">
-          <span>原始路径：/plugins/dependency-resolution</span>
-          <span>章节数量：7</span>
-          <a href="https://docs.openclaw.ai/plugins/dependency-resolution" target="_blank" rel="noreferrer">查看原文</a>
-        </div>
-      </div>
-    </section>
-
-        <section class="section-shell" id="section-1">
-          <div class="section-heading">
-            <p class="section-kicker">第 1 站</p>
-            <h2>Start Here</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>如果把这一段摆成一个小场景，你会看到几样东西正在互相打招呼、拦路或者传东西。别急着记名词，先抓住它此刻到底在发生什么：OpenClaw keeps 新本领插件 dependency work at install/update time. Runtime loading does not run package managers, repair depe…。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>如果把这一段摆成一个小场景，你会看到几样东西正在互相打招呼、拦路或者传东西。别急着记名词，先抓住它此刻到底在发生什么：OpenClaw keeps 新本领插件 dependency work at install/update time. Runtime loading does not run package managers, repair depe…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>OpenClaw keeps plugin dependency work at install/update time. Runtime loading does not run package managers, repair dependency trees, or mutate the OpenClaw package directory.</p>
-      </div>
-
-          </div>
-        </section>
-
-        <section class="section-shell" id="section-2">
-          <div class="section-heading">
-            <p class="section-kicker">第 2 站</p>
-            <h2>Responsibility split</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>如果把这一段摆成一个小场景，你会看到几样东西正在互相打招呼、拦路或者传东西。别急着记名词，先抓住它此刻到底在发生什么：新本领插件 packages own their dependency graph: optionalDependencies OpenClaw owns only the 新本领插件 lifecycle:。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>如果把这一段摆成一个小场景，你会看到几样东西正在互相打招呼、拦路或者传东西。别急着记名词，先抓住它此刻到底在发生什么：新本领插件 packages own their dependency graph:。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Plugin packages own their dependency graph:</p>
-      </div>
-
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>如果把这一段摆成一个小场景，你会看到几样东西正在互相打招呼、拦路或者传东西。别急着记名词，先抓住它此刻到底在发生什么：optionalDependencies。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p><code>optionalDependencies</code></p>
-      </div>
-
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一串条目别硬背，把它当成“Responsibility split”门口贴出来的几张便签就行。它们在提醒你先备好什么、别漏掉什么、哪里最容易走错：runtime dependencies live in the 新本领插件 pa…、SDK/core imports are peer or supplied Ope…、local development 新本领插件s bring their own…、npm and git 新本领插件s are installed into Ope…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>runtime dependencies live in the plugin package <code>dependencies</code> or</li><li>SDK/core imports are peer or supplied OpenClaw imports</li><li>local development plugins bring their own already-installed dependencies</li><li>npm and git plugins are installed into OpenClaw-owned package roots</li></ul>
-      </div>
-
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>如果把这一段摆成一个小场景，你会看到几样东西正在互相打招呼、拦路或者传东西。别急着记名词，先抓住它此刻到底在发生什么：OpenClaw owns only the 新本领插件 lifecycle:。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>OpenClaw owns only the plugin lifecycle:</p>
-      </div>
-
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一串条目别硬背，把它当成“Responsibility split”门口贴出来的几张便签就行。它们在提醒你先备好什么、别漏掉什么、哪里最容易走错：discover the 新本领插件 source、install or update the package when explic…、record the install metadata、load the 新本领插件 entrypoint。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>discover the plugin source</li><li>install or update the package when explicitly requested</li><li>record the install metadata</li><li>load the plugin entrypoint</li><li>fail with an actionable error when dependencies are missing</li></ul>
-      </div>
-
-          </div>
-        </section>
-
-        <section class="section-shell" id="section-3">
-          <div class="section-heading">
-            <p class="section-kicker">第 3 站</p>
-            <h2>Install roots</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>如果把这一段摆成一个小场景，你会看到几样东西正在互相打招呼、拦路或者传东西。别急着记名词，先抓住它此刻到底在发生什么：OpenClaw uses stable per-source roots: npm installs run in the npm root with: openclaw 新本领插件s install npm-pack:&lt;path.tg…。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>如果把这一段摆成一个小场景，你会看到几样东西正在互相打招呼、拦路或者传东西。别急着记名词，先抓住它此刻到底在发生什么：OpenClaw uses stable per-source roots:。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>OpenClaw uses stable per-source roots:</p>
-      </div>
-
-      <div class="story-card">
-        <div class="story-card-label">像准备清单</div>
-        <p>这一串条目别硬背，把它当成“Install roots”门口贴出来的几张便签就行。它们在提醒你先备好什么、别漏掉什么、哪里最容易走错：npm packages install under ~/.openclaw/npm、git packages clone under ~/.openclaw/git、local/path/archive installs are copied or…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <ul><li>npm packages install under <code>~/.openclaw/npm</code></li><li>git packages clone under <code>~/.openclaw/git</code></li><li>local/path/archive installs are copied or referenced without dependency repair</li></ul>
-      </div>
-
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>如果把这一段摆成一个小场景，你会看到几样东西正在互相打招呼、拦路或者传东西。别急着记名词，先抓住它此刻到底在发生什么：npm installs run in the npm root with:。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>npm installs run in the npm root with:</p>
-      </div>
-
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一串终端口令，像你站在控制台前，一下下按按钮让机器醒过来。</p>
-        <ul class="code-steps">
-          <li>这一行“cd ~/.openclaw/npm”是在给电脑递一张小纸条，告诉它眼下该做哪一步。</li><li>这一句像在终端上按下启动钮：“npm install --omit=dev --omit=peer --legacy-peer-deps --ignore-scripts --no-audit --no-fund”。它会让电脑去请求、安装或者把东西搭起来。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">cd ~/.openclaw/npm
-npm install --omit=dev --omit=peer --legacy-peer-deps --ignore-scripts --no-audit --no-fund</code></pre>
-      </div>
-
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>如果把这一段摆成一个小场景，你会看到几样东西正在互相打招呼、拦路或者传东西。别急着记名词，先抓住它此刻到底在发生什么：openclaw 新本领插件s install npm-pack:&lt;path.tgz&gt; uses that same managed npm root for a local npm-pack tarball. OpenClaw read…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p><code>openclaw plugins install npm-pack:&lt;path.tgz&gt;</code> uses that same managed npm root for a local npm-pack tarball. OpenClaw reads the tarball&#39;s npm metadata, adds it to the managed root as a copied <code>file:</code> dependency, runs the normal npm install, and then verifies the installed lockfile metadata before trusting the plugin. This is intended for package-acceptance and release-candidate proof where a local pack artifact should behave like the registry artifact it simulates.</p>
-      </div>
-
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>如果把这一段摆成一个小场景，你会看到几样东西正在互相打招呼、拦路或者传东西。别急着记名词，先抓住它此刻到底在发生什么：npm may hoist transitive dependencies to ~/.openclaw/npm/node_modules beside the 新本领插件 package. OpenClaw scans the mana…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>npm may hoist transitive dependencies to <code>~/.openclaw/npm/node_modules</code> beside the plugin package. OpenClaw scans the managed npm root before trusting the install and uses npm to remove npm-managed packages during uninstall, so hoisted runtime dependencies stay inside the managed cleanup boundary.</p>
-      </div>
-
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>如果把这一段摆成一个小场景，你会看到几样东西正在互相打招呼、拦路或者传东西。别急着记名词，先抓住它此刻到底在发生什么：新本领插件s that import openclaw/新本领插件-sdk/* declare openclaw as a peer dependency. OpenClaw does not let npm install a sepa…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Plugins that import <code>openclaw/plugin-sdk/*</code> declare <code>openclaw</code> as a peer dependency. OpenClaw does not let npm install a separate registry copy of the host package into the managed root, because stale host packages can affect npm peer resolution during later plugin installs. Managed npm installs skip npm peer resolution/materialization for the shared root and OpenClaw reasserts plugin-local <code>node_modules/openclaw</code> links for installed packages that declare the host peer after install, update, or uninstall.</p>
-      </div>
-
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>如果把这一段摆成一个小场景，你会看到几样东西正在互相打招呼、拦路或者传东西。别急着记名词，先抓住它此刻到底在发生什么：git installs clone or refresh the repository, then run:。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>git installs clone or refresh the repository, then run:</p>
-      </div>
-
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一串终端口令，像你站在控制台前，一下下按按钮让机器醒过来。</p>
-        <ul class="code-steps">
-          <li>这一句像在终端上按下启动钮：“npm install --omit=dev --ignore-scripts --no-audit --no-fund”。它会让电脑去请求、安装或者把东西搭起来。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">npm install --omit=dev --ignore-scripts --no-audit --no-fund</code></pre>
-      </div>
-
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>如果把这一段摆成一个小场景，你会看到几样东西正在互相打招呼、拦路或者传东西。别急着记名词，先抓住它此刻到底在发生什么：The installed 新本领插件 then loads from that package directory, so package-local and parent node_modules resolution works t…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>The installed plugin then loads from that package directory, so package-local and parent <code>node_modules</code> resolution works the same way it does for a normal Node package.</p>
-      </div>
-
-          </div>
-        </section>
-
-        <section class="section-shell" id="section-4">
-          <div class="section-heading">
-            <p class="section-kicker">第 4 站</p>
-            <h2>Local 新本领插件s</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>如果把这一段摆成一个小场景，你会看到几样东西正在互相打招呼、拦路或者传东西。别急着记名词，先抓住它此刻到底在发生什么：Local 新本领插件s are treated as developer-controlled directories. OpenClaw does not run npm install, pnpm install, or depen…。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>如果把这一段摆成一个小场景，你会看到几样东西正在互相打招呼、拦路或者传东西。别急着记名词，先抓住它此刻到底在发生什么：Local 新本领插件s are treated as developer-controlled directories. OpenClaw does not run npm install, pnpm install, or depen…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Local plugins are treated as developer-controlled directories. OpenClaw does not run <code>npm install</code>, <code>pnpm install</code>, or dependency repair for them. If a local plugin has dependencies, install them in that plugin before loading it.</p>
-      </div>
-
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>如果把这一段摆成一个小场景，你会看到几样东西正在互相打招呼、拦路或者传东西。别急着记名词，先抓住它此刻到底在发生什么：Third-party TypeScript local 新本领插件s can use the emergency Jiti path. Packaged JavaScript 新本领插件s and bundled internal 新本…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Third-party TypeScript local plugins can use the emergency Jiti path. Packaged JavaScript plugins and bundled internal plugins load through native import/require instead of Jiti.</p>
-      </div>
-
-          </div>
-        </section>
-
-        <section class="section-shell" id="section-5">
-          <div class="section-heading">
-            <p class="section-kicker">第 5 站</p>
-            <h2>Startup and reload</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>如果把这一段摆成一个小场景，你会看到几样东西正在互相打招呼、拦路或者传东西。别急着记名词，先抓住它此刻到底在发生什么：门口的小门卫 startup and 设置说明书 reload never install 新本领插件 dependencies. They read the 新本领插件 install records, compute the entr…。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>如果把这一段摆成一个小场景，你会看到几样东西正在互相打招呼、拦路或者传东西。别急着记名词，先抓住它此刻到底在发生什么：门口的小门卫 startup and 设置说明书 reload never install 新本领插件 dependencies. They read the 新本领插件 install records, compute the entr…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Gateway startup and config reload never install plugin dependencies. They read the plugin install records, compute the entrypoint, and load it.</p>
-      </div>
-
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>如果把这一段摆成一个小场景，你会看到几样东西正在互相打招呼、拦路或者传东西。别急着记名词，先抓住它此刻到底在发生什么：If a dependency is missing at runtime, the 新本领插件 fails to load and the error should point the operator to an explicit f…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>If a dependency is missing at runtime, the plugin fails to load and the error should point the operator to an explicit fix:</p>
-      </div>
-
-      <div class="story-card">
-        <div class="story-card-label">像魔法口令拆解</div>
-        <p>这是一句直接对 OpenClaw 说的话，像你把任务清清楚楚塞到它手里。</p>
-        <ul class="code-steps">
-          <li>这一句是在直接叫 OpenClaw 动起来：“openclaw plugins update &lt;id&gt;”。你可以把它想成一句说出口就要执行的差事。</li><li>这一句是在直接叫 OpenClaw 动起来：“openclaw plugins install &lt;source&gt;”。你可以把它想成一句说出口就要执行的差事。</li><li>这一句是在直接叫 OpenClaw 动起来：“openclaw doctor --fix”。你可以把它想成一句说出口就要执行的差事。</li>
-        </ul>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文代码块</div>
-        <pre><code class="language-bash">openclaw plugins update &lt;id&gt;
-openclaw plugins install &lt;source&gt;
-openclaw doctor --fix</code></pre>
-      </div>
-
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>如果把这一段摆成一个小场景，你会看到几样东西正在互相打招呼、拦路或者传东西。别急着记名词，先抓住它此刻到底在发生什么：doctor --fix can clean legacy OpenClaw-generated dependency state and recover downloadable 新本领插件s that are missing from…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p><code>doctor --fix</code> can clean legacy OpenClaw-generated dependency state and recover downloadable plugins that are missing from the local install records when config references them. Doctor does not repair dependencies for an already-installed local plugin.</p>
-      </div>
-
-          </div>
-        </section>
-
-        <section class="section-shell" id="section-6">
-          <div class="section-heading">
-            <p class="section-kicker">第 6 站</p>
-            <h2>Bundled 新本领插件s</h2>
-            <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节在讲规则和边界：什么默认允许、什么必须显式打开、什么被禁止。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>这种内容决定了 OpenClaw 是“能做”还是“现在还不能做”，读懂它比记术语更重要。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>你可以把这一节当成权限说明书，真正配置时优先盯住 default、required、allow、deny 这几个词。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>如果把这一段摆成一个小场景，你会看到几样东西正在互相打招呼、拦路或者传东西。别急着记名词，先抓住它此刻到底在发生什么：Lightweight and core-critical bundled 新本领插件s are shipped as part of OpenClaw. They should either have no heavy runtime…。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>如果把这一段摆成一个小场景，你会看到几样东西正在互相打招呼、拦路或者传东西。别急着记名词，先抓住它此刻到底在发生什么：Lightweight and core-critical bundled 新本领插件s are shipped as part of OpenClaw. They should either have no heavy runtime…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Lightweight and core-critical bundled plugins are shipped as part of OpenClaw. They should either have no heavy runtime dependency tree or be moved out to a downloadable package on ClawHub/npm.</p>
-      </div>
-
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>如果把这一段摆成一个小场景，你会看到几样东西正在互相打招呼、拦路或者传东西。别急着记名词，先抓住它此刻到底在发生什么：For the current generated list of 新本领插件s that ship in the core package, install externally, or stay source-only, see 新本…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>For the current generated list of plugins that ship in the core package, install externally, or stay source-only, see <a href="/plugins/plugin-inventory" target="_blank" rel="noreferrer">Plugin inventory</a>.</p>
-      </div>
-
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>如果把这一段摆成一个小场景，你会看到几样东西正在互相打招呼、拦路或者传东西。别急着记名词，先抓住它此刻到底在发生什么：Bundled 新本领插件 manifests must not request dependency staging. Large or optional 新本领插件 functionality should be packaged a…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Bundled plugin manifests must not request dependency staging. Large or optional plugin functionality should be packaged as a normal plugin and installed through the same npm/git/ClawHub path as third-party plugins.</p>
-      </div>
-
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>如果把这一段摆成一个小场景，你会看到几样东西正在互相打招呼、拦路或者传东西。别急着记名词，先抓住它此刻到底在发生什么：In source checkouts, OpenClaw treats the repository as a pnpm monorepo. After pnpm install, bundled 新本领插件s load from ex…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>In source checkouts, OpenClaw treats the repository as a pnpm monorepo. After <code>pnpm install</code>, bundled plugins load from <code>extensions/&lt;id&gt;</code> so package-local workspace dependencies are available and edits are picked up directly. Source checkout development is pnpm-only; plain <code>npm install</code> at the repository root is not a supported way to prepare bundled plugin dependencies.</p>
-      </div>
-
-      <div class="story-card">
-        <div class="story-card-label">像整理表格</div>
-        <p>这段是在把几种选项排成表格，左边像标签，右边像说明。手机上可以横向滑动原文表格。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文表格</div>
-
-    <div class="source-table-scroll">
-      <table class="source-table">
-        <thead>
-          <tr><th>Install shape</th><th>Bundled plugin location</th><th>Dependency owner</th></tr>
-        </thead>
-        <tbody>
-          <tr><td><code>npm install -g openclaw</code></td><td>Built runtime tree inside the package</td><td>OpenClaw package and explicit plugin install/update/doctor flows</td></tr><tr><td>Git checkout plus <code>pnpm install</code></td><td><code>extensions/&lt;id&gt;</code> workspace packages</td><td>The pnpm workspace, including each plugin package&#39;s own dependencies</td></tr><tr><td><code>openclaw plugins install ...</code></td><td>Managed npm/git/ClawHub plugin root</td><td>The plugin install/update flow</td></tr>
-        </tbody>
-      </table>
+      <!-- handcrafted-source:plugins.dependency-resolution.zh.html -->
+<section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲这一页到底在解决什么</p>
+      <h2>新本领插件 dependency resolution：这块新积木往哪儿卡</h2>
+      <p>新本领插件 dependency resolution 这页像在教你把一块新积木卡进主机身上。你先看它负责哪段本领、说明纸塞在哪里、外面的世界怎么从它这道门进来，以及哪些 secret、route、manifest 最不能写歪。原文最响的一记鼓点，其实是：OpenClaw keeps 新本领插件 dependency work at install/update time. Runtime loading does not r…。</p>
     </div>
+    <div class="overview-meta">
+      <span>原文共 7 节，先看 Start Here</span>
+      <span>路径：/plugins/dependency-resolution</span>
+      <a href="https://docs.openclaw.ai/plugins/dependency-resolution" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
 
-      </div>
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一站</p>
+    <h2>运行时不临时装东西，是为了让机器启动可预测</h2>
+    <p>如果 Gateway 启动时突然联网安装依赖，失败原因会变多：网络、权限、版本、锁文件都可能卡住。OpenClaw 选择把这些麻烦提前到安装和更新阶段处理。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card"><div class="story-card-label">Install time</div><p>像组装前先把螺丝、说明书、配件都点清楚。</p></div>
+    <div class="story-card"><div class="story-card-label">Runtime</div><p>像正式开机，只拿已经放好的零件，不再去商店买。</p></div>
+    <div class="story-card"><div class="story-card-label">Reload</div><p>像重新读清单，不应该偷偷修改工具箱。</p></div>
+  </div>
+</section>
 
-          </div>
-        </section>
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二站</p>
+    <h2>不同来源要放在稳定的根目录里</h2>
+    <p>ClawHub、npm、本地插件和 bundled 插件的来源不同。稳定的 install roots 能让 OpenClaw 知道每个零件从哪里来、该怎么更新、出问题时该查哪一层。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card"><span class="home-card-index">C</span><h2>ClawHub</h2><p>记录 ClawHub source metadata，方便以后回到同一个货架找新版。</p></article>
+    <article class="home-card"><span class="home-card-index">N</span><h2>npm</h2><p>像从大仓库拿包，要尊重包自己的依赖图。</p></article>
+    <article class="home-card"><span class="home-card-index">L</span><h2>Local</h2><p>本地插件由开发者自己控制，OpenClaw 不会替它临时安装依赖。</p></article>
+    <article class="home-card"><span class="home-card-index">B</span><h2>Bundled</h2><p>随 OpenClaw 自带的插件要保持轻，重依赖更适合拆成可下载包。</p></article>
+  </div>
+</section>
 
-        <section class="section-shell" id="section-7">
-          <div class="section-heading">
-            <p class="section-kicker">第 7 站</p>
-            <h2>Legacy cleanup</h2>
-            <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-          </div>
-          <div class="story-grid">
-            <div class="story-card">
-              <div class="story-card-label">这段在解决什么</div>
-              <p>这一节更像安装或配置步骤，重点不是概念，而是“按什么顺序做才不会卡住”。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">为什么值得看</div>
-              <p>很多文档看起来长，其实是在防你漏掉前置条件。</p>
-            </div>
-            <div class="story-card">
-              <div class="story-card-label">真要动手时</div>
-              <p>真正照做时，先找前置条件，再找必填项，最后看验证方法。</p>
-            </div>
-            <div class="source-card">
-              <div class="story-card-label">先别急着背术语</div>
-              <p>如果把这一段摆成一个小场景，你会看到几样东西正在互相打招呼、拦路或者传东西。别急着记名词，先抓住它此刻到底在发生什么：Older OpenClaw versions generated bundled-新本领插件 dependency roots at startup or during doctor repair. Current doctor cle…。</p>
-            </div>
-          </div>
-          <div class="story-grid">
-
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>如果把这一段摆成一个小场景，你会看到几样东西正在互相打招呼、拦路或者传东西。别急着记名词，先抓住它此刻到底在发生什么：Older OpenClaw versions generated bundled-新本领插件 dependency roots at startup or during doctor repair. Current doctor cle…。</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>Older OpenClaw versions generated bundled-plugin dependency roots at startup or during doctor repair. Current doctor cleanup removes those stale directories and symlinks when <code>--fix</code> is used, including old <code>plugin-runtime-deps</code> roots, global Node-prefix package symlinks that point at pruned <code>plugin-runtime-deps</code> targets, <code>.openclaw-runtime-deps*</code> manifests, generated plugin <code>node_modules</code>, install stage directories, and package-local pnpm stores. Packaged postinstall also removes those global symlinks before pruning the legacy target roots so upgrades do not leave dangling ESM package imports.</p>
-      </div>
-
-      <div class="story-card">
-        <div class="story-card-label">像讲绘本</div>
-        <p>如果把这一段摆成一个小场景，你会看到几样东西正在互相打招呼、拦路或者传东西。别急着记名词，先抓住它此刻到底在发生什么：These paths are legacy debris only. New installs should not create them.</p>
-      </div>
-      <div class="source-card">
-        <div class="story-card-label">原文小纸条</div>
-        <p>These paths are legacy debris only. New installs should not create them.</p>
-      </div>
-
-          </div>
-        </section>
-
-    <section class="section-shell">
-      <div class="ad-placeholder">
-        <p>这里预留给未来的 Google AdSense 模块。</p>
-        <code>&lt;!-- ADSENSE_SNIPPET --&gt;</code>
-      </div>
-    </section>
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">最后记住</p>
+    <h2>依赖解析越早完成，运行时越安静</h2>
+    <p>插件作者要把依赖声明清楚，安装流程要把东西放稳。这样 Gateway 启动时就像打开整理好的工具箱，而不是一边开机一边找零件。</p>
+  </div>
+</section>
 
 
       <footer class="page-footer">

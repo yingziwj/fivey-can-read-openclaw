@@ -1,0 +1,50 @@
+<section class="section-shell">
+  <div class="overview-card">
+    <div>
+      <p class="section-kicker">先讲人话版</p>
+      <h2>Plugin hooks 像 OpenClaw 跑步路上的“观察点和小闸门”</h2>
+      <p>hook 是插件插进流程里的位置。有的 hook 只是看一眼，记录发生了什么；有的 hook 可以做决定，比如阻止、取消、改写或要求批准。</p>
+      <p>这页很重要，因为它解释插件什么时候能影响 agent run、工具调用、消息流、会话生命周期和 Gateway 启动。</p>
+    </div>
+    <div class="overview-meta">
+      <span>适合插件开发者</span>
+      <span>重点是观察型 hook 和决策型 hook 的区别</span>
+      <a href="https://docs.openclaw.ai/plugins/hooks" target="_blank" rel="noreferrer">查看官方原文</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第一站</p>
+    <h2>先分清：有的 hook 是摄像头，有的 hook 是闸门</h2>
+    <p>观察型 hook 只能看和记；决策型 hook 可以影响下一步。写插件时最容易出错的地方，就是把“我想知道发生了什么”和“我想改变发生什么”混在一起。</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card"><div class="story-card-label">观察型</div><p>像站在旁边记笔记，不拦路。</p></div>
+    <div class="story-card"><div class="story-card-label">决策型</div><p>像路口闸门，可以放行、拦住、改路或要求先批准。</p></div>
+    <div class="source-card"><div class="story-card-label"><code>api.on(...)</code></div><p>插件用这个方式注册自己要听哪个位置。</p></div>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">第二站</p>
+    <h2>工具调用前后的 hook 最像安全检查</h2>
+    <p>工具调用可能读文件、联网、执行命令或操作外部系统，所以 hook 常常用来检查参数、记录结果、补充 UI 细节，或者要求用户批准。</p>
+  </div>
+  <div class="home-grid">
+    <article class="home-card"><span class="home-card-index">B</span><h2>Before</h2><p>调用前看参数，像出门前检查背包。</p></article>
+    <article class="home-card"><span class="home-card-index">P</span><h2>Policy</h2><p>必要时阻止、改写或要求批准。</p></article>
+    <article class="home-card"><span class="home-card-index">A</span><h2>After</h2><p>调用后看结果，记录诊断或展示 metadata。</p></article>
+    <article class="home-card"><span class="home-card-index">D</span><h2>Details</h2><p>结构化 details 是给 UI 和诊断看的，不是塞进 prompt 的正文。</p></article>
+  </div>
+</section>
+
+<section class="section-shell">
+  <div class="section-heading">
+    <p class="section-kicker">最后记住</p>
+    <h2>hook 越有权力，越要小心写清边界</h2>
+    <p>能改流程的 hook 很有用，也更容易造成意外。给低龄读者讲，就是：摄像头可以多装几个，闸门就要知道谁能开、什么时候开、为什么开。</p>
+  </div>
+</section>
