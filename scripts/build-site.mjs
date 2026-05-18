@@ -1728,7 +1728,7 @@ Allow: /
 Sitemap: ${SITE_URL}/sitemap.xml
 `;
 
-const ads = `google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0
+const ads = `google.com, pub-3833673520933536, DIRECT, f08c47fec0942fa0
 `;
 
 const manifest = JSON.stringify(
